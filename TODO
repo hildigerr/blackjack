@@ -14,7 +14,7 @@ lower case letter = note. - = not applicable
 These should all become yes or have a good reason why not.
 
                 1.      2.      3.      4.      5.      6.
-blackjack       d       Y       a       Y       Y       Y
+blackjack       Y       Y       a       Y       Y       Y
 gdk-card-image  N       -       -       -       -       Y
 
 a) The preference and select dialogs are compliant, but there is
@@ -25,7 +25,6 @@ a) The preference and select dialogs are compliant, but there is
 2.4 Issues
 
 Blackjack:
-        - Whatever the UI review says.
 
 2.5 Issues
 
@@ -37,9 +36,13 @@ General:
         - Seriously look at a11y for actually playing the games.
         - Look at network multi-player.
         - Consider how to handle the whole game seed thing.
+	- Update debian files to be reasonable
 
 Blackjack:
         - Eliminate the splash screen (and hopefully any recalculation).
+
+gdk-card-image:
+        - Document
 
 
 Make keys configurable?
