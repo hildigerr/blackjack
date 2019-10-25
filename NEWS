@@ -1,3 +1,13 @@
+gnome-games "Eden Park" 2.3.8
+==============================
+
+For most people, an even more minor update over 2.3.7. There have been
+numerous translation updates including: bg, az, zh_TW, hi, no, ko, and
+zh_CN. The Hindi translation is completely new.
+
+If you are finding this frozen, stable, sort of code boring you can
+find the latest 2.5 series code in CVS HEAD.
+
 gnome-games "Carisbrook" 2.3.7
 ==============================
 
