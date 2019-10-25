@@ -2,12 +2,8 @@ To be done before 2.5 code freeze (23 February 2004):
 
 General:
   - Update the version info for all docs.
-  - Check for warnings on all code.
 
 Blackjack:
-        - Crasher (125523)
-        - Occasional warning on the command line (race condition with
-          drawing code, may be related to 125523).
 
 libgames-support:
 

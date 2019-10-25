@@ -8,10 +8,13 @@
     <name xml:lang="el">Προεπιλογή</name>
     <name xml:lang="es">Predeterminado</name>
     <name xml:lang="hr">Uobičajeno</name>
+    <name xml:lang="ja">デフォルト</name>
     <name xml:lang="ko">기본</name>
     <name xml:lang="lt">Įprastas</name>
     <name xml:lang="nl">Standaard</name>
+    <name xml:lang="no">Forvalgt</name>
     <name xml:lang="pl">Domyślne</name>
+    <name xml:lang="pt">Omissão</name>
     <name xml:lang="sq">E prezgjedhur</name>
     <name xml:lang="sr">Подразумевани</name>
     <name xml:lang="sr@Latn">Podrazumevani</name>
@@ -55,6 +58,7 @@
     <name xml:lang="es">Dondorf rojo</name>
     <name xml:lang="ko">돈도프 빨강</name>
     <name xml:lang="lt">Dondorf raudona</name>
+    <name xml:lang="no">Dondorf rød</name>
     <name xml:lang="pl">Czerwony dondorf</name>
     <name xml:lang="sq">Dondorf i Kuq</name>
     <name xml:lang="sr">Црвени дондорф</name>
