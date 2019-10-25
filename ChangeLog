@@ -1,3 +1,145 @@
+2003-06-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* data/blackjack.schemas.in: Remove full-stop from the end of
+	short descriptions.
+
+2003-06-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c: Compile warning cleanups and deprecated
+	function removal.
+
+2003-06-19  William Jon McCann  <mccann@jhu.edu>
+
+	* src/card.cpp (bj_card_load_pixmaps):
+	* src/slot.cpp (bj_slot_load_pixmaps): Use g_build_filename to make paths.
+
+	* src/blackjack.cpp (main): g_build_filename needs to be NULL terminated.
+
+2003-06-18  William Jon McCann  <mccann@jhu.edu>
+
+	* TODO: Update.
+
+2003-06-17  William Jon McCann  <mccann@jhu.edu>
+
+	* TODO: Updated with results of this round of compiler warning
+	fixes.
+
+	* gdk-card-image.c (gdk_card_deck_dir_search): Use
+	g_build_filename to construct paths.
+
+	* src/blackjack.c:
+	* src/blackjack.h (BJ_RULES_DIR): Remove slash from directory.
+	We will let g_build_filename add directory separators.
+
+	* src/game.cpp (bj_game_find_and_read_rules)
+	(bj_game_eval_installed_file): Use g_build_filename to construct
+	paths.
+
+	* src/strategy.cpp: Fixed compiler warning and converted
+	to UNIX format line ending.
+
+	* src/splash.cpp (expose_event):
+	* src/player.cpp (showOptions):
+	* src/hand.cpp (bj_hand_get_best_option_string):
+	* src/game.cpp (bj_game_find_rules):
+	* src/draw.cpp (bj_draw_chips): Fixed compiler warnings.
+
+	* src/menu.cpp:
+	* src/dialog.cpp:
+	* src/blackjack.cpp:
+	* src/game.cpp: Only use splash window when we aren't
+	using a cache file.
+
+2003-06-16  William Jon McCann  <mccann@jhu.edu>
+
+	* src/blackjack.h: Fix typo.
+
+	* src/dialog.cpp (show_preferences_dialog): Use mnemonics
+	in preferences notebook tab labels.
+
+2003-06-13  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* TODO: Massive update to hopefully include every known issue and
+	bug and where it stands in terms of the 2.4 and 2.5 releases.
+
+2003-06-13  William Jon McCann  <mccann@jhu.edu>
+
+	* TODO (Blackjack): Removed fixed items.
+
+	* src/dialog.cpp (select_rule_cb): Make dialog insensitive
+	while loading new rules.
+
+	* data/blackjack.schemas.in:  Install gconf schemas.
+
+	* src/blackjack.cpp: #define gconf key names.
+
+2003-06-11  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/menu.cpp:
+	* src/blackjack.cpp: i18n fixes from Christian Neumair (bug #114875).
+
+2003-06-09  William Jon McCann  <mccann@jhu.edu>
+
+	* src/dialog.cpp:
+	* src/game.cpp: Removed separator from dialogs as in HIG.
+
+2003-06-07  William Jon McCann  <mccann@jhu.edu>
+
+	* src/game.cpp (bj_game_eval_installed_file): Use HIG
+	markup in error dialog.
+
+	* src/dialog.cpp (show_preferences_dialog): HIG spacing
+	tweak.
+
+	* src/player.cpp (showOptions): Fixed i18n string issue.
+
+	* src/blackjack.cpp: Keep local state information,
+	removed quit confirmation dialog, use toolbar setting
+	at startup.
+
+	* src/dialog.cpp (pref_dialog_response): Make card
+	preferences instant apply.
+
+	* gdk-card-image.h:
+	* gdk-card-image.c:
+	I have made gdk_card_deck_options_edit a proper GTK widget (and it
+	is now called gtk_card_deck_options_edit) without the dependence
+	on having a notebook to fit into. Also used 2.0 API rather than
+	the 1.x one. I have also removed the "dirty" call since it was in
+	the way and we should be responding to the "changed" signal
+	anyway.
+
+2003-06-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/menu.cpp:
+	* src/dialog.cpp:
+	Fixes to make dialogs be presented properly. Fixes bug #114623.
+
+	* src/dialog.cpp: Updated to use the revised
+	gtk_card_deck_blah_blah API.
+
+2003-06-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* MAINTAINERS: Updated.
+
+2003-06-04  William Jon McCann  <mccann@jhu.edu>
+
+	* src/dialog.cpp: Added all rule fields to tree view in pref
+	dialog so that rules should be mostly self documented.  Also
+	removed unused functions and HIGified alerts.
+
+	* src/game.h:
+	* src/game.cpp: Added new functions to load rules from file.
+	Added new BJGameRules class derived from BJRules that holds
+	all rule attributes.
+
+	* src/strategy.h:
+	* src/strategy.cpp: Added get methods for private variables.
+
+	* data/Vegas_Strip.rules: Change to allow double after split,
+	surrender, and resplitting aces.  This should not affect the
+	cached rules file.
+
 2003-06-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* src/dialog.cpp:

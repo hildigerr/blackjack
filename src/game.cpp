@@ -1,4 +1,5 @@
 // -*- mode:C++; tab-width:2; c-basic-offset:2; indent-tabs-mode:nil -*-
+
 /* Blackjack - game.cpp
  * Copyright (C) 2003 William Jon McCann <mccann@jhu.edu>
  *
@@ -24,6 +25,7 @@
 #include <alloca.h>
 #endif
 
+#include <gnome.h>
 #include <sys/types.h>
 #include <string.h>
 #include <stdlib.h>
@@ -35,23 +37,21 @@
 #include "events.h"
 #include "draw.h"
 #include "chips.h"
+#include "splash.h"
 
 #include "player.h"
 #include "hand.h"
 #include "game.h"
-#include <gnome.h>
 
 #include <iostream>
 using namespace std;
 
-BJRules          *rules;
+BJGameRules      *rules;
 LoadablePlayer   *strategy;
 Hand             *dealer;
 Probabilities    *dealerProbabilities;
 Shoe             *shoe;
 BJShoe           *distribution;
-gint             numDecks;
-gint             dealerSpeed;
 PlayerHand       *player;
 
 GList            *playerHands = NULL;
@@ -59,9 +59,11 @@ gfloat           lastWager = 5.0;
 Card             tempCard;
 PlayerHand       *tempHand;
 
+gint             numDecks;
+gint             dealerSpeed;
+
 gint             numHands;
 
-guint            n_games;
 struct dirent    **game_dents;
 gchar            *game_file = "";
 gchar            *game_name;
@@ -71,6 +73,33 @@ gboolean         game_is_done = false;
 gboolean         first_hand = true;
 
 GList *rules_list = NULL;
+
+BJGameRules::BJGameRules (bool hitSoft17, bool doubleAnyTotal, 
+                          bool double9, bool doubleSoft, 
+                          bool doubleAfterHit, bool doubleAfterSplit,
+                          bool resplit, bool resplitAces, 
+                          bool lateSurrender, int numDecks, int dealerSpeed)
+  : BJRules (hitSoft17, doubleAnyTotal, 
+             double9, doubleSoft, 
+             doubleAfterHit, doubleAfterSplit,
+             resplit, resplitAces, 
+             lateSurrender)
+{
+  this->numDecks = numDecks;
+  this->dealerSpeed = dealerSpeed;
+}
+
+int
+BJGameRules::getDealerSpeed ()
+{
+  return dealerSpeed;
+}
+
+int
+BJGameRules::getNumDecks ()
+{
+  return numDecks;
+}
 
 void
 bj_game_show_hand_counts ()
@@ -108,6 +137,7 @@ bj_game_find_rules (gchar *variation)
 {
   gint i, records;
   gchar* dir;
+  gint n_games;
 
   dir = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_DATADIR,
                                    BJ_RULES_DIR, FALSE, NULL);
@@ -115,10 +145,7 @@ bj_game_find_rules (gchar *variation)
   records = scandir (dir, &game_dents, bj_is_ruleset, alphasort);
   g_free (dir);
 
-  if (records >= 0)
-	  n_games = records;
-  else
-	  n_games = 0;
+  n_games = (records >= 0) ? records : 0;
 
   // Drop all previous rules
 
@@ -126,7 +153,7 @@ bj_game_find_rules (gchar *variation)
     gchar *game_name = bj_game_file_to_name (game_dents[i]->d_name);
     rules_list = g_list_append (rules_list, g_strdup (game_dents[i]->d_name));
     if (!g_ascii_strcasecmp (variation, game_dents[i]->d_name)) {
-      start_game = g_strdup (game_dents[i]->d_name);
+      bj_set_game_variation (game_dents[i]->d_name);
     }
   }
 }
@@ -181,13 +208,13 @@ bj_get_deal_delay ()
   return (bj_get_quick_deal ()) ? 1 : dealerSpeed;
 }
 
-static void
-eval_installed_file (char *file)
+
+BJGameRules *
+bj_game_read_rules (gchar *filename)
 {
-  char *installed_filename;
-  char *relative;
-  
-  bool hitSoft17,
+  BJGameRules *ruleset;
+  gboolean used_default;
+  gboolean hitSoft17,
     doubleAnyTotal,
     double9,
     doubleSoft,
@@ -196,14 +223,91 @@ eval_installed_file (char *file)
     resplit,
     resplitAces,
     lateSurrender;
-  gboolean used_default;
+  gint numDecks,
+    dealerSpeed;
+  
+  gnome_config_pop_prefix ();
+  gnome_config_push_prefix (g_strdup_printf ("=%s=", filename));
+
+  numDecks = gnome_config_get_int_with_default 
+    ("General/Number Of Decks=6",
+     &used_default);
+  hitSoft17 = gnome_config_get_bool_with_default 
+    ("House Rules/Dealer Hits Soft 17=false",
+     &used_default);
+  doubleAnyTotal = gnome_config_get_bool_with_default 
+    ("House Rules/Double Down Any Total=true",
+     &used_default);
+  double9 = gnome_config_get_bool_with_default 
+    ("House Rules/Double Down 9=true",
+     &used_default);
+  doubleSoft = gnome_config_get_bool_with_default
+    ("House Rules/Double Down Soft=true",
+     &used_default);
+  doubleAfterHit = gnome_config_get_bool_with_default
+    ("House Rules/Double Down After Hit=false",
+     &used_default);
+  doubleAfterSplit = gnome_config_get_bool_with_default
+    ("House Rules/Double Down After Split=true",
+     &used_default);
+  resplit = gnome_config_get_bool_with_default
+    ("House Rules/Resplit Allowed=true",
+     &used_default);
+  resplitAces = gnome_config_get_bool_with_default
+    ("House Rules/Resplit Aces Allowed=true",
+     &used_default);
+  lateSurrender = gnome_config_get_bool_with_default
+    ("House Rules/Surrender Allowed=true",
+     &used_default);
+  dealerSpeed = gnome_config_get_int_with_default
+    ("House Rules/Dealer Speed=500",
+     &used_default);
+
+  // Compute basic strategy.
+  ruleset = new BJGameRules (hitSoft17, doubleAnyTotal, 
+                             double9, doubleSoft, 
+                             doubleAfterHit, doubleAfterSplit,
+                             resplit, resplitAces, 
+                             lateSurrender, numDecks, dealerSpeed);
+  
+  return ruleset;
+}
+
+
+BJGameRules *
+bj_game_find_and_read_rules (gchar *filename)
+{
+  gchar *installed_filename;
+  gchar *relative;
+  BJGameRules *ruleset = NULL;
+
+  relative = g_build_filename (BJ_RULES_DIR, filename, NULL);
+  installed_filename = gnome_program_locate_file (NULL, 
+                                                  GNOME_FILE_DOMAIN_APP_DATADIR,
+                                                  relative,
+                                                  FALSE, NULL);
+
+  if (g_file_test (installed_filename, G_FILE_TEST_EXISTS))
+    ruleset = bj_game_read_rules (installed_filename);
+
+  g_free (installed_filename);
+  g_free (relative);
+
+  return ruleset;
+}
+
+static void
+bj_game_eval_installed_file (gchar *file)
+{
+  char *installed_filename;
+  char *relative;
 
    if (g_file_test (file, G_FILE_TEST_EXISTS))
      {
        return;
      }
   
-  relative = g_strconcat (BJ_RULES_DIR, file, NULL);
+  relative = g_build_filename (BJ_RULES_DIR, file, NULL);
   installed_filename = gnome_program_locate_file (NULL, 
                                                   GNOME_FILE_DOMAIN_APP_DATADIR,
                                                   relative,
@@ -211,53 +315,17 @@ eval_installed_file (char *file)
 
   if (g_file_test (installed_filename, G_FILE_TEST_EXISTS))
     {
-      gnome_config_pop_prefix ();
-      gnome_config_push_prefix (g_strdup_printf ("=%s=", installed_filename));
-      numDecks = gnome_config_get_int_with_default 
-        ("General/Number Of Decks=6",
-         &used_default);
-      hitSoft17 = gnome_config_get_bool_with_default 
-        ("House Rules/Dealer Hits Soft 17=false",
-         &used_default);
-      doubleAnyTotal = gnome_config_get_bool_with_default 
-        ("House Rules/Double Down Any Total=true",
-         &used_default);
-      double9 = gnome_config_get_bool_with_default 
-        ("House Rules/Double Down 9=true",
-         &used_default);
-      doubleSoft = gnome_config_get_bool_with_default
-        ("House Rules/Double Down Soft=true",
-         &used_default);
-      doubleAfterHit = gnome_config_get_bool_with_default
-        ("House Rules/Double Down After Hit=false",
-         &used_default);
-      doubleAfterSplit = gnome_config_get_bool_with_default
-        ("House Rules/Double Down After Split=true",
-         &used_default);
-      resplit = gnome_config_get_bool_with_default
-        ("House Rules/Resplit Allowed=true",
-         &used_default);
-      resplitAces = gnome_config_get_bool_with_default
-        ("House Rules/Resplit Aces Allowed=true",
-         &used_default);
-      lateSurrender = gnome_config_get_bool_with_default
-        ("House Rules/Surrender Allowed=true",
-         &used_default);
-      dealerSpeed = gnome_config_get_int_with_default
-        ("House Rules/Dealer Speed=500",
-         &used_default);
-
-      // Compute basic strategy.
+      rules = bj_game_read_rules (installed_filename);
       
-      rules = new BJRules (hitSoft17, doubleAnyTotal, double9,
-                           doubleSoft, doubleAfterHit, doubleAfterSplit,
-                           resplit, resplitAces, lateSurrender);
+      // set globals
+      numDecks = rules->getNumDecks ();
+      dealerSpeed = rules->getDealerSpeed ();
+
       BJStrategy maxValueStrategy;
       Progress progress;
 
-      const gchar *cache_filename = g_strdup_printf ("%s%s%s", 
-                                                     BJ_RULES_DIR, 
-                                                     file, ".dat");
+      gchar *cache_filename = g_strdup_printf ("%s%s", relative, ".dat");
+
       installed_filename = gnome_program_locate_file 
         (NULL, 
          GNOME_FILE_DOMAIN_APP_DATADIR,
@@ -266,6 +334,9 @@ eval_installed_file (char *file)
       gboolean use_cache = false;
       if (g_file_test (installed_filename, G_FILE_TEST_EXISTS))
         use_cache = true;
+
+      if (! use_cache)
+        splash_new ();
       strategy = new LoadablePlayer (numDecks, rules, 
                                      maxValueStrategy, 
                                      progress, 
@@ -276,22 +347,28 @@ eval_installed_file (char *file)
         if (!use_cache)
         strategy->save (cache_filename);
       */
-    } 
+      if (! use_cache)
+        splash_destroy ();
+
+      g_free (cache_filename);
+     } 
   else
     {
-      char *message = g_strdup_printf 
-        (_("Blackjack can't load the file: \n%s\n\n"
-           "Please check your Blackjack installation"), installed_filename);
+      gchar *message = g_strdup_printf ("%s\n %s", _("Blackjack can't load the requested file"),
+                                         installed_filename);
+      gchar *message2 = _("Please check your Blackjack installation");
       GtkWidget *w = gtk_message_dialog_new (GTK_WINDOW (app),
                                              GTK_DIALOG_DESTROY_WITH_PARENT,
                                              GTK_MESSAGE_ERROR,
                                              GTK_BUTTONS_CLOSE,
-                                             message);
-    
-    gtk_dialog_run (GTK_DIALOG (w));
-    gtk_widget_destroy (w);
-    g_free (message);
-    exit (1);
+                                             "<span weight=\"bold\" size=\"larger\">%s</span>\n\n%s",
+                                             message, message2);
+      gtk_dialog_set_has_separator (GTK_DIALOG (w), FALSE);
+      gtk_label_set_use_markup (GTK_LABEL (GTK_MESSAGE_DIALOG (w)->label), TRUE);
+      gtk_dialog_run (GTK_DIALOG (w));
+      gtk_widget_destroy (w);
+      g_free (message);
+      exit (1);
   }
   g_free (installed_filename);
   g_free (relative);
@@ -313,7 +390,7 @@ void bj_game_new (gchar* file, guint *seedp )
 
       game_file = file;
 
-      eval_installed_file (file);
+      bj_game_eval_installed_file (file);
       game_name = bj_game_file_to_name (file);
       
       if (option_dialog)

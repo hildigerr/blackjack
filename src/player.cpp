@@ -1,4 +1,5 @@
 // -*- mode:C++; tab-width:2; c-basic-offset:2; indent-tabs-mode:nil -*-
+
 /* Blackjack - player.cpp
  * Copyright (C) 2003 William Jon McCann <mccann@jhu.edu>
  *
@@ -54,12 +55,12 @@ Progress::Progress ()
 void
 Progress::indicate (int percentComplete)
 {
-  float initial_splash_progress = 0.5;
+  float initial_splash_progress = 0.0;
   float splash_progress;
   if (percentComplete != last)
     {
       last = percentComplete;
-      splash_progress = initial_splash_progress + (percentComplete/200.0);
+      splash_progress = initial_splash_progress + (percentComplete/100.0);
       splash_update (_("Computing basic strategy..."), splash_progress);
     }
 }
@@ -254,7 +255,8 @@ Player::showOptions (Hand *player, int upCard, int numHands)
 {
   int bestOption, num_options;
   double value, bestValue;
-  gchar *markup, *tmpstr;
+  gchar *markup = NULL;
+  gchar *tmpstr = NULL;
   gchar *mark_list[6];
 
   reset ();
@@ -264,7 +266,7 @@ Player::showOptions (Hand *player, int upCard, int numHands)
   // Player can always stand.
 
   bestValue = value = getValueStand (*player, upCard);
-  mark_list[num_options++] = g_strdup_printf ("%s   %9.4lf\n", 
+  mark_list[num_options++] = g_strdup_printf ("%s     %9.4lf\n", 
                                               _("Stand"), value * 100);
   bestOption = KEY_S;
 
@@ -273,7 +275,7 @@ Player::showOptions (Hand *player, int upCard, int numHands)
     {
       value = getValueHit (*player, upCard);
       
-      mark_list[num_options++] = g_strdup_printf ("%s     %9.4lf\n", 
+      mark_list[num_options++] = g_strdup_printf ("%s       %9.4lf\n", 
                                                   _("Hit"), value * 100);
       if (value > bestValue)
         {
@@ -285,7 +287,7 @@ Player::showOptions (Hand *player, int upCard, int numHands)
       if (bj_hand_can_be_doubled ())
         {
           value = getValueDoubleDown (*player, upCard);
-          mark_list[num_options++] = g_strdup_printf ("%s  %9.4lf\n", 
+          mark_list[num_options++] = g_strdup_printf ("%s    %9.4lf\n", 
                                                       _("Double"), value * 100);
           if (value > bestValue)
             {
@@ -300,7 +302,7 @@ Player::showOptions (Hand *player, int upCard, int numHands)
   if (bj_hand_can_be_split ())
     {
       value = getValueSplit(player->cards[0].value (), upCard);
-      mark_list[num_options++] = g_strdup_printf ("%s   %9.4lf\n", 
+      mark_list[num_options++] = g_strdup_printf ("%s     %9.4lf\n", 
                                                   _("Split"), value * 100);
       if (value > bestValue)
         {
@@ -313,8 +315,8 @@ Player::showOptions (Hand *player, int upCard, int numHands)
   if (bj_hand_can_be_surrendered ())
     {
       value = -0.5;
-      mark_list[num_options++] = g_strdup_printf ("%s   %9.4lf\n", 
-                                                  _("Surr."), value * 100);
+      mark_list[num_options++] = g_strdup_printf ("%s %9.4lf\n", 
+                                                  _("Surrender"), value * 100);
       if (value > bestValue)
         {
           bestValue = value;
@@ -443,15 +445,15 @@ Probabilities::showProbabilities (BJShoe *distribution, int upCard,
     notBlackjack = 1;
   reset();
 
-  mark_list[0] = g_strdup_printf ("%s       %.4lf\n", _("Bust"),
+  mark_list[0] = g_strdup_printf ("%s         %.4lf\n", _("Bust"),
                                   getProbabilityBust (upCard) / notBlackjack);
   for (int count = 17; count <= 21; count++)
     {
-      mark_list[count-16] = g_strdup_printf ("%2d         %.4lf\n", count,
+      mark_list[count-16] = g_strdup_printf ("%2d           %.4lf\n", count,
                                              getProbabilityCount (count, upCard)
                                              / notBlackjack);
     }
-  mark_list[5] = g_strdup_printf ("%s  %.4lf\n", _("Blackjack"),
+  mark_list[5] = g_strdup_printf ("%s    %.4lf\n", _("Blackjack"),
                                   condition ? 0.0 : getProbabilityBlackjack (upCard));
   markup = g_strconcat ("<span size=\"10000\" font_family=\"fixed\" foreground=\"white\">", 
                         mark_list[0], mark_list[1], mark_list[2], mark_list[3], 

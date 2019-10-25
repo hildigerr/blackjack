@@ -169,9 +169,9 @@ gdk_card_deck_destroy (GtkObject *o)
 
   for (i = CLUB; i <= SPADE; i++)
     for (j = JOKER; j <= KING; j++)
-      gdk_pixmap_unref (w->faces[i][j]);
+      g_object_unref (w->faces[i][j]);
 
-  gdk_pixmap_unref (w->back);
+  g_object_unref (w->back);
   
   for(i = 0; i < OPT_NUM; i++)
     gdk_card_file_unref (&option_data[i].dir->file[w->index[i]]);
@@ -237,6 +237,7 @@ gdk_card_deck_dir_search (GdkCardDeckDir* dir, gchar* name)
     GDir * de;
     GList * filelist = NULL;
     GList * node;
+    gchar * path;
     const gchar * filename;
     int records = 0;
 
@@ -244,10 +245,10 @@ gdk_card_deck_dir_search (GdkCardDeckDir* dir, gchar* name)
       return -1;
 
     de = g_dir_open (dir_name, 0, NULL);
-    while (filename = g_dir_read_name (de)) {
+    while ((filename = g_dir_read_name (de))) {
       if (is_image (filename)) {
-        filelist = g_list_prepend (filelist,
-                                   g_strconcat (dir_name, filename, NULL));
+        path = g_build_filename (dir_name, filename, NULL);
+        filelist = g_list_prepend (filelist, path);
         records++;
       }
     }
@@ -343,12 +344,12 @@ static void
 gdk_card_file_unref (GdkCardDeckFile* file)
 {
   if (!--file->refs) {
-    gdk_pixmap_unref (file->p);
-    gdk_bitmap_unref (file->b);
+    g_object_unref (file->p);
+    g_object_unref (file->b);
 
     if (file->pr) {
-      gdk_pixmap_unref (file->pr);
-      gdk_bitmap_unref (file->br);
+      g_object_unref (file->pr);
+      g_object_unref (file->br);
     }
   }
 }
@@ -380,17 +381,16 @@ gdk_card_file_draw_r (GdkCardDeckFile* file, GdkPixmap* p, GdkGC* gc,
 		       file->width, file->height);
 }
 
-struct _GdkCardDeckOptionsEdit {
-  GtkObject object;
+struct _GtkCardDeckOptionsEdit {
+  GtkAlignment container;
   
   GtkOptionMenu **menu;
-  gboolean dirty;
 };
 
-struct _GdkCardDeckOptionsEditClass {
-  GtkObjectClass parent_class;
+struct _GtkCardDeckOptionsEditClass {
+  GtkAlignmentClass parent_class;
 
-  void (* changed) (GdkCardDeckOptionsEdit* w);
+  void (* changed) (GtkCardDeckOptionsEdit* w);
 };
 
 enum {
@@ -398,18 +398,19 @@ enum {
   N_SIGNALS
 };
 
-static gint gdk_card_deck_options_edit_signals[N_SIGNALS] = { 0 };
+static GtkAlignmentClass * options_parent_class = NULL;
+static gint gtk_card_deck_options_edit_signals[N_SIGNALS] = { 0 };
 
 static void 
-gdk_card_deck_options_edit_destroy (GtkObject *o)
+gtk_card_deck_options_edit_destroy (GtkObject *o)
 {
-  GdkCardDeckOptionsEdit* w;
+  GtkCardDeckOptionsEdit* w;
   guint i;
 
   g_return_if_fail(o != NULL);
-  g_return_if_fail(GDK_IS_CARD_DECK_OPTIONS_EDIT(o));
+  g_return_if_fail(GTK_IS_CARD_DECK_OPTIONS_EDIT(o));
 
-  w = GDK_CARD_DECK_OPTIONS_EDIT(o);
+  w = GTK_CARD_DECK_OPTIONS_EDIT(o);
 
   for(i = 0; i < OPT_NUM; i++)
     gtk_widget_destroy (GTK_WIDGET(w->menu[i]));
@@ -419,48 +420,50 @@ gdk_card_deck_options_edit_destroy (GtkObject *o)
 }
 
 static void
-gdk_card_deck_options_edit_class_init (GdkCardDeckOptionsEditClass *klass)
+gtk_card_deck_options_edit_class_init (GtkCardDeckOptionsEditClass *klass)
 {
   GtkObjectClass *object_class = (GtkObjectClass*) klass;
-
-  parent_class = gtk_type_class (gtk_object_get_type ());
+    
+  options_parent_class = gtk_type_class (gtk_widget_get_type ());
   
-  gdk_card_deck_options_edit_signals[CHANGED] =
-    gtk_signal_new ("changed",
-		    GTK_RUN_LAST,
-		    GTK_CLASS_TYPE (object_class),
-		    GTK_SIGNAL_OFFSET (GdkCardDeckOptionsEditClass, changed),
-		    gtk_signal_default_marshaller,
-		    GTK_TYPE_NONE, 0);
-#ifdef FIXME /* This seems to have no use in gtk now? */
-  gtk_object_class_add_signals (object_class, gdk_card_deck_options_edit_signals,
-				N_SIGNALS);
-#endif
+  gtk_card_deck_options_edit_signals[CHANGED] =
+    g_signal_new ("changed",
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  G_STRUCT_OFFSET (GtkCardDeckOptionsEditClass, changed),
+                  NULL,
+                  NULL,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
 
-  object_class->destroy = gdk_card_deck_options_edit_destroy;
+  object_class->destroy = gtk_card_deck_options_edit_destroy;
+  
   klass->changed = NULL;
 }
 
-GtkTypeInfo gdk_card_deck_options_edit_info = 
+GTypeInfo gtk_card_deck_options_edit_info = 
 {
-  "GdkCardDeckOptionsEdit",
-  sizeof (GdkCardDeckOptionsEdit),
-  sizeof (GdkCardDeckOptionsEditClass),
-  (GtkClassInitFunc) gdk_card_deck_options_edit_class_init,
-  (GtkObjectInitFunc) NULL,
+  sizeof (GtkCardDeckOptionsEditClass),
   NULL,
   NULL,
-  (GtkClassInitFunc) NULL
+  (GClassInitFunc) gtk_card_deck_options_edit_class_init,
+  NULL,
+  NULL,
+  sizeof (GtkCardDeckOptionsEdit),
+  0,
+  NULL,
+  NULL
 };
 
 guint
-gdk_card_deck_options_edit_get_type ()
+gtk_card_deck_options_edit_get_type ()
 {
   static guint type = 0;
 
   if (!type)
-    type = gtk_type_unique (gtk_object_get_type (), 
-			    &gdk_card_deck_options_edit_info);
+    type = g_type_register_static (GTK_TYPE_ALIGNMENT, "GtkCardDeckOptionsEdit",
+                                   &gtk_card_deck_options_edit_info, 0);
   return type;
 }
 
@@ -817,34 +820,16 @@ gdk_card_deck_mask (GdkCardDeck* deck)
   return deck->mask;
 }
 
-static GtkWidget*
-add_table(GtkWidget* notebook, const gchar* label, guint rows, guint cols)
-{
-  GtkWidget* frame = gtk_frame_new(NULL);
-  GtkWidget* page = gtk_table_new(rows, cols, FALSE);
-
-  gtk_container_border_width (GTK_CONTAINER (frame), GNOME_PAD_SMALL);
-  gtk_container_border_width (GTK_CONTAINER (page), GNOME_PAD_SMALL);
-
-  gtk_container_add (GTK_CONTAINER (frame), page);
-  gtk_notebook_append_page ( GTK_NOTEBOOK (notebook), frame, 
-			     gtk_label_new (label) );
-  gtk_widget_show(frame);
-
-  return page;
-} 
-
 static void 
-changed(GdkCardDeckOptionsEdit* w)
+changed(GtkCardDeckOptionsEdit* w)
 {
-  w->dirty = TRUE;
   gtk_signal_emit(GTK_OBJECT(w), 
-		  gdk_card_deck_options_edit_signals[CHANGED],
+		  gtk_card_deck_options_edit_signals[CHANGED],
 		  NULL);
 }
 
 void          
-gdk_card_deck_options_edit_set (GdkCardDeckOptionsEdit* w,
+gtk_card_deck_options_edit_set (GtkCardDeckOptionsEdit* w,
 				GdkCardDeckOptions deck_options)
 {
   guint i;
@@ -854,18 +839,19 @@ gdk_card_deck_options_edit_set (GdkCardDeckOptionsEdit* w,
 
   for (i = 0; i < OPT_NUM; i++)
     gtk_option_menu_set_history (w->menu[i], index[i]);
-  w->dirty = FALSE;
 }
 
 GdkCardDeckOptions 
-gdk_card_deck_options_edit_get (GdkCardDeckOptionsEdit* w)
+gtk_card_deck_options_edit_get (GtkCardDeckOptionsEdit* w)
 {
-  guint i;
+  guint i,j;
   gchar** name = g_new0(gchar*, OPT_NUM);
   GdkCardDeckOptions deck_options;
 
   for(i = 0; i < OPT_NUM; i++) {
-    name[i] = GTK_LABEL (GTK_BIN (w->menu[i])->child)->label;
+    j = gtk_option_menu_get_history (GTK_OPTION_MENU (w->menu[i]));
+    g_free (name[i]); 
+    name[i] = g_strdup ( g_basename (option_data[i].dir->file[j].name));
   }
 
   deck_options = gnome_config_assemble_vector (OPT_NUM, 
@@ -874,38 +860,26 @@ gdk_card_deck_options_edit_get (GdkCardDeckOptionsEdit* w)
   return deck_options;
 }
 
-gboolean
-gdk_card_deck_options_edit_dirty (GdkCardDeckOptionsEdit* w)
+GtkWidget* 
+gtk_card_deck_options_edit_new (void)
 {
-  return w->dirty;
-}
-
-GtkObject* 
-gdk_card_deck_options_edit_new (GtkNotebook* notebook)
-{
-  GdkCardDeckOptionsEdit* w;
+  GtkCardDeckOptionsEdit* w;
+  GtkAlignment * a;
   GtkWidget *table;
-  GtkWidget *hbox;
-  GtkWidget* frame = gtk_frame_new(NULL);
   guint i, j;
   
-  g_return_val_if_fail (notebook != NULL, NULL);
-  g_return_val_if_fail (GTK_IS_NOTEBOOK (notebook), NULL);
+  w = gtk_type_new(gtk_card_deck_options_edit_get_type());
+  a = GTK_ALIGNMENT (w);
 
-  w = gtk_type_new(gdk_card_deck_options_edit_get_type());
-
+  gtk_alignment_set (a, 0.5, 0.5, 1.0, 1.0);
+  
   w->menu = g_new(GtkOptionMenu*, OPT_NUM);
 
   table = gtk_table_new(OPT_NUM, 2, FALSE);
-  gtk_container_border_width (GTK_CONTAINER (frame), GNOME_PAD_SMALL);
   gtk_container_border_width (GTK_CONTAINER (table), GNOME_PAD_SMALL);
-  hbox = gtk_hbox_new (FALSE, GNOME_PAD_SMALL);
-  gtk_container_add (GTK_CONTAINER (frame), table);
-  gtk_notebook_append_page ( GTK_NOTEBOOK (notebook), hbox, 
-			     gtk_label_new (_("Cards")) );
-  gtk_widget_show(frame);
-  gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
 
+  gtk_container_add (GTK_CONTAINER (w), table);
+  
   for (i = 0; i < OPT_NUM; i++) {
     GtkWidget* label = gtk_label_new(_(option_data[i].description));
     GtkWidget* menu = gtk_menu_new();
@@ -931,12 +905,7 @@ gdk_card_deck_options_edit_new (GtkNotebook* notebook)
 
     gtk_option_menu_set_menu (GTK_OPTION_MENU (w->menu[i]), menu);
   }
-  gdk_card_deck_options_edit_set (w, NULL);
+  gtk_card_deck_options_edit_set (w, NULL);
 
-  gtk_widget_show_all(table);
-
-  gtk_signal_connect_object(GTK_OBJECT(notebook), "destroy",
-			    GTK_SIGNAL_FUNC(gtk_object_destroy),
-			    GTK_OBJECT(w));
-  return GTK_OBJECT (w);
+  return GTK_WIDGET (w);
 }

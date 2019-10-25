@@ -35,7 +35,6 @@ using namespace std;
 #include "dialog.h"
 #include "draw.h"
 #include "events.h"
-#include "splash.h"
 
 #include "game.h"
 #include "hand.h"
@@ -51,17 +50,13 @@ restart_game ()
 static void
 random_seed ()
 {
-  splash_new ();
   bj_game_new (bj_game_get_rules_file (), NULL);
-  splash_destroy ();
 };
 
 static void
 new_rules (GtkWidget* w, gchar* file) 
 {
-  splash_new ();
   bj_game_new (file, NULL);
-  splash_destroy ();
 };
 
 static void
@@ -75,8 +70,9 @@ help_about_callback ()
 {
   GdkPixbuf *pixbuf = NULL;
   const gchar *authors[] = {
-	  N_("Main program:  William Jon McCann (mccann@jhu.edu)"),
-	  N_("                      Eric Farmer (erfarmer201@comcast.net)"),
+	  N_("Main game:"),
+	  "William Jon McCann (mccann@jhu.edu)",
+	  "Eric Farmer (erfarmer201@comcast.net)",
 	  NULL
   };
 
@@ -101,15 +97,16 @@ help_about_callback ()
   }
 
   if (about) {
-    gdk_window_raise (about->window);
+    gtk_window_present (GTK_WINDOW (about));
     return;
   }
   about = gnome_about_new ( _("Blackjack"), VERSION,
                             /* copyright notice */
-                            _("(C) 2003 William Jon McCann <mccann@jhu.edu>\n"
-                              "Eric Farmer <erfarmer201@comcast.net>"),
+                            "Copyright \xc2\xa9 2003 William Jon McCann "
+	                    "<mccann@jhu.edu>, Eric Farmer "
+		            "<erfarmer201@comcast.net>",
                             _("Blackjack provides a casino-style "
-                              "blackjack card game"),
+                              "blackjack card game."),
                             (const char **)authors,
                             (const char **)documenters,
                             NULL,
@@ -148,7 +145,7 @@ GnomeUIInfo file_menu[] = {
 };
 
 GnomeUIInfo settings_menu[] = {
-  GNOMEUIINFO_TOGGLEITEM_DATA (N_("Show _tool bar"), 
+  GNOMEUIINFO_TOGGLEITEM_DATA (N_("_Toolbar"), 
                                N_("Show or hide the toolbar"), 
                                settings_toolbar_callback, NULL, NULL),
 
@@ -214,9 +211,10 @@ bj_menu_create ()
   gnome_app_create_menus (GNOME_APP(app), top_menu);
   gnome_app_create_toolbar (GNOME_APP(app), toolbar);
 
-  GTK_CHECK_MENU_ITEM (settings_menu[0].widget)->active = true;
-
-  bj_gui_show_toolbar (bj_get_show_toolbar ());
+  gboolean value = bj_get_show_toolbar ();
+  gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (settings_menu[0].widget),
+                                  value);
+  bj_gui_show_toolbar (value);
 }
 
 void

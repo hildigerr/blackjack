@@ -28,7 +28,7 @@
 
 // Constants
 
-#define BJ_RULES_DIR "blackjack/"
+#define BJ_RULES_DIR "blackjack"
 #define GAME_EVENTS (GDK_EXPOSURE_MASK        |\
 		                 GDK_BUTTON_PRESS_MASK    |\
 		                 GDK_BUTTON_RELEASE_MASK  |\
@@ -97,7 +97,7 @@ void                    bj_set_quick_deal (gboolean);
 gchar*                  bj_get_game_variation (void);
 void                    bj_set_game_variation (const gchar *);
 
-GConfClient             *get_gconf_client (void);
+GConfClient            *bj_gconf_client (void);
 
 extern gint             dealerSpeed;
 extern gfloat           lastWager;

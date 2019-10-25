@@ -1,7 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Blackjack
+Name[ja]=ブラックジャック
 Name[sv]=Tjugoett
+Name[zh_TW]=21 點
 Comment=Blackjack
 Exec=blackjack
 Icon=gnome-blackjack.png
