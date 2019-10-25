@@ -274,9 +274,16 @@ gdk_card_deck_dir_search (GdkCardDeckDir* dir, gchar* name)
     g_free (dir_name);
   }
 
-  for (i = 0; i < dir->nfiles; i++)
-    if (!strcmp (name, g_basename (dir->file[i].name)))
-	return i;
+  for (i = 0; i < dir->nfiles; i++) {
+    gchar *filename = g_path_get_basename (dir->file[i].name);
+
+    if (!strcmp (name, filename)) {
+      g_free (filename);
+      return i;
+    }
+
+    g_free (filename);
+  }
 
   return -1;
 }
@@ -707,7 +714,7 @@ gdk_card_deck_get_options (GdkCardDeck* deck)
   GdkCardDeckOptions deck_options;
 
   for(i = 0; i < OPT_NUM; i++, index++)
-    name[i] = g_strdup (g_basename (option_data[i].dir->file[*index].name));
+    name[i] = g_path_get_basename (option_data[i].dir->file[*index].name);
 
   deck_options = gnome_config_assemble_vector (OPT_NUM, 
 					       (const gchar* const*) name);
@@ -879,7 +886,7 @@ gtk_card_deck_options_edit_set (GtkCardDeckOptionsEdit* w,
 
   /* Search for a matching options set in our list of predefined
    * styles. This is all to allow backwards compatibility of the
-   * interface and a users existing options. */
+   * interface and a user's existing options. */
   if (i >= OPT_NUM) {
     possibles = w->style_list;
     while (possibles) {
@@ -961,7 +968,7 @@ gtk_card_deck_options_edit_create_list (GtkCardDeckOptionsEdit * w)
   while (stylelist) {
     style = (CardDeckStyle *) stylelist->data;
     gtk_list_store_append (list, &iter);
-    gtk_list_store_set (list, &iter, 0, style->name, 
+    gtk_list_store_set (list, &iter, 0, _(style->name), 
 			1, style, -1);
     stylelist = g_list_next (stylelist);
   }

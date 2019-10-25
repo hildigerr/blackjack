@@ -1,3 +1,20 @@
+To be done before 2.5 code freeze (23 February 2004):
+
+General:
+  - Update the version info for all docs.
+  - Check for warnings on all code.
+
+Blackjack:
+        - Crasher (125523)
+        - Occasional warning on the command line (race condition with
+          drawing code, may be related to 125523).
+
+libgames-support:
+
+gdk-card-image:
+
+--------------------------------------------------------------------------
+
 2.5 Issues
 
 General:
@@ -6,12 +23,17 @@ General:
         - Make as much as possible scalable so we can have full-screen
           modes.
         - Seriously look at a11y for actually playing the games.
+        - Make games playable by keyboard (126284)
         - Look at network multi-player.
         - Consider how to handle the whole game seed thing.
 	- Update debian files to be reasonable
 
 Blackjack:
         - Eliminate the splash screen (and hopefully any recalculation).
+        - Multiplayer (129639)
+        - Training mode (129638)
+        - Resetting the balance (124629)
+        - Rules dialog clean-up (124613)
 
 libgames-support:
 	- Widgets other than the combo box for the GamesFileList.
@@ -19,7 +41,6 @@ libgames-support:
         - Document
 
 gdk-card-image:
-	- Make card-styles.xml generated so we can do i18n.
 	- When a "custom" style is used make sure that there is no selection.
  	  Currently the default is selected, this may be a limit in the GtkTreeView
 	  widget.

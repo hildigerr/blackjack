@@ -1,3 +1,71 @@
+2004-02-16  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: Time for 2.5.6.
+
+2004-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/game.cpp:
+	* src/dialog.cpp:
+	* src/card.cpp: Removed the has_separator call from the message
+	dialogs.
+
+2004-02-11  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/menu.cpp (help_about_callback): Add translator credits.
+
+2004-02-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c (gtk_card_deck_options_edit_create_list): That
+	was silly. Remove the extra, untyped, column in gtk_list_store_new
+	(). Fixes bug #133687.
+
+2004-02-05  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* TODO: Complete bug triage for the final 2.5 push.
+
+2004-02-04  William Jon McCann  <mccann@jhu.edu>
+
+	* src/player.cpp (reset): Load new XML cache file.
+
+	* src/game.cpp (bj_game_get_config_dir)
+	(bj_game_ensure_config_dir_exists): New functions
+	(bj_game_eval_installed_file): Generate cache file if it
+	is not found.
+
+2004-02-03  William Jon McCann  <mccann@jhu.edu>
+
+	* src/player.cpp (LoadablePlayer, reset):
+	Use and check return value.
+	(saveHandXML, savePlayerHandCountXML, saveCountXML)
+	(saveValueSplitXML, saveResplitXML, saveOverallValuesXML)
+	(saveOverallValueXML, savePlayerHandsXML, saveXML)
+	(load_array_from_string, parse_hand, parse_hands)
+	(parse_hand_count, parse_value_split, parse_resplit)
+	(parse_overall_values, parse_overall_value, parse_document)
+	(loadXML): New functions to support saving and loading XML
+	cache files.
+
+	* src/hand.cpp (bj_hand_show_options)
+	(bj_hand_get_best_option_string, bj_hand_new5): Add some checks
+	for NULL strategy.
+
+2004-02-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c: Replaced references to g_basename. See bug
+	#133176.
+
+2004-01-31  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-files.c (games_image_suffix_list_init): Release the mutex
+	on an early return. Fixes bug #132937.
+
+2004-01-29  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* card-style-file.c:
+	* gdk-card-image.c:
+	* card-styles.xml.in: Updates to let the strings in
+	card-styles.xml to be translated.
+
 2004-01-12  William Jon McCann  <mccann@jhu.edu>
 
 	* src/card.cpp (bj_card_load_pixmaps): Added error checking and
