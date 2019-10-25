@@ -33,6 +33,10 @@
 #include <libgnomevfs/gnome-vfs.h>
 #include <libgnomevfs/gnome-vfs-mime.h>
 
+#include "games-files.h"
+
+#include "card-style-file.h"
+
 /* An image file used in building the cards:
  * each file can contain multiple images and/or half images */
 typedef struct _GdkCardDeckFile
@@ -379,92 +383,6 @@ gdk_card_file_draw_r (GdkCardDeckFile* file, GdkPixmap* p, GdkGC* gc,
   gdk_window_copy_area((GdkWindow *)p, gc, x, y, 
 		       (GdkWindow *)file->pr, xp, yp, 
 		       file->width, file->height);
-}
-
-struct _GtkCardDeckOptionsEdit {
-  GtkAlignment container;
-  
-  GtkOptionMenu **menu;
-};
-
-struct _GtkCardDeckOptionsEditClass {
-  GtkAlignmentClass parent_class;
-
-  void (* changed) (GtkCardDeckOptionsEdit* w);
-};
-
-enum {
-  CHANGED,
-  N_SIGNALS
-};
-
-static GtkAlignmentClass * options_parent_class = NULL;
-static gint gtk_card_deck_options_edit_signals[N_SIGNALS] = { 0 };
-
-static void 
-gtk_card_deck_options_edit_destroy (GtkObject *o)
-{
-  GtkCardDeckOptionsEdit* w;
-  guint i;
-
-  g_return_if_fail(o != NULL);
-  g_return_if_fail(GTK_IS_CARD_DECK_OPTIONS_EDIT(o));
-
-  w = GTK_CARD_DECK_OPTIONS_EDIT(o);
-
-  for(i = 0; i < OPT_NUM; i++)
-    gtk_widget_destroy (GTK_WIDGET(w->menu[i]));
-  g_free(w->menu);
-
-  (*(GTK_OBJECT_CLASS (parent_class)->destroy))(o);
-}
-
-static void
-gtk_card_deck_options_edit_class_init (GtkCardDeckOptionsEditClass *klass)
-{
-  GtkObjectClass *object_class = (GtkObjectClass*) klass;
-    
-  options_parent_class = gtk_type_class (gtk_widget_get_type ());
-  
-  gtk_card_deck_options_edit_signals[CHANGED] =
-    g_signal_new ("changed",
-                  G_OBJECT_CLASS_TYPE (object_class),
-                  G_SIGNAL_RUN_LAST,
-                  G_STRUCT_OFFSET (GtkCardDeckOptionsEditClass, changed),
-                  NULL,
-                  NULL,
-                  g_cclosure_marshal_VOID__VOID,
-                  G_TYPE_NONE,
-                  0);
-
-  object_class->destroy = gtk_card_deck_options_edit_destroy;
-  
-  klass->changed = NULL;
-}
-
-GTypeInfo gtk_card_deck_options_edit_info = 
-{
-  sizeof (GtkCardDeckOptionsEditClass),
-  NULL,
-  NULL,
-  (GClassInitFunc) gtk_card_deck_options_edit_class_init,
-  NULL,
-  NULL,
-  sizeof (GtkCardDeckOptionsEdit),
-  0,
-  NULL,
-  NULL
-};
-
-guint
-gtk_card_deck_options_edit_get_type ()
-{
-  static guint type = 0;
-
-  if (!type)
-    type = g_type_register_static (GTK_TYPE_ALIGNMENT, "GtkCardDeckOptionsEdit",
-                                   &gtk_card_deck_options_edit_info, 0);
-  return type;
 }
 
 static void calculate_dimensions (GdkCardDeck* deck, GdkCardDeckFile** file);
@@ -821,92 +739,306 @@ gdk_card_deck_mask (GdkCardDeck* deck)
   return deck->mask;
 }
 
+/* Below here is the GtkCardDeckOptionsEdit widget. */
+
+struct _GtkCardDeckOptionsEdit {
+  GtkAlignment container;
+  
+  CardDeckStyle * selected_style;
+  GList * style_list;
+  GtkWidget * listview;
+  gboolean ignore_changed;
+};
+
+struct _GtkCardDeckOptionsEditClass {
+  GtkAlignmentClass parent_class;
+
+  void (* changed) (GtkCardDeckOptionsEdit* w);
+};
+
+enum {
+  CHANGED,
+  N_SIGNALS
+};
+
+static GtkAlignmentClass * options_parent_class = NULL;
+static gint gtk_card_deck_options_edit_signals[N_SIGNALS] = { 0 };
+
 static void 
-changed(GtkCardDeckOptionsEdit* w)
+gtk_card_deck_options_edit_destroy (GtkObject *o)
 {
-  gtk_signal_emit(GTK_OBJECT(w), 
-		  gtk_card_deck_options_edit_signals[CHANGED],
-		  NULL);
+  GtkCardDeckOptionsEdit* w;
+
+  g_return_if_fail(o != NULL);
+  g_return_if_fail(GTK_IS_CARD_DECK_OPTIONS_EDIT(o));
+
+  w = GTK_CARD_DECK_OPTIONS_EDIT(o);
+
+  g_list_foreach (w->style_list, (GFunc)g_free, NULL);
+  g_list_free (w->style_list);
+
+  (*(GTK_OBJECT_CLASS (parent_class)->destroy))(o);
+}
+
+static void
+gtk_card_deck_options_edit_class_init (GtkCardDeckOptionsEditClass *klass)
+{
+  GtkObjectClass *object_class = (GtkObjectClass*) klass;
+    
+  options_parent_class = gtk_type_class (gtk_widget_get_type ());
+  
+  gtk_card_deck_options_edit_signals[CHANGED] =
+    g_signal_new ("changed",
+                  G_OBJECT_CLASS_TYPE (object_class),
+                  G_SIGNAL_RUN_LAST,
+                  G_STRUCT_OFFSET (GtkCardDeckOptionsEditClass, changed),
+                  NULL,
+                  NULL,
+                  g_cclosure_marshal_VOID__VOID,
+                  G_TYPE_NONE,
+                  0);
+
+  object_class->destroy = gtk_card_deck_options_edit_destroy;
+  
+  klass->changed = NULL;
+}
+
+GTypeInfo gtk_card_deck_options_edit_info = 
+{
+  sizeof (GtkCardDeckOptionsEditClass),
+  NULL,
+  NULL,
+  (GClassInitFunc) gtk_card_deck_options_edit_class_init,
+  NULL,
+  NULL,
+  sizeof (GtkCardDeckOptionsEdit),
+  0,
+  NULL,
+  NULL
+};
+
+guint
+gtk_card_deck_options_edit_get_type ()
+{
+  static guint type = 0;
+
+  if (!type)
+    type = g_type_register_static (GTK_TYPE_ALIGNMENT, "GtkCardDeckOptionsEdit",
+                                   &gtk_card_deck_options_edit_info, 0);
+  return type;
+}
+
+static void gtk_card_deck_options_edit_set_selection (GtkCardDeckOptionsEdit *w)
+{
+  GtkTreePath * path;
+  GtkTreeSelection * select;
+  GList * list;
+  int i;
+
+  select = gtk_tree_view_get_selection (GTK_TREE_VIEW (w->listview));
+  
+  if (!w->selected_style)
+    return;
+
+  w->ignore_changed = TRUE;
+  gtk_tree_selection_unselect_all (select);
+
+  i = 0;
+  list = w->style_list;
+  while (list) {
+    /* Warning: this only works as long as the order of the list isn't
+     * disturbed. */
+    if (list->data == w->selected_style) {
+      /* So we don't signal on a program-requested change. */
+      path = gtk_tree_path_new_from_indices (i, -1);
+      gtk_tree_selection_select_path (select, path);
+      gtk_tree_view_set_cursor (GTK_TREE_VIEW (w->listview), path, 
+				NULL, FALSE);
+      gtk_tree_path_free (path);
+      return;
+    }
+    i++;
+    list= g_list_next (list);
+  }
 }
 
 void          
 gtk_card_deck_options_edit_set (GtkCardDeckOptionsEdit* w,
 				GdkCardDeckOptions deck_options)
 {
-  guint i;
   gint* index = g_new(gint, OPT_NUM);
+  gchar ** components;
+  GList * possibles;
+  CardDeckStyle * style;
+  gboolean identical;
+  int i,j;
 
   resolve_options (option_data, deck_options, index);
 
-  for (i = 0; i < OPT_NUM; i++)
-    gtk_option_menu_set_history (w->menu[i], index[i]);
+  gnome_config_make_vector (deck_options, &i, &components);
+
+  /* Search for a matching options set in our list of predefined
+   * styles. This is all to allow backwards compatibility of the
+   * interface and a users existing options. */
+  if (i >= OPT_NUM) {
+    possibles = w->style_list;
+    while (possibles) {
+      style = (CardDeckStyle *)possibles->data;
+      identical = TRUE;
+      for (j = 0; j < OPT_NUM; j++) {
+	if (g_utf8_collate (style->components[j], components[j])) {
+	  identical = FALSE;
+	  break;
+	}
+      }
+      if (identical) {
+	w->selected_style = style;
+	gtk_card_deck_options_edit_set_selection (w);
+	break;
+      }
+      possibles = g_list_next (possibles);
+    }
+  }
+
+  for ( ; i>0; i--)
+    g_free (components[i-1]);
+  g_free (components);
 }
 
 GdkCardDeckOptions 
 gtk_card_deck_options_edit_get (GtkCardDeckOptionsEdit* w)
 {
-  guint i,j;
-  gchar** name = g_new0(gchar*, OPT_NUM);
   GdkCardDeckOptions deck_options;
 
-  for(i = 0; i < OPT_NUM; i++) {
-    j = gtk_option_menu_get_history (GTK_OPTION_MENU (w->menu[i]));
-    g_free (name[i]); 
-    name[i] = g_strdup ( g_basename (option_data[i].dir->file[j].name));
-  }
+  if (w->selected_style == NULL)
+    return NULL;
 
   deck_options = gnome_config_assemble_vector (OPT_NUM, 
-					       (const gchar* const*) name);
-  g_free (name);
+					       (const gchar* const*) w->selected_style->components); 
+
   return deck_options;
 }
+
+static void
+gdk_card_deck_options_edit_get_card_styles (GtkCardDeckOptionsEdit * w)
+{
+  /* FIXME: this abuses the knowledge that a GamesFileList is really
+   * a GList, but this is going to change. */
+  GamesFileList * filelist = NULL;
+  gchar* dir_name;
+
+  /* Only read the list once. */
+  if (w->style_list != NULL)
+    return;
+
+  dir_name = gnome_program_locate_file (NULL,
+					GNOME_FILE_DOMAIN_APP_PIXMAP,  
+					"cards", TRUE, NULL);
+
+  filelist = games_file_list_new ("*.xml", dir_name, NULL);
+  
+  while (filelist) {
+    w->style_list = g_list_concat (w->style_list,
+				   card_style_file_parse (((GList *) filelist)->data));
+    filelist = g_list_next ((GList *) filelist);
+  }
+  
+  games_file_list_free (filelist);
+
+  w->style_list = g_list_sort (w->style_list, card_style_compare);
+}
+
+static GtkListStore *
+gtk_card_deck_options_edit_create_list (GtkCardDeckOptionsEdit * w)
+{
+  GtkListStore * list;
+  GList * stylelist;
+  GtkTreeIter iter;
+  CardDeckStyle * style;
+
+  list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
+
+  stylelist = w->style_list;
+
+  while (stylelist) {
+    style = (CardDeckStyle *) stylelist->data;
+    gtk_list_store_append (list, &iter);
+    gtk_list_store_set (list, &iter, 0, style->name, 
+			1, style, -1);
+    stylelist = g_list_next (stylelist);
+  }
+
+  return list;
+}
+
+static void
+gtk_card_deck_options_edit_changed (GtkWidget * w, GObject * o)
+{
+  GtkTreeIter iter;
+  GtkTreeModel * tree;
+  GtkCardDeckOptionsEdit * inst;
+
+  inst = GTK_CARD_DECK_OPTIONS_EDIT (o);
+
+  /* We ignore times when the selection was set by us rather than the
+   * user. */
+  if (inst->ignore_changed) {
+    inst->ignore_changed = FALSE;
+    return;
+  }
+
+
+  gtk_tree_selection_get_selected (GTK_TREE_SELECTION (w), &tree, &iter);
+  gtk_tree_model_get (tree , &iter, 1, &inst->selected_style, -1);
+
+  g_signal_emit(G_OBJECT(o), 
+		gtk_card_deck_options_edit_signals[CHANGED],
+		0);
+} 
 
 GtkWidget* 
 gtk_card_deck_options_edit_new (void)
 {
   GtkCardDeckOptionsEdit* w;
+  GtkListStore * list;
+  GtkTreeViewColumn * column;
+  GtkTreeSelection * select;
   GtkAlignment * a;
-  GtkWidget *table;
-  guint i, j;
   
+
   w = gtk_type_new(gtk_card_deck_options_edit_get_type());
+  w->selected_style = NULL;
+  w->style_list = NULL;
+  /* To ignore the initial, default, selection. */
+  w->ignore_changed = TRUE;
+
   a = GTK_ALIGNMENT (w);
 
   gtk_alignment_set (a, 0.5, 0.5, 1.0, 1.0);
+
+  gdk_card_deck_options_edit_get_card_styles (w);
+
+  list = gtk_card_deck_options_edit_create_list (w);
+
+  w->listview = gtk_tree_view_new_with_model (GTK_TREE_MODEL (list));
+  gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (w->listview), FALSE);
   
-  w->menu = g_new(GtkOptionMenu*, OPT_NUM);
+  column = gtk_tree_view_column_new_with_attributes (NULL,
+						     gtk_cell_renderer_text_new (),
+						     "text", 0,
+						     NULL);
 
-  table = gtk_table_new(OPT_NUM, 2, FALSE);
-  gtk_container_border_width (GTK_CONTAINER (table), GNOME_PAD_SMALL);
+  gtk_tree_view_append_column (GTK_TREE_VIEW (w->listview),
+			       GTK_TREE_VIEW_COLUMN (column));
 
-  gtk_container_add (GTK_CONTAINER (w), table);
-  
-  for (i = 0; i < OPT_NUM; i++) {
-    GtkWidget* label = gtk_label_new(_(option_data[i].description));
-    GtkWidget* menu = gtk_menu_new();
+  select = gtk_tree_view_get_selection (GTK_TREE_VIEW (w->listview));
+  gtk_tree_selection_set_mode (select, GTK_SELECTION_SINGLE);
 
-    w->menu[i] = GTK_OPTION_MENU (gtk_option_menu_new ());
+  g_signal_connect (G_OBJECT (select), "changed",
+		    G_CALLBACK (gtk_card_deck_options_edit_changed), 
+		    G_OBJECT(w));
 
-    gtk_table_attach(GTK_TABLE(table), label, 0, 1, i, i+1, 
-		     0, 0, GNOME_PAD_SMALL, GNOME_PAD_SMALL);
-    gtk_table_attach(GTK_TABLE(table), GTK_WIDGET (w->menu[i]), 1, 2, i, i+1, 
-		     GTK_EXPAND|GTK_FILL, GTK_EXPAND|GTK_FILL, 
-		     GNOME_PAD_SMALL, GNOME_PAD_SMALL);
-    gtk_label_set_justify (GTK_LABEL (label), GTK_JUSTIFY_LEFT);
-
-    for(j = 0; j < option_data[i].dir->nfiles; j++) {
-      gchar* filename = option_data[i].dir->file[j].name;
-      GtkWidget *menu_item = 
-	gtk_menu_item_new_with_label (g_basename (filename));
-      gtk_signal_connect_object (GTK_OBJECT(menu_item), "activate", 
-				 GTK_SIGNAL_FUNC (changed), GTK_OBJECT(w));
-      gtk_menu_shell_append (GTK_MENU_SHELL(menu), menu_item);
-    }
-    gtk_widget_show_all (menu);
-
-    gtk_option_menu_set_menu (GTK_OPTION_MENU (w->menu[i]), menu);
-  }
-  gtk_card_deck_options_edit_set (w, NULL);
+  gtk_container_add (GTK_CONTAINER (w), w->listview);
 
   return GTK_WIDGET (w);
 }

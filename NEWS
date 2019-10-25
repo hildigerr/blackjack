@@ -1,3 +1,24 @@
+gnome-games "Nervous Energy" 2.5.2
+==================================
+
+This release is evenly split between UI changes and back-end code
+consolidation.
+
+Code for locating files in gdk-card-image and glines has been merged
+into the libgames-support library. More games will take advantage of
+this as the (internal) API firms up.
+
+The card selection widget in gdk-card-image has been changed. This
+affects blackjack. You no longer select the details of
+the card image from seven menus, instead there is one list with a set
+of predefined styles. These styles are loaded from an external file
+but home directories are not searched yet so custom styles require
+root access. If the current style is not on the list it is not
+touched, so existing preferences and direct editing of the style using
+gconf-editor will work.
+
+Blackjack has recieved some cleanup work to the UI and some bug fixes.
+
 gnome-games "Trade Surplus" 2.5.1
 ====================
 

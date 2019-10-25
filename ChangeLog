@@ -1,3 +1,73 @@
+2003-12-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.5.2
+
+2003-12-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-files.c:
+	* games-files.h: Add new routines (and rework some old ones) for
+	finding images in a path and for dealing for cleanly with common
+	UI work.
+
+2003-11-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c: Moved the games_get_file_list code out to a library.
+
+	* games-files.c:
+	* games-files.h: New routines (and files) for searching paths.
+
+2003-11-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c: Removed some unnecessary code and fixed a bug
+	where the first selection would fail if the default style was the
+	current style when the preferences were opened.
+
+2003-11-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c (gtk_card_deck_options_edit_set): Get _edit_set
+	to find the a matching style, if any. Also make the selection
+	finally work properly and not reset the moment the dialog is
+	opened.
+
+2003-11-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-iamge.c (gdk_card_deck_options_edit_get_card_styles):
+	* card-style-file.h:
+	* card-style-file.c (card_style_compare): Sort the style list and
+	add an API call to card-style to assist this.
+
+	* card-styles.xml: Added more styles.
+
+	* gdk-card-image.c (gtk_card_deck_options_edit_create_list): And
+	another Heisenbug fixed. Make sure gtk_list_store gets the correct
+	type to store.
+
+	* card-style-file.h (NUM_COMPONENTS): Heisenbug! I wish I had read
+	my own comment.
+
+2003-11-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c: Rearranged to put all the
+	gtk_card_deck_options_edit stuff together.
+
+2003-11-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* card-style-file.c:
+	* card-style-file.h:
+	* gdk-card-image.c: Start cleaning up my code from last night. The
+	definition and parsing of card style files has been moved into
+	it's own file and is free of nasty global variables and might even
+	be thread safe.
+
+2003-11-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c: The rough cut of the new card style selection
+	widget. Known to work for aisleriot and should work for blackjack,
+	but is inherently broken (it uses globals to store the state of
+	the object). Good proof-of-principle though.
+
+	* card-styles.xml: Created and added to the distribution.
+
 2003-11-17  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: Updated for 2.5.1.
