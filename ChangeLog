@@ -1,3 +1,14 @@
+2003-09-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: It's time for 2.3.90.
+
+2003-08-25  William Jon McCann  <mccann@jhu.edu>
+
+	* help/C/figures/blackjack_start_window.png:
+	* help/C/figures/blackjack_win_window.png: Changed help screenshots
+	to use simple theme as it seems like this is the de facto standard
+	for 2.4
+
 2003-08-24  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: Added an entry for 2.3.8.

@@ -6,6 +6,7 @@ Contents
 --------
 
 - Overview
+- What's New
 - The Games
 - License
 - Mailing List
@@ -26,6 +27,17 @@ be the sort of game that can be played in five minutes or so. They are
 also meant to be fun enough that you will play them again and
 again. Of course we can't be held responsible for the time and
 productivity lost while playing them.
+
+What's New
+----------
+
+There have been several major changes between version 2.2 of
+gnome-games and version 2.4. These are:
+ - A new game, Blackjack, has been added.
+ - All games have updated documentation.
+
+Blackjack:
+ - This is completely new, enjoy.
 
 The Games
 ---------
