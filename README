@@ -6,7 +6,6 @@ Contents
 --------
 
 - Overview
-- What's New
 - The Games
 - License
 - Mailing List
@@ -27,17 +26,6 @@ be the sort of game that can be played in five minutes or so. They are
 also meant to be fun enough that you will play them again and
 again. Of course we can't be held responsible for the time and
 productivity lost while playing them.
-
-What's New
-----------
-
-There have been several major changes between version 2.2 of
-gnome-games and version 2.4. These are:
- - A new game, Blackjack, has been added.
- - All games have updated documentation.
-
-Blackjack:
- - This is completely new, enjoy.
 
 The Games
 ---------
@@ -134,10 +122,10 @@ have.
 Requirements
 ------------
 
-To compile these packages you need at least the baseline GNOME 2
-development packages. This version of gnome-games was developed using
-version 2.4, but the package has been tested with version 2.2. The
-package has *not* been tested using GNOME 2.0.
+To compile these packages you need at least the baseline GNOME 2.4
+development packages. You really, really, need GTK+ 2.3 (or CVS
+HEAD). You also need gettext 0.12 or newer and intltool 0.27.2 or
+later.
 
 In addition it is useful to have a working C++ compiler (e.g. g++,
 part of the gcc suite).

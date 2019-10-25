@@ -1,6 +1,14 @@
+2003-10-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* README:
+	* NEWS: Updated for the 2.5.0 release.
+
 2003-10-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.4.1.
+
+	* TODO: Actually update the TODO file to get rid of the 2.4 stuff
+	(and merge back the unfinished bits).
 
 2003-09-09  Callum McKenzie  <callum@physics.otago.ac.nz>
 
