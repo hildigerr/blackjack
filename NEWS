@@ -1,8 +1,15 @@
+gnome-games "Palm Cove" 2.3.5
+=============================
+
+This release is a little early since I'm going to be away during the
+"official" release period. My location will of course be a closely
+guarded secret.
+
 gnome-games "Cruising Along" 2.3.4
 ==================================
 
 Things are cruising along towards a nice, stable, 2.4 release.
-This release mostly contains bug fixes and clean-ups. 
+This release mostly contains bug fixes and clean-ups.
 
 A big thanks goes to Jon McCann and Steve Chaplin who have done most
 of the work on this release.

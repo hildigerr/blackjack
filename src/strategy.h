@@ -1,3 +1,5 @@
+// -*- mode:C++; tab-width:4; c-basic-offset:4; indent-tabs-mode:nil -*-
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Blackjack.h
@@ -251,6 +253,8 @@ protected:
         int cards[10],
             multiplier[10];
     };
+    struct DealerHandCount;
+    friend struct DealerHandCount; // make DealerHand accessible
     struct DealerHandCount {
         int numHands;
         DealerHand dealerHands[423];
