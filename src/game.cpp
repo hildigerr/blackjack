@@ -46,18 +46,18 @@
 #include <iostream>
 using namespace std;
 
-BJGameRules      *rules;
-LoadablePlayer   *strategy;
-Hand             *dealer;
-Probabilities    *dealerProbabilities;
-Shoe             *shoe;
-BJShoe           *distribution;
-PlayerHand       *player;
+BJGameRules      *rules = NULL;
+LoadablePlayer   *strategy = NULL;
+Hand             *dealer = NULL;
+Probabilities    *dealerProbabilities = NULL;
+Shoe             *shoe = NULL;
+BJShoe           *distribution = NULL;
+PlayerHand       *player = NULL;
 
 GList            *playerHands = NULL;
 gfloat           lastWager = 5.0;
 Card             tempCard;
-PlayerHand       *tempHand;
+PlayerHand       *tempHand = NULL;
 
 gint             numDecks;
 gint             dealerSpeed;
@@ -390,10 +390,6 @@ void bj_game_new (gchar* file, guint *seedp )
 
   if (file && strcmp (file, game_file))
     {
-      gchar buf[100];
-      GtkWidget *ms;
-      gint pos;
-
       game_file = file;
 
       bj_game_eval_installed_file (file);
@@ -423,10 +419,18 @@ void bj_game_new (gchar* file, guint *seedp )
 
   // Prepare to play blackjack.
 
+  if (dealer)
+    delete dealer;
   dealer = new Hand;
   dealer->hslot = NULL;
+  if (dealerProbabilities)
+    delete dealerProbabilities;
   dealerProbabilities = new Probabilities (rules->getHitSoft17 ());
+  if (shoe)
+    delete shoe;
   shoe = new Shoe (numDecks);
+  if (distribution)
+    delete distribution;
   distribution = new BJShoe (numDecks);
 
   bj_clear_table ();

@@ -58,9 +58,9 @@ bj_hand_show_options ()
 {
   if ((player->getCards () > 1) 
       && (dealer->getCards () > 1) )
-    int bestOption = strategy->showOptions (player,
-                                            dealer->cards[0].value(), 
-                                            numHands);
+    strategy->showOptions (player,
+                           dealer->cards[0].value(), 
+                           numHands);
 }
 
 void
@@ -248,11 +248,8 @@ bj_hand_new5 (gpointer data)
 
   if (!allSettled)
     {
-      if (bj_get_show_probabilities ()) 
-        {
-          dealerProbabilities->showProbabilities (distribution,
-                                                  dealer->cards[0].value ());
-        }
+      dealerProbabilities->showProbabilities (distribution,
+                                              dealer->cards[0].value ());
       allSettled = true;
       bj_game_set_active (true);
     }
@@ -263,10 +260,9 @@ bj_hand_new5 (gpointer data)
     }
   else
     {
-      if (bj_get_show_probabilities ()) 
-        int bestOption = strategy->showOptions (player,
-                                                dealer->cards[0].value (), 
-                                                numHands);
+      strategy->showOptions (player,
+                             dealer->cards[0].value (), 
+                             numHands);
       events_pending = false;
     }
 
@@ -313,29 +309,19 @@ bj_hand_new1 (gpointer data)
 void
 bj_hand_new ()
 {
-  GtkWidget* dialog;
-  gint choice;
-  GList *temptr;
-  gint i;
-  gdouble balance;
 
   // Reshuffle if necessary.
-  
   if (shoe->numCards < 52)
     {
       shoe->shuffle ();
       distribution->reset ();
     }
 
-  //player->wager = lastWager;
   player->wager = bj_get_wager ();
   bj_adjust_balance (-1 * player->wager);
   bj_game_set_active (true);
   
   player->showWager ();
-  
-  // PROMPT FOR WAGER
-  
   lastWager = player->wager;
 
   events_pending = true;
@@ -383,7 +369,6 @@ bj_hand_finish1 (gpointer data)
 void
 bj_hand_finish ()
 {
-  hslot_type hslot;
   events_pending = true;
   bj_game_set_active (false);
   // Turn dealer hole card.
@@ -416,8 +401,6 @@ bj_hand_hit ()
     {
       bj_deal_card_to_player ();
 
-      if (bj_get_show_probabilities ()) 
-        bj_draw_dealer_probabilities ();
       player->showCount ();
       if (player->getCount () >= 21)
         if ((player = player->nextHand) == NULL)
@@ -455,8 +438,7 @@ bj_hand_double ()
       player->showWager ();
       
       bj_deal_card_to_player ();
-      if (bj_get_show_probabilities ()) 
-        bj_draw_dealer_probabilities ();
+
       player->showCount ();
       if (player->getCount () <= 21)
         allSettled = false;
@@ -473,7 +455,6 @@ void
 bj_hand_split ()
 {
   hslot_type hslot;
-  gint card;
   gint slot_start_x;
 
   if (bj_hand_can_be_split ())
@@ -581,8 +562,6 @@ bj_hand_finish_play ()
         if (player->getCards () == 1)
           {
             bj_deal_card_to_player ();
-            if (bj_get_show_probabilities ()) 
-              bj_draw_dealer_probabilities ();
           }
         else
           {
@@ -596,7 +575,8 @@ bj_hand_finish_play ()
               bj_hand_finish ();
             }
         
-        //player->showCount(numHands == 1);
+        bj_hand_show_dealer_probabilities ();
+        bj_hand_show_options ();
       }
     }
   bj_draw_refresh_screen ();

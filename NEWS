@@ -1,3 +1,14 @@
+gnome-games "The Catastrophe" 2.5.3
+==================================
+
+Finally, we know the answer to the question: can you make a
+gnome-games release with a kitten balanced on each shoulder ? The
+answer is yes.
+
+blackjack: Text drawing re-write.
+gdk-card-image: Improve the use of GamesFileList.
+libgames-support: Improvements to GamesFileList.
+
 gnome-games "Nervous Energy" 2.5.2
 ==================================
 

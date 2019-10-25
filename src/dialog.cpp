@@ -59,7 +59,7 @@ get_insurance_choice ()
 
   gtk_label_set_use_markup (GTK_LABEL (GTK_MESSAGE_DIALOG (dialog)->label),
                             TRUE);
-  gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_YES);
+  gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_NO);
 
   /* add a stock icon? */ 
   switch (gtk_dialog_run (GTK_DIALOG (dialog)))
@@ -128,8 +128,6 @@ show_hint_dialog ()
 void 
 pref_dialog_response (GtkWidget *w, int response, gpointer data)
 {
-  GdkCardDeckOptions deck_options = NULL;
-
   gtk_widget_hide (w);
 }
 
@@ -370,7 +368,6 @@ show_preferences_dialog ()
       for (GList *temptr = bj_game_get_rules_list (); temptr; temptr=temptr->next)
         {
           gchar *text;
-          gint row;
           ruleset = bj_game_find_and_read_rules ((gchar*)temptr->data);
           if (ruleset)
             {
