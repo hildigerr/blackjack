@@ -1,3 +1,23 @@
+2003-11-17  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: Updated for 2.5.1.
+
+2003-11-13  William Jon McCann  <mccann@jhu.edu>
+
+	* help/C/blackjack.xml: Document keyboard controls.
+
+	* src/hand.cpp (bj_hand_show_dealer_probabilities): Add a check
+	to make sure the dealer has a card first.
+
+	* src/player.cpp (showOptions):
+	(showProbabilities): Add labels, reduce precision, and use percentage
+	symbols as suggested by Damon Brodie.
+
+2003-10-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gdk-card-image.c (gdk_card_deck_new): Applied a patch from Mark
+	Schreiber to catch the case where the card images are missing.
+
 2003-10-21  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* README:

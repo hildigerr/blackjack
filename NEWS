@@ -1,3 +1,14 @@
+gnome-games "Trade Surplus" 2.5.1
+====================
+
+This is a catch-up release and unfortunately doesn't contain many sexy
+new features.
+
+Other changes:
+
+blackjack: The keyboard controls are now documented plus some bug
+           fixes and UI improvements.
+
 gnome-games "Credibility Problem" 2.5.0
 ========================================
 
