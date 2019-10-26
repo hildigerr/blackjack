@@ -1,3 +1,19 @@
+gnome-games 2.9.6
+=================
+
+This is the second beta release of gnome-games leading to the 2.10.0
+release. Once again the major changes since the last relase are bug
+fixes.
+
+Blackjack:
+ - Menu items are now translated properly (rah).
+
+gnome-games 2.9.5
+=================
+
+This is the first beta release of gnome-games leading up to the 2.10.0
+release.
+
 gnome-games 2.9.4
 =================
 

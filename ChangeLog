@@ -1,3 +1,15 @@
+2005-02-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.6
+
+2005-01-29  Richard Hoelscher  <rah@rahga.com>
+
+	* src/blackjack.cpp: Mark menu items for translation.
+
+2005-01-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.5.
+
 2005-01-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.9.4.
