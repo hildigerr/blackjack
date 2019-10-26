@@ -69,6 +69,7 @@ Comment[ta]=காஸினோ கருப்புமந்திரி சீ
 Comment[tr]=Kumarhane kart oyunu olan BlackJack'i oynayın
 Comment[uk]=Всенародно улюблена гра "Блекджек"
 Comment[zh_CN]=玩玩赌场纸牌游戏二十一点
+Comment[zh_TW]=玩賭場常見的 21 點
 Exec=blackjack
 Icon=gnome-blackjack.png
 Terminal=false

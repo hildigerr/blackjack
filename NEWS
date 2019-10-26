@@ -1,3 +1,11 @@
+gnome-games 2.8.1
+=================
+
+This is the second stable release of gnome-games in the 2.8
+series. There are no new features, merely translation updates.
+There is no need to upgrade. Any problems should be
+reported in the GNOME bugzilla (http://bugzilla.gnome.org/).
+
 gnome-games 2.8.0
 =================
 
