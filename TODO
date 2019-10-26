@@ -9,7 +9,7 @@ General:
         - Make games respond to the gconf key change signals.
         - Move more common code into the libgames-support library.
         - Make as much as possible scalable so we can have full-screen
-          modes.
+          modes. (80204)
         - Seriously look at a11y for actually playing the games.
         - Make games playable by keyboard (126284)
         - Look at network multi-player.
@@ -20,7 +20,6 @@ Blackjack:
         - Eliminate the splash screen (and hopefully any recalculation).
         - Multiplayer (129639)
         - Training mode (129638)
-        - Resetting the balance (124629)
         - Rules dialog clean-up (124613)
 
 libgames-support:

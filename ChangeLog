@@ -1,3 +1,16 @@
+2004-12-22  root  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.3.
+
+2004-12-16  Richard Hoelscher  <rah@rahga.com>
+
+	* TODO: Assorted updates.
+
+2004-12-13  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-pixmaps.c: gdk_pixbuf_render_pixmap_and_mask ->
+	gdk_pixbuf_render_pixmap_and_mask_for_colormap.
+
 2004-11-30  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.9.2.1.
