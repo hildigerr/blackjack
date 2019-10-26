@@ -1,3 +1,23 @@
+gnome-games "Space Monster" 2.6.0
+=================================
+
+This is ithe new stable release of gnome-games.
+
+Many people have contributed to this release, both for code and
+artwork. In alphabetical order they are:
+ Steve Chaplin,
+ Richard Hoelscher,
+ John McCann
+ Callum McKenzie,
+ Tim Musson,
+ Rexford Newbould,
+ Krzysztof Foltman,
+ Gonzalo Odiard,
+
+You will need the GNOME 2.6 development platform to build this,
+especially GTK 2.3. It is also desirable to have gettext 0.12. To
+compile Blackjack you need a C++ compiler.
+
 gnome-games "Zero Gravitas" 2.5.9
 =================================
 

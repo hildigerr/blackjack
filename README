@@ -122,7 +122,7 @@ have.
 Requirements
 ------------
 
-To compile these packages you need at least the baseline GNOME 2.4
+To compile these packages you need at least the baseline GNOME 2.6
 development packages. You really, really, need GTK+ 2.3. You also need
 gettext 0.12 or newer. If you are building from CVS then you also need
 the CVS version of intltool.
@@ -145,7 +145,11 @@ cheating.
 The Future
 ----------
 
-The 2.6 release of gnome-games has been an incremental improvement over 2.4. 2.8 will be a similar incremental improvement. Once again I hope to concentrate on only a few games to bring them kicking and screaming into the 21st century. The following goals are still important in the long run:
+The 2.6 release of gnome-games has been an incremental improvement
+over 2.4. 2.8 will be a similar incremental improvement. Once again I
+hope to concentrate on only a few games to bring them kicking and
+screaming into the 21st century. The following goals are still
+important in the long run:
  - Making it easier for individual players to introduce their own themes.
  - Scalability of the game graphics so that the game can be resized
    to suit the player.
