@@ -1,3 +1,59 @@
+2004-07-19  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Replace dondorf.png with an SVG version.
+
+2004-07-17  William Jon McCann  <mccann@jhu.edu>
+
+	* src/slot.cpp (bj_slot_set_size):
+	* src/chips.cpp (bj_chip_set_size): New functions to load pixbufs
+	directly from file using librsvg.
+
+	* src/card.cpp (bj_card_set_size): Don't scale stored pixbufs for
+	chips and slot image.  Call bj_chip_set_size and bj_slot_set_size.
+	* src/blackjack.cpp (bj_quit_app, main_prog):
+	* src/card.cpp (bj_card_load_pixmaps):
+	(bj_card_free_pixmaps): Removed.
+
+2004-07-16  William Jon McCann  <mccann@jhu.edu>
+
+	* pixmaps/chip-100.svg:
+	* pixmaps/chip-25.svg:
+	* pixmaps/chip-5.svg:
+	* pixmaps/chip-1.svg:
+	* pixmaps/white-outline.svg: Add new SVG chip and slot
+	images.
+
+	* src/card.cpp (bj_card_load_pixmaps): Use SVG chips.
+
+	* src/slot.cpp (bj_slot_load_pixmaps): Use SVG slot.
+
+2004-07-11  William Jon McCann  <mccann@jhu.edu>
+
+	* src/strategy.cpp: Fix for bug #145586.
+
+2004-07-08  William Jon McCann  <mccann@jhu.edu>
+
+	* src/menu.cpp (help_about_callback): Update Eric Farmer's
+	email address.
+
+2004-07-06  William Jon McCann  <mccann@jhu.edu>
+
+	* src/events.cpp (handle_chip_stack_pressed): Fix typos
+	press_data -> chip_stack_press_data.
+
+	* src/card.cpp (bj_card_set_size): Fix mask getting set
+	due to being defined as a local variable.
+
+	* src/game.cpp (bj_game_read_rules):
+	* src/blackjack.cpp (main_prog):
+	(bj_gconf_card_style_cb):  Fix string leaks.
+
+	* src/events.cpp (set_cursor, set_cursor_by_location)
+	(bj_event_button_release, handle_slot_motion_event)
+	(handle_chip_stack_motion_event, make_cursor)
+	(bj_event_playing_area_configure): Use Callum's mouse
+	cursor work from Aisleriot.
+
 2004-07-06  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.7.4.

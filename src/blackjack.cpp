@@ -204,7 +204,6 @@ bj_quit_app (GtkMenuItem *menuitem)
 
         g_list_free (playerHands);
 
-        bj_card_free_pixmaps ();
         bj_slot_free_pixmaps ();
         g_object_unref (surface);
         g_object_unref (press_data->moving_cards);
@@ -291,6 +290,7 @@ static void
 main_prog (int argc, char *argv[])
 {
         GtkWidget *wager_label, *balance_label, *status_box, *group_box;
+        gchar *lcard_style;
         gchar *label_string;
         guint context_id;
 
@@ -299,7 +299,6 @@ main_prog (int argc, char *argv[])
 
         create_main_window ();
 
-        bj_card_load_pixmaps (app, bj_get_card_style ());
         bj_slot_load_pixmaps ();
  
         bj_create_board ();
@@ -391,6 +390,7 @@ bj_gconf_card_style_cb (GConfClient *client, guint cnxn_id,
 
         lcard_style = bj_get_card_style ();
         bj_card_set_theme (lcard_style);
+        g_free (lcard_style);
         bj_draw_refresh_screen ();
 }
 

@@ -113,34 +113,6 @@ get_pixmap (const char *filename)
         return ret;
 }
 
-void
-bj_card_load_pixmaps (GtkWidget *lapp, gchar *lcard_style) 
-{
-        gchar *buffer;
-
-        buffer = g_build_filename ("blackjack", "chip-100.png", NULL);
-        chip_pixbuf[CHIP_100] = get_pixbuf (buffer);
-        g_free (buffer);
-        buffer = g_build_filename ("blackjack", "chip-25.png", NULL);
-        chip_pixbuf[CHIP_25] = get_pixbuf (buffer);
-        g_free (buffer);
-        buffer = g_build_filename ("blackjack", "chip-5.png", NULL);
-        chip_pixbuf[CHIP_5] = get_pixbuf (buffer);
-        g_free (buffer);
-        buffer = g_build_filename ("blackjack", "chip-1.png", NULL);
-        chip_pixbuf[CHIP_1] = get_pixbuf (buffer);
-        g_free (buffer);
-}
-
-void
-bj_card_free_pixmaps () 
-{
-        for (int i = 0; i < 4; i++)
-                if (chip_pixbuf[i] != NULL)
-                        g_object_unref (chip_pixbuf[i]);
-
-}
-
 hcard_type 
 bj_card_new (gint value, gint suit, gint direction)
 {
@@ -157,22 +129,9 @@ void
 bj_card_set_size (gint width, gint height)
 {
         GdkPixbuf *scaled = NULL;
-        GdkBitmap *lmask;
 
-        if (bj_slot_get_pixbuf ()) {
-                scaled = gdk_pixbuf_scale_simple (bj_slot_get_pixbuf (), width, height,
-                                                  GDK_INTERP_BILINEAR);
-
-                bj_slot_set_scaled_pixbuf (scaled);
-        }
-
-        for (int i = 0; i < 4; i++) {
-                scaled = gdk_pixbuf_scale_simple (bj_chip_get_pixbuf (i),
-                                                  width / 2, width / 2,
-                                                  GDK_INTERP_BILINEAR);
-
-                bj_chip_set_scaled_pixbuf (i, scaled);
-        }
+        bj_slot_set_size (width, height);
+        bj_chip_set_size (width / 2, width / 2);
 
         if (!images) {
                 images = games_card_pixmaps_new (playing_area->window);
@@ -180,8 +139,8 @@ bj_card_set_size (gint width, gint height)
         }
 
         games_card_pixmaps_set_size (images, width, height);
-        lmask = games_card_pixmaps_get_mask (images);
-        gdk_gc_set_clip_mask (draw_gc, lmask);
+        mask = games_card_pixmaps_get_mask (images);
+        gdk_gc_set_clip_mask (draw_gc, mask);
 }
 
 void
