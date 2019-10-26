@@ -1,3 +1,14 @@
+2004-11-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.2.1.
+
+2004-11-29  Richard Hoelscher  <rah@rahga.com>
+
+	* src/blackjack.cpp (main): remove rsvg_init(), bug #159811.
+
+	* games-card-images.c:
+	* games-card-pixmaps.c: In range checks, return NULL if fail.
+
 2004-11-29  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.9.2.

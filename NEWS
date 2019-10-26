@@ -1,3 +1,14 @@
+gnome-games 2.9.2.1
+===================
+
+Unfortunately 2.9.2 required a CVS installation of librsvg to
+build. The code in question was non-essential and has been removed for
+the moment. In addition, some more minor patches have been applied:
+
+libgames-support:
+ - Some checks were not returning values for functions requiring return
+   values (rah).
+
 gnome-games 2.9.2
 =================
 
