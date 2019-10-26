@@ -1,3 +1,9 @@
+gnome-games 2.7.3
+=================
+
+ - Removed gdk-card-images library (callum)
+ - Drawing fixes for blackjack (callum)
+
 gnome-games 2.7.2
 =================
 
