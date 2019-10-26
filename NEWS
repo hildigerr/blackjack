@@ -1,3 +1,17 @@
+gnome-games 2.9.7
+=================
+
+This is the first release candidate for gnome-games 2.10. Since the
+last release there have been minor bug fixes and documentation and
+translation updates. The only expected changes between now and the
+2.10 release are documentation polishing and urther translation work.
+
+Bugs fixed:
+
+Blackjack:
+ - Display the application icon properly.
+ - Translate the menus correctly.
+
 gnome-games 2.9.6
 =================
 

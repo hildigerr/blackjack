@@ -332,6 +332,7 @@ create_main_window (void)
         gtk_ui_manager_add_ui_from_string (ui, ui_definition, -1, &error);
 
         actions = gtk_action_group_new ("Actions");
+        gtk_action_group_set_translation_domain (actions, GETTEXT_PACKAGE);
         gtk_action_group_add_actions (actions, entries, G_N_ELEMENTS (entries), toplevel_window);
         gtk_action_group_add_toggle_actions (actions, toggle_entries, G_N_ELEMENTS (toggle_entries), toplevel_window);
         gtk_ui_manager_insert_action_group (ui, actions, 0);
@@ -686,7 +687,7 @@ main (int argc, char *argv [])
 
         gtk_widget_push_colormap (gdk_rgb_get_colormap ());
 
-        gtk_window_set_default_icon_name ("gnome-blackjack");
+        gtk_window_set_default_icon_from_file (PIXMAPDIR"/gnome-blackjack.png", NULL);
 
         bj_gconf_init (bj_gconf_client ());
 
