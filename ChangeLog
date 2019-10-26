@@ -1,3 +1,75 @@
+2004-05-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.7.1 !
+
+2004-05-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-images.c: Render individual cards on demand rather
+	than all at once.
+
+2004-05-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-files.c (games_file_list_create_widget): Handle the case
+	where the provided default isn't in the list.
+
+	* games-card-images.c: Add a fallback option when cards fail to load.
+
+	* games-card-images.c:
+	* games-card-selector.c:
+	* games-card-common.c: Use a common path definition.
+
+	* games-card-pixmaps.c (games_card_pixmaps_purge): Remove some
+	debugging statements.
+
+	* games-frame.c:
+	* games-frame.h: TYPE_GAMES_FRAME -> GAMES_TYPE_FRAME for
+	consistency across libgames.
+
+	* games-card-selector.c:
+	* games-card-selector.h: A widget to select a card theme.
+
+2004-04-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-images.c (games_card_images_new):
+
+	* games-card-pixmaps.c:
+	* games-card-pixmaps.h: Add an object to manage pixmaps of cards.
+
+	* games-card-images.c (games_card_images_finalize): Just call
+	purge rather than repeating code. Also reorganise the _new and
+	_init code so that variables get initialised properly by
+	subclasses.
+
+	* games-card-images.h: Implement the standard casting macros.
+
+	* games-card-images.h:
+	* games-card-images.c: Reduce dependencies to only glib and gdk-pixbuf.
+
+2004-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-images.c (games_card_images_render): Wrap up the
+	common functionality into a macro.
+
+2004-04-20  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-images.h:
+	* games-card-images.c: Use G_DEFINE_TYPE and add theme support.
+
+2004-04-19  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-images.h:
+	* games-card-images.c (games_card_images_render): Pick up the card
+	images from a monolithic file.
+
+	* Makefile.am (INCLUDES): Added a reference to the datadir.
+
+2004-04-17  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Added games-card-images.*
+
+	* games-files.c: Update the file name at the top so it isn't the
+	file we stole the boilerplate from.
+
 2004-04-14  William Jon McCann  <mccann@jhu.edu>
 
 	* src/hand.cpp (bj_hand_new5): Return when hand is finished.
@@ -389,6 +461,9 @@
 
 	* TODO: Update.
 
+	* games-frame.c (games_frame_add): Make games frame fill the
+	available space.
+
 2003-06-17  William Jon McCann  <mccann@jhu.edu>
 
 	* TODO: Updated with results of this round of compiler warning
@@ -448,10 +523,22 @@
 	* src/menu.cpp:
 	* src/blackjack.cpp: i18n fixes from Christian Neumair (bug #114875).
 
+	* games-frame.c (games_frame_set_label): Compile fixups for those
+	of us still using ANSI C, bad Jon :).
+
+2003-06-10  William Jon McCann  <mccann@jhu.edu>
+
+	* games-frame.c (games_frame_set_label): Added
+	games_frame_set_label function.
+
 2003-06-09  William Jon McCann  <mccann@jhu.edu>
 
 	* src/dialog.cpp:
 	* src/game.cpp: Removed separator from dialogs as in HIG.
+
+	* games-frame.h:
+	* games-frame.c: New functions to create a HIG compliant
+	frame widget.
 
 2003-06-07  William Jon McCann  <mccann@jhu.edu>
 

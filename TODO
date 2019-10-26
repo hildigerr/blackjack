@@ -1,16 +1,11 @@
-To be done before 2.5 code freeze (23 February 2004):
 
-General:
+Before 2.7.1:
 
-Blackjack:
-
-libgames-support:
-
-gdk-card-image:
+- Make libgames shared
 
 --------------------------------------------------------------------------
 
-2.5 Issues
+All bugs.
 
 General:
         - Make games respond to the gconf key change signals.
@@ -34,8 +29,13 @@ libgames-support:
 	- Widgets other than the combo box for the GamesFileList.
 	- GamesFileList standard directory option for paths.
         - Document
+	- Use a second thread for pre-generating card images (I think
+          this was shaunm's idea so he could take advantage of works' dual
+	  opteron).
 
 gdk-card-image:
+	- Pretty much deprectaed, see what Jon wants to do.
+	- Finish off the replacement in libgames.
 	- When a "custom" style is used make sure that there is no selection.
  	  Currently the default is selected, this may be a limit in the GtkTreeView
 	  widget.

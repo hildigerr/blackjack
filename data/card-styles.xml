@@ -11,6 +11,7 @@
     <name xml:lang="de">Vorgabe</name>
     <name xml:lang="el">Προεπιλογή</name>
     <name xml:lang="es">Predeterminado</name>
+    <name xml:lang="eu">Lehenetsia</name>
     <name xml:lang="fi">Oletus</name>
     <name xml:lang="fr">Défaut</name>
     <name xml:lang="gu">મૂળભુત</name>
@@ -82,6 +83,7 @@
     <name xml:lang="de">Dondorf rot</name>
     <name xml:lang="el">Κόκκινο Dondorf </name>
     <name xml:lang="es">Dondorf rojo</name>
+    <name xml:lang="eu">Dondorf gorria</name>
     <name xml:lang="fi">Dondorfin punainen</name>
     <name xml:lang="fr">Dondorf rouge</name>
     <name xml:lang="hr">Dondorf crveno</name>

@@ -7,6 +7,7 @@ Contents
 
 - Overview
 - The Games
+- Website
 - License
 - Mailing List
 - Maintainers
@@ -15,6 +16,18 @@ Contents
 - Building Gnome-Games
 - Security Issues
 - The Future
+
+=========================================================================
+
+!!! IMPORTANT !!!
+
+Migrating from 2.6 to 2.7.
+
+The 2.7 series of gnome-games is a development version and has some
+quite radical changes which will undoubtedly produce bugs. All bugs
+should of course be reported to http://bugzilla.gnome.org/
+
+========================================================================
 
 Overview
 --------
@@ -52,7 +65,7 @@ it. There are only two catches, firstly you can't restrict anyone else
 from copying the code, you have to give them the same freedoms you
 received (including access to the source code). Secondly, because the
 code may have been modified and we have no idea what state it will be
-in when it reaches you we cannot provide a warranty. All the details
+in when it reaches you, we cannot provide a warranty. All the details
 can be found in the file COPYING which should have accompanied this
 software. If it didn't you can find a copy at
 
@@ -122,7 +135,7 @@ have.
 Requirements
 ------------
 
-To compile these packages you need at least the baseline GNOME 2.6
+To compile these packages you need at least the baseline GNOME 2.4
 development packages. You really, really, need GTK+ 2.3. You also need
 gettext 0.12 or newer. If you are building from CVS then you also need
 the CVS version of intltool.
