@@ -21,10 +21,13 @@
     <name xml:lang="lt">Įprastas</name>
     <name xml:lang="mn">Стандарт</name>
     <name xml:lang="nl">Standaard</name>
+    <name xml:lang="nn">Standard</name>
     <name xml:lang="no">Forvalgt</name>
+    <name xml:lang="pa">ਮੂਲ </name>
     <name xml:lang="pl">Domyślne</name>
     <name xml:lang="pt">Omissão</name>
     <name xml:lang="pt_BR">Padrão</name>
+    <name xml:lang="ru">По умолчанию</name>
     <name xml:lang="sq">E prezgjedhur</name>
     <name xml:lang="sr">Подразумевани</name>
     <name xml:lang="sr@Latn">Podrazumevani</name>
@@ -45,6 +48,8 @@
     <name xml:lang="ar">دوندورف</name>
     <name xml:lang="bn">ডনডর্ফ</name>
     <name xml:lang="ko">돈도프</name>
+    <name xml:lang="pa">ਡਾਨਡੋਰਫ</name>
+    <name xml:lang="ru">Дондорф</name>
     <name xml:lang="sr">Дондорф</name>
     <name xml:lang="uk">Дондорф</name>
     <back>dondorf-flower.png</back>
@@ -78,14 +83,17 @@
     <name xml:lang="es">Dondorf rojo</name>
     <name xml:lang="fi">Dondorfin punainen</name>
     <name xml:lang="fr">Dondorf rouge</name>
+    <name xml:lang="hr">Dondorf crveno</name>
     <name xml:lang="hu">Dondorf piros</name>
     <name xml:lang="it">Dondorf rosso</name>
     <name xml:lang="ko">돈도프 빨강</name>
     <name xml:lang="lt">Dondorf raudona</name>
     <name xml:lang="no">Dondorf rød</name>
+    <name xml:lang="pa">ਡਾਨਡੋਰਫ ਲਾਲ</name>
     <name xml:lang="pl">Czerwony dondorf</name>
     <name xml:lang="pt">Vermelho Dondorf</name>
     <name xml:lang="pt_BR">Dondorf Vermelho</name>
+    <name xml:lang="ru">Красный Дондорф</name>
     <name xml:lang="sq">Dondorf i Kuq</name>
     <name xml:lang="sr">Црвени дондорф</name>
     <name xml:lang="sr@Latn">Crveni dondorf</name>
@@ -137,6 +145,7 @@
     <name xml:lang="nl">Grijs</name>
     <name xml:lang="nn">Grå</name>
     <name xml:lang="no">Grå</name>
+    <name xml:lang="pa">ਭੂਰਾ</name>
     <name xml:lang="pl">Szary</name>
     <name xml:lang="pt">Cinzento</name>
     <name xml:lang="pt_BR">Cinza</name>

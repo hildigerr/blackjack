@@ -1,7 +1,13 @@
+gnome-games "Space Monster Redux" 2.6.0.1
+=======================================
+
+An minor update over 2.6.1, this is to take advantage of the
+extra translation work done due to the delayed release.
+
 gnome-games "Space Monster" 2.6.0
 =================================
 
-This is ithe new stable release of gnome-games.
+This is the new stable release of gnome-games.
 
 Many people have contributed to this release, both for code and
 artwork. In alphabetical order they are:
