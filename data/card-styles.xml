@@ -2,12 +2,17 @@
 <cardstyles>
   <cardstyle>
     <name>Default</name>
+    <name xml:lang="ar">الإفتراض</name>
     <name xml:lang="az">Ön qurğulu</name>
     <name xml:lang="cs">Implicitní</name>
+    <name xml:lang="da">Standard</name>
     <name xml:lang="de">Vorgabe</name>
     <name xml:lang="el">Προεπιλογή</name>
     <name xml:lang="es">Predeterminado</name>
+    <name xml:lang="fi">Oletus</name>
+    <name xml:lang="fr">Défaut</name>
     <name xml:lang="hr">Uobičajeno</name>
+    <name xml:lang="it">Predefinito</name>
     <name xml:lang="ja">デフォルト</name>
     <name xml:lang="ko">기본</name>
     <name xml:lang="lt">Įprastas</name>
@@ -20,6 +25,7 @@
     <name xml:lang="sr@Latn">Podrazumevani</name>
     <name xml:lang="sv">Standard</name>
     <name xml:lang="tr">Öntanımlı</name>
+    <name xml:lang="zh_CN">默认</name>
     <back>beige.png</back>
     <honor>bonded.png</honor>
     <joker>gnome.png</joker>
@@ -30,6 +36,7 @@
   </cardstyle>
   <cardstyle>
     <name>Dondorf</name>
+    <name xml:lang="ar">دوندورف</name>
     <name xml:lang="ko">돈도프</name>
     <name xml:lang="sr">Дондорф</name>
     <back>dondorf-flower.png</back>
@@ -52,14 +59,20 @@
   </cardstyle>
   <cardstyle>
     <name>Dondorf Red</name>
+    <name xml:lang="ar">دندورف أحمر</name>
     <name xml:lang="az">Dondorf Qırmızı</name>
+    <name xml:lang="da">Dondorf rød</name>
     <name xml:lang="de">Dondorf rot</name>
     <name xml:lang="el">Κόκκινο Dondorf </name>
     <name xml:lang="es">Dondorf rojo</name>
+    <name xml:lang="fi">Dondorfin punainen</name>
+    <name xml:lang="fr">Dondorf rouge</name>
+    <name xml:lang="it">Dondorf rosso</name>
     <name xml:lang="ko">돈도프 빨강</name>
     <name xml:lang="lt">Dondorf raudona</name>
     <name xml:lang="no">Dondorf rød</name>
     <name xml:lang="pl">Czerwony dondorf</name>
+    <name xml:lang="pt">Vermelho Dondorf</name>
     <name xml:lang="sq">Dondorf i Kuq</name>
     <name xml:lang="sr">Црвени дондорф</name>
     <name xml:lang="sr@Latn">Crveni dondorf</name>
