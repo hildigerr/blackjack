@@ -1,3 +1,42 @@
+gnome-games 2.8.0
+=================
+
+This is the first stable release of the 2.8 series. It should compile
+happily in a GNOME 2.6 or GNOME 2.8 environment although a recent
+librsvg is recommended.
+
+Also:
+
+People who contribute to this release, in no particular order, are:
+
+Callum McKenzie
+Richard Hoelscher
+Paolo Borelli
+Jon McCann
+Andreas Røsdal
+Ryan Stutsman
+Matthew V. Ball
+Angela Boyle
+Aaron Schlaegel
+Sjoerd Langkemper
+Theo van Klaveren
+Bevan Collins
+Rexford Newbould
+Trevor Hamm
+
+Don't forget the gnome-games webpage:
+
+ http://www.gnome.org/projects/gnome-games/
+
+Major changes since the 2.6 series:
+
+General:
+ - New SVG card decks for the card games.
+ - Lots of bug fixes, especially for 64-bit machines.
+
+Blackjack:
+ - Resizeable graphics.
+
 gnome-games 2.7.8
 =================
 

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Blackjack
-Name[ar]=بلاكجاك
+Name[ar]=بلاك جاك
 Name[bg]=Блекджек
 Name[bn]=ব্ল্যাকজ্যাক
 Name[cy]=Blacjac
@@ -23,7 +23,7 @@ Name[uk]=Блекджек
 Name[zh_CN]=二十一点
 Name[zh_TW]=21 點
 Comment=Play the casino card game Blackjack
-Comment[ar]=إلعب لعبة الكازينو بلاكجاك
+Comment[ar]=العب لعبة الكازينو بلاك جاك
 Comment[az]=Kazino kart oyunu Blackjack oyna
 Comment[bg]=Популярната в казината игра Блекджек
 Comment[bn]=ক্যাসিনোর তাসখেলা ব্ল্যাকজ্যাক খেলুন
@@ -57,6 +57,7 @@ Comment[pa]=ਕੈਸੀਨੋ ਕਾਰਡ ਖੇਡ ਕਾਲਾ ਗੋਲ੏�
 Comment[pl]=Kasynowa wersja gry oczko
 Comment[pt]=Jogue o jogo de casino Blackjack
 Comment[pt_BR]=Jogue o jogo de cartas de casino 'Vinte e um'
+Comment[ro]=Joacă celebrul joc de cazino Blackjack
 Comment[ru]=Карточная игра "Двадцать одно" (Блэкджек)
 Comment[sk]=Hrajte kartovú hru BlackJack známu z kasín
 Comment[sl]=Igrajte kazinojsko igro s kartami Blackjack
