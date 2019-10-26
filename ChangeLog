@@ -1,6 +1,25 @@
+2004-08-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.7.6.
+
+	* games-card-pixmaps.c (games_card_pixmaps_get_card_by_id):
+	Tweaked the alpha bi-level threshold to make the cards look
+	better. Not perfect, but in the absence of true alpha-blending
+	fairly nice.
+
+2004-07-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* dondorf.svg: Update from Richard Hoelscher.
+
+2004-07-20  William Jon McCann  <mccann@jhu.edu>
+
+	* data/blackjack.schemas.in: Use toolbar and not show_toolbar.
+	Wow, how long has this been broken.
+
 2004-07-19  Callum McKenzie  <callum@physics.otago.ac.nz>
 
-	* Replace dondorf.png with an SVG version.
+	* Replace dondorf.png with an SVG version (from
+	Richard Hoelscher).
 
 2004-07-17  William Jon McCann  <mccann@jhu.edu>
 
