@@ -39,12 +39,12 @@ bj_press_data_generate ()
   GdkColor masked = {0, 0, 0, 0}, unmasked = {1, 65535, 65535, 65535};
 
   delta = hslot->exposed - (hslot->length - press_data->cardid) - 1;
-  press_data->xoffset -= x = hslot->x + delta * hslot->dx;
-  press_data->yoffset -= y = hslot->y + delta * hslot->dy;
+  press_data->xoffset -= x = hslot->pixelx + delta * hslot->pixeldx;
+  press_data->yoffset -= y = hslot->pixely + delta * hslot->pixeldy;
 
   press_data->cards = g_list_nth(hslot->cards, press_data->cardid - 1);
-  width = bj_card_get_width() + (hslot->length - press_data->cardid) * hslot->dx;
-  height= bj_card_get_height() + (hslot->length - press_data->cardid) * hslot->dy;
+  width = card_width + (hslot->length - press_data->cardid) * hslot->pixeldx;
+  height= card_height + (hslot->length - press_data->cardid) * hslot->pixeldy;
   
   gdk_window_resize (press_data->moving_cards, width, height);
   gdk_window_move (press_data->moving_cards, x, y);
@@ -85,7 +85,7 @@ bj_press_data_generate ()
       gdk_draw_rectangle (press_data->moving_mask, gc2, TRUE, 
                           x, y, width, height);
       
-      x += hslot->dx; y += hslot->dy;
+      x += hslot->pixeldx; y += hslot->pixeldy;
     }
   g_object_unref (gc1);
   g_object_unref (gc2);
@@ -117,15 +117,15 @@ bj_chip_stack_press_data_generate ()
   GdkColor masked = {0, 0, 0, 0}, unmasked = {1, 65535, 65535, 65535};
 
   delta = hstack->length - 1;
-  chip_stack_press_data->xoffset -= x = hstack->x + delta * hstack->dx;
-  chip_stack_press_data->yoffset -= y = hstack->y - delta * hstack->dy;
+  chip_stack_press_data->xoffset -= x = hstack->pixelx + delta * hstack->pixeldx;
+  chip_stack_press_data->yoffset -= y = hstack->pixely - delta * hstack->pixeldy;
 
   chip_stack_press_data->chips = g_list_nth(hstack->chips, 
                                             chip_stack_press_data->chipid);
-  width = bj_chip_get_width() 
-    + (hstack->length - chip_stack_press_data->chipid) * hstack->dx;
-  height= bj_chip_get_width() 
-    + (hstack->length - chip_stack_press_data->chipid) * hstack->dy;
+  width = chip_width
+    + (hstack->length - chip_stack_press_data->chipid) * hstack->pixeldx;
+  height= chip_width
+    + (hstack->length - chip_stack_press_data->chipid) * hstack->pixeldy;
 
   gdk_window_resize (chip_stack_press_data->moving_chips, width, height);
   gdk_window_move (chip_stack_press_data->moving_chips, x, y);
@@ -146,20 +146,20 @@ bj_chip_stack_press_data_generate ()
   gdk_gc_set_foreground (gc2, &unmasked);
 
   GdkBitmap *mask;
-  gdk_pixbuf_render_pixmap_and_mask (bj_chip_get_pixbuf (1), NULL, &mask, 127);
+  gdk_pixbuf_render_pixmap_and_mask (bj_chip_get_scaled_pixbuf (1), NULL, &mask, 127);
   gdk_gc_set_clip_mask (gc1, mask); 
   gdk_gc_set_clip_mask (gc2, mask); 
 
   x = 0;
-  y = (hstack->length - chip_stack_press_data->chipid - 1) * hstack->dy;
-  width = height = bj_chip_get_width(); 
+  y = (hstack->length - chip_stack_press_data->chipid - 1) * hstack->pixeldy;
+  width = height = chip_width; 
 
   for (tempptr=chip_stack_press_data->chips; tempptr; tempptr=tempptr->next)
     {
       hchip_type hchip = (hchip_type) tempptr->data; 
       GdkPixbuf* chippix;
       
-      chippix = bj_chip_get_pixbuf (bj_chip_get_id (hchip->value));
+      chippix = bj_chip_get_scaled_pixbuf (bj_chip_get_id (hchip->value));
       gdk_gc_set_clip_origin (gc1, x, y);
       gdk_gc_set_clip_origin (gc2, x, y);
       if (chippix != NULL)
@@ -168,7 +168,7 @@ bj_chip_stack_press_data_generate ()
       gdk_draw_rectangle (chip_stack_press_data->moving_mask, gc2, TRUE, 
                           x, y, width, height);
       
-      x += hstack->dx; y -= hstack->dy;
+      x += hstack->pixeldx; y -= hstack->pixeldy;
     }
   g_object_unref (gc1);
   g_object_unref (gc2);

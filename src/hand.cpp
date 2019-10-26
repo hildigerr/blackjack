@@ -533,6 +533,7 @@ bj_hand_split ()
 
       playerHands = g_list_insert_before 
         (playerHands, tempptr, newHand);
+      numHands++;
 
       hslot_type new_hslot = bj_slot_add_before_slot 
         ((tempptr) ? newHand->nextHand->hslot : NULL,
@@ -554,14 +555,15 @@ bj_hand_split ()
           slot->x = slot_start_x + (i - 1) * PLAYER_SLOT_SPACING;
           i++;
           bj_chip_stack_new_with_value (bj_get_wager (),
-                                        slot->x - bj_chip_get_width () - 5,
-                                        slot->y + bj_card_get_height () / 2);
+                                        slot->x - 0.15,
+                                        slot->y + 0.2);
         }
       
+      bj_draw_set_geometry (numHands, 2);
+
       bj_adjust_balance (-1 * player->wager);
       
       newHand->deal (tempCard);
-      numHands++;
     }
   bj_hand_finish_play ();
 }

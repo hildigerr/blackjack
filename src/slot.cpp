@@ -25,11 +25,13 @@
 #include "slot.h"
 #include "card.h"
 #include "chips.h"
+#include "draw.h"
 
 GList *slot_list = NULL;
 
-GdkPixbuf *slot_pixbuf;
-GdkPixmap *default_background_pixmap; 
+GdkPixbuf *slot_pixbuf = NULL;
+GdkPixbuf *slot_scaled_pixbuf = NULL;
+GdkPixmap *default_background_pixmap = NULL;
 
 GdkPixmap*
 get_background_pixmap () {
@@ -41,6 +43,21 @@ GdkPixbuf*
 bj_slot_get_pixbuf ()
 {
   return slot_pixbuf;
+}
+
+GdkPixbuf *
+bj_slot_get_scaled_pixbuf ()
+{
+  return slot_scaled_pixbuf;
+}
+
+void
+bj_slot_set_scaled_pixbuf (GdkPixbuf *pixbuf)
+{
+  if (slot_scaled_pixbuf)
+    g_object_unref (slot_scaled_pixbuf);
+
+  slot_scaled_pixbuf = pixbuf;
 }
 
 void
@@ -59,10 +76,13 @@ bj_slot_load_pixmaps (void)
 void
 bj_slot_free_pixmaps (void)
 {
-  if (slot_pixbuf != NULL)
+  if (slot_pixbuf)
     g_object_unref (slot_pixbuf);
 
-  if (default_background_pixmap != NULL)
+  if (slot_scaled_pixbuf)
+    g_object_unref (slot_scaled_pixbuf);
+
+  if (default_background_pixmap)
     g_object_unref (default_background_pixmap);
 }
 
@@ -73,10 +93,18 @@ bj_slot_add (gint id, gint x, gint y)
 
   hslot->id = id;
   hslot->cards = NULL;
-  hslot->x = x;
-  hslot->y = y;
+
+  if (id == 0) {
+    hslot->x = DEALER_SLOT_ORIGIN_X;
+    hslot->y = DEALER_SLOT_ORIGIN_Y;
+  } else {
+    hslot->x = PLAYER_SLOT_ORIGIN_X;
+    hslot->y = PLAYER_SLOT_ORIGIN_Y;
+  }
 
   hslot->dx = hslot->dy = 0;
+  hslot->pixelx = hslot->pixely = 0;
+  hslot->pixeldx = hslot->pixeldy = 0;
   hslot->expansion_depth = 0;
 
   hslot->dx = x_expanded_offset;
@@ -93,7 +121,7 @@ bj_slot_add (gint id, gint x, gint y)
 }
 
 hslot_type
-bj_slot_add_before_slot (hslot_type next_slot, gint id, gint x, gint y)
+bj_slot_add_before_slot (hslot_type next_slot, gint id)
 {
   GList *list_ptr = NULL;
 
@@ -101,10 +129,18 @@ bj_slot_add_before_slot (hslot_type next_slot, gint id, gint x, gint y)
 
   hslot->id = id;
   hslot->cards = NULL;
-  hslot->x = x;
-  hslot->y = y;
+
+  if (id == 0) {
+    hslot->x = DEALER_SLOT_ORIGIN_X;
+    hslot->y = DEALER_SLOT_ORIGIN_Y;
+  } else {
+    hslot->x = PLAYER_SLOT_ORIGIN_X;
+    hslot->y = PLAYER_SLOT_ORIGIN_Y;
+  }
 
   hslot->dx = hslot->dy = 0;
+  hslot->pixelx = hslot->pixely = 0;
+  hslot->pixeldx = hslot->pixeldy = 0;
   hslot->expansion_depth = 0;
 
   hslot->dx = x_expanded_offset;
@@ -192,15 +228,14 @@ bj_slot_update_length (hslot_type hslot)
   if (0 < hslot->expansion_depth && hslot->expansion_depth < hslot->exposed)
     hslot->exposed = hslot->expansion_depth;
 
-  if ((hslot->dx == 0 && hslot->dy == 0 && hslot->exposed > 1) 
+  if ((hslot->pixeldx == 0 && hslot->pixeldy == 0 && hslot->exposed > 1) 
       || (hslot->length > 0 && hslot->exposed < 1))
     hslot->exposed = 1;
 
   delta = hslot->exposed ? hslot->exposed - 1 : 0;
 
-  hslot->width = bj_card_get_width () + delta * hslot->dx;
-  //hslot->height = get_card_height () + delta * hslot->dy;
-  hslot->height = bj_card_get_height ();
+  hslot->width = card_width + delta * hslot->pixeldx;
+  hslot->height = card_height;
 }
 
 GList* 

@@ -22,7 +22,6 @@
 #define CARD_H
 
 #include <gnome.h>
-#include "gdk-card-image.h"
 
 /*
  * Constants
@@ -63,7 +62,10 @@ hcard_type bj_card_new (gint, gint, gint);
 GdkPixbuf* get_pixbuf (const char*);
 GdkPixmap* get_pixmap (const char*);
 
-void bj_card_load_pixmaps (GtkWidget*, GdkCardDeckOptions);
+void bj_card_load_pixmaps (GtkWidget*, gchar *card_style);
 void bj_card_free_pixmaps (void);
+
+void bj_card_set_size (gint width, gint height);
+void bj_card_set_theme (gchar *theme);
 
 #endif

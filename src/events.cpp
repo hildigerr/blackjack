@@ -117,14 +117,11 @@ drop_moving_cards (gint x, gint y)
   gint width, height;
   gboolean do_split = false;
 
-  bj_slot_pressed (x + bj_card_get_width() / 2 - press_data->xoffset, 
-                   y + bj_card_get_height() / 2 - press_data->yoffset, 
+  bj_slot_pressed (x + card_width / 2 - press_data->xoffset, 
+                   y + card_height / 2 - press_data->yoffset, 
                    &hslot, &cardid);
 
-  if (hslot)
-    {
-    }
-  else
+  if (!hslot)
     {
       if (press_data->hslot == bj_hand_get_slot ())
         {
@@ -143,8 +140,8 @@ drop_moving_cards (gint x, gint y)
 
   gdk_drawable_get_size (press_data->moving_cards, &width, &height);
   gdk_window_move (press_data->moving_cards, 
-                   hslot->x + hslot->width - width, 
-                   hslot->y + hslot->height - height);
+                   hslot->pixelx + hslot->width - width, 
+                   hslot->pixely + hslot->height - height);
 
    bj_draw_refresh_screen ();
 
@@ -257,8 +254,8 @@ handle_slot_pressed (GdkEventButton *event, hslot_type hslot, gint cardid)
       if (card->direction == UP)
         {
           guint delta = hslot->exposed - (hslot->length - cardid) - 1;
-          int x = hslot->x + delta * hslot->dx;
-          int y = hslot->y + delta * hslot->dy;
+          int x = hslot->pixelx + delta * hslot->pixeldx;
+          int y = hslot->pixely + delta * hslot->pixeldy;
           
           press_data->status = STATUS_SHOW;
           press_data->moving_pixmap = bj_card_get_picture (card->suit, card->value);
@@ -321,14 +318,14 @@ handle_chip_stack_pressed (GdkEventButton *event,
   if (chipid >= 0 && chip_stack_press_data->status == STATUS_NONE)
     {
       guint delta = hstack->exposed - (hstack->length - chipid) - 1;
-      int x = hstack->x + delta * hstack->dx;
-      int y = hstack->y + delta * hstack->dy;
+      int x = hstack->pixelx + delta * hstack->pixeldx;
+      int y = hstack->pixely + delta * hstack->pixeldy;
       
       press_data->status = STATUS_SHOW;
       gfloat chip_value = 
         ((hchip_type)g_list_nth_data (hstack->chips, chipid))->value;
 
-      GdkPixbuf *pixbuf = bj_chip_get_pixbuf (bj_chip_get_id (chip_value));
+      GdkPixbuf *pixbuf = bj_chip_get_scaled_pixbuf (bj_chip_get_id (chip_value));
       GdkPixmap *pixmap;
       GdkBitmap *mask;
       gdk_pixbuf_render_pixmap_and_mask (pixbuf, &pixmap, &mask, 127);
@@ -362,14 +359,12 @@ handle_chip_stack_pressed (GdkEventButton *event,
 gint
 bj_event_button_press (GtkWidget *widget, GdkEventButton *event, void *d)
 {
-  hslot_type hslot;
-  gint cardid;
 
   // ignore clicks during actions
   if (events_pending)
-    {
+ 
       return TRUE;
-    }
+
 
   if (event->button != 1)
     return TRUE;
@@ -388,20 +383,17 @@ bj_event_button_press (GtkWidget *widget, GdkEventButton *event, void *d)
           || chip_stack_press_data->status == STATUS_IS_DRAG))
     return TRUE;
 
-  bj_slot_pressed ((gint)event->x, (gint)event->y, &hslot, &cardid);
-  if (!hslot)
-    {
       gint chipid;
       hstack_type hstack;
       bj_chip_stack_pressed ((gint)event->x, (gint)event->y, &hstack, &chipid);
       if (hstack)
-        {
-          handle_chip_stack_pressed (event, hstack, chipid);
-        }
-      return TRUE;
-    }
-  else
-    return handle_slot_pressed (event, hslot, cardid);
+          return handle_chip_stack_pressed (event, hstack, chipid);
+
+      gint cardid;
+      hslot_type hslot;
+      bj_slot_pressed ((gint)event->x, (gint)event->y, &hslot, &cardid);
+      if (hslot)
+        return handle_slot_pressed (event, hslot, cardid);
 
   return TRUE;
 }
@@ -477,74 +469,63 @@ static gint
 handle_other_motion_event (GtkWidget *widget, GdkEventMotion *event)
 {
   // This is primarily to display help information
-  hslot_type hslot = NULL;
-  gint cardid;
-  bj_slot_pressed ((gint)event->x, (gint)event->y, &hslot, &cardid);
-  if (hslot)
-    {
+
+  hstack_type hstack;
+  gint chipid;
+  bj_chip_stack_pressed ((gint)(event->x), (gint)(event->y), &hstack, &chipid);
+  if (hstack) {
+    if (bj_chip_stack_is_source (hstack)) {
+      if (bj_hand_can_be_doubled ())
+        gnome_appbar_set_status (GNOME_APPBAR (status_bar), 
+                               _("Click to double your wager"));
+      else if (! bj_game_is_active ()) {
+        gfloat chip_value = 
+          ((hchip_type)g_list_last (hstack->chips)->data)->value;
+        gchar *message = g_strdup_printf
+          (_("Double click to increase your wager by %.2f"), 
+          chip_value);
+        gnome_appbar_set_status (GNOME_APPBAR (status_bar), 
+                                 message);
+        g_free (message);
+      }
+    }
+    else {
+      if (! bj_game_is_active ()) {
+        gfloat chip_value = ((hchip_type)g_list_last (hstack->chips)->data)->value;
+        gchar *message = g_strdup_printf (_("Double click to decrease your wager by %.2f"), 
+                                          chip_value);
+        gnome_appbar_set_status (GNOME_APPBAR (status_bar), 
+                                 message);
+        g_free (message);
+      }
+    }
+  }
+  else {
+    hslot_type hslot = NULL;
+    gint cardid;
+    bj_slot_pressed ((gint)event->x, (gint)event->y, &hslot, &cardid);
+    if (hslot) {
       gchar *message;
-      if (bj_game_is_active ())
-        { 
-          if (hslot == bj_hand_get_slot ())
-            if (bj_hand_can_be_split ())
-              message = g_strdup (_("Click to deal another card; drag card to split pair"));
-            else
-              message = g_strdup (_("Click to deal another card"));
-           else
-            message = g_strdup (_("Click to finish adding cards to your hand"));
-        }
+      if (bj_game_is_active ()) { 
+        if (hslot == bj_hand_get_slot ())
+          if (bj_hand_can_be_split ())
+            message = g_strdup (_("Click to deal another card; drag card to split pair"));
+          else
+            message = g_strdup (_("Click to deal another card"));
+        else
+          message = g_strdup (_("Click to finish adding cards to your hand"));
+      }
       else
         message = g_strdup (_("Click to deal a new hand"));
       gnome_appbar_set_status (GNOME_APPBAR (status_bar), message);
       g_free (message);
     }
-  else
-    {
-      hstack_type hstack;
-      gint chipid;
-      bj_chip_stack_pressed ((gint)event->x, (gint)event->y,
-                             &hstack, &chipid);
-      if (hstack)
-        {
-          if (bj_chip_stack_is_source (hstack))
-            {
-              if (bj_hand_can_be_doubled ())
-                gnome_appbar_set_status (GNOME_APPBAR (status_bar), 
-                                         _("Click to double your wager"));
-              else if (! bj_game_is_active ())
-                {
-                  gfloat chip_value = 
-                    ((hchip_type)g_list_last (hstack->chips)->data)->value;
-                  gchar *message = g_strdup_printf
-                    (_("Double click to increase your wager by %.2f"), 
-                     chip_value);
-                  gnome_appbar_set_status (GNOME_APPBAR (status_bar), 
-                                           message);
-                  g_free (message);
-                }
-            }
-          else
-            {
-              if (! bj_game_is_active ())
-                {
-                  gfloat chip_value = 
-                    ((hchip_type)g_list_last (hstack->chips)->data)->value;
-                  gchar *message = g_strdup_printf
-                    (_("Double click to decrease your wager by %.2f"), 
-                     chip_value);
-                  gnome_appbar_set_status (GNOME_APPBAR (status_bar), 
-                                           message);
-                  g_free (message);
-                }
-            }
-        }
-      else
-        {
-          // Not over anything we know about
-          // black out the status bar
-          gnome_appbar_set_status (GNOME_APPBAR (status_bar), "");
-        }
+    else {
+      // Not over anything we know about
+      // black out the status bar
+      gnome_appbar_set_status (GNOME_APPBAR (status_bar), "");
     }
+  }
   return FALSE;
 }
 
@@ -567,9 +548,6 @@ handle_slot_motion_event (GtkWidget *widget, GdkEventMotion *event)
       bj_press_data_generate ();
       bj_draw_take_snapshot();
       return TRUE;
-    }
-  else
-    {
     }
   
   return FALSE;
@@ -594,9 +572,6 @@ handle_chip_stack_motion_event (GtkWidget *widget, GdkEventMotion *event)
       bj_chip_stack_press_data_generate ();
       bj_draw_take_snapshot();
       return TRUE;
-    }
-  else
-    {
     }
   
   return FALSE;
@@ -629,40 +604,63 @@ bj_event_expose_callback (GtkWidget *widget, GdkEventExpose *event, void *d)
 }
 
 gint
-bj_event_configure (GtkWidget *widget, GdkEventConfigure *event)
+bj_event_playing_area_configure (GtkWidget *widget, GdkEventConfigure *event)
 {
   gint tmptime;
   GtkSettings * settings;
 
   if (surface)
     {
-      gint old_w, old_h;
-
-      gdk_drawable_get_size (surface, &old_w, &old_h);
-      if (old_w == event->width && old_h == event->height)
+      if (window_width == event->width && window_height == event->height)
         return TRUE;
       g_object_unref (surface);
     }
   
   if (!draw_gc) {
     draw_gc = gdk_gc_new (playing_area->window);
-    if (get_background_pixmap ())
-      gdk_gc_set_tile (draw_gc, get_background_pixmap());
-    gdk_gc_set_fill (draw_gc, GDK_TILED);
   }
 
-  surface = gdk_pixmap_new
-    (playing_area->window, event->width, event->height,
+  if (!slot_gc)
+    slot_gc = gdk_gc_new (playing_area->window);
+
+  if (!bg_gc) {
+    bg_gc = gdk_gc_new (playing_area->window);
+    if (get_background_pixmap ())
+      gdk_gc_set_tile (bg_gc, get_background_pixmap());
+    gdk_gc_set_fill (bg_gc, GDK_TILED);
+  }
+
+  window_width = event->width;
+  window_height = event->height;
+
+  surface = gdk_pixmap_new (playing_area->window, event->width, event->height,
      gdk_drawable_get_visual (playing_area->window)->depth);
   
+  bj_draw_rescale_cards ();
+
   bj_draw_refresh_screen ();
 
   /* Set up the double-click detection.*/
   if (!click_timer)
     click_timer = g_timer_new ();
   settings = gtk_settings_get_default ();
-  g_object_get (G_OBJECT (settings), "gtk-double-click-time", &tmptime, NULL);
+  g_object_get (settings, "gtk-double-click-time", &tmptime, NULL);
   dbl_click_time = tmptime / 1000.0;
+
+  return FALSE;
+}
+
+gint
+bj_event_configure (GtkWidget *widget, GdkEventConfigure *event)
+{
+  GConfClient *gconf_client = gconf_client_get_default ();
+
+  gconf_client_set_int (gconf_client, GCONF_KEY_WIDTH,
+                              event->width, NULL);
+  gconf_client_set_int (gconf_client, GCONF_KEY_HEIGHT,
+                              event->height, NULL);
+
+  g_object_unref (gconf_client);
 
   return FALSE;
 }

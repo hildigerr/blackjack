@@ -390,13 +390,14 @@ bj_game_eval_installed_file (gchar *file)
       gchar *message = g_strdup_printf ("%s\n %s", _("Blackjack can't load the requested file"),
                                          installed_filename);
       gchar *message2 = _("Please check your Blackjack installation");
-      GtkWidget *w = gtk_message_dialog_new (GTK_WINDOW (app),
+      GtkWidget *w = gtk_message_dialog_new_with_markup (GTK_WINDOW (app),
                                              GTK_DIALOG_DESTROY_WITH_PARENT,
                                              GTK_MESSAGE_ERROR,
                                              GTK_BUTTONS_CLOSE,
                                              "<span weight=\"bold\" size=\"larger\">%s</span>\n\n%s",
                                              message, message2);
-      gtk_label_set_use_markup (GTK_LABEL (GTK_MESSAGE_DIALOG (w)->label), TRUE);
+      gtk_container_set_border_width (GTK_CONTAINER (w), 6);
+
       gtk_dialog_run (GTK_DIALOG (w));
       gtk_widget_destroy (w);
       g_free (message);
@@ -491,19 +492,22 @@ bj_clear_table ()
   playerHands = g_list_append (playerHands, player);
   
   // Create slots
-  bj_slot_add (0, DEALER_SLOT_ORIGIN_X, DEALER_SLOT_ORIGIN_Y);
-  bj_slot_add (1, PLAYER_SLOT_ORIGIN_X, PLAYER_SLOT_ORIGIN_Y);
+  bj_slot_add (0);
+  bj_slot_add (1);
+  bj_draw_set_geometry (1, 2);
 
   // Clear the table.
   dealer->hslot = (hslot_type) g_list_nth_data (slot_list, 0);
   player->hslot = (hslot_type) g_list_nth_data (slot_list, 1);
 
   bj_chip_stack_new_with_value (bj_get_wager (),
-                                player->hslot->x - bj_chip_get_width () - 5,
-                                player->hslot->y + bj_card_get_height () / 2);
+                                player->hslot->x - 0.2,
+                                player->hslot->y + 0.2);
 
   // Create source chip stacks 
   bj_chip_stack_create_sources ();
+
+  bj_draw_rescale_cards ();
 
   player->nextHand = NULL;
   player->reset ();

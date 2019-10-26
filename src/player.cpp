@@ -219,8 +219,8 @@ Hand::showCount (bool blackjack)
   g_free (message);
   g_free (results);
   if (getCount () > 0)
-    bj_draw_playing_area_text (markup, hslot->x + bj_card_get_width () / 2, 
-                               hslot->y + bj_card_get_height () + 2);
+    bj_draw_playing_area_text (markup, hslot->pixelx + card_width / 2, 
+                               hslot->pixely + card_height + 2);
   g_free (markup);
 }
 

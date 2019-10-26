@@ -17,6 +17,7 @@
     <name xml:lang="gu">મૂળભુત</name>
     <name xml:lang="hr">Uobičajeno</name>
     <name xml:lang="hu">Alapértelmezett</name>
+    <name xml:lang="is">Sjálfgefið</name>
     <name xml:lang="it">Predefinito</name>
     <name xml:lang="ja">デフォルト</name>
     <name xml:lang="ko">기본</name>
@@ -138,6 +139,7 @@
     <name xml:lang="hi">धूसर</name>
     <name xml:lang="hr">Siva</name>
     <name xml:lang="hu">Szürke</name>
+    <name xml:lang="is">Grár</name>
     <name xml:lang="it">Grigio</name>
     <name xml:lang="ja">灰色</name>
     <name xml:lang="ko">회색</name>

@@ -53,9 +53,12 @@ GtkWidget        *app;
 GtkWidget        *playing_area;
 GtkWidget        *option_dialog = NULL;
 GdkGC            *draw_gc = NULL;
+GdkGC            *bg_gc = NULL;
+GdkGC            *slot_gc = NULL;
 GdkPixmap        *surface;
 
-GObject          *card_deck;
+gchar            *card_style;
+
 GtkWidget        *wager_value_label;
 
 static GtkWidget *shoe_value_label = NULL;
@@ -67,8 +70,8 @@ guint32          seed;
 
 guint            x_spacing = 5;
 guint            y_spacing = 15;
-guint            x_expanded_offset = 20;
-guint            y_expanded_offset = 20;
+double           x_expanded_offset = 0.21;
+double           y_expanded_offset = 0.21;
 
 gboolean         events_pending = false;
 
@@ -82,13 +85,6 @@ gboolean show_toolbar = TRUE;
 gchar *game_variation = NULL;
 
 #define DEFAULT_VARIATION      "Vegas_Strip.rules"
-#define KEY_DIR                "/apps/blackjack"
-#define KEY_GAME_VARIATION     "/apps/blackjack/settings/variation"
-#define KEY_BALANCE            "/apps/blackjack/global/balance"
-#define KEY_SHOW_PROBABILITIES "/apps/blackjack/settings/show_probabilities"
-#define KEY_QUICK_DEAL         "/apps/blackjack/settings/quick_deal"
-#define KEY_SHOW_TOOLBAR       "/apps/blackjack/toolbar"
-#define KEY_DECK_OPTIONS       "/apps/blackjack/deck/options"
 
 void
 bj_make_window_title (gchar *game_name, gint seed) 
@@ -180,18 +176,20 @@ bj_create_board ()
   GTK_WIDGET_SET_FLAGS (playing_area, GTK_CAN_FOCUS);
   gtk_widget_grab_focus (playing_area);
 
-  g_signal_connect (G_OBJECT (playing_area), "expose_event",  
+  g_signal_connect (playing_area, "expose_event",  
                     G_CALLBACK (bj_event_expose_callback), NULL);
-  g_signal_connect (GTK_OBJECT(playing_area),"button_release_event",
-                    GTK_SIGNAL_FUNC (bj_event_button_release), NULL);
-  g_signal_connect (GTK_OBJECT (playing_area), "motion_notify_event",
-                    GTK_SIGNAL_FUNC (bj_event_motion_notify), NULL);
-  g_signal_connect (GTK_OBJECT (playing_area), "enter_notify_event",
-                    GTK_SIGNAL_FUNC (bj_event_enter_notify), NULL);
-  g_signal_connect (GTK_OBJECT (playing_area), "button_press_event",
-                    GTK_SIGNAL_FUNC (bj_event_button_press), NULL);
-  g_signal_connect (GTK_OBJECT (playing_area), "key_press_event",
-                    GTK_SIGNAL_FUNC (bj_event_key_press), NULL);
+  g_signal_connect (playing_area,"button_release_event",
+                    G_CALLBACK (bj_event_button_release), NULL);
+  g_signal_connect (playing_area, "motion_notify_event",
+                    G_CALLBACK (bj_event_motion_notify), NULL);
+  g_signal_connect (playing_area, "enter_notify_event",
+                    G_CALLBACK (bj_event_enter_notify), NULL);
+  g_signal_connect (playing_area, "button_press_event",
+                    G_CALLBACK (bj_event_button_press), NULL);
+  g_signal_connect (playing_area, "key_press_event",
+                    G_CALLBACK (bj_event_key_press), NULL);
+  g_signal_connect (playing_area, "configure_event",
+                    G_CALLBACK (bj_event_playing_area_configure), NULL);
 }
 
 gboolean
@@ -224,6 +222,11 @@ create_main_window ()
   /* This is the prefix used to retrieve the state when NOT restarted: */
   const gchar* prefix = 
     gnome_client_get_global_config_prefix (gnome_master_client ());
+  GConfClient * gconf_client = gconf_client_get_default ();
+  gint width, height;
+
+  width = gconf_client_get_int (gconf_client, GCONF_KEY_WIDTH, NULL);
+  height = gconf_client_get_int (gconf_client, GCONF_KEY_HEIGHT, NULL);
 
   app = gnome_app_new ("blackjack", _("Blackjack"));
   /* Use "prefix" as the default config location ... */
@@ -231,12 +234,15 @@ create_main_window ()
   /* ... and use it for the menubar and toolbar aw well: */
   GNOME_APP (app)->prefix = (gchar*)prefix;
 
+  gtk_window_set_default_size (GTK_WINDOW (app), width, height);
+
+
   gtk_widget_realize (app);
 
-  g_signal_connect (GTK_OBJECT (app), "delete_event", 
-                    GTK_SIGNAL_FUNC (bj_quit_app), NULL);
-  g_signal_connect (GTK_OBJECT (app), "configure_event",
-                    GTK_SIGNAL_FUNC (bj_event_configure), NULL);
+  g_signal_connect (app, "delete_event", 
+                    G_CALLBACK (bj_quit_app), NULL);
+  g_signal_connect (app, "configure_event",
+                    G_CALLBACK (bj_event_configure), NULL);
 }
 
 static void
@@ -247,8 +253,8 @@ create_press_data ()
   attributes.wclass = GDK_INPUT_OUTPUT;
   attributes.window_type = GDK_WINDOW_CHILD;
   attributes.event_mask = 0;
-  attributes.width = bj_card_get_width ();
-  attributes.height = bj_card_get_height ();
+  attributes.width = card_width;
+  attributes.height = card_height;
   attributes.colormap = gdk_drawable_get_colormap (GDK_DRAWABLE (playing_area->window));
   attributes.visual = gdk_drawable_get_visual (GDK_DRAWABLE (playing_area->window));
   
@@ -266,7 +272,7 @@ create_chip_stack_press_data ()
   attributes.wclass = GDK_INPUT_OUTPUT;
   attributes.window_type = GDK_WINDOW_CHILD;
   attributes.event_mask = 0;
-  attributes.width = bj_chip_get_width ();
+  attributes.width = chip_width;
   attributes.height = attributes.width;
   attributes.colormap = gdk_drawable_get_colormap (GDK_DRAWABLE (playing_area->window));
   attributes.visual = gdk_drawable_get_visual (GDK_DRAWABLE (playing_area->window));
@@ -284,13 +290,14 @@ static void
 main_prog(int argc, char *argv[])
 {
   GtkWidget *wager_label, *balance_label, *balance_box, *group_box;
+  gchar *label_string;
 
   seed = time (NULL);
   g_random_set_seed (seed);
 
   create_main_window ();
 
-  bj_card_load_pixmaps (app, bj_get_deck_options ());
+  bj_card_load_pixmaps (app, bj_get_card_style ());
   bj_slot_load_pixmaps ();
  
   bj_create_board ();
@@ -319,7 +326,9 @@ main_prog(int argc, char *argv[])
                       FALSE, FALSE, 0);
 
   wager_value = 5.0;
-  wager_value_label = gtk_label_new ("5.00");
+  label_string = g_strdup_printf ("%.2f", wager_value);
+  wager_value_label = gtk_label_new (label_string);
+  g_free (label_string);
   gtk_box_pack_start (GTK_BOX (group_box), wager_value_label, 
                       FALSE, FALSE, 0);
 
@@ -329,7 +338,9 @@ main_prog(int argc, char *argv[])
   balance_label = gtk_label_new (_("Balance:"));
   gtk_box_pack_start (GTK_BOX (group_box), balance_label, 
                       FALSE, FALSE, 0);
-  balance_value_label = gtk_label_new (g_strdup_printf ("%.2f", balance_value));
+  label_string = g_strdup_printf ("%.2f", balance_value);
+  balance_value_label = gtk_label_new (label_string);
+  g_free (label_string);
   gtk_box_pack_start (GTK_BOX (group_box), balance_value_label, 
                       FALSE, FALSE, 0);
 	gtk_box_pack_start (GTK_BOX (balance_box), group_box, FALSE, FALSE, 0);
@@ -364,20 +375,18 @@ static void
 bj_gconf_balance_cb (GConfClient *client, guint cnxn_id, 
                      GConfEntry *entry, gpointer user_data)
 {
-  balance_value = gconf_client_get_float 
-    (client, KEY_BALANCE, NULL);
+  balance_value = gconf_client_get_float (client, GCONF_KEY_BALANCE, NULL);
   bj_show_balance (balance_value);
 }
 
 static void
-bj_gconf_deck_options_cb (GConfClient *client, guint cnxn_id, 
-                          GConfEntry *entry, gpointer user_data)
+bj_gconf_card_style_cb (GConfClient *client, guint cnxn_id, 
+                        GConfEntry *entry, gpointer user_data)
 {
-  GdkCardDeckOptions deck_options = NULL;
+        gchar *card_style;
 
-  deck_options = bj_get_deck_options ();
-  gtk_object_sink (GTK_OBJECT (card_deck));
-  card_deck = (GObject*) gdk_card_deck_new (app->window, deck_options);
+  card_style = bj_get_card_style ();
+  bj_card_set_theme (card_style);
   bj_draw_refresh_screen ();
 }
 
@@ -386,7 +395,7 @@ bj_gconf_show_probabilities_cb (GConfClient *client, guint cnxn_id,
                                 GConfEntry *entry, gpointer user_data)
 {
   show_probabilities = gconf_client_get_bool 
-    (client, KEY_SHOW_PROBABILITIES, NULL);
+    (client, GCONF_KEY_SHOW_PROBABILITIES, NULL);
   bj_draw_refresh_screen ();
 }
 
@@ -395,7 +404,7 @@ bj_gconf_quick_deal_cb (GConfClient *client, guint cnxn_id,
                         GConfEntry *entry, gpointer user_data)
 {
   quick_deals = gconf_client_get_bool 
-    (client, KEY_QUICK_DEAL, NULL);
+    (client, GCONF_KEY_QUICK_DEAL, NULL);
   bj_draw_refresh_screen ();
 }
 
@@ -405,26 +414,26 @@ bj_gconf_show_toolbar_cb (GConfClient *client, guint cnxn_id,
 {
   gboolean show_toolbar;
 
-  show_toolbar = gconf_client_get_bool (client, KEY_SHOW_TOOLBAR, NULL);
+  show_toolbar = gconf_client_get_bool (client, GCONF_KEY_SHOW_TOOLBAR, NULL);
   bj_gui_show_toolbar (show_toolbar);
 }
 
-GdkCardDeckOptions
-bj_get_deck_options ()
+gchar *
+bj_get_card_style ()
 {
-  GdkCardDeckOptions deck_options;
+  gchar *card_style;
 
-  deck_options = gconf_client_get_string (bj_gconf_client (), 
-                                          KEY_DECK_OPTIONS,
-                                          NULL);
-  return deck_options;
+  card_style = gconf_client_get_string (bj_gconf_client (), 
+                                        GCONF_KEY_CARD_STYLE,
+                                        NULL);
+  return card_style;
 }
 
 void
-bj_set_deck_options (GdkCardDeckOptions value)
+bj_set_card_style (gchar *value)
 {
   gconf_client_set_string (bj_gconf_client (), 
-                           KEY_DECK_OPTIONS,
+                           GCONF_KEY_CARD_STYLE,
                            value,
                            NULL);
 }
@@ -438,7 +447,7 @@ void
 bj_set_show_probabilities (gboolean value)
 {
   gconf_client_set_bool (bj_gconf_client (), 
-                         KEY_SHOW_PROBABILITIES,
+                         GCONF_KEY_SHOW_PROBABILITIES,
                          value, NULL);
 }
 
@@ -453,7 +462,7 @@ bj_set_show_toolbar (gboolean value)
   show_toolbar = value;
   bj_gui_show_toolbar (value);
   gconf_client_set_bool (bj_gconf_client (), 
-                         KEY_SHOW_TOOLBAR,
+                         GCONF_KEY_SHOW_TOOLBAR,
                          value, NULL);
 }
 
@@ -466,7 +475,7 @@ void
 bj_set_quick_deal (gboolean value)
 {
   gconf_client_set_bool (bj_gconf_client (), 
-                         KEY_QUICK_DEAL,
+                         GCONF_KEY_QUICK_DEAL,
                          value, NULL);
 }
 
@@ -483,7 +492,7 @@ bj_set_game_variation (const gchar *value)
     g_free (game_variation);
   game_variation = g_strdup (value);
   gconf_client_set_string (bj_gconf_client (), 
-                           KEY_GAME_VARIATION,
+                           GCONF_KEY_GAME_VARIATION,
                            game_variation, NULL);
 }
 
@@ -499,7 +508,7 @@ bj_set_balance (gdouble balance)
   balance_value = balance;
   bj_show_balance (balance_value);
   gconf_client_set_float (bj_gconf_client (),
-                          KEY_BALANCE,
+                          GCONF_KEY_BALANCE,
                           balance, NULL);
 }
 
@@ -519,10 +528,9 @@ bj_gconf_init (GConfClient *client)
   gchar *variation_tmp;
 
   variation_tmp = gconf_client_get_string (client,
-                                           KEY_GAME_VARIATION,
+                                           GCONF_KEY_GAME_VARIATION,
                                            NULL);
-  if (variation_tmp) 
-    {
+  if (variation_tmp) {
       game_variation = g_strdup (variation_tmp);
       g_free (variation_tmp);
     }
@@ -530,39 +538,40 @@ bj_gconf_init (GConfClient *client)
     game_variation = g_strdup (DEFAULT_VARIATION);
 
   balance = gconf_client_get_float (client,
-                                    KEY_BALANCE,
+                                    GCONF_KEY_BALANCE,
                                     NULL);
   if (balance)
     balance_value = balance;
 
   show_probabilities = gconf_client_get_bool (client,
-                                              KEY_SHOW_PROBABILITIES,
+                                              GCONF_KEY_SHOW_PROBABILITIES,
                                               NULL);
   quick_deals = gconf_client_get_bool (client, 
-                                       KEY_QUICK_DEAL,
+                                       GCONF_KEY_QUICK_DEAL,
                                        NULL);
   show_toolbar = gconf_client_get_bool (client, 
-                                        KEY_SHOW_TOOLBAR,
+                                        GCONF_KEY_SHOW_TOOLBAR,
                                         NULL);
 
+
   gconf_client_notify_add (client,
-                           KEY_BALANCE,
+                           GCONF_KEY_BALANCE,
                            bj_gconf_balance_cb,
                            NULL, NULL, NULL);
   gconf_client_notify_add (client,
-                           KEY_DECK_OPTIONS,
-                           bj_gconf_deck_options_cb,
+                           GCONF_KEY_CARD_STYLE,
+                           bj_gconf_card_style_cb,
                            NULL, NULL, NULL);
   gconf_client_notify_add (client,
-                           KEY_SHOW_PROBABILITIES,
+                           GCONF_KEY_SHOW_PROBABILITIES,
                            bj_gconf_show_probabilities_cb,
                            NULL, NULL, NULL);
   gconf_client_notify_add (client,
-                           KEY_QUICK_DEAL,
+                           GCONF_KEY_QUICK_DEAL,
                            bj_gconf_quick_deal_cb,
                            NULL, NULL, NULL);
   gconf_client_notify_add (client,
-                           KEY_SHOW_TOOLBAR,
+                           GCONF_KEY_SHOW_TOOLBAR,
                            bj_gconf_show_toolbar_cb,
                            NULL, NULL, NULL);
 }
@@ -591,17 +600,18 @@ main (int argc, char *argv [])
                       GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
   gconf_init (argc, argv, NULL);
-  gconf_client_add_dir (bj_gconf_client (), KEY_DIR,
+  gconf_client_add_dir (bj_gconf_client (), GCONF_KEY_DIR,
                         GCONF_CLIENT_PRELOAD_NONE, NULL);
 
   gtk_widget_push_colormap (gdk_rgb_get_colormap ());
 
   gchar *icon_path = g_build_filename (GNOME_ICONDIR, "gnome-blackjack.png", NULL);
+
   gnome_window_icon_set_default_from_file (icon_path);
   g_free (icon_path);
 
-  g_signal_connect (GTK_OBJECT (gnome_master_client ()), "die",
-                    GTK_SIGNAL_FUNC (bj_quit_app), NULL);
+  g_signal_connect (gnome_master_client (), "die",
+                    G_CALLBACK (bj_quit_app), NULL);
 
   bj_gconf_init (bj_gconf_client ());
 

@@ -22,8 +22,19 @@
 #define DRAW_H
 #include <gtk/gtk.h>
 
-#define CHIP_X_ORIGIN 25
-#define CHIP_Y_ORIGIN 340
+#define CHIP_X_ORIGIN 0.0
+#define CHIP_Y_ORIGIN 0.8
+#define CHIP_X_OFFSET 0.1
+
+/* The size of the drawing area. */
+extern int window_width;
+extern int window_height;
+
+/* The size of a card. */
+extern int card_width;
+extern int card_height;
+
+extern int chip_width;
 
 void bj_draw_set_dealer_text (gchar *);
 void bj_draw_set_player_text (gchar *);
@@ -32,5 +43,8 @@ void bj_draw_dealer_probabilities ();
 
 void bj_draw_take_snapshot (void);
 void bj_draw_refresh_screen (void);
+
+void bj_draw_rescale_cards (void);
+void bj_draw_set_geometry (gint width, gint height);
 
 #endif

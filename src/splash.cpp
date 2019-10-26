@@ -96,8 +96,8 @@ splash_new ()
   gtk_window_set_title (GTK_WINDOW (splash), _("Blackjack"));
   gtk_window_set_resizable (GTK_WINDOW (splash), FALSE);
   gnome_window_icon_set_from_default (GTK_WINDOW (splash));
-  g_signal_connect (GTK_OBJECT (splash), "destroy",
-                    GTK_SIGNAL_FUNC (splash_destroyed),
+  g_signal_connect (splash, "destroy",
+                    G_CALLBACK (splash_destroyed),
                     NULL);
 
   vbox = GTK_DIALOG(splash)->vbox;
@@ -115,8 +115,8 @@ splash_new ()
   /* Give window manager time to map the window */
   if (splash_pixmap != NULL)
     {
-      g_signal_connect (GTK_OBJECT (splash_pixmap), "expose_event",
-                        GTK_SIGNAL_FUNC (expose_event), NULL);
+      g_signal_connect (splash_pixmap, "expose_event",
+                        G_CALLBACK (expose_event), NULL);
       waiting_for_expose = TRUE;
       gtk_main ();
       waiting_for_expose = FALSE;

@@ -117,9 +117,9 @@ help_about_callback ()
 	if (pixbuf != NULL)
 		gdk_pixbuf_unref (pixbuf);
   gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW (app));
-  g_signal_connect (GTK_OBJECT (about),
+  g_signal_connect (about,
                     "destroy",
-                    (GtkSignalFunc) about_destroy_callback,
+                    G_CALLBACK (about_destroy_callback),
                     NULL);
   gtk_widget_show (about);
   return;

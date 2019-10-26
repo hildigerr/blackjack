@@ -1,3 +1,109 @@
+2004-05-31  Callum McKenzie <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.7.2 release notes.
+
+2004-05-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-selector.c: Remove an unnecessary unref. I still
+	think I'm doing the dispose/finalize stuff wrong though.
+
+2004-05-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* card-style-file.c: int->gsize 64-bit fix. See bug
+ 	#143106.
+
+	* games-files.c: Fix warnings.
+
+2004-05-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/events.cpp: Fix compiler warnings.
+
+2004-05-24  William Jon McCann  <mccann@jhu.edu>
+
+	* src/blackjack.cpp (bj_gconf_card_style_cb): Instant
+	apply card theme.
+
+	* src/card.h (bj_card_set_theme): Add function prototype.
+
+2004-05-20  William Jon McCann  <mccann@jhu.edu>
+
+	* dialog.cpp (reset_button_cb, show_preferences_dialog):
+	Add a button to reset the balance.
+
+	* dialog.cpp (show_preferences_dialog): New preferences dialog
+	that doesn't use a tabbed notebook.
+
+	* dialog.cpp (get_insurance_choice, show_hint_dialog):
+	* game.cpp (bj_game_eval_installed_file):
+	Use gtk_message_dialog_new_with_markup and use HIG container
+	spacing.
+
+	* src/press_data.cpp (bj_chip_stack_press_data_generate):
+	* src/hand.cpp (bj_hand_split):
+	* src/game.cpp (bj_clear_table):
+	* src/events.cpp (handle_chip_stack_pressed):
+	* src/draw.cpp (bj_draw_chips, calculate_stack_location)
+	(bj_draw_set_geometry):
+	* src/chips.cpp (bj_chip_get_scaled_pixbuf)
+	(bj_chip_set_scaled_pixbuf, bj_chip_stack_add)
+	(bj_chip_stack_pressed, bj_chip_stack_update_length)
+	(bj_chip_stack_create_sources, bj_chip_stack_new_with_id_value)
+	(bj_chip_stack_new_with_value)
+	(bj_chip_stack_new_source_with_value):
+	* src/card.cpp (bj_card_set_size):
+	* src/blackjack.cpp (create_chip_stack_press_data):
+	Use normal coordinates and rescale chips.
+
+	* src/events.cpp (handle_chip_stack_pressed)
+	(bj_event_button_press, handle_other_motion_event):
+	Handle chip stacks before card slots since they are smaller
+	and would otherwise be obscured by the slots.
+
+2004-05-18  William Jon McCann  <mccann@jhu.edu>
+
+	* src/blackjack.cpp (main_prog): Use printf to format wager label.
+	Fixes #142750.  Also fix a string leak.
+
+2004-05-18  William Jon McCann  <mccann@jhu.edu>
+
+	* src/slot.cpp (bj_slot_get_scaled_pixbuf)
+	(bj_slot_set_scaled_pixbuf, bj_slot_add, bj_slot_add_before_slot)
+	(bj_slot_pressed, bj_slot_update_length):
+	* src/press_data.cpp (bj_press_data_generate):
+	* src/player.cpp (showCount):
+	* src/hand.cpp (bj_hand_split):
+	* src/game.cpp (bj_clear_table):
+	* src/events.cpp (drop_moving_cards, handle_slot_pressed)
+	(bj_event_playing_area_configure):
+	* src/draw.cpp (calculate_card_location, bj_draw_set_geometry)
+	(bj_draw_rescale_cards):
+	* src/blackjack.cpp (bj_create_board, create_press_data):
+	Use normal coordinates and dynamically resize the board.  Chips
+	don't resize yet.  Almost entirely based on / stolen from Callum's
+	work on aisleriot.
+
+	* data/blackjack.schemas.in:
+	* src/blackjack.cpp (main_prog, bj_gconf_card_style_cb)
+	(bj_get_card_style, bj_set_card_style):
+	* src/card.cpp (bj_card_get_picture, bj_card_get_back_pixmap)
+	(bj_card_load_pixmaps, bj_card_free_pixmaps, bj_card_set_size)
+	(bj_card_set_theme):
+	* src/dialog.cpp (show_preferences_dialog, card_deck_options_changed):
+	Use new games card API.
+
+	* src/events.cpp (create_main_window):
+	* src/blackjack.cpp (bj_event_configure): Save the window
+	size.
+
+2004-05-15  William Jon McCann  <mccann@jhu.edu>
+
+	* src/splash.cpp (splash_new):
+	* src/dialog.cpp (show_preferences_dialog)
+	(show_preferences_dialog):
+	* src/blackjack.cpp:
+	(create_main_window, bj_create_board, main): Use G_CALLBACK and remove
+	GTK_OBJECT casts.
+
 2004-05-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.7.1 !
