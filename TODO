@@ -1,7 +1,5 @@
 
-Before 2.7.1:
 
-- Make libgames shared
 
 --------------------------------------------------------------------------
 
@@ -28,18 +26,11 @@ Blackjack:
 libgames-support:
 	- Widgets other than the combo box for the GamesFileList.
 	- GamesFileList standard directory option for paths.
+	- Make a shared library. Rename to libgnome-games
         - Document
 	- Use a second thread for pre-generating card images (I think
           this was shaunm's idea so he could take advantage of works' dual
 	  opteron).
-
-gdk-card-image:
-	- Pretty much deprectaed, see what Jon wants to do.
-	- Finish off the replacement in libgames.
-	- When a "custom" style is used make sure that there is no selection.
- 	  Currently the default is selected, this may be a limit in the GtkTreeView
-	  widget.
-        - Document
 
 
 Make keys configurable?
