@@ -1,3 +1,21 @@
+2004-11-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.1.
+
+2004-10-13  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/blackjack.h:
+	* src/dialog.cpp:
+	* src/game.cpp:
+	* src/blackjack.cpp: Remove the seed form the title bar and clean
+	up the seed setting code.
+
+2004-10-11  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-image.*
+	* games-preimage.*: Rendering speed optimisations from Richard
+	Hoelscher.
+
 2004-10-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.8.1.

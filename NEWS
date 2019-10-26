@@ -1,3 +1,14 @@
+gnome-games 2.9.1
+=================
+
+This is the first release of the 2.9 *unstable* series of gnome-games.
+
+Important changes:
+ - gnome-games now requires GTK+ 2.5.
+
+Blackjack:
+ - Removed seed from the title bar (callum).
+
 gnome-games 2.8.1
 =================
 
