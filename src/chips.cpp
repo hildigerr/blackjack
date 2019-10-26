@@ -1,6 +1,8 @@
 // -*- mode:C++; tab-width:8; c-basic-offset:8; indent-tabs-mode:nil -*-
-/* Blackjack - chips.cpp
- * Copyright (C) 2003 William Jon McCann <mccann@jhu.edu>
+/* 
+ * Blackjack - chips.cpp
+ *
+ * Copyright (C) 2003-2004 William Jon McCann <mccann@jhu.edu>
  *
  * This game is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +22,7 @@
 
 #include <stdlib.h>
 #include <math.h>
-#include <librsvg/rsvg.h>
+#include <games-preimage.h>
 
 #include "blackjack.h"
 #include "chips.h"
@@ -31,6 +33,7 @@
 #define CHIP_FILENAME_5   "chip-5.svg"
 #define CHIP_FILENAME_1   "chip-1.svg"
 
+GamesPreimage *chip_preimage[4] = { NULL, NULL, NULL, NULL };
 GdkPixbuf *chip_scaled_pixbuf[4] = { NULL, NULL, NULL, NULL };
 
 GList *chip_stack_list = NULL;
@@ -64,25 +67,24 @@ bj_chip_set_size (gint width,
                             CHIP_FILENAME_1 };
 
         for (gint i = 0; i < 4; i++) {
-                gchar *name;
                 gchar *fullname;
 
-                name = g_build_filename ("blackjack", names[i], NULL);
-                fullname = gnome_program_locate_file (NULL,
-                                                      GNOME_FILE_DOMAIN_APP_PIXMAP,
-                                                      name, TRUE, NULL);
-                g_free (name);
+                fullname = g_build_filename (PIXMAPDIR, "blackjack", names[i], NULL);
 
                 if (!fullname)
                         continue;
 
+		if (!chip_preimage[i])
+			chip_preimage[i] = games_preimage_new_from_uri (fullname,
+									NULL);
+
                 if (chip_scaled_pixbuf[i])
                         g_object_unref (chip_scaled_pixbuf[i]);
 
-                chip_scaled_pixbuf[i] = rsvg_pixbuf_from_file_at_size (fullname,
-                                                                       width,
-                                                                       height,
-                                                                       NULL);
+                chip_scaled_pixbuf[i] = games_preimage_render (chip_preimage[i],
+                                                               width,
+                                                               height,
+                                                               NULL);
                 g_free (fullname);
         }
 }

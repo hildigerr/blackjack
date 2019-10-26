@@ -1,7 +1,8 @@
 // -*- mode:C++; tab-width:8; c-basic-offset:8; indent-tabs-mode:nil -*-
-
-/* Blackjack - hand.cpp
- * Copyright (C) 2003 William Jon McCann <mccann@jhu.edu>
+/*
+ * Blackjack - hand.cpp
+ *
+ * Copyright (C) 2003-2004 William Jon McCann <mccann@jhu.edu>
  *
  * This game is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,7 +32,9 @@
 #include <time.h>
 #include <dirent.h>
 #include <ctype.h>
-#include <gnome.h>
+#include <glib/gi18n.h>
+#include <gdk/gdk.h>
+#include <gdk/gdkkeysyms.h>
 
 #include "blackjack.h"
 #include "events.h"
@@ -67,7 +70,7 @@ bj_hand_cancel ()
                 finish_timeout_id = 0;
         }
 
-        events_pending = false;
+        events_pending = FALSE;
 }
 
 hslot_type
@@ -98,8 +101,8 @@ bj_hand_show_dealer_probabilities ()
                                                         dealer->cards[0].value());
 }
 
-gchar *
-bj_hand_get_best_option_string ()
+char *
+bj_hand_get_best_option_string (char **secondary_message)
 {
         gchar *option_str = NULL;
         gint bestOption;
@@ -113,14 +116,31 @@ bj_hand_get_best_option_string ()
 
         switch (bestOption) {
         case KEY_S : option_str = g_strdup (_("The best option is to stand"));
+                if (secondary_message)
+                        *secondary_message = g_strdup (_("To stand means to stop adding cards to your hand.  "
+                                                         "Do this by clicking on the dealer's cards or by selecting the option from the Control menu."));
                 break;
         case KEY_H : option_str = g_strdup (_("The best option is to hit"));
+                if (secondary_message)
+                        *secondary_message = g_strdup (_("To hit means to add another card to your hand.  "
+                                                         "Do this by clicking once on your cards or by selecting the option from the Control menu."));
                 break;
         case KEY_D : option_str = g_strdup (_("The best option is to double down"));
+                if (secondary_message)
+                        *secondary_message = g_strdup (_("To double down means to double the initial wager and receive exactly one more card.  "
+                                                         "Do this by clicking once on the chips at the bottom of the window or by selecting the option from the Control menu."));
                 break;
         case KEY_P : option_str = g_strdup (_("The best option is to split"));
+                if (secondary_message)
+                        *secondary_message = g_strdup (_("To split means to divide your current hand into two separate hands.  Do this by dragging one of your cards and dropping it off to the side or by selecting the option from the Control menu."));
                 break;
         case KEY_R : option_str = g_strdup (_("The best option is to surrender"));
+                if (secondary_message)
+                        *secondary_message = g_strdup (_("To surrender means to give up half your wager and not complete the hand.  "
+                                                         "Do this by selecting the option from the Control menu."));
+                break;
+        default:
+                break;
         }
 
         return option_str;
@@ -149,59 +169,59 @@ gboolean
 bj_hand_can_be_doubled ()
 {
         if (! bj_game_is_active ())
-                return false;
+                return FALSE;
 
         // must be able to hit to double down
         if (! bj_hand_can_be_hit ())
-                return false;
+                return FALSE;
 
         if ((numHands == 1 && rules->getDoubleDown (*player))
             || (numHands > 1 && rules->getDoubleAfterSplit (*player)))
-                return true;
+                return TRUE;
         else 
-                return false;
+                return FALSE;
 }
 
 gboolean
 bj_hand_can_be_hit ()
 {
         if (! bj_game_is_active ())
-                return false;
+                return FALSE;
 
         if (numHands == 1 || player->cards[0].value() != 1)
-                return true;
+                return TRUE;
         else
-                return false;
+                return FALSE;
 }
 
 gboolean
 bj_hand_can_be_surrendered ()
 {
         if (! bj_game_is_active ())
-                return false;
+                return FALSE;
 
         if (rules->getLateSurrender () 
             && player->getCards () == 2
             && numHands == 1)
-                return true;
+                return TRUE;
         else
-                return false;
+                return FALSE;
 }
 
 gboolean
 bj_hand_can_be_split ()
 {
         if (! bj_game_is_active ())
-                return false;
+                return FALSE;
 
         // Check if player can split a pair.
 
         int card = player->cards[0].value ();
         if (player->getCards () == 2 && card == player->cards[1].value ()
             && numHands < rules->getResplit (card))
-                return true;
+                return TRUE;
         else
-                return false;
+                return FALSE;
 }
 
 void
@@ -211,13 +231,13 @@ bj_deal_card_to_player ()
 }
 
 void
-bj_deal_card_to_dealer (gboolean faceup=true)
+bj_deal_card_to_dealer (gboolean faceup=TRUE)
 {
         dealer->deal (shoe->deal (), faceup);
 }
 
 void
-bj_deal_card_to_dealer_distribution (gboolean faceup=true)
+bj_deal_card_to_dealer_distribution (gboolean faceup=TRUE)
 {
         distribution->deal (dealer->deal (shoe->deal ()));
 }
@@ -228,16 +248,16 @@ bj_hand_new5 (gpointer data)
 {
 
         player->showCount ();
-        allSettled = false;
+        allSettled = FALSE;
 
         // Ask for insurance if the up card is an ace.
 
-        bool insurance = false;
+        bool insurance = FALSE;
         if (dealer->cards[0].value () == 1 || dealer->cards[0].value () == 10) {
                 if (bj_get_show_probabilities ()) {
                         dealerProbabilities->showProbabilities (distribution,
                                                                 dealer->cards[0].value (),
-                                                                false);
+                                                                FALSE);
                 }
                 if (dealer->cards[0].value () == 1) {
                         if (insurance = get_insurance_choice ())
@@ -248,13 +268,13 @@ bj_hand_new5 (gpointer data)
         // Check for dealer blackjack.
         
         if (dealer->getCards () == 2 && dealer->getCount () == 21) {
-                allSettled = true;
+                allSettled = TRUE;
                 if (insurance)
                         bj_adjust_balance (player->wager / 2 + (player->wager / 2) * 2);
             
                 if ( (player->getCards () == 2) && (player->getCount () == 21) )
                         bj_adjust_balance (player->wager);
-                bj_game_set_active (false);
+                bj_game_set_active (FALSE);
                 bj_hand_finish ();
                 deal_timeout_id = 0;
                 return FALSE;
@@ -265,7 +285,7 @@ bj_hand_new5 (gpointer data)
 
         else {
                 if ( (player->getCards () == 2) && (player->getCount () == 21) ) {
-                        allSettled = true;
+                        allSettled = TRUE;
                         bj_adjust_balance (player->wager + player->wager * 3 / 2);
                 }
         }
@@ -275,8 +295,8 @@ bj_hand_new5 (gpointer data)
         if (!allSettled) {
                 dealerProbabilities->showProbabilities (distribution,
                                                         dealer->cards[0].value ());
-                allSettled = true;
-                bj_game_set_active (true);
+                allSettled = TRUE;
+                bj_game_set_active (TRUE);
         }
 
         if (player->getCount () == 21) {
@@ -289,9 +309,10 @@ bj_hand_new5 (gpointer data)
                         strategy->showOptions (player,
                                                dealer->cards[0].value (), 
                                                numHands);
-                events_pending = false;
+                events_pending = FALSE;
         }
-        
+
+        bj_update_control_menu ();
         bj_draw_refresh_screen ();
         deal_timeout_id = 0;
         return FALSE;
@@ -300,7 +321,7 @@ bj_hand_new5 (gpointer data)
 static gboolean
 bj_hand_new4 (gpointer data)
 {
-        bj_deal_card_to_dealer (false);
+        bj_deal_card_to_dealer (FALSE);
         bj_draw_refresh_screen ();
 
         deal_timeout_id = g_timeout_add ((gint)bj_get_deal_delay (),
@@ -361,12 +382,12 @@ bj_hand_new ()
 
         player->wager = bj_get_wager ();
         bj_adjust_balance (-1 * player->wager);
-        bj_game_set_active (true);
+        bj_game_set_active (TRUE);
   
         player->showWager ();
         lastWager = player->wager;
 
-        events_pending = true;
+        events_pending = TRUE;
         bj_hand_new1 (NULL);
 }
 
@@ -398,7 +419,7 @@ bj_hand_finish1 (gpointer data)
                                 player = player->nextHand;
                         }
                 }
-                events_pending = false;
+                events_pending = FALSE;
                 bj_draw_refresh_screen ();
                 finish_timeout_id = 0;
                 return FALSE;
@@ -408,12 +429,13 @@ bj_hand_finish1 (gpointer data)
 void
 bj_hand_finish ()
 {
-        events_pending = true;
-        bj_game_set_active (false);
+        events_pending = TRUE;
+        bj_game_set_active (FALSE);
         // Turn dealer hole card.
         hcard_type card = (hcard_type) g_list_nth_data (dealer->hslot->cards, 1);
         card->direction = UP;
         dealer->showCount ();
+        bj_update_control_menu ();
         bj_draw_refresh_screen ();
 
         finish_timeout_id = g_timeout_add ((gint)bj_get_deal_delay (), 
@@ -424,7 +446,7 @@ void
 bj_hand_stand ()
 {
         if (bj_game_is_active ()) {
-                allSettled = false;
+                allSettled = FALSE;
                 if ((player = player->nextHand) == NULL) {
                         bj_hand_finish ();
                 }
@@ -441,7 +463,7 @@ bj_hand_hit ()
                 player->showCount ();
                 if (player->getCount () >= 21)
                         if ((player = player->nextHand) == NULL) {
-                                allSettled = false;
+                                allSettled = FALSE;
                                 bj_hand_finish ();
                                 return;
                         }
@@ -452,7 +474,7 @@ bj_hand_hit ()
 static gboolean
 bj_hand_hit_delay_cb (gpointer data)
 {
-        events_pending = false;
+        events_pending = FALSE;
         bj_hand_hit ();
         hit_timeout_id = 0;
         return FALSE;
@@ -461,7 +483,7 @@ bj_hand_hit_delay_cb (gpointer data)
 void
 bj_hand_hit_with_delay (void)
 {
-        events_pending = true;
+        events_pending = TRUE;
         hit_timeout_id = g_timeout_add ((gint)bj_get_deal_delay (),
                                         bj_hand_hit_delay_cb, NULL);
 }
@@ -478,7 +500,7 @@ bj_hand_double ()
                 
                 player->showCount ();
                 if (player->getCount () <= 21)
-                        allSettled = false;
+                        allSettled = FALSE;
                 if ((player = player->nextHand) == NULL)
                         bj_hand_finish ();
                 else
@@ -582,17 +604,17 @@ bj_hand_finish_play ()
                 // Deal another card to a split hand if necessary.
                 // need to loop for the case where splits get blackjack
                 // FIXME - this is less than elegant (get rid of while loop)
-                check_splits = true;
+                check_splits = TRUE;
                 while (check_splits) {
                         if (player->getCards () == 1)
                                 bj_deal_card_to_player ();
                         else
-                                check_splits = false;
+                                check_splits = FALSE;
 
                         if (player->getCount () >= 21) 
                                 if (player->nextHand == NULL) {
-                                        check_splits = false;
-                                        allSettled = false;
+                                        check_splits = FALSE;
+                                        allSettled = FALSE;
                                         bj_hand_finish ();
                                 }
                                 else
@@ -602,5 +624,7 @@ bj_hand_finish_play ()
                         bj_hand_show_options ();
                 }
         }
+
+        bj_update_control_menu ();
         bj_draw_refresh_screen ();
 }

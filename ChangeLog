@@ -1,3 +1,94 @@
+2004-11-29  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.2.
+
+2004-11-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-images.c:
+	* games-card-pixmaps.c:
+	* games-card-pixamps.h: Remove the duplicate definition of
+	GAMES_CARD_ID and add some range checks for a cardids and the
+	like.
+
+2004-11-21  Richard Hoelscher  <rah@rahga.com>
+
+	* games-card-images.h, games-card-pixmaps.h (GAMES_CARD_ID):
+	Support for ace-high decks. (#158899, Harry Ray)
+
+2004-11-15  William Jon McCann  <mccann@jhu.edu>
+
+	* games-card-selector.c: Don't use gnome.h or bonobo-i18n.h.
+
+	* games-preimage.[ch] (games_preimage_new_from_file):
+	* games-card-images.c (games_card_images_prerender): API change so
+	make it clear that we don't depend on gnome-vfs.
+
+2004-12-13  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-card-pixmaps.c: gdk_pixbuf_render_pixmap_and_mask ->
+	gdk_pixbuf_render_pixmap_and_mask_for_colormap.
+
+2004-11-12  William Jon McCann  <mccann@jhu.edu>
+
+	* src/press_data.cpp (bj_press_data_free)
+	(bj_chip_stack_press_data_free): New functions.
+
+	* src/game.cpp (bj_game_cancel):
+	* src/events.cpp (drop_moving_cards, drop_moving_chips)
+	(bj_event_button_release):
+	Free the press data when the game ends.  Fixes #138469.
+
+2004-11-12  William Jon McCann  <mccann@jhu.edu>
+
+	* src/hand.cpp (bj_hand_finish_play, bj_hand_new5)
+	(bj_hand_finish):
+	* src/blackjack.cpp (control_menu_set_sensitive)
+	(bj_update_control_menu, create_main_window):
+	Add Control menu and desensitize unavailable options.
+
+2004-11-12  William Jon McCann  <mccann@jhu.edu>
+
+	* src/dialog.cpp (show_hint_dialog):
+	* src/hand.cpp (bj_hand_get_best_option_string):
+	Add helpful secondary text to hint dialog and insurance
+	confirmation dialog.
+
+2004-11-12  William Jon McCann  <mccann@jhu.edu>
+
+	* data/Ameristar.rules:
+	* data/Atlantic_City.rules:
+	* data/Vegas_Downtown.rules:
+	* data/Vegas_Strip.rules: Converted to XML.
+
+	* src/blackjack.cpp (create_main_window, main_prog, main):
+	* src/card.cpp (get_pixbuf, get_pixmap):
+	* src/chips.cpp (bj_chip_set_size):
+	* src/dialog.cpp:
+	* src/events.cpp:
+	* src/game.cpp (bj_game_find_rules, bj_game_read_rules)
+	(bj_game_find_and_read_rules, bj_game_eval_installed_file):
+	* src/hand.cpp:
+	* src/menu.cpp (on_help_about_activate):
+	* src/player.cpp:
+	* src/slot.cpp (bj_slot_set_size, bj_slot_load_pixmaps):
+	* src/splash.cpp (splash_new): Replace GNOME stuff with gtk+/gdk/glib.
+	Notably, GtkUIManager for menus and libxml2 for rule definitions.  The only
+	thing that we still need GNOME libs for is the help browser.
+
+2004-11-10  William Jon McCann  <mccann@jhu.edu>
+
+	* src/events.cpp: Removed unused end_of_game_test().
+
+2004-11-08  Richard Hoelscher  <rah@rahga.com>
+
+	* src/slot.cpp (bj_slot_set_size): Render slots with GamesPreimage.
+	* src/chips.cpp (bj_chip_set_size): Render chips with GamesPreimage.
+
+	* games-preimage.h: Move G_BEGIN_DECLS below #include glib.h
+	* games-preimage.c (games_preimage_render): scale pixbufs using
+	GDK_INTERP_BILINEAR rather than GDK_INTERP_HYPER... Better overall
+	image quality meant off-center tiled images with unclean edges.
+
 2004-11-01  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.9.1.

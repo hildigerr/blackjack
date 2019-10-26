@@ -1,3 +1,19 @@
+gnome-games 2.9.2
+=================
+
+This is the second *unstable* 2.9 release of gnome-games.
+
+Major changes:
+
+Blackjack:
+ - General code cleanup and bug fixes (mccann).
+ - Improved dialog text (mccann).
+ - Menu rearrangement/improvements (mccann).
+
+libgames-support:
+ - Fix rendering for ace-high decks (rah, Harry Ray).
+ - Add range checking on the input for games-card-* (callum).
+
 gnome-games 2.9.1
 =================
 
