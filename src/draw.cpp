@@ -1,4 +1,4 @@
-// -*- mode:C++; tab-width:2; c-basic-offset:2; indent-tabs-mode:nil -*-
+// -*- mode:C++; tab-width:8; c-basic-offset:8; indent-tabs-mode:nil -*-
 
 /* Blackjack - draw.cpp
  * Copyright (C) 2003 William Jon McCann <mccann@jhu.edu>
@@ -76,116 +76,112 @@ gchar *player_markup = NULL;
 static void
 bj_draw_hand_counts ()
 {
-  bj_game_show_hand_counts ();
+        bj_game_show_hand_counts ();
 }
 
 void
 bj_draw_set_dealer_text (gchar *markup)
 {
-  if (dealer_markup)
-    g_free (dealer_markup);
+        if (dealer_markup)
+                g_free (dealer_markup);
 
-  if (markup)
-    dealer_markup = g_strdup (markup);
-  else
-    dealer_markup = NULL;
+        if (markup)
+                dealer_markup = g_strdup (markup);
+        else
+                dealer_markup = NULL;
 }
 
 void
 bj_draw_set_player_text (gchar *markup)
 {
-  if (player_markup)
-    g_free (player_markup);
+        if (player_markup)
+                g_free (player_markup);
 
-  if (markup)
-    player_markup = g_strdup (markup);
-  else
-    player_markup = NULL;
+        if (markup)
+                player_markup = g_strdup (markup);
+        else
+                player_markup = NULL;
 }
 
 static void
 bj_draw_paint_text (void)
 {
-  PangoLayout *layout;
-  gint x, y, width, height;
+        PangoLayout *layout;
+        gint x, y, width, height;
 
-  if (playing_area)
-    {
-      layout = gtk_widget_create_pango_layout (playing_area, "");
-      if (dealer_markup)
-        pango_layout_set_markup (layout, dealer_markup, -1);
-      x = y = 10;
-      gtk_paint_layout (playing_area->style, playing_area->window, 
-                        (GtkStateType) GTK_WIDGET_STATE (playing_area),
-                        FALSE, NULL, playing_area, NULL, x, y, layout);
-      pango_layout_get_size (layout, &width, &height);
-      g_object_unref (layout);
+        if (playing_area) {
+                layout = gtk_widget_create_pango_layout (playing_area, "");
+                if (dealer_markup)
+                        pango_layout_set_markup (layout, dealer_markup, -1);
+                x = y = 10;
+                gtk_paint_layout (playing_area->style, playing_area->window, 
+                                  (GtkStateType) GTK_WIDGET_STATE (playing_area),
+                                  FALSE, NULL, playing_area, NULL, x, y, layout);
+                pango_layout_get_size (layout, &width, &height);
+                g_object_unref (layout);
 
-      layout = gtk_widget_create_pango_layout (playing_area, "");
-      if (player_markup)
-        pango_layout_set_markup (layout, player_markup, -1);
-      x = 10;
-      y = y + PANGO_PIXELS (height);
-      gtk_paint_layout (playing_area->style, playing_area->window, 
-                        (GtkStateType) GTK_WIDGET_STATE (playing_area),
-                        FALSE, NULL, playing_area, NULL, x, y, layout);
-      g_object_unref (layout);
-    }
+                layout = gtk_widget_create_pango_layout (playing_area, "");
+                if (player_markup)
+                        pango_layout_set_markup (layout, player_markup, -1);
+                x = 10;
+                y = y + PANGO_PIXELS (height);
+                gtk_paint_layout (playing_area->style, playing_area->window, 
+                                  (GtkStateType) GTK_WIDGET_STATE (playing_area),
+                                  FALSE, NULL, playing_area, NULL, x, y, layout);
+                g_object_unref (layout);
+        }
 }
 
 void
 bj_draw_playing_area_text (gchar *markup, gint x, gint y)
 {
-  PangoLayout *layout;
-  if (playing_area)
-    {
-      layout = gtk_widget_create_pango_layout (playing_area, "");
-      pango_layout_set_markup (layout, markup, -1);
-      gtk_paint_layout (playing_area->style, playing_area->window, 
-                        (GtkStateType) GTK_WIDGET_STATE (playing_area),
-                        FALSE, NULL, playing_area, NULL, x, y, layout);
-      g_object_unref (layout);
-    }
+        PangoLayout *layout;
+        if (playing_area) {
+                layout = gtk_widget_create_pango_layout (playing_area, "");
+                pango_layout_set_markup (layout, markup, -1);
+                gtk_paint_layout (playing_area->style, playing_area->window, 
+                                  (GtkStateType) GTK_WIDGET_STATE (playing_area),
+                                  FALSE, NULL, playing_area, NULL, x, y, layout);
+                g_object_unref (layout);
+        }
 }
 
 static void
 bj_draw_chips ()
 {
-  GList* chip_stack;
+        GList* chip_stack;
 
-  for (chip_stack = bj_chip_stack_get_list (); chip_stack; 
-       chip_stack = chip_stack->next) 
-    {
-      hstack_type hstack = (hstack_type) chip_stack->data;
+        for (chip_stack = bj_chip_stack_get_list ();
+             chip_stack; 
+             chip_stack = chip_stack->next) {
+                hstack_type hstack = (hstack_type) chip_stack->data;
 
-      if (hstack->chips)
-        {
-          GList *chip_list = hstack->chips; //g_list_nth (hstack->chips, hstack->length - hstack->exposed);
+                if (hstack->chips) {
+                        GList *chip_list = hstack->chips; //g_list_nth (hstack->chips, hstack->length - hstack->exposed);
+                        
+                        gint x = hstack->pixelx;
+                        gint y = hstack->pixely;
           
-          gint x = hstack->pixelx;
-          gint y = hstack->pixely;
-          
-          for (; chip_list; chip_list = chip_list->next)
-            {
-              chip_type *chip = (chip_type*)chip_list->data;
-              
-              GdkPixbuf *image = bj_chip_get_scaled_pixbuf (bj_chip_get_id (chip->value));
+                        for (; chip_list; chip_list = chip_list->next) {
+                                chip_type *chip = (chip_type*)chip_list->data;
+                                
+                                GdkPixbuf *image = bj_chip_get_scaled_pixbuf (bj_chip_get_id (chip->value));
 	
-              if (image)
-                gdk_draw_pixbuf (surface,
-                                 draw_gc,
-                                 image,
-                                 0, 0, 
-                                 x, y, 
-                                 -1, -1, 
-                                 GDK_RGB_DITHER_MAX,
-                                 0, 0);
-	
-              x += hstack->pixeldx;
-              y -= hstack->pixeldy;
-            }
+                                if (image)
+                                        gdk_draw_pixbuf (surface,
+                                                         draw_gc,
+                                                         image,
+                                                         0, 0, 
+                                                         x, y, 
+                                                         -1, -1, 
+                                                         GDK_RGB_DITHER_MAX,
+                                                         0, 0);
+                                
+                                x += hstack->pixeldx;
+                                y -= hstack->pixeldy;
+                        }
+                }
         }
-    }
 }
 
 static void
@@ -287,74 +283,76 @@ bj_draw_rescale_cards (void)
 static void
 bj_draw_cards ()
 {
-  GList* slot;
+        GList *slot;
 
-  for (slot = bj_slot_get_list (); slot; slot = slot->next) 
-    {
-      hslot_type hslot = (hslot_type) slot->data;
+        for (slot = bj_slot_get_list (); slot; slot = slot->next) {
+                hslot_type hslot = (hslot_type) slot->data;
       
-      if (hslot->cards)
-        {
+                if (hslot->cards) {
                         gint x = hslot->pixelx;
                         gint y = hslot->pixely;
-                        GList * card_list = g_list_nth (hslot->cards, hslot->length - hslot->exposed);
+                        GList *card_list = g_list_nth (hslot->cards, hslot->length - hslot->exposed);
 
-          for (; card_list; card_list = card_list->next)
-            {
+                        for (; card_list; card_list = card_list->next) {
                                 GdkPixmap *image;
-              card_type *card = (card_type*)card_list->data;
+                                card_type *card = (card_type*)card_list->data;
+                                
+                                if (card->direction == DOWN) 
+                                        image = bj_card_get_back_pixmap ();
+                                else 
+                                        image = bj_card_get_picture (card->suit,
+                                                                     card->value);
+                                
+                                gdk_gc_set_clip_origin (draw_gc, x, y);
+                                if (image)
+                                        gdk_draw_drawable (surface, draw_gc, image,
+                                                           0, 0,
+                                                           x, y,
+                                                           -1, -1);
 
-              if (card->direction == DOWN) 
-                image = bj_card_get_back_pixmap ();
-              else 
-                image = bj_card_get_picture (card->suit, card->value);
-	
-              gdk_gc_set_clip_origin (draw_gc, x, y);
-              if (image)
-                gdk_draw_drawable (surface, draw_gc, image, 0, 0, x, y, -1, -1);
-	
-              x += hslot->pixeldx; y += hslot->pixeldy;
-            }
+                                x += hslot->pixeldx;
+                                y += hslot->pixeldy;
+                        }
+                }
         }
-    }
 }
 
 void
 bj_draw_take_snapshot ()
 {
-  GList* slot;
+        GList* slot;
 
-  gdk_draw_rectangle (surface, bg_gc, TRUE, 0, 0, -1, -1);
+        gdk_draw_rectangle (surface, bg_gc, TRUE, 0, 0, -1, -1);
 
-  for (slot = bj_slot_get_list (); slot; slot = slot->next)
-    {
-      GdkPixbuf *slot_pixbuf = bj_slot_get_scaled_pixbuf ();
-      if (slot_pixbuf) {
-        gint x = ((hslot_type)slot->data)->pixelx;
-        gint y = ((hslot_type)slot->data)->pixely;
-        gdk_draw_pixbuf (surface,
-                         slot_gc,
-                         slot_pixbuf,
-                         0, 0, 
-                         x, y,
-                         -1, -1, 
-                         GDK_RGB_DITHER_MAX,
-                         0, 0);
-      }
-    }
-  bj_draw_cards ();
-  bj_draw_chips ();
-  if (bj_game_is_active () && bj_get_show_probabilities ())
-    bj_draw_paint_text ();
-  gdk_window_set_back_pixmap (playing_area->window, surface, 0);
+        for (slot = bj_slot_get_list (); slot; slot = slot->next) {
+                GdkPixbuf *slot_pixbuf = bj_slot_get_scaled_pixbuf ();
+
+                if (slot_pixbuf) {
+                        gint x = ((hslot_type)slot->data)->pixelx;
+                        gint y = ((hslot_type)slot->data)->pixely;
+                        gdk_draw_pixbuf (surface,
+                                         slot_gc,
+                                         slot_pixbuf,
+                                         0, 0,
+                                         x, y,
+                                         -1, -1,
+                                         GDK_RGB_DITHER_MAX,
+                                         0, 0);
+                }
+        }
+        bj_draw_cards ();
+        bj_draw_chips ();
+        if (bj_game_is_active () && bj_get_show_probabilities ())
+                bj_draw_paint_text ();
+        gdk_window_set_back_pixmap (playing_area->window, surface, 0);
 }
 
 void
-bj_draw_refresh_screen()
+bj_draw_refresh_screen ()
 {
-  bj_draw_take_snapshot();
-  gdk_window_clear (playing_area->window);
-  if (bj_game_is_active () && bj_get_show_probabilities ())
-    bj_draw_paint_text ();
-  bj_draw_hand_counts ();
+        bj_draw_take_snapshot();
+        gdk_window_clear (playing_area->window);
+        if (bj_game_is_active () && bj_get_show_probabilities ())
+                bj_draw_paint_text ();
+        bj_draw_hand_counts ();
 }
