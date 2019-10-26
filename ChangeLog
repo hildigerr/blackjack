@@ -1,3 +1,21 @@
+2005-01-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.9.4.
+
+2005-01-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-files.c: Remove duplicates from the returned lists. This
+	includes removing duplicates after the names are transformed. If
+	it were a general API I might be worried about this behaviour, but
+	this is almost always what we want in our case.
+
+2005-01-03  Richard Hoelscher  <rah@rahga.com>
+
+	* src/slot.cpp (bj_slot_set_size):
+	* src/chips.cpp (bj_chip_set_size): Preimage API update, uri -> file.
+
+	* games-preimage.c (games_preimage_new_from_uri): Removed.
+
 2004-12-22  root  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.9.3.

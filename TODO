@@ -1,26 +1,28 @@
 
-
-
 --------------------------------------------------------------------------
 
-All bugs.
+After 2.10:
+
+  - Pango will support pixel font size specification (bug 119081), remove
+    workarounds found in Blackjack.
+
+--------------------------------------------------------------------------
 
 General:
         - Make games respond to the gconf key change signals.
         - Move more common code into the libgames-support library.
         - Make as much as possible scalable so we can have full-screen
-          modes. (80204)
+          modes. (bug 80204)
         - Seriously look at a11y for actually playing the games.
-        - Make games playable by keyboard (126284)
+        - Make games playable by keyboard (bug 126284)
         - Look at network multi-player.
-        - Consider how to handle the whole game seed thing.
 	- Update debian files to be reasonable
 
 Blackjack:
         - Eliminate the splash screen (and hopefully any recalculation).
-        - Multiplayer (129639)
-        - Training mode (129638)
-        - Rules dialog clean-up (124613)
+        - Multiplayer (bug 129639)
+        - Training mode (bug 129638)
+        - Rules dialog clean-up (bug 124613)
 
 libgames-support:
 	- Widgets other than the combo box for the GamesFileList.
