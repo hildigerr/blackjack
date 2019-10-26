@@ -1,3 +1,20 @@
+2004-08-30  callum  <callum@spooky-possum.org>
+
+	* NEWS: 2.7.8.
+
+2004-08-26  Richard Hoelscher  <rah@rahga.com>
+
+	* C/blackjack.xml: document payout on a blackjack hand
+
+2004-08-25  Richard Hoelscher  <rah@rahga.com>
+
+	* pixmaps/chip-100.svg: SVG cleanup and font tracing.
+	* pixmaps/chip-25.svg:  "
+	* pixmaps/chip-5.svg:   "
+	* pixmaps/chip-1.svg:   "
+	* pixmaps/white-outline.svg: Slightly smaller to conceal bilevel
+	transparency of cards, with cleanup.
+
 2004-08-16  callum  <callum@spooky-possum.org>
 
 	* NEWS: 2.7.7.

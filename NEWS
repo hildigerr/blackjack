@@ -1,3 +1,17 @@
+gnome-games 2.7.8
+=================
+
+This release is ready for the code-freeze. It contains only
+bug-fixes. One more release with documentation updates and any
+emergency bug-fixes can be expected before 2.8.0.
+
+Bug fixes:
+
+Blackjack:
+ - The payout for winning with a blackjack is now documented.
+ - The SVG chip images have been cleaned up and should work with most
+   versions of librsvg.
+
 gnome-games 2.7.7
 =================
 
