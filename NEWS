@@ -1,3 +1,30 @@
+gnome-games 2.10.0
+==================
+
+Hooray! The 2.10 release of the GNOME Games package is here.
+
+The people who made this release happen where:
+
+Callum McKenzie
+Richard Hoelscher
+William Jon McCann
+Paolo Borelli
+Jonathan Blandford
+Damien Laniel
+Andreas Røsdal
+Thomas Vander Stichele
+
+Major changes since 2.9.0:
+
+General:
+ - The use of "seeds" has been removed from through-out gnome-games.
+ - GTK+ 2.6 is now required.
+
+Blackjack:
+ - The menu has been rearranged.
+
+What more do you need to know: get playing!
+
 gnome-games 2.9.7
 =================
 

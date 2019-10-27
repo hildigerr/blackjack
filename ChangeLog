@@ -1,3 +1,12 @@
+2005-03-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS:
+	* README: Update for 2.10.0.
+
+2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* C/blackjack.xml: Bump the app version number. No revisions.
+
 2005-03-01  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.9.7
