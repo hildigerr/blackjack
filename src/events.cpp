@@ -2,7 +2,7 @@
 /*
  * Blackjack - events.cpp
  *
- * Copyright (C) 2003-2004 William Jon McCann <mccann@jhu.edu>
+ * Copyright (C) 2003-2005 William Jon McCann <mccann@jhu.edu>
  *
  * This game is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,21 +22,10 @@
 
 #include <config.h>
 
-#ifdef HAVE_ALLOCA_H
-#include <alloca.h>
-#endif
-
-#include <sys/types.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-#include <dirent.h>
-#include <ctype.h>
-#include <iostream>
 #include <math.h>
 #include <glib/gi18n.h>
-#include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
+#include <gtk/gtk.h>
 
 using namespace std;
 
@@ -142,7 +131,8 @@ set_cursor_by_location (int cursor, int x, int y)
 gboolean
 bj_event_key_press (GtkWidget *widget, GdkEventKey *event, void *d)
 {
-        guint key;
+        guint    key;
+        gboolean events_pending = bj_hand_events_pending ();
 
         // ignore clicks during actions
         if (events_pending)
@@ -152,29 +142,15 @@ bj_event_key_press (GtkWidget *widget, GdkEventKey *event, void *d)
 
         // Carry out player option.
         switch (key) {
-        case KEY_S :
-                bj_hand_stand ();
-                break;
-        case KEY_H :
-                bj_hand_hit_with_delay ();
-                break;
-        case KEY_D : 
-                bj_hand_double ();
-                break;
-        case KEY_P :
-                bj_hand_split ();
-                break;
-        case KEY_R :
-                bj_hand_surrender ();
-                break;
         case KEY_ENTER :
                 bj_hand_new_deal ();
+                return TRUE;
                 break;
         default:
                 break;
         }
 
-        return true;
+        return FALSE;
 }
 
 int
@@ -407,11 +383,11 @@ handle_chip_stack_pressed (GdkEventButton *event,
 gint
 bj_event_button_press (GtkWidget *widget, GdkEventButton *event, void *d)
 {
+        gboolean events_pending = bj_hand_events_pending ();
 
         // ignore clicks during actions
         if (events_pending)
                 return TRUE;
-
 
         if (event->button != 1)
                 return TRUE;
@@ -461,6 +437,12 @@ bj_slot_clicked ()
 gint
 bj_event_button_release (GtkWidget *widget, GdkEventButton *event, void *d)
 {
+        gboolean events_pending = bj_hand_events_pending ();
+
+        // ignore clicks during actions
+        if (events_pending)
+                return TRUE;
+
         switch (press_data->status) {
         case STATUS_IS_DRAG:
                 press_data->status = STATUS_NONE;
