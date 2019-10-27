@@ -143,6 +143,12 @@ running as the root use, or, with the setgid bit temporarily removed
 from the file. Both these require root privileges which you may not
 have.
 
+Contributing
+------------
+
+See http://www.gnome.org/projects/gnome-games/contributing.html for details
+about contributing to gnome-games.
+
 Requirements
 ------------
 

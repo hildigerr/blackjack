@@ -64,7 +64,7 @@ get_insurance_choice (void)
                                                   secondary_message);
 
         gtk_container_set_border_width (GTK_CONTAINER (dialog), 6);
-
+        gtk_window_set_title (GTK_WINDOW (dialog), "");
         gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_NO);
 
         /* add a stock icon? */ 
@@ -117,6 +117,7 @@ show_hint_dialog (void)
                                                   secondary_message);
 
         gtk_container_set_border_width (GTK_CONTAINER (hint_dlg), 6);
+        gtk_window_set_title (GTK_WINDOW (hint_dlg), "");
 
         if (hint_dlg)
                 g_signal_connect (hint_dlg,
@@ -225,9 +226,11 @@ show_preferences_dialog (void)
                                                            GTK_RESPONSE_CLOSE,
                                                            NULL);
                 gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
-                gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 6);
+                gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
+                gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), 2);
                 
-                top_vbox = gtk_vbox_new (FALSE, 6);
+                top_vbox = gtk_vbox_new (FALSE, 18);
+                gtk_container_set_border_width (GTK_CONTAINER (top_vbox), 5);
                 gtk_container_add (GTK_CONTAINER (GTK_DIALOG (pref_dialog)->vbox),
                                    top_vbox);
                 
@@ -235,11 +238,11 @@ show_preferences_dialog (void)
                 frame = games_frame_new (_("Game"));
                 vbox = gtk_vbox_new (FALSE, 6);
                 gtk_container_add (GTK_CONTAINER (frame), vbox);
-                gtk_box_pack_start_defaults (GTK_BOX (top_vbox), frame);
+                gtk_box_pack_start (GTK_BOX (top_vbox), frame, FALSE, FALSE, 0);
                 
                 // Show probabilities
                 show_probabilities = bj_get_show_probabilities ();
-                toggle = gtk_check_button_new_with_label (_("Display hand probabilities"));
+                toggle = gtk_check_button_new_with_mnemonic (_("_Display hand probabilities"));
                 gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (toggle),
                                               show_probabilities);
 
@@ -249,14 +252,14 @@ show_preferences_dialog (void)
                 
                 // Quick deal
                 quick_deal = bj_get_quick_deal ();
-                toggle = gtk_check_button_new_with_label (_("Quick deals (no delay between each card)"));
+                toggle = gtk_check_button_new_with_mnemonic (_("_Quick deals (no delay between each card)"));
                 gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (toggle),
                                               quick_deal);
                 gtk_box_pack_start (GTK_BOX (vbox), toggle, FALSE, FALSE, 0);
                 g_signal_connect (toggle, "toggled",
                                   G_CALLBACK (quick_deal_toggle_cb), NULL);
                 
-                button = gtk_button_new_with_label (_("Reset balance"));
+                button = gtk_button_new_with_mnemonic (_("_Reset Balance"));
                 gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
                 g_signal_connect (button, "clicked",
                                   G_CALLBACK (reset_button_cb), NULL);
@@ -266,7 +269,7 @@ show_preferences_dialog (void)
                 frame = games_frame_new (_("Rules"));
                 vbox = gtk_vbox_new (FALSE, 6);
                 gtk_container_add (GTK_CONTAINER (frame), vbox);
-                gtk_box_pack_start_defaults (GTK_BOX (top_vbox), frame);
+                gtk_box_pack_start (GTK_BOX (top_vbox), frame, TRUE, TRUE, 0);
 
                 list = gtk_list_store_new (13, 
                                            G_TYPE_STRING,  // Name
@@ -359,7 +362,7 @@ show_preferences_dialog (void)
                                                 GTK_POLICY_AUTOMATIC,
                                                 GTK_POLICY_AUTOMATIC);
                 
-                gtk_box_pack_end (GTK_BOX (vbox), scrolled_window, TRUE, TRUE, 6);
+                gtk_box_pack_end (GTK_BOX (vbox), scrolled_window, TRUE, TRUE, 0);
                 
                 g_signal_connect (select, "changed", 
                                   G_CALLBACK (select_rule_cb), (gpointer) pref_dialog);
@@ -401,7 +404,7 @@ show_preferences_dialog (void)
                 
                 // Cards Tab
                 deck_edit = games_card_selector_new (bj_get_card_style ());
-                gtk_box_pack_start_defaults (GTK_BOX (top_vbox), deck_edit);
+                gtk_box_pack_start (GTK_BOX (top_vbox), deck_edit, FALSE, FALSE, 0);
 
                 g_signal_connect (deck_edit, "changed",
                                   G_CALLBACK (card_deck_options_changed), NULL);

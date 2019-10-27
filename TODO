@@ -1,15 +1,10 @@
 
 --------------------------------------------------------------------------
 
-After 2.10:
-
-  - Pango will support pixel font size specification (bug 119081), remove
-    workarounds found in Blackjack.
-
---------------------------------------------------------------------------
 
 General:
         - Make games respond to the gconf key change signals.
+	  (I no longer think this is a good idea)
         - Move more common code into the libgames-support library.
         - Make as much as possible scalable so we can have full-screen
           modes. (bug 80204)

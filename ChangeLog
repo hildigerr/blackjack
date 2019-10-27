@@ -2,6 +2,34 @@
 
 	* NEWS: 2.10.2
 
+2005-06-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.11.1
+
+2005-05-31  Richard Hoelscher  <rah@rahga.com>
+
+	* src/blackjack.cpp (create_main_window): Add games-stock items along
+	with statusbar menu tooltip support, and update the tooltips themselves
+	a little bit.
+
+	* games-stock.c (games_stock_prepare_for_statusbar_tooltips)
+	(connect_proxy, unset_statusbar_tooltip, set_statusbar_tooltip):
+	Imported a few functions that handle menu tooltips and statusbars.
+
+2005-05-28  Richard Hoelscher  <rah@rahga.com>
+
+	* games-stock.c (games_stock_copy_tooltip_from_stockid):
+	Takes a stockid, and sends back a copy of a nice tooltip string.
+
+2005-05-12  Richard Hoelscher  <rah@rahga.com>
+
+	* TODO (Priorities): Updated, removing several long-gone bugs.
+
+2005-05-04  Richard Hoelscher  <rah@rahga.com>
+
+	* games-card-pixmaps.c (games_card_pixmaps_get_red_joker):
+	Specify the correct card. This only affected Aisleriot Thieves.
+
 2005-04-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.10.1.
@@ -16,6 +44,9 @@
 	* src/events.cpp (bj_event_key_press): Let the GtkAction handle
 	the keypresses except Return which it won't allow as an accel.
 	(bj_event_button_release): Also guard here for pending events.
+
+	* src/dialog.cpp (get_insurance_choice, show_hint_dialog):
+	Use a blank title in alerts per HIG.
 
 2005-04-07  William Jon McCann  <mccann@jhu.edu>
 
@@ -32,6 +63,39 @@
 	bj_hand functions for when events are pending.  Fixes #170625.
 
 	* *.[ch]: Remove unneeded includes.
+
+2005-04-04  Richard Hoelscher  <rah@rahga.com>
+
+	* games-stock.c (games_stock_items): i18n notes.
+
+2005-04-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* README: Reference our "contributing" webpage.
+
+2005-03-31  Richard Hoelscher  <rah@rahga.com>
+
+	* games-stock.c (games_stock_items): Remove ellipsis for the menuitem "Scores",
+	since it does not require further input from the user prior to doing something.
+	Also, try using "New", "Pause" and "Restart" without appending the word "Game".
+
+2005-03-30  Richard Hoelscher  <rah@rahga.com>
+
+	* games-stock.h:
+	* games-stock.c: New files to support games-stock menu items.
+	Call games_stock_init () prior to using the items.
+
+2005-03-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* src/dialog.cpp:
+	* src/blackjack.cpp: Patches from Dennis Cranston
+	<dennis_cranston@yahoo.com> to make the game more HIG
+	compliant.
+
+	* games-frame.c:
+	* games-frame.h: A patch from Dennis Cranston
+	<dennis_cranston@yahoo.com> to convert games-frame to be what is
+	essentially gimp-frame. This makes it a far nicer widget and lets
+	the labels on vertically stacked frames align correctly..
 
 2005-03-04  Callum McKenzie  <callum@physics.otago.ac.nz>
 

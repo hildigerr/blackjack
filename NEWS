@@ -1,3 +1,16 @@
+gnome-games 2.11.1
+==================
+
+Finally, a very belated 2.11.x entry for gnome-games. A lot has changed
+and I've probably missed a few things, but here are the main points:
+
+General:
+ - Lots of HIG-conformance tweaks leading to nicer dialogs.
+ - Use of modern APIs and stock items, once again giving a nicer feel
+   to the UI.
+
+And of course a lot of bug fixes and code cleanups.
+
 gnome-games-2.10.2
 ==================
 
