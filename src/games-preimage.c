@@ -133,7 +133,7 @@ games_preimage_render (GamesPreimage * preimage,
       gint height;
     } info;
     
-    gchar *buffer      = preimage->srcbuffer;
+    guchar *buffer     = preimage->srcbuffer;
     gsize  buffer_size = preimage->srcsize;
     
     info.width  = width;
@@ -193,8 +193,9 @@ games_preimage_new_from_file (const gchar *filename,
   gchar *buffer;
   gsize  buffer_size;
   
-  gint   length; 
-  gint   offset = 0;
+  gint     length; 
+  gint     offset = 0;
+  gboolean loader_closed;
   
   struct {
     gint      width;
@@ -215,7 +216,7 @@ games_preimage_new_from_file (const gchar *filename,
   /* write to the loader, breaking early if we find a vector image*/
   while ((buffer_size>offset) && !(info.scalable)) {
     length = MIN (buffer_size-offset, LOAD_BUFFER_SIZE);
-    if (!gdk_pixbuf_loader_write (loader, buffer + offset, length, error)) {
+    if (!gdk_pixbuf_loader_write (loader, (guchar *)buffer + offset, length, error)) {
       gdk_pixbuf_loader_close (loader, NULL);
       g_object_unref (loader);
       g_free (buffer);
@@ -223,10 +224,11 @@ games_preimage_new_from_file (const gchar *filename,
     }
     offset += length;
   }
+
+  loader_closed = gdk_pixbuf_loader_close (loader, error);
   
   if (info.scalable) {   /* Prepare a vector image... */
     
-    gdk_pixbuf_loader_close (loader, NULL);
     g_object_unref (loader);
     
     preimage = games_preimage_new();
@@ -234,14 +236,14 @@ games_preimage_new_from_file (const gchar *filename,
     preimage->scalable  = info.scalable;
     preimage->width     = info.width;
     preimage->height    = info.height;
-    preimage->srcbuffer = buffer;
+    preimage->srcbuffer = (guchar *)buffer;
     preimage->srcsize   = buffer_size;
     
   } else {              /* ...Or prepare a raster image */
    
     g_free(buffer);
 
-    if (!gdk_pixbuf_loader_close (loader, error)) {
+    if (!loader_closed) {
       g_object_unref (loader);
       return NULL;
     }

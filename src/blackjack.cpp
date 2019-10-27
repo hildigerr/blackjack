@@ -211,12 +211,12 @@ static void
 control_menu_set_sensitive (const char *name,
                             gboolean    value)
 {
-        GtkWidget *widget;
+        GtkAction *action;
         char      *path;
 
         path = g_strdup_printf ("/MenuBar/ControlMenu/%s", name);
-        widget = gtk_ui_manager_get_widget (ui, path);
-        gtk_widget_set_sensitive (widget, value);
+        action = gtk_ui_manager_get_action (ui, path);
+        gtk_action_set_sensitive (action, value);
         g_free (path);
 }
 
@@ -253,7 +253,7 @@ create_main_window (void)
         char         *label_string;
         GtkActionGroup *actions;
 
-        static const char *ui_definition =
+        static const char ui_definition[] =
                 "<ui>"
                 "  <menubar name='MenuBar'>"
                 "    <menu name='GameMenu' action='game-menu'>"
@@ -322,6 +322,8 @@ create_main_window (void)
 	games_stock_init();
 	status_bar = gtk_statusbar_new ();
         ui = gtk_ui_manager_new ();
+
+	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (status_bar), FALSE);
         games_stock_prepare_for_statusbar_tooltips (ui, status_bar);
 
         gtk_ui_manager_add_ui_from_string (ui, ui_definition, -1, &error);

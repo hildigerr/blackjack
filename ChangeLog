@@ -1,6 +1,30 @@
 2005-07-16  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.10.2
+	* NEWS: 2.11.2
+
+2005-07-11  Richard Hoelscher  <rah@rahga.com>
+
+	* src/blackjack.cpp (create_main_window): Make ui_definition readonly.
+
+2005-07-08  Richard Hoelscher  <rah@rahga.com>
+
+	* games-preimage.[c|h]: Fix for warnings related to buffer signedness.
+
+2005-06-30  Richard Hoelscher  <rah@rahga.com>
+
+	* src/blackjack.cpp (control_menu_set_sensitive): Set action
+	sensitivity rather than widget. I'm not sure if it fixes any bugs,
+	but the keyboard shortcuts were certainly still active.
+
+2005-06-27  Richard Hoelscher  <rah@rahga.com>
+
+	* src/blackjack.cpp (create_main_window): Disable the resize grip.
+
+2005-06-23  Richard Hoelscher  <rah@rahga.com>
+
+	* games-preimage.c (games_preimage_new_from_file): Ensure that the
+	pixbuf loader is closed prior to setting our rendering path.
 
 2005-06-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
