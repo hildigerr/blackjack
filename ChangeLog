@@ -1,3 +1,22 @@
+2005-08-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.11.4.
+
+2005-07-31  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* games-stock.h:
+	* games-stock.c: Add support for local in the theme.
+
+2005-07-29  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* C/figures/*
+	* C/blackjack.xml: Bump the app version number and update the
+	screenshots.
+
+2005-07-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* NEWS: 2.11.3
+
 2005-07-16  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* NEWS: 2.10.2
