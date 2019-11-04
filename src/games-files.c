@@ -40,13 +40,8 @@
 #endif
 #endif
 
-
 #include "games-files.h"
 #include "games-card-common.h"
-
-#if defined (HAVE_RSVG) && defined (HAVE_CAIRO) && !defined (HAVE_MAEMO)
-#define ENABLE_SCALABLE
-#endif
 
 G_DEFINE_TYPE (GamesFileList, games_file_list, G_TYPE_OBJECT)
 
@@ -449,13 +444,13 @@ games_file_list_card_themes (gboolean scalable)
   GList *l;
   const char *glob, *ext, *dir;
 
-#ifdef ENABLE_SCALABLE
+#ifdef HAVE_RSVG
   if (scalable) {
     glob = "*.svg";
     ext = ".svg";
     dir = SCALABLE_CARDS_DIR;
   } else
-#endif /* ENABLE_SCALABLE */
+#endif /* HAVE_RSVG */
   {
     glob = "*.card-theme";
     ext = ".card-theme";
@@ -534,9 +529,8 @@ games_toplevel_directory (void)
 }
 #endif
 
-
 /**
- * games_path_runtime_fix:
+ * games_path_runtime_fix_private:
  * @path: A pointer to a string (allocated with g_malloc) that is
  *        (or could be) a pathname.
  *
@@ -580,7 +574,7 @@ games_path_runtime_fix_private (gchar **path)
 
 
 gchar *
-games_path_runtime_fix (gchar *path)
+games_path_runtime_fix (const gchar *path)
 {
   gchar *p = g_strdup (path);
   games_path_runtime_fix_private (&p);

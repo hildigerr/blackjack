@@ -258,9 +258,9 @@ games_conf_constructor (GType type,
 #ifndef HAVE_GNOME
   char *conf_file;
   GError *error = NULL;
-#ifndef HAVE_MAEMO
+#ifndef HAVE_HILDON
   char *accelmap_filename;
-#endif /* !HAVE_MAEMO */
+#endif /* !HAVE_HILDON */
 #endif /* HAVE_GNOME */
 
   g_assert (instance == NULL);
@@ -313,13 +313,13 @@ games_conf_constructor (GType type,
   g_free (conf_file);
 
   /* Load the accel map, which libgnome does for us in the HAVE_GNOME case */
-#ifndef HAVE_MAEMO
+#ifndef HAVE_HILDON
   accelmap_filename = g_strdup_printf ("%s.%s", game_name, ACCELMAP_EXT);
   conf_file = g_build_filename (g_get_user_config_dir(), "gnome-games", accelmap_filename, NULL);
   gtk_accel_map_load (conf_file);
   g_free (accelmap_filename);
   g_free (conf_file);
-#endif /* !HAVE_MAEMO */
+#endif /* !HAVE_HILDON */
 
 #endif /* HAVE_GNOME */
 
@@ -349,9 +349,9 @@ games_conf_finalize (GObject *object)
   char *game_name, *conf_file, *conf_dir, *data = NULL;
   gsize len = 0;
   GError *error = NULL;
-#ifndef HAVE_MAEMO
+#ifndef HAVE_HILDON
   char *accelmap_filename;
-#endif /* !HAVE_MAEMO */
+#endif /* !HAVE_HILDON */
 
   game_name = g_ascii_strdown (priv->game_name, -1);
   conf_file = g_build_filename (g_get_user_config_dir (), "gnome-games", game_name, NULL);
@@ -388,13 +388,13 @@ loser:
   g_free (conf_dir);
 
   /* Save the accel map */
-#ifndef HAVE_MAEMO
+#ifndef HAVE_HILDON
   accelmap_filename = g_strdup_printf ("%s.%s", game_name, ACCELMAP_EXT);
   conf_file = g_build_filename (g_get_user_config_dir(), "gnome-games", accelmap_filename, NULL);
   gtk_accel_map_save (conf_file);
   g_free (accelmap_filename);
   g_free (conf_file);
-#endif /* !HAVE_MAEMO */
+#endif /* !HAVE_HILDON */
 
   g_free (game_name);
 
@@ -879,6 +879,33 @@ games_conf_get_boolean (const char *group, const char *key,
 }
 
 /**
+ * games_conf_get_boolean_width_default:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @def_value: the default value
+ *
+ * Returns the boolean associated with @key in @group, or @def_value if
+ * @key is not set, or an error occurred
+ *
+ * Returns: a boolean
+ */
+gboolean
+games_conf_get_boolean_with_default (const char *group, const char *key,
+                                     gboolean def_value)
+{
+  GError *error = NULL;
+  gboolean value;
+
+  value = games_conf_get_boolean (group, key, &error);
+  if (error) {
+    g_error_free (error);
+    value = def_value;
+  }
+
+  return value;
+}
+
+/**
  * games_conf_set_boolean:
  * @group: the group name, or %NULL to use the default group
  * @key: the key name
@@ -930,8 +957,8 @@ games_conf_get_double (const char *group, const char *key,
   g_free (key_name);
 
   return value;
-#elif defined(HAVE_MAEMO)
-#warning games_conf_set_double not supported on maemo!
+#elif defined(HAVE_HILDON)
+#warning games_conf_get_double not supported on maemo!
   return 0.0;
 #else
   return g_key_file_get_double (priv->key_file, group ? group : priv->main_group, key, error);
@@ -957,7 +984,7 @@ games_conf_set_double (const char *group, const char *key, double value)
   key_name = get_gconf_key_name (group, key);
   gconf_client_set_float (priv->gconf_client, key_name, value, NULL);
   g_free (key_name);
-#elif defined(HAVE_MAEMO)
+#elif defined(HAVE_HILDON)
 #warning games_conf_set_double not implemented on maemo!
 #else
   g_key_file_set_double (priv->key_file, group ? group : priv->main_group, key, value);
