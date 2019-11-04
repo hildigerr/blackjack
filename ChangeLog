@@ -1,10 +1,57 @@
+2008-02-12  Christian Persch  <chpe@gnome.org>
+
+	* bonded.svg:
+	* games-card.h: Complete reversal of default card theme change. Bug
+	#513557.
+
+2008-02-11  Thomas H.P. Andersen  <phomes@gmail.com>
+
+	* NEWS: gnome-games 2.21.91
+
+2008-02-11  Christian Persch  <chpe@gnome.org>
+
+	* games-stock.c: (games_stock_init):
+	* games-stock.h: Use private themeable icons. Preparation for bug
+	#474698.
+
+	A icons/hicolor_actions_scalable_cards-deal.svg: Add icon from bug
+	#474698.
+
+	* games-stock.c: (games_stock_init):
+	* games-stock.h: Use icon from bug #474698.
+
+	* games-stock.c: (games_stock_init):
+	* games-stock.h: Rename the stock names back to have games- prefix,
+	and only use the icon names when registering the stock icons.
+
+2008-02-09  Christian Persch  <chpe@gnome.org>
+
+	D cards/gnomangelo_bitmap.svg: Gnomangelo Bitmap is now shipped in
+	gnome-games since it's the new default theme. Part of bug #513557.
+
+2008-01-29  Christian Persch  <chpe@gnome.org>
+
+	* games-card.h: Use __attribute__((__packed__)) for the Card struct.
+	Bug #512799.
+
 2008-01-29  Thomas H.P. Andersen  <phomes@gmail.com>
 
 	* NEWS: gnome-games 2.21.90
 
+2008-01-22  Christian Persch  <chpe@gnome.org>
+
+	A cards/anglo_bitmap.svg:
+	A cards/gnomangelo_bitmap.svg: Add bitmap variants of Anglo and
+	Gnomangelo.
+
 2008-01-15  Thomas H.P. Andersen  <phomes@gmail.com>
 
 	* NEWS: gnome-games 2.21.5
+
+2008-01-12  Andreas Røsdal  <andreasr@gnome.org>
+
+	* cards/gnomangelo.svg: Add Gnomangelo cards, which is based on
+	Angelo and Bonded.
 
 2008-01-11  Christian Persch  <chpe@gnome.org>
 
