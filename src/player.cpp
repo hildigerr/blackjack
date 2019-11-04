@@ -58,7 +58,7 @@ Progress::indicate (int percentComplete)
         }
 }
 
-int 
+int
 Card::value ()
 {
         return (rank < 10 ? rank : 10);
@@ -145,7 +145,7 @@ Hand::draw (int card, bool faceUp)
         GList *cardlist = NULL;
         hcard_type newcard;
 
-        newcard = bj_card_new (cards[card].rank, cards[card].suit - 1, 
+        newcard = bj_card_new (cards[card].rank, cards[card].suit - 1,
                                (faceUp) ? UP : DOWN);
         cardlist = g_list_append (cardlist, newcard);
         bj_slot_add_cards (cardlist, hslot);
@@ -174,16 +174,16 @@ Hand::showCount (bool blackjack)
         gchar *message;
         gchar *markup;
 
-        if (getCount () > 21) 
+        if (getCount () > 21)
                 message = g_strdup (_("Bust"));
         else if (blackjack && getCards() == 2 && getCount() == 21)
                 message = g_strdup (_("Blackjack!"));
         else {
                 message = g_strdup_printf ("%s%d",
-                                           (getSoft() ? _("Soft") : ""), 
+                                           (getSoft() ? _("Soft") : ""),
                                            getCount ());
                 if (! (bj_game_is_active () || hslot->id == 0)) {
-                        gint hand_results = bj_get_hand_results (dealer->getCount (), 
+                        gint hand_results = bj_get_hand_results (dealer->getCount (),
                                                                  getCount ());
                         switch (hand_results) {
                         case 1: results = g_strdup_printf (" - %s", _("Win")); break;
@@ -196,12 +196,12 @@ Hand::showCount (bool blackjack)
         if (results == NULL)
                 results = g_strdup ("");
 
-        markup = g_strdup_printf ("<span weight=\"bold\" size=\"small\" foreground=\"#eaeac1\">%s%s</span>", 
+        markup = g_strdup_printf ("<span weight=\"bold\" size=\"small\" foreground=\"#eaeac1\">%s%s</span>",
                                   message, results);
         g_free (message);
         g_free (results);
         if (getCount () > 0)
-                bj_draw_playing_area_text (markup, hslot->pixelx + card_width / 2, 
+                bj_draw_playing_area_text (markup, hslot->pixelx + card_width / 2,
                                            hslot->pixely + card_height + 2);
         g_free (markup);
 }
@@ -253,7 +253,7 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
         // Player can always stand.
 
         bestValue = value = getValueStand (*lplayer, upCard);
-        mark_list[num_options++] = g_strdup_printf ("  %s     %8.2lf%%\n", 
+        mark_list[num_options++] = g_strdup_printf ("  %s     %8.2lf%%\n",
                                                     _("Stand"), value * 100);
         bestOption = KEY_S;
         bestOptionNumber = num_options;
@@ -261,19 +261,19 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
         // Player can't hit split aces.
         if (bj_hand_can_be_hit ()) {
                 value = getValueHit (*lplayer, upCard);
-                
-                mark_list[num_options++] = g_strdup_printf ("  %s       %8.2lf%%\n", 
+
+                mark_list[num_options++] = g_strdup_printf ("  %s       %8.2lf%%\n",
                                                             _("Hit"), value * 100);
                 if (value > bestValue) {
                         bestValue = value;
                         bestOption = KEY_H;
                         bestOptionNumber = num_options;
                 }
-      
+
                 // Check if player can double down.
                 if (bj_hand_can_be_doubled ()) {
                         value = getValueDoubleDown (*lplayer, upCard);
-                        mark_list[num_options++] = g_strdup_printf ("  %s    %8.2lf%%\n", 
+                        mark_list[num_options++] = g_strdup_printf ("  %s    %8.2lf%%\n",
                                                                     _("Double"), value * 100);
                         if (value > bestValue) {
                                 bestValue = value;
@@ -282,12 +282,12 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
                         }
                 }
         }
-  
+
         // Check if player can split a pair.
 
         if (bj_hand_can_be_split ()) {
                 value = getValueSplit(lplayer->cards[0].value (), upCard);
-                mark_list[num_options++] = g_strdup_printf ("  %s     %8.2lf%%\n", 
+                mark_list[num_options++] = g_strdup_printf ("  %s     %8.2lf%%\n",
                                                             _("Split"), value * 100);
                 if (value > bestValue) {
                         bestValue = value;
@@ -299,7 +299,7 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
         // Check if player can surrender.
         if (bj_hand_can_be_surrendered ()) {
                 value = -0.5;
-                mark_list[num_options++] = g_strdup_printf ("  %s %8.2lf%%\n", 
+                mark_list[num_options++] = g_strdup_printf ("  %s %8.2lf%%\n",
                                                             _("Surrender"), value * 100);
                 if (value > bestValue) {
                         bestValue = value;
@@ -313,7 +313,7 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
         g_free (tmpstr);
 
         switch (num_options) {
-        case 1:  
+        case 1:
                 tmpstr = g_strdup (mark_list[0]);
                 break;
         case 2:
@@ -323,21 +323,21 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
                 tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2], NULL);
                 break;
         case 4:
-                tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2], 
+                tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2],
                                       mark_list[3], NULL);
                 break;
         case 5:
-                tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2], 
+                tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2],
                                       mark_list[3], mark_list[4], NULL);
                 break;
         case 6:
-                tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2], 
+                tmpstr = g_strconcat (mark_list[0], mark_list[1], mark_list[2],
                                       mark_list[3], mark_list[4], mark_list[5], NULL);
                 break;
         default:
                 break;
         }
-        
+
         if (tmpstr) {
                 markup = g_strdup_printf ("<span size=\"small\" font_family=\"monospace\" "
                                           "foreground=\"#eaeac1\">%s</span>",
@@ -345,7 +345,7 @@ Player::showOptions (Hand *lplayer, int upCard, int lnumHands)
                 g_free (tmpstr);
                 for (int i = 0; i < num_options; i++)
                         g_free (mark_list[i]);
-                
+
                 bj_draw_set_player_text (markup);
                 g_free (markup);
         }
@@ -373,7 +373,7 @@ Player::getBestOption (Hand *lplayer, int upCard, int lnumHands)
                         bestValue = value;
                         bestOption = KEY_H;
                 }
-      
+
                 // Check if player can double down.
                 if (bj_hand_can_be_doubled ()) {
                         value = getValueDoubleDown (*lplayer, upCard);
@@ -383,9 +383,9 @@ Player::getBestOption (Hand *lplayer, int upCard, int lnumHands)
                         }
                 }
         }
-        
+
         // Check if player can split a pair.
-        
+
         if (bj_hand_can_be_split ()) {
                 value = getValueSplit(lplayer->cards[0].value (), upCard);
                 if (value > bestValue) {
@@ -420,7 +420,7 @@ Probabilities::showProbabilities (BJShoe *ldistribution, int lupCard,
 {
         gchar *markup;
         gchar *mark_list[7];
-  
+
         computeProbabilities (*ldistribution);
         double notBlackjack;
         if (condition)
@@ -438,11 +438,11 @@ Probabilities::showProbabilities (BJShoe *ldistribution, int lupCard,
                                                        * 100.0 / notBlackjack);
         }
 
-        markup = g_strconcat ("<span size=\"small\" font_family=\"monospace\" foreground=\"#eaeac1\">", 
-                              mark_list[0], mark_list[1], mark_list[2], mark_list[3], 
+        markup = g_strconcat ("<span size=\"small\" font_family=\"monospace\" foreground=\"#eaeac1\">",
+                              mark_list[0], mark_list[1], mark_list[2], mark_list[3],
                               mark_list[4], mark_list[5], mark_list[6],
                               "</span>", NULL);
-  
+
         for (int i = 0; i < 7; i++)
                 g_free (mark_list[i]);
         bj_draw_set_dealer_text (markup);
@@ -515,12 +515,12 @@ LoadablePlayer::saveHandXML (int i)
         for (int j = 0; j < 10; j++)
                 gzprintf (fp, "%f%s", playerHands[i].valueHit[0][j], (j < 9) ? "," : "");
         gzprintf (fp, "\"/>\n");
-  
+
         gzprintf (fp, "      <ValueDouble split=\"false\" d=\"");
         for (int j = 0; j < 10; j++)
                 gzprintf (fp, "%f%s", playerHands[i].valueDoubleDown[0][j], (j < 9) ? "," : "");
         gzprintf (fp, "\"/>\n");
-  
+
         gzprintf (fp, "    </Hand>\n");
 }
 
@@ -600,10 +600,10 @@ LoadablePlayer::savePlayerHandsXML ()
 
         for (count = 21; count >= 11; count--)
                 saveCountXML (count, false);
-  
+
         for (count = 21; count >= 12; count--)
                 saveCountXML (count, true);
-  
+
         for (count = 10; count >= 4; count--)
                 saveCountXML (count, false);
 
@@ -694,7 +694,7 @@ LoadablePlayer::load (const char *filename)
                 gzread (flp, &playerHands[i].valueStand[0], sizeof (playerHands[i].valueStand[0]));
                 gzread (flp, &playerHands[i].valueHit[0], sizeof (playerHands[i].valueHit[0]));
                 gzread (flp, &playerHands[i].valueDoubleDown[0], sizeof (playerHands[i].valueDoubleDown[0]));
-                
+
         }
 
         gzclose (flp);
@@ -823,7 +823,7 @@ LoadablePlayer::parse_hand (xmlNodePtr node)
                                                 (const char *)text, 10);
                         xmlFree (text);
                 }
-                
+
                 cur = cur->next;
         }
         return TRUE;
@@ -861,7 +861,7 @@ LoadablePlayer::parse_hand_count (xmlNodePtr node)
                         }
                         index = atoi ((const char *)text);
                         xmlFree (text);
-                        
+
                         text = xmlGetProp (cur, (const xmlChar *) "hard");
                         if (!text) {
                                 cerr << "Error reading file: invalid hard count" << endl;
@@ -869,7 +869,7 @@ LoadablePlayer::parse_hand_count (xmlNodePtr node)
                         }
                         hard = atoi ((const char *)text);
                         xmlFree (text);
-                        
+
                         text = xmlGetProp (cur, (const xmlChar *) "soft");
                         if (!text) {
                                 cerr << "Error reading file: invalid soft count" << endl;
@@ -893,7 +893,7 @@ LoadablePlayer::parse_value_split (xmlNodePtr node)
         xmlChar *text;
         int pair, up;
         double value;
-  
+
         cur = node->children;
         while (cur != NULL) {
                 if (!xmlStrcmp (cur->name, (const xmlChar *) "Split")) {
@@ -904,7 +904,7 @@ LoadablePlayer::parse_value_split (xmlNodePtr node)
                         }
                         pair = atoi ((const char *)text);
                         xmlFree (text);
-                        
+
                         text = xmlGetProp (cur, (const xmlChar *) "up");
                         if (!text) {
                                 cerr << "Error reading file: invalid split up index" << endl;
@@ -912,7 +912,7 @@ LoadablePlayer::parse_value_split (xmlNodePtr node)
                         }
                         up = atoi ((const char *)text);
                         xmlFree (text);
-                        
+
                         text = xmlGetProp (cur, (const xmlChar *) "d");
                         if (!text) {
                                 cerr << "Error reading file: invalid split value" << endl;
@@ -920,7 +920,7 @@ LoadablePlayer::parse_value_split (xmlNodePtr node)
                         }
                         value = strtod ((const char *)text, NULL);
                         xmlFree (text);
-                        
+
                         valueSplit[pair][up] = value;
                 }
                 cur = cur->next;
@@ -1029,9 +1029,9 @@ LoadablePlayer::loadXML (const char *filename)
                 cerr << "Error reading required file: " << filename << endl;
                 return FALSE;
         }
-        
+
         ret = parse_document (doc);
-    
+
         xmlFreeDoc (doc);
         return ret;
 }

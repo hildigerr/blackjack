@@ -2,7 +2,7 @@
    Copyright 2003 Free Software Foundation, Inc.
 
    This library is free software; you can redistribute it and'or modify
-   it under the terms of the GNU Library General Public License as published 
+   it under the terms of the GNU Library General Public License as published
    by the Free Software Foundation; either version 2, or (at your option)
    any later version.
 
@@ -13,7 +13,7 @@
 
    You should have received a copy of the GNU Library General Public License
    along with this library; if not, write to the Free Software
-   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.  
+   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 
    Author: Callum McKenzie
 
@@ -27,7 +27,7 @@
 
 gint card_style_compare (gconstpointer a, gconstpointer b)
 {
-  return g_utf8_collate (((const CardDeckStyle *)a)->name, 
+  return g_utf8_collate (((const CardDeckStyle *)a)->name,
 			 ((const CardDeckStyle *)b)->name);
 }
 
@@ -64,7 +64,7 @@ card_style_file_parse_start (GMarkupParseContext *context,
   style = (CardDeckStyle *)(ctxt->style_list->data);
 
   if (g_utf8_collate ("name", element) == 0) {
-    /* This is a really ugly hack, we know the only attribute should be 
+    /* This is a really ugly hack, we know the only attribute should be
      * xml:lang and that there is a deafult with no xml:lang attribute.
      * We also know that all these are translated in the po database
      * so we just take the default and translate it later ignoring the
@@ -115,12 +115,12 @@ card_style_file_parse_text (GMarkupParseContext * context,
 }
 
 
-GList * 
+GList *
 card_style_file_parse (gchar * filename)
 {
-  GMarkupParser parser = { card_style_file_parse_start, 
-			   card_style_file_parse_stop, 
-			   card_style_file_parse_text, 
+  GMarkupParser parser = { card_style_file_parse_start,
+			   card_style_file_parse_stop,
+			   card_style_file_parse_text,
 			   NULL, NULL };
   GMarkupParseContext * parse_context;
   gchar * file;
@@ -136,7 +136,7 @@ card_style_file_parse (gchar * filename)
   if (!ok)
     return NULL;
 
-  parse_context = g_markup_parse_context_new (&parser, 0, ctxt, 
+  parse_context = g_markup_parse_context_new (&parser, 0, ctxt,
 					      NULL);
   g_markup_parse_context_parse (parse_context, file, length, NULL);
   g_markup_parse_context_free (parse_context);

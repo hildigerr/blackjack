@@ -1,4 +1,4 @@
-/* 
+/*
   Copyright © 2004 Callum McKenzie
   Copyright © 2007, 2008 Christian Persch
 
@@ -760,7 +760,7 @@ games_card_images_get_card_pixmap (GamesCardImages * images,
  * You must set a drawable on @images before using this function,
  * see games_card_images_set_drawable().
  * Returns %NULL on failure.
- * 
+ *
  * Returns: a #GdkBitmap owned by @images; you must not change or unref it
  */
 GdkBitmap *
@@ -813,7 +813,7 @@ games_card_images_get_slot_pixbuf (GamesCardImages * images,
  * You must set a drawable on @images before using this function,
  * see games_card_images_set_drawable().
  * Returns %NULL on failure.
- * 
+ *
  * Returns: a #GdkPixmap owned by @images; you must not change or unref it
  */
 GdkPixmap *
@@ -834,7 +834,7 @@ games_card_images_get_slot_pixmap (GamesCardImages * images,
  * You must set a drawable on @images before using this function,
  * see games_card_images_set_drawable().
  * Returns %NULL on failure.
- * 
+ *
  * Returns: a #GdkBitmap owned by @images; you must not change or unref it
  */
 GdkBitmap *

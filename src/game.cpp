@@ -72,15 +72,15 @@ gboolean         first_hand = TRUE;
 
 GList *rules_list = NULL;
 
-BJGameRules::BJGameRules (bool lhitSoft17, bool ldoubleAnyTotal, 
-                          bool ldouble9, bool ldoubleSoft, 
+BJGameRules::BJGameRules (bool lhitSoft17, bool ldoubleAnyTotal,
+                          bool ldouble9, bool ldoubleSoft,
                           bool ldoubleAfterHit, bool ldoubleAfterSplit,
-                          bool lresplit, bool lresplitAces, 
+                          bool lresplit, bool lresplitAces,
                           bool llateSurrender, int lnumDecks, int ldealerSpeed)
-        : BJRules (lhitSoft17, ldoubleAnyTotal, 
-                   ldouble9, ldoubleSoft, 
+        : BJRules (lhitSoft17, ldoubleAnyTotal,
+                   ldouble9, ldoubleSoft,
                    ldoubleAfterHit, ldoubleAfterSplit,
-                   lresplit, lresplitAces, 
+                   lresplit, lresplitAces,
                    llateSurrender)
 {
         numDecks = lnumDecks;
@@ -132,7 +132,7 @@ static const char *
 extension_pointer (const char * path)
 {
         const char * s, * t;
-        
+
         g_return_val_if_fail (path != NULL, NULL);
 
         /* get the dot in the last element of the path */
@@ -141,7 +141,7 @@ extension_pointer (const char * path)
                 s = strrchr (t, '.');
         else
                 s = strrchr (path, '.');
-        
+
         if (s == NULL)
                 return path + strlen (path); /* There is no extension. */
         else {
@@ -163,14 +163,14 @@ bj_game_find_rules (const gchar *variation)
         dir = g_dir_open (rulesdir, 0, NULL);
         if (dir == NULL)
                 return;
-  
+
         while ((file_name = g_dir_read_name (dir)) != NULL) {
                 if (!g_str_has_suffix (file_name, ".rules"))
                         continue;
 
                 n_games++;
                 rules_list = g_list_append (rules_list, g_strdup (file_name));
-                if (! g_ascii_strcasecmp (variation, file_name)) 
+                if (! g_ascii_strcasecmp (variation, file_name))
                         bj_set_game_variation (file_name);
         }
 
@@ -297,12 +297,12 @@ bj_game_read_rules (const char *filename)
         g_key_file_free (key_file);
 
         // Compute basic strategy.
-        ruleset = new BJGameRules (hitSoft17, doubleAnyTotal, 
-                                   double9, doubleSoft, 
+        ruleset = new BJGameRules (hitSoft17, doubleAnyTotal,
+                                   double9, doubleSoft,
                                    doubleAfterHit, doubleAfterSplit,
-                                   resplit, resplitAces, 
+                                   resplit, resplitAces,
                                    lateSurrender, lnumDecks, ldealerSpeed);
-  
+
         return ruleset;
 }
 
@@ -350,14 +350,14 @@ bj_game_eval_installed_file (const gchar *file)
 
         if (g_file_test (file, G_FILE_TEST_EXISTS))
                 return;
-  
+
         rulesdir = games_runtime_get_directory (GAMES_RUNTIME_GAME_GAMES_DIRECTORY);
         installed_filename = g_build_filename (rulesdir, file, NULL);
 
         if (g_file_test (installed_filename, G_FILE_TEST_EXISTS)) {
                 rules = bj_game_read_rules (installed_filename);
                 g_free (installed_filename);
-                
+
                 // set globals
                 numDecks = rules->getNumDecks ();
                 dealerSpeed = rules->getDealerSpeed ();
@@ -370,16 +370,16 @@ bj_game_eval_installed_file (const gchar *file)
                 char *config_dir = bj_game_get_config_dir ();
                 installed_filename = g_build_filename (config_dir, cache_filename, NULL);
                 g_free (config_dir);
-                        
+
                 gboolean use_cache = FALSE;
                 if (g_file_test (installed_filename, G_FILE_TEST_EXISTS))
                         use_cache = TRUE;
 
                 if (! use_cache)
                         splash_new ();
-                strategy = new LoadablePlayer (numDecks, rules, 
-                                               maxValueStrategy, 
-                                               progress, 
+                strategy = new LoadablePlayer (numDecks, rules,
+                                               maxValueStrategy,
+                                               progress,
                                                (use_cache) ? installed_filename : NULL);
 
                 if (! use_cache) {
@@ -388,7 +388,7 @@ bj_game_eval_installed_file (const gchar *file)
                 }
 
                 g_free (cache_filename);
-        } 
+        }
         else {
                 gchar *message = g_strdup_printf ("%s\n %s", _("Blackjack can't load the requested file"),
                                                   installed_filename);
@@ -409,7 +409,7 @@ bj_game_eval_installed_file (const gchar *file)
         g_free (installed_filename);
 }
 
-void 
+void
 bj_game_cancel ()
 {
         bj_hand_cancel ();
@@ -434,10 +434,10 @@ bj_game_new (const gchar* file, guint *seedp )
 
                 game_file = g_strdup (file);
                 g_free (old_game_file);
-                
+
                 bj_game_eval_installed_file (game_file);
                 game_name = bj_game_file_to_name (game_file);
-                
+
                 if (option_dialog) {
                         gtk_widget_destroy (option_dialog);
                         option_dialog = NULL;
@@ -496,7 +496,7 @@ bj_clear_table ()
         playerHands = NULL;
         player = (PlayerHand*)g_malloc (sizeof (PlayerHand));
         playerHands = g_list_append (playerHands, player);
-  
+
         // Create slots
         bj_slot_add (0);
         bj_slot_add (1);
@@ -510,7 +510,7 @@ bj_clear_table ()
                                       player->hslot->x - 0.2,
                                       player->hslot->y + 0.2);
 
-        // Create source chip stacks 
+        // Create source chip stacks
         bj_chip_stack_create_sources ();
 
         bj_draw_rescale_cards ();

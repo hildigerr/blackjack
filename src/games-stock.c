@@ -154,9 +154,9 @@ disconnect_proxy_cb (GtkUIManager * ui_manager,
     (proxy, G_CALLBACK (menu_item_deselect_cb), statusbar);
 }
 
-/** 
- *  Call this once, after creating the UI Manager but before 
- *  you start adding actions. Then, whenever an action is added, 
+/**
+ *  Call this once, after creating the UI Manager but before
+ *  you start adding actions. Then, whenever an action is added,
  *  connect_proxy() will set tooltips to be displayed in the statusbar.
  */
 void
@@ -395,7 +395,7 @@ games_stock_init (void)
   /* FIXME: multi-head! */
   gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
                                      games_runtime_get_directory (GAMES_RUNTIME_ICON_THEME_DIRECTORY));
- 
+
   gtk_stock_add_static (games_stock_items, G_N_ELEMENTS (games_stock_items));
 }
 

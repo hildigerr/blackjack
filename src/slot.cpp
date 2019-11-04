@@ -43,7 +43,7 @@ GdkPixmap *default_background_pixmap = NULL;
 
 GdkPixmap *
 get_background_pixmap () {
-  
+
         return default_background_pixmap;
 }
 
@@ -100,7 +100,7 @@ bj_slot_free_pixmaps (void)
                 g_object_unref (default_background_pixmap);
 }
 
-void 
+void
 bj_slot_add (gint id)
 {
         hslot_type hslot = (hslot_type) g_malloc (sizeof (slot_type));
@@ -115,14 +115,14 @@ bj_slot_add (gint id)
                 hslot->x = PLAYER_SLOT_ORIGIN_X;
                 hslot->y = PLAYER_SLOT_ORIGIN_Y;
         }
-        
+
         hslot->dx = hslot->dy = 0;
         hslot->pixelx = hslot->pixely = 0;
         hslot->pixeldx = hslot->pixeldy = 0;
         hslot->expansion_depth = 0;
 
         hslot->dx = x_expanded_offset;
-    
+
         hslot->length = hslot->exposed = 0;
         bj_slot_update_length (hslot);
 
@@ -158,7 +158,7 @@ bj_slot_add_before_slot (hslot_type next_slot, gint id)
         hslot->expansion_depth = 0;
 
         hslot->dx = x_expanded_offset;
-    
+
         hslot->length = hslot->exposed = 0;
         bj_slot_update_length (hslot);
 
@@ -173,8 +173,8 @@ bj_slot_add_before_slot (hslot_type next_slot, gint id)
         return hslot;
 }
 
-void 
-bj_slot_pressed (gint x, gint y, hslot_type *slot, gint *cardid) 
+void
+bj_slot_pressed (gint x, gint y, hslot_type *slot, gint *cardid)
 {
         GList *tempptr;
 
@@ -188,47 +188,47 @@ bj_slot_pressed (gint x, gint y, hslot_type *slot, gint *cardid)
                 hslot_type hslot = (hslot_type) tempptr->data;
 
                 /* if point is within our rectangle */
-                if (hslot->pixelx < x && x < hslot->pixelx + hslot->width 
+                if (hslot->pixelx < x && x < hslot->pixelx + hslot->width
                     && hslot->pixely < y && y < hslot->pixely + hslot->height) {
                         num_cards = hslot->length;
 
-                        if ( got_slot == FALSE || num_cards > 0 ) {  
+                        if ( got_slot == FALSE || num_cards > 0 ) {
                                 /* if we support exposing more than one card,
                                  * find the exact card  */
 
                                 gint depth = 1;
-            
-                                if (hslot->pixeldx > 0)		
+
+                                if (hslot->pixeldx > 0)
                                         depth += (x - hslot->pixelx) / hslot->pixeldx;
                                 else if (hslot->pixeldy > 0)
                                         depth += (y - hslot->pixely) / hslot->pixeldy;
-            
+
                                 /* account for the last card getting much more display area
                                  * or no cards */
-            
+
                                 if (depth > hslot->exposed)
                                         depth = hslot->exposed;
 
                                 *slot = hslot;
-            
-                                /* card = #cards in slot + card chosen 
+
+                                /* card = #cards in slot + card chosen
                                    (indexed in # exposed cards) - # exposed cards */
 
                                 *cardid = num_cards + depth - hslot->exposed;
-            
+
                                 /* this is the topmost slot with a card */
                                 /* take it and run*/
                                 if ( num_cards > 0 )
                                         break;
-            
+
                                 got_slot = TRUE;
                         }
                 }
         }
 }
 
-void 
-bj_slot_update_length (hslot_type hslot) 
+void
+bj_slot_update_length (hslot_type hslot)
 {
         gint delta = g_list_length (hslot->cards) - hslot->length;
 
@@ -238,7 +238,7 @@ bj_slot_update_length (hslot_type hslot)
         if (0 < hslot->expansion_depth && hslot->expansion_depth < hslot->exposed)
                 hslot->exposed = hslot->expansion_depth;
 
-        if ((hslot->pixeldx == 0 && hslot->pixeldy == 0 && hslot->exposed > 1) 
+        if ((hslot->pixeldx == 0 && hslot->pixeldy == 0 && hslot->exposed > 1)
             || (hslot->length > 0 && hslot->exposed < 1))
                 hslot->exposed = 1;
 
@@ -248,7 +248,7 @@ bj_slot_update_length (hslot_type hslot)
         hslot->height = card_height;
 }
 
-GList* 
+GList*
 bj_slot_get_list ()
 {
         return slot_list;
@@ -258,7 +258,7 @@ hslot_type
 bj_slot_get (gint slotid)
 {
         GList* tempptr;
-  
+
         for (tempptr = slot_list; tempptr; tempptr = tempptr->next)
                 if (((hslot_type) tempptr->data)-> id == slotid)
                         return (hslot_type)tempptr->data;
@@ -274,10 +274,10 @@ bj_slot_add_cards (GList* newcards, hslot_type hslot)
 }
 
 void
-bj_slot_delete (hslot_type hslot) 
+bj_slot_delete (hslot_type hslot)
 {
         GList* temptr;
-  
+
         for (temptr = hslot->cards; temptr; temptr = temptr->next)
                 free (temptr->data);
         g_list_free (hslot->cards);

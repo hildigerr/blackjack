@@ -274,7 +274,7 @@ games_card_themes_get_theme_infos_in_dir (GamesCardThemeClass *klass,
       /* Replace existing info with the new one */
       g_hash_table_replace (theme_manager->theme_infos, info->pref_name, info);
   }
-      
+
   g_dir_close (iter);
 
 out:
@@ -633,7 +633,7 @@ games_card_themes_get_themes_loaded (GamesCardThemes *theme_manager)
  * Gets the list of known themes. Note that you may need to call
  * games_card_themes_request_themes() first ensure the themes
  * information has been collected.
- * 
+ *
  * Returns: a newly allocated list of referenced #GamesCardThemeInfo objects
  */
 GList *
@@ -724,7 +724,7 @@ games_card_themes_install_themes (GamesCardThemes *theme_manager,
     packages = g_key_file_get_string_list (key_file, group, formats[i], &n_packages, NULL);
     if (!packages)
       continue;
-    
+
     for (j = 0; j < n_packages; ++j) {
       g_ptr_array_add (arr, packages[j]);
     }

@@ -34,13 +34,13 @@ static GtkWidget *label = NULL;
 static GtkWidget *splash = NULL;
 static gboolean waiting_for_expose = FALSE;
 
-void 
+void
 splash_update (gchar *text, gfloat percent)
 {
         if (label != NULL
             && progress != NULL) {
                 gtk_label_set_text (GTK_LABEL (label), text);
-                gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (progress), percent); 
+                gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (progress), percent);
                 while (gtk_events_pending ())
                         gtk_main_iteration ();
         }
@@ -69,7 +69,7 @@ expose_event (GtkWidget *w, GdkEventExpose *event)
 }
 
 
-void 
+void
 splash_new ()
 {
         gchar *image_file;
@@ -90,7 +90,7 @@ splash_new ()
 
         splash = gtk_dialog_new ();
 
-        gtk_window_set_position (GTK_WINDOW (splash), 
+        gtk_window_set_position (GTK_WINDOW (splash),
                                  GTK_WIN_POS_CENTER);
         gtk_window_set_title (GTK_WINDOW (splash), _("Blackjack"));
         gtk_window_set_resizable (GTK_WINDOW (splash), FALSE);
@@ -100,14 +100,14 @@ splash_new ()
                           NULL);
 
         vbox = GTK_DIALOG (splash)->vbox;
-  
+
         gtk_container_set_border_width (GTK_CONTAINER (vbox), 0);
 
         if (splash_pixmap != NULL)
                 gtk_box_pack_start (GTK_BOX (vbox), splash_pixmap, FALSE, FALSE, 6);
         gtk_box_pack_end (GTK_BOX (vbox), progress, FALSE, FALSE, 6);
         gtk_box_pack_end (GTK_BOX (vbox), label, FALSE, FALSE, 0);
-  
+
         gtk_widget_show_all (splash);
 
         /* Give window manager time to map the window */
@@ -120,7 +120,7 @@ splash_new ()
         }
 }
 
-void 
+void
 splash_destroy ()
 {
         if (splash != NULL) {

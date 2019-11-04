@@ -21,7 +21,7 @@
 
 /*
  * A simple dialog that indicates progress towards loading an app.
- * Designed for display before entering the gtk_main loop and 
+ * Designed for display before entering the gtk_main loop and
  * hard to convert into an ordinary widget as a result.
  * Currently tailored for use with Blackjack.
  */

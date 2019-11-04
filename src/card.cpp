@@ -1,5 +1,5 @@
 // -*- mode:C++; tab-width:8; c-basic-offset:8; indent-tabs-mode:nil -*-
-/* 
+/*
  * Blackjack - card.cpp
  *
  * Copyright (C) 2003-2004 William Jon McCann <mccann@jhu.edu>
@@ -45,7 +45,7 @@ GamesCardTheme *theme = NULL;
 GamesCardImages *images = NULL;
 
 GdkPixmap *
-bj_card_get_picture (gint suit, gint rank) 
+bj_card_get_picture (gint suit, gint rank)
 {
         return games_card_images_get_card_pixmap_by_suit_and_rank (images,
                                                                    suit,
@@ -96,14 +96,14 @@ get_pixmap (const char *filename)
         if (im != NULL) {
                 gdk_pixbuf_render_pixmap_and_mask (im, &ret, NULL, 127);
                 g_object_unref (im);
-        } 
-        else 
+        }
+        else
                 ret = NULL;
 
         return ret;
 }
 
-hcard_type 
+hcard_type
 bj_card_new (gint value, gint suit, gint direction)
 {
         hcard_type temp_card = (hcard_type) g_malloc (sizeof (card_type));

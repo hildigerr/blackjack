@@ -1,5 +1,5 @@
 // -*- mode:C++; tab-width:8; c-basic-offset:8; indent-tabs-mode:nil -*-
-/* 
+/*
  * Blackjack - chips.cpp
  *
  * Copyright (C) 2003-2004 William Jon McCann <mccann@jhu.edu>
@@ -118,7 +118,7 @@ bj_chip_get_value (gint chip)
 }
 
 void
-bj_chip_stack_decompose_value (gfloat value, gint *blacks, 
+bj_chip_stack_decompose_value (gfloat value, gint *blacks,
                                gint *greens, gint *reds, gint *whites)
 {
         gfloat remainder = value;
@@ -141,7 +141,7 @@ bj_chip_stack_get_chips_value (GList *chips)
         return value;
 }
 
-void 
+void
 bj_chip_stack_add (gint id, double x, double y)
 {
         hstack_type hstack = (hstack_type) g_malloc (sizeof (chip_stack_type));
@@ -165,7 +165,7 @@ bj_chip_stack_add (gint id, double x, double y)
         chip_stack_list = g_list_append (chip_stack_list, hstack);
 }
 
-hchip_type 
+hchip_type
 bj_chip_new (float value)
 {
         hchip_type temp_chip = (hchip_type) g_malloc (sizeof (chip_type));
@@ -175,8 +175,8 @@ bj_chip_new (float value)
         return temp_chip;
 }
 
-void 
-bj_chip_stack_pressed (gint x, gint y, hstack_type *stack, gint *chipid) 
+void
+bj_chip_stack_pressed (gint x, gint y, hstack_type *stack, gint *chipid)
 {
         GList *tempptr;
 
@@ -188,16 +188,16 @@ bj_chip_stack_pressed (gint x, gint y, hstack_type *stack, gint *chipid)
 
         gint chip_height = chip_width;
         for (tempptr = g_list_last (chip_stack_list); tempptr; tempptr = tempptr->prev) {
-                
+
                 hstack_type hstack = (hstack_type) tempptr->data;
                 gint bottom_chip_edge = hstack->pixely + chip_height;
                 gint top_chip_edge = bottom_chip_edge - hstack->height;
                 /* if point is within our rectangle */
-                if (hstack->pixelx < x && x < hstack->pixelx + hstack->width 
+                if (hstack->pixelx < x && x < hstack->pixelx + hstack->width
                     && bottom_chip_edge > y && y > top_chip_edge) {
                         num_chips = hstack->length;
-        
-                        if (got_stack == FALSE || num_chips > 0) {  
+
+                        if (got_stack == FALSE || num_chips > 0) {
                                 // loop through chips top down (cascade)
                                 // check if click is within chip radius
                                 gint x_center, y_center;
@@ -215,19 +215,19 @@ bj_chip_stack_pressed (gint x, gint y, hstack_type *stack, gint *chipid)
                                 }
 
                                 *stack = hstack;
-                                
+
                                 /* this is the topmost stack with a chip */
                                 /* take it and run*/
                                 if (num_chips > 0)
                                         break;
-                                
+
                                 got_stack = TRUE;
                         }
                 }
         }
 }
 
-void 
+void
 bj_chip_stack_update_length (hstack_type hstack)
 {
         gint delta = g_list_length (hstack->chips) - hstack->length;
@@ -235,17 +235,17 @@ bj_chip_stack_update_length (hstack_type hstack)
         hstack->length += delta;
         hstack->exposed += delta;
 
-        if ((hstack->pixeldx == 0 && hstack->pixeldy == 0 && hstack->exposed > 1) 
+        if ((hstack->pixeldx == 0 && hstack->pixeldy == 0 && hstack->exposed > 1)
             || (hstack->length > 0 && hstack->exposed < 1))
                 hstack->exposed = 1;
 
         delta = hstack->exposed ? hstack->exposed - 1 : 0;
-  
+
         hstack->width = chip_width + delta * hstack->pixeldx;
         hstack->height = chip_width + delta * hstack->pixeldy;
 }
 
-GList * 
+GList *
 bj_chip_stack_get_list ()
 {
         return chip_stack_list;
@@ -259,10 +259,10 @@ bj_chip_stack_add_chips (GList* newchips, hstack_type hstack)
 }
 
 void
-bj_chip_stack_delete (hstack_type hstack) 
+bj_chip_stack_delete (hstack_type hstack)
 {
         GList* temptr;
-  
+
         for (temptr = hstack->chips; temptr; temptr = temptr->next)
                 g_free (temptr->data);
         g_list_free (hstack->chips);
@@ -273,7 +273,7 @@ void
 bj_chip_stack_delete_all (void)
 {
         GList* temptr;
-  
+
         for (temptr = chip_stack_list; temptr; temptr = temptr->next) {
                 bj_chip_stack_delete ((hstack_type)temptr->data);
                 temptr->data = NULL;
@@ -309,7 +309,7 @@ bj_chip_stack_new_with_id_value (gint id, gfloat value, double x, double y)
         GList *chiplist = NULL;
 
         gint blacks, greens, reds, whites;
-        bj_chip_stack_decompose_value (value, &blacks, 
+        bj_chip_stack_decompose_value (value, &blacks,
                                        &greens, &reds, &whites);
 
         // Put higher value chips on bottom
@@ -329,7 +329,7 @@ bj_chip_stack_new_with_id_value (gint id, gfloat value, double x, double y)
                 hchip_type newchip = bj_chip_new (1.0);
                 chiplist = g_list_append (chiplist, newchip);
         }
-        bj_chip_stack_add_chips (chiplist, 
+        bj_chip_stack_add_chips (chiplist,
                                  (hstack_type)g_list_last (bj_chip_stack_get_list ())->data);
 }
 

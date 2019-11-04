@@ -1,5 +1,5 @@
 // -*- mode:C++; tab-width:8; c-basic-offset:8; indent-tabs-mode:nil -*-
-/* 
+/*
  * Blackjack - dialog.cpp
  *
  * Copyright (C) 2003-2004 William Jon McCann <mccann@jhu.edu>
@@ -54,7 +54,7 @@ get_insurance_choice (void)
                               " that the dealer has a natural 21 (aka blackjack) that is"
                               " offered when the dealer's face up card is an ace. If the"
                               " dealer has a natural 21 then the player is paid double.");
-        
+
         dialog = gtk_message_dialog_new (GTK_WINDOW (toplevel_window),
                                          GTK_DIALOG_MODAL,
                                          GTK_MESSAGE_QUESTION,
@@ -68,9 +68,9 @@ get_insurance_choice (void)
         gtk_window_set_title (GTK_WINDOW (dialog), "");
         gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_NO);
 
-        /* add a stock icon? */ 
+        /* add a stock icon? */
         switch (gtk_dialog_run (GTK_DIALOG (dialog))) {
-        case GTK_RESPONSE_YES: 
+        case GTK_RESPONSE_YES:
                 choice = TRUE;
                 break;
         default:
@@ -104,7 +104,7 @@ show_hint_dialog (void)
         } else {
                 message = bj_hand_get_best_option_string (&secondary_message);
         }
-  
+
         if (hint_dlg)
                 gtk_widget_destroy (GTK_WIDGET (hint_dlg));
 
@@ -133,7 +133,7 @@ show_hint_dialog (void)
         g_free (secondary_message);
 }
 
-void 
+void
 pref_dialog_response (GtkWidget *w, int response, gpointer data)
 {
         gtk_widget_hide (w);
@@ -202,7 +202,7 @@ reset_button_cb (GtkWidget *widget, gpointer data)
 }
 
 void
-show_preferences_dialog (void) 
+show_preferences_dialog (void)
 {
         static GtkWidget* pref_dialog = NULL;
         GtkWidget *frame;
@@ -223,26 +223,26 @@ show_preferences_dialog (void)
 
         if (!pref_dialog) {
                 pref_dialog = gtk_dialog_new_with_buttons (_("Blackjack Preferences"),
-                                                           GTK_WINDOW (toplevel_window), 
+                                                           GTK_WINDOW (toplevel_window),
                                                            GTK_DIALOG_DESTROY_WITH_PARENT,
-                                                           GTK_STOCK_CLOSE, 
+                                                           GTK_STOCK_CLOSE,
                                                            GTK_RESPONSE_CLOSE,
                                                            NULL);
                 gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
                 gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
                 gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), 2);
-                
+
                 top_vbox = gtk_vbox_new (FALSE, 18);
                 gtk_container_set_border_width (GTK_CONTAINER (top_vbox), 5);
                 gtk_container_add (GTK_CONTAINER (GTK_DIALOG (pref_dialog)->vbox),
                                    top_vbox);
-                
+
 
                 frame = games_frame_new (_("Game"));
                 vbox = gtk_vbox_new (FALSE, 6);
                 gtk_container_add (GTK_CONTAINER (frame), vbox);
                 gtk_box_pack_start (GTK_BOX (top_vbox), frame, FALSE, FALSE, 0);
-                
+
                 // Show probabilities
                 show_probabilities = bj_get_show_probabilities ();
                 toggle = gtk_check_button_new_with_mnemonic (_("_Display hand probabilities"));
@@ -252,7 +252,7 @@ show_preferences_dialog (void)
                 gtk_box_pack_start (GTK_BOX (vbox), toggle, FALSE, FALSE, 0);
                 g_signal_connect (toggle, "toggled",
                                   G_CALLBACK (show_probabilities_toggle_cb), NULL);
-                
+
                 // Quick deal
                 quick_deal = bj_get_quick_deal ();
                 toggle = gtk_check_button_new_with_mnemonic (_("_Quick deals (no delay between each card)"));
@@ -269,20 +269,20 @@ show_preferences_dialog (void)
                                               never_insurance);
                 gtk_box_pack_start (GTK_BOX (vbox), toggle, FALSE, FALSE, 0);
                 g_signal_connect (toggle, "toggled",
-                                  G_CALLBACK (never_insurance_toggle_cb), NULL); 
-               
+                                  G_CALLBACK (never_insurance_toggle_cb), NULL);
+
                 button = gtk_button_new_with_mnemonic (_("_Reset Balance"));
                 gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
                 g_signal_connect (button, "clicked",
-                                  G_CALLBACK (reset_button_cb), NULL);               
-                
+                                  G_CALLBACK (reset_button_cb), NULL);
+
                 // Rules Tab
                 frame = games_frame_new (_("Rules"));
                 vbox = gtk_vbox_new (FALSE, 6);
                 gtk_container_add (GTK_CONTAINER (frame), vbox);
                 gtk_box_pack_start (GTK_BOX (top_vbox), frame, TRUE, TRUE, 0);
 
-                list = gtk_list_store_new (13, 
+                list = gtk_list_store_new (13,
                                            G_TYPE_STRING,  // Name
                                            G_TYPE_INT,     // Decks
                                            G_TYPE_BOOLEAN, // Hit Soft 17
@@ -299,85 +299,85 @@ show_preferences_dialog (void)
                 list_view = gtk_tree_view_new_with_model (GTK_TREE_MODEL (list));
                 gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (list_view), TRUE);
                 g_object_unref (list);
-    
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Name"), renderer, "text", NAME_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Decks"), renderer, "text", NDECKS_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Hit Soft 17"), renderer, "text", HIT_SOFT17_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Double Any Total"), renderer, "text", DOUBLE_ANY_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Double 9"), renderer, "text", DOUBLE_9_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Double Soft"), renderer, "text", DOUBLE_SOFT_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Double After Hit"), renderer, "text", DOUBLE_AFTER_HIT_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Double After Split"), renderer, "text", DOUBLE_AFTER_SPLIT_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Resplit"), renderer, "text", RESPLIT_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Resplit Aces"), renderer, "text", RESPLIT_ACES_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Surrender"), renderer, "text", SURRENDER_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 renderer = gtk_cell_renderer_text_new ();
                 column = gtk_tree_view_column_new_with_attributes
                         (_("Dealer Speed"), renderer, "text", DEALER_SPEED_STRING, NULL);
                 gtk_tree_view_append_column (GTK_TREE_VIEW (list_view), column);
-                
+
                 select = gtk_tree_view_get_selection (GTK_TREE_VIEW (list_view));
-                gtk_tree_selection_set_mode (select, GTK_SELECTION_BROWSE); 
-                
+                gtk_tree_selection_set_mode (select, GTK_SELECTION_BROWSE);
+
                 scrolled_window = gtk_scrolled_window_new (NULL, NULL);
-                gtk_scrolled_window_set_shadow_type 
+                gtk_scrolled_window_set_shadow_type
                         (GTK_SCROLLED_WINDOW (scrolled_window), GTK_SHADOW_IN);
                 gtk_widget_set_size_request (scrolled_window, 300, 150);
                 gtk_container_add (GTK_CONTAINER (scrolled_window), list_view);
-                
+
                 gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
                                                 GTK_POLICY_AUTOMATIC,
                                                 GTK_POLICY_AUTOMATIC);
-                
+
                 gtk_box_pack_end (GTK_BOX (vbox), scrolled_window, TRUE, TRUE, 0);
-                
-                g_signal_connect (select, "changed", 
+
+                g_signal_connect (select, "changed",
                                   G_CALLBACK (select_rule_cb), (gpointer) pref_dialog);
-                
+
                 const gchar *current_rule = bj_get_game_variation ();
                 gint i = 0;
                 BJGameRules *ruleset;
@@ -387,8 +387,8 @@ show_preferences_dialog (void)
                         if (ruleset) {
                                 text = bj_game_file_to_name ((gchar*)temptr->data);
                                 gtk_list_store_append (GTK_LIST_STORE (list), &iter);
-                                gtk_list_store_set (GTK_LIST_STORE (list), &iter, 
-                                                    NAME_STRING, text, 
+                                gtk_list_store_set (GTK_LIST_STORE (list), &iter,
+                                                    NAME_STRING, text,
                                                     NDECKS_STRING, ruleset->getNumDecks (),
                                                     HIT_SOFT17_STRING, ruleset->getHitSoft17 (),
                                                     DOUBLE_ANY_STRING, ruleset->getDoubleAnyTotal (),
@@ -411,7 +411,7 @@ show_preferences_dialog (void)
                                 i++;
                         }
                 }
-                
+
                 // Cards Tab
                 deck_edit = bj_get_card_theme_selector ();
                 gtk_box_pack_start (GTK_BOX (top_vbox), deck_edit, FALSE, FALSE, 0);
@@ -419,11 +419,11 @@ show_preferences_dialog (void)
                 // General signals
                 g_signal_connect (pref_dialog, "response",
                                   G_CALLBACK (pref_dialog_response), NULL);
-                
+
                 g_signal_connect (pref_dialog, "delete_event",
                                   G_CALLBACK (gtk_widget_hide), NULL);
         }
-        
+
         if (pref_dialog && !GTK_WIDGET_VISIBLE (pref_dialog)) {
                 // Set card style?
 

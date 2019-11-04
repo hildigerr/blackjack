@@ -79,7 +79,7 @@ games_show_uri (GdkScreen *screen,
   return gtk_show_uri (screen, uri, timestamp, error);
 #else /* GTK+ < 2.14 */
   char *argv[3] = { (char *) "xdg-open", (char *) uri, NULL };
- 
+
   if (gdk_spawn_on_screen (screen,
                            NULL /* working directory */,
                            argv,

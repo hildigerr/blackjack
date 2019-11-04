@@ -85,13 +85,13 @@ gchar *game_variation = NULL;
 #define DEFAULT_VARIATION      "Vegas_Strip.rules"
 
 void
-bj_make_window_title (gchar *game_name) 
+bj_make_window_title (gchar *game_name)
 {
         char *title;
 
         title = g_strdup_printf (_("Blackjack - %s"), game_name);
 
-        gtk_window_set_title (GTK_WINDOW (toplevel_window), title); 
+        gtk_window_set_title (GTK_WINDOW (toplevel_window), title);
 
         g_free (title);
 }
@@ -131,7 +131,7 @@ bj_show_shoe_cards (gfloat value)
 }
 
 gdouble
-bj_get_wager (void) 
+bj_get_wager (void)
 {
         return wager_value;
 }
@@ -159,7 +159,7 @@ bj_adjust_wager (gdouble offset)
         bj_set_wager (wager);
 }
 
-static void 
+static void
 set_fullscreen_actions (gboolean is_fullscreen)
 {
         gtk_action_set_sensitive (leave_fullscreen_action, is_fullscreen);
@@ -169,7 +169,7 @@ set_fullscreen_actions (gboolean is_fullscreen)
         gtk_action_set_visible (fullscreen_action, !is_fullscreen);
 }
 
-static void 
+static void
 fullscreen_cb (GtkAction *action)
 {
 	if (action == fullscreen_action) {
@@ -193,14 +193,14 @@ window_state_cb (GtkWidget *widget, GdkEventWindowState *event)
 static void
 bj_create_board (void)
 {
-        gtk_widget_set_events (playing_area, 
-                               gtk_widget_get_events (playing_area) 
+        gtk_widget_set_events (playing_area,
+                               gtk_widget_get_events (playing_area)
                                | GAME_EVENTS );
 
         GTK_WIDGET_SET_FLAGS (playing_area, GTK_CAN_FOCUS);
         gtk_widget_grab_focus (playing_area);
 
-        g_signal_connect (playing_area, "expose_event",  
+        g_signal_connect (playing_area, "expose_event",
                           G_CALLBACK (bj_event_expose_callback), NULL);
         g_signal_connect (playing_area,"button_release_event",
                           G_CALLBACK (bj_event_button_release), NULL);
@@ -372,7 +372,7 @@ create_main_window (void)
         gtk_action_group_add_toggle_actions (actions, toggle_entries, G_N_ELEMENTS (toggle_entries), toplevel_window);
         gtk_ui_manager_insert_action_group (ui, actions, 0);
         gtk_window_add_accel_group (GTK_WINDOW (toplevel_window), gtk_ui_manager_get_accel_group (ui));
-    
+
         vbox = gtk_vbox_new (FALSE, 0);
         gtk_container_add (GTK_CONTAINER (toplevel_window), vbox);
 
@@ -418,7 +418,7 @@ create_main_window (void)
         gtk_box_pack_start (GTK_BOX (group_box), balance_value_label, FALSE, FALSE, 0);
 
         gtk_box_pack_start (GTK_BOX (hbox), status_bar, TRUE, TRUE, 0);
-        
+
 
 	fullscreen_action = gtk_action_group_get_action (actions, "Fullscreen");
 	leave_fullscreen_action = gtk_action_group_get_action (actions,
@@ -428,7 +428,7 @@ create_main_window (void)
 
 	set_fullscreen_actions (FALSE);
 
-        g_signal_connect (toplevel_window, "delete_event", 
+        g_signal_connect (toplevel_window, "delete_event",
                           G_CALLBACK (bj_quit_app), NULL);
 	g_signal_connect (G_OBJECT (toplevel_window), "window_state_event",
 			  G_CALLBACK (window_state_cb), NULL);
@@ -442,7 +442,7 @@ main_prog (void)
         create_main_window ();
 
         bj_slot_load_pixmaps ();
- 
+
         bj_create_board ();
 
         context_id = gtk_statusbar_get_context_id (GTK_STATUSBAR (status_bar),

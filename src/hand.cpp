@@ -68,7 +68,7 @@ bj_hand_cancel ()
                 g_source_remove (hit_timeout_id);
                 hit_timeout_id = 0;
         }
-  
+
         if (finish_timeout_id != 0) {
                 g_source_remove (finish_timeout_id);
                 finish_timeout_id = 0;
@@ -88,10 +88,10 @@ void
 bj_hand_show_options ()
 {
         if (strategy != NULL
-            && (player->getCards () > 1) 
+            && (player->getCards () > 1)
             && (dealer->getCards () > 1) )
                 strategy->showOptions (player,
-                                       dealer->cards[0].value(), 
+                                       dealer->cards[0].value(),
                                        numHands);
 }
 
@@ -112,7 +112,7 @@ bj_hand_get_best_option_string (char **secondary_message)
         if (strategy == NULL)
                 return NULL;
 
-        bestOption = strategy->getBestOption (player, 
+        bestOption = strategy->getBestOption (player,
                                               dealer->cards[0].value (),
                                               numHands);
 
@@ -180,7 +180,7 @@ bj_hand_can_be_doubled ()
         if ((numHands == 1 && rules->getDoubleDown (*player))
             || (numHands > 1 && rules->getDoubleAfterSplit (*player)))
                 return TRUE;
-        else 
+        else
                 return FALSE;
 }
 
@@ -202,7 +202,7 @@ bj_hand_can_be_surrendered ()
         if (! bj_game_is_active ())
                 return FALSE;
 
-        if (rules->getLateSurrender () 
+        if (rules->getLateSurrender ()
             && player->getCards () == 2
             && numHands == 1)
                 return TRUE;
@@ -268,12 +268,12 @@ bj_hand_new5 (gpointer data)
         }
 
         // Check for dealer blackjack.
-        
+
         if (dealer->getCards () == 2 && dealer->getCount () == 21) {
                 allSettled = TRUE;
                 if (insurance)
                         bj_adjust_balance (player->wager / 2 + (player->wager / 2) * 2);
-            
+
                 if ( (player->getCards () == 2) && (player->getCount () == 21) )
                         bj_adjust_balance (player->wager);
                 bj_game_set_active (FALSE);
@@ -281,7 +281,7 @@ bj_hand_new5 (gpointer data)
                 deal_timeout_id = 0;
                 return FALSE;
         }
-        
+
         // Dealer does not have blackjack; collect insurance and check for player
         // blackjack.
 
@@ -291,7 +291,7 @@ bj_hand_new5 (gpointer data)
                         bj_adjust_balance (player->wager + player->wager * 3 / 2);
                 }
         }
-        
+
         // Finish player hand.
 
         if (!allSettled) {
@@ -309,7 +309,7 @@ bj_hand_new5 (gpointer data)
         else {
                 if (strategy != NULL)
                         strategy->showOptions (player,
-                                               dealer->cards[0].value (), 
+                                               dealer->cards[0].value (),
                                                numHands);
         }
 
@@ -386,7 +386,7 @@ bj_hand_new ()
         player->wager = bj_get_wager ();
         bj_adjust_balance (-1 * player->wager);
         bj_game_set_active (TRUE);
-  
+
         player->showWager ();
         lastWager = player->wager;
 
@@ -397,10 +397,10 @@ static gint
 bj_count_live_hands ()
 {
 	// Live hands compete with the dealer hand.
-	gint live_hands = 0; 
+	gint live_hands = 0;
 	player = (PlayerHand*) g_list_nth_data (playerHands,0);
 	while (player != NULL) {
-		if ((player->getCount () < 22 ) 
+		if ((player->getCount () < 22 )
 		    && !((player->getCards () == 2) && (player->getCount () == 21)))
 			live_hands++;
 		player = player->nextHand;
@@ -412,10 +412,10 @@ static gboolean
 bj_hand_finish1 (gpointer data)
 {
         if (!allSettled
-	    && bj_count_live_hands () 
-	    && (dealer->getCount () < 17 
-                || (rules->getHitSoft17 () 
-                    && dealer->getCount () == 17 
+	    && bj_count_live_hands ()
+	    && (dealer->getCount () < 17
+                || (rules->getHitSoft17 ()
+                    && dealer->getCount () == 17
                     && dealer->getSoft ()))) {
                 // Finish dealer hand.
                 bj_deal_card_to_dealer_distribution ();
@@ -461,7 +461,7 @@ bj_hand_finish_internal (void)
         bj_update_control_menu ();
         bj_draw_refresh_screen ();
 
-        finish_timeout_id = g_timeout_add ((gint)bj_get_deal_delay (), 
+        finish_timeout_id = g_timeout_add ((gint)bj_get_deal_delay (),
                                            bj_hand_finish1, NULL);
 }
 
@@ -494,7 +494,7 @@ bj_hand_hit_internal ()
 {
         if (bj_hand_can_be_hit ()) {
                 bj_deal_card_to_player ();
-                
+
                 player->showCount ();
                 if (player->getCount () >= 21)
                         if ((player = player->nextHand) == NULL) {
@@ -523,7 +523,7 @@ bj_hand_hit_with_delay (void)
         hit_timeout_id = g_timeout_add ((gint)bj_get_deal_delay (),
                                         bj_hand_hit_delay_cb, NULL);
 }
-  
+
 void
 bj_hand_double ()
 {
@@ -534,9 +534,9 @@ bj_hand_double ()
                 bj_adjust_balance (-1 * player->wager);
                 player->wager *= 2;
                 player->showWager ();
-                
+
                 bj_deal_card_to_player ();
-                
+
                 player->showCount ();
                 if (player->getCount () <= 21)
                         allSettled = FALSE;
@@ -559,15 +559,15 @@ bj_hand_split ()
         if (bj_hand_can_be_split ()) {
                 // Put card value back into shoe
                 tempCard = player->cards[1];
-                
+
                 player->undeal (tempCard.value ());
-      
+
                 // Remove card from slot
                 hslot = player->hslot;
                 hcard_type card = (hcard_type) g_list_last (hslot->cards)->data;
                 if (card)
                         hslot->cards = g_list_remove (hslot->cards,card);
-      
+
                 // set slot origin for split hands
                 if (numHands == 1) {
                         // Two hands centered on the initial slot position
@@ -575,7 +575,7 @@ bj_hand_split ()
                 }
                 else
                         slot_start_x = (gint)(PLAYER_SLOT_ORIGIN_X - PLAYER_SLOT_SPACING);
-                
+
                 // Add another slot and hand
                 PlayerHand *newHand = (PlayerHand*)g_malloc (sizeof (PlayerHand));
                 newHand->nextHand = player->nextHand;
@@ -583,7 +583,7 @@ bj_hand_split ()
                 newHand->wager = player->wager;
                 GList* tempptr;
                 tempptr = g_list_find (playerHands, newHand->nextHand);
-                
+
                 playerHands = g_list_insert_before (playerHands,
                                                     tempptr,
                                                     newHand);
@@ -591,10 +591,10 @@ bj_hand_split ()
 
                 hslot_type new_hslot = bj_slot_add_before_slot ((tempptr) ? newHand->nextHand->hslot : NULL,
                                                                 numHands);
-      
+
                 newHand->hslot = new_hslot;
                 newHand->reset ();
-                
+
                 // Also need to recreate chip stacks
                 bj_chip_stack_delete_all_wagers ();
 
@@ -608,11 +608,11 @@ bj_hand_split ()
                                                       slot->y + 0.2);
                         i++;
                 }
- 
+
                 bj_draw_set_geometry (numHands, 2);
 
                 bj_adjust_balance (-1 * player->wager);
-      
+
                 newHand->deal (tempCard);
         }
         bj_hand_finish_play ();
@@ -668,7 +668,7 @@ bj_hand_finish_play ()
                                 else
                                         player = player->nextHand;
                         }
-                        
+
                         bj_hand_show_dealer_probabilities ();
                         bj_hand_show_options ();
                 }

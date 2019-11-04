@@ -116,7 +116,7 @@ games_help_display_full (GtkWidget *window,
                  HELP_FILE_FORMAT);
     return FALSE;
   }
-    
+
 #elif defined(WITH_HELP_METHOD_LIBRARY)
   if (section != NULL) {
     help_uri = g_strdup_printf ("http://library.gnome.org/users/%s/stable/%s.html", doc_module, section);

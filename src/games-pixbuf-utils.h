@@ -14,7 +14,7 @@
   You should have received a copy of the GNU Lesser General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-    
+
 #ifndef GAMES_PIXBUF_UTILS_H
 #define GAMES_PIXBUF_UTILS_H
 

@@ -783,7 +783,7 @@ games_conf_get_string_list (const char *group, const char *key,
   }
 
   *n_values = n;
-  
+
   g_free (key_name);
   return values;
 #else
@@ -851,7 +851,7 @@ games_conf_get_integer (const char *group, const char *key,
   char *key_name;
 
   key_name = get_gconf_key_name (group, key);
-  value = gconf_client_get_int (priv->gconf_client, key_name, error);  
+  value = gconf_client_get_int (priv->gconf_client, key_name, error);
   g_free (key_name);
 
   return value;
@@ -949,7 +949,7 @@ games_conf_get_integer_list (const char *group, const char *key,
   }
 
   *n_values = n;
-  
+
   g_free (key_name);
   return values;
 #else
@@ -1271,7 +1271,7 @@ games_conf_set_keyval (const char *group, const char *key, guint value)
 
   if (value == GDK_VoidSymbol)
     return;
-  
+
   name = gdk_keyval_name (value);
   g_key_file_set_string (priv->key_file, group, key, name);
   g_signal_emit (instance, signals[VALUE_CHANGED], 0, group, key);
@@ -1283,7 +1283,7 @@ games_conf_set_keyval (const char *group, const char *key, guint value)
  * @window: a #GtkWindow
  * @group: the group to store the state in, or %NULL to use
  * the default group
- * 
+ *
  * Restore the window configuration, and persist changes to the window configuration:
  * window width and height, and maximised and fullscreen state.
  * @window must not be realised yet.

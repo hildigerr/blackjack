@@ -308,7 +308,7 @@ about_email_hook (GtkAboutDialog *about,
  * and initialises gettext support and gnome-games debug support.
  *
  * NOTE: This must be called before using ANY other glib/gtk/etc function!
- * 
+ *
  * Returns: %TRUE iff initialisation succeeded
  */
 gboolean
@@ -409,7 +409,7 @@ games_runtime_init (const char *name)
  * Like games_runtime_init(), but also initialises the osso context.
  *
  * NOTE: This must be called before using ANY other glib/gtk/etc function!
- * 
+ *
  * Returns: %TRUE iff initialisation succeeded
  */
 gboolean

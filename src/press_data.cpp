@@ -44,7 +44,7 @@ bj_press_data_create (void)
         attributes.height = card_height;
         attributes.colormap = gdk_drawable_get_colormap (GDK_DRAWABLE (playing_area->window));
         attributes.visual = gdk_drawable_get_visual (GDK_DRAWABLE (playing_area->window));
-  
+
         press_data = (press_data_type*) g_malloc0 (sizeof (press_data_type));
         press_data->moving_cards = gdk_window_new (playing_area->window, &attributes,
                                                    (GDK_WA_VISUAL | GDK_WA_COLORMAP));
@@ -67,14 +67,14 @@ bj_press_data_generate (void)
         press_data->cards = g_list_nth (hslot->cards, press_data->cardid - 1);
         width = card_width + (hslot->length - press_data->cardid) * hslot->pixeldx;
         height = card_height + (hslot->length - press_data->cardid) * hslot->pixeldy;
-  
+
         gdk_window_resize (press_data->moving_cards, width, height);
         gdk_window_move (press_data->moving_cards, x, y);
 
-        press_data->moving_pixmap = 
+        press_data->moving_pixmap =
                 gdk_pixmap_new (press_data->moving_cards, width, height,
                                 gdk_drawable_get_visual (press_data->moving_cards)->depth);
-        press_data->moving_mask = 
+        press_data->moving_mask =
                 gdk_pixmap_new (press_data->moving_cards, width, height, 1);
 
         gc1 = gdk_gc_new (press_data->moving_pixmap);
@@ -84,15 +84,15 @@ bj_press_data_generate (void)
         gdk_draw_rectangle (press_data->moving_mask, gc2, TRUE, 0, 0, width, height);
         gdk_gc_set_foreground (gc2, &unmasked);
 
-        gdk_gc_set_clip_mask (gc1, bj_card_get_mask ()); 
-        gdk_gc_set_clip_mask (gc2, bj_card_get_mask ()); 
+        gdk_gc_set_clip_mask (gc1, bj_card_get_mask ());
+        gdk_gc_set_clip_mask (gc2, bj_card_get_mask ());
 
         x = y = 0; width = card_width; height = card_height;
 
         for (tempptr = press_data->cards; tempptr; tempptr = tempptr->next) {
-                hcard_type hcard = (hcard_type) tempptr->data; 
+                hcard_type hcard = (hcard_type) tempptr->data;
                 GdkPixmap* cardpix;
-      
+
                 if (hcard->direction == UP)
                         cardpix = bj_card_get_picture (hcard->suit, hcard->value);
                 else
@@ -103,23 +103,23 @@ bj_press_data_generate (void)
                 if (cardpix != NULL)
                         gdk_draw_drawable (press_data->moving_pixmap, gc1, cardpix,
                                            0, 0, x, y, width, height);
-                gdk_draw_rectangle (press_data->moving_mask, gc2, TRUE, 
+                gdk_draw_rectangle (press_data->moving_mask, gc2, TRUE,
                                     x, y, width, height);
-      
+
                 x += hslot->pixeldx; y += hslot->pixeldy;
         }
         g_object_unref (gc1);
         g_object_unref (gc2);
-  
-        gdk_window_set_back_pixmap (press_data->moving_cards, 
+
+        gdk_window_set_back_pixmap (press_data->moving_cards,
                                     press_data->moving_pixmap, 0);
-        gdk_window_shape_combine_mask (press_data->moving_cards, 
+        gdk_window_shape_combine_mask (press_data->moving_cards,
                                        press_data->moving_mask, 0, 0);
         gdk_window_show (press_data->moving_cards);
 
-        if (press_data->cards->prev) 
+        if (press_data->cards->prev)
                 press_data->cards->prev->next = NULL;
-        else 
+        else
                 hslot->cards = NULL;
 
         press_data->cards->prev = NULL;
@@ -140,12 +140,12 @@ bj_chip_stack_press_data_create (void)
         attributes.height = attributes.width;
         attributes.colormap = gdk_drawable_get_colormap (GDK_DRAWABLE (playing_area->window));
         attributes.visual = gdk_drawable_get_visual (GDK_DRAWABLE (playing_area->window));
-  
-        chip_stack_press_data = 
+
+        chip_stack_press_data =
                 (chip_stack_press_data_type*) g_malloc0 (sizeof (chip_stack_press_data_type));
-        chip_stack_press_data->moving_chips = gdk_window_new (playing_area->window, 
+        chip_stack_press_data->moving_chips = gdk_window_new (playing_area->window,
                                                               &attributes,
-                                                              (GDK_WA_VISUAL 
+                                                              (GDK_WA_VISUAL
                                                                | GDK_WA_COLORMAP));
         chip_stack_press_data->status = 0;
 }
@@ -163,7 +163,7 @@ bj_chip_stack_press_data_generate (void)
         chip_stack_press_data->xoffset -= x = hstack->pixelx + delta * hstack->pixeldx;
         chip_stack_press_data->yoffset -= y = hstack->pixely - delta * hstack->pixeldy;
 
-        chip_stack_press_data->chips = g_list_nth (hstack->chips, 
+        chip_stack_press_data->chips = g_list_nth (hstack->chips,
                                                    chip_stack_press_data->chipid);
         width = chip_width
                 + (hstack->length - chip_stack_press_data->chipid) * hstack->pixeldx;
@@ -173,57 +173,57 @@ bj_chip_stack_press_data_generate (void)
         gdk_window_resize (chip_stack_press_data->moving_chips, width, height);
         gdk_window_move (chip_stack_press_data->moving_chips, x, y);
 
-        chip_stack_press_data->moving_pixmap = 
+        chip_stack_press_data->moving_pixmap =
                 gdk_pixmap_new (chip_stack_press_data->moving_chips, width, height,
-                                gdk_drawable_get_visual 
+                                gdk_drawable_get_visual
                                 (chip_stack_press_data->moving_chips)->depth);
-        chip_stack_press_data->moving_mask = 
+        chip_stack_press_data->moving_mask =
                 gdk_pixmap_new (chip_stack_press_data->moving_chips, width, height, 1);
 
         gc1 = gdk_gc_new (chip_stack_press_data->moving_pixmap);
         gc2 = gdk_gc_new (chip_stack_press_data->moving_mask);
 
         gdk_gc_set_foreground (gc2, &masked);
-        gdk_draw_rectangle (chip_stack_press_data->moving_mask, gc2, TRUE, 
+        gdk_draw_rectangle (chip_stack_press_data->moving_mask, gc2, TRUE,
                             0, 0, width, height);
         gdk_gc_set_foreground (gc2, &unmasked);
 
         GdkBitmap *mask;
         gdk_pixbuf_render_pixmap_and_mask (bj_chip_get_scaled_pixbuf (1), NULL, &mask, 127);
-        gdk_gc_set_clip_mask (gc1, mask); 
-        gdk_gc_set_clip_mask (gc2, mask); 
+        gdk_gc_set_clip_mask (gc1, mask);
+        gdk_gc_set_clip_mask (gc2, mask);
 
         x = 0;
         y = (hstack->length - chip_stack_press_data->chipid - 1) * hstack->pixeldy;
-        width = height = chip_width; 
+        width = height = chip_width;
 
         for (tempptr=chip_stack_press_data->chips; tempptr; tempptr=tempptr->next) {
-                hchip_type hchip = (hchip_type) tempptr->data; 
+                hchip_type hchip = (hchip_type) tempptr->data;
                 GdkPixbuf *chippix;
-      
+
                 chippix = bj_chip_get_scaled_pixbuf (bj_chip_get_id (hchip->value));
                 gdk_gc_set_clip_origin (gc1, x, y);
                 gdk_gc_set_clip_origin (gc2, x, y);
                 if (chippix != NULL)
                         gdk_draw_pixbuf (chip_stack_press_data->moving_pixmap, gc1, chippix,
                                          0, 0, x, y, width, height, GDK_RGB_DITHER_MAX, 0, 0);
-                gdk_draw_rectangle (chip_stack_press_data->moving_mask, gc2, TRUE, 
+                gdk_draw_rectangle (chip_stack_press_data->moving_mask, gc2, TRUE,
                                     x, y, width, height);
-      
+
                 x += hstack->pixeldx; y -= hstack->pixeldy;
         }
         g_object_unref (gc1);
         g_object_unref (gc2);
-  
-        gdk_window_set_back_pixmap (chip_stack_press_data->moving_chips, 
+
+        gdk_window_set_back_pixmap (chip_stack_press_data->moving_chips,
                                     chip_stack_press_data->moving_pixmap, 0);
-        gdk_window_shape_combine_mask (chip_stack_press_data->moving_chips, 
+        gdk_window_shape_combine_mask (chip_stack_press_data->moving_chips,
                                        chip_stack_press_data->moving_mask, 0, 0);
         gdk_window_show (chip_stack_press_data->moving_chips);
 
-        if (chip_stack_press_data->chips->prev) 
+        if (chip_stack_press_data->chips->prev)
                 chip_stack_press_data->chips->prev->next = NULL;
-        else 
+        else
                 hstack->chips = NULL;
 
         chip_stack_press_data->chips->prev = NULL;

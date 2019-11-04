@@ -1,4 +1,4 @@
-Hacking Gnome Games 
+Hacking Gnome Games
 -------------------
 
 For details about compiling the latest CVS version of gnome-games, see:
@@ -31,8 +31,8 @@ is big enough as it stands.
 
 Coding Style
 -----------
-We encourage you to follow the GNU coding style throughout the 
-gnome-games source code. To ensure that your code follows this coding 
+We encourage you to follow the GNU coding style throughout the
+gnome-games source code. To ensure that your code follows this coding
 style, the indent.sh script can be run on modified source code.
 
 The coding style is defined as follows:

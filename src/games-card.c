@@ -55,7 +55,7 @@ static const char ranks[] =
   "queen\0"
   "king";
 static const guint8 rank_offsets[] = {
-  0, 2, 4, 6, 8, 10, 12, 14, 
+  0, 2, 4, 6, 8, 10, 12, 14,
   16, 18, 21, 26, 32
 };
 
