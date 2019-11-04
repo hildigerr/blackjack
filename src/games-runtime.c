@@ -20,15 +20,22 @@
 
 #include <config.h>
 
+#include <locale.h>
+
 #if defined (G_OS_WIN32)
 #include <windows.h>
 #include <io.h>
 #define HELP_EXT "xhtml"
 #endif /* G_OS_WIN32 */
 
+#include <glib/gi18n.h>
+
+#include "games-debug.h"
+#include "games-profile.h"
 #include "games-runtime.h"
 
 static char *app_name;
+static int gpl_version;
 static char *cached_directories[GAMES_RUNTIME_LAST_DIRECTORY];
 #ifdef G_OS_WIN32
 static char *module_path;
@@ -68,20 +75,63 @@ typedef int _assertion[G_N_ELEMENTS (derived_directories) + GAMES_RUNTIME_FIRST_
 /**
  * games_runtime_init:
  *
- * Initialises the runtime file localisator.
+ * Initialises the runtime file localisator. This also calls setlocale,
+ * and initialises gettext support and gnome-games debug support.
+ *
+ * NOTE: This must be called before using ANY other glib/gtk/etc function!
  * 
  * Returns: %TRUE iff initialisation succeeded
  */
 gboolean
 games_runtime_init (const char *name)
 {
+  gboolean retval;
+
+  setlocale (LC_ALL, "");
+
+#if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS) || defined(HAVE_GSTREAMER)
+  /* If we're going to use gconf, gnome-vfs, or gstreamer, we need to
+   * init threads before calling any glib functions.
+   */
+  g_thread_init (NULL);
+  /* May call any glib function after this point */
+#endif
+
+  _games_profile_start ("games_runtime_init");
+
+  _games_debug_init ();
+
   app_name = g_strdup (name);
 
+  bindtextdomain (GETTEXT_PACKAGE, games_runtime_get_directory (GAMES_RUNTIME_LOCALE_DIRECTORY));
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain(GETTEXT_PACKAGE);
+
 #ifdef G_OS_WIN32
-  return games_runtime_get_directory (GAMES_RUNTIME_MODULE_DIRECTORY) != NULL;
+{
+  const char *path;
+
+  path = games_runtime_get_directory (GAMES_RUNTIME_MODULE_DIRECTORY);
+
+  _games_debug_print (GAMES_DEBUG_RUNTIME,
+                      "Relocation path: %s\n", path ? path : "(null)");
+
+  retval = path != NULL;
+}
 #else
-  return TRUE;
+  retval = TRUE;
 #endif
+
+#if defined(ENABLE_CARD_THEME_FORMAT_KDE) || defined(ENABLE_CARD_THEME_FORMAT_SLICED) || defined(ENABLE_CARD_THEME_FORMAT_PYSOL)
+  if (strcmp (app_name, "aisleriot") == 0 || strcmp (app_name, "blackjack") == 0) {
+    gpl_version = 3;
+  } else
+#endif
+  gpl_version = 2;
+
+  _games_profile_end ("games_runtime_init");
+
+  return retval;
 }
 
 /**
@@ -122,7 +172,7 @@ games_runtime_get_directory (GamesRuntimeDirectory directory)
   if (cached_directories[directory])
     return cached_directories[directory];
 
-  switch (directory) {
+  switch ((int) directory) {
 #ifndef G_OS_WIN32
     case GAMES_RUNTIME_DATA_DIRECTORY:
       path = g_strdup (DATADIR);
@@ -181,4 +231,15 @@ games_runtime_get_file (GamesRuntimeDirectory directory,
     return NULL;
 
   return g_build_filename (dir, name, NULL);
+}
+
+/**
+ * games_runtime_get_gpl_version:
+ *
+ * Returns: the minimum GPL version that the executable is licensed under
+ */
+int
+games_runtime_get_gpl_version (void)
+{
+  return gpl_version;
 }

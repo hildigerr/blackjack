@@ -1,3 +1,56 @@
+2009-02-16 21:57  thomashpa
+
+	* [r8736] trunk/NEWS: gnome-games 2.25.91
+
+2009-02-03 18:47  chpe
+
+	* [r8646] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-conf.c,
+	  trunk/libgames-support/games-frame.c,
+	  trunk/libgames-support/games-runtime.c: -Wswitch-default
+	  and -Wswitch-enum fixes.
+	* [r8645] trunk/blackjack/src/card.cpp: Build fix
+
+2009-02-03 18:24  chpe
+
+	* [r8644] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card.c: Fix -Wshadow
+	  warnings.
+
+2009-02-03 17:58  chpe
+
+	* [r8642] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card-images.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/render-cards.c: Don't return aggregates.
+
+2009-02-03 15:50  chpe
+
+	* [r8641] trunk/libgames-support/games-card.h: Remove unnecessary
+	  packed attribute; fixes build with -Wpacked.
+
+2009-02-03 14:39  chpe
+
+	* [r8638] trunk/libgames-support/games-frame.c: Add atk relations
+	  between the frame's child and the frame's label when adding the
+	  child.
+	* [r8635] trunk/libgames-support/games-frame.c,
+	  trunk/libgames-support/games-frame.h: Rewrite GamesFrame. It was
+	  much too complicated for the simple purpose it serves. Now it's
+	  just a GtkVBox containing a label and a GtkAlignment and works
+	  just as well!
+
+2009-02-02 22:43  thomashpa
+
+	* [r8633] trunk/blackjack/data/blackjack.desktop.in.in: Send all bugbuddy
+	  bugs to 'BugBuddyBugs' component
+
+2009-02-02 20:59  thomashpa
+
+	* [r8631] trunk/NEWS: gnome-games 2.25.90
+
 2009-01-19 21:48  thomashpa
 
 	* [r8601] trunk/NEWS: gnome-games 2.25.5

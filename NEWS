@@ -1,3 +1,22 @@
+gnome-games 2.25.91
+==================
+
+This second beta release brings many bugfixes and also many
+code cleanups all over the place. Bugs from bugbuddy are now sent to a new
+component 'BugBuddyBugs' to help manage the bug flow.
+
+General:
+  - Send bug from bugbuddy to new component 'BugBuddyBugs' (Jason Clinton,
+    Thomas H.P. Andersen)
+  - Rewrite of GamesFrame (Christian Persch)
+  - Code cleanups (Christian Persch, Thomas H.P. Andersen)
+
+
+gnome-games 2.25.90
+==================
+
+This is the first beta release of gnome-games.
+
 gnome-games 2.25.5
 ==================
 

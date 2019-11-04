@@ -256,9 +256,13 @@ games_card_images_set_property (GObject *object,
   GamesCardImages *images = GAMES_CARD_IMAGES (object);
 
   switch (prop_id) {
-  case PROP_THEME:
-    games_card_images_set_theme (images, g_value_get_object (value));
-    break;
+    case PROP_THEME:
+      games_card_images_set_theme (images, g_value_get_object (value));
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
   }
 }
 
@@ -271,9 +275,13 @@ games_card_images_get_property (GObject *object,
   GamesCardImages *images = GAMES_CARD_IMAGES (object);
 
   switch (prop_id) {
-  case PROP_THEME:
-    g_value_set_object (value, games_card_images_get_theme (images));
-    break;
+    case PROP_THEME:
+      g_value_set_object (value, games_card_images_get_theme (images));
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+      break;
   }
 }
 
@@ -445,10 +453,11 @@ games_card_images_set_size (GamesCardImages * images,
  *
  * Returns: the currently selected card size
  */
-CardSize
-games_card_images_get_size (GamesCardImages * images)
+void
+games_card_images_get_size (GamesCardImages *images,
+                            CardSize *size)
 {
-  return games_card_theme_get_size (images->theme);
+  games_card_theme_get_size (images->theme, size);
 }
 
 /**
@@ -589,10 +598,8 @@ GdkPixbuf *
 games_card_images_get_card_pixbuf (GamesCardImages * images,
                                    Card card, gboolean highlighted)
 {
-  guint index = _games_card_to_index (card);
-
   return games_card_images_get_card_pixbuf_by_id (images,
-                                                  index,
+                                                  _games_card_to_index (card),
                                                   highlighted);
 }
 
@@ -741,10 +748,8 @@ GdkPixmap *
 games_card_images_get_card_pixmap (GamesCardImages * images,
                                    Card card, gboolean highlighted)
 {
-  guint index = _games_card_to_index (card);
-
   return games_card_images_get_card_pixmap_by_id (images,
-                                                  index,
+                                                  _games_card_to_index (card),
                                                   highlighted);
 }
 
