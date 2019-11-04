@@ -1,3 +1,12 @@
+2007-12-16  Jason D. Clinton  <me@jasonclinton.com>
+
+	* NEWS: gnome-games 2.21.4
+
+2007-12-13  John Bryant <bryantk@sover.net>
+
+	* src/blackjack.cpp: Use the global game_variation instead of
+	DEFAULT_VARIATION, so the stored preference is used (Bug #487423)
+
 2007-12-03  Thomas H.P. Andersen  <phomes@gmail.com>
 
 	* NEWS: gnome-games 2.21.3

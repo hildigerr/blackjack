@@ -1,3 +1,15 @@
+gnome-games 2.21.4
+==================
+
+Continuing the march toward a stable Gnome 2.22 release, this unstable release
+sports a number of small bug fixes and clean-ups.
+
+This release is code named "exit-isle-on-delta".
+
+Blackjack:
+  - Use the global game_variation instead of DEFAULT_VARIATION, so the stored
+    preference is used (Bug #487423) (John Bryant)
+
 gnome-games 2.21.3
 =====================
 
