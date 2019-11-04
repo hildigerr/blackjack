@@ -1,3 +1,12 @@
+commit cab053f5d4c75795bf3472f63d07db96783bcffd
+Author: Robert Ancell <robert.ancell@gmail.com>
+Date:   Wed Sep 9 11:32:32 2009 +1000
+
+    Bring Debian man pages upstream
+
+ blackjack/data/blackjack.6       |  135 ++++++++++++++++++++++++++++++++++++++
+ 32 files changed, 947 insertions(+), 9 deletions(-)
+
 commit b6bf33f8cfabac2d480f7cc675fa0d471d9ed07d
 Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
 Date:   Mon Sep 7 23:53:35 2009 +0200
