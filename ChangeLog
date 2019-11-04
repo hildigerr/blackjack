@@ -1,3 +1,18 @@
+2007-03-20  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.18.0.1
+
+	* bonded.svg: XLink URI that should read "w3.org" instead of "w3org",
+	patch from Evert Verhellen in bug #414426.
+
+2007-03-12  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.18.0
+
+2007-02-26  Jason D. Clinton  <me@jasonclinton.com>
+
+	* NEWS: gnome-games 2.17.92
+
 2007-02-12  Jason D. Clinton  <me@jasonclinton.com>
 
 	* NEWS: gnome-games 2.17.91
