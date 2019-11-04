@@ -1,8 +1,55 @@
+commit 1ddefb035a3ad248b50b344cc9549c7f0de19048
+Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
+Date:   Tue May 5 00:20:24 2009 +0200
+
+    Add NEWS entry for 2.27.1
+
+ NEWS |  135 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 135 insertions(+), 0 deletions(-)
+
+commit 1053bf46cd04bd56ae1b952e0ca60f4492ec456c
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun May 3 15:14:26 2009 +0200
+
+    Fix GAMES_DEBUG=sound
+
+ libgames-support/games-debug.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 72267d33b7bb922d62b6d376a6b9026bf35c7293
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri May 1 21:34:16 2009 +0200
+
+    Use g_timeout_add_seconds when available
+
+ libgames-support/games-conf.c |   10 ++++++++--
+ 1 files changed, 8 insertions(+), 2 deletions(-)
+
+commit a42f42b54af61046ab39c1376730c5c88b53ce2f
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri May 1 15:21:04 2009 +0200
+
+    Don't append ? on ghelp URI with NULL section
+
+ libgames-support/games-help.c |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+commit 8722cd24a8bb44868352ea6cf582c744c32aed3c
+Author: Jason Clinton <jclinton@src.gnome.org>
+Date:   Tue Mar 17 00:08:18 2009 +0000
+
+    Gnome 2.26 release
+
+    svn path=/trunk/; revision=8858
+
+ NEWS         |   75 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 77 insertions(+), 2 deletions(-)
+
 commit 11c9f8801d29fd9ac8f036fb09ea48497ec4553e
 Author: Christian Persch <chpe@gnome.org>
 Date:   Sat Mar 14 00:06:11 2009 +0100
 
-    Version 2.26.0
+    Version 2.26.0 gnome-games-extra-data
 
  NEWS         |   30 ++++---
  5 files changed, 20 insertions(+), 315 deletions(-)

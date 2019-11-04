@@ -1,3 +1,17 @@
+gnome-games 2.27.1
+==================
+
+General:
+ - Don't append ? on ghelp URI with NULL section (Christian Persch)
+ - Add Pulse Support to Docs (Paul Cutler)
+ - Use g_timeout_add_seconds when available (Christian Persch)
+
+gnome-games 2.26.0
+==================
+
+This release is the first stable release in the Gnome 2.26 desktop
+module.
+
 GNOME Games Extra Data 2.26.0
 -----------------------------
 * Add new card theme "Tango" created by Frederik Elwert
