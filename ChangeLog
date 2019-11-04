@@ -140,6 +140,27 @@ Date:   Fri Jul 10 19:48:45 2009 +0200
  libgames-support/games-runtime.c             |    7 +-
  136 files changed, 1545 insertions(+), 1066 deletions(-)
 
+commit 04b135c8e7976dc30c4c13c714bfd320b4d006f8
+Author: Christian Persch <chpe@gnome.org>
+Date:   Thu Jul 9 22:48:45 2009 +0200
+
+    Simplify bello.svg a bit
+
+ cards/bellot.svg |   56 +++++++++++++----------------------------------------
+ 1 files changed, 14 insertions(+), 42 deletions(-)
+
+commit 0badc504fea33106c137a6e3762f25e2bacbf8ca
+Author: Christian Persch <chpe@gnome.org>
+Date:   Thu Jul 9 22:37:24 2009 +0200
+
+    Add READMEs for paris and dondorf
+
+    Containing licensing information.
+
+ cards/README.dondorf |   65 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ cards/README.paris   |   65 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 132 insertions(+), 0 deletions(-)
+
 commit 4f3d20ad3a54cc9f9bf1efa6824c224d889bbfb7
 Author: Tim Horton <hortont424@gmail.com>
 Date:   Fri Jul 3 05:54:02 2009 -0400
