@@ -1,3 +1,12 @@
+commit 11c9f8801d29fd9ac8f036fb09ea48497ec4553e
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sat Mar 14 00:06:11 2009 +0100
+
+    Version 2.26.0
+
+ NEWS         |   30 ++++---
+ 5 files changed, 20 insertions(+), 315 deletions(-)
+
 2009-03-02 21:02  thomashpa
 
 	* [r8795] trunk/NEWS: gnome-games 2.25.92
@@ -6,6 +15,19 @@
 
 	* [r8792] trunk/libgames-support/games-card-theme.c: Use
 	  G_SEARCHPATH_SEPARATOR_S
+
+commit 56b3abd1f1a275604e0ca7bc46b53269b4ecbf3e
+Author: chpe <chpe@6706628c-ed25-0410-8886-c56d9dd3be0e>
+Date:   Mon Mar 2 18:22:40 2009 +0000
+
+    Add new card set created by Frederik Elwert frederik dot elwert at web
+    dot de. Dual-licensed under GPLv2 or later and CC-By-SA.
+    Bug 573178.
+
+    git-svn-id: svn+ssh://svn.gnome.org/svn/gnome-games-extra-data/trunk@87 6706628c-ed25-0410-8886-c56d9dd3be0e
+
+ cards/tango.svg | 4932 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 4932 insertions(+), 0 deletions(-)
 
 2009-02-16 21:57  thomashpa
 
@@ -124,6 +146,61 @@
 	  org.freedesktop.PackageKit.Modify interface.
 	* [r8566] trunk/libgames-support/gnomangelo_bitmap.svg: Run
 	  xmllint --format on this.
+
+commit 5ae54f81ea515394b309e5c032832f3c1fab4d97
+Author: chpe <chpe@6706628c-ed25-0410-8886-c56d9dd3be0e>
+Date:   Tue Jan 13 21:19:33 2009 +0000
+
+    Use DejaVu instead of Bitstream Vera.
+
+    git-svn-id: svn+ssh://svn.gnome.org/svn/gnome-games-extra-data/trunk@86 6706628c-ed25-0410-8886-c56d9dd3be0e
+
+ cards/bellot.svg |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit b7877f042d3baf1f74f546d1e5915e5d33641152
+Author: chpe <chpe@6706628c-ed25-0410-8886-c56d9dd3be0e>
+Date:   Tue Jan 13 21:19:27 2009 +0000
+
+    Run xmllint --format on this
+
+    git-svn-id: svn+ssh://svn.gnome.org/svn/gnome-games-extra-data/trunk@85 6706628c-ed25-0410-8886-c56d9dd3be0e
+
+ cards/anglo_bitmap.svg |10833 +++---------------------------------------------
+ 1 files changed, 681 insertions(+), 10152 deletions(-)
+
+commit 1fff7f3a8547ae9ded2a00de45bbcb9f33762963
+Author: chpe <chpe@6706628c-ed25-0410-8886-c56d9dd3be0e>
+Date:   Tue Jan 13 21:19:18 2009 +0000
+
+    Run xmllint --format on this.
+
+    git-svn-id: svn+ssh://svn.gnome.org/svn/gnome-games-extra-data/trunk@84 6706628c-ed25-0410-8886-c56d9dd3be0e
+
+ cards/anglo.svg | 9807 ++++++++++---------------------------------------------
+ 1 files changed, 1636 insertions(+), 8171 deletions(-)
+
+commit 148cadeddef6ab09634a19824d60ba0bff8a1caf
+Author: chpe <chpe@6706628c-ed25-0410-8886-c56d9dd3be0e>
+Date:   Tue Jan 13 21:19:13 2009 +0000
+
+    Use an embedded stylesheet.
+
+    git-svn-id: svn+ssh://svn.gnome.org/svn/gnome-games-extra-data/trunk@83 6706628c-ed25-0410-8886-c56d9dd3be0e
+
+ cards/bellot.svg |   56 +++++++++++++++++++++++++++++++++--------------------
+ 1 files changed, 35 insertions(+), 21 deletions(-)
+
+commit 8503b8bcdd735cae8a0a76bcd8a6a95cd14038ee
+Author: chpe <chpe@6706628c-ed25-0410-8886-c56d9dd3be0e>
+Date:   Tue Jan 13 21:19:06 2009 +0000
+
+    Run xmllint --format on this.
+
+    git-svn-id: svn+ssh://svn.gnome.org/svn/gnome-games-extra-data/trunk@82 6706628c-ed25-0410-8886-c56d9dd3be0e
+
+ cards/gnomangelo.svg | 9613 ++++++++------------------------------------------
+ 1 files changed, 1479 insertions(+), 8134 deletions(-)
 
 2009-01-08 12:53  chpe
 
