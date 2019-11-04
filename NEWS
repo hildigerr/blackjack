@@ -1,3 +1,40 @@
+gnome-games 2.12.0
+==================
+
+Here it is! The shiny new stable release of gnome-games.
+
+Lots of people contributed to this release:
+
+Callum McKenzie
+Richard Hoelscher
+Vincent Povirk
+Dennis Cranston
+Alan Horkan
+Peter Moulder
+Clytie Siddall
+
+and all the other people who reported bugs and provided patches and
+gave generous feedback but for whom my record keeping has failed
+miserably to keep track of.
+
+And also of course the translation team.
+
+gnome-games-extra-data 2.12.0
+-----------------------------
+
+This release is timed to match gnome-games 2.12.0. It can also be used
+with gnome-games 2.10.0 since none of the data formats have changed.
+
+Only one change, but its a biggie: David Bellot's SVG card theme has
+been upgraded to the 2.0 version. It is well worth the download.
+
+gnome-games 2.11.5
+==================
+
+This is the final release candidate for 2.12. Testing this release is
+strongly encouraged. It should compile on a GNOME 2.10 system without
+any extra libraries.
+
 gnome-games 2.11.4
 ==================
 
