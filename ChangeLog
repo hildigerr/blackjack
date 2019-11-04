@@ -1,3 +1,12 @@
+2008-12-16 21:16  kmaraas
+
+	* [r8374] trunk/blackjack/src/dialog.cpp: Fix percentage format in
+	  translated string.
+
+2008-12-15 21:00  thomashpa
+
+	* [r8370] trunk/NEWS: gnome-games 2.25.3
+
 2008-12-01 22:03  thomashpa
 
 	* [r8348] trunk/NEWS: gnome-games 2.25.2
