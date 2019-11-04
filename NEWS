@@ -1,3 +1,21 @@
+gnome-games 2.27.3
+==================
+
+No major changes, just bug fixes all over the place.
+
+Christian Persch (32):
+      Don't build games-help on hildon yet
+      Only include games-preimage.h if HAVE_RSVG
+      GTK_STOCK_FULLSCREEN only exists on gtk >= 2.8
+      Fix the build on hildon
+      Use g_mkdir_with_parents and mode 0700 to create the config dir
+
+Claude Paroz (3):
+      Fix GNOME feedback link in docs
+
+Jason D. Clinton (3):
+      Bump release version to 2.27.3
+
 gnome-games 2.27.2
 =================
 Shortlog follows:

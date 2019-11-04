@@ -1,3 +1,82 @@
+commit d52e85935c83f3db869f0073f2e780bda74ccf60
+Author: Jason D. Clinton <me@jasonclinton.com>
+Date:   Mon Jun 15 18:30:17 2009 -0500
+
+    Add NEWS entry for 2.27.3 release
+
+ NEWS |   99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 99 insertions(+), 0 deletions(-)
+
+commit 40ffb0daaec64c6ead094c7bc08134a12eddf158
+Author: Claude Paroz <claude@2xlibre.net>
+Date:   Sat Jun 13 00:09:47 2009 +0200
+
+    Fix GNOME feedback link in docs
+
+ blackjack/help/C/blackjack.xml       |    4 ++--
+ 14 files changed, 26 insertions(+), 26 deletions(-)
+
+ commit 7feaabec009905f33fd8521e05ba38d3ff8b3038
+Author: Christian Persch <chpe@gnome.org>
+Date:   Thu Jun 4 14:25:22 2009 +0200
+
+    Use g_mkdir_with_parents and mode 0700 to create the config dir
+
+ blackjack/src/game.cpp |   20 ++++++--------------
+ 1 files changed, 6 insertions(+), 14 deletions(-)
+
+commit b56bc4cd1e0a2ca9d6b25eb870419e5523c4b425
+Author: Christian Persch <chpe@gnome.org>
+Date:   Tue Jun 2 18:59:59 2009 +0200
+
+    Normalise the filename in theme_filename_and_type_from_name
+
+    Always add the extension if it's not present yet.
+
+ libgames-support/games-card-themes.c |   57 ++++++++++++++++-----------------
+ 1 files changed, 28 insertions(+), 29 deletions(-)
+
+commit 9d50b44c227c2c3e6baf50be7a4f84f893ff20a8
+Author: Christian Persch <chpe@gnome.org>
+Date:   Tue Jun 2 00:29:37 2009 +0200
+
+    Fix assertion failure on hildon
+
+    g_parse_debug_string is only NULL-safe since glib 2.16 for bug #503862.
+
+ libgames-support/games-debug.c |   13 ++++++++++---
+ 1 files changed, 10 insertions(+), 3 deletions(-)
+
+commit 0fff5499ed34debcf73c964ef14c19de68c29c77
+Author: Christian Persch <chpe@gnome.org>
+Date:   Tue Jun 2 00:09:40 2009 +0200
+
+    GTK_STOCK_FULLSCREEN only exists on gtk >= 2.8
+
+ libgames-support/games-stock.c |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+commit 4505dcc4beffecc5a628e31ee97a4b8113c8a64f
+Author: Christian Persch <chpe@gnome.org>
+Date:   Tue Jun 2 00:03:25 2009 +0200
+
+    Only include games-preimage.h if HAVE_RSVG
+
+ libgames-support/games-card-theme-private.h |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+commit 53e5d8d4b03e91b036ed0923ac1109630279265f
+Author: Christian Persch <chpe@gnome.org>
+Date:   Tue Jun 2 00:01:58 2009 +0200
+
+    Don't build games-help on hildon yet
+
+    Move games-help.[ch] out of the common case into the 1HAVE_HILDON case.
+    Add #error to games_help_show in the HAVE_HILDON case.
+
+ libgames-support/games-help.c |    6 +++++-
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
 commit c5e17e605a744a273841012c3b175fa45d0b6cd1
 Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
 Date:   Mon May 25 23:49:54 2009 +0200
