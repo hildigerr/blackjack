@@ -1,3 +1,60 @@
+2007-06-04  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.3
+
+2007-06-04  Christian Persch  <chpe@gnome.org>
+
+	* bonded.svg: Changed to new theme format.
+
+2007-06-04  Christian Persch  <chpe@gnome.org>
+
+	* libgames-support/games-card-common.h: Change the theme directory.
+
+	* libgames-support/games-card-theme.c:
+	(games_card_theme_load_theme_scalable),
+	(games_card_theme_load_theme_with_fallback): Enable subrendering by
+	default.
+
+2007-06-01  Christian Persch  <chpe@gnome.org>
+
+    * games-card-common.h:
+	* games-card-images.c:
+	* games-card-images.h:
+	* games-preimage.c:
+	* games-preimage.h:
+	A games-card-theme.c:
+	A games-card-theme.h:
+	R games-card-pixmaps.c:
+	R games-card-pixmaps.h:
+
+        Landed the AisleRiot refactoring from my GIT branch at
+        http://www.gnome.org/~chpe/git/gnome-games.git/
+
+        Overview of the changes for libgames-support:
+
+        * Refactored code
+        * Improve SVG rendering time for supported themes
+          (right now only Bellot theme)
+        * Support pre-rendered themes with one file per card per size per theme
+        * Decrease memory used for theme caching by only caching the pixmaps or
+          pixbufs, not both
+        * Improved antialiased card rendering quality
+
+        Bugs fixed includes the following:
+        * SVG card set takes too long to load (Bug #337080)
+
+        You can access the full changelog in the svn history.
+
+2007-05-18  Andreas Rsdal  <andreasr@gnome.org>
+
+	* games-card-selector.c:
+	* games-card-selector.h:  Add games_card_selector_get_size () for Bug #438079.
+
+2007-05-16  Robert Ancell  <robert.ancell@gmail.com>
+
+	* Use new Tango icons from Daniel Derozier (closes #354507)
+	* Application icons now in icons/ (closes #359499)
+
 2007-05-15  Andreas Røsdal  <andreasr@gnome.org>
 
 	* NEWS: gnome-games 2.19.2

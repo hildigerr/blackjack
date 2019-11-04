@@ -1,3 +1,14 @@
+gnome-games 2.19.3
+==================
+
+This is yet another development release of the 2.19.x development branch,
+which should have been codenamed "On the road to stability"...
+These are the groundbreaking news:
+
+ * General:
+  - Use new Tango icons from Daniel Derozier (closes #354507).
+  - Application icons now in icons/ (closes #359499).
+
 gnome-games 2.19.2
 ==================
 
