@@ -1,3 +1,26 @@
+commit 1226d195ac54d503032f3668bea9e66e37a8b9fd
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 10 23:43:33 2009 +0200
+
+    Move the public icons from icons/ subdirectories to the main icons/
+    directory, using the same naming scheme the private icons already use.
+    Copy the private icons install rule for the public icons.
+    Bug #439875.
+
+ icons/16x16/gnome-blackjack.png                 |  Bin 855 -> 0 bytes
+ icons/22x22/gnome-blackjack.png                 |  Bin 1204 -> 0 bytes
+ icons/24x24/gnome-blackjack.png                 |  Bin 1257 -> 0 bytes
+ icons/32x32/gnome-blackjack.png                 |  Bin 1774 -> 0 bytes
+ icons/48x48/gnome-blackjack.png                 |  Bin 3556 -> 0 bytes
+ icons/hicolor_apps_16x16_gnome-blackjack.png    |  Bin 0 -> 855 bytes
+ icons/hicolor_apps_22x22_gnome-blackjack.png    |  Bin 0 -> 1204 bytes
+ icons/hicolor_apps_24x24_gnome-blackjack.png    |  Bin 0 -> 1257 bytes
+ icons/hicolor_apps_32x32_gnome-blackjack.png    |  Bin 0 -> 1774 bytes
+ icons/hicolor_apps_48x48_gnome-blackjack.png    |  Bin 0 -> 3556 bytes
+ icons/hicolor_apps_scalable_gnome-blackjack.svg | 1144 ++++++++
+ icons/scalable/gnome-blackjack.svg              | 1144 --------
+ 217 files changed, 14028 insertions(+), 13967 deletions(-)
+
 commit e60337e57a995fd524268ae5032f51ac0ef5d237
 Author: Christian Persch <chpe@gnome.org>
 Date:   Wed Jul 8 13:32:01 2009 +0200
