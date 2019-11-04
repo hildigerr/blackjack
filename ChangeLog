@@ -1,3 +1,12 @@
+2009-03-02 21:02  thomashpa
+
+	* [r8795] trunk/NEWS: gnome-games 2.25.92
+
+2009-03-02 18:23  chpe
+
+	* [r8792] trunk/libgames-support/games-card-theme.c: Use
+	  G_SEARCHPATH_SEPARATOR_S
+
 2009-02-16 21:57  thomashpa
 
 	* [r8736] trunk/NEWS: gnome-games 2.25.91
