@@ -1,3 +1,7 @@
+2007-07-31  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games-extra-data 2.19.2
+
 2007-07-28  Andreas Røsdal <andreasr@gnome.org>
 
 	* NEWS: gnome-games 2.19.6
@@ -44,6 +48,13 @@
 	(games_card_theme_set_size), (games_card_theme_get_aspect): Don't use
 	anonymous structs, since the solaris compiler chokes on them. Bug
 	#444802, patch by Damien Carbery.
+
+	* cards/bellot.svg: Fix xlink namespace to point to w3.org, not
+	"w3org".
+	* cards/bonded.svg: Remove trailing zeros.
+
+	* cards/paris.svg:
+	* cards/dondorf.svg: Re-arranged so each card is addressable by ID.
 
 2007-06-04  Andreas Røsdal  <andreasr@gnome.org>
 
