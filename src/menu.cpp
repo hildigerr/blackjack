@@ -144,35 +144,23 @@ on_help_about_activate (GtkAction *action,
         };
 
         const gchar *documenters[] = {
+                "William Jon McCann <mccann@jhu.edu>",
                 NULL
         };
 
-        const gchar *translator_credits = _("translator-credits");
-
-        {
-                int i=0;
-                while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
-        }
-
-	char *filename = NULL;
-	filename = g_build_filename (PIXMAPDIR, "gnome-blackjack.png", NULL);
-
-        GdkPixbuf *pixbuf = NULL;
-        if (filename != NULL) {
-                pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
-                g_free (filename);
-        }
-
         gtk_show_about_dialog (GTK_WINDOW (toplevel_window),
-                               "logo", pixbuf,
                                "authors", authors,
                                "documenters", documenters,
                                "version", VERSION,
-                               "copyright", "Copyright \xc2\xa9 2003-2004 William Jon McCann, Eric Farmer",
-                               "comments", _("Blackjack provides a casino-style blackjack card game."),
+                               "copyright", "Copyright \xc2\xa9 2003-2006 William Jon McCann, Eric Farmer",
+                               "comments", _("Blackjack is a casino-style card game."),
+                               "logo-icon-name", "gnome-blackjack",
+                               "license", "GPL 2+",
+                               "translator_credits", _("translator-credits"),
+                               "logo-icon-name", "gnome-aisleriot.png",
+                               "website", "http://www.gnome.org/projects/gnome-games/",
+                               "wrap-license", TRUE,
                                NULL);
-
-        g_object_unref (pixbuf);
 
         return;
 }

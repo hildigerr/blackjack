@@ -1,3 +1,19 @@
+gnome-games 2.15.1
+==================
+
+It's that time of release-cycle again. Time for completely new code
+and completely new bugs. A lot of the work so far has been clean-up
+work, especially those focused on by the GNOME Goals. Thomas Andersen,
+Thomas Thurman, Paolo Borelli and Przemys©©aw Grzegorczyk deserve
+special thanks for their efforts towards these.
+
+General:
+ - The bonded card set now uses vector graphics for the ranks.
+ - Use icon themes everywhere.
+ - Updated about dialogs.
+ - With some themes, look for a similar name if the exact name isn't there
+   (e.g. find bonded.svg if bonded.png isn't around anymore).
+
 gnome-games-extra-data 2.14.0
 -----------------------------
 

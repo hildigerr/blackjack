@@ -19,11 +19,16 @@
 
 /* Manage a set of pixbufs containing a deck of cards. */
 
+/* #defining this prints out the time it takes to run 
+ * games_preimage_new_from_file (in seconds). */
+#undef INSTRUMENT_LOADING
+
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include "games-card-images.h"
 #include "games-card-common.h"
+#include "games-find-file.h"
 #include "games-preimage.h"
 
 G_DEFINE_TYPE(GamesCardImages, games_card_images, G_TYPE_OBJECT);
@@ -61,28 +66,43 @@ static void games_card_images_render (GamesCardImages * images, gint cardid)
 static void games_card_images_prerender (GamesCardImages * images)
 {
   gchar * fullname;
+#ifdef INSTRUMENT_LOADING
+  clock_t t1, t2;
 
-  /* FIXME: We should search a path. */
-  fullname = g_strconcat (CARDDIR, images->themename, NULL);
+  t1 = clock ();
+#endif
+
+  /* First try and load the given file. */
   if (!images->preimage) {
+    /* FIXME: We should search a path. */
+    fullname = g_build_filename (CARDDIR, images->themename, NULL);
     images->preimage = games_preimage_new_from_file (fullname, NULL);
+    g_free (fullname);
   }
 
-  g_free (fullname);
+  /* Failing that, try and find a similar file (e.g. a suffix change). */
+  if (!images->preimage) {
+    fullname = games_find_similar_file (images->themename, CARDDIR);
+    images->preimage = games_preimage_new_from_file (fullname, NULL);    
+    g_free (fullname);
+  }
 
+  /* The try the default name. */
   if (!images->preimage) {
     g_warning ("Using a fallback card image set.");
-    fullname = CARDDIR"bonded.png";
+    fullname = g_build_filename (CARDDIR, "bonded.svg", NULL);
     images->preimage = games_preimage_new_from_file (fullname, NULL);    
+    g_free (fullname);
   }
 
+  /* If all that fails, report an error. */
   if (!images->preimage) {
     /* FIXME: Find a better way to report errors. */
     g_warning ("Failed to load the fallback file.\n");
   }
 
   images->prescaled = games_preimage_is_scalable (images->preimage);
-  
+
   if (!images->prescaled){
     images->source = games_preimage_render_unscaled_pixbuf (images->preimage);
   } else {
@@ -95,6 +115,11 @@ static void games_card_images_prerender (GamesCardImages * images)
   images->subheight = gdk_pixbuf_get_height (images->source)/5;
 
   images->prerendered = TRUE;
+
+#ifdef INSTRUMENT_LOADING
+  t2 = clock ();
+  g_print ("%f\n", (t2 - t1)*1.0/CLOCKS_PER_SEC);
+#endif
 }
 
 static void games_card_images_purge (GamesCardImages * images)
