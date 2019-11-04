@@ -1,6 +1,37 @@
+2007-09-17  Thomas H.P. Andersen  <phomes@gmail.com>
+
+	* NEWS: gnome-games 2.20
+    * NEWS: gnome-games-extra-data 2.20.0
+
+2007-09-10  Thomas H.P. Andersen <phomes@gmail.com>
+
+	* games-conf.c: games_conf_get_integer_with_default should not always return default value.
+	Fixes bug #475519.
+
+2007-09-03  Thomas H.P. Andersen  <phomes@gmail.com>
+
+	* NEWS: gnome-games 2.19.92
+
+2007-08-28  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.91.1
+
+2007-08-27  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.91
+
+2007-08-14  Jason D. Clinton  <me@jasonclinton.com>
+
+	* NEWS: gnome-games 2.19.90.1
+
 2007-08-11  Andreas Røsdal  <andreasr@gnome.org>
 
 	* NEWS: gnome-games 2.19.90
+
+2007-08-09  Andreas Røsdal  <andreasr@gnome.org>
+
+	* cards/anglo.svg: New Anglo-American playing cards,
+	by Aike Reyer in bug #461267.
 
 2007-07-31  Andreas Røsdal  <andreasr@gnome.org>
 
