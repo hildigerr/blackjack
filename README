@@ -74,6 +74,13 @@ http://www.gnu.org/copyleft/gpl.html
 or write to the Free Software Foundation, Inc., 59 Temple Place, Suite
 330, Boston, MA 02111-1307 USA
 
+Some parts of this software, notably some of the artwork, are licensed
+under different terms or have been placed in the public domain. None
+of these terms are more restrictive than what has been described
+above. Please check the artwork files for full details. If there is no
+information embedded within the file or alongside it then it is licensed
+under the GPL.
+
 Mailing List
 ------------
 
@@ -95,7 +102,7 @@ Maintainers
 The current maintainers for gnome-games are:
 
  Jason Clinton <me@jasonclinton.com>
- Andreas Røsdal <andrearo@pvv.ntnu.no>
+ Andreas Røsdal <andreasr@gnome.org>
 
 While you can email them with suggestions and bug reports it is better
 to use either the bug tracking system (see below) or the mailing
@@ -144,7 +151,7 @@ http://live.gnome.org/GnomeGames/Contributing
 Requirements
 ------------
 
-To compile these packages, we recommend using the baseline GNOME 2.14
+To compile these packages, we recommend using the baseline GNOME 2.17.x
 development packages. While gnome-games may compile with older versions,
 we will not accept bug reports for games used under those conditions.
 
@@ -185,7 +192,7 @@ The Future
 ----------
 
 As time marches on, we shall strive to drag more of our games kicking and
-screaming into the 21st century. The following is a short list of recent 
+screaming into the 21st century. The following is a short list of recent
 priorities, and many more can be found in the bug tracker and the TODO file.
  - Usability, Accessibility and Fancibility improvements.
  - Better graphics rendering quality and speed.
