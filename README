@@ -151,7 +151,18 @@ http://live.gnome.org/GnomeGames/Contributing
 Requirements
 ------------
 
-To compile these packages, we recommend using the baseline GNOME 2.17.x
+This is the list of required software packages for gnome-games:
+
+ - GNOME 2.16.0
+ - GTK+ 2.8.0
+ - GNOME Doc Utils - gnome-doc-utils 0.10.0
+ - Cairo 1.0
+ - RSVG 2.14.0
+ - libxml 2.4.0
+ - scrollkeeper
+ - expat
+
+To compile these packages, we recommend using the baseline GNOME 2.18.x
 development packages. While gnome-games may compile with older versions,
 we will not accept bug reports for games used under those conditions.
 

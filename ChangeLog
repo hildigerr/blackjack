@@ -1,3 +1,35 @@
+2007-06-18  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.4
+
+	* games-marshal.list:
+	* games-conf.c:
+	* games-conf.h: Implement the GamesConf API for storing
+	the preferences in the games. The GamesConf API allows storing
+	preferences using GConf or storing konfiguration keys in flat files.
+	Patch from Christian Persch in bug #448432.
+
+2007-06-17  Andreas Rsdal  <andreasr@gnome.org>
+
+	* games-files.h:
+	* games-card-theme.c:
+	* games-stock.c:
+	* games-files.c: Mingw32 patch for libgames-support (bug #448317).
+
+2007-06-06  Christian Persch  <chpe@gnome.org>
+
+	* games-card-common.h:
+	* games-card-images.c: (card_to_index):
+	* games-card-theme.c: (games_card_theme_clear_source_pixbuf),
+	(games_card_theme_clear_theme_data),
+	(games_card_theme_load_theme_scalable),
+	(games_card_theme_load_theme_prerendered),
+	(games_card_theme_prerender_scalable),
+	(games_card_theme_render_card), (games_card_theme_load_card),
+	(games_card_theme_set_size), (games_card_theme_get_aspect): Don't use
+	anonymous structs, since the solaris compiler chokes on them. Bug
+	#444802, patch by Damien Carbery.
+
 2007-06-04  Andreas Røsdal  <andreasr@gnome.org>
 
 	* NEWS: gnome-games 2.19.3

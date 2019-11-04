@@ -1,3 +1,14 @@
+gnome-games 2.19.4
+==================
+
+This is the fourth development release leading up to gnome-games 2.20.0.
+
+* General changes:
+  - GamesConf, an API for storing user preferences has been added
+    to libgames-support. GamesConf allows the games to store preferences
+    using either GConf or flat files (#448432).
+  - Mingw32 compilation fixes for libgames-support (#448317).
+
 gnome-games 2.19.3
 ==================
 
