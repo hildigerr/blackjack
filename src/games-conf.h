@@ -50,8 +50,6 @@ void games_conf_shutdown (void);
 
 GamesConf *games_conf_get_default (void);
 
-gboolean games_conf_has_key (const char *group, const char *key);
-
 char *games_conf_get_string (const char *group, const char *key,
                              GError ** error);
 
@@ -70,6 +68,9 @@ void games_conf_set_string_list (const char *group, const char *key,
 int games_conf_get_integer (const char *group, const char *key,
                             GError ** error);
 
+int games_conf_get_integer_with_default (const char *group, const char *key,
+                                         int def_value);
+
 void games_conf_set_integer (const char *group, const char *key, int value);
 
 int *games_conf_get_integer_list (const char *group, const char *key,
@@ -84,7 +85,20 @@ gboolean games_conf_get_boolean (const char *group, const char *key,
 void games_conf_set_boolean (const char *group, const char *key,
                              gboolean value);
 
-void games_conf_add_window (GtkWindow *window);
+double games_conf_get_double (const char *group, const char *key,
+                              GError ** error);
+
+void games_conf_set_double (const char *group, const char *key, double value);
+
+guint games_conf_get_keyval (const char *group, const char *key,
+                             GError ** error);
+
+guint games_conf_get_keyval_with_default (const char *group, const char *key,
+                                          guint default_keyval);
+
+void games_conf_set_keyval (const char *group, const char *key, guint value);
+
+void games_conf_add_window (GtkWindow *window, const char *group);
 
 G_END_DECLS
 

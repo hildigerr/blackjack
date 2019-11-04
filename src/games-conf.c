@@ -21,6 +21,8 @@
 #include <string.h>
 #include <errno.h>
 
+#include <gdk/gdkkeysyms.h>
+
 #ifdef HAVE_GNOME
 #include <gconf/gconf-client.h>
 #include <libgnomeui/gnome-app-helper.h>
@@ -28,7 +30,7 @@
 #include <glib/gkeyfile.h>
 #include <gtk/gtkaccelmap.h>
 
-#define ACCELMAP_EXT ".accels"
+#define ACCELMAP_EXT "accels"
 
 #endif
 
@@ -97,6 +99,7 @@ static const char window_state_key_name[][12] = {
 };
 
 typedef struct {
+  char *group;
   guint timeout_id;
   int width;
   int height;
@@ -107,8 +110,8 @@ typedef struct {
 static gboolean
 window_state_timeout_cb (WindowState *state)
 {
-  games_conf_set_integer (NULL, window_state_key_name[STATE_KEY_WIDTH], state->width);
-  games_conf_set_integer (NULL, window_state_key_name[STATE_KEY_HEIGHT], state->height);
+  games_conf_set_integer (state->group, window_state_key_name[STATE_KEY_WIDTH], state->width);
+  games_conf_set_integer (state->group, window_state_key_name[STATE_KEY_HEIGHT], state->height);
 
   state->timeout_id = 0;
   return FALSE;
@@ -124,6 +127,8 @@ free_window_state (WindowState *state)
     window_state_timeout_cb (state);
   }
 
+  g_free (state->group);
+
   g_slice_free (WindowState, state);
 }
 
@@ -134,7 +139,8 @@ window_configure_event_cb (GtkWidget *widget,
                            GdkEventConfigure *event,
                            WindowState *state)
 {
-  if (!state->is_maximised && !state->is_fullscreen) {
+  if (!state->is_maximised && !state->is_fullscreen &&
+      (state->width != event->width || state->height != event->height)) {
     state->width = event->width;
     state->height = event->height;
 
@@ -157,11 +163,11 @@ window_state_event_cb (GtkWidget *widget,
 {
   if (event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED) {
     state->is_maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
-    games_conf_set_boolean (NULL, window_state_key_name[STATE_KEY_MAXIMISED], state->is_maximised);
+    games_conf_set_boolean (state->group, window_state_key_name[STATE_KEY_MAXIMISED], state->is_maximised);
   }
   if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN) {
     state->is_fullscreen = (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0;
-    games_conf_set_boolean (NULL, window_state_key_name[STATE_KEY_FULLSCREEN], state->is_fullscreen);
+    games_conf_set_boolean (state->group, window_state_key_name[STATE_KEY_FULLSCREEN], state->is_fullscreen);
   }
 
   return FALSE;
@@ -176,11 +182,17 @@ gconf_notify_cb (GConfClient *client,
                  GamesConf *conf)
 {
   GamesConfPrivate *priv = conf->priv;
+  char *key;
   char **path;
 
-  g_assert (g_str_has_prefix (gcentry->key, priv->base_path));
+  if (!g_str_has_prefix (gcentry->key, priv->base_path))
+    return;
 
-  path = g_strsplit (gcentry->key + priv->base_path_len, "/", 2);
+  key = gcentry->key + priv->base_path_len;
+  if (*key != '/')
+    return;
+
+  path = g_strsplit (key + 1, "/", 2);
   if (!path)
     return;
 
@@ -201,6 +213,27 @@ get_gconf_key_name (const char *group, const char *key)
     return g_strdup_printf ("%s/%s", priv->base_path, key);
 
   return g_strdup_printf ("%s/%s/%s", priv->base_path, group, key);
+}
+
+static GConfValueType
+get_gconf_value_type_from_schema (const char *key_name)
+{
+  GamesConfPrivate *priv = instance->priv;
+  GConfSchema *schema;
+  char *schema_key;
+  GConfValueType type = GCONF_VALUE_STRING;
+
+  schema_key = g_strconcat ("/schemas", key_name, NULL);
+  schema = gconf_client_get_schema (priv->gconf_client, schema_key, NULL);
+
+  if (schema) {
+    type = gconf_schema_get_type (schema);
+    gconf_schema_free (schema);
+  }
+
+  g_free (schema_key);
+
+  return type;
 }
 
 #endif /* HAVE_GNOME */
@@ -291,6 +324,8 @@ games_conf_constructor (GType type,
 
 #endif /* HAVE_GNOME */
 
+  g_free (game_name);
+
   return object;
 }
 
@@ -350,7 +385,6 @@ loser:
   g_free (data);
   g_free (conf_file);
   g_free (conf_dir);
-  g_free (game_name);
 
   /* Save the accel map */
 #ifndef HAVE_MAEMO
@@ -374,7 +408,6 @@ loser:
 
   instance = NULL;
 }
-
 
 static void
 games_conf_set_property (GObject *object,
@@ -475,9 +508,6 @@ games_conf_get_default (void)
   return instance;
 }
 
-gboolean
-games_conf_has_key (const char *group, const char *key);
-
 /**
  * games_conf_get_string:
  * @group: the group name, or %NULL to use the default group
@@ -489,8 +519,9 @@ games_conf_has_key (const char *group, const char *key);
  *
  * Returns: a newly allocated string, or %NULL
  */
-char *games_conf_get_string (const char *group, const char *key,
-                             GError ** error)
+char *
+games_conf_get_string (const char *group, const char *key,
+                       GError ** error)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -518,8 +549,9 @@ char *games_conf_get_string (const char *group, const char *key,
  *
  * Returns: a newly allocated string
  */
-char *games_conf_get_string_with_default (const char *group, const char *key,
-                                          const char *def_value)
+char *
+games_conf_get_string_with_default (const char *group, const char *key,
+                                    const char *def_value)
 {
   GError *error = NULL;
   char *value;
@@ -543,8 +575,9 @@ char *games_conf_get_string_with_default (const char *group, const char *key,
  *
  * Associates @value with the key @key in group @group.
  */
-void games_conf_set_string (const char *group, const char *key,
-                            const char *value)
+void
+games_conf_set_string (const char *group, const char *key,
+                       const char *value)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -572,8 +605,9 @@ void games_conf_set_string (const char *group, const char *key,
  *
  * Returns: a newly allocated string array, or %NULL
  */
-char **games_conf_get_string_list (const char *group, const char *key,
-                                   gsize * n_values, GError ** error)
+char **
+games_conf_get_string_list (const char *group, const char *key,
+                            gsize * n_values, GError ** error)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -617,8 +651,9 @@ char **games_conf_get_string_list (const char *group, const char *key,
  *
  * Associates @value with the key @key in group @group.
  */
-void games_conf_set_string_list (const char *group, const char *key,
-                                 const char * const *values, gsize n_values)
+void
+games_conf_set_string_list (const char *group, const char *key,
+                            const char * const *values, gsize n_values)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -656,8 +691,9 @@ void games_conf_set_string_list (const char *group, const char *key,
  *
  * Returns: an integer
  */
-int games_conf_get_integer (const char *group, const char *key,
-                            GError ** error)
+int
+games_conf_get_integer (const char *group, const char *key,
+                        GError ** error)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -676,6 +712,34 @@ int games_conf_get_integer (const char *group, const char *key,
 }
 
 /**
+ * games_conf_get_integer_with_default:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @def_value: the default value
+ *
+ * Returns the integer associated with @key in @group, or @def_value if
+ * @key is not set, or an error occurred
+ *
+ * Returns: an integer
+ */
+int
+games_conf_get_integer_with_default (const char *group, const char *key,
+                                     int def_value)
+{
+  GError *error = NULL;
+  int value;
+
+  value = games_conf_get_integer (group, key, &error);
+  if (error) {
+    g_error_free (error);
+    value = def_value;
+  }
+
+  return def_value;
+}
+
+
+/**
  * games_conf_set_integer:
  * @group: the group name, or %NULL to use the default group
  * @key: the key name
@@ -683,7 +747,8 @@ int games_conf_get_integer (const char *group, const char *key,
  *
  * Associates @value with the key @key in group @group.
  */
-void games_conf_set_integer (const char *group, const char *key, int value)
+void
+games_conf_set_integer (const char *group, const char *key, int value)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -711,8 +776,9 @@ void games_conf_set_integer (const char *group, const char *key, int value)
  *
  * Returns: an integer
  */
-int *games_conf_get_integer_list (const char *group, const char *key,
-                                  gsize * n_values, GError ** error)
+int *
+games_conf_get_integer_list (const char *group, const char *key,
+                             gsize * n_values, GError ** error)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -751,8 +817,9 @@ int *games_conf_get_integer_list (const char *group, const char *key,
  *
  * Associates @value with the key @key in group @group.
  */
-void games_conf_set_integer_list (const char *group, const char *key,
-                                  int *values, gsize n_values)
+void
+games_conf_set_integer_list (const char *group, const char *key,
+                             int *values, gsize n_values)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -790,8 +857,9 @@ void games_conf_set_integer_list (const char *group, const char *key,
  *
  * Returns: a boolean
  */
-gboolean games_conf_get_boolean (const char *group, const char *key,
-                                 GError ** error)
+gboolean
+games_conf_get_boolean (const char *group, const char *key,
+                        GError ** error)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -817,8 +885,9 @@ gboolean games_conf_get_boolean (const char *group, const char *key,
  *
  * Associates @value with the key @key in group @group.
  */
-void games_conf_set_boolean (const char *group, const char *key,
-                             gboolean value)
+void
+games_conf_set_boolean (const char *group, const char *key,
+                        gboolean value)
 {
   GamesConfPrivate *priv = instance->priv;
 
@@ -835,15 +904,209 @@ void games_conf_set_boolean (const char *group, const char *key,
 }
 
 /**
+ * games_conf_get_double:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @error: a location for a #GError
+ *
+ * Returns the integer associated with @key in @group, or 0 if
+ * @key is not set, or an error occurred
+ *
+ * Returns: a double
+ */
+double
+games_conf_get_double (const char *group, const char *key,
+                       GError ** error)
+{
+  GamesConfPrivate *priv = instance->priv;
+
+#ifdef HAVE_GNOME
+  double value;
+  char *key_name;
+
+  key_name = get_gconf_key_name (group, key);
+  value = gconf_client_get_float (priv->gconf_client, key_name, error);
+  g_free (key_name);
+
+  return value;
+#else
+  return g_key_file_get_double (priv->key_file, group ? group : priv->main_group, key, error);
+#endif /* HAVE_GNOME */
+}
+
+/**
+ * games_conf_set_double:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @value: the value to store
+ *
+ * Associates @value with the key @key in group @group.
+ */
+void
+games_conf_set_double (const char *group, const char *key, double value)
+{
+  GamesConfPrivate *priv = instance->priv;
+
+#ifdef HAVE_GNOME
+  char *key_name;
+
+  key_name = get_gconf_key_name (group, key);
+  gconf_client_set_float (priv->gconf_client, key_name, value, NULL);
+  g_free (key_name);
+#else
+  g_key_file_set_double (priv->key_file, group ? group : priv->main_group, key, value);
+  g_signal_emit (instance, signals[VALUE_CHANGED], 0, group, key);
+#endif /* HAVE_GNOME */
+}
+
+/**
+ * games_conf_get_keyval:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @error: a location for a #GError
+ *
+ * Returns the keyboard key associated with @key in @group, or 0 if
+ * @key is not set, or an error occurred
+ *
+ * Returns: a keyboard key value
+ */
+guint
+games_conf_get_keyval (const char *group, const char *key,
+                       GError ** error)
+{
+  GamesConfPrivate *priv = instance->priv;
+
+#ifdef HAVE_GNOME
+  GConfValueType type;
+  char *key_name, *value;
+  guint keyval = GDK_VoidSymbol;
+
+  key_name = get_gconf_key_name (group, key);
+  type = get_gconf_value_type_from_schema (key_name);
+
+  /* The result could be a keycode or a key name. */
+  if (type == GCONF_VALUE_STRING) {
+    value = gconf_client_get_string (priv->gconf_client, key_name, error);
+    if (!value) {
+      keyval = GDK_VoidSymbol;
+    } else {
+      keyval = gdk_keyval_from_name (value);
+      g_free (value);
+    }
+  } else if (type == GCONF_VALUE_INT) {
+    keyval = gconf_client_get_int (priv->gconf_client, key_name, error);
+    if (*error || keyval == 0)
+      keyval = GDK_VoidSymbol;
+  } else {
+    g_warning ("Unknown value type for key %s\n", key_name);
+  }
+
+  g_free (key_name);
+
+  return keyval;
+#else
+  char *value;
+  guint keyval = GDK_VoidSymbol;
+
+  value = g_key_file_get_string (priv->key_file, group, key, error);
+  if (value) {
+    keyval = gdk_keyval_from_name (value);
+    g_free (value);
+  }
+
+  return keyval;
+#endif /* HAVE_GNOME */
+}
+
+/**
+ * games_conf_get_keyval:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @default_keyval: the default value
+ *
+ * Returns the keyboard key associated with @key in @group, or @default_keyval
+ * if @key is not set, or an error occurred
+ *
+ * Returns: a keyboard key value
+ */
+guint
+games_conf_get_keyval_with_default (const char *group, const char *key,
+                                    guint default_keyval)
+{
+  GError *error = NULL;
+  guint value;
+
+  value = games_conf_get_keyval (group, key, &error);
+  if (error) {
+    g_error_free (error);
+    value = default_keyval;
+  }
+  if (value == GDK_VoidSymbol) {
+    value = default_keyval;
+  }
+
+  return value;
+}
+
+/**
+ * games_conf_set_keyval:
+ * @group: the group name, or %NULL to use the default group
+ * @key: the key name
+ * @value: the value to store
+ *
+ * Associates @value with the key @key in group @group.
+ */
+void
+games_conf_set_keyval (const char *group, const char *key, guint value)
+{
+  GamesConfPrivate *priv = instance->priv;
+
+#ifdef HAVE_GNOME
+  GConfValueType type;
+  char *key_name, *name;
+
+  if (value == GDK_VoidSymbol)
+    return;
+
+  key_name = get_gconf_key_name (group, key);
+  type = get_gconf_value_type_from_schema (key_name);
+
+  /* The result could be a keycode or a key name. */
+  if (type == GCONF_VALUE_STRING) {
+    name = gdk_keyval_name (value);
+    gconf_client_set_string (priv->gconf_client, key_name, name, NULL);
+  } else if (type == GCONF_VALUE_INT) {
+    gconf_client_set_int (priv->gconf_client, key_name, (int) value, NULL);
+  } else {
+    g_warning ("Unknown value type for key %s\n", key_name);
+  }
+
+  g_free (key_name);
+#else
+  char *name;
+
+  if (value == GDK_VoidSymbol)
+    return;
+  
+  name = gdk_keyval_name (value);
+  g_key_file_set_string (priv->key_file, group, key, name);
+  g_signal_emit (instance, signals[VALUE_CHANGED], 0, group, key);
+#endif /* HAVE_GNOME */
+}
+
+/**
  * games_conf_add_window:
  * @window: a #GtkWindow
- *
+ * @group: the group to store the state in, or %NULL to use
+ * the default group
+ * 
  * Restore the window configuration, and persist changes to the window configuration:
  * window width and height, and maximised and fullscreen state.
  * @window must not be realised yet.
  */
 void
-games_conf_add_window (GtkWindow *window)
+games_conf_add_window (GtkWindow *window,
+                       const char *group)
 {
   WindowState *state;
   int width, height;
@@ -853,6 +1116,7 @@ games_conf_add_window (GtkWindow *window)
   g_return_if_fail (!GTK_WIDGET_REALIZED (window));
 
   state = g_slice_new0 (WindowState);
+  state->group = g_strdup (group);
   g_object_set_data_full (G_OBJECT (window), "GamesConf::WindowState",
                           state, (GDestroyNotify) free_window_state);
 

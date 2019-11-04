@@ -1,3 +1,18 @@
+2007-07-28  Andreas Røsdal <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.6
+
+2007-07-28  Andreas Røsdal <andrearo@stud.ntnu.no>
+
+	* src/game.cpp: Use g_utf8_strrchr instead of strrchr, which
+	prevents a compilation error on Solaris. Patch from Damien Carbery
+	in bug #444806.
+
+2007-06-29  Christian Persch <chpe@gnome.org>
+
+	* *.c: Include <config.h>.
+	* games-files.c: Fix mem leak.
+
 2007-06-18  Andreas Røsdal  <andreasr@gnome.org>
 
 	* NEWS: gnome-games 2.19.4

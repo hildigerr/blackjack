@@ -85,4 +85,5 @@ Categories=GNOME;GTK;Game;CardGame;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-games
 X-GNOME-Bugzilla-Component=blackjack
+X-GNOME-Bugzilla-Version=2.19.6
 StartupNotify=true

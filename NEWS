@@ -1,3 +1,14 @@
+gnome-games 2.19.6
+==================
+
+This is a new development release of gnome-games in preparation for
+the next stable 2.20.0 version. Most of the development effort has
+focused on bugfixes and cleanups.
+
+General changes:
+  - Port game to the GamesConf API (#449505).
+  - Fix memory leak in libgames-support API.
+
 gnome-games 2.19.4
 ==================
 
