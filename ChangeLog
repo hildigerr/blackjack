@@ -1,3 +1,29 @@
+2006-01-02  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.13.4
+
+2005-12-23  Callum McKenzie  <callum@spooky-possum.org>
+
+	* games-files.c: Start adding standard documentation comments to
+	the files. Functions only for now.
+
+	* games-files.h: Annotate games_file_list_new* with
+	G_GNUC_NULL_TERMINATED.
+
+2005-12-12  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.13.3
+
+2005-12-13  William Jon McCann  <mccann@jhu.edu>
+
+	* src/player.cpp (showCount): Show results of hand even
+	if events are pending.  This can give away the answer
+	too soon but it is better than it getting erased later.
+
+2005-11-13  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.13.2
+
 2005-10-24  Callum McKenzie  <callum@spooky-possum.org>
 
 	* NEWS: 2.13.1
