@@ -1,6 +1,6 @@
 /* 
    Copyright © 2004 Callum McKenzie
-   Copyright © 2007 Christian Persch
+   Copyright © 2007, 2008 Christian Persch
 
    This library is free software; you can redistribute it and'or modify
    it under the terms of the GNU Library General Public License as published 
@@ -475,7 +475,7 @@ games_card_images_set_background_color (GamesCardImages * images,
   g_return_if_fail (GAMES_IS_CARD_IMAGES (images));
   g_return_if_fail (color != NULL);
 
-  if (memcmp (&images->background_colour, color, sizeof (GdkColor)) == 0)
+  if (gdk_color_equal (&images->background_colour, color))
     return;
 
   images->background_colour = *color;
@@ -501,7 +501,7 @@ games_card_images_set_selection_color (GamesCardImages * images,
   g_return_if_fail (GAMES_IS_CARD_IMAGES (images));
   g_return_if_fail (color != NULL);
 
-  if (memcmp (&images->selection_colour, color, sizeof (GdkColor)) == 0)
+  if (gdk_color_equal (&images->selection_colour, color))
     return;
 
   images->selection_colour = *color;

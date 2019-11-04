@@ -1,3 +1,16 @@
+gnome-games 2.21.5
+==================
+Anther rocking release from the gnome-games team.
+Lots of fixes all over the place. Huge thanks goes to
+the translators and documentors for the many fixes there also!
+
+General:
+  - Lots of code cleanups (Christian Persch, Andreas Røsdal)
+
+Documentation:
+  - Improve description of games in documentation (Andreas Freund)
+
+
 gnome-games 2.21.4
 ==================
 

@@ -1,7 +1,19 @@
+2008-01-15  Thomas H.P. Andersen  <phomes@gmail.com>
+
+	* NEWS: gnome-games 2.21.5
+
 2008-01-11  Christian Persch  <chpe@gnome.org>
 
         R games-card-common.h:
-        A games-card.h: Move games-card-common.h to games-card.h..
+        A games-card.h:
+        A games-card.c: Move games-card-common.h to games-card.h,
+        and add some common routines to games-card.c.
+
+2008-01-03  Andreas Røsdal  <andreasr@gnome.org>
+
+	* blackjack/help/C/blackjack.xml:
+	Improve description of games in documentation.
+	Patch by Andreas Freund <drethenerd@gmail.com> in bug #500774.
 
 2007-12-16  Jason D. Clinton  <me@jasonclinton.com>
 

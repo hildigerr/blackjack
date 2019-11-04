@@ -1,6 +1,6 @@
 /*
    Copyright © 2004 Callum McKenzie
-   Copyright © 2007 Christian Persch
+   Copyright © 2007, 2008 Christian Persch
 
    This library is free software; you can redistribute it and'or modify
    it under the terms of the GNU Library General Public License as published 
@@ -20,8 +20,12 @@
 
 /* Common definitions for all card handling routines. */
 
-#ifndef GAMES_CARD_COMMON
-#define GAMES_CARD_COMMON
+#ifndef GAMES_CARD_H
+#define GAMES_CARD_H
+
+#include <glib.h>
+
+G_BEGIN_DECLS
 
 /* A card */
 
@@ -61,4 +65,51 @@ typedef int _games_card_size_assert[sizeof (Card) == sizeof (guint8) ? 1 : -1]; 
 #define GAMES_CARD_THEME_DEFAULT "bonded"
 #endif
 
-#endif /* GAMES_CARD_COMMON */
+typedef enum {
+  /* Cards */
+  GAMES_CARD_JOKER = 0,
+  GAMES_CARD_ACE = 1,
+  GAMES_CARD_TWO = 2,
+  GAMES_CARD_THREE = 3,
+  GAMES_CARD_FOUR = 4,
+  GAMES_CARD_FIVE = 5,
+  GAMES_CARD_SIX = 6,
+  GAMES_CARD_SEVEN = 7,
+  GAMES_CARD_EIGHT = 8,
+  GAMES_CARD_NINE = 9,
+  GAMES_CARD_TEN = 10,
+  GAMES_CARD_JACK = 11,
+  GAMES_CARD_QUEEN = 12,
+  GAMES_CARD_KING = 13,
+  GAMES_CARD_ACE_HIGH = 14,
+
+  /* Suites */
+  GAMES_CARDS_CLUBS = 0,
+  GAMES_CARDS_DIAMONDS = 2,
+  GAMES_CARDS_HEARTS = 1,
+  GAMES_CARDS_SPADES = 3,
+
+  /* Jokers */
+  GAMES_CARD_BLACK_JOKER = 52,
+  GAMES_CARD_RED_JOKER = 53,
+
+  /* Special */
+  GAMES_CARD_BACK = 54,
+  GAMES_CARD_SLOT = 55,
+  GAMES_CARDS_TOTAL = 56,
+} GamesCardIDType;
+
+int games_card_get_node_by_suit_and_rank_snprintf (char *buffer,
+                                                   gsize bufsize,
+                                                   int suit,
+                                                   int rank);
+
+int games_card_get_name_by_id_snprintf (char *buffer,
+                                        gsize bufsize,
+                                        int card_id);
+
+char * games_card_get_name_by_id (int card_id);
+
+G_END_DECLS
+
+#endif /* !GAMES_CARD_H */
