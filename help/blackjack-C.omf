@@ -21,12 +21,12 @@
     to 21 than that of the dealer, without going over 21.
    </description>
      <type>
-     user's guide
+     manual
    </type>
      <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
      <identifier url="blackjack.xml"/>
      <language code="C"/>
-     <relation seriesid="871c9eac-5ff2-11d6-9e71-a18a9688cdd9"/>
+     <relation seriesid="00680528-1387-403e-8a7e-70ea267df275"/>
      <rights type="GNU FDL" license.version="1.1" holder="William Jon McCann"/>
      </resource>
      </omf>

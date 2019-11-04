@@ -1,3 +1,31 @@
+2007-05-15  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.2
+
+2007-04-26  Claude Paroz  <claude@2xlibre.net>
+
+	* C/blackjack.xml: Corrected DocBook syntax to make the document
+	validate.
+	Fixes bug #406816.
+
+2007-04-26  Christian Persch  <chpe@gnome.org>
+
+        Port remaining games help to GNOME Doc Utils. Bug #398471.
+        Make sure the <relation seriesid="..."> in the OMF files is
+        unique.
+
+	R blackjack/help/C/blackjack-C.omf:
+	* blackjack/help/C/blackjack.xml:
+	A blackjack/help/blackjack.omf.in:
+
+2007-04-25  Robert Ancell  <robert.ancell@gmail.com>
+
+	* src/menu.cpp: Remove duplicate logo-icon-name from about dialog (Bug #421931)
+
+2007-04-24  Andreas Røsdal  <andreasr@gnome.org>
+
+	* NEWS: gnome-games 2.19.1
+
 2007-03-20  Andreas Røsdal  <andreasr@gnome.org>
 
 	* NEWS: gnome-games 2.18.0.1

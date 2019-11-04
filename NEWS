@@ -1,3 +1,18 @@
+gnome-games 2.19.2
+==================
+
+This is yet another development release of the 2.19.x development branch,
+containing the following mayor changes:
+ - gnome-games has been fully migrated to gnome-doc-utils. This means
+   that it will be easier for the hard-working translators to translate
+   the documentation. Thanks to everyone who helped with the migration.
+   (Bug #398471).
+
+gnome-games 2.19.1
+==================
+
+This is a bleeding-edge release of gnome-games.
+
 gnome-games 2.18.0.1
 ====================
 
