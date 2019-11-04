@@ -1,3 +1,18 @@
+gnome-games 2.25.2
+==================
+
+Lots of exciting new things in this release.
+
+
+General:
+  - Code cleanups and warnings (Robert Ancell, Christian Persch, Thomas Andersen,
+    Zhang Sen)
+  - Use games-runtime to locate files (Christian Persch)
+
+Blackjack:
+  - window-state-event callback needs to return gboolean, not void.
+    (Christian Persch)
+
 gnome-games 2.25.1
 ==================
 

@@ -1,3 +1,48 @@
+2008-12-01 22:03  thomashpa
+
+	* [r8348] trunk/NEWS: gnome-games 2.25.2
+
+2008-11-10 14:52  chpe
+
+	* [r8307] trunk/blackjack/src/blackjack.cpp: The
+	  window-state-event callback needs to return gboolean, not void.
+	  [2-24-candidate]
+
+2008-11-09 21:53  thomashpa
+
+	* [r8306] trunk/blackjack/src/chips.cpp: Fix another warning.
+	  G_N_ELEMENTS macro uses sizeof which returns unsigned int
+
+2008-11-09 15:11  chpe
+
+	* [r8299] trunk/libgames-support/games-runtime.c,
+	  trunk/libgames-support/games-runtime.h: Add
+	  GAMES_RUNTIME_SCORES_DIRECTORY for use in the scores backend.
+
+2008-11-09 15:10  chpe
+
+	* [r8298] trunk/libgames-support/games-runtime.c,
+	  trunk/libgames-support/games-runtime.h: Remove add
+      GAMES_RUNTIME_GAME_HELP_DIRECTORY for win32/hildon.
+
+2008-11-09 14:12  chpe
+
+	* [r8297] trunk/blackjack/src/blackjack.cpp,
+	  trunk/blackjack/src/card.cpp, trunk/blackjack/src/game.cpp:
+	  Remove unused vars
+
+2008-11-09 14:06  chpe
+
+	* [r8296] trunk/blackjack/src/chips.cpp, trunk/blackjack/src/game.cpp,
+	  trunk/blackjack/src/slot.cpp, trunk/blackjack/src/splash.cpp:
+	  Use games-runtime to locate files.
+
+2008-11-05 00:36  thomashpa
+
+	* [r8259] trunk/libgames-support/games-files.c,
+	  trunk/libgames-support/games-files.h: Change games-files api to
+	  take const char as dirname
+
 2008-11-04 23:00  thomashpa
 
 	* [r8256] trunk/NEWS: quick fixes for NEWS

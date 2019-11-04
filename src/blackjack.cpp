@@ -179,12 +179,13 @@ fullscreen_cb (GtkAction *action)
 }
 
 /* Just in case something else takes us to/from fullscreen. */
-static void 
+static gboolean
 window_state_cb (GtkWidget *widget, GdkEventWindowState *event)
 {
 	if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN)
         	set_fullscreen_actions (event->new_window_state &
 					GDK_WINDOW_STATE_FULLSCREEN);
+	return FALSE;
 }
 
 
@@ -278,7 +279,6 @@ create_main_window (void)
         GtkWidget    *group_box;
         GtkWidget    *label;
         GError       *error       = NULL;
-        gint          width, height;
         char         *label_string;
         GtkActionGroup *actions;
 
@@ -436,8 +436,6 @@ create_main_window (void)
 static void
 main_prog (void)
 {
-        gchar *lcard_style;
-        gchar *label_string;
         guint context_id;
 
         create_main_window ();

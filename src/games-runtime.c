@@ -24,10 +24,6 @@
 #include <windows.h>
 #include <io.h>
 #define HELP_EXT "xhtml"
-/* FIXME On win32 help is created as html with gnome-doc-tool,
- * and put manually in the directory below.
- */
-#define HELPDIR PKGDATADIR "/aisleriot/help"
 #endif /* G_OS_WIN32 */
 
 #include "games-runtime.h"
@@ -49,6 +45,7 @@ static const DerivedDirectory derived_directories[] = {
   { GAMES_RUNTIME_MODULE_DIRECTORY,   "share"              }, /* GAMES_RUNTIME_DATA_DIRECTORY              */
   { GAMES_RUNTIME_DATA_DIRECTORY,     "gnome-games-common" }, /* GAMES_RUNTIME_COMMON_DATA_DIRECTORY       */
   { GAMES_RUNTIME_DATA_DIRECTORY,     "gnome-games"        }, /* GAMES_RUNTIME_PKG_DATA_DIRECTORY          */
+  { GAMES_RUNTIME_DATA_DIRECTORY,     "scores"             }, /* GAMES_RUNTIME_SCORES_DIRECTORY            */
 #endif /* G_OS_WIN32 */
   { GAMES_RUNTIME_DATA_DIRECTORY,         "locale"         }, /* GAMES_RUNTIME_LOCALE_DIRECTORY            */
   { GAMES_RUNTIME_COMMON_DATA_DIRECTORY,  "pixmaps"        }, /* GAMES_RUNTIME_COMMON_PIXMAP_DIRECTORY     */
@@ -61,6 +58,7 @@ static const DerivedDirectory derived_directories[] = {
   { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "games"          }, /* GAMES_RUNTIME_GAME_GAMES_DIRECTORY        */
   { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "pixmaps"        }, /* GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY       */
   { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "themes"         }, /* GAMES_RUNTIME_GAME_THEME_DIRECTORY        */
+  { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "help"           }, /* GAMES_RUNTIME_GAME_HELP_DIRECTORY         */
 };
 
 typedef int _assertion[G_N_ELEMENTS (derived_directories) + GAMES_RUNTIME_FIRST_DERIVED_DIRECTORY == GAMES_RUNTIME_LAST_DIRECTORY ? 1 : -1];
@@ -136,6 +134,10 @@ games_runtime_get_directory (GamesRuntimeDirectory directory)
 
     case GAMES_RUNTIME_PKG_DATA_DIRECTORY:
       path = g_strdup (PKGDATADIR);
+      break;
+
+    case GAMES_RUNTIME_SCORES_DIRECTORY:
+      path = g_strdup (SCORESDIR);
       break;
 
 #else /* G_OS_WIN32 */
