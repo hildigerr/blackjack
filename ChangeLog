@@ -1,3 +1,8 @@
+2008-01-11  Christian Persch  <chpe@gnome.org>
+
+        R games-card-common.h:
+        A games-card.h: Move games-card-common.h to games-card.h..
+
 2007-12-16  Jason D. Clinton  <me@jasonclinton.com>
 
 	* NEWS: gnome-games 2.21.4
