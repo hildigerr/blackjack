@@ -1,3 +1,29 @@
+gnome-games-extra-data 2.14.0
+-----------------------------
+
+I usually start these things off by saying that this release was timed
+to match the gnome-games 2.14.0 release. Unfortunately that would be a
+complete lie. It is horendously late and 2.14.1 has already been
+released. On top of that you don't even need gnome-games 2.14, 2.12
+will do just fine (and probably 2.10 as well, some of it will even
+work with 2.0).
+
+So, here it is, the latest release of the extra themes for
+gnome-games.
+
+First up is Nicu Buculei's "Ornamental" card theme. It is slick,
+cheerful and grogeous. You can find more card themes on his web site
+at:
+
+http://www.nicubunu.ro/cards/
+
+Enjoy!
+
+gnome-games 2.14.0
+==================
+
+This is it! The grand 2.14.0 release of gnome-games!
+
 gnome-games 2.13.8
 ==================
 

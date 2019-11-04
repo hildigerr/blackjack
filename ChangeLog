@@ -1,3 +1,12 @@
+2006-04-22  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.14.0 gnome-games-extra-data
+	* Rename ornamental.README to README.ornamental.
+
+2006-03-13  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.14.0
+
 2006-02-23  Callum McKenzie  <callum@spooky-possum.org>
 
 	* NEWS: 2.13.8
@@ -34,6 +43,11 @@
 	* src/hand.cpp (bj_hand_finish1, bj_count_live_hands): Dealer
 	doesn't draw more cards if outcome of the round has been decided:
 	All player hands are surrendered, bust or blackjack. (#136116)
+
+2006-01-06  Callum McKenzie  <callum@spooky-possum.org>
+
+	* (card_DATA): Added the ornamental Nicu
+	Buculei. It's a nice, modern, set of cards.
 
 2006-01-02  Callum McKenzie  <callum@spooky-possum.org>
 
@@ -101,7 +115,9 @@
 
 2005-08-19  Callum McKenzie  <callum@spooky-possum.org>
 
-	* cards/bellot.svg: Updated to David's latest set.
+	* cards/README.bellot
+	* cards/bellot.svg: Updated to David's latest set. Also
+	added the README from his distribution.
 
 2005-08-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
