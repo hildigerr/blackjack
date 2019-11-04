@@ -1,3 +1,16 @@
+2006-02-23  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.13.8
+
+2006-02-18  Callum McKenzie  <callum@spooky-possum.org>
+
+	* src/splash.cpp: Only set the window icon once and set it from
+	the hard-coded location since the icon purge has fucked us over.
+
+2006-02-13  Callum McKenzie  <callum@spooky-possum.org>
+
+	* NEWS: 2.13.7
+
 2006-01-30  Callum McKenzie  <callum@spooky-possum.org>
 
 	* NEWS: 2.13.6
