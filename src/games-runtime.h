@@ -21,11 +21,15 @@
 
 #include <glib.h>
 
+#ifdef HAVE_HILDON
+#include <libosso.h>
+#endif
+
 G_BEGIN_DECLS
 
 typedef enum {
   /* Base directories */
-#ifdef G_OS_WIN32
+#ifdef ENABLE_BINRELOC
   GAMES_RUNTIME_MODULE_DIRECTORY,
 #endif
 
@@ -53,7 +57,7 @@ typedef enum {
   GAMES_RUNTIME_GAME_HELP_DIRECTORY,
 
   GAMES_RUNTIME_LAST_DIRECTORY,
-#ifdef G_OS_WIN32
+#ifdef ENABLE_BINRELOC
   GAMES_RUNTIME_FIRST_DERIVED_DIRECTORY = GAMES_RUNTIME_DATA_DIRECTORY,
 #else
   GAMES_RUNTIME_FIRST_DERIVED_DIRECTORY = GAMES_RUNTIME_LOCALE_DIRECTORY,
@@ -61,6 +65,15 @@ typedef enum {
 } GamesRuntimeDirectory;
 
 gboolean games_runtime_init (const char *name);
+
+#ifdef HAVE_HILDON
+
+gboolean games_runtime_init_with_osso (const char *name,
+                                       const char *service_name);
+
+osso_context_t* games_runtime_get_osso_context (void);
+
+#endif /* HAVE_HILDON */
 
 void games_runtime_shutdown (void);
 

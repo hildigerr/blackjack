@@ -1,3 +1,23 @@
+commit e7099173c69f16879b340e7ca06b14896e299c1c
+Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
+Date:   Mon Jul 13 23:42:59 2009 +0200
+
+    NEWS update
+
+ NEWS |  161 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 161 insertions(+), 0 deletions(-)
+
+commit eb2c00ed41ce8dcd1c1f07179f3952783792fd6d
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun Jul 12 20:21:13 2009 +0200
+
+    libgames-support: Add a way to specify the relocation root by env var
+
+    When GAMES_RELOC_ROOT is set, use that as the relocation root.
+
+ libgames-support/games-runtime.c |   28 +++++++++++++++++-----------
+ 1 files changed, 17 insertions(+), 11 deletions(-)
+
 commit 1226d195ac54d503032f3668bea9e66e37a8b9fd
 Author: Christian Persch <chpe@gnome.org>
 Date:   Fri Jul 10 23:43:33 2009 +0200
@@ -21,6 +41,50 @@ Date:   Fri Jul 10 23:43:33 2009 +0200
  icons/scalable/gnome-blackjack.svg              | 1144 --------
  217 files changed, 14028 insertions(+), 13967 deletions(-)
 
+commit 736a7a23a910aed26f6247bd1b0c935144cba98a
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 10 01:31:34 2009 +0200
+
+    libgames-support: Use games_show_error here
+
+    Remove this extra code and just use games_show_error().
+
+ libgames-support/games-runtime.c |   21 +++------------------
+ 1 files changed, 3 insertions(+), 18 deletions(-)
+
+commit f5b230ba038f2d5c330114981b3f77cee5e4784d
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 10 01:09:36 2009 +0200
+
+    libgames-support: Fix #ifdef to use HAVE_MAEMO_3
+
+    The bug this works around [https://bugs.maemo.org/show_bug.cgi?id=1449]
+    is fixed since maemo4.
+
+ libgames-support/games-stock.c |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit ceae97c5b56b80bf07e7ff832991973e33496fbd
+Author: Christian Persch <chpe@gnome.org>
+Date:   Wed Jul 8 13:49:06 2009 +0200
+
+    libgames-support: Remove unused include
+
+ libgames-support/games-stock.c |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit 12d20a1914b66ba610bbd00cf3f08ff0f9b436e3
+Author: Christian Persch <chpe@gnome.org>
+Date:   Wed Jul 8 13:45:29 2009 +0200
+
+    libgames-support: gnobots2: Move games-find-file.[ch] to gnobots2
+
+    It's the only game using it, so move it there.
+
+ libgames-support/games-find-file.c |   84 ------------------------------------
+ libgames-support/games-find-file.h |   31 -------------
+ 7 files changed, 122 insertions(+), 119 deletions(-)
+
 commit e60337e57a995fd524268ae5032f51ac0ef5d237
 Author: Christian Persch <chpe@gnome.org>
 Date:   Wed Jul 8 13:32:01 2009 +0200
@@ -36,6 +100,245 @@ Date:   Wed Jul 8 13:32:01 2009 +0200
  libgames-support/games-card-selector.c |  150 --------------------------------
  libgames-support/games-card-selector.h |   60 -------------
  8 files changed, 214 insertions(+), 221 deletions(-)
+
+commit baed1c327530f75518627fbde1a2cc3f660a58d6
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sat Jul 4 23:35:21 2009 +0200
+
+    icons: Add prerendered icons for the "cards-deal" name
+
+    This is necessary in case there's no SVG pixbuf loader available (e.g.
+    on hildon). Bug #584665.
+
+ icons/hicolor_actions_16x16_cards-deal.png |  Bin 0 -> 744 bytes
+ icons/hicolor_actions_22x22_cards-deal.png |  Bin 0 -> 1107 bytes
+ icons/hicolor_actions_24x24_cards-deal.png |  Bin 0 -> 1826 bytes
+ icons/hicolor_actions_32x32_cards-deal.png |  Bin 0 -> 1650 bytes
+ icons/hicolor_actions_48x48_cards-deal.png |  Bin 0 -> 2709 bytes
+ 6 files changed, 5 insertions(+), 0 deletions(-)
+
+commit d08e1c337937a43814fa039ee9b7d9d8045f19e3
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sat Jul 4 00:03:02 2009 +0200
+
+    libgames-support: Build fix for !HAVE_RSVG
+
+    The font options are only needed in the HAVE_RSVG case, so just #ifdef
+    this code out on !HAVE_RSVG.
+
+ libgames-support/games-preimage.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 3d6f984587c5708e28875bd7a6e7bbd8e24ef9c4
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 23:54:31 2009 +0200
+
+    libgames-support: Build fix for gtk 2.8
+
+    gtk_widget_get_action only exists since 2.10.
+
+ libgames-support/games-conf.c  |    9 +++++++++
+ libgames-support/games-stock.c |    2 +-
+ 2 files changed, 10 insertions(+), 1 deletions(-)
+
+commit 671b8abbc552e080c6af503ad88537363ecaa70b
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 23:52:50 2009 +0200
+
+    libgames-support: Build fix for glib < 2.16
+
+ libgames-support/games-runtime.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 7ddf348b505de839b647dc8d71a323faf3bf9ebb
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 23:52:28 2009 +0200
+
+    libgames-support: Include games-show.h
+
+ libgames-support/games-runtime.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit 3f585d3367a995d50fdf563c6de87bb812a1bf0c
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 23:39:40 2009 +0200
+
+    libgames-support: Build with glib < 2.12
+
+    g_key_file_[sg]et_double is only available since 2.12, so make this
+
+ libgames-support/games-conf.c |   15 ++++++++-------
+ 1 files changed, 8 insertions(+), 7 deletions(-)
+
+commit afbe589b545ad82bf99d13522a8c51c69599220d
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 20:26:48 2009 +0200
+
+    libgames-support: Add games_help_display_full variant
+
+    Add a variant of games_help_display that returns a GError on failure.
+
+ libgames-support/games-help.c |   65 ++++++++++++++++++++++++----------------
+ libgames-support/games-help.h |    5 +++
+ libgames-support/games-show.h |    8 ++--
+ 3 files changed, 48 insertions(+), 30 deletions(-)
+
+commit 2ea7f6a3fbfb408bb1ce4086cb7fb3bbb3b7820b
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 20:18:21 2009 +0200
+
+    libgames-support: Add games_show_error()
+
+    Add a helper function that shows a GtkMessageDialog with a GError's
+    message as secondary text, and the passed-in primary text.
+
+ libgames-support/games-help.c |   23 ++-----------------
+ libgames-support/games-show.c |   46 +++++++++++++++++++++++++++++++++++++++++
+ libgames-support/games-show.h |    4 +++
+ 3 files changed, 53 insertions(+), 20 deletions(-)
+
+commit 7f69cd5de56af718d90f51f2867125f2d2e6b924
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 20:06:00 2009 +0200
+
+    libgames-support: Add about dialogue hooks
+
+    Implement about dialogue hooks in games-runtime (for gtk < 2.17).
+
+ libgames-support/games-runtime.c |   69 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 69 insertions(+), 77 deletions(-)
+
+commit ae90363f3418e81311dba7fde9dfa815982dab00
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 19:41:10 2009 +0200
+
+    libgames-support: Use g_uri_escape_string to construct the help URI
+
+    Escape the help section.
+
+ libgames-support/games-help.c |    9 +++++++++
+ 1 files changed, 9 insertions(+), 0 deletions(-)
+
+commit 1325b7597fbf30221fb70c53fb7bfb3754616b20
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 19:36:06 2009 +0200
+
+    libgames-support: Fix a HAVE_HILDON/HAVE_MAEMO mismatch
+
+    aisleriot/sol.c uses HAVE_MAEMO in this case, so do that here too.
+
+ libgames-support/games-show.c |   10 ++++------
+ 1 files changed, 4 insertions(+), 6 deletions(-)
+
+commit 1cc210c26adda6d79470bec45f065a02dfd98723
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 19:27:51 2009 +0200
+
+    libgames-support: Add games_show_uri()
+
+    Implement a helper function to open a URI. On gtk+ >= 2.14, this just
+    uses gtk_show_uri(). Otherwise, on hildon, it uses osso to show the URI
+    in the browser, and otherwise uses xdg-open with a fallback to
+    gnome-open.
+    Supported URI schemes are file:, http[s]:. On the gnome platform, ghelp:
+    is supported as well.
+
+ libgames-support/games-help.c |   78 +--------------------------
+ libgames-support/games-show.c |  115 +++++++++++++++++++++++++++++++++++++++++
+ libgames-support/games-show.h |   35 ++++++++++++
+ 4 files changed, 155 insertions(+), 75 deletions(-)
+
+commit e44de6c69fdc4ea8767425ebaa897f34270e4a7a
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 3 19:16:17 2009 +0200
+
+    libgames-support: [hildon] Add osso initialisation to games runtime
+
+    Add games_runtime_init_with_osso() to initialise the osso context, and
+    games_runtime_get_osso_context() to get the global context.
+    Implement games_help_display() for hildon.
+
+ libgames-support/games-help.c    |    4 +-
+ libgames-support/games-runtime.c |   55 ++++++++++++++++++++++++++++++++++++++
+ libgames-support/games-runtime.h |   13 +++++++++
+ 4 files changed, 75 insertions(+), 2 deletions(-)
+
+commit 0213cc676b094972c8db9374591ab9fcc1a9e1b1
+Author: Christian Persch <chpe@gnome.org>
+Date:   Mon Jun 29 18:15:37 2009 +0200
+
+    libgames-support: Better error message when showing help fails
+
+ libgames-support/games-help.c |    5 ++++-
+ 1 files changed, 4 insertions(+), 1 deletions(-)
+
+commit 6f0eeae57c4b4a5daab8c8ed4ad7468be07bea7d
+Author: Christian Persch <chpe@gnome.org>
+Date:   Mon Jun 29 18:13:40 2009 +0200
+
+    libgames-support: Set help error dialogue title to empty
+
+    Except on Hildon (at least maemo3), where empty dialogue titles show
+    "<unnamed>".
+
+ libgames-support/games-help.c |   27 ++++++++++++++++++---------
+ 1 files changed, 18 insertions(+), 9 deletions(-)
+
+commit 3a04b7094862d15dba17440dcd89e20d687eefeb
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sat Jun 27 21:32:41 2009 +0200
+
+    libgames-support: add binreloc support
+
+    Enable runtime relocation also on non-win32 platform.
+    Code to find the prefix from the executable copied from
+    BinReloc [autopackage.org], here used under LGPL2+.
+
+ libgames-support/games-runtime.c |  225 +++++++++++++++++++++++++++++++++++---
+ libgames-support/games-runtime.h |    4 +-
+ 3 files changed, 246 insertions(+), 17 deletions(-)
+
+commit 46925045d7b3ff8dbfd5da2dc1b7e9e25ba223af
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sat Jun 27 19:15:03 2009 +0200
+
+    libgames-support: Add more help methods
+
+    Generalise the hildon help support to all platforms. We now support the
+    following methods to show help to the user:
+    - ghelp: URIs, loaded in Yelp
+    - pregenerated (by gnome-doc-tool) HTML/XHTML files, loaded in the
+      browser
+    - online help from library.gnome.org
+
+ libgames-support/games-help.c |  168 +++++++++++++++++++++++++++++++++++++----
+ libgames-support/games-help.h |    2 +-
+ 3 files changed, 212 insertions(+), 23 deletions(-)
+
+commit 7bf96663e154ffaf96b5cec58ba58f35522a8b14
+Author: Christian Persch <chpe@gnome.org>
+Date:   Thu Jun 25 19:41:33 2009 +0200
+
+    Fix a few compiler warnings
+
+ libgames-support/games-card-images.c |   10 ++++------
+ libgames-support/games-runtime.c     |    2 +-
+ 5 files changed, 15 insertions(+), 15 deletions(-)
+
+commit c2494d344db4f09ac4396f42b7fcb5d15e4a80f6
+Author: Christian Persch <chpe@gnome.org>
+Date:   Tue Jun 23 12:46:28 2009 +0200
+
+    libgames-support: [win32] Attach to console when run from console
+
+    On Windows, when called from a console, get console output. This works
+    only with Windows XP or higher. Windows 2000 will not have console output
+    but it will just work fine.
+
+    Code copied from gconf (via evince), under LGPL 2+.
+
+ libgames-support/games-runtime.c |   37 ++++++++++++++++++++++++++++++++++---
+ 1 files changed, 34 insertions(+), 3 deletions(-)
 
 commit d52e85935c83f3db869f0073f2e780bda74ccf60
 Author: Jason D. Clinton <me@jasonclinton.com>

@@ -1,5 +1,6 @@
 /*
  *  Copyright © 2008 Thomas H.P. Andersen <phomes@gmail.com>
+ *  Copyright © 2007, 2008, 2009 Christian Persch
  *
  *  This runtime is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU Lesser General Public License as published by
@@ -16,22 +17,23 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#ifndef GAMES_HELP_H
-#define GAMES_HELP_H
+#ifndef GAMES_SHOW_H
+#define GAMES_SHOW_H
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-void games_help_display (GtkWidget *window,
-                         const char *doc_module,
-                         const char *section);
+gboolean games_show_uri (GdkScreen *screen,
+                         const char *uri,
+                         guint32 timestamp,
+                         GError **error);
 
-gboolean games_help_display_full (GtkWidget *window,
-                                  const char *doc_module,
-                                  const char *section,
-                                  GError **error);
+void games_show_error (GtkWidget *window,
+                       GError *error,
+                       const char *primary_text_format,
+                       ...) G_GNUC_PRINTF (3, 4);
 
 G_END_DECLS
 
-#endif /* !GAMES_HELP_H */
+#endif /* !GAMES_SHOW_H */
