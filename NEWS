@@ -1,3 +1,13 @@
+gnome-games 2.13.5
+==================
+
+This is the feature-freeze version of gnome-games for the 2.13/2.14
+release cycle.
+
+Blackjack:
+ - Dealer doesn't draw more cards if the outcome of the round has been
+   decided (rah).
+
 gnome-games 2.13.4
 ==================
 
