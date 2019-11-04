@@ -104,11 +104,17 @@ int games_card_get_node_by_suit_and_rank_snprintf (char *buffer,
                                                    int suit,
                                                    int rank);
 
+int games_card_get_node_by_id_snprintf (char *buffer,
+                                        gsize bufsize,
+                                        int card_id);
+
 int games_card_get_name_by_id_snprintf (char *buffer,
                                         gsize bufsize,
                                         int card_id);
 
 char * games_card_get_name_by_id (int card_id);
+
+const char * games_card_get_localised_rank_symbol (int rank);
 
 G_END_DECLS
 

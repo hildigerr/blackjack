@@ -27,13 +27,20 @@
 #include "games-card.h"
 #include "games-frame.h"
 #include "games-files.h"
+#include "games-card-theme.h"
 
 #include "games-card-selector.h"
 
+enum {
+  COL_INFO,
+  COL_NAME,
+  N_COLUMNS
+};
+
 enum
 {
-	CHANGED,
-	LAST_SIGNAL
+  CHANGED,
+  LAST_SIGNAL
 };
 
 static guint signals[LAST_SIGNAL];
@@ -41,20 +48,73 @@ static guint signals[LAST_SIGNAL];
 G_DEFINE_TYPE (GamesCardSelector, games_card_selector, GAMES_TYPE_FRAME);
 
 static void
-signal_propagator (GtkWidget * widget, GamesCardSelector * selector)
+combo_changed_cb (GtkComboBox *combo,
+                  GamesCardSelector *selector)
 {
-  gchar *name;
+  GtkTreeIter iter;
+  GamesCardThemeInfo *info;
 
-  name = games_file_list_get_nth (selector->files,
-				  gtk_combo_box_get_active (GTK_COMBO_BOX
-							    (selector->
-							     combobox)));
+  if (!gtk_combo_box_get_active_iter (combo, &iter))
+    return;
 
-  g_signal_emit (selector, signals[CHANGED], 0, name);
+  gtk_tree_model_get (GTK_TREE_MODEL (gtk_combo_box_get_model (combo)), &iter,
+                      COL_INFO, &info,
+                      -1);
+  g_assert (info != NULL);
+  
+  g_signal_emit (selector, signals[CHANGED], 0, info);
+  games_card_theme_info_unref (info);
+}
+
+static GtkWidget *
+create_combo_box (GamesCardThemes *theme_manager,
+                  GamesCardThemeInfo *selected_info)
+{
+  GtkListStore *store;
+  GtkTreeIter iter, selection_iter;
+  GtkCellRenderer *renderer;
+  gboolean selection_iter_set = FALSE;
+  GList *themes, *l;
+  GtkWidget *combo;
+
+  store = gtk_list_store_new (N_COLUMNS, GAMES_TYPE_CARD_THEME_INFO, G_TYPE_STRING);
+
+  games_card_themes_request_themes (theme_manager);
+
+  themes = games_card_themes_get_themes (theme_manager);
+
+  for (l = themes; l != NULL; l = l->next) {
+    GamesCardThemeInfo *info = l->data;
+
+    gtk_list_store_insert_with_values (store, &iter, -1,
+                                       COL_INFO, info,
+                                       COL_NAME, games_card_theme_info_get_display_name (info),
+                                       -1);
+    if (games_card_theme_info_equal (info, selected_info)) {
+      selection_iter = iter;
+      selection_iter_set = TRUE;
+    }
+  }
+
+  combo = gtk_combo_box_new_with_model (GTK_TREE_MODEL (store));
+  g_object_unref (store);
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (combo), renderer, TRUE);
+  gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (combo), renderer,
+                                  "text", COL_NAME,
+                                  NULL);
+
+  if (selection_iter_set) {
+    gtk_combo_box_set_active_iter (GTK_COMBO_BOX (combo), &selection_iter);
+  }
+
+  return combo;
 }
 
 GtkWidget *
-games_card_selector_new (gboolean scalable, const gchar * current)
+games_card_selector_new (GamesCardThemes *theme_manager,
+                         GamesCardThemeInfo *selected_info)
 {
   GamesCardSelector *selector;
 
@@ -62,27 +122,13 @@ games_card_selector_new (gboolean scalable, const gchar * current)
 
   games_frame_set_label (GAMES_FRAME (selector), _("Card Style"));
 
-  selector->files = games_file_list_card_themes (scalable);
-
-  selector->combobox = games_file_list_create_widget (selector->files,
-						      current,
-						      GAMES_FILE_LIST_REPLACE_UNDERSCORES);
+  selector->combobox = create_combo_box (theme_manager, selected_info);
+  g_signal_connect (selector->combobox, "changed",
+		    G_CALLBACK (combo_changed_cb), selector);
 
   gtk_container_add (GTK_CONTAINER (selector), selector->combobox);
 
-  g_signal_connect (G_OBJECT (selector->combobox), "changed",
-		    G_CALLBACK (signal_propagator), selector);
-
   return GTK_WIDGET (selector);
-}
-static void
-games_card_selector_finalize (GObject *object)
-{
-  GamesCardSelector *selector = GAMES_CARD_SELECTOR (object);
-
-  g_object_unref (selector->files);
-
-  G_OBJECT_CLASS (games_card_selector_parent_class)->finalize (object);
 }
 
 static void
@@ -91,18 +137,14 @@ games_card_selector_init (GamesCardSelector * selector)
 }
 
 static void
-games_card_selector_class_init (GamesCardSelectorClass * class)
+games_card_selector_class_init (GamesCardSelectorClass *klass)
 {
-  GObjectClass *oclass = G_OBJECT_CLASS (class);
-
-  oclass->finalize = games_card_selector_finalize;
-
   signals[CHANGED] =
     g_signal_new ("changed",
-		  GAMES_TYPE_CARD_SELECTOR,
+		  G_OBJECT_CLASS_TYPE (klass),
 		  G_SIGNAL_RUN_FIRST,
 		  G_STRUCT_OFFSET (GamesCardSelectorClass, changed),
 		  NULL, NULL,
-		  g_cclosure_marshal_VOID__STRING,
-		  G_TYPE_NONE, 1, G_TYPE_STRING);
+		  g_cclosure_marshal_VOID__BOXED,
+		  G_TYPE_NONE, 1, GAMES_TYPE_CARD_THEME_INFO);
 }

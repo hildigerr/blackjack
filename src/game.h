@@ -22,7 +22,7 @@
 
 #include "player.h"
 
-void bj_game_find_rules (gchar * variation);
+void bj_game_find_rules (const gchar * variation);
 
 gchar *bj_game_file_to_name (const gchar *);
 void bj_game_new (const gchar *, guint *);
@@ -54,8 +54,8 @@ protected:
   int numDecks, dealerSpeed;
 };
 
-BJGameRules *bj_game_read_rules (gchar * filename);
-BJGameRules *bj_game_find_and_read_rules (gchar * filename);
+BJGameRules *bj_game_read_rules (const gchar * filename);
+BJGameRules *bj_game_find_and_read_rules (const gchar * filename);
 
 // GAME GLOBALS
 

@@ -1,6 +1,6 @@
 /*
    Copyright © 2004 Callum McKenzie
-   Copyright © 2007 Christian Persch
+   Copyright © 2007, 2008 Christian Persch
 
    This library is free software; you can redistribute it and'or modify
    it under the terms of the GNU Library General Public License as published 
@@ -25,57 +25,16 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
 
-#include "games-find-file.h"
-#include "games-files.h"
-#include "games-preimage.h"
+#include "games-debug.h"
+#include "games-profile.h"
 #include "games-runtime.h"
 
 #include "games-card-theme.h"
-
-struct _GamesCardThemeClass {
-  GObjectClass parent_class;
-};
-
-struct _GamesCardTheme {
-  GObject parent;
-
-  gchar *theme_dir;
-  gchar *theme_name;
-
-  /* Switched on GamesCardTheme.use_scalable */
-  union {
-    struct {
-      GamesPreimage *cards_preimage;
-      GamesPreimage *slot_preimage;
-      GdkPixbuf *source;
-      CardSize subsize;
-    } scalable;
-    struct {
-      char *themesizepath;
-      CardSize *card_sizes;
-      guint n_card_sizes;
-    } prerendered;
-  } theme_data;
-
-  CardSize slot_size;
-  CardSize card_size;
-
-  guint use_scalable : 1;
-  guint theme_loaded : 1;
-  guint size_available : 1;
-
-  guint subrender : 1;
-  guint prescaled : 1;
-
-#if GTK_CHECK_VERSION (2, 10, 0)
-  cairo_font_options_t *font_options;
-#endif
-};
+#include "games-card-theme-private.h"
 
 enum {
   PROP_0,
-  PROP_SCALABLE,
-  PROP_THEME_DIRECTORY
+  PROP_THEME_INFO
 };
 
 enum {
@@ -85,488 +44,46 @@ enum {
 
 static guint signals[LAST_SIGNAL];
 
-#define N_ROWS ((double) 5.0)
-#define N_COLS ((double) 13.0)
-
-#define FLOAT_TO_INT_CEIL(f) ((int) (f + 0.5f))
-#define DELTA (0.0f)
-
-/* #defining this prints out the time it takes to render the theme */
-/* #define INSTRUMENT_LOADING */
-
-#ifdef INSTRUMENT_LOADING
-static long totaltime = 0;
-#endif
-
-static void
-games_card_theme_clear_source_pixbuf (GamesCardTheme * theme)
-{
-#ifdef HAVE_RSVG
-  if (theme->use_scalable) {
-    if (theme->theme_data.scalable.source) {
-      g_object_unref (theme->theme_data.scalable.source);
-    }
-
-    theme->theme_data.scalable.source = NULL;
-  }
-#endif /* HAVE_RSVG */
-
-#ifdef INSTRUMENT_LOADING
-  /* Reset the time */
-  totaltime = 0;
-#endif
-}
-
-static void
-games_card_theme_clear_theme_data (GamesCardTheme * theme)
-{
-#ifdef HAVE_RSVG
-  if (theme->use_scalable) {
-    if (theme->theme_data.scalable.cards_preimage != NULL) {
-      g_object_unref (theme->theme_data.scalable.cards_preimage);
-      theme->theme_data.scalable.cards_preimage = NULL;
-    }
-    if (theme->theme_data.scalable.slot_preimage != NULL) {
-      g_object_unref (theme->theme_data.scalable.slot_preimage);
-      theme->theme_data.scalable.slot_preimage = NULL;
-    }
-
-    theme->theme_data.scalable.subsize.width = -1;
-    theme->theme_data.scalable.subsize.height = -1;
-  } else
-#endif /* HAVE_RSVG */
-  {
-    g_free (theme->theme_data.prerendered.card_sizes);
-    theme->theme_data.prerendered.card_sizes = NULL;
-    theme->theme_data.prerendered.n_card_sizes = 0;
-
-    g_free (theme->theme_data.prerendered.themesizepath);
-    theme->theme_data.prerendered.themesizepath = NULL;
-
-    theme->size_available = FALSE;
-  }
-
-  theme->theme_loaded = FALSE;
-}
-
-#ifdef HAVE_RSVG
-
-static gboolean
-games_card_theme_load_theme_scalable (GamesCardTheme * theme,
-                                      const gchar * theme_name)
-{
-  GamesPreimage *preimage;
-  const char *theme_dir, *slot_dir, *env;
-  gchar *filename, *path;
-
-#ifdef INSTRUMENT_LOADING
-  clock_t t1, t2;
-
-  t1 = clock ();
-#endif
-
-  if (theme->theme_data.scalable.cards_preimage != NULL)
-    return TRUE;
-
-  theme_dir = theme->theme_dir;
-  if (!theme_dir)
-    return FALSE;
-
-  /* First try and load the given file. */
-  filename = g_strdup_printf ("%s.svg", theme_name);
-  path = g_build_filename (theme_dir, filename, NULL);
-  preimage = games_preimage_new_from_file (path, NULL);
-  g_free (path);
-
-  /* Failing that, try and find a similar file (e.g. a suffix change). */
-  if (!preimage) {
-    path = games_find_similar_file (filename, theme_dir);
-    if (path) {
-      preimage = games_preimage_new_from_file (path, NULL);
-      g_free (path);
-    }
-  }
-
-  g_free (filename);
-
-  if (!preimage)
-    goto out;
-
-#if GTK_CHECK_VERSION (2, 10, 0)
-  if (theme->font_options) {
-    games_preimage_set_font_options (preimage, theme->font_options);
-  }
-#endif
-
-  theme->theme_data.scalable.cards_preimage = preimage;
-  theme->prescaled = games_preimage_is_scalable (preimage);
-
-  /* If we don't have a scalable format, build a scaled pixbuf that we'll cut up later */
-  if (!theme->prescaled) {
-    theme->theme_data.scalable.source =
-      games_preimage_render_unscaled_pixbuf (theme->theme_data.scalable.
-                                             cards_preimage);
-  }
-
-  /* And the slot image */
-  /* FIXMEchpe: use uninstalled data dir for rendering the card theme! */
-  slot_dir = games_runtime_get_directory (GAMES_RUNTIME_PIXMAP_DIRECTORY);
-  path = g_build_filename (slot_dir, "slot.svg", NULL);
-  theme->theme_data.scalable.slot_preimage = games_preimage_new_from_file (path, NULL);
-  g_free (path);
-  g_return_val_if_fail (theme->theme_data.scalable.slot_preimage != NULL, FALSE);
-
-#if GTK_CHECK_VERSION (2, 10, 0)
-  if (theme->font_options) {
-    games_preimage_set_font_options (theme->theme_data.scalable.slot_preimage,
-                                     theme->font_options);
-  }
-#endif
-
-  /* Use subrendering by default, but allow to override with the env var */
-  theme->subrender = TRUE;
-
-  env = g_getenv ("GAMES_CARDS_SUBRENDERING");
-  if (env != NULL) {
-    theme->subrender = g_ascii_strtoull (env, NULL, 0) != 0;
-  }
-#ifdef GNOME_ENABLE_DEBUG
-  if (theme->subrender)
-    g_print ("Using subrendering for theme \"%s\"\n", theme_name);
-  else
-    g_print ("Not using subrendering for theme \"%s\"\n", theme_name);
-#endif
-
-out:
-
-#ifdef INSTRUMENT_LOADING
-  t2 = clock ();
-  totaltime += (t2 - t1);
-  g_print ("took %.3fs to create preimage (cumulative %.3fs)\n",
-           (t2 - t1) * 1.0 / CLOCKS_PER_SEC,
-           totaltime * 1.0 / CLOCKS_PER_SEC);
-#endif
-
-  if (theme->theme_data.scalable.cards_preimage == NULL) {
-    games_card_theme_clear_theme_data (theme);
-  }
-
-  return theme->theme_data.scalable.cards_preimage != NULL;
-}
-
-#endif /* HAVE_RSVG */
-
-static gboolean
-games_card_theme_load_theme_prerendered (GamesCardTheme * theme,
-                                         const gchar * theme_name)
-{
-  GKeyFile *key_file;
-  const char *theme_dir;
-  char *filename, *path;
-  GError *error = NULL;
-  int *sizes = NULL;
-  gsize n_sizes, i;
-  gboolean retval = FALSE;
-
-  theme_dir = games_runtime_get_directory (GAMES_RUNTIME_PRERENDERED_CARDS_DIRECTORY);
-  filename = g_strdup_printf ("%s.card-theme", theme_name);
-  path = g_build_filename (theme_dir, filename, NULL);
-  g_free (filename);
-
-  key_file = g_key_file_new ();
-  if (!g_key_file_load_from_file (key_file, path, 0, &error)) {
-    g_warning ("Failed to load prerendered card theme from %s: %s\n", path,
-               error->message);
-    g_error_free (error);
-    goto loser;
-  }
-
-  sizes =
-    g_key_file_get_integer_list (key_file, "Card Theme", "Sizes", &n_sizes,
-                                 &error);
-  if (error) {
-    g_warning ("Failed to get card sizes: %s\n", error->message);
-    g_error_free (error);
-    goto loser;
-  }
-
-  if (n_sizes == 0) {
-    g_warning ("Card theme contains no sizes\n");
-    goto loser;
-  }
-
-  theme->theme_data.prerendered.card_sizes = g_new (CardSize, n_sizes);
-  theme->theme_data.prerendered.n_card_sizes = n_sizes;
-
-  for (i = 0; i < n_sizes; ++i) {
-    char group[32];
-    GError *err = NULL;
-    int width, height;
-
-    g_snprintf (group, sizeof (group), "%d", sizes[i]);
-
-    width = g_key_file_get_integer (key_file, group, "Width", &err);
-    if (err) {
-      g_warning ("Error loading width for size %d: %s\n", sizes[i],
-                 err->message);
-      g_error_free (err);
-      goto loser;
-    }
-    height = g_key_file_get_integer (key_file, group, "Height", &err);
-    if (err) {
-      g_warning ("Error loading height for size %d: %s\n", sizes[i],
-                 err->message);
-      g_error_free (err);
-      goto loser;
-    }
-
-    theme->theme_data.prerendered.card_sizes[i].width = width;
-    theme->theme_data.prerendered.card_sizes[i].height = height;
-  }
-
-  retval = TRUE;
-
-loser:
-
-  g_free (sizes);
-
-  g_key_file_free (key_file);
-  g_free (path);
-
-  if (!retval) {
-    games_card_theme_clear_theme_data (theme);
-  }
-
-  return retval;
-}
-
-static gboolean
-games_card_theme_load_theme (GamesCardTheme * theme, const gchar * theme_name)
-{
-  gboolean success;
-
-#ifdef HAVE_RSVG
-  if (theme->use_scalable) {
-    success = games_card_theme_load_theme_scalable (theme, theme_name);
-  } else
-#endif /* HAVE_RSVG */
-  {
-    success = games_card_theme_load_theme_prerendered (theme, theme_name);
-  }
-
-  if (success) {
-    g_free (theme->theme_name);
-    theme->theme_name = g_strdup (theme_name);
-
-    theme->theme_loaded = TRUE;
-  }
-
-  return success;
-}
-
-static gboolean
-games_card_theme_load_theme_with_fallback (GamesCardTheme * theme,
-                                           const gchar * theme_name)
-{
-  if (games_card_theme_load_theme (theme, theme_name))
-    return TRUE;
-
-  g_warning ("Failed to load theme '%s'; trying fallback theme '%s'",
-             theme_name, GAMES_CARD_THEME_DEFAULT);
-
-  if (strcmp (theme_name, GAMES_CARD_THEME_DEFAULT) != 0 &&
-      games_card_theme_load_theme (theme, GAMES_CARD_THEME_DEFAULT))
-    return FALSE;
-
-  g_warning ("Failed to load fallback theme!");
-
-  return FALSE;
-}
-
-#ifdef HAVE_RSVG
-
-static gboolean
-games_card_theme_prerender_scalable (GamesCardTheme * theme)
-{
-#ifdef INSTRUMENT_LOADING
-  clock_t t1, t2;
-
-  t1 = clock ();
-#endif
-
-  g_return_val_if_fail (theme->use_scalable, FALSE);
-  g_return_val_if_fail (theme->theme_data.scalable.cards_preimage != NULL, FALSE);
-  g_return_val_if_fail (theme->prescaled
-                        || theme->theme_data.scalable.source != NULL, FALSE);
-
-  theme->theme_data.scalable.source =
-    games_preimage_render (theme->theme_data.scalable.cards_preimage,
-                           theme->card_size.width * 13,
-                           theme->card_size.height * 5);
-  if (!theme->theme_data.scalable.source)
-    return FALSE;
-
-  theme->theme_data.scalable.subsize.width =
-    gdk_pixbuf_get_width (theme->theme_data.scalable.source) / 13;
-  theme->theme_data.scalable.subsize.height =
-    gdk_pixbuf_get_height (theme->theme_data.scalable.source) / 5;
-
-#ifdef INSTRUMENT_LOADING
-  t2 = clock ();
-  g_print ("took %.3fs to prerender\n", (t2 - t1) * 1.0 / CLOCKS_PER_SEC);
-#endif
-
-  return TRUE;
-}
-
-static GdkPixbuf *
-games_card_theme_render_card (GamesCardTheme * theme, int card_id)
-{
-  GamesPreimage *preimage = theme->theme_data.scalable.cards_preimage;
-  GdkPixbuf *subpixbuf, *card_pixbuf;
-  int suit, rank;
-
-  if (!theme->theme_loaded)
-    return NULL;
-
-  g_return_val_if_fail (theme->use_scalable, NULL);
-
-  suit = card_id / 13;
-  rank = card_id % 13;
-
-  if (G_UNLIKELY (card_id == GAMES_CARD_SLOT)) {
-    subpixbuf = games_preimage_render (theme->theme_data.scalable.slot_preimage,
-                                       theme->card_size.width,
-                                       theme->card_size.height);
-
-    return subpixbuf;
-  }
-
-  if (theme->subrender) {
-    double card_width, card_height;
-    double width, height;
-    double offsetx, offsety;
-    double zoomx, zoomy;
-    char node[64];
-
-    card_width = ((double) games_preimage_get_width (preimage)) / N_COLS;
-    card_height = ((double) games_preimage_get_height (preimage)) / N_ROWS;
-
-    width = theme->card_size.width - 2 * DELTA;
-    height = theme->card_size.height - 2 * DELTA;
-
-    offsetx = -((double) rank) * card_width + DELTA;
-    offsety = -((double) suit) * card_height + DELTA;
-
-    zoomx = width / card_width;
-    zoomy = height / card_height;
-
-    games_card_get_node_by_suit_and_rank_snprintf (node, sizeof (node), suit, rank);
-
-    subpixbuf = games_preimage_render_sub (preimage,
-                                           node,
-                                           theme->card_size.width, theme->card_size.height,
-                                           offsetx, offsety,
-                                           zoomx, zoomy);
-
-    return subpixbuf;
-  }
-
-  /* Not using subrendering */
-  if (!theme->theme_data.scalable.source &&
-      !games_card_theme_prerender_scalable (theme))
-    return NULL;
-
-  subpixbuf = gdk_pixbuf_new_subpixbuf (theme->theme_data.scalable.source,
-                                        rank *
-                                        theme->theme_data.scalable.subsize.width,
-                                        suit *
-                                        theme->theme_data.scalable.subsize.height,
-                                        theme->theme_data.scalable.subsize.width,
-                                        theme->theme_data.scalable.subsize.height);
-  if (theme->prescaled) {
-    card_pixbuf = subpixbuf;
-  } else {
-    card_pixbuf = gdk_pixbuf_scale_simple (subpixbuf,
-                                           theme->card_size.width,
-                                           theme->card_size.height,
-                                           GDK_INTERP_BILINEAR);
-    g_object_unref (subpixbuf);
-  }
-
-  return card_pixbuf;
-}
-
-#endif /* HAVE_RSVG */
-
-static GdkPixbuf *
-games_card_theme_load_card (GamesCardTheme * theme, int card_id)
-{
-  GdkPixbuf *pixbuf;
-  GError *error = NULL;
-  char name[64], filename[64];
-  char *path;
-
-  if (!theme->theme_loaded || !theme->size_available)
-    return NULL;
-
-  g_return_val_if_fail (!theme->use_scalable, NULL);
-
-  games_card_get_name_by_id_snprintf (name, sizeof (name), card_id);
-  g_snprintf (filename, sizeof (filename), "%s.png", name);
-  path = g_build_filename (theme->theme_data.prerendered.themesizepath, filename, NULL);
-
-  pixbuf = gdk_pixbuf_new_from_file (path, &error);
-  if (!pixbuf) {
-    g_warning ("Failed to load card image %s: %s\n", filename,
-               error->message);
-    g_error_free (error);
-    return NULL;
-  }
-  g_free (path);
-
-  return pixbuf;
-}
-
 /* Class implementation */
 
-G_DEFINE_TYPE (GamesCardTheme, games_card_theme, G_TYPE_OBJECT);
+G_DEFINE_ABSTRACT_TYPE (GamesCardTheme, games_card_theme, G_TYPE_OBJECT);
 
 static void
-games_card_theme_finalize (GObject * object)
+games_card_theme_init (GamesCardTheme * theme)
+{
+}
+
+static GObject *
+games_card_theme_constructor (GType type,
+                              guint n_construct_properties,
+                              GObjectConstructParam *construct_params)
+{
+  GObject *object;
+  GamesCardTheme *theme;
+
+  object = G_OBJECT_CLASS (games_card_theme_parent_class)->constructor
+             (type, n_construct_properties, construct_params);
+
+  theme = GAMES_CARD_THEME (object);
+
+  g_assert (theme->theme_info != NULL);
+
+  /* NOTE! We have to do this here, since it returns the wrong class
+   * (GamesCardThemeClass) when called in games_card_theme_init() !
+   */
+  theme->klass = GAMES_CARD_THEME_GET_CLASS (theme);
+
+  return object;
+}
+
+static void
+games_card_theme_finalize (GObject *object)
 {
   GamesCardTheme *theme = GAMES_CARD_THEME (object);
 
-  games_card_theme_clear_source_pixbuf (theme);
-
-  games_card_theme_clear_theme_data (theme);
-
-  g_free (theme->theme_name);
-  g_free (theme->theme_dir);
-
-#if GTK_CHECK_VERSION (2, 10, 0)
-  if (theme->font_options) {
-    cairo_font_options_destroy (theme->font_options);
-  }
-#endif
+  games_card_theme_info_unref (theme->theme_info);
 
   G_OBJECT_CLASS (games_card_theme_parent_class)->finalize (object);
-}
-
-static void
-games_card_theme_init (GamesCardTheme * cardtheme)
-{
-  cardtheme->card_size.width = cardtheme->card_size.height = -1;
-  cardtheme->theme_name = NULL;
-
-  cardtheme->prescaled = FALSE;
-
-#ifdef HAVE_RSVG
-  cardtheme->subrender = FALSE;
-  cardtheme->use_scalable = TRUE;
-#else
-  cardtheme->use_scalable = FALSE;
-#endif /* HAVE_RSVG */
 }
 
 static void
@@ -577,26 +94,18 @@ games_card_theme_set_property (GObject * object,
   GamesCardTheme *theme = GAMES_CARD_THEME (object);
 
   switch (prop_id) {
-  case PROP_SCALABLE: {
-    gboolean use_scalable = (g_value_get_boolean (value) != FALSE);
-
-#ifndef HAVE_RSVG
-    if (use_scalable) {
-      g_warning ("Cannot enable scalable cards since RSVG support is not compiled in\n");
-      use_scalable = FALSE;
-    }
-#endif
-    theme->use_scalable = use_scalable; 
-    break;
+    case PROP_THEME_INFO:
+      theme->theme_info = g_value_dup_boxed (value);
+      break;
   }
-  case PROP_THEME_DIRECTORY:
-    theme->theme_dir = g_value_dup_string (value);
-    if (!theme->theme_dir)
-      theme->theme_dir = g_strdup (games_runtime_get_directory (theme->use_scalable ? GAMES_RUNTIME_SCALABLE_CARDS_DIRECTORY
-                                                                                    : GAMES_RUNTIME_PRERENDERED_CARDS_DIRECTORY));
+}
 
-    break;
-  }
+static GamesCardThemeInfo *
+games_card_theme_class_get_theme_info (GamesCardThemeClass *klass,
+                                       const char *dir,
+                                       const char *filename)
+{
+  return NULL;
 }
 
 static void
@@ -605,7 +114,21 @@ games_card_theme_class_init (GamesCardThemeClass * klass)
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
   gobject_class->set_property = games_card_theme_set_property;
+  gobject_class->constructor = games_card_theme_constructor;
   gobject_class->finalize = games_card_theme_finalize;
+
+  klass->get_theme_info = games_card_theme_class_get_theme_info;
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_THEME_INFO,
+     g_param_spec_boxed ("theme-info", NULL, NULL,
+                         GAMES_TYPE_CARD_THEME_INFO,
+                         G_PARAM_WRITABLE |
+                         G_PARAM_STATIC_NAME |
+                         G_PARAM_STATIC_NICK |
+                         G_PARAM_STATIC_BLURB |
+                         G_PARAM_CONSTRUCT_ONLY));
 
   /**
    * GamesCardTheme:changed:
@@ -624,47 +147,68 @@ games_card_theme_class_init (GamesCardThemeClass * klass)
                    g_cclosure_marshal_VOID__VOID,
                    G_TYPE_NONE,
                    0, NULL);
+}
 
-  g_object_class_install_property
-    (gobject_class,
-     PROP_SCALABLE,
-     g_param_spec_boolean ("scalable", NULL, NULL,
-                           FALSE,
-                           G_PARAM_WRITABLE |
-                           G_PARAM_STATIC_NAME |
-                           G_PARAM_STATIC_NICK |
-                           G_PARAM_STATIC_BLURB |
-                           G_PARAM_CONSTRUCT_ONLY));
-  g_object_class_install_property
-    (gobject_class,
-     PROP_THEME_DIRECTORY,
-     g_param_spec_string ("theme-directory", NULL, NULL,
-                          NULL,
-                          G_PARAM_WRITABLE |
-                          G_PARAM_STATIC_NAME |
-                          G_PARAM_STATIC_NICK |
-                          G_PARAM_STATIC_BLURB |
-                          G_PARAM_CONSTRUCT_ONLY));
+/* private API */
+
+void
+_games_card_theme_emit_changed (GamesCardTheme *theme)
+{
+  g_signal_emit (theme, signals[CHANGED], 0);
+}
+
+GamesCardThemeInfo *
+_games_card_theme_class_get_theme_info (GamesCardThemeClass *klass,
+                                        const char *dir,
+                                        const char *filename)
+{
+  return klass->get_theme_info (klass, dir, filename);
+}
+
+gboolean
+_games_card_theme_class_foreach_theme_dir (GamesCardThemeClass *klass,
+                                           GamesCardThemeForeachFunc callback,
+                                           gpointer data)
+{
+  return klass->foreach_theme_dir (klass, callback, data);
+}
+
+gboolean
+_games_card_theme_class_foreach_env (GamesCardThemeClass *klass,
+                                     const char *env,
+                                     GamesCardThemeForeachFunc callback,
+                                     gpointer data)
+{
+  const char *value;
+  char **paths;
+  guint i;
+  gboolean retval = TRUE;
+
+  value = g_getenv (env);
+  if (!value || !value[0])
+    return TRUE;
+
+  paths = g_strsplit (value, ":", -1);
+  if (!paths)
+    return TRUE;
+
+  for (i = 0; paths[i]; ++i) {
+    const char *path = paths[i];
+
+    if (!paths[0])
+      continue;
+
+    retval = callback (klass, path, data);
+    if (!retval)
+      break;
+  }
+
+  g_strfreev (paths);
+
+  return retval;
 }
 
 /* public API */
-
-/**
- * games_card_theme_new:
- * @theme_dir: the directory to load the theme data from, or %NULL to use
- * the default directory
- * @scalable: whether to use scalable themes, or prerendered themes
- *
- * Returns: a new #GamesCardTheme
- */
-GamesCardTheme *
-games_card_theme_new (const char *theme_dir, gboolean scalable)
-{
-  return g_object_new (GAMES_TYPE_CARD_THEME,
-                       "scalable", scalable,
-                       "theme-directory", theme_dir,
-                       NULL);
-}
 
 #if GTK_CHECK_VERSION (2, 10, 0)
 
@@ -676,78 +220,32 @@ games_card_theme_new (const char *theme_dir, gboolean scalable)
  * Sets the font options to use when drawing the card images.
  */
 void
-games_card_theme_set_font_options (GamesCardTheme * theme,
+games_card_theme_set_font_options (GamesCardTheme *theme,
                                    const cairo_font_options_t *font_options)
 {
   g_return_if_fail (GAMES_IS_CARD_THEME (theme));
 
-  if (font_options &&
-      theme->font_options &&
-      cairo_font_options_equal (font_options, theme->font_options))
+  if (!theme->klass->set_font_options)
     return;
 
-  if (theme->font_options) {
-    cairo_font_options_destroy (theme->font_options);
-  }
-
-  if (font_options) {
-    theme->font_options = cairo_font_options_copy (font_options);
-  } else {
-    theme->font_options = NULL;
-  }
-
-  games_card_theme_clear_source_pixbuf (theme);
-  g_signal_emit (theme, signals[CHANGED], 0);
+  theme->klass->set_font_options (theme, font_options);
 }
 
 #endif /* GTK 2.10.0 */
 
-/**
- * games_card_theme_set_theme:
- * @theme:
- * @theme_name: the name of the theme to load
- *
- * Loads the card theme @theme_name. If the card theme cannot be loaded,
- * it falls back to the default card theme, if present.
- * After changing the theme, the card size will be undefined; you need
- * to call games_card_theme_set_size() to set it before getting a
- * card from @theme again.
- * 
- * Returns: %TRUE iff loading the new card theme succeeded
- */
-gboolean
-games_card_theme_set_theme (GamesCardTheme * theme, const gchar * theme_name)
-{
-  g_return_val_if_fail (GAMES_IS_CARD_THEME (theme), FALSE);
-  g_return_val_if_fail (theme_name != NULL && theme_name[0] != '\0', FALSE);
-
-  if (theme->theme_name != NULL
-      && strcmp (theme_name, theme->theme_name) == 0)
-    return TRUE;
-
-  games_card_theme_clear_source_pixbuf (theme);
-  games_card_theme_clear_theme_data (theme);
-  g_signal_emit (theme, signals[CHANGED], 0);
-
-  theme->card_size.width = theme->card_size.height = theme->slot_size.width =
-    theme->slot_size.width = -1;
-
-  return games_card_theme_load_theme_with_fallback (theme, theme_name);
-}
 
 /**
- * games_card_theme_get_theme:
+ * games_card_theme_get_theme_info:
  * @theme:
  *
- * Returns: the name of the currently loaded card theme, or %NULL if no theme
- * is loaded
+ * Returns: the #GamesCardThemeInfo corresponding to @theme.
  */
-const gchar *
-games_card_theme_get_theme (GamesCardTheme * theme)
+GamesCardThemeInfo *
+games_card_theme_get_theme_info (GamesCardTheme *theme)
 {
   g_return_val_if_fail (GAMES_IS_CARD_THEME (theme), NULL);
 
-  return theme->theme_name;
+  return theme->theme_info;
 }
 
 /**
@@ -766,105 +264,14 @@ games_card_theme_get_theme (GamesCardTheme * theme)
  * Returns: %TRUE iff the card size was changed
  */
 gboolean
-games_card_theme_set_size (GamesCardTheme * theme,
-                           gint width, gint height, gdouble proportion)
+games_card_theme_set_size (GamesCardTheme *theme,
+                           int width,
+                           int height,
+                           double proportion)
 {
-  if (!theme->theme_loaded) {
-    g_warning ("Theme not loaded yet; cannot set size!");
-    return FALSE;
-  }
+  g_return_val_if_fail (GAMES_IS_CARD_THEME (theme), FALSE);
 
-  if ((width == theme->slot_size.width) &&
-      (height == theme->slot_size.height))
-    return FALSE;
-
-  theme->slot_size.width = width;
-  theme->slot_size.height = height;
-
-#ifdef HAVE_RSVG
-  if (theme->use_scalable) {
-    double aspect_ratio, twidth, theight;
-
-    /* Now calculate the card size: find the maximum size that fits
-     * into the given area, preserving the card's aspect ratio.
-     */
-    aspect_ratio = games_card_theme_get_aspect (theme);
-
-    twidth = proportion * width;
-    theight = proportion * height;
-    if (twidth / theight < aspect_ratio) {
-      theight = twidth / aspect_ratio;
-    } else {
-      twidth = theight * aspect_ratio;
-    }
-
-    if (theme->card_size.width == (int) twidth
-        && theme->card_size.height == (int) theight)
-      return FALSE;
-
-    theme->card_size.width = twidth;
-    theme->card_size.height = theight;
-
-  } else
-#endif /* HAVE_RSVG */
-  {
-    guint i;
-    int twidth, theight;
-    CardSize size = { -1, -1 }, fit_size = { -1, -1};
-
-    twidth = FLOAT_TO_INT_CEIL (((double) width) * proportion);
-    theight = FLOAT_TO_INT_CEIL (((double) height) * proportion);
-
-    /* Find the closest prerendered size */
-    for (i = 0; i < theme->theme_data.prerendered.n_card_sizes; ++i) {
-      CardSize info = theme->theme_data.prerendered.card_sizes[i];
-
-      if (info.width > width || info.height > height)
-        continue;
-
-      if (info.width > fit_size.width && info.height > fit_size.height)
-        fit_size = info;
-
-      /* FIXMEchpe */
-      if (info.width <= twidth && info.height <= theight &&
-          info.width > size.width && info.height > size.height)
-        size = info;
-    }
-
-    if (size.width < 0 || size.height < 0)
-      size = fit_size;
-
-    if (size.width > 0 && size.height > 0) {
-      char sizestr[16];
-
-      if (size.width == theme->card_size.width &&
-          size.height == theme->card_size.height)
-        return FALSE;
-
-      g_free (theme->theme_data.prerendered.themesizepath);
-
-      g_snprintf (sizestr, sizeof (sizestr), "%d", size.width);
-      theme->theme_data.prerendered.themesizepath =
-        g_build_filename (theme->theme_dir, theme->theme_name, sizestr, NULL);
-
-      theme->size_available = TRUE;
-      theme->card_size = size;
-    } else {
-      g_warning ("No prerendered size available for %d:%d\n", width, height);
-      theme->size_available = FALSE;
-
-      /* FIXMEchpe: at least use the smallest available size here, or
-       * programme will surely crash when trying to render NULL pixbufs
-       * later on!
-       */
-      return FALSE;
-    }
-  }
-
-  games_card_theme_clear_source_pixbuf (theme);
-  g_signal_emit (theme, signals[CHANGED], 0);
-
-  return TRUE;
+  return theme->klass->set_card_size (theme, width, height, proportion);
 }
 
 /**
@@ -874,9 +281,9 @@ games_card_theme_set_size (GamesCardTheme * theme,
  * Returns: the currently selected card size
  */
 CardSize
-games_card_theme_get_size (GamesCardTheme * theme)
+games_card_theme_get_size (GamesCardTheme *theme)
 {
-  return theme->card_size;
+  return theme->klass->get_card_size (theme);
 }
 
 /**
@@ -888,25 +295,9 @@ games_card_theme_get_size (GamesCardTheme * theme)
 double
 games_card_theme_get_aspect (GamesCardTheme * theme)
 {
-  double aspect;
-
   g_return_val_if_fail (GAMES_IS_CARD_THEME (theme), 1.0);
 
-#ifdef HAVE_RSVG
-  if (theme->use_scalable) {
-    aspect =
-      (((double) games_preimage_get_width (theme->theme_data.scalable.cards_preimage))
-       * N_ROWS) /
-      (((double) games_preimage_get_height (theme->theme_data.scalable.cards_preimage))
-       * N_COLS);
-  } else
-#endif
-  {
-    aspect =
-      ((double) theme->card_size.width) / ((double) theme->card_size.height);
-  }
-
-  return aspect;
+  return theme->klass->get_card_aspect (theme);
 }
 
 /**
@@ -920,35 +311,249 @@ games_card_theme_get_aspect (GamesCardTheme * theme)
  * Returns: a new #GdkPixbuf, or %NULL if there was an error
  */
 GdkPixbuf *
-games_card_theme_get_card_pixbuf (GamesCardTheme * theme, gint card_id)
+games_card_theme_get_card_pixbuf (GamesCardTheme *theme,
+                                  int card_id)
 {
   GdkPixbuf *pixbuf;
 
-  g_return_val_if_fail ((card_id >= 0)
-                        && (card_id < GAMES_CARDS_TOTAL), NULL);
+  g_return_val_if_fail ((card_id >= 0) && (card_id < GAMES_CARDS_TOTAL), NULL);
 
-#ifdef INSTRUMENT_LOADING
-  clock_t t1, t2;
+  _games_profile_start ("loading card %d from theme %s", card_id, theme->theme_info->display_name);
 
-  t1 = clock ();
-#endif
+  pixbuf = theme->klass->get_card_pixbuf (theme, card_id);
 
-#ifdef HAVE_RSVG
-  if (theme->use_scalable) {
-    pixbuf = games_card_theme_render_card (theme, card_id);
-  } else
-#endif /* HAVE_RSVG */
-  {
-    pixbuf = games_card_theme_load_card (theme, card_id);
-  }
-
-#ifdef INSTRUMENT_LOADING
-  t2 = clock ();
-  totaltime += (t2 - t1);
-  g_print ("took %.3fs to render card %d (cumulative: %.3fs)\n",
-           (t2 - t1) * 1.0 / CLOCKS_PER_SEC, card_id,
-           totaltime * 1.0 / CLOCKS_PER_SEC);
-#endif
+  _games_profile_end ("loading card %d from theme %s", card_id, theme->theme_info->display_name);
 
   return pixbuf;
+}
+
+/* GamesCardThemeInfo impl */
+
+static int
+theme_type_compare (GType a,
+                    GType b)
+{
+  const GType types[] = {
+  /* List of supported theme types, in order of decreasing precedence */
+#ifdef HAVE_RSVG
+#ifdef ENABLE_CARD_THEME_FORMAT_SVG
+  GAMES_TYPE_CARD_THEME_SVG,
+#endif
+#ifdef ENABLE_CARD_THEME_FORMAT_KDE
+  GAMES_TYPE_CARD_THEME_KDE,
+#endif
+#endif /* HAVE_RSVG */
+#ifndef HAVE_HILDON
+#ifdef ENABLE_CARD_THEME_FORMAT_SLICED
+  GAMES_TYPE_CARD_THEME_SLICED,
+#endif
+#ifdef ENABLE_CARD_THEME_FORMAT_PYSOL
+  GAMES_TYPE_CARD_THEME_PYSOL,
+#endif
+#endif /* !HAVE_HILDON */
+#ifdef ENABLE_CARD_THEME_FORMAT_FIXED
+  GAMES_TYPE_CARD_THEME_FIXED
+#endif
+  };
+  guint ia, ib;
+
+  for (ia = 0; ia < G_N_ELEMENTS (types); ++ia)
+    if (types[ia] == a)
+      break;
+  for (ib = 0; ib < G_N_ELEMENTS (types); ++ib)
+    if (types[ib] == b)
+      break;
+
+  return ia - ib;
+}
+
+/* private API */
+
+/**
+ * _games_card_theme_info_new:
+ * @type:
+ * @path:
+ * @filename:
+ * @diplay_name:
+ * @pref_name:
+ * @data:
+ * @destroy_notify:
+ *
+ * Returns: a new #GamesCardThemeInfo with refcount 1
+ */
+GamesCardThemeInfo *
+_games_card_theme_info_new (GType type,
+                            const char *path,
+                            const char *filename,
+                            char *display_name /* adopts */,
+                            char *pref_name /* adopts */,
+                            gpointer data /* adoptes */,
+                            GDestroyNotify destroy_notify)
+{
+  GamesCardThemeInfo *info;
+
+#if GLIB_CHECK_VERSION (2, 10, 0)
+  info = g_slice_new (GamesCardThemeInfo);
+#else
+  info = g_new (GamesCardThemeInfo, 1);
+#endif
+
+  info->ref_count = 1;
+  info->type = type;
+  info->path = g_strdup (path);
+  info->filename = g_strdup (filename);
+  info->display_name = display_name;
+  info->pref_name = pref_name;
+  info->data = data;
+  info->destroy_notify = destroy_notify;
+
+  _games_debug_print (GAMES_DEBUG_CARD_THEME,
+                      "Created GamesCardThemeInfo for type=%s path=%s filename=%s display-name=%s\n",
+                      g_type_name (type), path, filename, display_name);
+
+  return info;
+}
+
+guint
+_games_card_theme_info_hash (const GamesCardThemeInfo *a)
+{
+  return g_int_hash (&a->type) ^
+         g_str_hash (a->path) ^
+         g_str_hash (a->filename);
+}
+
+/**
+ * _games_card_theme_info_collate:
+ * @a:
+ * @b:
+ *
+ * Compares @a and @b.
+ *
+ * Returns: %-1 if @a comes before @b, %1 if @b comes before @a, or
+ * %0 if @a and @b are equal.
+ */
+int
+_games_card_theme_info_collate (const GamesCardThemeInfo *a,
+                                const GamesCardThemeInfo *b)
+{
+  g_return_val_if_fail (a != NULL && b != NULL, 0);
+
+  if (a->type != b->type)
+    return theme_type_compare (a->type, b->type);
+
+  return g_utf8_collate (a->display_name, b->display_name);
+}
+
+/* public API */
+
+#if defined(G_DEFINE_BOXED_TYPE)
+G_DEFINE_BOXED_TYPE (GamesCardThemeInfo, games_card_theme_info,
+                     games_card_theme_info_ref,
+                     games_card_theme_info_unref);
+#else
+GType
+games_card_theme_info_get_type (void)
+{
+  static GType type = 0;
+
+  if (G_UNLIKELY (type == 0)) {
+    type = g_boxed_type_register_static ("GamesCardThemeInfo",
+                                         (GBoxedCopyFunc) games_card_theme_info_ref,
+                                         (GBoxedFreeFunc) games_card_theme_info_unref);
+  }
+
+  return type;
+}
+#endif /* defined(G_DEFINE_BOXED_TYPE) */
+
+/**
+ * games_card_theme_info_ref:
+ * @info:
+ *
+ * Refs @info.
+ *
+ * Returns: @info
+ */
+GamesCardThemeInfo *
+games_card_theme_info_ref (GamesCardThemeInfo *info)
+{
+  g_return_val_if_fail (info != NULL, NULL);
+
+  info->ref_count++;
+  return info;
+}
+
+/**
+ * games_card_theme_info_unref:
+ * @info:
+ *
+ * Unrefs @info. If the refcount reaches %0, @info is freed.
+ */
+void
+games_card_theme_info_unref (GamesCardThemeInfo *info)
+{
+  g_return_if_fail (info != NULL);
+
+  if (--info->ref_count > 0)
+    return;
+
+  g_free (info->path);
+  g_free (info->filename);
+  g_free (info->display_name);
+  g_free (info->pref_name);
+
+  if (info->data && info->destroy_notify)
+    info->destroy_notify (info->data);
+
+#if GLIB_CHECK_VERSION (2, 10, 0)
+  g_slice_free (GamesCardThemeInfo, info);
+#else
+  g_free (info);
+#endif
+}
+
+/**
+ * games_card_theme_info_get_display_name :
+ * @info:
+ *
+ * Returns: the user readable name of @info
+ */
+const char *
+games_card_theme_info_get_display_name (GamesCardThemeInfo *info)
+{
+  g_return_val_if_fail (info != NULL, NULL);
+
+  return info->display_name;
+}
+
+/**
+ * games_card_theme_info_get_persistent_name :
+ * @info:
+ *
+ * Returns: the user readable name of @info
+ */
+const char *
+games_card_theme_info_get_persistent_name (GamesCardThemeInfo *info)
+{
+  g_return_val_if_fail (info != NULL, NULL);
+
+  g_return_val_if_fail (info->pref_name, NULL);
+
+  return info->pref_name;
+}
+
+/**
+ * games_card_theme_info_equal:
+ *
+ * Returns: %TRUE iff @a and @b refer to the same card theme
+ */
+gboolean
+games_card_theme_info_equal (const GamesCardThemeInfo *a,
+                              const GamesCardThemeInfo *b)
+{
+  g_return_val_if_fail (a != NULL && b != NULL, FALSE);
+
+  return a->type == b->type &&
+         strcmp (a->path, b->path) == 0 &&
+         strcmp (a->filename, b->filename) == 0;
 }

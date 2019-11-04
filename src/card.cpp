@@ -27,6 +27,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <libgames-support/games-card-theme.h>
 #include <libgames-support/games-card-images.h>
+#include <libgames-support/games-card-selector.h>
 #include "card.h"
 #include "chips.h"
 #include "draw.h"
@@ -39,6 +40,7 @@ using namespace std;
 
 GdkBitmap *mask;
 
+GamesCardThemes *theme_manager = NULL;
 GamesCardTheme *theme = NULL;
 GamesCardImages *images = NULL;
 
@@ -118,27 +120,32 @@ bj_card_set_size (gint width, gint height)
 {
         CardSize card_size;
 
+        if (!theme_manager) {
+                theme_manager = games_card_themes_new ();
+        }
         if (!theme) {
-                const char *env;
                 char *card_theme;
-                gboolean scalable;
 
-                env = g_getenv ("BLACKJACK_CARDS_SCALABLE");
-                scalable = env == NULL || g_ascii_strtoll (env, NULL, 10) != 0;
+                card_theme = bj_get_card_style ();
+                theme = games_card_themes_get_theme_by_name (theme_manager, card_theme);
+                g_free (card_theme);
 
-                theme = games_card_theme_new (NULL, scalable);
+                if (!theme) {
+                        /* Last-ditch fallback: try getting *any* theme */
+                        theme = games_card_themes_get_theme_any (theme_manager);
+                }
+                if (!theme) {
+                        /* No more options; quit. */
+                        g_warning ("Failed to load any theme !");
+                        exit (1);
+                }
 
-                images = games_card_images_new (theme);
+                images = games_card_images_new ();
+                games_card_images_set_theme (images, theme);
                 g_object_unref (theme);
 
                 games_card_images_set_cache_mode (images, CACHE_PIXMAPS);
                 games_card_images_set_drawable (images, playing_area->window);
-
-                card_theme = bj_get_card_style ();
-                if (!games_card_theme_set_theme (theme, card_theme)) {
-                        g_warning ("Failed to load theme %s!", card_theme);
-                }
-                g_free (card_theme);
         }
 
         games_card_theme_set_size (theme, width, height, 1.0);
@@ -154,9 +161,45 @@ bj_card_set_size (gint width, gint height)
 void
 bj_card_set_theme (gchar *card_theme)
 {
-        games_card_theme_set_theme (theme, card_theme);
+        GamesCardTheme *new_theme;
+
+        g_assert (theme_manager != NULL);
+        g_assert (theme != NULL);
+
+        new_theme = games_card_themes_get_theme_by_name (theme_manager, card_theme);
+        if (!new_theme) {
+                g_warning ("Failed to load theme %s\n", card_theme);
+                return;
+        }
+
+        theme = new_theme;
+        games_card_images_set_theme (images, theme);
+        g_object_unref (theme);
 
         bj_draw_rescale_cards ();
         mask = games_card_images_get_card_mask (images);
         gdk_gc_set_clip_mask (draw_gc, mask);
+}
+
+void
+card_deck_options_changed (GtkWidget *w, GamesCardThemeInfo *info, gpointer data)
+{
+  g_assert (info != NULL);
+
+  bj_set_card_style (games_card_theme_info_get_persistent_name (info));
+}
+
+GtkWidget *
+bj_get_card_theme_selector ()
+{
+  GtkWidget *selector;
+
+  if (!theme_manager || !theme)
+    return NULL;
+
+  selector = games_card_selector_new (theme_manager, games_card_theme_get_theme_info (theme));
+  g_signal_connect (selector, "changed",
+                    G_CALLBACK (card_deck_options_changed), NULL);
+
+  return selector;
 }

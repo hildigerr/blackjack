@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include <libgames-support/games-card-selector.h>
+#include <libgames-support/games-frame.h>
 #include "blackjack.h"
 #include "menu.h"
 #include "dialog.h"
@@ -49,7 +49,8 @@ get_insurance_choice (void)
         gboolean    choice = FALSE;
 
         message = _("Would you like insurance?");
-        secondary_message = _("Insurance is a side wager of 50%% of the original wager"
+        /* xgettext:no-c-format */
+        secondary_message = _("Insurance is a side wager of 50% of the original wager"
                               " that the dealer has a natural 21 (aka blackjack) that is"
                               " offered when the dealer's face up card is an ace. If the"
                               " dealer has a natural 21 then the player is paid double.");
@@ -136,12 +137,6 @@ void
 pref_dialog_response (GtkWidget *w, int response, gpointer data)
 {
         gtk_widget_hide (w);
-}
-
-void
-card_deck_options_changed (GtkWidget *w, gchar *name, gpointer data)
-{
-        bj_set_card_style (name);
 }
 
 void
@@ -383,8 +378,7 @@ show_preferences_dialog (void)
                 g_signal_connect (select, "changed", 
                                   G_CALLBACK (select_rule_cb), (gpointer) pref_dialog);
                 
-                gchar *current_rule;
-                current_rule = bj_get_game_variation ();
+                const gchar *current_rule = bj_get_game_variation ();
                 gint i = 0;
                 BJGameRules *ruleset;
                 for (GList *temptr = bj_game_get_rules_list (); temptr; temptr=temptr->next) {
@@ -408,7 +402,8 @@ show_preferences_dialog (void)
                                                     DEALER_SPEED_STRING, ruleset->getDealerSpeed (),
                                                     FILENAME_STRING, (gchar*)temptr->data, -1);
                                 delete ruleset;
-                                if (! g_ascii_strcasecmp (current_rule, (gchar*)temptr->data)) {
+                                if (current_rule && g_ascii_strcasecmp (current_rule, (gchar*)temptr->data) == 0) {
+                                        /* FIXMEchpe: this is soo wrong */
                                         gtk_tree_view_set_cursor (GTK_TREE_VIEW (list_view),
                                                                   gtk_tree_path_new_from_indices (i, -1),
                                                                   NULL, FALSE);
@@ -416,15 +411,11 @@ show_preferences_dialog (void)
                                 i++;
                         }
                 }
-                g_free (current_rule);
                 
                 // Cards Tab
-                deck_edit = games_card_selector_new (TRUE, bj_get_card_style ());
+                deck_edit = bj_get_card_theme_selector ();
                 gtk_box_pack_start (GTK_BOX (top_vbox), deck_edit, FALSE, FALSE, 0);
 
-                g_signal_connect (deck_edit, "changed",
-                                  G_CALLBACK (card_deck_options_changed), NULL);
-                
                 // General signals
                 g_signal_connect (pref_dialog, "response",
                                   G_CALLBACK (pref_dialog_response), NULL);

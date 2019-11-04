@@ -1,6 +1,6 @@
 /*
   Copyright © 2004 Callum McKenzie
-  Copyright © 2007 Christian Persch
+   Copyright © 2007, 2008, 2009 Christian Persch
 
   This library is free software; you can redistribute it and'or modify
   it under the terms of the GNU Library General Public License as published
@@ -23,21 +23,48 @@
 
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include "games-card.h"
-#include "games-preimage.h"
+#include <gtk/gtk.h>
 
 G_BEGIN_DECLS
+
+#define GAMES_CARD_THEME_ERROR  (g_quark_from_static_string ("games-card-theme"))
+
+typedef enum {
+  GAMES_CARD_THEME_ERROR_GENERIC = 0,
+  GAMES_CARD_THEME_ERROR_NOT_SCALABLE = 1
+} GamesCardThemeError;
+
+/* GamesCardThemeInfo (boxed) */
+
+#define GAMES_TYPE_CARD_THEME_INFO (games_card_theme_info_get_type ())
+
+typedef struct _GamesCardThemeInfo GamesCardThemeInfo;
+
+GType games_card_theme_info_get_type (void);
+
+GamesCardThemeInfo *games_card_theme_info_ref (GamesCardThemeInfo *info);
+
+void games_card_theme_info_unref (GamesCardThemeInfo *info);
+
+const char *games_card_theme_info_get_display_name (GamesCardThemeInfo *info);
+
+const char *games_card_theme_info_get_persistent_name (GamesCardThemeInfo *info);
+
+gboolean games_card_theme_info_equal (const GamesCardThemeInfo *a,
+                                      const GamesCardThemeInfo *b);
+
+/* GamesCardTheme (abstract) */
 
 #define GAMES_TYPE_CARD_THEME            (games_card_theme_get_type ())
 #define GAMES_CARD_THEME(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GAMES_TYPE_CARD_THEME, GamesCardTheme))
 #define GAMES_CARD_THEME_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GAMES_TYPE_CARD_THEME, GamesCardThemeClass))
 #define GAMES_IS_CARD_THEME(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GAMES_TYPE_CARD_THEME))
 #define GAMES_IS_CARD_THEME_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GAMES_TYPE_CARD_THEME))
-#define GAMES_CARD_THEME_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GAMES_TYPE_CARD_THEME))
+#define GAMES_CARD_THEME_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GAMES_TYPE_CARD_THEME, GamesCardThemeClass))
 
 typedef struct {
-  gint width;
-  gint height;
+  int width;
+  int height;
 } CardSize;
 
 typedef struct _GamesCardThemeClass GamesCardThemeClass;
@@ -45,29 +72,27 @@ typedef struct _GamesCardTheme      GamesCardTheme;
 
 GType games_card_theme_get_type (void);
 
-GamesCardTheme *games_card_theme_new (const char *theme_dir,
-                                      gboolean scalable);
-
 #if GTK_CHECK_VERSION (2, 10, 0)
 void games_card_theme_set_font_options (GamesCardTheme *theme,
                                         const cairo_font_options_t *font_options);
 #endif
 
-gboolean games_card_theme_set_theme (GamesCardTheme * theme,
-                                     const gchar * name);
+gboolean games_card_theme_set_theme (GamesCardTheme *theme,
+                                     GamesCardThemeInfo *info);
 
-const gchar *games_card_theme_get_theme (GamesCardTheme * theme);
+GamesCardThemeInfo *games_card_theme_get_theme_info (GamesCardTheme * theme);
 
 gboolean games_card_theme_set_size (GamesCardTheme * theme,
-                                    gint width,
-                                    gint height, gdouble proportion);
+                                    int width,
+                                    int height,
+                                    double proportion);
 
 CardSize games_card_theme_get_size (GamesCardTheme * theme);
 
 double games_card_theme_get_aspect (GamesCardTheme * theme);
 
 GdkPixbuf *games_card_theme_get_card_pixbuf (GamesCardTheme * theme,
-                                             gint cardid);
+                                             int cardid);
 
 G_END_DECLS
 

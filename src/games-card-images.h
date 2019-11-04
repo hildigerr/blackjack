@@ -36,7 +36,7 @@ G_BEGIN_DECLS
 #define GAMES_CARD_IMAGES_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GAMES_TYPE_CARD_IMAGES, GamesCardImagesClass))
 #define GAMES_IS_CARD_IMAGES(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GAMES_TYPE_CARD_IMAGES))
 #define GAMES_IS_CARD_IMAGES_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GAMES_TYPE_CARD_IMAGES))
-#define GAMES_CARD_IMAGES_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GAMES_TYPE_CARD_IMAGES))
+#define GAMES_CARD_IMAGES_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GAMES_TYPE_CARD_IMAGES, GamesCardImagesClass))
 
 typedef enum
 {
@@ -45,25 +45,17 @@ typedef enum
   LAST_CACHE_MODE
 } GamesCardImagesCacheMode;
 
-typedef struct _GamesCardImages {
-  GObject parent;
-
-  GamesCardTheme *theme;
-  GdkDrawable *drawable;
-  GdkBitmap *card_mask;
-  GdkBitmap *slot_mask;
-  gpointer *cache;
-  GdkColor background_colour;
-  GdkColor selection_colour;
-
-  guint cache_mode;
-} GamesCardImages;
-
-typedef GObjectClass GamesCardImagesClass;
+typedef struct _GamesCardImages       GamesCardImages;
+typedef struct _GamesCardImagesClass  GamesCardImagesClass;;
 
 GType games_card_images_get_type (void);
 
-GamesCardImages *games_card_images_new (GamesCardTheme * theme);
+GamesCardImages *games_card_images_new (void);
+
+void games_card_images_set_theme (GamesCardImages *images,
+                                  GamesCardTheme *theme);
+
+GamesCardTheme *games_card_images_get_theme (GamesCardImages *images);
 
 void games_card_images_set_cache_mode (GamesCardImages * images,
                                        GamesCardImagesCacheMode mode);
@@ -111,8 +103,6 @@ GdkPixmap *games_card_images_get_slot_pixmap (GamesCardImages * images,
                                               gboolean highlighted);
 
 GdkBitmap *games_card_images_get_slot_mask (GamesCardImages * images);
-
-guint games_card_images_card_to_index (Card card);
 
 /* Deprecated */
 GdkPixbuf *games_card_images_get_card_pixbuf_by_suit_and_rank (GamesCardImages

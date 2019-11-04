@@ -23,6 +23,7 @@
 #include <config.h>
 
 #include <stdlib.h>
+#include <string.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
@@ -517,22 +518,14 @@ bj_get_card_style ()
         lcard_style = games_conf_get_string (KEY_DECK_GROUP, KEY_CARD_STYLE, NULL);
         if (!lcard_style || !lcard_style[0]) {
                 g_free (lcard_style);
-                lcard_style = g_strdup (GAMES_CARD_THEME_DEFAULT);
+		lcard_style = NULL;
         }
-
-#ifdef HAVE_GNOME
-        /* Back compat */
-        if (g_str_has_suffix (lcard_style, ".svg"))
-                *g_strrstr (lcard_style, ".svg") = '\0';
-        else if (g_str_has_suffix (lcard_style, ".png"))
-                *g_strrstr (lcard_style, ".png") = '\0';
-#endif /* HAVE_GNOME */
 
         return lcard_style;
 }
 
 void
-bj_set_card_style (gchar *value)
+bj_set_card_style (const char *value)
 {
         games_conf_set_string (KEY_DECK_GROUP, KEY_CARD_STYLE, value);
 }
@@ -583,18 +576,24 @@ bj_set_never_insurance (gboolean value)
         games_conf_set_boolean (KEY_SETTINGS_GROUP, KEY_NEVER_INSURANCE, value);
 }
 
-gchar *
+const gchar *
 bj_get_game_variation ()
 {
-        return g_strdup (game_variation);
+        return game_variation;
 }
 
 void
 bj_set_game_variation (const gchar *value)
 {
-        if (game_variation)
-                g_free (game_variation);
+        char *old_value;
+
+        if (value == game_variation)
+                return;
+
+        old_value = game_variation;
         game_variation = g_strdup (value);
+        g_free (old_value);
+
         games_conf_set_string (KEY_SETTINGS_GROUP, KEY_GAME_VARIATION, game_variation);
 }
 
@@ -660,20 +659,8 @@ main (int argc, char *argv [])
                 { NULL }
         };
 
-#if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
-  /* If we're going to use gnome-vfs, we need to init threads before
-   * calling any glib functions.
-   */
-  g_thread_init (NULL);
-#endif
-
         if (!games_runtime_init ("blackjack"))
                 return 1;
-
-        bindtextdomain (GETTEXT_PACKAGE, games_runtime_get_directory (GAMES_RUNTIME_LOCALE_DIRECTORY));
-        bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        textdomain (GETTEXT_PACKAGE);
-
 
         context = g_option_context_new (NULL);
 #if GLIB_CHECK_VERSION (2, 12, 0)
@@ -700,7 +687,7 @@ main (int argc, char *argv [])
         bj_conf_init ();
 
         if (!variation)
-                variation = game_variation;
+                variation = g_strdup (game_variation);
 
         bj_game_find_rules (variation);
 

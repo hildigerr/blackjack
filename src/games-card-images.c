@@ -26,12 +26,35 @@
 #include <glib.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#include "games-find-file.h"
-#include "games-files.h"
-#include "games-preimage.h"
-#include "games-pixbuf-utils.h"
-
 #include "games-card-images.h"
+
+#include "games-pixbuf-utils.h"
+#include "games-card.h"
+#include "games-card-private.h"
+#include "games-debug.h"
+
+struct _GamesCardImagesClass {
+  GObjectClass parent_class;
+};
+
+struct _GamesCardImages {
+  GObject parent;
+
+  GamesCardTheme *theme;
+  GdkDrawable *drawable;
+  GdkBitmap *card_mask;
+  GdkBitmap *slot_mask;
+  gpointer *cache;
+  GdkColor background_colour;
+  GdkColor selection_colour;
+
+  guint cache_mode;
+
+#ifdef GNOME_ENABLE_DEBUG
+  guint n_calls;
+  guint cache_hits;
+#endif
+};
 
 enum {
   PROP_0,
@@ -45,10 +68,15 @@ enum {
   MARK_MASK = 0x3U
 };
 
+/* This is an invalid value for a GObject* */
+#define FAILED_POINTER ((gpointer) 0x4)
+
 #define GET_MARK(ptr) ((gsize) (ptr) & (gsize) MARK_MASK)
 #define HAS_MARK(ptr,flags) ((gsize) GET_MARK (ptr) & (gsize) (flags))
 #define MARK_POINTER(ptr,flags) ((gpointer) ((gsize) (ptr) | (gsize) (flags)))
 #define UNMARK_POINTER(ptr) ((gpointer) ((gsize) (ptr) & ~(gsize) MARK_MASK))
+
+#define IS_FAILED_POINTER(ptr) (G_UNLIKELY ((ptr) == FAILED_POINTER))
 
 #define CACHE_SIZE  (2 * GAMES_CARDS_TOTAL)
 
@@ -56,17 +84,29 @@ enum {
 #define CARD_ALPHA_THRESHOLD  (127)
 #define SLOT_ALPHA_THRESHOLD  (255)
 
-#define GAMES_CARD_ID(suit, rank) ((13*(suit)) + ((rank-1)%13))
+/* Logging */
+#ifdef GNOME_ENABLE_DEBUG
+#define LOG_CALL(obj) obj->n_calls++
+#define LOG_CACHE_HIT(obj) obj->cache_hits++
+#define LOG_CACHE_MISS(obj)
+#else
+#define LOG_CALL(obj)
+#define LOG_CACHE_HIT(obj)
+#define LOG_CACHE_MISS(obj)
+#endif /* GNOME_ENABLE_DEBUG */
 
 static void
 games_card_images_clear_cache (GamesCardImages * images)
 {
   guint i;
 
+  _games_debug_print (GAMES_DEBUG_CARD_CACHE,
+                      "games_card_images_clear_cache\n");
+
   for (i = 0; i < CACHE_SIZE; i++) {
     gpointer data = UNMARK_POINTER (images->cache[i]);
 
-    if (data != NULL) {
+    if (data != NULL && !IS_FAILED_POINTER (data)) {
       g_object_unref (data);
     }
   }
@@ -88,30 +128,6 @@ games_card_images_theme_changed_cb (GamesCardTheme * theme,
                                     GamesCardImages * images)
 {
   games_card_images_clear_cache (images);
-}
-
-guint
-games_card_images_card_to_index (Card card)
-{
-  guint card_id;
-
-  if (CARD_GET_FACE_DOWN (card)) {
-    card_id = GAMES_CARD_BACK;
-  } else if (G_UNLIKELY (CARD_GET_RANK (card) == 0)) {
-    /* A joker */
-    if (CARD_GET_SUIT (card) == GAMES_CARDS_CLUBS ||
-        CARD_GET_SUIT (card) == GAMES_CARDS_SPADES) {
-      /* A black joker. */
-      card_id = GAMES_CARD_BLACK_JOKER;
-    } else {
-      /* A red joker. */
-      card_id = GAMES_CARD_RED_JOKER;
-    }
-  } else {
-    card_id = GAMES_CARD_ID (CARD_GET_SUIT (card), CARD_GET_RANK (card));
-  }
-
-  return card_id;
 }
 
 /* Consider the cache as a 2-dimensional array: [0..TOTAL-1 , 0..1]:
@@ -212,27 +228,51 @@ games_card_images_finalize (GObject * object)
   games_card_images_clear_cache (images);
   g_free (images->cache);
 
-  g_signal_handlers_disconnect_by_func
-    (images->theme, G_CALLBACK (games_card_images_theme_changed_cb), images);
-  g_object_unref (images->theme);
+  if (images->theme) {
+    g_signal_handlers_disconnect_by_func (images->theme,
+                                          G_CALLBACK (games_card_images_theme_changed_cb),
+                                          images);
+    g_object_unref (images->theme);
+  }
+
+#ifdef GNOME_ENABLE_DEBUG
+  _GAMES_DEBUG_IF (GAMES_DEBUG_CARD_CACHE) {
+    _games_debug_print (GAMES_DEBUG_CARD_CACHE,
+                        "GamesCardImages %p statistics: %u calls with %u hits and %u misses for a hit/total of %.3f\n",
+                        images, images->n_calls, images->cache_hits, images->n_calls - images->cache_hits,
+                        images->n_calls > 0 ? (double) images->cache_hits / (double) images->n_calls : 0.0);
+  }
+#endif
 
   G_OBJECT_CLASS (games_card_images_parent_class)->finalize (object);
 }
 
 static void
-games_card_images_set_property (GObject * object,
+games_card_images_set_property (GObject *object,
                                 guint prop_id,
-                                const GValue * value, GParamSpec * pspec)
+                                const GValue *value,
+                                GParamSpec *pspec)
 {
   GamesCardImages *images = GAMES_CARD_IMAGES (object);
 
   switch (prop_id) {
   case PROP_THEME:
-    images->theme = GAMES_CARD_THEME (g_value_dup_object (value));
-    g_assert (images->theme);
+    games_card_images_set_theme (images, g_value_get_object (value));
+    break;
+  }
+}
 
-    g_signal_connect (images->theme, "changed",
-                      G_CALLBACK (games_card_images_theme_changed_cb), images);
+static void
+games_card_images_get_property (GObject *object,
+                                guint prop_id,
+                                GValue *value,
+                                GParamSpec * pspec)
+{
+  GamesCardImages *images = GAMES_CARD_IMAGES (object);
+
+  switch (prop_id) {
+  case PROP_THEME:
+    g_value_set_object (value, games_card_images_get_theme (images));
     break;
   }
 }
@@ -242,6 +282,7 @@ games_card_images_class_init (GamesCardImagesClass * class)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (class);
 
+  gobject_class->get_property = games_card_images_get_property;
   gobject_class->set_property = games_card_images_set_property;
   gobject_class->finalize = games_card_images_finalize;
 
@@ -250,29 +291,72 @@ games_card_images_class_init (GamesCardImagesClass * class)
      PROP_THEME,
      g_param_spec_object ("theme", NULL, NULL,
                           GAMES_TYPE_CARD_THEME,
-                          G_PARAM_WRITABLE |
+                          G_PARAM_READWRITE |
                           G_PARAM_STATIC_NAME |
                           G_PARAM_STATIC_NICK |
-                          G_PARAM_STATIC_BLURB |
-                          G_PARAM_CONSTRUCT_ONLY));
+                          G_PARAM_STATIC_BLURB));
 }
 
 /* public API */
 
 /**
  * games_card_images_new:
- * @theme_dir: the directory to load the theme data from, or %NULL to use
- * the default directory
- * @theme: the #GamesCardTheme to cache images from
  *
  * Returns: a new #GamesCardImages
  */
 GamesCardImages *
-games_card_images_new (GamesCardTheme * theme)
+games_card_images_new (void)
 {
-  return g_object_new (GAMES_TYPE_CARD_IMAGES,
-                       "theme", theme,
-                       NULL);
+  return g_object_new (GAMES_TYPE_CARD_IMAGES, NULL);
+}
+
+/**
+ * games_card_images_set_theme:
+ * @images:
+ * @theme: a #GamesCardTheme
+ *
+ * Sets @theme in @images.
+ */
+void
+games_card_images_set_theme (GamesCardImages *images,
+                             GamesCardTheme *theme)
+{
+  g_return_if_fail (GAMES_IS_CARD_IMAGES (images));
+  g_return_if_fail (GAMES_IS_CARD_THEME (theme));
+
+  if (images->theme == theme)
+    return;
+
+  if (images->theme) {
+    g_signal_handlers_disconnect_by_func (images->theme,
+                                          G_CALLBACK (games_card_images_theme_changed_cb),
+                                          images);
+    games_card_images_clear_cache (images);
+    g_object_unref (images->theme);
+  }
+
+  images->theme = theme;
+  if (theme) {
+    g_object_ref (images->theme);
+    g_signal_connect (images->theme, "changed",
+                      G_CALLBACK (games_card_images_theme_changed_cb), images);
+  }
+
+  g_object_notify (G_OBJECT (images), "theme");
+}
+
+/**
+ * games_card_images_get_theme:
+ * @images:
+ *
+ * Returns the #GamesCardTheme currently in use in @images.
+ */
+GamesCardTheme *
+games_card_images_get_theme (GamesCardImages *images)
+{
+  g_return_val_if_fail (GAMES_IS_CARD_IMAGES (images), NULL);
+
+  return images->theme;
 }
 
 /**
@@ -351,15 +435,8 @@ gboolean
 games_card_images_set_size (GamesCardImages * images,
                             gint width, gint height, gdouble proportion)
 {
-  gboolean size_changed;
-
-  size_changed = games_card_theme_set_size (images->theme,
-                                            width, height, proportion);
-  if (size_changed) {
-    games_card_images_clear_cache (images);
-  }
-
-  return size_changed;
+  return games_card_theme_set_size (images->theme,
+                                    width, height, proportion);
 }
 
 /**
@@ -447,12 +524,19 @@ games_card_images_get_card_pixbuf_by_id (GamesCardImages * images,
                         && (card_id < GAMES_CARDS_TOTAL), NULL);
   g_return_val_if_fail (images->cache_mode == CACHE_PIXBUFS, NULL);
 
+  LOG_CALL (images);
+
   idx = card_id;
   if (G_UNLIKELY (highlighted)) {
     idx += GAMES_CARDS_TOTAL;
   }
 
   data = images->cache[idx];
+  if (IS_FAILED_POINTER (data)) {
+    LOG_CACHE_HIT (images);
+    return NULL;
+  }
+
   pixbuf = UNMARK_POINTER (data);
 
   /* If we already have a pixbuf and it's transformed (if necessary), we just return it */
@@ -460,20 +544,27 @@ games_card_images_get_card_pixbuf_by_id (GamesCardImages * images,
       (!highlighted || HAS_MARK (data, MARK_IS_TRANSFORMED))) {
     g_assert (!HAS_MARK (data, MARK_IS_PIXMAP));
     g_assert (GDK_IS_PIXBUF (pixbuf));
+    LOG_CACHE_HIT (images);
     return pixbuf;
   }
+
+  LOG_CACHE_MISS (images);
 
   /* Create the pixbuf */
   if (!pixbuf) {
     pixbuf = create_pixbuf (images, card_id);
-    if (!pixbuf)
+    if (!pixbuf) {
+      images->cache[idx] = FAILED_POINTER;
       return NULL;
+    }
   }
 
   if (G_UNLIKELY (highlighted)) {
     pixbuf = transform_pixbuf (images, pixbuf, idx);
-    if (!pixbuf)
+    if (!pixbuf) {
+      images->cache[idx] = FAILED_POINTER;
       return NULL;
+    }
   }
 
   g_assert (pixbuf == UNMARK_POINTER (images->cache[idx]));
@@ -498,7 +589,7 @@ GdkPixbuf *
 games_card_images_get_card_pixbuf (GamesCardImages * images,
                                    Card card, gboolean highlighted)
 {
-  guint index = games_card_images_card_to_index (card);
+  guint index = _games_card_to_index (card);
 
   return games_card_images_get_card_pixbuf_by_id (images,
                                                   index,
@@ -535,12 +626,19 @@ games_card_images_get_card_pixmap_by_id (GamesCardImages * images,
   g_return_val_if_fail (images->cache_mode == CACHE_PIXMAPS, NULL);
   g_return_val_if_fail (images->drawable != NULL, NULL);
 
+  LOG_CALL (images);
+
   idx = card_id;
   if (G_UNLIKELY (highlighted)) {
     idx += GAMES_CARDS_TOTAL;
   }
 
   data = images->cache[idx];
+  if (IS_FAILED_POINTER (data)) {
+    LOG_CACHE_HIT (images);
+    return NULL;
+  }
+
   pixbuf_or_pixmap = UNMARK_POINTER (data);
 
   /* If we have a pixmap, it will already be transformed (if necessary); just return it */
@@ -548,14 +646,19 @@ games_card_images_get_card_pixmap_by_id (GamesCardImages * images,
     g_assert (!highlighted || HAS_MARK (data, MARK_IS_TRANSFORMED));
     g_assert (GDK_IS_PIXMAP (pixbuf_or_pixmap));
 
+    LOG_CACHE_HIT (images);
     return pixbuf_or_pixmap;
   }
+
+  LOG_CACHE_MISS (images);
 
   /* We either have a pixbuf, or need to create it first */
   if (!pixbuf_or_pixmap) {
     pixbuf = create_pixbuf (images, card_id);
-    if (!pixbuf)
+    if (!pixbuf) {
+      images->cache[idx] = FAILED_POINTER;
       return NULL;
+    }
 
   } else {
     pixbuf = pixbuf_or_pixmap;
@@ -567,8 +670,10 @@ games_card_images_get_card_pixmap_by_id (GamesCardImages * images,
   if (G_UNLIKELY
       (highlighted && !HAS_MARK (images->cache[idx], MARK_IS_TRANSFORMED))) {
     pixbuf = transform_pixbuf (images, pixbuf, idx);
-    if (!pixbuf)
+    if (!pixbuf) {
+      images->cache[idx] = FAILED_POINTER;
       return NULL;
+    }
   }
 
   g_assert (pixbuf == UNMARK_POINTER (images->cache[idx]));
@@ -590,8 +695,10 @@ games_card_images_get_card_pixmap_by_id (GamesCardImages * images,
   }
 
   pixmap = gdk_pixmap_new (images->drawable, width, height, -1);
-  if (!pixmap)
+  if (!pixmap) {
+    images->cache[idx] = FAILED_POINTER;
     return NULL;
+  }
 
   /* Clear the pixmap, to eliminate artifacts from uninitialised
    * pixels when drawing the pixmap with gdk_draw_drawable.
@@ -634,7 +741,7 @@ GdkPixmap *
 games_card_images_get_card_pixmap (GamesCardImages * images,
                                    Card card, gboolean highlighted)
 {
-  guint index = games_card_images_card_to_index (card);
+  guint index = _games_card_to_index (card);
 
   return games_card_images_get_card_pixmap_by_id (images,
                                                   index,

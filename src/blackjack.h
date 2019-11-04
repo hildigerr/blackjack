@@ -106,7 +106,7 @@ gdouble bj_get_balance (void);
 void bj_set_balance (gdouble);
 
 gchar *bj_get_card_style (void);
-void bj_set_card_style (gchar *);
+void bj_set_card_style (const char *);
 gboolean bj_get_show_probabilities (void);
 void bj_set_show_probabilities (gboolean);
 gboolean bj_get_show_toolbar (void);
@@ -115,7 +115,7 @@ gboolean bj_get_quick_deal (void);
 void bj_set_quick_deal (gboolean);
 gboolean bj_get_never_insurance (void);
 void bj_set_never_insurance (gboolean);
-gchar *bj_get_game_variation (void);
+const gchar *bj_get_game_variation (void);
 void bj_set_game_variation (const gchar *);
 
 extern gint dealerSpeed;

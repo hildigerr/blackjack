@@ -1,3 +1,17 @@
+gnome-games 2.25.5
+==================
+
+The gnome-games team is proud to release another version with lots of nice
+improvements. We hope you'll love it :)
+
+General:
+  - Move GThread and gettext initialisation into games_runtime_init() (Christian
+    Persch)
+  - Refactored card themes code (Christian Persch)
+  - Fixed typoed XML files (Jason Clinton)
+  - Allow ChangeLog from git-svn (Jason Clinton)
+
+
 gnome-games 2.25.4
 ==================
 

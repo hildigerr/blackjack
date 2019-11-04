@@ -1,3 +1,311 @@
+2009-01-19 21:48  thomashpa
+
+	* [r8601] trunk/NEWS: gnome-games 2.25.5
+
+2009-01-19 18:09  chpe
+
+	* [r8597] trunk/blackjack/src/dialog.cpp: Fix bug introduced in
+	  r8374: this isn't a c format, no need to double the %
+
+2009-01-19 00:17  chpe
+
+	* [r8593] trunk/blackjack/data/Ameristar.rules,
+	  trunk/blackjack/data/Atlantic_City.rules,
+	  trunk/blackjack/data/Vegas_Downtown.rules,
+	  trunk/blackjack/data/Vegas_Strip.rules: Remove trailing
+	  whitespace, so these keyfiles' values actually read out as ints
+	  and booleans.
+	* [r8592] trunk/blackjack/src/game.cpp,
+	  trunk/blackjack/src/game.h: Check the values read from the key
+	  file before using them, so we don't end up with 0 in the wrong
+	  places. Fixes blackjack mysteriously crashing later on.
+
+2009-01-18 19:33  chpe
+
+	* [r8584] trunk/blackjack/src/blackjack.cpp,
+	  trunk/blackjack/src/blackjack.h, trunk/blackjack/src/dialog.cpp,
+	  trunk/blackjack/src/game.cpp, trunk/blackjack/src/game.h: Fix
+	  const/non-const string uses. Fix use-after-free of the
+	  game_variation string.
+
+2009-01-18 15:48  jclinton
+
+	* [r8583] trunk/blackjack/help/C/blackjack.xml:
+	  Replace all occurances of &mdash; with UTF-8 equiv. in the docs.
+	  This is needed because g-d-u does not use --loaddtd and so
+	  distcheck is quite angry during the documentation phase. There
+	  may be other XML entity removals coming in the future.
+
+2009-01-18 15:20  chpe
+
+	* [r8582] trunk/blackjack/src/blackjack.cpp: g_free is NULL-safe.
+	* [r8581] trunk/blackjack/src/game.cpp: Don't reference freed
+	  memory. Regression introduced in SVN r8001.
+
+2009-01-18 14:21  chpe
+
+	* [r8579] trunk/blackjack/src/blackjack.cpp: Use NULL as theme
+	  name to get the default theme. Remove the mangling of the theme
+	  name extension.
+
+2009-01-15 19:49  chpe
+
+	* [r8573] trunk/libgames-support/games-conf.c,
+	  trunk/libgames-support/games-debug.c,
+	  trunk/libgames-support/games-debug.h: Add window state debugging
+	  output, in trying to track down bug #560142.
+
+2009-01-14 23:41  chpe
+
+	* [r8567] runk/libgames-support/games-card-themes.c: Split the list of
+	  packages with card themes into an external key file. Use the
+	  org.freedesktop.PackageKit.Modify interface.
+	* [r8566] trunk/libgames-support/gnomangelo_bitmap.svg: Run
+	  xmllint --format on this.
+
+2009-01-08 12:53  chpe
+
+	* [r8535] trunk/blackjack/src/blackjack.cpp: Bug 566797 – missing <string.h>
+	  include in the blackjack and gnometris Patch by michal.pryc at
+	  sun dot com.
+	* [r8534] trunk/blackjack/src/press_data.cpp,
+	  trunk/blackjack/src/strategy.cpp: Always include config.h.
+
+2009-01-07 22:53  chpe
+
+	* [r8532] trunk/libgames-support/games-card.c: Add another card
+	  symbol.
+
+2009-01-06 23:15  chpe
+
+	* [r8523] trunk/NEWS: Update
+
+2009-01-06 18:21  chpe
+
+	* [r8518] trunk/NEWS: Update
+
+2009-01-06 18:20  chpe
+
+	* [r8512] trunk/libgames-support/games-runtime.c,
+	  trunk/libgames-support/games-runtime.h,
+	  trunk/libgames-support/games-stock.c: Fix licence version in
+	  about dialogue if GPL3 components are enabled.
+	* [r8510] trunk/libgames-support/games-card-themes.c: Fix getting
+	  the theme filename from the pref name (it was not stripping the
+	  type: prefix in all cases).
+	* [r8509] trunk/libgames-support/games-card-themes.c,
+	  trunk/libgames-support/games-card-themes.h: Build the card
+	  themes menu immediately if loading the theme resulted in the
+	  themes list getting loaded (when it was necessary to fall back
+	  to loading just any theme).
+	* [r8505] trunk/libgames-support/games-card-themes.c: More
+	  debugging output..
+	* [r8501] trunk/libgames-support/games-card-themes.c: Remember
+	  loading the card theme infos, so we don't do it over and over
+	  again.
+	* [r8500] trunk/libgames-support/games-card-themes.c: Ref the list
+	  elements when getting all theme infos. Put the new info into the
+	  hash table in get_by_name.
+	* [r8498] trunk/NEWS: Update
+	* [r8497] trunk/blackjack/src/card.cpp,
+	  trunk/libgames-support/games-card-themes.c,
+	  trunk/libgames-support/games-card-themes.h: Simplify the themes
+	  API, and adapt callers.
+	* [r8496] trunk/NEWS: Update
+	* [r8494] trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c: Only build the
+	  enabled card theme formats.
+	* [r8492] trunk/libgames-support/games-card-selector.c,
+	  trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Fix setting the
+	  current theme's radio action to active.
+	* [r8491] trunk/blackjack/src/card.cpp,
+	  trunk/libgames-support/games-card-themes.c,
+	  trunk/libgames-support/games-card-themes.h: Only look for
+	  enabled card theme formats. Some code cleanups. Adapt callers to
+	  minor API changes.
+	* [r8490] trunk/libgames-support/games-card-themes.c,
+	  trunk/libgames-support/games-card-themes.h: Add start of
+	  PackageKit magic to install new card themes. Based on nautilus
+	  code for interaction with PackageKit via DBus.
+	* [r8489] trunk/libgames-support/games-card-selector.c,
+	  trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-card-themes.c,
+	  trunk/libgames-support/games-card-themes.h: Add configure flags
+	  to enable the various card theme formats. Refactor theme info
+	  loading code so we don't need to read the whole list just to get
+	  the theme info for the theme saved in the prefs.
+	* [r8487] trunk/blackjack/src/card.cpp,
+	  trunk/libgames-support/games-card-selector.c,
+	  trunk/libgames-support/games-card-selector.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-card-themes.c,
+	  trunk/libgames-support/games-card-themes.h: Split card theme
+	  management into its own class.
+	* [r8486] trunk/libgames-support/games-card-theme.c: Improve card
+	  theme ordering.
+	* [r8485] trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c: Change theme
+	  enumeration to be callback based.
+	* [r8484] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card-images.h: Add cache
+	  hit/miss logging.
+	* [r8483] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-debug.c,
+	  trunk/libgames-support/games-debug.h: Add debug flag for the
+	  card caches.
+
+2009-01-06 18:19  chpe
+
+	* [r8479] trunk/libgames-support/games-card-theme.c: To highlight the
+	  cards, draw them fist normally and then again with the highlight
+	  colour and opacity 0.5. Looks much better than the previous
+	  effect.
+	* [r8476] trunk/libgames-support/games-card-images.c: Calling
+	  games_card_set_size will emit the "changed" signal, so there's
+	  no need to clear the cache twice.
+	* [r8475] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card-images.h,
+	  trunk/libgames-support/games-card-private.h,
+	  trunk/libgames-support/games-card.c: Make GamesCardTexturesCache
+	  only use GamesCardTheme, not GamesCardImages. That way, we don't
+	  keep the card pixbufs in 2 variants (normal and tinted) around.
+	  Saves tons of memory!
+	* [r8473] trunk/libgames-support/games-runtime.c: Add profiling to
+	  games_runtime_init().
+	* [r8471] trunk/libgames-support/games-runtime.c: Move gettext
+	  stuff down, so it's actually after the init stuff that it needs.
+	* [r8470] trunk/blackjack/src/blackjack.cpp,
+	  trunk/libgames-support/games-runtime.c: Move
+	  setlocale call and gettext and games-debug initialisation into
+	  games_runtime_init(), and adapt callers accordingly.
+	* [r8469] trunk/libgames-support/games-conf.c: Assert that GThread
+	  is initialised in GamesConf for HAVE_GNOME, since GConf uses
+	  ORBit which needs this. See
+	  http://mail.gnome.org/archives/desktop-devel-list/2008-December/msg00177.html
+	  Needs to fix all the games later to actually init GThread.
+	* [r8468] trunk/libgames-support/games-card.c: Fix
+	  games_card_get_localised_rank_symbol implementation.
+	* [r8467] trunk/blackjack/src/blackjack.cpp,
+	  trunk/blackjack/src/blackjack.h, trunk/blackjack/src/card.cpp,
+	  trunk/libgames-support/games-card-images.c: Fix blackjack to
+	  work with the changed theme API.
+	* trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-debug.c,
+	  trunk/libgames-support/games-debug.h: Make loading and storing
+	  the theme from/to pref work again.
+	* [r8465] trunk/libgames-support/games-card-theme.c: Simplify this.
+	* [r8464] trunk/libgames-support/games-card-theme.c: Fix loading the
+	  initial theme from pref.
+	* [r8463] trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c: Code cleanup.
+	* [r8462] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Make the current card
+	  theme's menu item active.
+	* [r8457] trunk/libgames-support/games-card-theme-preimage.c,
+	  trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.h: Set errors on
+	  failure. Simplify preimage theme by making the base class check
+	  whether scalable cards are required.
+	* [r8454] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card.c,
+	  trunk/libgames-support/games-card.h: Cache the card bboxes,
+	  since they're very expensive to compute. Use the back's bbox to
+	  compute the card theme's aspect ratio.
+	* [r8450] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-debug.c,
+	  trunk/libgames-support/games-debug.h,
+	  trunk/libgames-support/games-runtime.c: dd debug support, copied
+	  from gnome-terminal/vte.
+	* [r8449] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Use the new profiling
+	  code instead of the old #ifdef mess.
+
+2009-01-06 18:18  chpe
+
+	* [r8448] trunk/libgames-support/games-profile.c,
+	  trunk/libgames-support/games-profile.h: Add profiling, copied
+	  from gnome-settings-demon. See
+	  http://www.gnome.org/~federico/news-2006-03.html#09 for how to
+	  use it.
+	* [r8447] trunk/libgames-support/games-card.c,
+	  trunk/libgames-support/games-card.h: Add localised card symbols.
+	* [r8445] trunk/libgames-support/games-card-theme-private.h: Removed
+	  unused data.
+	* [r8442] trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c: Add class to load
+	  PySol card themes.
+	* [r8435] trunk/libgames-support/games-card-images.c: Cache also
+	  failed pixbuf lookups.
+	* [r8433] trunk/libgames-support/games-card-theme.c: Read the
+	  index.desktop file for KDE card themes.
+	* [r8427] trunk/blackjack/src/card.cpp,
+	  trunk/blackjack/src/card.h, trunk/blackjack/src/dialog.cpp,
+	  trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card-images.h,
+	  trunk/libgames-support/games-card-selector.c,
+	  trunk/libgames-support/games-card-selector.h,
+	  trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-files.c: Continue refactoring the
+	  card themes: add GamesCardThemeInfo structure holding basic info
+	  about a theme, and use that to load the theme. Make
+	  GamesCardTheme only hold one theme ever, and adapt the apps to
+	  create new themes from the theme infos when changing themes.
+	  Work-in-progress.
+	* [r8426] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-preimage-private.h,
+	  trunk/libgames-support/games-preimage.c,
+	  trunk/libgames-support/games-preimage.h: Use
+	  rsvg_handle_get_dimension/position_sub in the KDE theme.
+	* [r8425] trunk/libgames-support/games-card-theme.c: Add theme
+	  name override env var for debugging purposes.
+	* [r8424] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Add class to load KDE
+	  card themes. Not working yet since the theme path logic needs
+	  more work in the base class.
+	* [r8423] trunk/libgames-support/games-card-selector.c,
+	  trunk/libgames-support/games-card-selector.h,
+	  trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-files.c,
+	  trunk/libgames-support/games-files.h: Add new function to get
+	  the themes list.
+	* [r8422] trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Add class vfunc to
+	  get the default theme path.
+	* [r8421] trunk/libgames-support/games-card-theme-private.h: Make the
+	  old-style theme backend work.
+	* [r8420] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Add env var to
+	  control the card theme format, for debugging purposes.
+	* [r8418] trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.h: Split the slicing
+	  rendering of the pre-2.19 legacy theme format off into its own
+	  class, and make it and the SVG theme class use a common abstract
+	  base class GamesCardThemePreimage.
+
+2009-01-06 18:17  chpe
+
+	* [r8416] trunk/blackjack/src/card.cpp,
+	  trunk/libgames-support/games-card-theme-private.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Refactor card themes by
+	  splitting it into an abstract base class GamesCardTheme ...
+
+2009-01-05 15:57  jclinton
+
+	* [r8402] trunk/NEWS: Gnome Games 2.25.4
+
 2008-12-16 21:16  kmaraas
 
 	* [r8374] trunk/blackjack/src/dialog.cpp: Fix percentage format in
