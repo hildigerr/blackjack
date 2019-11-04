@@ -1,3 +1,21 @@
+commit c5e17e605a744a273841012c3b175fa45d0b6cd1
+Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
+Date:   Mon May 25 23:49:54 2009 +0200
+
+    NEWS entry for 2.27.2
+
+ NEWS |  101 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 101 insertions(+), 0 deletions(-)
+
+commit f77d4262c098f809bfc8991163a55510c42e62ae
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri May 8 20:28:16 2009 +0200
+
+    libgames-support: remove leftover HAVE_GSTREAMER
+
+ libgames-support/games-runtime.c |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
 commit 1ddefb035a3ad248b50b344cc9549c7f0de19048
 Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
 Date:   Tue May 5 00:20:24 2009 +0200

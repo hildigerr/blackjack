@@ -1,3 +1,14 @@
+gnome-games 2.27.2
+=================
+Shortlog follows:
+
+Christian Persch (3):
+      libgames-support: remove leftover HAVE_GSTREAMER
+      Initialise the canberra_gtk context only once
+
+Jason D. Clinton (16):
+      Post-release bump to 2.27.2
+
 gnome-games 2.27.1
 ==================
 
