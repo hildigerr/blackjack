@@ -1,3 +1,31 @@
+2007-02-12  Jason D. Clinton  <me@jasonclinton.com>
+
+	* NEWS: gnome-games 2.17.91
+
+2007-02-03  Andreas Røsdal  <andreasr@gnome.org>
+
+	* games-files.h
+	* games-card-selector.c
+	* games-preimage.c
+	* games-frame.c
+	* games-card-selector.h
+	* games-frame.h
+	* games-card-images.c
+	* games-card-images.h
+	* games-card-pixmaps.c
+	* games-card-pixmaps.h
+	* games-files.c : Patch from Christian Persch <chpe@gnome.org>, in Bug #403660.
+	The cleanup consists of the following bugfixes and cleanups:
+
+	Bug fixes:
+	- finalize and dipose MUST chain up to the parent classes handler [everywhere]
+	- fix typecast macros to return the right types [games-card-selector.h,
+	games-card-pixmaps.h]
+
+	Cleanups:
+	- use G_DEFINE_TYPE
+	- combine 2 gboolean's into a bitfield (saves 4 bytes per instance) [games-card-images.h]
+
 2007-01-22  Jason D. Clinton  <me@jasonclinton.com>
 
 	* NEWS: gnome-games 2.17.90
