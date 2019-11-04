@@ -1,7 +1,8 @@
 /*
- * games-stock.c: games stock items and icon registation
+ * games-stock.c: games stock items, strings and icon registation
  *
  * Copyright (C) 2005 Richard Hoelscher
+ * Copyright (C) 2006 Andreas Røsdal
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,6 +39,10 @@ static GtkIconFactory *games_icon_factory = NULL;
 static GtkStockItem games_stock_items[] = {
 /* i18n: This "_New" is for the menu item 'Game->New', implies "New Game" */
   {GAMES_STOCK_NEW_GAME, N_("_New"), GDK_CONTROL_MASK, 'n', NULL},
+  {GAMES_STOCK_NETWORK_GAME, N_("Network _Game"), GDK_CONTROL_MASK, 'g',
+   NULL},
+  {GAMES_STOCK_NETWORK_LEAVE, N_("L_eave Game"), GDK_CONTROL_MASK, 'e', NULL},
+  {GAMES_STOCK_PLAYER_LIST, N_("Player _List"), GDK_CONTROL_MASK, 'l', NULL},
   {GAMES_STOCK_PAUSE_GAME, N_("_Pause"), 0, GDK_Pause, NULL},
   {GAMES_STOCK_RESUME_GAME, N_("Res_ume"), 0, GDK_Pause, NULL},
 /* i18n: "_Restart" is the menu item 'Game->Restart', implies "Restart Game" */
@@ -63,6 +68,12 @@ typedef struct {
 /* Names of stock intems installed by gtk+ and gnome-icon-theme */
 static GamesStockItemIcon stock_item_icon[] = {
   {GAMES_STOCK_NEW_GAME, NULL, GTK_STOCK_NEW,
+   NULL},
+  {GAMES_STOCK_NETWORK_GAME, NULL, GTK_STOCK_NETWORK,
+   NULL},
+  {GAMES_STOCK_NETWORK_LEAVE, NULL, GTK_STOCK_STOP,
+   NULL},
+  {GAMES_STOCK_PLAYER_LIST, NULL, GTK_STOCK_INFO,
    NULL},
   {GAMES_STOCK_PAUSE_GAME, "stock_timer_stopped", NULL,
    NULL},
@@ -97,6 +108,10 @@ typedef struct {
 
 static GamesStockItemTooltip stock_item_tooltip[] = {
   {GAMES_STOCK_NEW_GAME, N_("Start a new game")},
+  {GAMES_STOCK_NETWORK_GAME, N_("Start a new multiplayer network game")},
+  {GAMES_STOCK_NETWORK_LEAVE,
+   N_("End the current network game and return to network server")},
+  {GAMES_STOCK_PLAYER_LIST, N_("Show a list of players in the network game")},
   {GAMES_STOCK_PAUSE_GAME, N_("Pause the game")},
   {GAMES_STOCK_RESUME_GAME, N_("Resume the paused game")},
   {GAMES_STOCK_RESTART_GAME, N_("Restart the game")},
@@ -310,4 +325,35 @@ games_stock_init (void)
   gtk_icon_factory_add_default (games_icon_factory);
 
   gtk_stock_add_static (games_stock_items, G_N_ELEMENTS (games_stock_items));
+}
+
+/* Returns a GPL license string for a specific game. */
+gchar *
+games_get_license (const gchar * game_name)
+{
+  gchar *license_trans, *license_str;
+
+  const gchar *license[] = {
+    /* %s is replaced with the name of the game in gnome-games. */
+    N_("%s is free software; you can redistribute it and/or modify "
+       "it under the terms of the GNU General Public License as published by "
+       "the Free Software Foundation; either version 2 of the License, or "
+       "(at your option) any later version."),
+    N_("%s is distributed in the hope that it will be useful, "
+       "but WITHOUT ANY WARRANTY; without even the implied warranty of "
+       "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
+       "GNU General Public License for more details."),
+    N_("You should have received a copy of the GNU General Public License "
+       "along with %s; if not, write to the Free Software Foundation, Inc., "
+       "59 Temple Place, Suite 330, Boston, MA  02111-1307  USA")
+  };
+
+  license_trans = g_strjoin ("\n\n", _(license[0]), _(license[1]),
+			     _(license[2]), NULL);
+
+  license_str =
+    g_strdup_printf (license_trans, game_name, game_name, game_name);
+  g_free (license_trans);
+
+  return license_str;
 }

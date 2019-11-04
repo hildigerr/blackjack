@@ -181,7 +181,7 @@ games_preimage_new_from_file (const gchar * filename, GError ** error)
     preimage->height = info.height;
 
     if (!g_file_get_contents (filename,
-			      (gchar **) &(preimage->srcbuffer),
+			      (gchar **) (char *) &(preimage->srcbuffer),
 			      &(preimage->srcsize), error)) {
       g_object_unref (preimage);
       return NULL;

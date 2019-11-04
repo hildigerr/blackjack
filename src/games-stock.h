@@ -36,6 +36,9 @@ G_BEGIN_DECLS
 #define GAMES_STOCK_LEAVE_FULLSCREEN "games-leave-fullscreen"
 /* These use stock gtk icons */
 #define GAMES_STOCK_NEW_GAME         "games-new-game"
+#define GAMES_STOCK_NETWORK_GAME     "games-network-game"
+#define GAMES_STOCK_NETWORK_LEAVE    "games-network-leave"
+#define GAMES_STOCK_PLAYER_LIST      "games-player-list"
 #define GAMES_STOCK_RESTART_GAME     "games-restart-game"
 #define GAMES_STOCK_UNDO_MOVE        "games-undo-move"
 #define GAMES_STOCK_REDO_MOVE        "games-redo-move"
@@ -52,6 +55,7 @@ void games_stock_set_pause_actions (GtkAction * pause_action,
 
 void games_stock_prepare_for_statusbar_tooltips (GtkUIManager * ui_manager,
 						 GtkWidget * statusbar);
+gchar *games_get_license (const gchar * game_name);
 
 G_END_DECLS
 #endif /* __GAMES_STOCK_H__ */
