@@ -1,3 +1,20 @@
+gnome-games 2.23.1
+==================
+
+This is the first development release of the 2.23 series.
+
+Overall:
+  - define GAMES_STOCK_FULLSCREEN on hildon (Christian Persch)
+
+gnome-games 2.22.0
+==================
+
+This is the final release of Gnome Games for 2.22.
+
+gnome-games 2.21.92
+==================
+This is the release candidate for 2.22 of gnome-games.
+
 gnome-games 2.21.91
 ==================
 A fairly boring release, but still lots of fixes to polish off the games for the

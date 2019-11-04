@@ -1,3 +1,28 @@
+2008-04-21  Thomas H.P. Andersen  <phomes@gmail.com>
+
+	* NEWS: gnome-games 2.23.1
+
+2008-04-09  Christian Persch  <chpe@gnome.org>
+
+	* games-stock.c: (games_stock_init): Also define
+	GAMES_STOCK_FULLSCREEN on hildon, since it's used in AisleRiot.
+
+2008-03-24  Christian Persch  <chpe@gnome.org>
+
+	* games-card.h: Change default card theme. Bug #513557.
+
+	* data/blackjack.schemas.in: Use "" for the default theme.
+	* src/blackjack.cpp: Use the default theme for empty pref string. Bug
+	#513557.
+
+2008-03-10  Jason Clinton  <me@jasonclinton.com>
+
+	* NEWS: gnome-games 2.22.0
+
+2008-02-25  Thomas H.P. Andersen  <phomes@gmail.com>
+
+	* NEWS: gnome-games 2.21.92
+
 2008-02-12  Christian Persch  <chpe@gnome.org>
 
 	* bonded.svg:
