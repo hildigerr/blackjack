@@ -1,3 +1,108 @@
+commit 5173b8212b94c9c9c8aeebe0dc9d94dca0e4eed5
+Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
+Date:   Mon Jul 27 23:32:46 2009 +0200
+
+    NEWS entry for 2.27.5
+
+ NEWS |  153 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 153 insertions(+), 0 deletions(-)
+
+commit f6a4ad31412d7eb056700c90eedd914b4c476e9f
+Author: Christian Persch <chpe@gnome.org>
+Date:   Wed Jul 22 17:37:45 2009 +0200
+
+    libgames-support: Use link instead of FSF address in the GPL3 note
+
+    As recommended.
+
+ libgames-support/games-stock.c |    9 +++++++--
+ 1 files changed, 7 insertions(+), 2 deletions(-)
+
+commit 2c4630161ac46385b156af6691df9916463a5bfc
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sat Jul 18 22:29:58 2009 +0200
+
+    libgames-support: Assert that threads are initialised
+
+    For libgames-support.la, init threads. For libgames-support-gi.la, assert
+    that threads are initialised as seed has already inited threads before.
+
+ libgames-support/games-runtime.c |   11 +++++++----
+ 2 files changed, 8 insertions(+), 5 deletions(-)
+
+commit d501d70013303b8b572e42236e186d2589101062
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Jul 10 19:48:45 2009 +0200
+
+    aisleriot: Change licence to GPL 3+
+
+    Relicence the libgamescard library code from LGPL 2+ to LGPL 3+ (resp.
+    GPL 2+ to GPL 3+), and aisleriot from GPL 2+ to GPL 3+. The
+    libgamescards licence changes also implies a blackjack licence change
+    from GPL 2+ to GPL 3+.
+    Add COPYING.GPL3 containing the text of the GPL version 3, and
+    COPYING.README with a short summary of which code is licensed how.
+
+ COPYING.GPL3                                 |  676 ++++++++++++++++++++++++++
+ COPYING.README                               |    4 +
+ libgames-support/games-card-images.c         |   32 +-
+ libgames-support/games-card-images.h         |   18 +-
+ libgames-support/games-card-private.h        |   32 +-
+ libgames-support/games-card-theme-private.h  |   33 +-
+ libgames-support/games-card-theme.c          |   32 +-
+ libgames-support/games-card-theme.h          |   20 +-
+ libgames-support/games-card-themes.c         |   32 +-
+ libgames-support/games-card-themes.h         |   20 +-
+ libgames-support/games-card.c                |   24 +-
+ libgames-support/games-card.h                |   32 +-
+ libgames-support/games-pixbuf-utils.c        |   17 +-
+ libgames-support/games-pixbuf-utils.h        |   17 +-
+ libgames-support/games-runtime.c             |    7 +-
+ 136 files changed, 1545 insertions(+), 1066 deletions(-)
+
+commit 4f3d20ad3a54cc9f9bf1efa6824c224d889bbfb7
+Author: Tim Horton <hortont424@gmail.com>
+Date:   Fri Jul 3 05:54:02 2009 -0400
+
+    [libgames-support] Remove extra semicolon in games-card-images.h; no more scanner warnings
+
+ libgames-support/games-card-images.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 7f4bc8fed6d7dff30b5a2738c686e1cf3b8e501f
+Author: Tim Horton <hortont@svn.gnome.org>
+Date:   Thu Jul 2 00:17:46 2009 -0400
+
+    [libgames-support] Return card size assertion wrapped in gir-scanner ifdef
+
+ libgames-support/games-card.h |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 68c5708a706f86f3b7816faff52b4b85fdb0f6cb
+Author: Tim Horton <hortont@svn.gnome.org>
+Date:   Fri Jun 12 18:55:01 2009 -0400
+
+    [libgames-support] Only call g_thread_init if it hasn't already been called
+
+    In the case of Seed games, for example, the Seed runtime has already
+    called g_thread_init before it's possible to call games_runtime_init.
+
+ libgames-support/games-runtime.c |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+commit 8a51d6d905391500c0bc9d80f42c8c85eb6ae5b6
+Author: Tim Horton <hortont@svn.gnome.org>
+Date:   Thu Jun 11 17:29:45 2009 -0400
+
+    [libgames-support] Remove assertion that ensures Card fits in one byte
+
+    This is temporary, but necessary, because it breaks g-ir-scanner. I'm not
+    sure what to do in order to fix it, or if it's actually necessary, or (best-case)
+    if there's a way to #ifdef things out specifically for the scanner.
+
+ libgames-support/games-card.h |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
 commit e7099173c69f16879b340e7ca06b14896e299c1c
 Author: Thomas Hindoe Paaboel Andersen <phomes@gmail.com>
 Date:   Mon Jul 13 23:42:59 2009 +0200
