@@ -299,8 +299,7 @@ games_conf_constructor (GType type,
   priv->key_file = g_key_file_new ();
   if (!g_key_file_load_from_file (priv->key_file, conf_file, 0, &error)) {
     /* Don't warn on non-existent file */
-    if (error->domain != G_FILE_ERROR ||
-        error->code != G_FILE_ERROR_NOENT) {
+    if (!g_error_matches (error, G_FILE_ERROR, G_FILE_ERROR_NOENT)) {
       g_warning ("Failed to read settings from \"%s\": %s",
                   conf_file, error->message);
     }
@@ -946,9 +945,8 @@ double
 games_conf_get_double (const char *group, const char *key,
                        GError ** error)
 {
-  GamesConfPrivate *priv = instance->priv;
-
 #if defined(HAVE_GNOME)
+  GamesConfPrivate *priv = instance->priv;
   double value;
   char *key_name;
 
@@ -961,6 +959,8 @@ games_conf_get_double (const char *group, const char *key,
 #warning games_conf_get_double not supported on maemo!
   return 0.0;
 #else
+  GamesConfPrivate *priv = instance->priv;
+
   return g_key_file_get_double (priv->key_file, group ? group : priv->main_group, key, error);
 #endif /* HAVE_GNOME */
 }
@@ -976,9 +976,8 @@ games_conf_get_double (const char *group, const char *key,
 void
 games_conf_set_double (const char *group, const char *key, double value)
 {
-  GamesConfPrivate *priv = instance->priv;
-
 #if defined(HAVE_GNOME)
+  GamesConfPrivate *priv = instance->priv;
   char *key_name;
 
   key_name = get_gconf_key_name (group, key);
@@ -987,6 +986,8 @@ games_conf_set_double (const char *group, const char *key, double value)
 #elif defined(HAVE_HILDON)
 #warning games_conf_set_double not implemented on maemo!
 #else
+  GamesConfPrivate *priv = instance->priv;
+
   g_key_file_set_double (priv->key_file, group ? group : priv->main_group, key, value);
   g_signal_emit (instance, signals[VALUE_CHANGED], 0, group, key);
 #endif /* HAVE_GNOME */

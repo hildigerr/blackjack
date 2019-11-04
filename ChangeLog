@@ -1,3 +1,36 @@
+2008-08-18 22:12  thomashpa
+
+	* [r7831] trunk/NEWS: gnome-games 2.23.90
+
+2008-08-15 10:14  chpe
+
+	* [r7829] trunk/libgames-support/games-preimage.h: Include cairo.h
+	  here to fix the blackjack build.
+	* [r7828] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-preimage.c,
+	  trunk/libgames-support/games-preimage.h: Take the antialias
+	  setting from the font options instead of storing it separately.
+	* [r7827] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h,
+	  trunk/libgames-support/games-preimage.c,
+	  trunk/libgames-support/games-preimage.h: Get the cairo font
+	  options from the screen instead of creating them ourself from
+	  the gtk settings.
+	* [r7825] trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-conf.c: Fix compile warnings.
+	* [r7824] trunk/libgames-support/games-conf.c: Use
+	  g_error_matches().
+	* [r7823] trunk/blackjack/src/Makefile.am, trunk/blackjack/src/card.cpp,
+	  trunk/libgames-support/games-card-images.c,
+	  trunk/libgames-support/games-card-images.h,
+	  trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card-theme.h: Add "changed" signal
+	  to GamesCardTheme, and emit it when the theme has changed in a
+	  way that necessitates clearing the card cache. Use this in
+	  GamesCardImages, and remove the methods that just forwarded to
+	  the theme. Adapt aisleriot and blackjack to these API changes.
+
 2008-08-04 19:33  thomashpa
 
 	* [r7805] trunk/NEWS: gnome-games 2.23.6
