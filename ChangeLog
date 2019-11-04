@@ -1,3 +1,19 @@
+commit e60337e57a995fd524268ae5032f51ac0ef5d237
+Author: Christian Persch <chpe@gnome.org>
+Date:   Wed Jul 8 13:32:01 2009 +0200
+
+    libgames-support: blackjack: move GamesCardSelector to blackjack
+
+    Blackjack is the only game using the GamesCardSelector class, so move it
+    to blackjack.
+
+ blackjack/src/card-selector.cpp        |  150 ++++++++++++++++++++++++++++++++
+ blackjack/src/card-selector.h          |   60 +++++++++++++
+ blackjack/src/card.cpp                 |    2 +-
+ libgames-support/games-card-selector.c |  150 --------------------------------
+ libgames-support/games-card-selector.h |   60 -------------
+ 8 files changed, 214 insertions(+), 221 deletions(-)
+
 commit d52e85935c83f3db869f0073f2e780bda74ccf60
 Author: Jason D. Clinton <me@jasonclinton.com>
 Date:   Mon Jun 15 18:30:17 2009 -0500
