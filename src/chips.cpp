@@ -20,9 +20,11 @@
  * USA
  */
 
+#include <config.h>
+
 #include <stdlib.h>
 #include <math.h>
-#include <games-preimage.h>
+#include <libgames-support/games-preimage.h>
 
 #include "blackjack.h"
 #include "chips.h"
@@ -61,10 +63,10 @@ void
 bj_chip_set_size (gint width,
                   gint height)
 {
-        gchar *names[4] = { CHIP_FILENAME_100,
-                            CHIP_FILENAME_25,
-                            CHIP_FILENAME_5,
-                            CHIP_FILENAME_1 };
+        const gchar *names[4] = { CHIP_FILENAME_100,
+                                  CHIP_FILENAME_25,
+                                  CHIP_FILENAME_5,
+                                  CHIP_FILENAME_1 };
 
         for (gint i = 0; i < 4; i++) {
                 gchar *fullname;

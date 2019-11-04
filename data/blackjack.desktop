@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Blackjack
 Name[ar]=بلاك جاك
 Name[bg]=Блекджек
@@ -85,5 +84,5 @@ Categories=GNOME;GTK;Game;CardGame;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-games
 X-GNOME-Bugzilla-Component=blackjack
-X-GNOME-Bugzilla-Version=2.19.6
+X-GNOME-Bugzilla-Version=2.25.1
 StartupNotify=true

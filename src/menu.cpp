@@ -25,13 +25,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include <glib/gi18n.h>
-#ifdef HAVE_GNOME
-#include <gnome.h>
-#endif
+#include <gtk/gtk.h>
 
 using namespace std;
 
-#include <games-stock.h>
+#include <libgames-support/games-help.h>
+#include <libgames-support/games-stock.h>
 
 #include "blackjack.h"
 #include "menu.h"
@@ -128,11 +127,7 @@ void
 on_help_contents_activate (GtkAction *action,
                            gpointer   data)
 {
-#ifdef HAVE_GNOME
-        GError *error = NULL;
-        gnome_help_display_desktop_on_screen (NULL, "blackjack", "blackjack", NULL,
-                                              gtk_widget_get_screen (toplevel_window), &error);
-#endif
+  games_help_display(toplevel_window, "blackjack", NULL);
 }
 
 void

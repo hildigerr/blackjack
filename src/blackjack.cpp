@@ -25,12 +25,10 @@
 #include <stdlib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include <games-conf.h>
-#include <games-stock.h>
 
-#ifdef HAVE_GNOME
-#include <gnome.h>
-#endif
+#include <libgames-support/games-conf.h>
+#include <libgames-support/games-stock.h>
+#include <libgames-support/games-runtime.h>
 
 #include "blackjack.h"
 #include "events.h"
@@ -664,10 +662,6 @@ main (int argc, char *argv [])
                 { NULL }
         };
 
-        bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
-        bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-        textdomain (GETTEXT_PACKAGE);
-
 #if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
   /* If we're going to use gnome-vfs, we need to init threads before
    * calling any glib functions.
@@ -675,22 +669,20 @@ main (int argc, char *argv [])
   g_thread_init (NULL);
 #endif
 
+        if (!games_runtime_init ("blackjack"))
+                return 1;
+
+        bindtextdomain (GETTEXT_PACKAGE, games_runtime_get_directory (GAMES_RUNTIME_LOCALE_DIRECTORY));
+        bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        textdomain (GETTEXT_PACKAGE);
+
+
         context = g_option_context_new (NULL);
 #if GLIB_CHECK_VERSION (2, 12, 0)
         g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
 #endif
         g_option_context_add_main_entries (context, entries, GETTEXT_PACKAGE);
 
-
-#ifdef HAVE_GNOME
-        GnomeProgram *program;
-        program = gnome_program_init ("Blackjack", VERSION,
-                                      LIBGNOMEUI_MODULE,
-                                      argc, argv,
-                                      GNOME_PARAM_GOPTION_CONTEXT, context,
-                                      GNOME_PARAM_APP_DATADIR, DATADIR,
-                                      NULL);
-#else
         g_option_context_add_group (context, gtk_get_option_group (TRUE));
         retval = g_option_context_parse (context, &argc, &argv, &error);
         if (!retval) {
@@ -698,7 +690,6 @@ main (int argc, char *argv [])
                 g_error_free (error);
                 goto cleanup;
         }
-#endif
 
         gtk_widget_push_colormap (gdk_rgb_get_colormap ());
 
@@ -723,9 +714,7 @@ main (int argc, char *argv [])
 
         games_conf_shutdown ();
 
-#ifdef HAVE_GNOME
-        g_object_unref (program);
-#endif
+        games_runtime_shutdown ();
 
         return 0;
 }

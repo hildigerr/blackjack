@@ -1,3 +1,139 @@
+2008-11-04 23:00  thomashpa
+
+	* [r8256] trunk/NEWS: quick fixes for NEWS
+
+2008-11-04 22:38  jclinton
+
+	* [r8254] trunk/NEWS: Update NEWS file for 2.25.1 release.
+
+2008-11-04 14:25  chpe
+
+	* [r8252] trunk/libgames-support/games-runtime.c,
+	  trunk/libgames-support/games-runtime.h: Add game theme directory.
+	* [r8251] trunk/blackjack/src/blackjack.cpp,
+	  trunk/blackjack/src/chips.cpp, trunk/blackjack/src/dialog.cpp,
+	  trunk/blackjack/src/slot.cpp: Unify libgames-support includes,
+	  and include config.h.
+
+2008-10-28 18:16  chpe
+
+	* [r8216] trunk/libgames-support/games-help.c: Code style fix
+
+2008-10-28 13:44  chpe
+
+	* [r8213] trunk/blackjack/data/Ameristar.rules,
+	  trunk/blackjack/data/Atlantic_City.rules,
+	  trunk/blackjack/data/Vegas_Downtown.rules,
+	  trunk/blackjack/data/Vegas_Strip.rules: Keyfiles use false, not
+	  FALSE.
+
+2008-10-28 13:38  chpe
+
+	* [r8212] trunk/blackjack/data/Ameristar.rules,
+	  trunk/blackjack/data/Atlantic_City.rules,
+	  trunk/blackjack/data/Vegas_Downtown.rules,
+	  trunk/blackjack/data/Vegas_Strip.rules,
+	  trunk/blackjack/src/game.cpp: Port blackjack rules format to
+	  GKeyFile.
+
+2008-10-27 00:16  thomashpa
+
+	* [r8205] trunk/blackjack/src/menu.cpp,
+      trunk/libgames-support/games-help.c,
+	  trunk/libgames-support/games-help.h: move common help functionality to
+	  libgames-support/games-help.[ch]
+
+
+2008-10-26 14:45  chpe
+
+	* [r8202] trunk/blackjack/src/dialog.cpp,
+	  trunk/libgames-support/games-conf.c,
+	  trunk/libgames-support/games-conf.h,
+	  trunk/libgames-support/games-frame.h,
+	  trunk/libgames-support/games-stock.c,
+	  trunk/libgames-support/games-stock.h,
+	  trunk/libgames-support/render-cards.c,
+	  trunk/mahjongg/drawing.h: Build
+	  with *_DISABLE_DEPRECATED and *_DISABLE_SINGLE_INCLUDES. Add
+	  some missing includes.
+
+2008-10-26 10:24  thomashpa
+
+	* [r8200] trunk/libgames-support/games-conf.c: more libgnome removal
+
+2008-10-20 21:59  thomashpa
+
+	* [r8124] trunk/libgames-support/games-files.c: Add comment so others
+	  don't waste time chasing this warning. Also bumping version
+
+2008-10-15 20:18  thomashpa
+
+	* [r8050] trunk/blackjack/src/blackjack.cpp,
+	  trunk/blackjack/src/menu.cpp: rip out optional libgnome parts
+
+2008-10-14 01:13  thomashpa
+
+	* [r8019] trunk/blackjack/src/dialog.cpp: Reapply unintended revert
+
+2008-10-14 00:03  thomashpa
+
+	* [r8018] trunk/blackjack/src/menu.cpp: replace gnome_help_display
+	  with gtk_show_uri
+
+2008-10-13 07:18  rancell
+
+	* [r8007] trunk/libgames-support/games-conf.c: Read saved window
+	  configuration from correct GConf group (affects gnometris,
+	  gnibbles, gnobots) (Bug #544389)
+
+2008-10-13 06:18  rancell
+
+	* [r8001] trunk/blackjack/src/chips.cpp,
+	  trunk/blackjack/src/dialog.cpp, trunk/blackjack/src/game.cpp,
+	  trunk/blackjack/src/game.h, trunk/blackjack/src/hand.cpp: Fix
+	  compiler warnings
+
+2008-10-13 05:55  rancell
+
+	* [r8000] trunk/blackjack/src/game.cpp: Fixes to compile in Solaris (Bug
+	  #554746)
+
+2008-10-10 11:13  thomashpa
+
+    * trunk/blackjack/data/blackjack.desktop.in.in: Remove deprecated
+	  encoding entry in desktop files. Patch by Pacho Ramos in bug
+	  #551947
+
+2008-10-08 20:02  chpe
+
+	* [r7984] trunk/libgames-support/games-conf.c: Refactor accel map
+	  loading code to load the accel map from
+	  .config/gnome-games/${game}.accels even in the HAVE_GNOME case,
+	  if the game doesn't use GnomeProgram (e.g. aisleriot).
+
+2008-10-08 20:01  chpe
+
+	* [r7972] trunk/blackjack/src/dialog.cpp: Printf literal strings
+	  with %s. Fixes build errors with -Wformat-security.
+
+2008-09-27 13:11  chpe
+
+	* [r7938] trunk/libgames-support/games-runtime.h: Remove template
+	  lines.
+	* [r7936] trunk/blackjack/src/blackjack.cpp: Initialise the games runtime
+	  support.
+	* [r7933] trunk/libgames-support/games-card-theme.c,
+	  trunk/libgames-support/games-card.h,
+	  trunk/libgames-support/games-files.c,
+	  trunk/libgames-support/games-files.h,
+	  trunk/libgames-support/games-runtime.c,
+	  trunk/libgames-support/games-runtime.h: Add runtime directory
+	  provider.
+
+2008-09-22 00:15  jclinton
+
+	* [r7913] trunk/NEWS: Gnome Games 2.24.0
+
 2008-09-08 21:46  thomashpa
 
 	* [r7864] trunk/NEWS: gnome-games 2.23.92

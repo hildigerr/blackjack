@@ -1,3 +1,33 @@
+gnome-games 2.25.1
+==================
+
+This is the first 2.26 development release.
+
+A huge amount of kudos should go out to Thomas
+for his work on killing off libgnome.
+
+All games:
+  - GTK req. bumped to 2.14.0 for libgnome killoff (thomashpa, chpe)
+  - Remove directory defines from CPPFLAGs (chpe)
+  - Kill off libgnome usage (thomashpa, chpe) YAY! All games now start faster!
+  - Whitespace cleanups
+  - All games now build with gtk-only. libxml now checked for independently.
+    (chpe)
+  - -Wformat-security fixups (chpe)
+  - -Werror fixups (chpe)
+  - games-runtime: add runtime directory provider (thomashpa)
+  - Refactor accel map loading code to load the accel map from
+    .config/gnome-games/${game}.accels even in the HAVE_GNOME case, if the game
+    doesn't use GnomeProgram (e.g. aisleriot). (chpe)
+
+Blackjack:
+  - Port game rules to GKeyFile
+
+gnome-games 2.24.0
+==================
+
+This is the Gnome 2.24 stable release.
+
 gnome-games 2.23.92
 ==================
 
