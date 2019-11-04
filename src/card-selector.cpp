@@ -24,10 +24,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
-#include <libgames-support/games-card.h>
-#include <libgames-support/games-frame.h>
-#include <libgames-support/games-files.h>
-#include <libgames-support/games-card-theme.h>
+#include "games-card.h"
+#include "games-frame.h"
+#include "games-files.h"
+#include "games-card-theme.h"
 
 #include "card-selector.h"
 

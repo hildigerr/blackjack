@@ -27,7 +27,7 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-#include <libgames-support/games-runtime.h>
+#include "games-runtime.h"
 
 static GtkWidget *progress = NULL;
 static GtkWidget *label = NULL;

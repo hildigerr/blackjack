@@ -29,7 +29,7 @@
 #include <glib/gi18n.h>
 #include <glib/gstdio.h>
 
-#include <libgames-support/games-runtime.h>
+#include "games-runtime.h"
 
 #include "blackjack.h"
 #include "events.h"

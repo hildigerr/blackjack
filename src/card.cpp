@@ -25,8 +25,8 @@
 
 #include "blackjack.h"
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include <libgames-support/games-card-theme.h>
-#include <libgames-support/games-card-images.h>
+#include "games-card-theme.h"
+#include "games-card-images.h"
 #include "card.h"
 #include "card-selector.h"
 #include "chips.h"

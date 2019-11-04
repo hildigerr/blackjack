@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include <libgames-support/games-frame.h>
+#include "games-frame.h"
 #include "blackjack.h"
 #include "menu.h"
 #include "dialog.h"

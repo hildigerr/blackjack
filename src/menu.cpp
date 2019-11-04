@@ -29,8 +29,8 @@
 
 using namespace std;
 
-#include <libgames-support/games-help.h>
-#include <libgames-support/games-stock.h>
+#include "games-help.h"
+#include "games-stock.h"
 
 #include "blackjack.h"
 #include "menu.h"

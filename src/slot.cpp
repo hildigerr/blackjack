@@ -24,8 +24,8 @@
 #include <config.h>
 
 #include <stdlib.h>
-#include <libgames-support/games-preimage.h>
-#include <libgames-support/games-runtime.h>
+#include "games-preimage.h"
+#include "games-runtime.h"
 
 #include "blackjack.h"
 #include "slot.h"
