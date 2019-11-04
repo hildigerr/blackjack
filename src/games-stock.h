@@ -28,14 +28,12 @@
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
-
 /* These uses new icons */
 #define GAMES_STOCK_SCORES           "games-scores"
 #define GAMES_STOCK_PAUSE_GAME       "games-pause-game"
 #define GAMES_STOCK_RESUME_GAME      "games-resume-game"
 #define GAMES_STOCK_FULLSCREEN       "games-fullscreen"
 #define GAMES_STOCK_LEAVE_FULLSCREEN "games-leave-fullscreen"
-
 /* These use stock gtk icons */
 #define GAMES_STOCK_NEW_GAME         "games-new-game"
 #define GAMES_STOCK_RESTART_GAME     "games-restart-game"
@@ -44,19 +42,16 @@ G_BEGIN_DECLS
 #define GAMES_STOCK_HINT             "games-hint"
 #define GAMES_STOCK_END_GAME         "games-end-game"
 #define GAMES_STOCK_CONTENTS         "games-contents"
-
 /* These belong to us */
 #define GAMES_STOCK_TELEPORT         "games-teleport"
 #define GAMES_STOCK_RTELEPORT        "games-random-teleport"
-
 void games_stock_init (void);
 
-void games_stock_set_pause_actions (GtkAction *pause_action, 
-				    GtkAction *resume_action);
+void games_stock_set_pause_actions (GtkAction * pause_action,
+				    GtkAction * resume_action);
 
-void games_stock_prepare_for_statusbar_tooltips (GtkUIManager *ui_manager,
-						 GtkWidget    *statusbar);
+void games_stock_prepare_for_statusbar_tooltips (GtkUIManager * ui_manager,
+						 GtkWidget * statusbar);
 
 G_END_DECLS
-
 #endif /* __GAMES_STOCK_H__ */
