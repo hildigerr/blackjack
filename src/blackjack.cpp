@@ -230,7 +230,7 @@ bj_quit_app (void)
 
         bj_slot_free_pixmaps ();
         g_object_unref (surface);
-        g_object_unref (press_data->moving_cards);
+        gdk_window_destroy (press_data->moving_cards);
 
         gtk_widget_destroy (toplevel_window);
         gtk_main_quit ();
