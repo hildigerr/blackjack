@@ -1,3 +1,16 @@
+2008-08-04 19:33  thomashpa
+
+	* [r7805] trunk/NEWS: gnome-games 2.23.6
+
+2008-08-02 21:17  chpe
+
+	* [r7803] trunk/blackjack/src/game.cpp: Revert bogus patch from
+	  bug #444806
+
+2008-07-21 05:38  jclinton
+
+	* [r7783] trunk/NEWS: Gnome Games 2.23.5
+
 2008-04-21  Thomas H.P. Andersen  <phomes@gmail.com>
 
 	* NEWS: gnome-games 2.23.1

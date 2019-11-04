@@ -1,3 +1,23 @@
+gnome-games 2.23.6
+==================
+
+Blackjack:
+ - Revert bogus patch from bug #444806 (Christian Persch)
+
+gnome-games 2.23.5
+==================
+
+This is the first release of Gnome Games that generates its ChangeLog from SVN
+commit messages.
+
+gnome-games 2.23.4
+==================
+
+gnome-games 2.23.3
+==================
+
+No new features over the previous 2.23.1 have been added.
+
 gnome-games 2.23.1
 ==================
 
