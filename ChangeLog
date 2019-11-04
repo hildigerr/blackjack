@@ -1,3 +1,57 @@
+commit 8646ec7c1acbcc697dd3ef77c7d34e6ffe661492
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Nov 27 20:19:17 2009 +0100
+
+    libgames-support: Remove debug spew
+    (cherry picked from commit acd14650d13a528f264655755573574f69e0fc02)
+
+ libgames-support/games-conf.c |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit f5810acc2bccd412c00d4c13737f256815720b61
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Nov 27 20:00:24 2009 +0100
+
+    libgames-support: Add games_conf_save()
+
+    To explicitly flush the settings to disk. Tracks "dirty" status, so it
+    only writes when necessary.
+    (cherry picked from commit 0dc0b05300bb5088d10d5072cdc1e967b91403b7)
+
+ libgames-support/games-conf.c |  114 +++++++++++++++++++++++++++-------------
+ libgames-support/games-conf.h |    2 +
+ 2 files changed, 79 insertions(+), 37 deletions(-)
+
+commit 9af8974a997866aeedd1913157b44521a1a30c75
+Author: Christian Persch <chpe@gnome.org>
+Date:   Fri Nov 20 18:02:26 2009 +0100
+
+    libgames-support: Fix card suit enum
+
+    Hearts and Diamons were transposed.
+    (cherry picked from commit 7581dc577ea03f3dac83196a60b04f8648e9d882)
+
+ libgames-support/games-card.h |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit fbb4dd3e60fc7297825f639bc2097bdba7f552ea
+Author: Jason D. Clinton <me@jasonclinton.com>
+Date:   Mon Oct 19 16:42:32 2009 -0500
+
+    Update NEWS for Gnome Games 2.28.1
+
+ NEWS |   27 +++++++++++++++++++++++++++
+ 1 files changed, 27 insertions(+), 0 deletions(-)
+
+commit 45a0f03cafe9359277da8cc12ee9d47ec3d25b20
+Author: Jason D. Clinton <me@jasonclinton.com>
+Date:   Mon Sep 21 09:35:53 2009 -0500
+
+    GNOME Games 2.28.0
+
+ NEWS         |  129 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 130 insertions(+), 1 deletions(-)
+
 commit cab053f5d4c75795bf3472f63d07db96783bcffd
 Author: Robert Ancell <robert.ancell@gmail.com>
 Date:   Wed Sep 9 11:32:32 2009 +1000
