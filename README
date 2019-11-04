@@ -17,18 +17,6 @@ Contents
 - Security Issues
 - The Future
 
-=========================================================================
-
-!!! IMPORTANT !!!
-
-Migrating from 2.8 to 2.10.
-
-There is almost nothing you need to know, almost everything should
-Just Work. Anything else is a bug,
-report it to http://bugzilla.gnome.org/. 
-
-========================================================================
-
 Overview
 --------
 
@@ -58,7 +46,7 @@ Further information and screenshots can be found at:
 
 http://www.gnome.org/projects/gnome-games/
 
-developers should see
+Aspiring developers should see:
 
 http://www.gnome.org/projects/gnome-games/contributing.html
 
@@ -103,10 +91,11 @@ written for the GNOME environment. It is moderated and low volume.
 Maintainers
 -----------
 
-The current maintainers are:
+The current maintainers for gnome-games are:
 
- Callum McKenzie <callum@physics.otago.ac.nz>.
- Jon McCann <mccann@jhu.edu> (blackjack).
+ Richard Hoelscher <rah@rahga.com>
+ Jason Clinton <me@jasonclinton.com>
+ Andreas Røsdal <andrearo@stud.ntnu.no>
 
 While you can email them with suggestions and bug reports it is better
 to use either the bug tracking system (see below) or the mailing
@@ -152,10 +141,11 @@ about contributing to gnome-games.
 Requirements
 ------------
 
-To compile these packages you need at least the baseline GNOME 2.10
-development packages. You really, really, need GTK+ 2.6. You also need
-gettext 0.12 or newer. If you are building from CVS then you also need
-the CVS version of intltool.
+To compile these packages, we recommend using the baseline GNOME 2.14
+development packages. While gnome-games may compile with older versions,
+we will not accept bug reports for games used under those conditions.
+
+CVS checkouts will require the latest intltool.
 
 In addition it is useful to have a working C++ compiler (e.g. g++,
 part of the gcc suite).
@@ -175,12 +165,10 @@ cheating.
 The Future
 ----------
 
-The 2.10 release of gnome-games has been an incremental improvement
-over 2.8. 2.12 will be a similar incremental improvement. Once again I
-hope to concentrate on only a few games to bring them kicking and
-screaming into the 21st century. The following goals are still
-important in the long run:
- - Making it easier for individual players to introduce their own themes.
- - Scalability of the game graphics so that the game can be resized
-   to suit the player.
+As time marches on, we shall strive to drag more of our games kicking and
+screaming into the 21st century. The following is a short list of recent 
+priorities, and many more can be found in the bug tracker and the TODO file.
+ - Accessibility improvements.
+ - Better graphics rendering quality and speed.
+ - Making it easy for individual players to introduce their own themes.
  - Networking.

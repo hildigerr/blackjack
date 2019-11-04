@@ -1,10 +1,4 @@
-
---------------------------------------------------------------------------
-
-
 General:
-        - Make games respond to the gconf key change signals.
-	  (I no longer think this is a good idea)
         - Move more common code into the libgames-support library.
         - Make as much as possible scalable so we can have full-screen
           modes. (bug 80204)
@@ -23,10 +17,5 @@ libgames-support:
 	- Widgets other than the combo box for the GamesFileList.
 	- GamesFileList standard directory option for paths.
 	- Make a shared library. Rename to libgnome-games
+        - Documentation
         - Document
-	- Use a second thread for pre-generating card images (I think
-          this was shaunm's idea so he could take advantage of works' dual
-	  opteron).
-
-
-Make keys configurable?
