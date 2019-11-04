@@ -1,3 +1,15 @@
+gnome-games 2.21.90
+==================
+This is a pretty calm release of the development series as we prepare for an
+awesome 2.22 soon.
+
+Games support lib:
+  - Use the same code to register stock icons and named icons. Add LTR and RTL
+    variants for the GAMES_STOCK_UNDO/REDO_MOVE stock IDs (Christian Persch)
+  - Rework stock icon registration in preparation for using the gtk facilities.
+    Bug #511332 (Christian Persch)
+
+
 gnome-games 2.21.5
 ==================
 Anther rocking release from the gnome-games team.

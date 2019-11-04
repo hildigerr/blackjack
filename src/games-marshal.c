@@ -60,10 +60,10 @@ G_GNUC_INTERNAL void games_marshal_VOID__STRING_STRING (GClosure     *closure,
                                                         gpointer      marshal_data);
 void
 games_marshal_VOID__STRING_STRING (GClosure     *closure,
-                                   GValue       *return_value,
+                                   GValue       *return_value G_GNUC_UNUSED,
                                    guint         n_param_values,
                                    const GValue *param_values,
-                                   gpointer      invocation_hint,
+                                   gpointer      invocation_hint G_GNUC_UNUSED,
                                    gpointer      marshal_data)
 {
   typedef void (*GMarshalFunc_VOID__STRING_STRING) (gpointer     data1,
@@ -103,10 +103,10 @@ G_GNUC_INTERNAL void games_marshal_BOOLEAN__ENUM_INT (GClosure     *closure,
                                                       gpointer      marshal_data);
 void
 games_marshal_BOOLEAN__ENUM_INT (GClosure     *closure,
-                                 GValue       *return_value,
+                                 GValue       *return_value G_GNUC_UNUSED,
                                  guint         n_param_values,
                                  const GValue *param_values,
-                                 gpointer      invocation_hint,
+                                 gpointer      invocation_hint G_GNUC_UNUSED,
                                  gpointer      marshal_data)
 {
   typedef gboolean (*GMarshalFunc_BOOLEAN__ENUM_INT) (gpointer     data1,

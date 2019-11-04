@@ -204,25 +204,6 @@ games_stock_set_pause_actions (GtkAction * pause_action,
   set_pause_actions (resume_action, actions);
 }
 
-/* FIXME: This is for non-gtk icons. It only seems to go for the hicolor defaults. */
-static void
-add_stock_icon (GtkIconFactory * icon_factory,
-                const char *stock_id, const char *icon_name)
-{
-  GtkIconSource *source;
-  GtkIconSet *set;
-
-  source = gtk_icon_source_new ();
-  set = gtk_icon_set_new ();
-  gtk_icon_source_set_icon_name (source, icon_name);
-
-  gtk_icon_set_add_source (set, source);
-  gtk_icon_factory_add (icon_factory, stock_id, set);
-  gtk_icon_set_unref (set);
-  gtk_icon_source_free (source);
-}
-
-/* The same routine, but for filenames instead. */
 static void
 add_icon_from_file (GtkIconFactory * icon_factory,
                     const char *stock_id, const char *filename)
@@ -246,35 +227,97 @@ add_icon_from_file (GtkIconFactory * icon_factory,
 
 #endif /* !HAVE_HILDON */
 
+/* This will become GTK_CHECK_VERSION (2, 15, x) once the patch from gtk+ bug 511332 is committed */
+#undef HAVE_GTK_ICON_FACTORY_ADD_ALIAS
+
+#ifndef HAVE_GTK_ICON_FACTORY_ADD_ALIAS
+
+static void
+register_stock_icon (GtkIconFactory * icon_factory,
+                     const char * stock_id,
+                     const char * icon_name)
+{
+  GtkIconSource *source;
+  GtkIconSet *set;
+
+  set = gtk_icon_set_new ();
+
+  source = gtk_icon_source_new ();
+  gtk_icon_source_set_icon_name (source, icon_name);
+  gtk_icon_set_add_source (set, source);
+  gtk_icon_source_free (source);
+
+  gtk_icon_factory_add (icon_factory, stock_id, set);
+  gtk_icon_set_unref (set);
+}
+
+static void
+register_stock_icon_bidi (GtkIconFactory * icon_factory,
+                          const char * stock_id,
+                          const char * icon_name_ltr,
+                          const char * icon_name_rtl)
+{
+  GtkIconSource *source;
+  GtkIconSet *set;
+
+  set = gtk_icon_set_new ();
+
+  source = gtk_icon_source_new ();
+  gtk_icon_source_set_icon_name (source, icon_name_ltr);
+  gtk_icon_source_set_direction (source, GTK_TEXT_DIR_LTR);
+  gtk_icon_source_set_direction_wildcarded (source, FALSE);
+  gtk_icon_set_add_source (set, source);
+  gtk_icon_source_free (source);
+
+  source = gtk_icon_source_new ();
+  gtk_icon_source_set_icon_name (source, icon_name_rtl);
+  gtk_icon_source_set_direction (source, GTK_TEXT_DIR_RTL);
+  gtk_icon_source_set_direction_wildcarded (source, FALSE);
+  gtk_icon_set_add_source (set, source);
+  gtk_icon_source_free (source);
+
+  gtk_icon_factory_add (icon_factory, stock_id, set);
+  gtk_icon_set_unref (set);
+}
+
+#endif /* HAVE_GTK_ICON_FACTORY_ADD_ALIAS */
+
 void
 games_stock_init (void)
 {
   /* These stocks have a gtk stock icon */
-  const char *stock_item_with_gtk_stock[][2] = {
+  const char *stock_icon_aliases[][2] = {
     { GAMES_STOCK_CONTENTS,         GTK_STOCK_HELP },
     { GAMES_STOCK_HINT,             GTK_STOCK_DIALOG_INFO },
     { GAMES_STOCK_NEW_GAME,         GTK_STOCK_NEW },
-    { GAMES_STOCK_REDO_MOVE,        GTK_STOCK_REDO },
     { GAMES_STOCK_RESET,            GTK_STOCK_CLEAR },
     { GAMES_STOCK_RESTART_GAME,     GTK_STOCK_REFRESH },
+    { GAMES_STOCK_DEAL_CARDS,       GTK_STOCK_OK } /* FIXMEchpe */,
+#ifdef HAVE_GTK_ICON_FACTORY_ADD_ALIAS
+    { GAMES_STOCK_REDO_MOVE,        GTK_STOCK_REDO },
     { GAMES_STOCK_UNDO_MOVE,        GTK_STOCK_UNDO },
+#endif
 #ifndef HAVE_HILDON
     { GAMES_STOCK_FULLSCREEN,       GTK_STOCK_FULLSCREEN },
     { GAMES_STOCK_LEAVE_FULLSCREEN, GTK_STOCK_LEAVE_FULLSCREEN },
     { GAMES_STOCK_NETWORK_GAME,     GTK_STOCK_NETWORK },
     { GAMES_STOCK_NETWORK_LEAVE,    GTK_STOCK_STOP },
     { GAMES_STOCK_PLAYER_LIST,      GTK_STOCK_INFO },
+
+    { GAMES_STOCK_PAUSE_GAME,       "stock_timer_stopped" },
+    { GAMES_STOCK_RESUME_GAME,      "stock_timer" },
+    { GAMES_STOCK_SCORES,           "stock_scores" },
 #endif /* !HAVE_HILDON */
   };
 
-#ifndef HAVE_HILDON
-  /* These stocks has a icon name */
-  const char *stock_item_with_icon_name[][2] = {
-    { GAMES_STOCK_PAUSE_GAME,   "stock_timer_stopped" },
-    { GAMES_STOCK_RESUME_GAME,  "stock_timer" },
-    { GAMES_STOCK_SCORES,       "stock_scores" },
+#ifndef HAVE_GTK_ICON_FACTORY_ADD_ALIAS
+  const char *stock_icon_aliases_bidi[][3] = {
+    { GAMES_STOCK_REDO_MOVE, GTK_STOCK_REDO "-ltr", GTK_STOCK_REDO "-rtl" },
+    { GAMES_STOCK_UNDO_MOVE, GTK_STOCK_UNDO "-ltr", GTK_STOCK_UNDO "-rtl" },
   };
+#endif
 
+#ifndef HAVE_HILDON
   /* These stocks are using a private icon file */
   const char *stock_item_with_file[][2] = {
     { GAMES_STOCK_TELEPORT,   "teleport.png" },
@@ -303,6 +346,7 @@ games_stock_init (void)
     /* Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game" */
     { GAMES_STOCK_RESTART_GAME,     N_("_Restart"),           0, 0, NULL },
     { GAMES_STOCK_UNDO_MOVE,        N_("_Undo Move"),         STOCK_ACCEL (GDK_CONTROL_MASK, 0), STOCK_ACCEL ('z', GDK_F8), NULL },
+    { GAMES_STOCK_DEAL_CARDS,       N_("_Deal"),              GDK_CONTROL_MASK, 'd', NULL },
 #ifndef HAVE_HILDON
     { GAMES_STOCK_LEAVE_FULLSCREEN, N_("_Leave Fullscreen"),  0, GDK_F11, NULL },
     { GAMES_STOCK_NETWORK_GAME,     N_("Network _Game"),      GDK_CONTROL_MASK, 'g', NULL },
@@ -315,6 +359,7 @@ games_stock_init (void)
 #endif
 
     /* Work around maemo brokenness wrt. stock item translations */
+    /* FIXMEchpe: this only applies to maemo3; should be fixed in maemo4 */
 #ifdef HAVE_HILDON
     { GTK_STOCK_ABOUT,              N_("_About"),             0, 0, NULL },
     { GTK_STOCK_CANCEL,             N_("_Cancel"),            0, 0, NULL },
@@ -325,30 +370,36 @@ games_stock_init (void)
 
 #undef STOCK_ACCEL
 
-  GtkIconFactory *icon_factory;
   guint i;
+#if !defined(HAVE_GTK_ICON_FACTORY_ADD_ALIAS) || !defined(HAVE_HILDON)
+  GtkIconFactory *icon_factory;
 
   icon_factory = gtk_icon_factory_new ();
+#endif /* !HAVE_GTK_ICON_FACTORY_ADD_ALIAS || !HAVE_HILDON */
 
-  for (i = 0; i < G_N_ELEMENTS (stock_item_with_gtk_stock); ++i) {
-    GtkIconSet *icon_set;
-
-    /* FIXME: Only for gtk stock icons.
-     * Seems to support theme switching... but not for a11y?
-     */
-    icon_set =
-      gtk_icon_factory_lookup_default (stock_item_with_gtk_stock[i][1]);
-    gtk_icon_factory_add (icon_factory, stock_item_with_gtk_stock[i][0],
-                          icon_set);
+#ifdef HAVE_GTK_ICON_FACTORY_ADD_ALIAS
+  for (i = 0; i < G_N_ELEMENTS (stock_icon_aliases); ++i) {
+    gtk_icon_factory_add_alias (stock_icon_aliases[i][0],
+                                stock_icon_aliases[i][1]);
   }
 
-#ifndef HAVE_HILDON /* only need icons on non-hildon */
-  for (i = 0; i < G_N_ELEMENTS (stock_item_with_icon_name); ++i) {
-    add_stock_icon (icon_factory,
-                    stock_item_with_icon_name[i][0],
-                    stock_item_with_icon_name[i][1]);
+#else
+  for (i = 0; i < G_N_ELEMENTS (stock_icon_aliases); ++i) {
+    register_stock_icon (icon_factory,
+                         stock_icon_aliases[i][0],
+                         stock_icon_aliases[i][1]);
   }
 
+  for (i = 0; i < G_N_ELEMENTS (stock_icon_aliases_bidi); ++i) {
+    register_stock_icon_bidi (icon_factory,
+                              stock_icon_aliases_bidi[i][0],
+                              stock_icon_aliases_bidi[i][1],
+                              stock_icon_aliases_bidi[i][2]);
+  }
+#endif /* HAVE_GTK_ICON_FACTORY_ADD_ALIAS */
+
+#ifndef HAVE_HILDON
+  /* only need icons on non-hildon */
   for (i = 0; i < G_N_ELEMENTS (stock_item_with_file); i++) {
     add_icon_from_file (icon_factory,
                         stock_item_with_file[i][0],
@@ -356,13 +407,15 @@ games_stock_init (void)
   }
 #endif /* !HAVE_HILDON */
 
+#if !defined(HAVE_GTK_ICON_FACTORY_ADD_ALIAS) || !defined(HAVE_HILDON)
   gtk_icon_factory_add_default (icon_factory);
   g_object_unref (icon_factory);
+#endif /* !HAVE_GTK_ICON_FACTORY_ADD_ALIAS || !HAVE_HILDON */
 
   gtk_stock_add_static (games_stock_items, G_N_ELEMENTS (games_stock_items));
 }
 
-/* Returns a GPL license string for a specific game. */
+/* Returns a GPL 2+ license string for a specific game. */
 gchar *
 games_get_license (const gchar * game_name)
 {
@@ -389,7 +442,7 @@ games_get_license (const gchar * game_name)
 
 #if !GTK_CHECK_VERSION (2, 8, 0)
   /* We have to manually wrap the text, since the about dialogue cannot
-   * do it itselfbefore gtk 2.8.
+   * do it itself before gtk 2.8.
    */
   {
     char *p;
