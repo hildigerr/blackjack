@@ -1,3 +1,14 @@
+gnome-games 2.13.6
+==================
+
+This is the first beta release of gnome-games in anticipation of the
+2.14 release. For this release we are firmly in bug-fixing and
+polishing mode.
+
+General:
+ - Corrections to all the desktop file category entries.
+ - User-defined accelerators are now saved.
+
 gnome-games 2.13.5
 ==================
 
