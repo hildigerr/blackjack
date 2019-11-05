@@ -1,21 +1,9 @@
-General:
-        - Move more common code into the libgames-support library.
-        - Make as much as possible scalable so we can have full-screen
-          modes. (bug 80204)
-        - Seriously look at a11y for actually playing the games.
-        - Make games playable by keyboard (bug 126284)
-        - Look at network multi-player.
-	- Update debian files to be reasonable
-
-Blackjack:
-        - Eliminate the splash screen (and hopefully any recalculation).
-        - Multiplayer (bug 129639)
-        - Training mode (bug 129638)
-        - Rules dialog clean-up (bug 124613)
-
-libgames-support:
-	- Widgets other than the combo box for the GamesFileList.
-	- GamesFileList standard directory option for paths.
-	- Make a shared library. Rename to libgnome-games
-        - Documentation
-        - Document
+ - Reenable compiliation, identify requirements
+ - Look at network multi-player with GGZ Gaming Zone.
+ - Update debian files to be reasonable
+ - Eliminate the splash screen (and hopefully any recalculation).
+ - Multiplayer (bug 129639)
+ - Training mode (bug 129638)
+ - Rules dialog clean-up (bug 124613)
+ - Documentation
+ - Making it easy for individual players to introduce their own themes.

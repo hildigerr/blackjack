@@ -1,55 +1,12 @@
 ===============================================================================
-                             Gnome-Games
+                             Blackjack
 ===============================================================================
 
-Contents
---------
+Blackjack was dropped from Gnome-games after version 2.28.2. Gnome-games is a
+collection of simple, but addictive, games from the GNOME desktop project.
 
-- Overview
-- The Games
-- Website
-- License
-- Mailing List
-- Maintainers
-- Bug Reports
-- Requirements
-- Building Gnome-Games
-- Network Games
-- Security Issues
-- The Future
-
-Overview
---------
-
-Gnome-games is a collection of simple, but addictive, games from the
-GNOME desktop project. They represent many of the popular games and
-include card games, puzzle games and arcade games. They are meant to
-be the sort of game that can be played in five minutes or so. They are
-also meant to be fun enough that you will play them again and
-again. Of course we can't be held responsible for the time and
-productivity lost while playing them.
-
-The Games
----------
-
-Here is a list of the games in this compilation along with a brief
-description. The names in brackets are the program names you use from the
-command line.
-
-Blackjack       The casino card game without any need to actually pay
-                your gambling debts. (blackjack)
-
-
-Website
--------
-
-Further information and screenshots can be found at:
-
-http://www.gnome.org/projects/gnome-games/
-
-Aspiring developers should see:
-
-http://live.gnome.org/GnomeGames
+Blackjack is a casino card game also known as 21. There is no use of real money
+in this version of the game.
 
 License
 -------
@@ -81,71 +38,10 @@ above. Please check the artwork files for full details. If there is no
 information embedded within the file or alongside it then it is licensed
 under the GPL.
 
-Mailing List
-------------
-
-Gnome-games has a mailing list at <games-list@gnome.org>. You can
-subscribe to the list at:
-
- http://mail.gnome.org/mailman/listinfo/games-list
-
-and browse the archives at:
-
- http://mail.gnome.org/archives/games-list/
-
-The mailing list is for announcements and discussion about games
-written for the GNOME environment. It is moderated and low volume.
-
-Maintainers
------------
-
-The current maintainers for gnome-games are:
-
- Jason Clinton <me@jasonclinton.com>
-
-While you can email them with suggestions and bug reports it is better
-to use either the bug tracking system (see below) or the mailing
-list. Even for suggestions the bug tracking system is better because
-it ensures that there is an archive of the discussion and it is harder
-for the maintainer to loose suggestions. For more general discussion,
-policy issues and issues that many people will be interested in, the
-mailing list is the best place.
-
-Reporting Bugs
---------------
-
-If you find any bugs in gnome-games, or even just have a suggestion
-for an improvement to the games then please submit a bug report. There
-are two ways to do this, either by using the web-based interface to
-the GNOME bug tracking system at
-
-http://bugs.gnome.org/simple-bug-guide.cgi
-
-or use the bug reporting tool, which you can find under the Development
-sub-menu of the GNOME menu. The bug reporting tool can also be launched
-from the command line via the bug-buddy command.
-
-If a game crashes then the bug reporting tool will be automatically
-launched.
-
-There is one problem with the standard bug reporting tools and
-gnome-games. Because gnome-games uses setgid bit to give the programs
-extra privileges the ordinary bug reporting tools don't do a complete
-job because a stack trace cannot be made. Stack traces are very useful
-in determining what went wrong. To get a proper stack trace with
-gnome-games binaries then you should try and recreate your crash while
-running as the root use, or, with the setgid bit temporarily removed
-from the file. Both these require root privileges which you may not
-have.
-
 Contributing
 ------------
 
-See the file HACKING and the webpages mentioned within for details
-about contributing to gnome-games. In particular, the following
-page is relevant:
-
-http://live.gnome.org/GnomeGames/Contributing
+See the file HACKING for details about coding style.
 
 Requirements
 ------------
@@ -161,49 +57,5 @@ This is the list of required software packages for gnome-games:
  - scrollkeeper
  - expat
 
-To compile these packages, we recommend using the baseline GNOME 2.18.x
-development packages. While gnome-games may compile with older versions,
-we will not accept bug reports for games used under those conditions.
-
-CVS checkouts will require the latest intltool.
-
-In addition it is useful to have a working C++ compiler (e.g. g++,
-part of the gcc suite).
-
-
-Building Gnome-Games
+Building Blackjack
 --------------------
-
-Network Games
---------------------
-Network games can be played with GGZ Gaming Zone
-
-Network games can be started using the "Network Game" menu item
-in the supported games. Network games can also be started using
-the ggz-gtk application which is a part of GGZ.
-
-GGZ can be downloaded from http://www.ggzgamingzone.org/
-
-Several other games in gnome-games will get GGZ support in the future.
-Further, it is planned to implement support for observers and statistics.
-
-For an up-to-date list of GGZ servers, see: http://live.gnome.org/GnomeGames
-Behave politely on the GGZ game servers, and have a lot of fun.
-
-
-Security Issues
----------------
-
-It might seem a little strange that a collection of games needs to
-talk about security issues, but it all stems from an attempt to avoid
-cheating.
-
-The Future
-----------
-
-As time marches on, we shall strive to drag more of our games kicking and
-screaming into the 21st century. The following is a short list of recent
-priorities, and many more can be found in the bug tracker and the TODO file.
- - Usability, Accessibility and Fancibility improvements.
- - Better graphics rendering quality and speed.
- - Making it easy for individual players to introduce their own themes.
