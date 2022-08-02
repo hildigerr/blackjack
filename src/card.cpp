@@ -21,7 +21,7 @@
  * USA
  */
 
-#include <config.h>
+#include "config.h"
 
 #include "blackjack.h"
 #include <gdk-pixbuf/gdk-pixbuf.h>

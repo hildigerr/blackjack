@@ -20,7 +20,7 @@
 
 /* Manage a set of pixbufs containing a deck of cards. */
 
-#include <config.h>
+#include "config.h"
 
 #include <string.h>
 #include <glib.h>

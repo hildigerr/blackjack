@@ -21,7 +21,7 @@
  * USA
  */
 
-#include <config.h>
+#include "config.h"
 
 #include "splash.h"
 #include <glib/gi18n.h>

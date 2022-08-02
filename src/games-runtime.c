@@ -19,7 +19,7 @@
  * USA
  */
 
-#include <config.h>
+#include "config.h"
 
 #include <locale.h>
 
