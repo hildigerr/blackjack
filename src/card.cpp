@@ -136,7 +136,7 @@ bj_card_set_size (gint width, gint height)
                 }
                 if (!theme) {
                         /* No more options; quit. */
-                        g_warning ("Failed to load any theme !");
+                        g_warning ("Failed to load card theme !");
                         exit (1);
                 }
 
