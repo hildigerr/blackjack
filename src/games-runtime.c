@@ -231,8 +231,8 @@ static const DerivedDirectory derived_directories[] = {
   /* Keep this in the same order as in the GamesRuntimeDirectory enum! */
 #ifdef ENABLE_BINRELOC
   { GAMES_RUNTIME_MODULE_DIRECTORY,   "share"              }, /* GAMES_RUNTIME_DATA_DIRECTORY              */
-  { GAMES_RUNTIME_DATA_DIRECTORY,     "gnome-games-common" }, /* GAMES_RUNTIME_COMMON_DATA_DIRECTORY       */
-  { GAMES_RUNTIME_DATA_DIRECTORY,     "gnome-games"        }, /* GAMES_RUNTIME_PKG_DATA_DIRECTORY          */
+  { GAMES_RUNTIME_DATA_DIRECTORY,     app_name             }, /* GAMES_RUNTIME_COMMON_DATA_DIRECTORY       */
+  { GAMES_RUNTIME_DATA_DIRECTORY,     app_name             }, /* GAMES_RUNTIME_PKG_DATA_DIRECTORY          */
   { GAMES_RUNTIME_DATA_DIRECTORY,     "scores"             }, /* GAMES_RUNTIME_SCORES_DIRECTORY            */
 #endif /* ENABLE_BINRELOC */
   { GAMES_RUNTIME_DATA_DIRECTORY,         "locale"         }, /* GAMES_RUNTIME_LOCALE_DIRECTORY            */
@@ -242,7 +242,7 @@ static const DerivedDirectory derived_directories[] = {
   { GAMES_RUNTIME_PKG_DATA_DIRECTORY,     "icons"          }, /* GAMES_RUNTIME_ICON_THEME_DIRECTORY        */
   { GAMES_RUNTIME_PKG_DATA_DIRECTORY,     "pixmaps"        }, /* GAMES_RUNTIME_PIXMAP_DIRECTORY            */
   { GAMES_RUNTIME_PKG_DATA_DIRECTORY,     "sounds"         }, /* GAMES_RUNTIME_SOUNDS_DIRECTORY            */
-  { GAMES_RUNTIME_PKG_DATA_DIRECTORY,     NULL             }, /* GAMES_RUNTIME_GAME_DATA_DIRECTORY         */
+  { GAMES_RUNTIME_PKG_DATA_DIRECTORY,     ""             }, /* GAMES_RUNTIME_GAME_DATA_DIRECTORY         */
   { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "games"          }, /* GAMES_RUNTIME_GAME_GAMES_DIRECTORY        */
   { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "pixmaps"        }, /* GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY       */
   { GAMES_RUNTIME_GAME_DATA_DIRECTORY,    "themes"         }, /* GAMES_RUNTIME_GAME_THEME_DIRECTORY        */
@@ -527,13 +527,7 @@ games_runtime_get_directory (GamesRuntimeDirectory directory)
 #else /* !ENABLE_BINRELOC */
 
     case GAMES_RUNTIME_DATA_DIRECTORY:
-      path = g_strdup (DATADIR);
-      break;
-
     case GAMES_RUNTIME_COMMON_DATA_DIRECTORY:
-      path = g_build_filename (DATADIR, "gnome-games-common", NULL);
-      break;
-
     case GAMES_RUNTIME_PKG_DATA_DIRECTORY:
       path = g_strdup (PKGDATADIR);
       break;
