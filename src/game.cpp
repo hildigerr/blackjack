@@ -328,12 +328,10 @@ bj_game_find_and_read_rules (const gchar *filename)
 static gchar *
 bj_game_get_config_dir (void)
 {
-#define GNOME_DOT_GNOME            ".gnome2/"
         gchar *conf_dir = NULL;
 
-        conf_dir = g_build_filename (g_get_home_dir (),
-                                     GNOME_DOT_GNOME,
-                                     "blackjack.d",
+        conf_dir = g_build_filename (g_get_user_config_dir (),
+                                     "blackjack",
                                      NULL);
 
         if (g_mkdir_with_parents (conf_dir, 0700) < 0 && errno != EEXIST)

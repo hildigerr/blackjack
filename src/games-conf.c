@@ -224,7 +224,7 @@ games_conf_get_accel_map_path (GamesConf *conf,
 #ifdef HAVE_GNOME
   conf_dir = g_build_filename (g_get_home_dir (), ".gnome2", "accels", NULL);
 #else
-  conf_dir = g_build_filename (g_get_user_config_dir (), "gnome-games", NULL);
+  conf_dir = g_build_filename (g_get_user_config_dir (), game_name, NULL);
 #endif
   if (!conf_dir)
     goto loser;
@@ -426,7 +426,7 @@ games_conf_constructor (GType type,
 
   priv->main_group = g_strdup_printf ("%s Config", priv->game_name);
 
-  conf_file = g_build_filename (g_get_user_config_dir (), "gnome-games", game_name, NULL);
+  conf_file = g_build_filename (g_get_user_config_dir (), game_name, "config", NULL);
 
   priv->key_file = g_key_file_new ();
   if (!g_key_file_load_from_file (priv->key_file, conf_file, 0, &error)) {
@@ -618,8 +618,8 @@ games_conf_save (void)
     return;
 
   game_name = g_ascii_strdown (priv->game_name, -1);
-  conf_dir = g_build_filename (g_get_user_config_dir (), "gnome-games", NULL);
-  conf_file = g_build_filename (conf_dir, game_name, NULL);
+  conf_dir = g_build_filename (g_get_user_config_dir (), game_name, NULL);
+  conf_file = g_build_filename (conf_dir, "config", NULL);
 
   /* Ensure the directory exists; mode 0700 per the XDG basedir spec. */
   if (g_mkdir_with_parents (conf_dir, 0700) < 0) {
