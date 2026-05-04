@@ -52,5 +52,5 @@ install: blackjack help/blackjack.6.gz help/blackjack.html mo
 	done
 	install -Dm644 data/blackjack.desktop ${DESTDIR}/usr/share/applications/blackjack.desktop
 	install -Dm644 help/blackjack.6.gz ${DESTDIR}/usr/share/man/man6/blackjack.6.gz
-	install -Dm644 pixmaps/icons/hicolor_apps_48x48_gnome-blackjack-old.png \
-		${DESTDIR}/usr/share/icons/hicolor/48x48/apps/gnome-blackjack.png
+	install -Dm644 pixmaps/icons/hicolor_apps_scalable_gnome-blackjack.svg \
+		${DESTDIR}/usr/share/icons/hicolor/scalable/apps/gnome-blackjack.svg
