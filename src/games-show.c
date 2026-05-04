@@ -144,7 +144,7 @@ games_show_error (GtkWidget *window,
   g_free (primary_text);
 
   gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-                                            "%s", error->message);
+                                            "%s", error ? error->message: "Unknown error");
 
 #ifdef HAVE_HILDON
   /* Empty title shows up as "<unnamed>" on maemo */

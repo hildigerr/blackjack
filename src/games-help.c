@@ -123,6 +123,9 @@ games_help_display_full (GtkWidget *window,
   } else {
     help_uri = g_strdup_printf ("http://library.gnome.org/users/%s/stable/", doc_module);
   }
+#else
+  /* No Help URI */
+  return FALSE;
 #endif
 
   ret = games_show_uri (screen, help_uri, gtk_get_current_event_time (), error);

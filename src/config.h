@@ -7,3 +7,5 @@
 
 #define GAMES_CARD_THEME_DEFAULT_FORMAT_STRING "svg"
 #define GAMES_CARD_THEME_DEFAULT "bonded"
+
+#define HELP_FILE_FORMAT "html"
