@@ -1,0 +1,503 @@
+# translation of gnome-games.master.kn.po to Kannada
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.master.kn\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-18 21:04+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "ನೆರವಿನ ಕಡತ “%s.%s” ಕಂಡು ಬಂದಿಲ್ಲ"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "“%s” ಗಾಗಿ ನೆರವನ್ನು ತೋರಿಸಲಾಗಿಲ್ಲ"
+
+msgid "Could not show link"
+msgstr "ಕೊಂಡಿಯನ್ನು ತೋರಿಸಲಾಗಿಲ್ಲ"
+
+msgid "Error"
+msgstr "ದೋಷ"
+
+msgid "View help for this game"
+msgstr "ಈ ಆಟಕ್ಕೆ ನೆರವನ್ನು ನೋಡಿ"
+
+msgid "End the current game"
+msgstr "ಈಗಿನ ಆಟವನ್ನು ಕೊನೆಗೊಳಿಸು"
+
+msgid "Toggle fullscreen mode"
+msgstr "ಪೂರ್ಣತೆರೆ ವಿಧಾನಕ್ಕೆ ಬದಲಾಯಿಸು"
+
+msgid "Get a hint for your next move"
+msgstr "ನಿಮ್ಮ ಮುಂದಿನ ನಡೆಗೆ ಸುಳಿವನ್ನು ಪಡೆದುಕೊಳ್ಳಿ"
+
+msgid "Leave fullscreen mode"
+msgstr "ಪೂರ್ಣತೆರೆ ಕ್ರಮದಿಂದ ಹೊರ ತೆರಳು"
+
+msgid "Start a new multiplayer network game"
+msgstr "ಅನೇಕ ಆಟಗಾರರನ್ನು ಒಳಗೊಂಡಂತಹ ಹೊಸ ಜಾಲಬಂಧ ಆಟವನ್ನು ಆರಂಭಿಸು"
+
+msgid "End the current network game and return to network server"
+msgstr "ಈಗಿನ ಜಾಲಬಂಧ ಆಟವನ್ನು ಕೊನೆಗೊಳಿಸಿ ಜಾಲಬಂಧ ಪರಿಚಾರಕಕ್ಕೆ ತೆರಳು"
+
+msgid "Start a new game"
+msgstr "ಒಂದು ಹೊಸ ಆಟವನ್ನು ಆರಂಭಿಸು"
+
+msgid "Pause the game"
+msgstr "ಆಟವನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸು"
+
+msgid "Show a list of players in the network game"
+msgstr "ಜಾಲಬಂಧ ಆಟದಲ್ಲಿ ಆಟಗಾರರ ಒಂದು ಪಟ್ಟಿಯನ್ನು ತೋರಿಸು"
+
+msgid "Redo the undone move"
+msgstr "ರದ್ದುಗೊಳಿಸಲಾದ ನಡೆಯನ್ನು ಪುನಃ ನಡೆಸು"
+
+msgid "Restart the game"
+msgstr "ಆಟವನ್ನು ಪುನರಾರಂಭಿಸು"
+
+msgid "Resume the paused game"
+msgstr "ತಾತ್ಕಾಲಿಕ ನಿಲ್ಲಿಸಲಾದ ಆಟವನ್ನು ಮರು ಆರಂಭಿಸು"
+
+msgid "View the scores"
+msgstr "ಸ್ಕೋರನ್ನು ನೋಡು"
+
+msgid "Undo the last move"
+msgstr "ಹಿಂದಿನ ನಡೆಯನ್ನು ರದ್ದುಗೊಳಿಸು"
+
+msgid "About this game"
+msgstr "ಈ ಆಟದ ಬಗ್ಗೆ"
+
+msgid "Close this window"
+msgstr "ಈ ವಿಂಡೋವನ್ನು ಮುಚ್ಚು"
+
+msgid "Configure the game"
+msgstr "ಆಟವನ್ನು ಸಂರಚಿಸು"
+
+msgid "Quit this game"
+msgstr "ಈ ಆಟದಿಂದ ನಿರ್ಗಮಿಸು"
+
+msgid "_Contents"
+msgstr "ವಿಷಯಗಳು(_C)"
+
+msgid "_Fullscreen"
+msgstr "ಪೂರ್ಣತೆರೆ(_F)"
+
+msgid "_Hint"
+msgstr "ಸುಳಿವು(_H)"
+
+msgid "_New"
+msgstr "ಹೊಸ(_N)"
+
+msgid "_New Game"
+msgstr "ಹೊಸ ಆಟ(_N)"
+
+msgid "_Redo Move"
+msgstr "ರದ್ದು ಮಾಡಲಾದ ನಡೆಯನ್ನು ಪುನಃ ಮಾಡು(_R)"
+
+msgid "_Reset"
+msgstr "ಮರಳಿ ಅಣಿಗೊಳಿಸು(_R)"
+
+msgid "_Restart"
+msgstr "ಪುನಃ ಆರಂಭಿಸು(_R)"
+
+msgid "_Undo Move"
+msgstr "ನಡೆಯನ್ನು ರದ್ದುಗೊಳಿಸು(_U)"
+
+msgid "_Deal"
+msgstr "ಡೀಲ್(_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "ಪೂರ್ಣತೆರೆಯನ್ನು ಬಿಟ್ಟು ಬಿಡು(_L)"
+
+msgid "Network _Game"
+msgstr "ಜಾಲಬಂಧ ಆಟ(_G)"
+
+msgid "L_eave Game"
+msgstr "ಆಟವನ್ನು ತ್ಯಜಿಸು(_e)"
+
+msgid "Player _List"
+msgstr "ಆಟಗಾರರ ಪಟ್ಟಿ(_L)"
+
+msgid "_Pause"
+msgstr "ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸು(_ P)"
+
+msgid "Res_ume"
+msgstr "ಮರಳಿ ಆರಂಭಿಸು(_u)"
+
+msgid "_Scores"
+msgstr "ಸ್ಕೋರುಗಳು(_S)"
+
+msgid "_End Game"
+msgstr "ಆಟವನ್ನು ಮುಗಿಸು(_E)"
+
+msgid "_About"
+msgstr "ಇದರ ಬಗ್ಗೆ(_A)"
+
+msgid "_Cancel"
+msgstr "ರದ್ದು ಮಾಡು(_C)"
+
+msgid "_Close"
+msgstr "ಮುಚ್ಚು(_C)"
+
+msgid "_OK"
+msgstr "ಸರಿ(_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "ಬ್ಲಾಕ್‍ಜಾಕ್ - %s"
+
+msgid "_Game"
+msgstr "ಆಟ(_G)"
+
+msgid "_View"
+msgstr "ನೋಟ(_V)"
+
+msgid "Restart the current game"
+msgstr "ಪ್ರಸಕ್ತ ಆಟವನ್ನು ಪುನರಾರಂಭಿಸು"
+
+msgid "Show a hint"
+msgstr "ಒಂದು ಸುಳಿವನ್ನು ತೋರಿಸು"
+
+msgid "_Settings"
+msgstr "ಸಂಯೋಜನೆಗಳು(_S)"
+
+msgid "_Control"
+msgstr "ನಿಯಂತ್ರಣ(_C)"
+
+msgid "D_eal"
+msgstr "ಡೀಲ್(_e)"
+
+msgid "Deal a new hand"
+msgstr "ಹೊಸ ಕೈಯನ್ನು ಡೀಲ್ ಮಾಡಿ"
+
+msgid "_Hit"
+msgstr "ಸುಳಿವು(_H)"
+
+msgid "Add a card to the hand"
+msgstr "ಕೈಗೆ ಒಂದು ಹೊಸ ಎಲೆಯನ್ನು ಸೇರಿಸು"
+
+msgid "_Stand"
+msgstr "ನಿಲ್ಲು(_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "ಕೈಯಿಗೆ ಎಲೆಗಳನ್ನು ಸೇರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸು"
+
+msgid "S_urrender"
+msgstr "ಶರಣಾಗು(_u)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "ನಿಮ್ಮ ವೇಜರಿನ ಅರ್ಧ ಮೊತ್ತಕ್ಕೆ ಈ ಕೈಯನ್ನು ಬದಲಾಯಿಸಿಕೊಳ್ಳಿ"
+
+msgid "_Double down"
+msgstr "ಎರಡು ಪಟ್ಟು(_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "ಒಂದೆ ಹೊಡೆತಕ್ಕೆ ನಿಮ್ಮ ವೇಜರನ್ನು ಎರಡು ಪಟ್ಟಾಗಿಸಿ"
+
+msgid "S_plit the hand"
+msgstr "ಕೈಯನ್ನು ಪಾಲುಮಾಡು(_p)"
+
+msgid "Split cards in two new hands"
+msgstr "ಎಲೆಗಳನ್ನು ಎರಡು ಹೊಸ ಕೈಗಳಾಗಿ ಪಾಲುಮಾಡಿ"
+
+msgid "_Help"
+msgstr "ನೆರವು(_H)"
+
+msgid "_Toolbar"
+msgstr "ಉಪಕರಣಪಟ್ಟಿ(_T)"
+
+msgid "Show toolbar"
+msgstr "ಉಪಕರಣಪಟ್ಟಿಯನ್ನು ತೋರಿಸು"
+
+msgid "Cards left:"
+msgstr "ಬಾಕಿ ಇರುವ ಎಲೆಗಳು:"
+
+msgid "Wager:"
+msgstr "ವೇಜರ್:"
+
+msgid "Balance:"
+msgstr "ಬ್ಯಾಲೆನ್ಸ್‍:"
+
+msgid "Place your wager or deal a hand"
+msgstr "ನಿಮ್ಮ ವೇಜರನ್ನು ಇರಿಸಿ ಅಥವ ಒಂದು ಕೈಯನ್ನು ಡೀಲ್ ಮಾಡಿ"
+
+msgid "Blackjack rule set to use"
+msgstr "ಬಳಸಲು ಅಣಿಗೊಳಿಸಲಾದ ಬ್ಲಾಕ್‌ಜಾಕ್ ನಿಯಮಗಳು"
+
+msgid "Card Style"
+msgstr "ಎಲೆಯ ಶೈಲಿ"
+
+msgid "Would you like insurance?"
+msgstr "ನೀವು ಇನ್ಶುರೆನ್ಸನ್ನು ಬಯಸುತ್ತೀರೆ?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"ಇನ್ಸೂರೆನ್ಸ್‌ ಎನ್ನುವುದು ನೈಸರ್ಗಿಕ 21 (ಅಂದರೆ blackjack) ಅನ್ನು ಹೊಂದಿರುವ ಒಬ್ಬ ಡೀಲರ್ "
+"ಹೊಂದಿರುವ ಮೂಲ ವೇಜರಿನ ಬದಿ ವೇಜರಿನ 50% ಆಗಿರುತ್ತದೆ ಹಾಗು ಡೀಲರಿನ ಮೇಲಕ್ಕೆ ಕಾಣಿಸುವ "
+"ಎಲೆಯು ಒಂದು ಎಕ್ಕ ಆಗಿದ್ದಾಗ ಇದನ್ನು ನೀಡಲಾಗುತ್ತದೆ. ಡೀಲರ್ ಒಂದು ನೈಸರ್ಗಿಕ 21 ಅನ್ನು "
+"ಹೊಂದಿದ್ದಲ್ಲಿ ಆಟಗಾರನಿಗೆ ದುಪ್ಪಟ್ಟನ್ನು ನೀಡಲಾಗುವುದು."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"ನಿಮ್ಮ ವೇಜರನ್ನು ಅಣಿಗೊಳಿಸಿ ಹಾಗು ಒಂದು ಹೊಸ ಕೈಯನ್ನು ಡೀಲ್ ಮಾಡಲು ಬಿಳಿಯ ಅಂಚಿನ ಮೇಲೆ "
+"ಕ್ಲಿಕ್ಕಿಸಿ."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+"ನಿಮ್ಮ ವೇಜರನ್ನು ಅಣಿಗೊಳಿಸಿ ಅಥವ ಒಂದು ಹೊಸ ಕೈಯನ್ನು ಡೀಲ್ ಮಾಡಲು ಎಲೆಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ."
+
+msgid "Blackjack Preferences"
+msgstr "ಬ್ಲಾಕ್‍ಜಾಕ್ ಆದ್ಯತೆಗಳು"
+
+msgid "Game"
+msgstr "ಆಟ"
+
+msgid "_Display hand probabilities"
+msgstr "ಕೈಯ ಸಾಧ್ಯತೆಗಳನ್ನು ತೋರಿಸು(_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "ತ್ವರಿತ ಡೀಲ್ (ಪ್ರತಿ ಎಲೆಗಳ ನಡುವೆ ವಿಳಂಬ ಇಲ್ಲದೆ)(_Q)"
+
+msgid "_Never take insurance"
+msgstr "ಎಂದಿಗೂ ಇನ್ಶೂರೆನ್ಸ್‍ ತೆಗೆದುಕೊಳ್ಳಬೇಡಿ(_N)"
+
+msgid "_Reset Balance"
+msgstr "ಬಾಕಿಯನ್ನು ಮರಳಿ ಅಣಿಗೊಳಿಸಿ(_R)"
+
+msgid "Rules"
+msgstr "ನಿಯಮಗಳು"
+
+msgid "Name"
+msgstr "ಹೆಸರು"
+
+msgid "Decks"
+msgstr "ಡೆಕ್‍ಗಳು"
+
+msgid "Hit Soft 17"
+msgstr "ಸಾಫ್ಟ್‍ 17 ನ್ನು ಹೊಡೆಯಿರಿ"
+
+msgid "Double Any Total"
+msgstr "ಯಾವುದೆ ಮೊತ್ತವನ್ನು ಎರಡು ಪಟ್ಟಾಗಿಸು"
+
+msgid "Double 9"
+msgstr "ಎರಡುಪಟ್ಟು 9"
+
+msgid "Double Soft"
+msgstr "ಎರಡುಪಟ್ಟು ಸಾಫ್ಟ್‍"
+
+msgid "Double After Hit"
+msgstr "ಹೊಡೆದ ನಂತರ ಎರಡುಪಟ್ಟು"
+
+msgid "Double After Split"
+msgstr "ಪಾಲುಮಾಡಿದ ನಂತರ ಎರಡುಪಟ್ಟು"
+
+msgid "Resplit"
+msgstr "ಮರಳಿ ಪಾಲುಮಾಡಿ"
+
+msgid "Resplit Aces"
+msgstr "ಏಸ್‌ಗಳನ್ನು ಇನ್ನೊಮ್ಮೆ ಪಾಲುಮಾಡಿ"
+
+msgid "Surrender"
+msgstr "ಶರಣಾಗು"
+
+msgid "Dealer Speed"
+msgstr "ಡೀಲರಿನ ವೇಗ"
+
+msgid "Click to double your wager"
+msgstr "ನಿಮ್ಮ ವೇಜರನ್ನು ಎರಡುಪಟ್ಟಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "ನಿಮ್ಮ ವೇಜರನ್ನು %.2f ಪಟ್ಟು ಹೆಚ್ಚಿಸಲು ಎರಡುಬಾರಿ ಕ್ಲಿಕ್ ಮಾಡಿ"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "ನಿಮ್ಮ ವೇಜರನ್ನು %.2f ಪಟ್ಟು ಕಡಿಮೆಮಾಡಲು ಎರಡುಬಾರಿ ಕ್ಲಿಕ್ ಮಾಡಿ"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"ಇನ್ನೊಂದು ಎಲೆಯನ್ನು ಡೀಲ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ; ಜೋಡಿಯನ್ನು ಪಾಲುಮಾಡಲು ಎಲೆಯನ್ನು ಹೊರಗೆಳೆಯಿರಿ"
+
+msgid "Click to deal another card"
+msgstr "ಇನ್ನೊಂದು ಎಲೆಯನ್ನು ಡೀಲ್ ಮಾಡಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "ನಿಮ್ಮ ಕೈಗೆ ಎಲೆಗಳನ್ನು ಸೇರಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
+
+msgid "Click to deal a new hand"
+msgstr "ಹೊಸ ಕೈಯನ್ನು ಡೀಲ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
+
+msgid "Blackjack can't load the requested file"
+msgstr "ಮನವಿ ಸಲ್ಲಿಸಲಾದ ಕಡತವನ್ನು ಬ್ಲಾಕ್‌ಜಾಕ್‌ನಿಂದ ಲೋಡ್‌ ಮಾಡಲಾಗಿಲ್ಲ"
+
+msgid "Please check your Blackjack installation"
+msgstr "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಜಾಕ್‌ ಅನುಸ್ಥಾಪನೆಯನ್ನು ಪರೀಕ್ಷಿಸಿ"
+
+msgid "The best option is to stand"
+msgstr "ನಿಲ್ಲಿಸುವುದು ಉತ್ತಮ ಆಯ್ಕೆಯಾಗಿದೆ"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"ನಿಲ್ಲಿಸುವುದು ಎಂದರೆ, ನಿಮ್ಮ ಕೈಗೆ ಎಲೆಗಳನ್ನು ಸೇರಿಸುವುದನ್ನು ನಿಲ್ಲಿಸುವುದಾಗಿದೆ. ಹೀಗೆ "
+"ಮಾಡಲು ಡೀಲರನ ಎಲೆಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ ಅಥವ 'ನಿಯಂತ್ರಣ' ಮೆನುವಿನಿಂದ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ."
+
+msgid "The best option is to hit"
+msgstr "ಹೊಡೆಯುವುದು ಉತ್ತಮ ಆಯ್ಕೆಯಾಗಿದೆ"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"ಹೊಡೆಯುವುದು ಎಂದರೆ, ನಿಮ್ಮ ಕೈಗೆ ಇನ್ನೊಂದು ಎಲೆಯನ್ನು ಸೇರಿಸುವುದು. ಹೀಗೆ ಮಾಡಲು ನಿಮ್ಮ "
+"ಎಲೆಗಳ ಮೇಲೆ ಒಮ್ಮೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಅಥವ 'ನಿಯಂತ್ರಣ' ಮೆನುವಿನಿಂದ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ."
+
+msgid "The best option is to double down"
+msgstr "ಉತ್ತಮ ಆಯ್ಕೆ ಎಂದರೆ ಎರಡು ಪಟ್ಟು ಹೆಚ್ಚಿಸುವುದು"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"ಎರಡು ಪಟ್ಟು ಹೆಚ್ಚಿಸುವುದು ಎಂದರೆ, ಆರಂಭದ ವೇಜರನ್ನು ಎರಡುಪಟ್ಟು ಹೆಚ್ಚಿಸಿ ಹಾಗು ಒಂದು ಹೆಚ್ಚಿನ "
+"ಎಲೆಯನ್ನು ಪಡೆದುಕೊಳ್ಳಿ.  ಹೀಗೆ ಮಾಡಲು ಕೆಳಗಿರುವ ಬಿಲ್ಲೆಗಳ ಮೇಲೆ ಒಮ್ಮೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಅಥವ "
+"'ನಿಯಂತ್ರಣ' ಮೆನುವಿನಿಂದ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ."
+
+msgid "The best option is to split"
+msgstr "ಉತ್ತಮ ಆಯ್ಕೆ ಎಂದರೆ ಪಾಲುಮಾಡುವುದು"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"ಪಾಲುಮಾಡುವುದು ಎಂದರೆ, ನಿಮ್ಮ ಈಗಿನ ಕೈಯನ್ನು ಎರಡು ಪ್ರತ್ಯೇಕ ಕೈಗಳಾಗಿ ವಿಭಾಗಿಸು. ಹೀಗೆ "
+"ಮಾಡಲು ನಿಮ್ಮ ಎಲೆಗಳಲ್ಲಿ ಒಂದನ್ನು ಎಳೆದು ಬದಿಗೆ ಹಾಕಿ ಅಥವ 'ನಿಯಂತ್ರಣ' ಮೆನುವಿನಿಂದ "
+"ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ."
+
+msgid "The best option is to surrender"
+msgstr "ಶರಣಾಗುವುದು ಉತ್ತಮ ಆಯ್ಕೆಯಾಗಿದೆ"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"ಶರಣಾಗುವುದು ಎಂದರೆ, ನಿಮ್ಮ ವೇಜರಿನ ಕೇವಲ ಅರ್ಧವನ್ನು ಮಾತ್ರ ಕೊಡುವುದು, ಪೂರ್ತಿಯಲ್ಲ. ಹೀಗೆ "
+"ಮಾಡಲು 'ನಿಯಂತ್ರಣ' ಮೆನುವಿನಿಂದ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ."
+
+msgid "Blackjack"
+msgstr "ಬ್ಲಾಕ್‍ಜಾಕ್"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"ಬ್ಲಾಕ್‌ಜಾಕ್ ಒಂದು ಕ್ಯಾಸಿನೋ-ಬಗೆಯ ಇಸ್ಪೀಟು ಎಲೆಗಳ ಆಟ.\n"
+"\n"
+"ಬ್ಲಾಕ್‌ಜಾಕ್ ಎನ್ನುವುದು GNOME ಆಟಗಳ ಒಂದು ಭಾಗವಾಗಿದೆ."
+
+msgid "GNOME Games web site"
+msgstr "GNOME ಆಟಗಳ ಜಾಲತಾಣ"
+
+msgid "translator-credits"
+msgstr "ಶಂಕರ್ ಪ್ರಸಾದ್ ಎಂ. ವಿ. <svenkate@redhat.com>"
+
+msgid "Computing basic strategy..."
+msgstr "ಮೂಲ ಚಾಣಾಕ್ಷತೆಯನ್ನು ಲೆಕ್ಕಹಾಕಲಾಗುತ್ತಿದೆ..."
+
+msgid "Bust"
+msgstr "ಬಸ್ಟ್‍"
+
+msgid "Blackjack!"
+msgstr "ಬ್ಲಾಕ್‌ಜಾಕ್‌!"
+
+msgid "Soft"
+msgstr "ಸಾಫ್ಟ್‍"
+
+msgid "Win"
+msgstr "ಗೆಲುವು"
+
+msgid "Push"
+msgstr "ತಳ್ಳು"
+
+msgid "Lose"
+msgstr "ಸೋಲು"
+
+msgid "Player expected values"
+msgstr "ಆಟಗಾರರು ನಿರೀಕ್ಷಿಸಿ ಮೌಲ್ಯ"
+
+msgid "Stand"
+msgstr "ನಿಲ್ಲು"
+
+msgid "Hit"
+msgstr "ಹೊಡೆ"
+
+msgid "Double"
+msgstr "ಎರಡುಪಟ್ಟು"
+
+msgid "Split"
+msgstr "ಪಾಲುಮಾಡಿ"
+
+msgid "Dealer hand probabilities"
+msgstr "ಡೀಲರ್ ಕೈಯ ಸಾಧ್ಯತೆಗಳು"

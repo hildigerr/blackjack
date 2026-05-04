@@ -1,0 +1,524 @@
+# Brazilian Portuguese translation of gnome-games.
+# Copyright (C) 1999-2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-games package.
+# Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
+# Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
+# Gustavo Noronha Silva <kov@debian.org>, 2002.
+# Alexandre Folle de Menezes <afmenez@terra.com.br>, 2003, 2006.
+# Maurício de Lemos Rodrigues Collares Neto <mauricioc@myrealbox.com>, 2003.
+# Welther José O. Esteves <weltherjoe@yahoo.com.br>, 2004.
+# Raphael Higino <phhigino@gmail.com>, 2004-2006.
+# Guilherme de S. Pastore <gpastore@gnome.org>, 2006.
+# Thiago "Harry" Leucz Astrizi <1thiagoharry@gmail.com>, 2006.
+# Leonardo Ferreira Fontenelle <leo.fontenelle@gmail.com>, 2006.
+# Og Maciel <ogmaciel@gnome.org>, 2007, 2009.
+# Andre Noel <andrenoel@ubuntu.com>, 2007.
+# Vladimir Melo <vmelo@gnome.org>, 2007, 2008, 2009.
+# Daniel S. Koda <danielskoda@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-16 16:22-0500\n"
+"Last-Translator: Og Maciel <ogmaciel@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "O arquivo de ajuda \"%s.%s\" não foi localizado"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Não foi possível mostrar a ajuda para “%s”"
+
+msgid "Could not show link"
+msgstr "Não foi possível mostrar o link"
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "View help for this game"
+msgstr "Vê a ajuda para este jogo"
+
+msgid "End the current game"
+msgstr "Finaliza o jogo atual"
+
+msgid "Toggle fullscreen mode"
+msgstr "Alternar para modo tela cheia"
+
+msgid "Get a hint for your next move"
+msgstr "Obtém uma dica para sua próxima jogada"
+
+msgid "Leave fullscreen mode"
+msgstr "Sai do modo tela cheia"
+
+msgid "Start a new multiplayer network game"
+msgstr "Inicia um novo jogo multi-jogadores via rede"
+
+msgid "End the current network game and return to network server"
+msgstr "Finaliza o jogo via rede atual e retorna ao servidor de rede"
+
+msgid "Start a new game"
+msgstr "Inicia um novo jogo"
+
+msgid "Pause the game"
+msgstr "Pausa o jogo"
+
+msgid "Show a list of players in the network game"
+msgstr "Mostra uma lista de jogadores na rede"
+
+msgid "Redo the undone move"
+msgstr "Refaz o movimento desfeito"
+
+msgid "Restart the game"
+msgstr "Reinicia o jogo"
+
+msgid "Resume the paused game"
+msgstr "Continua o jogo pausado"
+
+msgid "View the scores"
+msgstr "Vê as pontuações"
+
+msgid "Undo the last move"
+msgstr "Desfaz o último movimento"
+
+msgid "About this game"
+msgstr "Sobre este jogo"
+
+msgid "Close this window"
+msgstr "Fechar esta janela"
+
+msgid "Configure the game"
+msgstr "Configura o jogo"
+
+msgid "Quit this game"
+msgstr "Sai deste jogo"
+
+msgid "_Contents"
+msgstr "S_umário"
+
+msgid "_Fullscreen"
+msgstr "_Tela cheia"
+
+msgid "_Hint"
+msgstr "_Dica"
+
+msgid "_New"
+msgstr "_Novo"
+
+msgid "_New Game"
+msgstr "_Novo jogo"
+
+msgid "_Redo Move"
+msgstr "_Refazer movimento"
+
+msgid "_Reset"
+msgstr "_Restaurar"
+
+msgid "_Restart"
+msgstr "_Reiniciar"
+
+msgid "_Undo Move"
+msgstr "_Desfazer movimento"
+
+msgid "_Deal"
+msgstr "_Distribuir"
+
+msgid "_Leave Fullscreen"
+msgstr "Sair de tela c_heia"
+
+msgid "Network _Game"
+msgstr "Jo_go via rede"
+
+msgid "L_eave Game"
+msgstr "D_eixar jogo"
+
+msgid "Player _List"
+msgstr "_Lista de jogadores"
+
+msgid "_Pause"
+msgstr "_Pausar"
+
+msgid "Res_ume"
+msgstr "Contin_uar"
+
+msgid "_Scores"
+msgstr "_Pontuações"
+
+msgid "_End Game"
+msgstr "_Finalizar jogo"
+
+msgid "_About"
+msgstr "_Sobre"
+
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+msgid "_Close"
+msgstr "_Fechar"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s é software livre; você pode redistribui-lo e/ou modificá-lo sob os termos "
+"da Licença Pública Geral GNU publicada pela Free Software Foundation; "
+"qualquer versão %d da Licença, ou (de acordo com sua opinião) qualquer "
+"versão mais recente."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; "
+"sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A UM PROPÓSITO "
+"PARTICULAR. Veja a Licença Pública Geral GNU (GPL) para mais detalhes."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Você deve ter recebido uma cópia da Licença Pública Geral GNU (GPL) junto "
+"com %s; caso contrário, escreva para a Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este "
+"programa. Caso contrário, veja <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Vinte e Um - %s"
+
+msgid "_Game"
+msgstr "_Jogo"
+
+msgid "_View"
+msgstr "_Ver"
+
+msgid "Restart the current game"
+msgstr "Reinicia o jogo atual"
+
+msgid "Show a hint"
+msgstr "Mostra uma dica"
+
+msgid "_Settings"
+msgstr "_Configurações"
+
+msgid "_Control"
+msgstr "_Controle"
+
+msgid "D_eal"
+msgstr "_Distribuir"
+
+msgid "Deal a new hand"
+msgstr "Distribui uma nova mão"
+
+msgid "_Hit"
+msgstr "_Pegar"
+
+msgid "Add a card to the hand"
+msgstr "Adiciona uma carta à mão"
+
+msgid "_Stand"
+msgstr "_Ficar"
+
+msgid "Stop adding cards to the hand"
+msgstr "Pára de adicionar cartas à mão"
+
+msgid "S_urrender"
+msgstr "_Desistir"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Deixar essa mão por metade da sua aposta"
+
+msgid "_Double down"
+msgstr "_Dobrar"
+
+msgid "Double your wager for a single hit"
+msgstr "Dobra sua aposta durante esta mão"
+
+msgid "S_plit the hand"
+msgstr "_Dividir a mão"
+
+msgid "Split cards in two new hands"
+msgstr "Divide as cartas em duas novas mãos"
+
+msgid "_Help"
+msgstr "Aj_uda"
+
+msgid "_Toolbar"
+msgstr "Barra de _ferramentas"
+
+msgid "Show toolbar"
+msgstr "Mostrar barra de ferramentas"
+
+msgid "Cards left:"
+msgstr "Cartas restantes:"
+
+msgid "Wager:"
+msgstr "Aposta:"
+
+msgid "Balance:"
+msgstr "Balanço:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Faça a sua aposta ou distribua uma mão"
+
+msgid "Blackjack rule set to use"
+msgstr "Conjunto de regras de Vinte e Um para usar"
+
+msgid "Card Style"
+msgstr "Estilo da carta"
+
+msgid "Would you like insurance?"
+msgstr "Você gostaria de um seguro?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Seguro é uma aposta extra de 50% da aposta original que o carteador tem um "
+"21 natural (também chamado de blackjack) que é oferecido quando a carta de "
+"cima do carteador é um ás. Se o carteador tem um 21 natural, então o jogador "
+"é pago em dobro."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Defina sua aposta e clique no contorno branco para distribuir uma nova mão."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Defina sua aposta ou clique nas cartas para distribuir uma nova mão."
+
+msgid "Blackjack Preferences"
+msgstr "Preferências do Vinte e Um"
+
+msgid "Game"
+msgstr "Jogo"
+
+msgid "_Display hand probabilities"
+msgstr "_Exibir probabilidades da mão"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "Distribuir as cartas _rapidamente (sem intervalo entre cada carta)"
+
+msgid "_Never take insurance"
+msgstr "_Nunca pegar seguro"
+
+msgid "_Reset Balance"
+msgstr "_Restaurar equilíbrio"
+
+msgid "Rules"
+msgstr "Regras"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Decks"
+msgstr "Baralhos"
+
+msgid "Hit Soft 17"
+msgstr "Pegar 17 suave (Ás valendo 11)"
+
+msgid "Double Any Total"
+msgstr "Dobrar qualquer total"
+
+msgid "Double 9"
+msgstr "Dobrar 9"
+
+msgid "Double Soft"
+msgstr "Dobrar suave (Ás valendo 11)"
+
+msgid "Double After Hit"
+msgstr "Dobrar após pegar carta"
+
+msgid "Double After Split"
+msgstr "Dobrar após dividir"
+
+msgid "Resplit"
+msgstr "Redividir"
+
+msgid "Resplit Aces"
+msgstr "Redividir ases"
+
+msgid "Surrender"
+msgstr "Desistir"
+
+msgid "Dealer Speed"
+msgstr "Velocidade do carteador"
+
+msgid "Click to double your wager"
+msgstr "Clique para dobrar sua aposta"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Dê um clique duplo para aumentar sua aposta em %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Dê um clique duplo para diminuir sua aposta em %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Clique para distribuir outra carta; arraste a carta para divir par"
+
+msgid "Click to deal another card"
+msgstr "Clique para distribuir outra carta"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Clique para terminar de adicionar cartas à sua mão"
+
+msgid "Click to deal a new hand"
+msgstr "Clique para distribuir uma nova mão"
+
+msgid "Blackjack can't load the requested file"
+msgstr "O Vinte e Um não pode carregar o arquivo requisitado"
+
+msgid "Please check your Blackjack installation"
+msgstr "Por favor verifique a sua instalação do Vinte e Um"
+
+msgid "The best option is to stand"
+msgstr "A melhor opção é ficar"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Ficar significa parar de adicionar cartas à sua mão. Faça isso clicando nas "
+"cartas do carteador ou selecionando a opção do menu Controle."
+
+msgid "The best option is to hit"
+msgstr "A melhor opção é pegar uma carta"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Pegar significa adicionar outra carta à sua mão. Faça isso clicando nas suas "
+"cartas ou selecionando a opção do menu Controle."
+
+msgid "The best option is to double down"
+msgstr "A melhor opção é dobrar"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Dobrar significa dobrar a aposta inicial e receber exatamente mais uma "
+"carta. Faça isso clicando nos fichas na parte de baixo da janela ou "
+"selecionando a opção do menu Controle."
+
+msgid "The best option is to split"
+msgstr "A melhor opção é dividir"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Dividir significa dividir a sua mão atual em duas mãos separadas. Faça isso "
+"arrastando uma das suas cartas e soltando-a de lado ou selecionando a opção "
+"do menu Controle."
+
+msgid "The best option is to surrender"
+msgstr "A melhor opção é desistir"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Desistir significa desistir de metade da sua aposta e não completar a mão. "
+"Faça isso selecionando a opção do menu Controle."
+
+msgid "Blackjack"
+msgstr "Vinte e Um"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Vinte e Um é um jogo de cartas estilo cassino.\n"
+"\n"
+"Vinte e Um faz parte do GNOME Games."
+
+msgid "GNOME Games web site"
+msgstr "Site do GNOME Games"
+
+msgid "translator-credits"
+msgstr ""
+"Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
+"Cândida Nunes da Silva <candida@zaz.com.br>\n"
+"Gustavo Noronha Silva <kov@debian.org>\n"
+"Alexandre Folle de Menezes <afmenez@terra.com.br>\n"
+"Maurício de Lemos Rodrigues Collares Neto <mauricioc@myrealbox.com>\n"
+"Welther José O. Esteves <weltherjoe@yahoo.com.br>\n"
+"Raphael Higino <In memoriam>\n"
+"Og Maciel <ogmaciel@ubuntu.com>\n"
+"Andre Noel <andrenoel@ubuntu.com>\n"
+"Vladimir Melo <vmelo@gnome.org>\n"
+"Daniel S. Koda <danielskoda@gmail.com>"
+
+msgid "Computing basic strategy..."
+msgstr "Computando estratégia básica..."
+
+msgid "Bust"
+msgstr "Estourou"
+
+msgid "Blackjack!"
+msgstr "Vinte e Um!"
+
+msgid "Soft"
+msgstr "Suave (Ás valendo 11)"
+
+msgid "Win"
+msgstr "Vitória"
+
+msgid "Push"
+msgstr "Empate"
+
+msgid "Lose"
+msgstr "Derrota"
+
+msgid "Player expected values"
+msgstr "O jogador aguarda o valor"
+
+msgid "Stand"
+msgstr "Ficar"
+
+msgid "Hit"
+msgstr "Dica"
+
+msgid "Double"
+msgstr "Dobrar"
+
+msgid "Split"
+msgstr "Dividir"
+
+msgid "Dealer hand probabilities"
+msgstr "Probabilidades da mão do carteador"

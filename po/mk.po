@@ -1,0 +1,517 @@
+# translation of mk.po to Macedonian
+# translation of gnome-games.HEAD.po to
+# translation of gnome-games.HEAD.mk.po to
+# This file is distributed under the same license as the gnome-games.HEAD.mk package.
+# Copyright (C) 2005 THE gnome-games.HEAD.mk'S COPYRIGHT HOLDER
+#
+#
+# Ivan Stojmirov <stojmir@linux.net.mk>, 2002.
+# Ime Prezime <email@adresa.com>, 2003.
+# Jovan Zdraveski <matrixat@freemail.com.mk>, 2003.
+# Глигор Костоски <gigo@ajvar.com.mk>, 2003.
+# Vladislav Bidikov <bidikovi@mail.com.mk>, 2003.
+#  <ufo@linux.net.mk>, 2005.
+# Novica Nakov <novica@bagra.org>, 2005.
+# Арангел Ангов <ufo@linux.net.mk>, 2005.
+# Arangel Angov <ufo@linux.net.mk>, 2006, 2008.
+# Jovan Naumovski <jovan@lugola.net>, 2006, 2007, 2008.
+# Arangel Angov <arangel@linux.net.mk>, 2007.
+# Kiril Dimeski <dkire@taratur.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: mk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-02-23 17:41+0100\n"
+"Last-Translator: Arangel Angov <ufo@linux.net.mk>\n"
+"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural= n==1 || n%10==1 ? 0 : 1\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Датотеката за помош \"%s.%s\" не е пронајдена"
+
+#, fuzzy, c-format
+msgid "Could not show help for “%s”"
+msgstr "Не може да се прикаже помош за \"%s\""
+
+msgid "Could not show link"
+msgstr "Сликите не може да се вчитаат"
+
+msgid "Error"
+msgstr "Грешка"
+
+msgid "View help for this game"
+msgstr "Видете помош за оваа игра"
+
+msgid "End the current game"
+msgstr "Заврши ја моменталната игра"
+
+msgid "Toggle fullscreen mode"
+msgstr "На цел екран"
+
+msgid "Get a hint for your next move"
+msgstr "Земи совет за следниот потег"
+
+msgid "Leave fullscreen mode"
+msgstr "Напушти го целиот екран"
+
+msgid "Start a new multiplayer network game"
+msgstr "Почни нова игра со повеќе играчи"
+
+msgid "End the current network game and return to network server"
+msgstr "Внеси ја тековната мрежна игра и испрати до мрежниот сервер"
+
+msgid "Start a new game"
+msgstr "Почни нова игра"
+
+msgid "Pause the game"
+msgstr "Паузирај ја играта"
+
+msgid "Show a list of players in the network game"
+msgstr "Прикажи листа на играчи во мрежната игра"
+
+msgid "Redo the undone move"
+msgstr "Повтори го последниот потег"
+
+msgid "Restart the game"
+msgstr "Рестартирај ја играта"
+
+msgid "Resume the paused game"
+msgstr "Продолжи ја паузираната игра"
+
+msgid "View the scores"
+msgstr "Види ги резултатите"
+
+msgid "Undo the last move"
+msgstr "Врати го последниот потег"
+
+msgid "About this game"
+msgstr "За оваа игра"
+
+msgid "Close this window"
+msgstr "Затвори го овој прозорец"
+
+msgid "Configure the game"
+msgstr "Конфигурирај ја играта"
+
+msgid "Quit this game"
+msgstr "Излези од играта"
+
+msgid "_Contents"
+msgstr "_Содржина"
+
+msgid "_Fullscreen"
+msgstr "_Цел екран"
+
+msgid "_Hint"
+msgstr "_Совет"
+
+msgid "_New"
+msgstr "_Нова"
+
+msgid "_New Game"
+msgstr "_Нова игра"
+
+msgid "_Redo Move"
+msgstr "П_овтори потег"
+
+msgid "_Reset"
+msgstr "Од _почеток"
+
+msgid "_Restart"
+msgstr "_Рестартирај"
+
+msgid "_Undo Move"
+msgstr "_Врати потег"
+
+msgid "_Deal"
+msgstr "_Дели"
+
+msgid "_Leave Fullscreen"
+msgstr "_Напушти цел екран"
+
+msgid "Network _Game"
+msgstr "Мрежна _игра"
+
+msgid "L_eave Game"
+msgstr "Н_апушти ја играта"
+
+msgid "Player _List"
+msgstr "_Листа на играчи"
+
+msgid "_Pause"
+msgstr "_Паузирај"
+
+msgid "Res_ume"
+msgstr "Про_должи"
+
+msgid "_Scores"
+msgstr "_Бодови"
+
+msgid "_End Game"
+msgstr "_Заврши ја играта"
+
+msgid "_About"
+msgstr "_За"
+
+msgid "_Cancel"
+msgstr "_Откажи"
+
+msgid "_Close"
+msgstr "_Затвори"
+
+msgid "_OK"
+msgstr "_Во ред"
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s е слободен софтвер; можете да го редистрибуирате и/или менувате во "
+"согласност со општата јавна ГНУ лиценца објавена од страна наФондацијата за "
+"слободен софтвер; можете да ја разгледате втората или пак некоја понова "
+"верзија."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s се дистрибуира со надеж дека ќе биде корисен,но без БИЛО КАКВИ ГАРАНЦИИ.  "
+"За повеќе погледнете ја општата јавна ГНУ лиценца."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Заедно со %s треба да добиете и копија од општата и јавнаГНУ лиценца; "
+"доколку ја нема лиценцата пишете и на Фондацијата заслободен софтвер на "
+"следнава адреса: 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Заедно со %s треба да добиете и копија од општата и јавнаГНУ лиценца; "
+"доколку ја нема лиценцата пишете и на Фондацијата заслободен софтвер на "
+"следнава адреса: 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Игра"
+
+msgid "_View"
+msgstr "_Поглед"
+
+msgid "Restart the current game"
+msgstr "Рестартирај ја тековната игра"
+
+msgid "Show a hint"
+msgstr "Покажи совет"
+
+msgid "_Settings"
+msgstr "_Поставки"
+
+msgid "_Control"
+msgstr "_Контрола"
+
+msgid "D_eal"
+msgstr "Д_ели"
+
+msgid "Deal a new hand"
+msgstr "Ново делење"
+
+msgid "_Hit"
+msgstr "_Совет"
+
+msgid "Add a card to the hand"
+msgstr "Нова карта"
+
+msgid "_Stand"
+msgstr "И_сти карти"
+
+msgid "Stop adding cards to the hand"
+msgstr "Не додавај нови карти"
+
+msgid "S_urrender"
+msgstr "П_редај се"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Предајте ја оваа рака за пола од влогот"
+
+msgid "_Double down"
+msgstr "_Дупол влог"
+
+msgid "Double your wager for a single hit"
+msgstr "Дуплирајте го вашиот влог одеднаш"
+
+msgid "S_plit the hand"
+msgstr "_Подели ја раката"
+
+msgid "Split cards in two new hands"
+msgstr "Подели ги картите во две нови делења"
+
+msgid "_Help"
+msgstr "_Помош"
+
+msgid "_Toolbar"
+msgstr "_Лента со алатки"
+
+msgid "Show toolbar"
+msgstr "Покажи го алатникот"
+
+msgid "Cards left:"
+msgstr "Преостанати карти:"
+
+msgid "Wager:"
+msgstr "Влог:"
+
+msgid "Balance:"
+msgstr "Состојба:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Внесете го вашиот влог или делете"
+
+msgid "Blackjack rule set to use"
+msgstr "Правила за Blackjack кои ќе се користат"
+
+msgid "Card Style"
+msgstr "Стил на карти"
+
+msgid "Would you like insurance?"
+msgstr "Дали сакате осигурување?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Insurance is a side wager of 50%% of the original wager that the dealer has "
+"a natural 21 (aka blackjack) that is offered when the dealer's face up card "
+"is an ace. If the dealer has a natural 21 then the player is paid double."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Внесете го вашиот влог и кликнете на белата линија за ново делење."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Внесете го вашиот влог или кликнете на картите за ново делење."
+
+msgid "Blackjack Preferences"
+msgstr "Преференции за Blackjack"
+
+msgid "Game"
+msgstr "Игра"
+
+msgid "_Display hand probabilities"
+msgstr "_Прикажи ги веројатностите за делењето"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Брзо делење (без паузи помеѓу секоја карта)"
+
+msgid "_Never take insurance"
+msgstr "_Никогаш не земај осигурување"
+
+msgid "_Reset Balance"
+msgstr "_Ресетирај ја состојбата"
+
+msgid "Rules"
+msgstr "Правила"
+
+msgid "Name"
+msgstr "Име"
+
+msgid "Decks"
+msgstr "Шпилови"
+
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Double Any Total"
+
+msgid "Double 9"
+msgstr "Double 9"
+
+msgid "Double Soft"
+msgstr "Double Soft"
+
+msgid "Double After Hit"
+msgstr "Double After Hit"
+
+msgid "Double After Split"
+msgstr "Double After Split"
+
+msgid "Resplit"
+msgstr "Resplit"
+
+msgid "Resplit Aces"
+msgstr "Resplit Aces"
+
+msgid "Surrender"
+msgstr "Предај се"
+
+msgid "Dealer Speed"
+msgstr "Брзина на куќата"
+
+msgid "Click to double your wager"
+msgstr "Кликнете за да го дуплирате влогот"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Кликнете два пати за да го зголемите влогот за %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Кликнете два пати за да го намалите влогот за %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Кликнете за да добиете друга карта, влечете ја картата за да го поделите "
+"парот"
+
+msgid "Click to deal another card"
+msgstr "Кликнете за да добиете друга карта"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Кликнете за да престанете да добивате карти ова делење"
+
+msgid "Click to deal a new hand"
+msgstr "Кликнете за ново делење"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack не може да ја вчита бараната датотека"
+
+msgid "Please check your Blackjack installation"
+msgstr "Проверете ја вашата Blackjack инсталација"
+
+msgid "The best option is to stand"
+msgstr "Најдобрата опција е да не земате карти"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"За да не земате повеќе карти кликнете на картите на куќата или со одбирање "
+"на опцијата од контролното мени."
+
+msgid "The best option is to hit"
+msgstr "Најдобрата опција е да земете карта"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"За да земете нова карта во ова делење кликнете на вашите карти или оберете "
+"ја таа опција од контролното мени."
+
+msgid "The best option is to double down"
+msgstr "Најдобра опција е да дуплирате"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Со дуплирање го дупло го зголемувате иницијалниот влог и добивате уште само "
+"една карта.  Направете го ова со еден клик на чиповите на дното на "
+"прозорецот или со одбирање на опцијата од контролното мени."
+
+msgid "The best option is to split"
+msgstr "Најдобра опција е да поделите"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Делењето значи добивање на две раце од оваа што ја имате сега.  Направете го "
+"ова со влечење на една ваша карта или со одбирање на опцијата од контролното "
+"мени."
+
+msgid "The best option is to surrender"
+msgstr "Најдобра опција е да се предадете"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Со предавањето се откажувате од пола од вашиот блог и не ја завршувате "
+"раката.  Направете го ова со одбирање на опцијата од контролното мени."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Blackjack е игра како во казино.\n"
+"\n"
+"Blackjack е дел од GNOME игрите"
+
+msgid "GNOME Games web site"
+msgstr "GNOME, веб сајт за игри"
+
+msgid "translator-credits"
+msgstr ""
+"Иван Стојмиров <stojmir@linux.net.mk>, 2003,\n"
+"Новица Наков <novica@bagra.org>, 2006\n"
+"Арангел Ангов <arangel@linux.net.mk>, 2008"
+
+msgid "Computing basic strategy..."
+msgstr "Ја пресметувам основната стратегија..."
+
+msgid "Bust"
+msgstr "Пробивање"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Меко"
+
+msgid "Win"
+msgstr "Победа"
+
+msgid "Push"
+msgstr "Push"
+
+msgid "Lose"
+msgstr "Пораз"
+
+msgid "Player expected values"
+msgstr "Вредности кои ги очекува играчот"
+
+msgid "Stand"
+msgstr "Не земај карта"
+
+msgid "Hit"
+msgstr "Земи карта"
+
+msgid "Double"
+msgstr "Дуплирај"
+
+msgid "Split"
+msgstr "Подели"
+
+msgid "Dealer hand probabilities"
+msgstr "Веројатности за раката да куќата"

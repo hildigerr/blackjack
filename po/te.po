@@ -1,0 +1,509 @@
+# translation of te.po to Telugu
+# Telugu translation of gnome-games.
+# Copyright (C) 2007 Swecha Telugu Localisation Team <localisation@swecha.org>
+# This file is distributed under the same license as the gnome-games package.
+#
+# Bharat Kumar Jonnalagadda <bharath@swecha.net>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: te\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-08-27 02:13+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "సహాయ దస్త్రము “%s.%s” కనబడలేదు"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "“%s” కు సహాయం చూపలేకపోయింది"
+
+msgid "Could not show link"
+msgstr "జోడికను చూపలేకపోయింది"
+
+msgid "Error"
+msgstr "దోషము"
+
+msgid "View help for this game"
+msgstr "ఈ ఆటకు సహాయమును దర్శించుము"
+
+msgid "End the current game"
+msgstr "ప్రస్తుత ఆటను పూర్తిచేయుము"
+
+msgid "Toggle fullscreen mode"
+msgstr "పూర్తి స్క్రీను రీతినకు మారుము"
+
+msgid "Get a hint for your next move"
+msgstr "తర్వాతి ఎత్తు నుండి ఒక సూచనను పొందు"
+
+msgid "Leave fullscreen mode"
+msgstr "నిండుతెర సంవిధానము విడిచిపెట్టు"
+
+msgid "Start a new multiplayer network game"
+msgstr "కొత్త బహు ఆటగాళ్ళ అల్లిక ఆటను ప్రారంభించు"
+
+msgid "End the current network game and return to network server"
+msgstr "ప్రస్తుత అల్లిక ఆటను మూసి అల్లిక సేవికకు తిరిగిరండి"
+
+msgid "Start a new game"
+msgstr "కొత్త ఆటను ప్రారంభించు"
+
+msgid "Pause the game"
+msgstr "ఆటను విరామంలో ఉంచుము"
+
+msgid "Show a list of players in the network game"
+msgstr "అల్లిక ఆటలో ఆటగాళ్ళ జాబితాను చూపుము"
+
+msgid "Redo the undone move"
+msgstr "వదిలివేయబడినదాన్ని మళ్ళీచేయి"
+
+msgid "Restart the game"
+msgstr "ఆటను పున:ప్రారంభించుము"
+
+msgid "Resume the paused game"
+msgstr "నిలిపివేసిన ఆటను తిరిగి కొనసాగించుము"
+
+msgid "View the scores"
+msgstr "స్కోర్లను దర్శించుము"
+
+msgid "Undo the last move"
+msgstr "చివరి ఎత్తుని రద్దుచేయు"
+
+msgid "About this game"
+msgstr "ఈ ఆట గురించి"
+
+msgid "Close this window"
+msgstr "ఈ గవాక్షాన్ని మూయుము"
+
+msgid "Configure the game"
+msgstr "ఆటను రూపకరణం చేయుము"
+
+msgid "Quit this game"
+msgstr "ఈ ఆటను త్యజించుము"
+
+msgid "_Contents"
+msgstr "సారాలు (_C)"
+
+msgid "_Fullscreen"
+msgstr "నిండుతెర (_F)"
+
+msgid "_Hint"
+msgstr "సూచన (_H)"
+
+msgid "_New"
+msgstr "కొత్త (_N)"
+
+msgid "_New Game"
+msgstr "కొత్త ఆట (_N)"
+
+msgid "_Redo Move"
+msgstr "వేసిన ఎత్తుని మళ్ళీచేయు (_R)"
+
+msgid "_Reset"
+msgstr "మళ్ళీ అమర్చు (_R)"
+
+msgid "_Restart"
+msgstr "పున:ప్రారంభించు (_R)"
+
+msgid "_Undo Move"
+msgstr "వేసిన ఎత్తుని రద్దుచేయు (_U)"
+
+msgid "_Deal"
+msgstr "డీల్ (_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "నిండుతెరను వదులుము (_L)"
+
+msgid "Network _Game"
+msgstr "అల్లికలో ఆట (_G)"
+
+msgid "L_eave Game"
+msgstr "ఆటను వదులుము (_e)"
+
+msgid "Player _List"
+msgstr "ఆటగాళ్ళ జాబితా (_L)"
+
+msgid "_Pause"
+msgstr "నిలుపువేయు (_P)"
+
+msgid "Res_ume"
+msgstr "తిరిగి కొనసాగించుము (_u)"
+
+msgid "_Scores"
+msgstr "స్కోర్లు (_S)"
+
+msgid "_End Game"
+msgstr "ఆటను పూర్తిచేయు (_E)"
+
+msgid "_About"
+msgstr "గురించి (_A)"
+
+msgid "_Cancel"
+msgstr "రద్దుచేయి (_C)"
+
+msgid "_Close"
+msgstr "మూయుము (_C)"
+
+msgid "_OK"
+msgstr "సరే (_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s ఉచిత సాఫ్టువేర్; ఉచిత సాఫ్టువేర్ సంస్థ తరుపున ప్రచురితమైన GNU జనరల్ పబ్లిక్ లైసెన్సు కు లోబడి "
+"దీనిని మీరు పునఃపంపిణి మరియు/లేదా సవరణ చేయవచ్చు; మీరు అనుసరించవలిసినది లైసెన్సు యొక్క వర్షన్ %d, లేదా "
+"(మీ ఐచ్చికం వద్ద) దాని తరువాతి వర్షన్ కాని."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s అది ఉపయోగపడుతుందనే నమ్మకం తో పంపిణీ చేయబడింది, అయితే ఏ హామి లేదు; వ్యాపారసంబంధితంగా కాని లేదా "
+"ప్రతిపాదిత ప్రయోజనం కొరకు కాని హామీ లేదు. అధికవివరములకొరకు GNU జనరల్ పబ్లిక్ లైసెన్సును చూడండి."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"%s తో మీరు GNU జనరల్ పబ్లిక్ లైసెన్సు నకలు ను పొంది ఉంటారు; పొందకపోతే, Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston. MA02110-1301, USA "
+"కు వ్రాయండి."
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"మీరు ఈ ప్రోగ్రాముతోటి GNU జనరల్ పబ్లిక్ లైసెన్సు యొక్క వొక నకలును పొందివుంటారు.  పొందక పోతే, "
+"<http://www.gnu.org/licenses/> చూడండి."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "బ్లాక్ జాక్ - %s"
+
+msgid "_Game"
+msgstr "ఆట (_G)"
+
+msgid "_View"
+msgstr "దర్శనం (_V)"
+
+msgid "Restart the current game"
+msgstr "ప్రస్తుత ఆటను పునఃప్రారంభించండి"
+
+msgid "Show a hint"
+msgstr "ఒక సూచనను చూపుము"
+
+msgid "_Settings"
+msgstr "అమరికలు (_S)"
+
+msgid "_Control"
+msgstr "నియంత్రణ (_C)"
+
+msgid "D_eal"
+msgstr "డీల్ (_e)"
+
+msgid "Deal a new hand"
+msgstr "కొత్త చేయిను డీల్ వేయుము"
+
+msgid "_Hit"
+msgstr "తాటించు (_H)"
+
+msgid "Add a card to the hand"
+msgstr "చేతిలో ఒక పేకను జతచేయుము"
+
+msgid "_Stand"
+msgstr "నిలుపు (_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "చేతికి పేకలను జతచేయుట ఆపుము"
+
+msgid "S_urrender"
+msgstr "లొంగిపోవు (_u)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "నీ పందెములో సగభాగము కొరకు ఈ చేయి కోల్పోవుము"
+
+msgid "_Double down"
+msgstr "రెండు దించు (_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "ఓకసారి తాటించుటకు మీ పందెమును రెట్టింపుచేయుము"
+
+msgid "S_plit the hand"
+msgstr "చేయిను విభజించుము (_p)"
+
+msgid "Split cards in two new hands"
+msgstr "రెండు కొత్త చేతులలోనికి కార్డులను విభజించుము"
+
+msgid "_Help"
+msgstr "సహాయం (_H)"
+
+msgid "_Toolbar"
+msgstr "పనిముట్లపట్టా (_T)"
+
+msgid "Show toolbar"
+msgstr "పనిముట్ల పట్టాని చూపుము"
+
+msgid "Cards left:"
+msgstr "మిగిలిన పేకలు:"
+
+msgid "Wager:"
+msgstr "పందెము:"
+
+msgid "Balance:"
+msgstr "సమతుల్యం:"
+
+msgid "Place your wager or deal a hand"
+msgstr "మీ పందెమును వుంచండి లేదా ఒక చేయిను డీల్ వేయండి."
+
+msgid "Blackjack rule set to use"
+msgstr "బ్లాక్‌జాక్ నియమాల సమితి"
+
+msgid "Card Style"
+msgstr "పలక శైలి"
+
+msgid "Would you like insurance?"
+msgstr "మీరు భీమా చేయాలని అనుకొనుచున్నారా?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"డీలర్ ఫేల్ అప్ కార్డు ఆసు అయినప్పుడు డీలర్ కలిగివుండే సాదారణ 21 (aka blackjack) వాస్తవ పందెం "
+"యొక్క 50% ప్రక్క పందెమే భీమా(ఇన్సూరెన్సు). డీలరు సాదారణ 21 కలిగివుంటే అప్పుడు ఆటగా‍డు రెట్టింపు "
+"చెల్లించబడతాడు."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "మీ పందెమును పెట్టి కొత్త చేయిను డీల్ వేయుటకు తెల్ల గీతనందు నొక్కుము."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "మీ పందెమును పెట్టి కొత్త చేయిను డీల్ వేయుటకు కార్డులపైన నొక్కుము."
+
+msgid "Blackjack Preferences"
+msgstr "బ్లాక్ జాక్ అభీష్టాలు"
+
+msgid "Game"
+msgstr "ఆట"
+
+msgid "_Display hand probabilities"
+msgstr "చేయి సంభావ్యతలను ప్రదర్శించుము (_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "త్వరిత డీల్సు (ప్రతి కార్డుకుకార్డుకు మధ్య ఆలస్యంలేదు) (_Q)"
+
+msgid "_Never take insurance"
+msgstr "భీమాను యెప్పుడూ తీసుకొనవద్దు (_N)"
+
+msgid "_Reset Balance"
+msgstr "మిగులును తిరిగివుంచుము (_R)"
+
+msgid "Rules"
+msgstr "నిబంధనలు"
+
+msgid "Name"
+msgstr "నామం"
+
+msgid "Decks"
+msgstr "డెక్స్"
+
+msgid "Hit Soft 17"
+msgstr "సాప్ట్ 17 తాటించుము"
+
+msgid "Double Any Total"
+msgstr "ఏదేని మెత్తం రెట్టింపు"
+
+msgid "Double 9"
+msgstr "రెట్టింపు 9"
+
+msgid "Double Soft"
+msgstr "రెట్టింపు సాఫ్టు"
+
+msgid "Double After Hit"
+msgstr "తాటించిన తర్వాత రెట్టింపు"
+
+msgid "Double After Split"
+msgstr "విభజించిన తర్వాత రెట్టింపు"
+
+msgid "Resplit"
+msgstr "పునఃవిభజన"
+
+msgid "Resplit Aces"
+msgstr "ఆసులను పునఃవిభజించు"
+
+msgid "Surrender"
+msgstr "లొంగుబాటు"
+
+msgid "Dealer Speed"
+msgstr "డీలర్ వేగము"
+
+msgid "Click to double your wager"
+msgstr "మీ పందెమును రెట్టింపు చేయుటకు నొక్కుము"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "మీ పందెమును %.2f పెంచుటకు రెండుసార్లు నొక్కుము"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "మీ పందెమును %.2f తగ్గించుటకు రెండుసార్లు నొక్కుము"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "వేరొక కార్డును డీల్ వేయుటకు నొక్కుము; జంటను విడదీయుటకు కార్డును లాగుము"
+
+msgid "Click to deal another card"
+msgstr "వేరొక కార్డును డీల్ వేయుటకు నొక్కుము"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "పేకలను చేతిలోకి జతచేయుటను పూర్తిచేయుటకు నొక్కండి"
+
+msgid "Click to deal a new hand"
+msgstr "కొత్త చేయిను డీల్ వేయుటకు నొక్కుము"
+
+msgid "Blackjack can't load the requested file"
+msgstr "కోరిన దస్త్రమును బ్లాక్ జాక్ నింపలేకపోయింది"
+
+msgid "Please check your Blackjack installation"
+msgstr "బ్లాక్ జాక్ ప్రతిష్టను దయచేసి సరిచేసుకోండి"
+
+msgid "The best option is to stand"
+msgstr "నిలబడుటక మంచి ఐచ్చికము"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"నిలబటుట అంటే అర్ధం మీ చేయికు కార్డులను జతచేయుట ఆపుట. దీనిని చేయుటకు డీలర్స్ కార్డులపై నొక్కండి లేదా "
+"నియంత్రణ మెనూనుండి ఈ ఐచ్చికాన్ని యెంచుకొనండి."
+
+msgid "The best option is to hit"
+msgstr "తాటించుట మంచి ఐచ్చికము"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"తాటించుట అంటే అర్ధం మీ చేయికు మరియొక కార్డును జతచేయుట. ఇది చేయుటకు మీ కార్డులపైన వొకసారి నొక్కండి లేదా "
+"ఈ ఐచ్చికాన్ని నియంత్రణ మెనూనుండి యెంచుకొనండి."
+
+msgid "The best option is to double down"
+msgstr "రెట్టింపు దింపదల మంచి ఐచ్చికము"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"రెట్టింపు దింపుదల అంటే అర్ధము ప్రాధమిక పందెమును రెట్టింపుచేసి మరియు సరిగ్గా వొక కార్డు మాత్రమే "
+"స్వీకరించుటకు.  ఇది చేయుటకు విండో క్రిందనవున్న చిప్సుపై వొకసారి నొక్కండి లేదా ఈ ఐచ్చికాన్ని నియంత్రణ "
+"మెనూనుండి యెంచుకొనండి."
+
+msgid "The best option is to split"
+msgstr "విభజించుట మంచి ఐచ్చికము"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"విభజించుటకు అంటే అర్ధము మీ ప్రస్తుత చేయిను రెండు చేయిలుగా విడదీయుట.  దీనిని చేయుటకు మీ కార్డులలో "
+"వొకదానిని లాగి ప్రక్కనపడవేయండి లేదా ఈ ఐచ్చికాన్ని నియంత్రణ మెనూనుండి యెంచుకొనండి."
+
+msgid "The best option is to surrender"
+msgstr "లొంగిపోవుట మంచి ఐచ్చికము"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"లొంగిపోవుట అంటే మీ పందెములో సగంయిచ్చి చేయి ముగియకుండా వుండుట.  దీనిని చేయుటకు ఈ ఐచ్చికాన్ని నియంత్రణ "
+"మెనూనుండి యెంపికచేయుము."
+
+msgid "Blackjack"
+msgstr "బ్లాక్ జాక్"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"బ్లాక్‌జాక్ అనునది కాసినో-శైలి కార్డు ఆట.\n"
+"\n"
+"బ్లాక్‌జాక్ అనునది GNOME ఆటలలో వొక భాగము."
+
+msgid "GNOME Games web site"
+msgstr "గ్నోమ్ ఆటల మహాతలప్రదేశం"
+
+msgid "translator-credits"
+msgstr "Bharat Kumar Jonnalagadda <bharath@swecha.net>"
+
+msgid "Computing basic strategy..."
+msgstr "ప్రాధమిక తంత్రమును లెక్కిస్తున్నది..."
+
+msgid "Bust"
+msgstr "బస్ట్"
+
+msgid "Blackjack!"
+msgstr "బ్లాక్ జాక్!"
+
+msgid "Soft"
+msgstr "సాఫ్ట్"
+
+msgid "Win"
+msgstr "గెలుపు"
+
+msgid "Push"
+msgstr "త్రోయు"
+
+msgid "Lose"
+msgstr "ఓటమి"
+
+msgid "Player expected values"
+msgstr "ఆటగాడు ఊహించిన విలువలు"
+
+msgid "Stand"
+msgstr "నిలుచు"
+
+msgid "Hit"
+msgstr "తాటించు"
+
+msgid "Double"
+msgstr "రెట్టింపు"
+
+msgid "Split"
+msgstr "విడదీయు"
+
+msgid "Dealer hand probabilities"
+msgstr "డీలర్ చేయి సంభావ్యతలు"

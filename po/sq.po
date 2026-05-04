@@ -1,0 +1,492 @@
+# Përkthimi i mesazheve të gnome-games në shqip
+# This file is distributed under the same license as the Gnome-Games package.
+# Elian Myftiu <elian@alblinux.net>, 2003, 2004, 2005.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2006-03-02 21:11+0100\n"
+"Last-Translator: Elian Myftiu <elian@alblinux.net>\n"
+"Language-Team: Albanian <gnome-albanian-perkthyesit@lists.sourceforge.net>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "I pamundur ngarkimi i pamjeve"
+
+msgid "Error"
+msgstr ""
+
+msgid "View help for this game"
+msgstr "Shiko ndihmën për këtë lojë"
+
+msgid "End the current game"
+msgstr "Mbaro lojën e tanishme"
+
+#, fuzzy
+msgid "Toggle fullscreen mode"
+msgstr "Lër ekranin e plotë"
+
+msgid "Get a hint for your next move"
+msgstr "Merr një ndihmë për lëvizjen tuaj në vazhdim "
+
+msgid "Leave fullscreen mode"
+msgstr "Lër ekranin e plotë"
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Fillo një lojë të re"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Fillo një lojë të re"
+
+msgid "Pause the game"
+msgstr "Pezullo lojën"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "Përsërit lëvizjen e anulluar"
+
+msgid "Restart the game"
+msgstr "Rinis lojën"
+
+msgid "Resume the paused game"
+msgstr "Rinis lojën e pezulluar"
+
+msgid "View the scores"
+msgstr "Shiko rezultatet"
+
+msgid "Undo the last move"
+msgstr "Anullo lëvizjen e fundit"
+
+msgid "About this game"
+msgstr "Rreth kësaj loje"
+
+msgid "Close this window"
+msgstr ""
+
+msgid "Configure the game"
+msgstr "Konfiguro lojën"
+
+msgid "Quit this game"
+msgstr "Lëre këtë lojë"
+
+msgid "_Contents"
+msgstr "_Përmbajtja"
+
+msgid "_Fullscreen"
+msgstr "_Ekran i plotë"
+
+msgid "_Hint"
+msgstr "_Udhëzim"
+
+msgid "_New"
+msgstr "E _re"
+
+msgid "_New Game"
+msgstr "Lojë e _Re"
+
+msgid "_Redo Move"
+msgstr "_Ribëj Lëvizjen"
+
+msgid "_Reset"
+msgstr "_Nga fillimi"
+
+msgid "_Restart"
+msgstr "_Rinis"
+
+msgid "_Undo Move"
+msgstr "_Zhbëj Lëvizjen"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "Lër _Ekranin e Plotë"
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Lojë e re në rrjet"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Lojë e _Re"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "_Lojtarët"
+
+msgid "_Pause"
+msgstr "_Pezullo"
+
+msgid "Res_ume"
+msgstr "Rin_is"
+
+msgid "_Scores"
+msgstr "_Rezultatet"
+
+msgid "_End Game"
+msgstr "_Mbaro Lojën"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Loja"
+
+msgid "_View"
+msgstr "_Pamje"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Rinis lojën"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr "_Rregullime"
+
+msgid "_Control"
+msgstr "_Kontrolli"
+
+msgid "D_eal"
+msgstr "Marrë_veshje"
+
+msgid "Deal a new hand"
+msgstr "Fillo një dorë të re"
+
+msgid "_Hit"
+msgstr "_Hidh"
+
+msgid "Add a card to the hand"
+msgstr "Shtoji një letër dorës"
+
+msgid "_Stand"
+msgstr "_Paso"
+
+msgid "Stop adding cards to the hand"
+msgstr "Mos i shto më letra dorës"
+
+msgid "S_urrender"
+msgstr "D_orëzohu"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Humb gjysmën e rrogës këtë dorë"
+
+msgid "_Double down"
+msgstr "_Dyfisho"
+
+msgid "Double your wager for a single hit"
+msgstr "Dyfisho bastin për një tek lëvizje"
+
+msgid "S_plit the hand"
+msgstr "N_daj dorën"
+
+msgid "Split cards in two new hands"
+msgstr "Ndaj letrat në dy duar të reja"
+
+msgid "_Help"
+msgstr "_Ndihmë"
+
+msgid "_Toolbar"
+msgstr "_Paneli i instrumentëve"
+
+msgid "Show toolbar"
+msgstr "Shfaq kutizën e veglave"
+
+msgid "Cards left:"
+msgstr "Letra të mbetura:"
+
+msgid "Wager:"
+msgstr "Basti:"
+
+msgid "Balance:"
+msgstr "Barazpesha:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Vendos bastin ose shpërnda një dorë"
+
+msgid "Blackjack rule set to use"
+msgstr "Seti i rregullave të përdorimit për Blackjack"
+
+msgid "Card Style"
+msgstr "Sili i Letrave"
+
+msgid "Would you like insurance?"
+msgstr "Do dëshiroje sigurim?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Sigurimi është një pagesë shtesë 50%% e pagës origjinale që ofruesi ka një "
+"21 natyral (ose blackjack) që ofrohet kur letra e ofruesit është një as. "
+"Nëse ofruesi ka një 21 natyral atëhere lojtari paguhet dyfish."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Vendos bastin dhe kliko mbi linjën e bardhë për të shpërndarë një dorë të re."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Vendos bastin ose kliko mbi letrat për të shpërndarë një dorë të re."
+
+msgid "Blackjack Preferences"
+msgstr "Preferencat e Blackjack"
+
+msgid "Game"
+msgstr "Loja"
+
+msgid "_Display hand probabilities"
+msgstr "_Shfaq mundësitë e dorës"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Shpërndarje të shpejta (pa vonesë midis çdo letre)"
+
+msgid "_Never take insurance"
+msgstr "_Asnjëherë mos merr sigurim"
+
+msgid "_Reset Balance"
+msgstr "_Rivendos Barazpeshën"
+
+msgid "Rules"
+msgstr "Rregullat"
+
+msgid "Name"
+msgstr "Emri"
+
+msgid "Decks"
+msgstr "Letrat"
+
+msgid "Hit Soft 17"
+msgstr "Godit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Dyfisho Çdo Total"
+
+msgid "Double 9"
+msgstr "Dyfisho 9"
+
+msgid "Double Soft"
+msgstr "Dyfisho Soft"
+
+msgid "Double After Hit"
+msgstr "Dyfisho Pas Zgjedhjes"
+
+msgid "Double After Split"
+msgstr "Dyfisho Pas Ndarjes"
+
+msgid "Resplit"
+msgstr "Rindaji"
+
+msgid "Resplit Aces"
+msgstr "Rinda Asat"
+
+msgid "Surrender"
+msgstr "Dorëzohu"
+
+msgid "Dealer Speed"
+msgstr "Shpejtësia e Shpërndarësit"
+
+msgid "Click to double your wager"
+msgstr "Kliko të dyfishosh bastin"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Kliko dy herë për të rritur bastin me nga %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Kliko dy herë të zvogëlosh bastin me nga %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Kliko të ndash një letër tjetër; tërhiq letrën të ndash palën"
+
+msgid "Click to deal another card"
+msgstr "Kliko të ndash një letër tjetër"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Kliko të mbarosh ndarjen e letrave në dorë"
+
+msgid "Click to deal a new hand"
+msgstr "Kliko të ndash një dorë tjetër"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack nuk mun të ngarkoje file e kërkuar"
+
+msgid "Please check your Blackjack installation"
+msgstr "Të lutem kontrollo instalimin e Blackjack"
+
+msgid "The best option is to stand"
+msgstr "Mundësia më e mirë është mos luash"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Të ndalosh nënkupton ndaljen e shtimit të kartave në dorën tende.  Bëhet "
+"duke klikuar tek letrat e ofruesit ose duke zgjedhur mundësinë nga menuja e "
+"Kontrollit."
+
+msgid "The best option is to hit"
+msgstr "Mundësia më e mirë është të luash"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Të godasësh nënkupton shtimin e një letre tjetër në dorën tënde.  Bëhet duke "
+"klikuar letrat e tua ose duke zgjedhur mundësinë nga menuja e Kontrollit."
+
+msgid "The best option is to double down"
+msgstr "Mundësia më e mirë është të dyfishosh"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Të dyfishosh nënkupton dyfishimin e pagës fillestare dhe tërheqjes vetëm të "
+"një karte tjetër.  Bëhet duke klikuar një herë në fishat në fund të dritares "
+"ose duke zgjedhur mundësinë në menunë e Kontrollit."
+
+msgid "The best option is to split"
+msgstr "Mundësia më e mirë është të ndash dorën"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Të veçosh nënkupton ndarjen e dorës tënde në dy duar të veçanta.  Bëhet duke "
+"zvarritur një nga letrat e tua dhe duke e lëshuar në cep ose duke zgjedhur "
+"mundësinë në menunë e Kontrollit."
+
+msgid "The best option is to surrender"
+msgstr "Mundësia më e mirë është të dorëzohesh"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Të dorëzohesh nënkupton të heqësh dorë nga gjysma e pagës tënde dhe të mos "
+"përfundosh dorën.  Bëhet duke zgjedhur mundësine nga menuja e Kontrollit."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Blackjack bën të mundur lojën me letra të kazinosë."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Serveri i lojës GNOME"
+
+msgid "translator-credits"
+msgstr "Elian Myftiu <elian@alblinux.net>"
+
+msgid "Computing basic strategy..."
+msgstr "Duke llogaritur strategjinë bazë..."
+
+msgid "Bust"
+msgstr "Bust"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Butë"
+
+msgid "Win"
+msgstr "Fitore"
+
+msgid "Push"
+msgstr "Shtyj"
+
+msgid "Lose"
+msgstr "Humbje"
+
+msgid "Player expected values"
+msgstr "Vlerat e pritura nga lojtari"
+
+msgid "Stand"
+msgstr "Mos luaj"
+
+msgid "Hit"
+msgstr "Luaj"
+
+msgid "Double"
+msgstr "Dyfish"
+
+msgid "Split"
+msgstr "Shkëpute"
+
+msgid "Dealer hand probabilities"
+msgstr "Mundësitë e dorës"

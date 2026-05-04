@@ -1,0 +1,515 @@
+# gnome-games ja.po.
+# Copyright (C) 1998-2009 Free Software Foundation, Inc.
+# Yukihiro Nakai <Nakai@technologist.com>, 1998
+# Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999
+# Yuusuke Tahara <tahara@gnome.gr.jp>, 2000
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2009.
+# KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003
+# Satoru SATOH <ss@gnome.gr.jp>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-02-23 23:24+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "ヘルプ・ファイルの \"%s.%s\" が見つかりませんでした"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "\"%s\" のヘルプを表示できませんでした"
+
+msgid "Could not show link"
+msgstr "リンクを表示できませんでした"
+
+msgid "Error"
+msgstr "エラー"
+
+msgid "View help for this game"
+msgstr "このゲームのヘルプを表示します"
+
+msgid "End the current game"
+msgstr "このゲームを終了します"
+
+msgid "Toggle fullscreen mode"
+msgstr "フルスクリーン表示を切り替えます"
+
+msgid "Get a hint for your next move"
+msgstr "次の操作のヒントを得ます"
+
+msgid "Leave fullscreen mode"
+msgstr "フルスクリーン表示を解除します"
+
+msgid "Start a new multiplayer network game"
+msgstr "新しいネットワーク対戦ゲームを開始します"
+
+msgid "End the current network game and return to network server"
+msgstr "現在のネットワーク対戦を終了してネットワーク・サーバに戻ります"
+
+msgid "Start a new game"
+msgstr "新しいゲームを開始します"
+
+msgid "Pause the game"
+msgstr "ゲームを一時停止します"
+
+msgid "Show a list of players in the network game"
+msgstr "ネットワーク対戦しているプレイヤーの一覧を表示します"
+
+msgid "Redo the undone move"
+msgstr "直前の操作を取り消します"
+
+msgid "Restart the game"
+msgstr "ゲームをやり直します"
+
+msgid "Resume the paused game"
+msgstr "一時停止していたゲームを再開します"
+
+msgid "View the scores"
+msgstr "得点を表示します"
+
+msgid "Undo the last move"
+msgstr "直前の操作を取り消します"
+
+msgid "About this game"
+msgstr "このゲームの情報を表示します"
+
+msgid "Close this window"
+msgstr "このウィンドウを閉じます"
+
+msgid "Configure the game"
+msgstr "このゲームを設定します"
+
+msgid "Quit this game"
+msgstr "このゲームを終了します"
+
+msgid "_Contents"
+msgstr "目次(_C)"
+
+msgid "_Fullscreen"
+msgstr "フルスクリーン表示(_F)"
+
+msgid "_Hint"
+msgstr "ヒント(_H)"
+
+msgid "_New"
+msgstr "新ゲーム(_N)"
+
+msgid "_New Game"
+msgstr "新ゲーム(_N)"
+
+msgid "_Redo Move"
+msgstr "移動をやり直す(_R)"
+
+msgid "_Reset"
+msgstr "リセット(_R)"
+
+msgid "_Restart"
+msgstr "最初から(_R)"
+
+msgid "_Undo Move"
+msgstr "移動を元に戻す(_U)"
+
+msgid "_Deal"
+msgstr "カードを引く(_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "フルスクリーン表示の解除(_L)"
+
+msgid "Network _Game"
+msgstr "ネットワーク対戦(_G)"
+
+msgid "L_eave Game"
+msgstr "ゲームから抜ける(_E)"
+
+msgid "Player _List"
+msgstr "プレイヤーの一覧(_L)"
+
+msgid "_Pause"
+msgstr "一時停止(_P)"
+
+msgid "Res_ume"
+msgstr "再開(_U)"
+
+msgid "_Scores"
+msgstr "得点(_S)"
+
+msgid "_End Game"
+msgstr "ゲームの終了(_E)"
+
+msgid "_About"
+msgstr "情報(_A)"
+
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
+
+msgid "_Close"
+msgstr "閉じる(_C)"
+
+msgid "_OK"
+msgstr "OK(_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s はフリーソフトウェアです。フリーソフトウェア財団が提供する GNU 一般公衆利"
+"用許諾契約書の第%d版、あるいはそれ以降の版が定める条項の下で本プログラムを再"
+"頒布または変更することができます。"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s は有用とは思いますが、その頒布にあたっては市場性及び特定の目的、その適合性"
+"についての暗黙の保証を含めて、いかなる保証も行ないません。詳細については GNU "
+"一般公衆利用許諾契約書をご覧下さい。"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずで"
+"す。そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA 02110-1301, USA へ手紙を書いて下さい。"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずで"
+"す。そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA 02110-1301, USA へ手紙を書いて下さい。"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "ブラックジャック - %s"
+
+msgid "_Game"
+msgstr "ゲーム(_G)"
+
+msgid "_View"
+msgstr "表示(_V)"
+
+msgid "Restart the current game"
+msgstr "ゲームをやり直します"
+
+msgid "Show a hint"
+msgstr "ヒントを提示します"
+
+msgid "_Settings"
+msgstr "設定(_S)"
+
+msgid "_Control"
+msgstr "操作(_C)"
+
+msgid "D_eal"
+msgstr "カードを引く(_E)"
+
+msgid "Deal a new hand"
+msgstr "新しいカードを引きます"
+
+msgid "_Hit"
+msgstr "ヒット(_H)"
+
+msgid "Add a card to the hand"
+msgstr "カードを追加します"
+
+msgid "_Stand"
+msgstr "スタンド(_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "カードの追加を止めます"
+
+msgid "S_urrender"
+msgstr "サレンダー(_U)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "勝ち目がない時に現在の手を降ろします (掛け金をは半分になります)"
+
+msgid "_Double down"
+msgstr "ダブル・ダウン(_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "カードをもう 1枚だけ引いて勝負します (掛け金は倍になります)"
+
+msgid "S_plit the hand"
+msgstr "スプリット(_P)"
+
+msgid "Split cards in two new hands"
+msgstr "手札を 2枚に分けて別々に勝負します"
+
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+msgid "_Toolbar"
+msgstr "ツールバー(_T)"
+
+msgid "Show toolbar"
+msgstr "ツールバーを表示します"
+
+msgid "Cards left:"
+msgstr "残りのカード:"
+
+msgid "Wager:"
+msgstr "チップ:"
+
+msgid "Balance:"
+msgstr "残高:"
+
+msgid "Place your wager or deal a hand"
+msgstr "賭け金のチップを置くか手札を配りなさい"
+
+msgid "Blackjack rule set to use"
+msgstr "使用するブラックジャックのルール"
+
+msgid "Card Style"
+msgstr "カードのスタイル"
+
+msgid "Would you like insurance?"
+msgstr "保険に興味がありますか？"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"\"保険\" とは親のアップカードがエースの際に賭け金の 50% までを保険として掛け"
+"ると、親がブラックジャックした時に掛金の倍額が戻ってきます。もし親のカードが"
+"何もせずに 21 になったらプレイヤーが倍額払わなければなりません。"
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"賭け金のチップをセットして、新しい手札を配るために白色の枠をクリックしなさい"
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "賭け金のチップをおくか、新しい手札を配るためにカードをクリックしなさい"
+
+msgid "Blackjack Preferences"
+msgstr "ブラックジャックの設定"
+
+msgid "Game"
+msgstr "ゲーム"
+
+msgid "_Display hand probabilities"
+msgstr "確率を表示する(_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "素早く配る (一枚単位で配らない)(_Q)"
+
+msgid "_Never take insurance"
+msgstr "保険を掛けない(_N)"
+
+msgid "_Reset Balance"
+msgstr "残高のリセット(_R)"
+
+msgid "Rules"
+msgstr "ルール"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Decks"
+msgstr "デック"
+
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Double Any Total"
+
+msgid "Double 9"
+msgstr "Double 9"
+
+msgid "Double Soft"
+msgstr "Double Soft"
+
+msgid "Double After Hit"
+msgstr "Double After Hit"
+
+msgid "Double After Split"
+msgstr "Double After Split"
+
+msgid "Resplit"
+msgstr "Resplit"
+
+msgid "Resplit Aces"
+msgstr "Resplit Aces"
+
+msgid "Surrender"
+msgstr "サレンダー"
+
+msgid "Dealer Speed"
+msgstr "親のスピード"
+
+msgid "Click to double your wager"
+msgstr "クリックするとチップが倍になります"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "ダブル・クリックするとチップが %.2f に増えます"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "ダブル・クリックするとチップが %.2f に減ります"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"クリックすると別のカードを引きます; カードをスプリットの組みにドラッグして下"
+"さい"
+
+msgid "Click to deal another card"
+msgstr "クリックすると別のカードを引きます"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "クリックするとカードの追加が終了します"
+
+msgid "Click to deal a new hand"
+msgstr "クリックすると新しい手が引けます"
+
+msgid "Blackjack can't load the requested file"
+msgstr "ブラックジャックは指定したファイルを読み込めません"
+
+msgid "Please check your Blackjack installation"
+msgstr "ブラックジャックのインストールを確認して下さい"
+
+msgid "The best option is to stand"
+msgstr "スタンドすることが最善のオプションです"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"\"スタンド\" とは、配札に対して、もうそれ以上のカードをもらわずに勝負すること"
+"です。親のカードをクリックするか、メニューの [コントロール] からオプションを"
+"選択します。"
+
+msgid "The best option is to hit"
+msgstr "ヒットすることが最善のオプションです"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"\"ヒット\" とは、配札に対してさらに1枚カードをもらうことです。自分のカードの"
+"上で一回クリックするか、メニューの [コントロール] からオプションを選択しま"
+"す。"
+
+msgid "The best option is to double down"
+msgstr "ダブル・ダウンすることが最善のオプションです"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"\"ダブル・ダウン\" とは、配札に対して、もう一枚だけ引くことを条件に倍額まで掛"
+"けて勝負できることです。ウィンドウの下にあるヒップを一回クリックするか、メ"
+"ニューの [コントロール] からオプションを選択します。"
+
+msgid "The best option is to split"
+msgstr "スプリットすることが最善のオプションです"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"\"スプリット\" とは、配札が同じ数字のカードのとき、二つに分けてそれぞれで勝負"
+"をやり直せることです。手札をドラッグして横にドロップするか、メニューの [コン"
+"トロール] からオプションを選択します。"
+
+msgid "The best option is to surrender"
+msgstr "サレンダーすることが最善のオプションです"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"\"サレンダー\" とは、親の見せ札をもとに勝負をあきらめて降りることです。メ"
+"ニューの [コントロール] からオプションを選択します。"
+
+msgid "Blackjack"
+msgstr "ブラックジャック"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"ブラックジャックはカジノ・スタイルのカード・ゲームです。\n"
+"\n"
+"ブラックジャックは GNOME ゲーム集の一部です。"
+
+msgid "GNOME Games web site"
+msgstr "GNOME ゲーム集のウェブサイト"
+
+msgid "translator-credits"
+msgstr ""
+"相花 毅 <takeshi.aihana@gmail.com>\n"
+"佐藤 暁 <ss@gnome.gr.jp>\n"
+"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
+"Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
+"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
+"Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
+"Yukihiro Nakai <Nakai@technologist.com>\n"
+"日本GNOMEユーザー会 http://www.gnome.gr.jp"
+
+msgid "Computing basic strategy..."
+msgstr "基本戦略の思考中..."
+
+msgid "Bust"
+msgstr "バースト"
+
+msgid "Blackjack!"
+msgstr "ブラックジャック！"
+
+msgid "Soft"
+msgstr "ソフト"
+
+msgid "Win"
+msgstr "ウィン"
+
+msgid "Push"
+msgstr "プッシュ"
+
+msgid "Lose"
+msgstr "ルーズ"
+
+msgid "Player expected values"
+msgstr "プレイヤーが予想した値"
+
+msgid "Stand"
+msgstr "スタンド"
+
+msgid "Hit"
+msgstr "ヒット"
+
+msgid "Double"
+msgstr "ダブル"
+
+msgid "Split"
+msgstr "スプリット"
+
+msgid "Dealer hand probabilities"
+msgstr "確率を表示する"

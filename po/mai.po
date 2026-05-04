@@ -1,0 +1,495 @@
+# translation of gnome-games.HEAD.po to Maithili
+# Copyright (C) 2006 The GNOME Foundation
+# This file is distributed under the same license as the PACKAGE package.
+# BOSS GNU/Linux <bosslinux@cdac.in>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: gedit.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-01-25 13:49+0530\n"
+"Last-Translator: Sangeeta Kumari\n"
+"Language-Team:  <en@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+msgid "Could not show link"
+msgstr ""
+
+msgid "Error"
+msgstr "त्रुटि"
+
+msgid "View help for this game"
+msgstr "एहि खेल क'लेल मद्दति देखाबू"
+
+msgid "End the current game"
+msgstr "वर्तमान खेल समाप्त करू"
+
+msgid "Toggle fullscreen mode"
+msgstr "सौंसे स्क्रीन मोड टॉगल करू"
+
+msgid "Get a hint for your next move"
+msgstr "अगिला चालि लेल संकेत प्राप्त करू"
+
+msgid "Leave fullscreen mode"
+msgstr "पूर्ण स्क्रीन छोड़ू"
+
+msgid "Start a new multiplayer network game"
+msgstr "एकटा नवीन मल्टीप्लेयर सँजाल खेल आरंभ करू"
+
+msgid "End the current network game and return to network server"
+msgstr "मोजुदा सँजाल खेल क' अंत करू आओर सँजाल सर्वर पर लौटू"
+
+msgid "Start a new game"
+msgstr "नवीन खेल प्रारंभ करू"
+
+msgid "Pause the game"
+msgstr "खेल रोकू"
+
+msgid "Show a list of players in the network game"
+msgstr "सँजाल खेलमे खेलाड़ीसभक सूची देखाबू"
+
+msgid "Redo the undone move"
+msgstr "पछिला चाल पूर्ववत करू"
+
+msgid "Restart the game"
+msgstr "वर्तमान खेल पुनःप्रारंभ करू"
+
+msgid "Resume the paused game"
+msgstr "रूकल खेल पुनःप्रारंभ करू"
+
+msgid "View the scores"
+msgstr "अंक देखू"
+
+msgid "Undo the last move"
+msgstr "पछिला चाल पूर्ववत करू"
+
+msgid "About this game"
+msgstr "एहि खेल क' संबंधमे"
+
+msgid "Close this window"
+msgstr "एहि विंडोकेँ बन्न करू"
+
+msgid "Configure the game"
+msgstr "ई खेल विन्यस्त करू"
+
+msgid "Quit this game"
+msgstr "एहि खेलकेँ छोड़ू"
+
+msgid "_Contents"
+msgstr "विषय सूची (_C)"
+
+msgid "_Fullscreen"
+msgstr "फुलस्क्रीन (_F)"
+
+msgid "_Hint"
+msgstr "संकेत (_H)"
+
+msgid "_New"
+msgstr "नवीन (_N)"
+
+msgid "_New Game"
+msgstr "नवीन खेल (_N)"
+
+msgid "_Redo Move"
+msgstr "चालि फिनु चलू (_R)"
+
+msgid "_Reset"
+msgstr "रिसेट करू (_R)"
+
+msgid "_Restart"
+msgstr "पुन:आरंभ करू (_R)"
+
+msgid "_Undo Move"
+msgstr "चालि वापस लिअ'(_U)"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "पूर्ण स्क्रीन छोड़ू (_L)"
+
+msgid "Network _Game"
+msgstr "सँजाल खेल (_G)"
+
+msgid "L_eave Game"
+msgstr "खेल छोड़ू (_e)"
+
+msgid "Player _List"
+msgstr "खेलाड़ी सूची (_L)"
+
+msgid "_Pause"
+msgstr "थामू (_P)"
+
+msgid "Res_ume"
+msgstr "फिनु चालू करू (_u)"
+
+msgid "_Scores"
+msgstr "अंक (_S)"
+
+msgid "_End Game"
+msgstr "खेल समाप्त (_E)"
+
+msgid "_About"
+msgstr "क' संबंधमे (_A)"
+
+msgid "_Cancel"
+msgstr "रद्द करू (_C)"
+
+msgid "_Close"
+msgstr "बन्न करू (_C)"
+
+msgid "_OK"
+msgstr "बेस (_O)"
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s फ्री सॉफ्टवेयर अछि अहाँ एकरा  पुनर्वितरित कए सकैत छी आओर/अथवाएकरा GNU जनरल पब्लिक "
+"लाइसेंसक शर्त क' अधीन रूपांतरित कए सकैत अछिजहिना जे फ्री सॉफ्टवेयर फाउंडेशन क' द्वारा "
+"प्रकाशित कएल गेल अछि अथवा तँ लाइसेंस क' संस्करण 2अथवा कोनो पश्चातवर्ती संस्करण (अहाँक "
+"विकल्प अनुसार)."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%sकेँ एहि आशा सँ वितरित कएल गेल अछि जे ई उपयोगी हएताह, मुदा बिनु कोनो वारंटी क'; एतय "
+"तक जे बिनु कोनो मर्केंटेबिलिटी अथवा खास उद्देश्य क' लेल फिटनेस क' वारंटी क'.  GNU जनरल "
+"पब्लिक लाइसेंसकेँ बेसी विस्तार क' लेल देखू."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"अहाँक GNU जनरल पब्लिक लाइसेंस क' एकटा कॉपी %s क' सँग प्राप्त कएनाइ चाही; जँ नहि, "
+"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
+"02110-1301, USAकेँ लिखू."
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"अहाँक GNU जनरल पब्लिक लाइसेंस क' एकटा कॉपी %s क' सँग प्राप्त कएनाइ चाही; जँ नहि, "
+"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
+"02110-1301, USAकेँ लिखू."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "करिया जोकर - %s"
+
+msgid "_Game"
+msgstr "खेल (_G)"
+
+msgid "_View"
+msgstr "देखू (_V)"
+
+msgid "Restart the current game"
+msgstr "वर्तमान खेल पुनःप्रारंभ करू"
+
+msgid "Show a hint"
+msgstr "एकटा संकेत दिअ'"
+
+msgid "_Settings"
+msgstr "जमावट (_S)"
+
+msgid "_Control"
+msgstr "नियंत्रण (_C)"
+
+msgid "D_eal"
+msgstr "बाँटू (_e)"
+
+msgid "Deal a new hand"
+msgstr "एकटा हाथ आओर बाँटू"
+
+msgid "_Hit"
+msgstr "चोट करू (_H)"
+
+msgid "Add a card to the hand"
+msgstr "आधार पर एकटा पत्ता लए जाउ"
+
+msgid "_Stand"
+msgstr "डटल रहू (_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "अहाँक हाथमे पत्ता जोड़नाइ खत्म करू"
+
+msgid "S_urrender"
+msgstr "समर्पण (_u)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "अपन वेजर क' आधा क'लेल हाथ छोड़ू"
+
+msgid "_Double down"
+msgstr "डबल डाउन (_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "एकटा हिट क'लेल अपन वेजर दोहरा करू"
+
+msgid "S_plit the hand"
+msgstr "एकटा हाथ बाँटू (_p)"
+
+msgid "Split cards in two new hands"
+msgstr "पत्ताकेँ दुइ नवीन हाथमे बाँटू"
+
+msgid "_Help"
+msgstr "मद्दति (_H)"
+
+msgid "_Toolbar"
+msgstr "अओजारपट्टी (_T)"
+
+msgid "Show toolbar"
+msgstr "अओजारपट्टी देखाबू"
+
+msgid "Cards left:"
+msgstr "पत्ता बाकी:"
+
+msgid "Wager:"
+msgstr "बाजीः"
+
+msgid "Balance:"
+msgstr "शेष:"
+
+msgid "Place your wager or deal a hand"
+msgstr "अपन बाजी लगाबू अथवा हाथ बाँटू"
+
+msgid "Blackjack rule set to use"
+msgstr "ब्लेकजेक नियम प्रयोग क'लेल सेट"
+
+msgid "Card Style"
+msgstr "तास शैली"
+
+msgid "Would you like insurance?"
+msgstr "की अहाँ बीमा चाहैत अछि?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"बीमा मौलिक वेजर क' 50%% क' साइड वेजर अछि जे डीलर क' पास प्राकृतिक 21 (यानी ब्लैकजैक) "
+"अछि जे डीलर क' उप्परी कार्ड एक्का अछि जँ डीलर क' पास प्राकृतिक 21 तब खेलाड़ीकेँ दुगुना "
+"भुगतान हएताह."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "अपन बाजी नियत करू आओर नवीन हाथ बाँटब लेल उज्जर घेरामे क्लिक करू."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "अपन बाजी नियत करू अथवा नवीन हाथ बाँटब लेल पत्ता पर क्लिक करू. "
+
+msgid "Blackjack Preferences"
+msgstr "ब्लेकजेक वरीयतासभ "
+
+msgid "Game"
+msgstr "खेल"
+
+msgid "_Display hand probabilities"
+msgstr "हाथ क' संभावना देखाबू (_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "जल्दी पत्ता बाँटू  (प्रत्येक कार्ड क' बीच कोनो देरी नहि हुए) (_Q)"
+
+msgid "_Never take insurance"
+msgstr "कहियो बीमा नहि लिअ'(_N)"
+
+msgid "_Reset Balance"
+msgstr "संतुलन रिसेट करू (_R)"
+
+msgid "Rules"
+msgstr "नियम"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Decks"
+msgstr "तास क' गड्डी"
+
+msgid "Hit Soft 17"
+msgstr "नरम वार 17"
+
+msgid "Double Any Total"
+msgstr "कोनो योग दोगुना करू"
+
+msgid "Double 9"
+msgstr "दोगुना 9"
+
+msgid "Double Soft"
+msgstr "दोगुना नरम"
+
+msgid "Double After Hit"
+msgstr "वार क' बाद दोगुना"
+
+msgid "Double After Split"
+msgstr "स्प्लिट क' बाद दोगुना"
+
+msgid "Resplit"
+msgstr "फिनु सँ अलग"
+
+msgid "Resplit Aces"
+msgstr "इक्का फिनु सँ अलग करू"
+
+msgid "Surrender"
+msgstr "समर्पण"
+
+msgid "Dealer Speed"
+msgstr "पत्ता फेंटबाक गति"
+
+msgid "Click to double your wager"
+msgstr "अपन बाजी दोगुना करब लेल क्लिक करू"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "अपन बाजीकेँ %.2f तक बढ़ाबै लेल दुइ बार क्लिक करू"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "अपन बाजीकेँ %.2f  तक घटाबै लेल दुइ बार क्लिक करू"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "एकटा आओर पत्ता लेल क्लिक करू, जोड़ तोड़ब लेल पत्ता घीँचू"
+
+msgid "Click to deal another card"
+msgstr "एकटा आओर पत्ता लेल क्लिक करू"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "अहाँक हाथमे पत्ता जोड़नाइ खत्म करब लेल क्लिक करू"
+
+msgid "Click to deal a new hand"
+msgstr "एकटा आओर हाथ लेल क्लिक करू"
+
+msgid "Blackjack can't load the requested file"
+msgstr "ब्लेकजेक मांगल गेल फ़ाइलकेँ लोड नहि कए सकैत अछि"
+
+msgid "Please check your Blackjack installation"
+msgstr "कृप्या अपन ब्लेकजेक संस्थापन क' जाँच करू"
+
+msgid "The best option is to stand"
+msgstr "डटल रहनाइ सर्वोत्तम विकल्प अछि"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"ठाड़ रहबा क' मतलब अछि अहाँक हाथमे कार्ड जोड़ब सँ रोकनाइ. एकरा डीलर क' कार्ड पर क्लिक "
+"कए क' करू अथवा कंट्रोलमेनू क' विकल्प पर चुनिकए."
+
+msgid "The best option is to hit"
+msgstr "वार कएनाइ सर्वोत्तम विकल्प अछि"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"हिट करब क' मतलब अछि अहाँक हाथमे आन कार्ड जोड़नाइ. एकरा अपन कार्ड पर क्लिक कए क' करू "
+"अथवा कंट्रोलमेनू सँ विकल्प चुनिकए करू."
+
+msgid "The best option is to double down"
+msgstr "सबसँ बढ़िया विकल्प अछि दोगुना नीच्चाँ"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"दोगुना नीच्चाँ क' मतलब आरंभिक वेजर क' दुगुना कएनाइ अछि आओर एकटा कार्ड प्राप्त कएनाइ "
+"अछि एकरा विंडो क' तल पर चिप पर क्लिक कए क' अथवा कंट्रोलमेनू सँ विकल्प चुनिकए करू."
+
+msgid "The best option is to split"
+msgstr "बाँटनाइ सर्वोत्तम विकल्प अछि"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"बाँटब क' मतलब अछि अपन हाथकेँ दुइ अलग हाथमे . एकरा अपन एकटा कार्डकेँ घीँचकए आओर किनार "
+"पर छोड़िकए अथवा कंट्रोलमेनू सँ विकल्पकेँ चुनिकए करू."
+
+msgid "The best option is to surrender"
+msgstr "समर्पण कएनाइ सर्वोत्तम विकल्प अछि"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"समर्पण करब क' मतलब अछि आधा वेजरकेँ छोड़नाइ आ हाथ पूरा नहि कएनाइ .एकरा कंट्रोलमेनू सँ "
+"विकल्प चुनिकए करू."
+
+msgid "Blackjack"
+msgstr "ब्लेकजेक"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+
+msgid "GNOME Games web site"
+msgstr ""
+
+msgid "translator-credits"
+msgstr "संगीता कुमारी (sangeeta09@gmail.com)"
+
+msgid "Computing basic strategy..."
+msgstr "मौलिक रणनीति क' गणना कए रहल अछि..."
+
+msgid "Bust"
+msgstr "अर्ध-प्रतिमा"
+
+msgid "Blackjack!"
+msgstr "ब्लेकजेक!"
+
+msgid "Soft"
+msgstr "नरम"
+
+msgid "Win"
+msgstr "जीत"
+
+msgid "Push"
+msgstr "दाबू"
+
+msgid "Lose"
+msgstr "हार"
+
+msgid "Player expected values"
+msgstr "खेलाड़ी संभावित मूल्य"
+
+msgid "Stand"
+msgstr "डटल रहू"
+
+msgid "Hit"
+msgstr "वार करू"
+
+msgid "Double"
+msgstr "दोगुना"
+
+msgid "Split"
+msgstr "बाँटू"
+
+msgid "Dealer hand probabilities"
+msgstr "फेंटबाक बला हाथ क' संभावना"

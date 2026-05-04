@@ -1,0 +1,516 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aviary.pl
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# gnomepl@aviary.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Review całości pliku: 19.12.2008 WD
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-14 20:16+0100\n"
+"Last-Translator: Joanna Mazgaj <jmazgaj@aviary.pl>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Nie znaleziono pliku pomocy \"%s.%s\""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Nie można wyświetlić pomocy dla \"%s\""
+
+msgid "Could not show link"
+msgstr "Nie można wyświetlić odnośnika"
+
+msgid "Error"
+msgstr "Błąd"
+
+msgid "View help for this game"
+msgstr "Wyświetla pomoc dla bieżącej gry"
+
+msgid "End the current game"
+msgstr "Kończy bieżącą grę"
+
+msgid "Toggle fullscreen mode"
+msgstr "Przełącza tryb pełnoekranowy"
+
+msgid "Get a hint for your next move"
+msgstr "Wyświetla podpowiedź kolejnego ruchu"
+
+msgid "Leave fullscreen mode"
+msgstr "Wyłącza tryb pełnoekranowy"
+
+msgid "Start a new multiplayer network game"
+msgstr "Rozpoczyna nową grę sieciową dla wielu graczy"
+
+msgid "End the current network game and return to network server"
+msgstr "Zakończenie aktualnej gry sieciowej i powrót do serwera sieciowego"
+
+msgid "Start a new game"
+msgstr "Rozpoczęcie nowej gry"
+
+msgid "Pause the game"
+msgstr "Wstrzymanie gry"
+
+msgid "Show a list of players in the network game"
+msgstr "Wyświetla listę graczy w grze sieciowej"
+
+msgid "Redo the undone move"
+msgstr "Powtarza cofnięty ruch"
+
+msgid "Restart the game"
+msgstr "Rozpoczęcie gry od nowa"
+
+msgid "Resume the paused game"
+msgstr "Kontynuacja gry"
+
+msgid "View the scores"
+msgstr "Wyświetla wyniki"
+
+msgid "Undo the last move"
+msgstr "Cofa ostatni ruch"
+
+msgid "About this game"
+msgstr "Wyświetla informacje o grze"
+
+msgid "Close this window"
+msgstr "Zamyka to okno"
+
+msgid "Configure the game"
+msgstr "Konfiguruje grę"
+
+msgid "Quit this game"
+msgstr "Zamyka grę"
+
+msgid "_Contents"
+msgstr "_Zawartość"
+
+msgid "_Fullscreen"
+msgstr "_Pełny ekran"
+
+msgid "_Hint"
+msgstr "_Podpowiedź"
+
+msgid "_New"
+msgstr "_Nowa"
+
+msgid "_New Game"
+msgstr "_Nowa gra"
+
+msgid "_Redo Move"
+msgstr "_Powtórz ruch"
+
+msgid "_Reset"
+msgstr "Z_resetuj"
+
+msgid "_Restart"
+msgstr "_Zacznij od początku"
+
+msgid "_Undo Move"
+msgstr "_Cofnij ruch"
+
+msgid "_Deal"
+msgstr "Roz_daj"
+
+msgid "_Leave Fullscreen"
+msgstr "_Opuść tryb pełnoekranowy"
+
+msgid "Network _Game"
+msgstr "_Gra sieciowa"
+
+msgid "L_eave Game"
+msgstr "Op_uść grę"
+
+msgid "Player _List"
+msgstr "Lis_ta graczy"
+
+msgid "_Pause"
+msgstr "_Wstrzymaj"
+
+msgid "Res_ume"
+msgstr "_Ponów"
+
+msgid "_Scores"
+msgstr "_Wyniki"
+
+msgid "_End Game"
+msgstr "_Koniec gry"
+
+msgid "_About"
+msgstr "_O grze"
+
+msgid "_Cancel"
+msgstr "_Anuluj"
+
+msgid "_Close"
+msgstr "_Zamknij"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s jest wolnym oprogramowaniem; można go rozprowadzać dalej i/lub "
+"modyfikować na warunkach Powszechnej Licencji Publicznej GNU, wydanej przez "
+"Fundację Wolnego Oprogramowania - według wersji %d tej Licencji lub którejś "
+"z późniejszych wersji."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Program %s rozpowszechniany jest z nadzieją, iż będzie on użyteczny - jednak "
+"BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji PRZYDATNOŚCI "
+"HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. W celu uzyskania "
+"bliższych informacji należy zapoznać się z Powszechną Licencją Publiczną "
+"GNU. "
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Z pewnością wraz z %s dostarczono także egzemplarz Powszechnej Licencji "
+"Publicznej GNU (GNU General Public License); jeśli nie - proszę napisać do "
+"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
+"02110-130159 USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Z pewnością wraz z niniejszym programem dostarczono także egzemplarz "
+"Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli nie "
+"- proszę odwiedzić stronę internetową <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Oczko - %s"
+
+msgid "_Game"
+msgstr "_Gra"
+
+msgid "_View"
+msgstr "_Widok"
+
+msgid "Restart the current game"
+msgstr "Zaczyna grę od nowa"
+
+msgid "Show a hint"
+msgstr "Wyświetlenie podpowiedzi"
+
+msgid "_Settings"
+msgstr "_Ustawienia"
+
+msgid "_Control"
+msgstr "_Sterowanie"
+
+msgid "D_eal"
+msgstr "_Rozdaj"
+
+msgid "Deal a new hand"
+msgstr "Rozpoczyna nowe rozdanie"
+
+msgid "_Hit"
+msgstr "_Pobierz karty"
+
+msgid "Add a card to the hand"
+msgstr "Pobiera kartę do ręki"
+
+msgid "_Stand"
+msgstr "_Bez pobrania karty"
+
+msgid "Stop adding cards to the hand"
+msgstr "Kończy dodawanie kart do ręki"
+
+msgid "S_urrender"
+msgstr "_Poddaj (się)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Zastawia tę rękę za połowę wartości zakładu"
+
+msgid "_Double down"
+msgstr "Po_dwój stawkę"
+
+msgid "Double your wager for a single hit"
+msgstr "Podwojenie zakładu dla pojedynczego dobrania"
+
+msgid "S_plit the hand"
+msgstr "P_odziel karty"
+
+msgid "Split cards in two new hands"
+msgstr "Rozdzielenie kart na dwie ręce"
+
+msgid "_Help"
+msgstr "_Pomoc"
+
+msgid "_Toolbar"
+msgstr "Pasek _narzędziowy"
+
+msgid "Show toolbar"
+msgstr "Wyświetlanie paska narzędziowego"
+
+msgid "Cards left:"
+msgstr "Pozostało kart:"
+
+msgid "Wager:"
+msgstr "Zakład:"
+
+msgid "Balance:"
+msgstr "Bilans:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Należy ustawić zakład lub pobrać kartę"
+
+msgid "Blackjack rule set to use"
+msgstr "Reguły użytkownika gry oczko"
+
+msgid "Card Style"
+msgstr "Wzór kart"
+
+msgid "Would you like insurance?"
+msgstr "Ubezpieczenie?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Ubezpieczenie jest dodatkowym zakładem o wartości 50%% podstawowego zakładu. "
+"Zakład dotyczy posiadania przez rozdającego naturalnej 21 (tzw. blackjack). "
+"Ubezpieczenie jest oferowane, gdy pierwsza karta rozdającego to as. Jeżeli "
+"rozdający ma naturalną 21, wtedy gracz otrzymuje podwójną wypłatę."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Należy ustawić zakład i kliknąć wewnątrz białej obwódki, by rozdać nowe "
+"karty."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Należy ustawić zakład lub kliknąć na kartach, aby rozdać nowe karty."
+
+msgid "Blackjack Preferences"
+msgstr "Preferencje gry Oczko"
+
+msgid "Game"
+msgstr "Gra"
+
+msgid "_Display hand probabilities"
+msgstr "_Wyświetlanie prawdopodobieństw"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Szybkie rozdania (bez przerw pomiędzy kartami)"
+
+msgid "_Never take insurance"
+msgstr "_Rezygnacja z ubezpieczenia"
+
+msgid "_Reset Balance"
+msgstr "_Kasowanie bilansu"
+
+msgid "Rules"
+msgstr "Zasady"
+
+msgid "Name"
+msgstr "Nazwa"
+
+msgid "Decks"
+msgstr "Talie"
+
+msgid "Hit Soft 17"
+msgstr "Pobranie karty przy miękkiej 17"
+
+msgid "Double Any Total"
+msgstr "Podwojenie dowolnej stawki"
+
+msgid "Double 9"
+msgstr "Podwójne dziewiątki"
+
+msgid "Double Soft"
+msgstr "Podwójne asy"
+
+msgid "Double After Hit"
+msgstr "Podwojenie po pobraniu"
+
+msgid "Double After Split"
+msgstr "Podwojenie po rozdzieleniu"
+
+msgid "Resplit"
+msgstr "Ponowne rozdzielenie"
+
+msgid "Resplit Aces"
+msgstr "Ponowne rozdzielenie asów"
+
+msgid "Surrender"
+msgstr "Poddanie"
+
+msgid "Dealer Speed"
+msgstr "Szybkość krupiera"
+
+msgid "Click to double your wager"
+msgstr "Kliknięcie podwaja zakład"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Dwukrotne kliknięcie zwiększa zakład o %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Dwukrotne kliknięcie zmniejsza zakład o %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Należy kliknąć, aby pobrać następną kartę i przeciągnąć kartę, by rozdzielić "
+"parę"
+
+msgid "Click to deal another card"
+msgstr "Należy kliknąć, aby pobrać następną kartę"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Należy kliknąć, aby zakończyć dodawanie kart"
+
+msgid "Click to deal a new hand"
+msgstr "Kliknięcie rozpoczyna nowe rozdanie"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Nie można wczytać żądanego pliku"
+
+msgid "Please check your Blackjack installation"
+msgstr "Proszę sprawdzić instalację gry Oczko"
+
+msgid "The best option is to stand"
+msgstr "Najlepszym wyborem jest niebranie karty"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Niebranie kart do ręki można wykonać poprzez kliknięcie kart krupiera lub "
+"poprzez wybranie opcji w menu."
+
+msgid "The best option is to hit"
+msgstr "Najlepszym wyborem jest wzięcie karty"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Wzięcie karty można zrobić poprzez pojedyncze kliknięcie na swoje karty lub "
+"poprzez wybranie opcji w menu."
+
+msgid "The best option is to double down"
+msgstr "Najlepszym wyborem jest podwojenie stawki"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Podwojenie stawki to powiększenie początkowego zakładu i otrzymanie jednej "
+"dodatkowej karty. Można to zrobić poprzez kliknięcie na kawałku na dole okna "
+"lub poprzez wybranie opcji w menu."
+
+msgid "The best option is to split"
+msgstr "Najlepszym wyborem jest podzielenie kart"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Rozdzielenie oznacza podzielenie posiadanego rozdania na dwa oddzielne. "
+"Można to zrobić poprzez przeciągnięcie jednej z kart i opuszczenie jej na "
+"boku lub poprzez zaznaczenie opcji w menu."
+
+msgid "The best option is to surrender"
+msgstr "Najlepszym wyborem jest poddanie się"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Poddanie się oznacza oddanie połowy stawki i nieskompletowanie wszystkich "
+"kart. Można to zrobić poprzez zaznaczenie opcji w menu."
+
+msgid "Blackjack"
+msgstr "Oczko"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Kasynowa wersja gry w oczko.\n"
+"\n"
+"Oczko jest częścią gier GNOME."
+
+msgid "GNOME Games web site"
+msgstr "Strona internetowa gier GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"Andrzej Polatyński <andrzej@datatel.net.pl>, 2006\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2007, 2008, 2009\n"
+"Bartosz Kosiorek <gang65@poczta.onet.pl>, 2005, 2008\n"
+"Piotr Zaryk <zaryk@jabster.pl>, 2009\n"
+"Joanna Mazgaj <jmazgaj@aviary.pl>, 2009\n"
+"Wojciech Kapusta <wkapusta@aviary.pl>, 2009"
+
+msgid "Computing basic strategy..."
+msgstr "Przeliczanie podstawowej strategii..."
+
+msgid "Bust"
+msgstr "Rozerwij"
+
+msgid "Blackjack!"
+msgstr "Oczko!"
+
+msgid "Soft"
+msgstr "Miękka"
+
+msgid "Win"
+msgstr "Wygrana"
+
+msgid "Push"
+msgstr "Remis"
+
+msgid "Lose"
+msgstr "Przegrana"
+
+msgid "Player expected values"
+msgstr "Wartości oczekiwane przez gracza"
+
+msgid "Stand"
+msgstr "Bez pobrania karty"
+
+msgid "Hit"
+msgstr "Pobranie karty"
+
+msgid "Double"
+msgstr "Podwojenie"
+
+msgid "Split"
+msgstr "Podzielenie"
+
+msgid "Dealer hand probabilities"
+msgstr "Prawdopodobieństwo rozdającego"

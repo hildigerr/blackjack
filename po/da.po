@@ -1,0 +1,534 @@
+# Danish translation of gnome-games.
+# Copyright (C) 1998-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-games package.
+# Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
+# Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001
+# Keld Simonsen <keld@dkuug.dk>, 2000-2002.
+# Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
+# Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007, 08, 09.
+#
+# RETMIG: en eller anden med forstand på kabaler skal have oversat
+# navnene på spillene. Der er en kommentar til hver af dem der
+# foreløbigt vist nok kan gå.
+#
+# Konventioner:
+#
+#   AisleRiot -> Kabale
+#   cave -> grotte
+#   hint -> fif
+#   GNOME Robots -> Robotter
+#   Same Gnome (parodi på Same Game i KDE) -> Samspil
+#   Gnibbles, Nibbles -> Orme
+#   score slot -> pointfelt
+#   tracker (gnome-sudoku) -> spor
+#
+#
+# Generelt er de fleste spilnavne oversat nådesløst til dansk.
+# Husk at tilføje dig i credit-listen (besked id "translator-credits")
+#
+# Der er en række strenge hvor der står f.eks. "glines|Medium". Så vidt jeg ved kommer der problemer når man oversætter teksten til venstre for |, så lad dette blive stående.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-08-23 22:36+0200\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Hjælpefilen \"%s.%s\" ikke fundet"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Kunne ikke vise hjælp til “%s”"
+
+msgid "Could not show link"
+msgstr "Kunne ikke vise link"
+
+msgid "Error"
+msgstr "Fejl"
+
+msgid "View help for this game"
+msgstr "Vis hjælp til dette spil"
+
+msgid "End the current game"
+msgstr "Afslut det aktuelle spil"
+
+msgid "Toggle fullscreen mode"
+msgstr "Slå fuldskærmstilstand til/fra"
+
+msgid "Get a hint for your next move"
+msgstr "Få et fif til dit næste træk"
+
+msgid "Leave fullscreen mode"
+msgstr "Afslut fuldskærm"
+
+msgid "Start a new multiplayer network game"
+msgstr "Start et nyt netværksspil med flere spillere"
+
+msgid "End the current network game and return to network server"
+msgstr "Afslut det aktuelle netværksspil og vend tilbage til netværksserveren"
+
+msgid "Start a new game"
+msgstr "Start et nyt spil"
+
+msgid "Pause the game"
+msgstr "Sæt spillet på pause"
+
+msgid "Show a list of players in the network game"
+msgstr "Vis en liste af spillere i netværkssspillet"
+
+msgid "Redo the undone move"
+msgstr "Omgør det fortrudte træk"
+
+msgid "Restart the game"
+msgstr "Genstart spillet"
+
+msgid "Resume the paused game"
+msgstr "Genoptag det aktuelle spil"
+
+msgid "View the scores"
+msgstr "Vis resultaterne"
+
+msgid "Undo the last move"
+msgstr "Fortryd sidste træk"
+
+msgid "About this game"
+msgstr "Om dette spil"
+
+msgid "Close this window"
+msgstr "Luk dette vindue"
+
+msgid "Configure the game"
+msgstr "Konfigurér spillet"
+
+msgid "Quit this game"
+msgstr "Afslut dette spil"
+
+msgid "_Contents"
+msgstr "_Indhold"
+
+msgid "_Fullscreen"
+msgstr "_Fuldskærm"
+
+msgid "_Hint"
+msgstr "_Fif"
+
+msgid "_New"
+msgstr "_Nyt"
+
+msgid "_New Game"
+msgstr "_Nyt spil"
+
+msgid "_Redo Move"
+msgstr "_Gentag træk"
+
+msgid "_Reset"
+msgstr "_Nulstil"
+
+msgid "_Restart"
+msgstr "_Genstart"
+
+msgid "_Undo Move"
+msgstr "_Fortryd træk"
+
+msgid "_Deal"
+msgstr "_Giv kort"
+
+msgid "_Leave Fullscreen"
+msgstr "_Afslut fuldskærm"
+
+msgid "Network _Game"
+msgstr "_Netværksspil"
+
+msgid "L_eave Game"
+msgstr "_Forlad spillet"
+
+msgid "Player _List"
+msgstr "Spiller_liste"
+
+msgid "_Pause"
+msgstr "_Pause"
+
+msgid "Res_ume"
+msgstr "_Start igen"
+
+msgid "_Scores"
+msgstr "_Resultater"
+
+msgid "_End Game"
+msgstr "A_fslut spil"
+
+msgid "_About"
+msgstr "_Om"
+
+msgid "_Cancel"
+msgstr "_Annullér"
+
+msgid "_Close"
+msgstr "_Luk"
+
+msgid "_OK"
+msgstr "_O.k."
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s er fri software; det kan distribueres og/eller modificeres som betinget "
+"af GNU General Public License, udarbejdet af Free Software Foundation; enten "
+"version %d af licensen eller, efter eget valg, enhver nyere version."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s distribueres i håb om at det viser sig nyttigt, men UDEN NOGEN GARANTI; "
+"selv uden de underforståede garantier SALGBARHED eller EGNETHED TIL ET "
+"BESTEMT FORMÅL, idet der henvises til GNU General Public License for "
+"detaljer."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Du bør have modtaget en kopi af GNU General Public License sammen med %s; er "
+"dette ikke tilfældet, så skriv til Free Software Foundation, Inc., 51 "
+"Franklin Street, Femte sal, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Du bør have modtaget en kopi af GNU General Public License sammen med %s; er "
+"dette ikke tilfældet, så se <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Spil"
+
+msgid "_View"
+msgstr "_Vis"
+
+msgid "Restart the current game"
+msgstr "Genstart det aktuelle spil"
+
+msgid "Show a hint"
+msgstr "Vis fif"
+
+msgid "_Settings"
+msgstr "_Indstillinger"
+
+msgid "_Control"
+msgstr "_Kontrol"
+
+msgid "D_eal"
+msgstr "_Giv"
+
+msgid "Deal a new hand"
+msgstr "Giv en ny hånd"
+
+msgid "_Hit"
+msgstr "_Køb"
+
+msgid "Add a card to the hand"
+msgstr "Føj et kort til hånden"
+
+msgid "_Stand"
+msgstr "_Stå"
+
+msgid "Stop adding cards to the hand"
+msgstr "Stop med at føje kort til hånden"
+
+msgid "S_urrender"
+msgstr "Giv _op"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Afgiv denne hånd for halvdelen af det du satset"
+
+msgid "_Double down"
+msgstr "_Doble ned"
+
+msgid "Double your wager for a single hit"
+msgstr "Fordobl din satsning for et enkelt køb"
+
+msgid "S_plit the hand"
+msgstr "_Split hånden"
+
+msgid "Split cards in two new hands"
+msgstr "Split hånden op i to nye hænder"
+
+msgid "_Help"
+msgstr "_Hjælp"
+
+msgid "_Toolbar"
+msgstr "_Værktøjslinje"
+
+msgid "Show toolbar"
+msgstr "Vis værktøjslinje"
+
+msgid "Cards left:"
+msgstr "Tilbageværende kort:"
+
+msgid "Wager:"
+msgstr "Satsning:"
+
+msgid "Balance:"
+msgstr "Balance:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Afgiv din satsning eller giv en hånd"
+
+msgid "Blackjack rule set to use"
+msgstr "Blackjack-regel sat til brug"
+
+msgid "Card Style"
+msgstr "Kortstil"
+
+msgid "Would you like insurance?"
+msgstr "Ønsker du forsikring?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Forsikring er en sideindsats på 50% af den originale indsats, på at "
+"kortgiveren har en naturlig 21 (Blackjack). Muligheden for dette er til "
+"stede når kortgiverens første kort er et es. Hvis kortgiveren har en "
+"naturlig 21, så bliver spilleren betalt dobbelt."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Angiv din satsning og klik på det hvide omrids for at give en ny hånd."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Angiv din satsning eller klik på kortene for at give en ny hånd."
+
+msgid "Blackjack Preferences"
+msgstr "Indstillinger for blackjack"
+
+msgid "Game"
+msgstr "Spil"
+
+msgid "_Display hand probabilities"
+msgstr "_Vis sandsynligheder for hånd"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Hurtige kortgivninger (ingen pause mellem hvert kort)"
+
+msgid "_Never take insurance"
+msgstr "Tag _aldrig forsikring"
+
+msgid "_Reset Balance"
+msgstr "_Nulstil balance"
+
+msgid "Rules"
+msgstr "Regler"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Decks"
+msgstr "Bunke"
+
+msgid "Hit Soft 17"
+msgstr "Køb blødt 17"
+
+msgid "Double Any Total"
+msgstr "Fordobl ethvert total"
+
+msgid "Double 9"
+msgstr "Dobbelt 9"
+
+msgid "Double Soft"
+msgstr "Dobbelt blød"
+
+msgid "Double After Hit"
+msgstr "Dobbelt efter køb"
+
+msgid "Double After Split"
+msgstr "Dobbelt efter split"
+
+msgid "Resplit"
+msgstr "Gensplit"
+
+msgid "Resplit Aces"
+msgstr "Gensplit esser"
+
+msgid "Surrender"
+msgstr "Giv op"
+
+msgid "Dealer Speed"
+msgstr "Kortgiverhastighed"
+
+msgid "Click to double your wager"
+msgstr "Klik for fordoble satsningen"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Dobbeltklik for at forøge satsningen med %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Dobbeltklik for at formindske satsningen med %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Klik for at give en kort til; træk kort for at dele par"
+
+msgid "Click to deal another card"
+msgstr "Klik for at give et kort til"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Klik for at afslutte tilføjelse af kort til hånden"
+
+msgid "Click to deal a new hand"
+msgstr "Klik for at give en ny hånd"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack kan ikke indlæse den forespurgte fil"
+
+msgid "Please check your Blackjack installation"
+msgstr "Kontrollér installationen af Blackjack"
+
+msgid "The best option is to stand"
+msgstr "Den bedste mulighed er at stå"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"At stå betyder et stop for tilføjelse af kort til din hånd. Gør dette ved at "
+"klikke på kortgiverens kort eller ved at vælge valgmuligheden i "
+"kontrolmenuen."
+
+msgid "The best option is to hit"
+msgstr "Den bedste mulighed er at købe"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"At købe betyder at et nyt kort tilføjes din hånd. Gør dette ved at klikke på "
+"dine kort eller ved at vælge valgmuligheden i kontrolmenuen."
+
+msgid "The best option is to double down"
+msgstr "Den bedste mulighed er doble ned"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"At doble ned betyder at den oprindelige satsning fordobles og modtagelsen af "
+"præcist ét kort mere. Gør dette ved at klikke en enkelt gang på jetonerne i "
+"bunden af vinduet eller ved at vælge valgmuligheden i kontrolmenuen."
+
+msgid "The best option is to split"
+msgstr "Den bedste mulighed er at splitte"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"At splitte betyder at opdele din nuværende hånd i to separate hænder. Gør "
+"dette ved at trække et af dine kort ud til siden eller ved at vælge "
+"valgmuligheden i kontrolmenuen."
+
+msgid "The best option is to surrender"
+msgstr "Den bedste mulighed er at give op"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"At give op betyder at du mister halvdelen af din satsning og ikke færdiggøre "
+"hånden. Gør dette ved at vælge valgmuligheden fra kontrolmenuen."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Blackjack er et kasino-kortspil.\n"
+"\n"
+"Blackjack er en del af GNOME Games."
+
+msgid "GNOME Games web site"
+msgstr "Hjemmeside for GNOME Games"
+
+msgid "translator-credits"
+msgstr ""
+"Anders Wegge Jakobsen\n"
+"Keld Simonsen\n"
+"Kenneth Christiansen\n"
+"Martin Willemoes Hansen\n"
+"Ole Laursen\n"
+"Ask Hjorth Larsen\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
+
+msgid "Computing basic strategy..."
+msgstr "Beregner basal strategi..."
+
+msgid "Bust"
+msgstr "Gået over"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Blød"
+
+msgid "Win"
+msgstr "Vundet"
+
+# blackjack-terminologi
+msgid "Push"
+msgstr "Uafgjort"
+
+msgid "Lose"
+msgstr "Tabt"
+
+msgid "Player expected values"
+msgstr "Forventede værdier for spiller"
+
+msgid "Stand"
+msgstr "Stå"
+
+msgid "Hit"
+msgstr "Køb"
+
+msgid "Double"
+msgstr "Dobbel"
+
+msgid "Split"
+msgstr "Split"
+
+msgid "Dealer hand probabilities"
+msgstr "Sandsynligheder for kortgiverhånd"

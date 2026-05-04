@@ -1,0 +1,535 @@
+# gnome-games yn Gymraeg.
+# This file is distributed under the same license as the gnome-games package.
+#
+# We are using two ways to translate "corresponds to". "yn golygu"
+# and "yn cyfateb i". (Grep for examples.) Deliberate? (Telsa 2003-07-15)
+# (Gweler isod - rhysj)
+#
+# Dafydd Harries <daf@muse.19inch.net>, 2004.
+# Dafydd Tomos <l10n@da.fydd.org>, 2004.
+# Rhys Jones <rhys@sucs.org>, 2005-2007.
+#
+# rhysj, ar gyfer GNOME 2.10:
+# - Wedi newid y ffurfiau lluosog ychydig (mae 8 ac 11 yn cael eu trin yn
+#   gywir nawr).
+# - Wedi gyrru'r cyfan trwy Cysill
+#
+# rhysj, ar gyfer GNOME 2.12:
+# - wedi safoni 'teleport' fel 'llamu' (roedd enghreifftiau o 'llamu' a
+#   'telegludo' o'r blaen)
+# - wedi newid yr enghreifftiau o 'yn cyfateb i' i 'yn golygu' (gweler
+#   sylw Telsa, uchod), ar wahân i un enghraifft nad oedd yn gwneud llawer
+#   o synnwyr fel arall.
+# - wedi newid cyfieithiadau N/S/E/W i fod yn fwy nag un llythyren (amhosib
+#   gwahaniaethu rhwng e.e. D(wyrain) a D(e) fel arall)
+# - a gyrru'r cyfan trwy Cysill (eto)
+#
+# rhysj, ar gyfer GNOME 2.14:
+# - diweddariadau
+# - gwirio gyda Cysill eto
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-06-14 16:31+0100\n"
+"Last-Translator: Telsa Gwynne <gnome@aloss.ukuu.org.uk>\n"
+"Language-Team: Cymraeg <gnome-cy@www.linux.org.uk>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 1 : (n == 2) ? 2 : (n == 8) || "
+"(n == 11) ? 3 : 0;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+msgid "Could not show link"
+msgstr "Methwyd dangos cyswllt"
+
+msgid "Error"
+msgstr "Gwall"
+
+msgid "View help for this game"
+msgstr "Dangos cymorth ar gyfer y gêm"
+
+msgid "End the current game"
+msgstr "Gorffen y gêm bresennol"
+
+#, fuzzy
+msgid "Toggle fullscreen mode"
+msgstr "Mynd i'r modd sgrin lawn"
+
+msgid "Get a hint for your next move"
+msgstr "Dangos awgrym ar gyfer eich symudiad nesaf"
+
+msgid "Leave fullscreen mode"
+msgstr "Gadael y modd sgrin lawn"
+
+msgid "Start a new multiplayer network game"
+msgstr "Dangos gêm newydd ar y rhwydwaith i sawl chwaraewr"
+
+msgid "End the current network game and return to network server"
+msgstr "Gorffen y gêm rwydwaith bresennol a dychwelyd at y gweinydd rhwydwaith"
+
+msgid "Start a new game"
+msgstr "Dechrau gêm newydd"
+
+msgid "Pause the game"
+msgstr "Seibio'r gêm"
+
+msgid "Show a list of players in the network game"
+msgstr "Dangos rhestr chwaraewyr y gêm rhwydwaith"
+
+msgid "Redo the undone move"
+msgstr "Ail-wneud y symudiad gafodd ei ddadwneud"
+
+msgid "Restart the game"
+msgstr "Ailddechrau'r gêm"
+
+msgid "Resume the paused game"
+msgstr "Ailgychwyn y gêm gafodd ei seibio"
+
+msgid "View the scores"
+msgstr "Gweld y sgoriau"
+
+msgid "Undo the last move"
+msgstr "Dadwneud y symudiad diwethaf"
+
+msgid "About this game"
+msgstr "Ynghylch y gêm"
+
+msgid "Close this window"
+msgstr "Cau'r ffenestr hon"
+
+msgid "Configure the game"
+msgstr "Cyflunio'r gêm"
+
+msgid "Quit this game"
+msgstr "Gadael y gêm"
+
+msgid "_Contents"
+msgstr "_Cynnwys"
+
+msgid "_Fullscreen"
+msgstr "Llenwi'r Sgrin"
+
+msgid "_Hint"
+msgstr "_Awgrymu"
+
+msgid "_New"
+msgstr "_Newydd"
+
+msgid "_New Game"
+msgstr "Gêm _Newydd"
+
+msgid "_Redo Move"
+msgstr "_Ail-wneud Symudiad"
+
+msgid "_Reset"
+msgstr "_Ailosod"
+
+msgid "_Restart"
+msgstr "Ail_ddechrau"
+
+msgid "_Undo Move"
+msgstr "_Dadwneud Symudiad"
+
+#, fuzzy
+msgid "_Deal"
+msgstr "_Delio"
+
+msgid "_Leave Fullscreen"
+msgstr "_Gadael modd Sgrin Lawn"
+
+msgid "Network _Game"
+msgstr "Gêm _Rwydwaith"
+
+msgid "L_eave Game"
+msgstr "Gadael _Gêm"
+
+msgid "Player _List"
+msgstr "Rhestr _Chwaraewyr"
+
+msgid "_Pause"
+msgstr "_Seibio"
+
+msgid "Res_ume"
+msgstr "_Ailgychwyn"
+
+msgid "_Scores"
+msgstr "_Sgorau"
+
+msgid "_End Game"
+msgstr "_Gorffen y Gêm"
+
+#, fuzzy
+msgid "_About"
+msgstr "Ynghylch"
+
+#, fuzzy
+msgid "_Cancel"
+msgstr "Canfield"
+
+#, fuzzy
+msgid "_Close"
+msgstr "_Clirio"
+
+msgid "_OK"
+msgstr ""
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"Meddalwedd rhydd yw %s; gallwch ei hailddosbarthu ac/neu ei newid o dan "
+"dermau Trwydded Gyffredinol Gyhoeddus GNU a gyhoeddir gan y Free Software "
+"Foundation; naill ai fersiwn 2 y Drwydded, neu (o'ch dewis chi) unrhyw "
+"fersiwn mwy diweddar."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Mae %s yn cael ei ddosbarthu yn y gobaith y bydd yn ddefnyddiol, ond HEB "
+"UNRHYW WARANT; heb hyd yn oed y warant ymhlyg o FARSIANDÏAETH ac ADDASRWYDD "
+"AT BWRPAS ARBENNIG.  Gweler Trwydded Gyffredinol Gyhoeddus GNU a Hawlfraint "
+"Unicode am ragor o fanylion."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Fe ddylech fod wedi derbyn copi o Drwydded Gyffredinol Gyhoeddus GNU ynghyd "
+"â %s; os na, ysgrifennwch at y Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Fe ddylech fod wedi derbyn copi o Drwydded Gyffredinol Gyhoeddus GNU ynghyd "
+"â %s; os na, ysgrifennwch at y Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blacjac - %s"
+
+msgid "_Game"
+msgstr "_Gêm"
+
+msgid "_View"
+msgstr "_Golwg"
+
+msgid "Restart the current game"
+msgstr "Ail-gychwyn y gêm bresennol"
+
+msgid "Show a hint"
+msgstr "Dangos awgrym"
+
+msgid "_Settings"
+msgstr "_Gosodiadau"
+
+msgid "_Control"
+msgstr "_Rheoli"
+
+msgid "D_eal"
+msgstr "_Delio"
+
+msgid "Deal a new hand"
+msgstr "Delio dyrnaid arall"
+
+msgid "_Hit"
+msgstr "_Taro"
+
+msgid "Add a card to the hand"
+msgstr "Ychwanegu cerdyn i'r dyrnaid"
+
+msgid "_Stand"
+msgstr "_Sefyll"
+
+msgid "Stop adding cards to the hand"
+msgstr "Gorffen ychwanegu cardiau i'r dyrnaid"
+
+msgid "S_urrender"
+msgstr "_Ildio"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Fforffedu'r llaw hon am hanner eich bet"
+
+msgid "_Double down"
+msgstr "_Dyblu i lawr"
+
+msgid "Double your wager for a single hit"
+msgstr "Dyblu eich bet am un trawiad"
+
+msgid "S_plit the hand"
+msgstr "_Hollti'r dyrnaid"
+
+msgid "Split cards in two new hands"
+msgstr "Hollti'r cardiau am ddau ddyrnaid newydd"
+
+msgid "_Help"
+msgstr "_Cymorth"
+
+msgid "_Toolbar"
+msgstr "Bar _Offer"
+
+msgid "Show toolbar"
+msgstr "Dangos y bar offer"
+
+msgid "Cards left:"
+msgstr "Cardiau ar ôl:"
+
+msgid "Wager:"
+msgstr "Bet:"
+
+msgid "Balance:"
+msgstr "Cydbwysedd:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Gosodwch eich bet neu deliwch ddyrnaid"
+
+msgid "Blackjack rule set to use"
+msgstr "Set reolau blacjac i'w defnyddio"
+
+msgid "Card Style"
+msgstr "Arddull Cerdyn"
+
+msgid "Would you like insurance?"
+msgstr "A hoffech chi yswiriant?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Yswiriant yw bet wrth ochr o 50%% o'r fet wreiddiol, pan ydych chi'n credu "
+"bod gan y deliwr 21 naturiol (h.y. blacjac). Cynigir hyn pan mai âs yw "
+"cerdyn wyneb-i-fyny y deliwr. Os oes gan y deliwr 21 naturiol, bydd y "
+"chwaraewr yn cael ei dalu ddwywaith."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Gosodwch eich bet a chliciwch ar yr amlinell wen er mwyn delio dyrnaid "
+"newydd."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Gosodwch eich neu cliciwch ar y cardiau er mwyn delio dyrnaid newydd."
+
+msgid "Blackjack Preferences"
+msgstr "Hoffterau Blacjac"
+
+msgid "Game"
+msgstr "Gêm"
+
+msgid "_Display hand probabilities"
+msgstr "_Dangos tebygolrwyddau'r dyrnaid"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Deliadau cyflym (dim oedi rhwng bob cerdyn)"
+
+msgid "_Never take insurance"
+msgstr "_Peidio byth â chymryd yswiriant"
+
+msgid "_Reset Balance"
+msgstr "_Ailosod Mantol"
+
+msgid "Rules"
+msgstr "Rheolau"
+
+msgid "Name"
+msgstr "Enw"
+
+msgid "Decks"
+msgstr "Pecynnau"
+
+msgid "Hit Soft 17"
+msgstr "Bwrw 17 Meddal"
+
+msgid "Double Any Total"
+msgstr "Dyblu Unrhyw Gyfanswm"
+
+msgid "Double 9"
+msgstr "9 Dwbl"
+
+msgid "Double Soft"
+msgstr "Meddal Dwbl"
+
+msgid "Double After Hit"
+msgstr "Dwbl Ar Ôl Bwrw"
+
+msgid "Double After Split"
+msgstr "Dwbl Ar Ôl Hollti"
+
+msgid "Resplit"
+msgstr "Ail-hollti"
+
+msgid "Resplit Aces"
+msgstr "Ail-hollti Âsau"
+
+msgid "Surrender"
+msgstr "Ildio"
+
+msgid "Dealer Speed"
+msgstr "Cyflymder Deliwr"
+
+msgid "Click to double your wager"
+msgstr "Cliciwch er mwyn dyblu eich bet"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "dwbl gliciwch er mwyn cynyddu eich bet gan %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "dwbl gliciwch er mwyn lleihau eich bet gan %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Cliciwch er mwyn delio cerdyn arall; llusgwch gerdyn er mwyn hollti pâr"
+
+msgid "Click to deal another card"
+msgstr "Cliciwch er mwyn delio cerdyn arall"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Cliciwch er mwyn gorffen ychwanegu cardiau i'ch dyrnaid"
+
+msgid "Click to deal a new hand"
+msgstr "Cliciwch er mwyn delio dyrnaid newydd"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Ni all Blacjac lwytho'r ffeil a ofynnwyd"
+
+msgid "Please check your Blackjack installation"
+msgstr "Gwiriwch eich sefydliad Blacjac os gwelwch yn dda"
+
+msgid "The best option is to stand"
+msgstr "Yr opsiwn gorau yw sefyll"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Mae sefyll yn golygu peidio ag ychwanegu mwy o gardiau i'ch llaw. Gwnewch "
+"hyn drwy glicio cardiau'r deliwr, neu drwy ddewis yr opsiwn o'r ddewislen "
+"Rheoli."
+
+msgid "The best option is to hit"
+msgstr "Yr opsiwn gorau yw bwrw"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Mae bwrw yn golygu ychwanegu cerdyn arall i'ch llaw. Gwnewch hyn drwy "
+"glicio'ch cardiau unwaith, neu drwy ddewis yr opsiwn o'r ddewislen Rheoli."
+
+msgid "The best option is to double down"
+msgstr "Yr opsiwn gorau yw dyblu i lawr"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Mae dyblu i lawr yn golygu ychwanegu cerdyn arall i'ch llaw. Gwnewch hyn "
+"drwy glicio'r tships ar waelod y ffenest, neu drwy ddewis yr opsiwn o'r "
+"ddewislen Rheoli."
+
+msgid "The best option is to split"
+msgstr "Yr opsiwn gorau yw hollti"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Mae hollti yn golygu rhannu'ch llaw bresennol i ddwy law ar wahân. Gwnewch "
+"hyn drwy lusgo un o'ch cardiau a'i ollwng i'r ochr, neu drwy ddewis yr "
+"opsiwn o'r ddewislen Rheoli."
+
+msgid "The best option is to surrender"
+msgstr "Yr opsiwn gorau yw ildio"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Mae ildio yn golygu rhoi'r gorau i hanner eich bet a pheidio cwblhau'r llaw. "
+"Gwnewch hyn drwy ddewis yr opsiwn o'r ddewislen Rheoli."
+
+msgid "Blackjack"
+msgstr "Blacjac"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Mae Blacjac yn gêm gardiau fel y ceir mewn casino."
+
+msgid "GNOME Games web site"
+msgstr "Gwefan gemau GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"Dafydd Harries <daf@parnassus.ath.cx>\n"
+"Telsa Gwynne <hobbit@aloss.ukuu.org.uk>\n"
+"Rhys Jones <rhys@sucs.org>"
+
+msgid "Computing basic strategy..."
+msgstr "Yn cyfrifo'r strategaeth sylfaenol..."
+
+msgid "Bust"
+msgstr "Wedi Chwalu"
+
+msgid "Blackjack!"
+msgstr "Blacjac!"
+
+msgid "Soft"
+msgstr "Meddal"
+
+msgid "Win"
+msgstr "Ennill"
+
+msgid "Push"
+msgstr "Gwthio"
+
+msgid "Lose"
+msgstr "Colli"
+
+msgid "Player expected values"
+msgstr "Roedd y chwaraewr yn disgwyl gwerthoedd"
+
+msgid "Stand"
+msgstr "Sefyll"
+
+msgid "Hit"
+msgstr "Bwrw"
+
+msgid "Double"
+msgstr "Dwbl"
+
+msgid "Split"
+msgstr "Hollti"
+
+msgid "Dealer hand probabilities"
+msgstr "Tebygolrwyddau llaw'r deliwr"

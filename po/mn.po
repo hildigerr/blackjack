@@ -1,0 +1,513 @@
+# translation of gnome-games.gnome-2-4.po to Mongolian
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2003.
+# Sanlig Badral <badral@openmn.org>, 2003.
+# SukhOchir <sukhochir@csms.edu.mn>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.gnome-2-4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2004-03-10 17:06+0100\n"
+"Last-Translator: Sanlig Badral <badral@openmn.org>\n"
+"Language-Team: Mongolian <openmn-core@lists.sf.net>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "Картын бүрхүүл зургуудыг ачаалах боломжгүй."
+
+msgid "Error"
+msgstr ""
+
+#, fuzzy
+msgid "View help for this game"
+msgstr "Тоглоомын тохиргооог өөрчлөх"
+
+#, fuzzy
+msgid "End the current game"
+msgstr "Өөр үеэс эхлэх"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "Таны дараагийн нүүдлийн оновчтойг олох"
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Шинэ тоглоом эхлэх."
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Шинэ тоглоом эхлэх."
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "Тоглоом завсарлах"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+#, fuzzy
+msgid "Redo the undone move"
+msgstr "Сүүлчийн зөөлтийг сэргээ "
+
+msgid "Restart the game"
+msgstr "Тоглоом дахиж эхлэх"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "Тоглоом дахиж эхлэх"
+
+#, fuzzy
+msgid "View the scores"
+msgstr "Картууд сөх"
+
+msgid "Undo the last move"
+msgstr "Сүүлчийн зөөлтрүү буцах"
+
+#, fuzzy
+msgid "About this game"
+msgstr "Тоглоомыг дуусгах "
+
+msgid "Close this window"
+msgstr ""
+
+#, fuzzy
+msgid "Configure the game"
+msgstr "Тоглоомыг шиид"
+
+#, fuzzy
+msgid "Quit this game"
+msgstr "Тоглоомыг дуусгах "
+
+msgid "_Contents"
+msgstr ""
+
+#, fuzzy
+msgid "_Fullscreen"
+msgstr "Бүтэн дэлгэц"
+
+#, fuzzy
+msgid "_Hint"
+msgstr "Зөвлөмж"
+
+#, fuzzy
+msgid "_New"
+msgstr "Шинэ"
+
+#, fuzzy
+msgid "_New Game"
+msgstr "Шинэ тоглоом"
+
+#, fuzzy
+msgid "_Redo Move"
+msgstr "Зөө"
+
+msgid "_Reset"
+msgstr "_Дахин эхлэх"
+
+#, fuzzy
+msgid "_Restart"
+msgstr "Дахих"
+
+#, fuzzy
+msgid "_Undo Move"
+msgstr "Зөө"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Сүлжээгээр шинэ тоглоом эхлэх"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Шинэ тоглоом"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "_Тоглогчид"
+
+#, fuzzy
+msgid "_Pause"
+msgstr "Завсарлага"
+
+#, fuzzy
+msgid "Res_ume"
+msgstr "_Дахин эхлэх"
+
+#, fuzzy
+msgid "_Scores"
+msgstr "Оноо"
+
+#, fuzzy
+msgid "_End Game"
+msgstr "_Тоглоом"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, fuzzy, c-format
+msgid "Blackjack - %s"
+msgstr "Блакжак"
+
+msgid "_Game"
+msgstr "_Тоглоом"
+
+msgid "_View"
+msgstr ""
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Тоглоом дахиж эхлэх"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr ""
+
+#, fuzzy
+msgid "_Control"
+msgstr "Удирдлага"
+
+#, fuzzy
+msgid "D_eal"
+msgstr "Стандарт"
+
+#, fuzzy
+msgid "Deal a new hand"
+msgstr "Өөр карт сөх"
+
+#, fuzzy
+msgid "_Hit"
+msgstr "Зөвлөмж"
+
+#, fuzzy
+msgid "Add a card to the hand"
+msgstr "Сангаас картыг доош нь зөөнө үү."
+
+#, fuzzy
+msgid "_Stand"
+msgstr "Дуу"
+
+#, fuzzy
+msgid "Stop adding cards to the hand"
+msgstr "Гартаа карт нэмэхийг түгжихдээ товш"
+
+#, fuzzy
+msgid "S_urrender"
+msgstr "Бууж өгөх"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+#, fuzzy
+msgid "_Double down"
+msgstr "Давхар 9"
+
+#, fuzzy
+msgid "Double your wager for a single hit"
+msgstr "Бооцоо эсвэл гарт тараалт байрлуул"
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "Өөр карт сөх"
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+#, fuzzy
+msgid "_Help"
+msgstr "Тусламж"
+
+msgid "_Toolbar"
+msgstr "_Хэрэгсэл самбар"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Хэрэгслийн мөр харуулах"
+
+msgid "Cards left:"
+msgstr "Зүүн картууд:"
+
+msgid "Wager:"
+msgstr "Бооцоо:"
+
+msgid "Balance:"
+msgstr "Тэнцвэржилт:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Бооцоо эсвэл гарт тараалт байрлуул"
+
+#, fuzzy
+msgid "Blackjack rule set to use"
+msgstr "Блакжакаас гарах."
+
+msgid "Card Style"
+msgstr "Хөзрийн хэлбэр"
+
+msgid "Would you like insurance?"
+msgstr "Та итгэлтэй байна уу?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Бооцоогоо тавиад шинэ гарт тараахдаа цагаан дээр товш."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Бооцоогоо тавих эсвэл шинэ гарт тараахдаа карт дээр товш."
+
+msgid "Blackjack Preferences"
+msgstr "Блакжакын Тохиргоо"
+
+msgid "Game"
+msgstr "Тоглоом"
+
+#, fuzzy
+msgid "_Display hand probabilities"
+msgstr "Гарын магадлалыг үзүүл"
+
+#, fuzzy
+msgid "_Quick deals (no delay between each card)"
+msgstr "Хурдан тараалт (Карт тус бүрийн хооронд хүлээлтгүй)"
+
+msgid "_Never take insurance"
+msgstr ""
+
+#, fuzzy
+msgid "_Reset Balance"
+msgstr "Тэнцвэржилт:"
+
+msgid "Rules"
+msgstr "Дүрэм"
+
+msgid "Name"
+msgstr "Нэр"
+
+msgid "Decks"
+msgstr "Чимэглэл"
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr "Бүгдийг давхарлах"
+
+msgid "Double 9"
+msgstr "Давхар 9"
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr ""
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr "Дахин таслах"
+
+msgid "Resplit Aces"
+msgstr "Түүц таслах"
+
+msgid "Surrender"
+msgstr "Бууж өгөх"
+
+msgid "Dealer Speed"
+msgstr "Тараагчийн хурд"
+
+msgid "Click to double your wager"
+msgstr "Бооцоогоо 2 дахин нэмэх бол товш"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Бооцоогоо %.2f -р нэмэгдүүлэх бол давхар товш"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Бооцоогоо %.2f -р багасгах бол давхар товш"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Өөр карт тараах бол товш; хосыг салгах бол чир"
+
+msgid "Click to deal another card"
+msgstr "Өөр карт сөх"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Гартаа карт нэмэхийг түгжихдээ товш"
+
+msgid "Click to deal a new hand"
+msgstr "Шинэ гар тараахдаа товш"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Блакжак хүсэлт файлыг ачаалж чадахгүй байна"
+
+msgid "Please check your Blackjack installation"
+msgstr "Блакжак суулгацаа шалгана уу"
+
+msgid "The best option is to stand"
+msgstr ""
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr ""
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr ""
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr ""
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr ""
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr "Блакжак"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Блакжак бол нэгэн казино хэлбэрийн хөзрийн тоглоом."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Тоглоомын сервер тодорхойлогдсонгүй"
+
+msgid "translator-credits"
+msgstr ""
+"Санлигийн Бадрал <badral@openmn.org> \n"
+"Самбуу "
+
+msgid "Computing basic strategy..."
+msgstr ""
+
+msgid "Bust"
+msgstr "Шатав"
+
+msgid "Blackjack!"
+msgstr "Блакжак!"
+
+msgid "Soft"
+msgstr ""
+
+msgid "Win"
+msgstr "Хожил"
+
+msgid "Push"
+msgstr "Дар"
+
+msgid "Lose"
+msgstr "Ялагдал"
+
+msgid "Player expected values"
+msgstr ""
+
+msgid "Stand"
+msgstr ""
+
+msgid "Hit"
+msgstr ""
+
+msgid "Double"
+msgstr "Давхар"
+
+msgid "Split"
+msgstr "Таслах"
+
+msgid "Dealer hand probabilities"
+msgstr ""

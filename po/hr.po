@@ -1,0 +1,512 @@
+# Translation of gnome-games to Croatiann
+# Copyright (C) Croatiann team
+# Translators: Antun Krasic <butch@gawab.com>,Automatski Prijevod <>,Danijel Studen <dstuden@vuka.hr>,Davorin Vlahovic <aburn@fly.srk.fer.hr>,Denis Lackovic <delacko@fly.srk.fer.hr>,Ivan Knežević <kn3z@lycos.com>,Mato Kutlić <mate@iskraemeco.hr>,Nikola Planinac <>,pr pr <delacko@192.168.0.1>,Robert Sedak <robert.sedak@sk.t-com.hr>,Sasa Poznanovic <sasa.poznanovic@vuka.hr>,Tomislav Cavrag <tcavrag@vuka.hr>,Vedran Vyroubal <vedran.vyroubal@inet.hr>,
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-04-16 07:32+0000\n"
+"Last-Translator: Launchpad Translations Administrators "
+"<rosetta@launchpad.net>\n"
+"Language-Team: Croatian <lokalizacija@linux.hr>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2008-05-28 02:59+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+msgid "Could not show link"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "View help for this game"
+msgstr "Vidite pomoć za ovu igru"
+
+msgid "End the current game"
+msgstr "Završi trenutnu igru"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "Dobi savjet za svoj sljedeći potez"
+
+msgid "Leave fullscreen mode"
+msgstr "Napusti cijeli zaslon"
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Pokreni novu igru"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Pokreni novu igru"
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "Pauziraj igru"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "Potez unaprijed"
+
+msgid "Restart the game"
+msgstr "Ponovo pokreni igru"
+
+msgid "Resume the paused game"
+msgstr "Nastavi pauziranu igru"
+
+msgid "View the scores"
+msgstr "Vidi rezultate"
+
+msgid "Undo the last move"
+msgstr "Poništi zadnji potez"
+
+msgid "About this game"
+msgstr "O ovoj igri"
+
+msgid "Close this window"
+msgstr ""
+
+msgid "Configure the game"
+msgstr "Namjesti postavke ove igre"
+
+msgid "Quit this game"
+msgstr "Završi ovu igru"
+
+msgid "_Contents"
+msgstr "_Sadržaj"
+
+msgid "_Fullscreen"
+msgstr "_Cijeli zaslon"
+
+msgid "_Hint"
+msgstr "_Savjet"
+
+msgid "_New"
+msgstr "_Nova"
+
+msgid "_New Game"
+msgstr "_Nova igra"
+
+msgid "_Redo Move"
+msgstr "_Ponovi potez"
+
+msgid "_Reset"
+msgstr "_Vrati izvorno"
+
+msgid "_Restart"
+msgstr "Pok_reni ponovo"
+
+msgid "_Undo Move"
+msgstr "_Poništi potez"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "_Napusti cijeli zaslon"
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Nova mre_žna igra"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Nova igra"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "_Igrači"
+
+msgid "_Pause"
+msgstr "_Pauza"
+
+msgid "Res_ume"
+msgstr "_Nastavi"
+
+msgid "_Scores"
+msgstr "_Rezultati"
+
+msgid "_End Game"
+msgstr "_Završi igru"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Igra"
+
+msgid "_View"
+msgstr "_Pogled"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Ponovo pokreni igru"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr "_Postavke"
+
+msgid "_Control"
+msgstr "_Kontrole"
+
+msgid "D_eal"
+msgstr "D_ijeli"
+
+msgid "Deal a new hand"
+msgstr "Podijeli još jedan krug"
+
+msgid "_Hit"
+msgstr "_Lupi"
+
+msgid "Add a card to the hand"
+msgstr "Dodajte kartu na krug"
+
+msgid "_Stand"
+msgstr "_Čekaj"
+
+msgid "Stop adding cards to the hand"
+msgstr "Kliknite za završetak dodavanja karata špil"
+
+msgid "S_urrender"
+msgstr "_Predaj se"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Predaj ovo dijeljenje za pola svog uloga"
+
+msgid "_Double down"
+msgstr "_Dvostruko dolje"
+
+msgid "Double your wager for a single hit"
+msgstr "Udvostruči svoj ulog za jedan pogodak"
+
+msgid "S_plit the hand"
+msgstr "_Podijeli špil"
+
+msgid "Split cards in two new hands"
+msgstr "Podijeli karte u dvije nove ruke"
+
+msgid "_Help"
+msgstr "_Pomoć"
+
+msgid "_Toolbar"
+msgstr "_Alatna traka"
+
+msgid "Show toolbar"
+msgstr "Pokaži alatnu traku"
+
+msgid "Cards left:"
+msgstr "Preostalo karata:"
+
+msgid "Wager:"
+msgstr "Ulog:"
+
+msgid "Balance:"
+msgstr "R&avnoteža:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Položi svoju ulogili podijeli ruku"
+
+msgid "Blackjack rule set to use"
+msgstr "Blackjack pravila za korištenje"
+
+msgid "Card Style"
+msgstr "Stil karata"
+
+msgid "Would you like insurance?"
+msgstr "Želiš li osiguranje?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Osiguranje je postranični ulog od 50%% originalnog uloga da djelitelj ima "
+"prirodni 21 (tj. blackjack) koji je ponuđen kada je as djeliteljeva karta. "
+"Ako djelitelj ima prirodni 21 tada je igrač plaćen duplo."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Položi svoj ulog i klikni na bijeli rub da podijeliš novu ruku."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Podesi svoj ulog i klikni na karte da podijeliš novu ruku."
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack postavke"
+
+msgid "Game"
+msgstr "Igra"
+
+msgid "_Display hand probabilities"
+msgstr "_Prikaži vjerojatnosti kruga"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Brzo dijeljnje (bez pauzi između svake karte)"
+
+msgid "_Never take insurance"
+msgstr "_Nikada nemojte uzeti osiguranje"
+
+msgid "_Reset Balance"
+msgstr "_Poništi ravnotežu"
+
+msgid "Rules"
+msgstr "Pravila"
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "Decks"
+msgstr "Špilovi"
+
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Dvostruko sve ukupno"
+
+msgid "Double 9"
+msgstr "Dvostruka 9-ka"
+
+msgid "Double Soft"
+msgstr "Dvostruko blag"
+
+msgid "Double After Hit"
+msgstr "Dvostruko nakon dijeljenja nove karte (hit)"
+
+msgid "Double After Split"
+msgstr "Dvostruko nakon cijepanja (split)"
+
+msgid "Resplit"
+msgstr "Ponovo presjeci"
+
+msgid "Resplit Aces"
+msgstr "Razdvoji asove"
+
+msgid "Surrender"
+msgstr "Predaj se"
+
+msgid "Dealer Speed"
+msgstr "Brzina dijeljenja"
+
+msgid "Click to double your wager"
+msgstr "Klikni da udvostručavanje uloga"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Dvoklik da povećate svoju okladu za %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Dvoklik da snizite svoju okladu za %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Klikni za podijelu još jedne karte; vuci kartu za razdvajanje para"
+
+msgid "Click to deal another card"
+msgstr "Klikni za podijelu još jedne karte"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Klikni za završetak dodavanja karatu u tvoju ruku"
+
+msgid "Click to deal a new hand"
+msgstr "Klikni za novo dijeljenje"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack ne može učitati zatraženu datoteku"
+
+msgid "Please check your Blackjack installation"
+msgstr "Provjerite vašu instalaciju Blackjacka"
+
+msgid "The best option is to stand"
+msgstr "Najbolja opcija je čekati"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Stati znači zaustaviti dodavanje karata u vlastitu ruku. Učinite to klikom "
+"na djeliteljevu kartu ili odabirom opcije u upravljačkom izborniku."
+
+msgid "The best option is to hit"
+msgstr "Najbolja opcija je baciti"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Udariti znači dodati još jednu kartu u vašu ruku. Učinite to jednim klikom "
+"na vaše karte ili selektirajući opciju iz menua Kontrola."
+
+msgid "The best option is to double down"
+msgstr "Najbolja opcija je prepoloviti"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Poduplati dolje znači poduplati početni ulog i primiti točno još jednu "
+"kartu. Učinite to jednim klikom na žetone na dnu prozora ili odabirom opcije "
+"u upravljačkom izborniku."
+
+msgid "The best option is to split"
+msgstr "Najbolja opcija je razdvojiti"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Podijeliti znači podijeliti trenutni špil u dva špila. Učinite to odvlačeći "
+"jednu od vaših karti i odbacujući ih sa strane ili odabirom opcije u "
+"upravljačkom izborniku."
+
+msgid "The best option is to surrender"
+msgstr "Najbolja opcija je predati"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Predati se znači dati pola vašeg uloga i ne završiti špil. Učinite to "
+"odabirom opcije u upravljačkom izborniku."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+
+msgid "GNOME Games web site"
+msgstr ""
+
+msgid "translator-credits"
+msgstr ""
+"lokalizacija@linux.hr\n"
+"  Antun Krasic <butch@gawab.com>\n"
+"  Automatski Prijevod <>\n"
+"  Danijel Studen <dstuden@vuka.hr>\n"
+"  Davorin Vlahovic <aburn@fly.srk.fer.hr>\n"
+"  Denis Lackovic <delacko@linux.hr>\n"
+"  Ivan Knežević <kn3z@lycos.com>\n"
+"  Mato Kutlić <mate@iskraemeco.hr>\n"
+"  Nikola Planinac <>\n"
+"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
+"  Sasa Poznanovic <sasa.poznanovic@vuka.hr>\n"
+"  Tomislav Cavrag <tcavrag@vuka.hr>\n"
+"  Vedran Vyroubal <vedran.vyroubal@inet.hr>\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Ante Karamatić https://launchpad.net/~ivoks\n"
+"  Božidar Paun https://launchpad.net/~neuntoeter\n"
+"  Danijel Šnajder https://launchpad.net/~phantomlord\n"
+"  Edgar Buršić https://launchpad.net/~edgar\n"
+"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
+"admins\n"
+"  Tomislav Medak https://launchpad.net/~to-me\n"
+"  majstor https://launchpad.net/~lcosic"
+
+msgid "Computing basic strategy..."
+msgstr "Izračunavanje osnovne strategije..."
+
+msgid "Bust"
+msgstr "Zatvor"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Mekano"
+
+msgid "Win"
+msgstr "Win"
+
+msgid "Push"
+msgstr "Guraj"
+
+msgid "Lose"
+msgstr "Izgubili ste"
+
+msgid "Player expected values"
+msgstr "Igrač očekuje vrijednosti"
+
+msgid "Stand"
+msgstr "Čekaj"
+
+msgid "Hit"
+msgstr "Podijeli (hit)"
+
+msgid "Double"
+msgstr "Dvostruko"
+
+msgid "Split"
+msgstr "Podijeli"
+
+msgid "Dealer hand probabilities"
+msgstr "Mogućnosti djelitelja karata"

@@ -1,0 +1,518 @@
+# translation of gnome-games.gnome-2-26.po to catalan
+# gnome-games Catalan translation.
+# Copyright © 2002-2008, 2009 Free Software Foundation, Inc.
+# Jordi Mas i Hernàndez <jmas@softcatala.org> 2003.
+#
+# Jordi Vila <gnome@softcatala.net>, 2002.
+# Jordi Mallach <jordi@sindominio.net>, 2002, 2003, 2005.
+# Xavier Conde Rueda <xavi.conde@gmail.com>, 2004.
+# Jesús Corrius <jesus@softcatala.org>, 2005.
+# Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2007.
+# Gil Forcada <gilforcada@guifi.net>, 2008.
+# Carles Ferrando Garcia <carles.ferrando@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.gnome-2-26\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-08-18 15:52+0200\n"
+"Last-Translator: Carles Ferrando Garcia <carles.ferrando@gmail.com>\n"
+"Language-Team: catalan <tradgnome@softcatala.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "No s'ha trobat el fitxer d'ajuda «%s.%s»"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "No s'ha pogut mostrar l'ajuda per a «%s»"
+
+msgid "Could not show link"
+msgstr "No s'ha pogut mostrar l'enllaç"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "View help for this game"
+msgstr "Visualitza l'ajuda del joc"
+
+msgid "End the current game"
+msgstr "Acaba la partida actual"
+
+msgid "Toggle fullscreen mode"
+msgstr "Commuta el mode a pantalla completa"
+
+msgid "Get a hint for your next move"
+msgstr "Obtingueu un suggeriment per al vostre proper moviment"
+
+msgid "Leave fullscreen mode"
+msgstr "Ix de pantalla completa"
+
+msgid "Start a new multiplayer network game"
+msgstr "Comença una partida nova per a diversos jugador en xarxa"
+
+msgid "End the current network game and return to network server"
+msgstr "Finalitza la partida de xarxa actual i torna al servidor de xarxa"
+
+msgid "Start a new game"
+msgstr "Comença una partida nova"
+
+msgid "Pause the game"
+msgstr "Fes una pausa de la partida"
+
+msgid "Show a list of players in the network game"
+msgstr "Mostra una llista de jugadors de la partida en xarxa"
+
+msgid "Redo the undone move"
+msgstr "Torna a fer el moviment desfet"
+
+msgid "Restart the game"
+msgstr "Reinicia la partida"
+
+msgid "Resume the paused game"
+msgstr "Reprén la partida en pausa"
+
+msgid "View the scores"
+msgstr "Visualitza les puntuacions"
+
+msgid "Undo the last move"
+msgstr "Desfés el darrer moviment"
+
+msgid "About this game"
+msgstr "Quant a este joc"
+
+msgid "Close this window"
+msgstr "Tanca esta finestra"
+
+msgid "Configure the game"
+msgstr "Configura el joc"
+
+msgid "Quit this game"
+msgstr "Ix d'este joc"
+
+msgid "_Contents"
+msgstr "_Continguts"
+
+msgid "_Fullscreen"
+msgstr "_Pantalla completa"
+
+msgid "_Hint"
+msgstr "_Pista"
+
+msgid "_New"
+msgstr "_Nova"
+
+msgid "_New Game"
+msgstr "Partida _nova"
+
+msgid "_Redo Move"
+msgstr "To_rna a moure"
+
+msgid "_Reset"
+msgstr "_Reinicia"
+
+msgid "_Restart"
+msgstr "_Reinicia"
+
+msgid "_Undo Move"
+msgstr "Desfés el mo_viment"
+
+msgid "_Deal"
+msgstr "_Reparteix"
+
+msgid "_Leave Fullscreen"
+msgstr "Ix de la panta_lla completa"
+
+#
+msgid "Network _Game"
+msgstr "Partida en _xarxa"
+
+msgid "L_eave Game"
+msgstr "Ix de la _partida"
+
+msgid "Player _List"
+msgstr "_Llista de jugadors"
+
+msgid "_Pause"
+msgstr "Fes una _pausa"
+
+msgid "Res_ume"
+msgstr "Contin_ua"
+
+msgid "_Scores"
+msgstr "Puntuacion_s"
+
+msgid "_End Game"
+msgstr "Acaba _el joc"
+
+msgid "_About"
+msgstr "_Quant a"
+
+msgid "_Cancel"
+msgstr "_Cancel·la"
+
+msgid "_Close"
+msgstr "_Tanca"
+
+msgid "_OK"
+msgstr "_D'acord"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"El %s és programari lliure; el podeu redistribuir i/o modificar sota els "
+"termes de la Llicència Publica General GNU com està publicada per la Free "
+"Software Foundation; ja en siga la versió %d, o bé (si voleu) qualsevol "
+"versió posterior."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"El %s es distribueix amb l'esperança que siga útil, però SENSE CAP MENA DE "
+"GARANTIA; ni tan sols la garantia implícita de COMERCIALITZACIÓ o ADEQUACIÓ "
+"PER A CAP PROPÒSIT PARTICULAR. Vegeu la Llicència Publica General de la GNU "
+"per a més detalls."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
+"juntament amb el %s; en cas contrari, escriviu a la Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
+"USA."
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU "
+"juntament amb el %s; en cas contrari, escriviu a la Free Software "
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
+"USA."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "P_artida"
+
+msgid "_View"
+msgstr "_Visualitza"
+
+msgid "Restart the current game"
+msgstr "Torna a començar la partida actual"
+
+msgid "Show a hint"
+msgstr "Mostra una pista"
+
+msgid "_Settings"
+msgstr "_Paràmetres"
+
+msgid "_Control"
+msgstr "_Control"
+
+msgid "D_eal"
+msgstr "_Dóna"
+
+msgid "Deal a new hand"
+msgstr "Reparteix una nova mà"
+
+msgid "_Hit"
+msgstr "_Tirada"
+
+msgid "Add a card to the hand"
+msgstr "Mou una carta a la base"
+
+msgid "_Stand"
+msgstr "_Planta't"
+
+msgid "Stop adding cards to the hand"
+msgstr "Deixeu d'afegir cartes a la mà"
+
+msgid "S_urrender"
+msgstr "_Rendició"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Perdeu esta mà per la meitat de la vostra aposta"
+
+msgid "_Double down"
+msgstr "_Dobla"
+
+msgid "Double your wager for a single hit"
+msgstr "Dobleu l'aposta per a tirar una vegada"
+
+msgid "S_plit the hand"
+msgstr "Di_videix la mà"
+
+msgid "Split cards in two new hands"
+msgstr "Divideix les cartes en dues mans"
+
+msgid "_Help"
+msgstr "A_juda"
+
+msgid "_Toolbar"
+msgstr "_Barra d'eines"
+
+msgid "Show toolbar"
+msgstr "Mostra la barra d'eines"
+
+msgid "Cards left:"
+msgstr "Cartes restants:"
+
+msgid "Wager:"
+msgstr "Aposta:"
+
+msgid "Balance:"
+msgstr "Balanç:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Aposteu o repartiu una nova mà"
+
+msgid "Blackjack rule set to use"
+msgstr "Regles del Blackjack"
+
+msgid "Card Style"
+msgstr "Estil de les cartes"
+
+msgid "Would you like insurance?"
+msgstr "Voleu una assegurança?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"L'assegurança és una aposta paral·lela del 50% de l'aposta original que "
+"s'ofereix en el moment que el repartidor té un 21 natural (blackjack), és a "
+"dir, quan la carta descoberta és un as. Si el repartidor té un 21 natural es "
+"paga el doble al jugador."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Aposteu i feu clic al marge blanc per a repartir una mà nova."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Aposteu o feu clic a les cartes per a repartir una mà nova."
+
+msgid "Blackjack Preferences"
+msgstr "Preferències del Blackjack"
+
+msgid "Game"
+msgstr "Partida"
+
+msgid "_Display hand probabilities"
+msgstr "Visualitza les probabilitats _d'esta mà"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "Reparteix ràpidament (_sense retard entre cartes)"
+
+msgid "_Never take insurance"
+msgstr "_No assegures mai"
+
+msgid "_Reset Balance"
+msgstr "_Reinicia el balanç"
+
+msgid "Rules"
+msgstr "Regles"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Decks"
+msgstr "Baralles"
+
+msgid "Hit Soft 17"
+msgstr "Tirada de 17 tou"
+
+msgid "Double Any Total"
+msgstr "Doble qualsevol total"
+
+msgid "Double 9"
+msgstr "Doble 9"
+
+msgid "Double Soft"
+msgstr "Doble tou"
+
+msgid "Double After Hit"
+msgstr "Dobla després de la tirada"
+
+msgid "Double After Split"
+msgstr "Dobla després de la divisió"
+
+msgid "Resplit"
+msgstr "Torna a dividir"
+
+msgid "Resplit Aces"
+msgstr "Divideix asos"
+
+msgid "Surrender"
+msgstr "Rendeix-te"
+
+msgid "Dealer Speed"
+msgstr "Velocitat repartint cartes"
+
+msgid "Click to double your wager"
+msgstr "Feu clic per doblar l'aposta"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Feu doble clic per incrementar l'aposta en %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Feu doble clic per reduir l'aposta en %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Feu clic per a repartir una altra carta; arrossegueu la carta per tallar"
+
+msgid "Click to deal another card"
+msgstr "Feu clic per a repartir una altra carta"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Feu clic per a acabar d'afegir cartes a la vostra mà"
+
+msgid "Click to deal a new hand"
+msgstr "Feu clic per a repartir una nova mà"
+
+msgid "Blackjack can't load the requested file"
+msgstr "El Blackjack no pot carregar el fitxer demanat"
+
+msgid "Please check your Blackjack installation"
+msgstr "Comproveu la instal·lació del Blackjack"
+
+msgid "The best option is to stand"
+msgstr "La millor opció és plantar-se"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Plantar-se vol dir deixar d'afegir cartes a la mà. Ho podeu fer fent clic en "
+"les cartes del repartidor o seleccionant l'opció des del menú Control."
+
+msgid "The best option is to hit"
+msgstr "La millor opció és tirar"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Tirar vol dir afegir una altra carta a la mà. Ho podeu fer fent clic un cop "
+"a les vostres cartes o seleccionant l'opció del menú de control."
+
+msgid "The best option is to double down"
+msgstr "La millor opció és doblar"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Doblar vol dir doblar l'aposta inicial i rebre exactament una carta més. Ho "
+"podeu fer fent clic un cop a les fitxes de la part inferior de la finestra, "
+"o bé seleccionant l'opció en el menú de control."
+
+msgid "The best option is to split"
+msgstr "La millor opció és dividir"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Dividir vol dir dividir la vostra mà en dues de diferents. Ho podeu fer "
+"arrossegant una de les cartes i llavors deixant-la anar al costat, o bé "
+"seleccionant l'opció del menú de control."
+
+msgid "The best option is to surrender"
+msgstr "La millor opció és rendir-se"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Rendir-se vol dir donar per perduda la meitat de l'aposta i no completar la "
+"mà. Ho podeu fer seleccionant l'opció del menú de control."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"El Blackjack és un joc de cartes a l'estil dels casinos.\n"
+"\n"
+"El Blackjack forma part dels jocs del GNOME."
+
+msgid "GNOME Games web site"
+msgstr "Lloc web dels jocs del GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"Jordi Vila <gnome@softcatala.net>\n"
+"Jordi Mallach <jordi@sindominio.net>\n"
+"Xavier Conde <xaviconde@eresmas.com>\n"
+"Jesús Corrius <jesus@softcatala.org>\n"
+"Josep Puigdemont <josep.puigdemont@gmail.com>"
+
+msgid "Computing basic strategy..."
+msgstr "S'està calculant l'estratègia bàsica..."
+
+msgid "Bust"
+msgstr "Passat"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Tou"
+
+msgid "Win"
+msgstr "Guanya"
+
+msgid "Push"
+msgstr "Empeny"
+
+msgid "Lose"
+msgstr "Perd"
+
+msgid "Player expected values"
+msgstr "Valors esperats del jugador"
+
+msgid "Stand"
+msgstr "Plantat"
+
+msgid "Hit"
+msgstr "Tirada"
+
+msgid "Double"
+msgstr "Dobla"
+
+#
+msgid "Split"
+msgstr "Divideix"
+
+msgid "Dealer hand probabilities"
+msgstr "Probabilitats de la mà"

@@ -1,0 +1,546 @@
+# translation of gnome-games.master.gu.po to Gujarati
+# Ankit Patel <ankit644@yahoo.com>, 2005, 2006.
+# Ankit Patel <ankit@redhat.com>, 2005, 2007, 2008.
+# Sweta Kothari <swkothar@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.master.gu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-16 11:39+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "મદદ ફાઈલ “%s.%s” મળી નહિં"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "“%s” માટે મદદ બતાવી શક્યા નહિં"
+
+msgid "Could not show link"
+msgstr "કડી બતાવી શક્યા નહિં"
+
+msgid "Error"
+msgstr "ભૂલ"
+
+msgid "View help for this game"
+msgstr "આ રમત માટે મદદ જુઓ"
+
+msgid "End the current game"
+msgstr "વર્તમાન રમતનો અંત કરો"
+
+msgid "Toggle fullscreen mode"
+msgstr "સંપૂર્ણ સ્ક્રીન સ્થિતિ બદલો"
+
+msgid "Get a hint for your next move"
+msgstr "તમારી આગલી ચાલ માટે સંકેત મેળવો"
+
+msgid "Leave fullscreen mode"
+msgstr "પૂર્ણસ્ક્રીન સ્થિતિ છોડી મૂકો"
+
+msgid "Start a new multiplayer network game"
+msgstr "નવી વિવિધખેલાડી નેટવર્ક રમત શરૂ કરો"
+
+msgid "End the current network game and return to network server"
+msgstr "વર્તમાન નેટવર્ક રમતનો અંત કરો અને નેટવર્ક સર્વર પર પાછા આવો"
+
+msgid "Start a new game"
+msgstr "નવી રમત પસંદ કરો"
+
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:253
+msgid "Pause the game"
+msgstr "રમત અટકાવો"
+
+msgid "Show a list of players in the network game"
+msgstr "નેટવર્ક રમતમાં ખેલાડીઓની યાદી બતાવો"
+
+msgid "Redo the undone move"
+msgstr "છેલ્લી રદ કરેલ ચાલી ફરી કરો"
+
+# libgnomeui/gnome-app-helper.c:258
+msgid "Restart the game"
+msgstr "રમતને ફરી ચાલુ કરો"
+
+msgid "Resume the paused game"
+msgstr "અટકાવાયેલ રમત ફરીથી શરૂ કરો"
+
+# libgnomeui/gnome-app-helper.c:280
+msgid "View the scores"
+msgstr "ગુણ જુઓ"
+
+msgid "Undo the last move"
+msgstr "છેલ્લી ચાલ રદ કરો"
+
+# libgnomeui/gnome-app-helper.c:259
+msgid "About this game"
+msgstr "આ રમત વિશે"
+
+msgid "Close this window"
+msgstr "આ વિન્ડો બંધ કરો"
+
+# libgnomeui/gnome-app-helper.c:254
+msgid "Configure the game"
+msgstr "રમત રૂપરેખાંકિત કરો"
+
+# libgnomeui/gnome-app-helper.c:259
+msgid "Quit this game"
+msgstr "આ રમત બંધ કરો"
+
+msgid "_Contents"
+msgstr "સમાવિષ્ટો (_C)"
+
+msgid "_Fullscreen"
+msgstr "સંપૂર્ણ સ્ક્રીન (_F)"
+
+msgid "_Hint"
+msgstr "ઈશારો (_H)"
+
+msgid "_New"
+msgstr "નવું (_N)"
+
+msgid "_New Game"
+msgstr "નવી રમત (_N)"
+
+msgid "_Redo Move"
+msgstr "ફરી ખસેડો (_R)"
+
+msgid "_Reset"
+msgstr "ફરીથી સુયોજિત કરો (_R)"
+
+msgid "_Restart"
+msgstr "ફરી શરુ કરો (_R)"
+
+msgid "_Undo Move"
+msgstr "ચાલ રદ કરો (_U)"
+
+msgid "_Deal"
+msgstr "સોદો (_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "સંપૂર્ણ સ્ક્રીન છોડો (_F)"
+
+msgid "Network _Game"
+msgstr "નેટવર્ક રમત (_G)"
+
+msgid "L_eave Game"
+msgstr "રમત છોડો (_e)"
+
+msgid "Player _List"
+msgstr "ખેલાડી યાદી (_L)"
+
+msgid "_Pause"
+msgstr "અટકાવો (_P)"
+
+msgid "Res_ume"
+msgstr "અટકાવેલ હતું ત્યાં ફરી શરૂ કરો (_R)"
+
+# libgnomeui/gnome-scores.c:94
+msgid "_Scores"
+msgstr "ગુણ (_S)"
+
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:95 libgnomeui/gnome-app-helper.h:534
+msgid "_End Game"
+msgstr "રમત અંત કરો (_E)"
+
+msgid "_About"
+msgstr "વિશે (_A)"
+
+# #-#-#-#-#  anjuta.ANJUTA_1_2_0.hi.po (anjuta2 VERSION)  #-#-#-#-#
+# #-#-#-#-#  gnome-session.HEAD.hi.po (gnome-session VERSION)  #-#-#-#-#
+# gnome-session/session-properties.c:179
+msgid "_Cancel"
+msgstr "રદ કરો (_C)"
+
+msgid "_Close"
+msgstr "બંધ કરો (_C)"
+
+msgid "_OK"
+msgstr "બરાબર (_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "બ્લૅકજૅક - %s"
+
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:95 libgnomeui/gnome-app-helper.h:534
+msgid "_Game"
+msgstr "રમત (_G)"
+
+msgid "_View"
+msgstr "દેખાવ (_V)"
+
+# libgnomeui/gnome-app-helper.c:258
+msgid "Restart the current game"
+msgstr "વર્તમાન રમત પુનઃશરૂ કરો"
+
+msgid "Show a hint"
+msgstr "સંકેત બતાવો"
+
+msgid "_Settings"
+msgstr "સુયોજનો (_S)"
+
+msgid "_Control"
+msgstr "નિયંત્રણ (_C)"
+
+msgid "D_eal"
+msgstr "સોદો (_e)"
+
+msgid "Deal a new hand"
+msgstr "નવો સોદો કરો"
+
+# libgnomeui/gnome-app-helper.c:273
+msgid "_Hit"
+msgstr "નિશાન તાકવુ (_H)"
+
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:181
+msgid "Add a card to the hand"
+msgstr "પત્તાને હાથમાં ઉમેરો"
+
+msgid "_Stand"
+msgstr "ઊભા રહો (_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "હાથમાં પત્તા ઉમેરવાનું બંધ કરો"
+
+msgid "S_urrender"
+msgstr "હાર સ્વીકારવી (_u)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "તમારા અડધા વેજર માટે આ હાથ ફોરફેઈટ કરો"
+
+msgid "_Double down"
+msgstr "બેગણું નીચું (_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "એક ફટકા માટે તમારી વેજર બમણી કરો"
+
+msgid "S_plit the hand"
+msgstr "હાથના ભાગલા કરો (_p)"
+
+msgid "Split cards in two new hands"
+msgstr "બે નવા હાથોમાં પત્તાઓ વહેંચો"
+
+msgid "_Help"
+msgstr "મદદ (_H)"
+
+msgid "_Toolbar"
+msgstr "સાધનપટ્ટી (_T)"
+
+msgid "Show toolbar"
+msgstr "સાધનપટ્ટી બતાવો"
+
+msgid "Cards left:"
+msgstr "બચેલા પત્તા:"
+
+msgid "Wager:"
+msgstr "શરત લગાડવી:"
+
+msgid "Balance:"
+msgstr "જમા:"
+
+msgid "Place your wager or deal a hand"
+msgstr "તમારી શરત મૂકો અથવા હાથ વહેંચો"
+
+msgid "Blackjack rule set to use"
+msgstr "વાપરવા માટે બ્લેકજેક નિયમ સુયોજિત કરો"
+
+msgid "Card Style"
+msgstr "પત્તાની શૈલી"
+
+msgid "Would you like insurance?"
+msgstr "શું તમારે વીમો જોઇએ છે?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"વીમો એ મૂળ મહેનતાણાની 50%% જેટલી વધારાની મહેનતાળા જેટલું છે કે જે વિક્રેતાને પ્રાકૃતિક ૨૧ "
+"(અકા બ્લેકજેક) છે કે જેની તક અપાય છે જ્યારે વિક્રેતાની નજર પત્તા પર એક વાર પડે. જો વિક્રેતા "
+"પાસે ૨૧ પ્રાકૃતિક હોય તો પછી રમતવીરને બમણું ચૂકવાય છે."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "તમારી શરત મૂકો અને નવો હાથ વહેંચવા માટે સફેદ કિનારી પર ક્લિક કરો."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "તમારી શરત મૂકો અને નવો હાથ વહેંચવા માટે પત્તા પર ક્લિક કરો."
+
+msgid "Blackjack Preferences"
+msgstr "બ્લૅકજૅકની પસંદગીઓ"
+
+# #-#-#-#-#  libgnomeui.gnome-2-2.hi.po (libgnomeui HEAD)  #-#-#-#-#
+# libgnomeui/gnome-app-helper.c:95 libgnomeui/gnome-app-helper.h:534
+msgid "Game"
+msgstr "રમત"
+
+msgid "_Display hand probabilities"
+msgstr "હાથની સંભાવનાઓ દર્શાવો (_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "ઝડપી વહેંચણી (દરેક પત્તા વચ્ચે વિલંબ વગર) (_Q)"
+
+msgid "_Never take insurance"
+msgstr "ક્યારેય વીમો લેશો નહિં (_N)"
+
+msgid "_Reset Balance"
+msgstr "સમતોલન ફરી સુયોજિત કરો (_R)"
+
+msgid "Rules"
+msgstr "નિયમો"
+
+# libgnome-desktop/gnome-ditem-edit.c:616
+# libgnome-desktop/gnome-ditem-edit.c:718
+msgid "Name"
+msgstr "નામ"
+
+msgid "Decks"
+msgstr "પત્તાની થપ્પીઓ"
+
+# demos/mdi_demo.c:129
+msgid "Hit Soft 17"
+msgstr "સોફ્ટ ૧૭ પર નિશાન તાકો"
+
+msgid "Double Any Total"
+msgstr "કોઇ સરવાળો બમણો કરો"
+
+msgid "Double 9"
+msgstr "૯ ને બમણું કરો"
+
+msgid "Double Soft"
+msgstr "બમણું સોફ્ટ"
+
+msgid "Double After Hit"
+msgstr "તાક્યા પછી બમણું કરો"
+
+msgid "Double After Split"
+msgstr "વિભાજિત કર્યા પછી બમણું કરો"
+
+msgid "Resplit"
+msgstr "ફરી વિભાજિત કરો"
+
+msgid "Resplit Aces"
+msgstr "એક્કાઓ ફરી વિભાજિત કરો"
+
+msgid "Surrender"
+msgstr "હાર સ્વીકારવી"
+
+msgid "Dealer Speed"
+msgstr "પત્તા વહેંચવાની ગતિ"
+
+msgid "Click to double your wager"
+msgstr "તમારી શરતને બમણી કરવા ક્લિક કરો"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "તમારી શરતને %.2f વધારવા માટે બે વખત ક્લિક કરો "
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "તમારી શરતને %.2f ધટાડવા માટે બે વખત ક્લિક કરો "
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "બીજું પત્તુ વહેંચવા માટે ક્લિક કરો; જોડી છૂટી પાડવા પત્તુ ખેંચો"
+
+msgid "Click to deal another card"
+msgstr "બીજું પત્તુ વહેંચવા માટે ક્લિક કરો"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "તમારા હાથમાં પત્તા ઊમેરાતા બંધ કરવા માટે ક્લિ કરો"
+
+msgid "Click to deal a new hand"
+msgstr "નવો હાથ વબેંચવા માટે ક્લિક કરો"
+
+msgid "Blackjack can't load the requested file"
+msgstr "બ્લૅકજૅક વિનંતી કરેલી ફાઇલ ખોલી શક્યુ નહિં"
+
+msgid "Please check your Blackjack installation"
+msgstr "મહેરબાની કરીને બ્લૅકજૅકની સ્થાપના ચકાસો"
+
+# libgnome/gnome-program.c:427
+msgid "The best option is to stand"
+msgstr "ઊભા રહેવુ એ સૌથી સારો વિકલ્પ છે"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"ઊભા રહેવું એટલે કે તમારા હાથમાં પત્તાઓ ઉમેરવાનું અટકાવવું.  વિક્રેતાના પત્તાઓ પર ક્લિક કરીને "
+"અતવા નિયંત્રણ મેનુમાંથી વિકલ્પ પસંદ કરીને આમ કરો."
+
+# libgnome/gnome-program.c:427
+msgid "The best option is to hit"
+msgstr "તાકવુ એ સૌથી સારો વિકલ્પ છે"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"ઘા કરવો એટલે કે તમારા હાથમાં અન્ય બીજા પત્તા ઉમેરો.  તમારા પત્તાઓ પર એક વાર ક્લિક "
+"કરને અથવા નિયંત્રણ મેનુમાંથી વિકલ્પ પસંદ કરીને આમ કરો."
+
+msgid "The best option is to double down"
+msgstr "બે વખત નીચે આવવું એ સૌથી સારો વિકલ્પ છે"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"બમણું કરવું એટલે કે તમારી મહેનતને બમણી કરવી અને બરાબર એક વધુ પત્તા મેળવવો.  વિન્ડોની નીચે "
+"ચિપ પર એક વાર ક્લિક કરીને અથવા નિયંત્રણ મેનુમાંથી વિકલ્પ પસંદ કરીને આમ કરો."
+
+# libgnome/gnome-program.c:427
+msgid "The best option is to split"
+msgstr "વિભાજીત કરવુ એ સૌથી સારો વિકલ્પ છે"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"તોડવું એટલે કે તમારા વર્તમાન હાથને બે અલગ હાથોમાં વિભાજિત કરવું.  તમારા પત્તામાંના એકને "
+"ખસેડીને આમ કરો અને તેને બાજુમાં છોડી મૂકવાનું અથવા નિયંત્રણ મેનુમાંથી વિકલ્પ પસંદ કરીને આમ કરો."
+
+msgid "The best option is to surrender"
+msgstr "હાર માનવી તે સૌથી સારો વિકલ્પ છે"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"હાર માની લેવી એટલે કે તમારી અડધી મહેનત આપી દેવી અને રમત પૂર્ણ કરવી નહિં.  નિયંત્રણ "
+"મેનુમાંથી વિકલ્પ પસંદ કરીને આમ કરો."
+
+msgid "Blackjack"
+msgstr "બ્લૅકજૅક"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"બ્લૅકજૅક એ જુગાર-શૈલીની પત્તાનીં રમત છે.\n"
+"\n"
+"બ્લૅકજૅક એ જીનોમ રમતોનો ભાગ છે."
+
+msgid "GNOME Games web site"
+msgstr "જીનોમ રમતો વેબ સાઈટ"
+
+msgid "translator-credits"
+msgstr "અંકિત પટેલ <ankit644@yahoo.com>, શ્ર્વેતા કોઠારી <swkothar@redhat.com>"
+
+msgid "Computing basic strategy..."
+msgstr "મૂળ યુક્તિની ગણતરી થઇ રહી છે..."
+
+msgid "Bust"
+msgstr "તૂટવું"
+
+msgid "Blackjack!"
+msgstr "બ્લૅકજૅક!"
+
+msgid "Soft"
+msgstr "સોફ્ટ"
+
+# #-#-#-#-#  libgnomeprint.gnome-2-2.hi.po (libgnomeprint VERSION)  #-#-#-#-#
+# libgnomeprint/gnome-print-paper.c:55
+msgid "Win"
+msgstr "જીત"
+
+msgid "Push"
+msgstr "ધકેલવું"
+
+msgid "Lose"
+msgstr "ખોટ"
+
+msgid "Player expected values"
+msgstr "રમનારની ઈચ્છિત કિંમતો"
+
+msgid "Stand"
+msgstr "ઊભા રહેવુ"
+
+# libgnomeui/gnome-app-helper.c:273
+msgid "Hit"
+msgstr "નિશાન તાકવુ"
+
+msgid "Double"
+msgstr "બમણું"
+
+msgid "Split"
+msgstr "વિભાજિત"
+
+msgid "Dealer hand probabilities"
+msgstr "ડીલરની હાથની સંભાવનાઓ"

@@ -1,0 +1,500 @@
+# translation of gnome-games.master.ml.po to
+# translation of gnome-games.HEAD.ml.po to
+# This file is distributed under the same license as the gnome-games package.
+# Copyright (C) 2003-2009 gnome-games' COPYRIGHT HOLDER.
+#
+# FSF-India <locale@gnu.org.in>, 2003.
+# Ani Peter <apeter@redhat.com>, 2006, 2007.
+# Abhishek Jacob <abhishekjacob123@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.master.ml\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-18 14:21+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "സഹായത്തിനുള്ള ഫയല്‍ ആയ “%s.%s” ലഭ്യമായില്ല"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "“%s”-നുള്ള സഹായം ലഭ്യമായില്ല"
+
+msgid "Could not show link"
+msgstr "കണ്ണി കാണിക്കുവാന്‍ സാധിച്ചില്ല"
+
+msgid "Error"
+msgstr "പിശക്"
+
+msgid "View help for this game"
+msgstr "ഈ കളിയ്ക്കുള്ള സഹായം കാണുക"
+
+msgid "End the current game"
+msgstr "നിലവിലുള്ള കളി അവസാനിപ്പിക്കുക"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "അടുത്ത നീക്കത്തിനായി ഒരു സൂചന നല്‍കുക"
+
+msgid "Leave fullscreen mode"
+msgstr "സ്ക്രീന്‍ പരമാവധി വലുപ്പത്തില്‍ ഉപേക്ഷിക്കുക"
+
+msgid "Start a new multiplayer network game"
+msgstr "ഒരു പുതിയ മള്‍ട്ടിപ്ളെയര്‍ നെറ്റ്‌വര്‍ക്ക് കളി തുടങ്ങുക"
+
+msgid "End the current network game and return to network server"
+msgstr "ഈ നെറ്റ്‌വര്‍ക്ക് കളി അവസാനിപ്പിച്ച് നെറ്റ്‌വര്‍ക്ക് സര്‍വറിലേക്ക് മടങ്ങുക"
+
+msgid "Start a new game"
+msgstr "ഒരു പുതിയ കളി തുടങ്ങൂ"
+
+msgid "Pause the game"
+msgstr "കളി താല്‍ക്കാലികമായി നിര്‍ത്തുക"
+
+msgid "Show a list of players in the network game"
+msgstr "നെറ്റ്‌വര്‍ക്ക് കളിയിലുള്ള കളിക്കാരുടെ പട്ടിക കാണിക്കുക"
+
+msgid "Redo the undone move"
+msgstr "ഉപേക്ഷിച്ച നീക്കം വീണ്ടും നടത്തുക "
+
+msgid "Restart the game"
+msgstr "കളി ആദ്യം മുതല്‍ തുടങ്ങുക"
+
+msgid "Resume the paused game"
+msgstr "നിര്‍ത്തിയടത്ത് നിന്നും കളി വീണ്ടും തുടങ്ങുക"
+
+msgid "View the scores"
+msgstr "നേട്ടങ്ങള്‍ കാണുക"
+
+msgid "Undo the last move"
+msgstr "കഴിഞ്ഞ നീക്കം ഉപേക്ഷിച്ചു പൂര്‍വ്വസ്ഥിതിയിലേക്കു തിരിച്ചു പോകുക"
+
+msgid "About this game"
+msgstr "ഈ കളിയെ കുറിച്ച്"
+
+msgid "Close this window"
+msgstr "ഈ ജാലകം അടയ്ക്കുക"
+
+msgid "Configure the game"
+msgstr "കളി ക്രമീകരിക്കുക"
+
+msgid "Quit this game"
+msgstr "കളി നിര്‍ത്തുക"
+
+msgid "_Contents"
+msgstr "ഉള്ളടക്കം (_C)"
+
+msgid "_Fullscreen"
+msgstr "സ്ക്രീന്‍ പരമാവധി വലുപ്പത്തില്‍ (_F)"
+
+msgid "_Hint"
+msgstr "സൂചന (_H)"
+
+msgid "_New"
+msgstr "പുതിയ (_N)"
+
+msgid "_New Game"
+msgstr "പുതിയ കളി (_N)"
+
+msgid "_Redo Move"
+msgstr "മാറ്റം വേണ്ട എന്ന് വയ്ക്കുക (_R)"
+
+msgid "_Reset"
+msgstr "ആദ്യം മുതല്‍ തുടങ്ങുക (_R)"
+
+msgid "_Restart"
+msgstr "വീണ്ടും ആരംഭിക്കുക (_R) "
+
+msgid "_Undo Move"
+msgstr "വരുത്തിയ നീക്കം വേണ്ട എന്ന് വയ്ക്കുക(_U)"
+
+msgid "_Deal"
+msgstr "ഡീല്‍ (_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "സ്ക്രീന്‍ പരാമാവധി വലുപ്പത്തില്‍ ഉപേക്ഷിക്കുക (_L)"
+
+msgid "Network _Game"
+msgstr "നെറ്റ്‌വര്‍ക്ക് കളി (_G)"
+
+msgid "L_eave Game"
+msgstr "കളി ഉപേക്ഷിക്കുക (_e)"
+
+msgid "Player _List"
+msgstr "‍കളിക്കാരുടെ പട്ടിക (_L)"
+
+msgid "_Pause"
+msgstr "ചെറിയ ഇടവേള (_P)"
+
+msgid "Res_ume"
+msgstr "വീണ്ടും ആരംഭിക്കുക (_u)"
+
+msgid "_Scores"
+msgstr "സ്കോറുകള്‍ (_S)"
+
+msgid "_End Game"
+msgstr "കളി അവസാനിപ്പിക്കുക (_E)"
+
+msgid "_About"
+msgstr "സംബന്ധിച്ച് (_A)"
+
+msgid "_Cancel"
+msgstr "റദ്ദാക്കുക (_C)"
+
+msgid "_Close"
+msgstr "അടയ്ക്കുക (_C)"
+
+msgid "_OK"
+msgstr "ശരി (_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s ഒരു സ്വതന്ത്ര സോഫ്ര്റ്‌വെയറാണ്; ഫ്രീ സോഫ്ര്റ്‌വെയര്‍ ഫൌണ്ടേഷന്‍ പ്രസദ്ധീകരണമായ GNU ജനറല്‍ പബ്ലിക് "
+"ലൈസന്‍സ് %d-ആം ലക്കം അല്ലെങ്കില്‍ (നിങ്ങള്‍ക്ക് വേണമെങ്കില്‍) അത് കഴിഞ്ഞുള്ള ലക്കങ്ങളിലുള്ള നിബന്ധനകള്‍ "
+"അനുസരിച്ച് നിങ്ങള്‍ക്ക് ഇത് വീണ്ടും വിതരണം ചെയ്യുകയോ അല്ലെങ്കില്‍ മാറ്റം വരുത്തുകയോ ചെയ്യുവാന്‍ "
+"സാധ്യമാണ്."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s നിങ്ങള്‍ക്കു് പ്രയോജനപ്പെടും എന്ന പ്രതീക്ഷയില്‍ വിതരണം ചെയ്യുന്നതാണു്,\n"
+"പക്ഷേ, ഇതിനു് ഒരു വാറണ്ടിയും ലഭ്യമല്ല; വ്യാപാരയോഗ്യതയോ ഒരു പ്രത്യേക കാര്യത്തിനു്\n"
+"ചേരുന്നതാണെന്നോ പരോക്ഷമായി ഉള്‍‌ക്കൊള്ളുന്ന വാറണ്ടി പോലും ഇല്ല. കൂടുതല്‍ വിവരങ്ങള്‍ക്കു്  ഗ്നു ജനറല്‍ "
+"പബ്ലിക് ലൈസന്‍സ് കാണുക."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"നിങ്ങള്‍ക്ക് %s-നൊപ്പം GNU ജനറല്‍ പബ്ലിക് ലൈസന്‍സിന്റെ ഒരു പകര്‍പ്പും ലഭ്യമാകേണ്ടതാണ്; "
+"ഇല്ലായെങ്കില്‍, ഈ വിലാസത്തിലേക്ക് എഴുതുക: Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"നിങ്ങള്‍ക്കീ പ്രോഗ്രാമിനൊപ്പം ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സിന്റെ ഒരു പകര്‍പ്പും ലഭ്യമാകേണ്ടതാണ്; "
+"ഇല്ലെങ്കില്‍, <http://www.gnu.org/licenses/> കാണുക."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "ബ്ലാക്ക്ജാക്ക് - %s"
+
+msgid "_Game"
+msgstr "_കളി"
+
+msgid "_View"
+msgstr "_കാഴ്ച"
+
+msgid "Restart the current game"
+msgstr "കളി ആദ്യം മുതല്‍ തുടങ്ങുക "
+
+msgid "Show a hint"
+msgstr "ഒരു സൂചന നല്‍കുക"
+
+msgid "_Settings"
+msgstr "ക്രമികരണങ്ങള്‍ (_S)"
+
+msgid "_Control"
+msgstr "_നിയന്ത്രണം"
+
+msgid "D_eal"
+msgstr "ഒരു കൈ (_e)"
+
+msgid "Deal a new hand"
+msgstr "ഒരു പുതിയ കൈ ഇടുക"
+
+msgid "_Hit"
+msgstr "മറ്റൊരു കാര്‍ഡ് എടുക്കുക (_H)"
+
+msgid "Add a card to the hand"
+msgstr "ഒരു പുതിയ ചീട്ടിടുക"
+
+msgid "_Stand"
+msgstr "ചീട്ട് ഇനി എടുക്കേണ്ട (_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "ചീട്ടിടുന്നത് നിര്‍ത്തുക"
+
+msgid "S_urrender"
+msgstr "കീഴടങ്ങുക (_u)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr "_രണ്ട് തവണ താഴേക്ക്"
+
+msgid "Double your wager for a single hit"
+msgstr "മറ്റൊരു കാര്‍ഡ് എടുക്കുന്നതിനായി നിങ്ങളുടെ വേജര്‍ ഇരട്ടിപ്പിക്കുക"
+
+msgid "S_plit the hand"
+msgstr ""
+
+msgid "Split cards in two new hands"
+msgstr "കാര്‍ഡുകള്‍ രണ്ടായി ഭാഗിക്കുക"
+
+msgid "_Help"
+msgstr "_സഹായം"
+
+msgid "_Toolbar"
+msgstr "_ഉപകരണനിര"
+
+msgid "Show toolbar"
+msgstr "ടൂള്‍ബാര്‍ കാണിക്കുക"
+
+msgid "Cards left:"
+msgstr "ബാക്കിയുള്ള ചീട്ടുകള്‍:"
+
+msgid "Wager:"
+msgstr "വേജര്‍:"
+
+msgid "Balance:"
+msgstr "ബാക്കി:"
+
+msgid "Place your wager or deal a hand"
+msgstr ""
+
+msgid "Blackjack rule set to use"
+msgstr "ഉപയോഗിക്കാനുള്ള ബ്ലാക്ക്ജാക്ക് നിബന്ധന"
+
+msgid "Card Style"
+msgstr "ചീട്ടിന്റെ രീതി"
+
+msgid "Would you like insurance?"
+msgstr "നിങ്ങള്‍ക്ക് ഇന്‍ശുറന്‍സ് വേണമോ?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+
+msgid "Blackjack Preferences"
+msgstr "ബ്ലാക്ക്ജാക്കിന്റെ മുന്‍ഗണനകള്‍"
+
+msgid "Game"
+msgstr "കളി "
+
+msgid "_Display hand probabilities"
+msgstr "സാധ്യതകള്‍ കാണിക്കുക (_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr ""
+
+msgid "_Never take insurance"
+msgstr "ഒരിക്കലും ഇന്‍ശുറന്‍സ് ആവശ്യമില്ല (_N)"
+
+msgid "_Reset Balance"
+msgstr "ബാക്കി വീണ്ടും ക്രമികരിക്കുക (_R)"
+
+msgid "Rules"
+msgstr "നിയമങ്ങള്‍"
+
+msgid "Name"
+msgstr "പേര‍്"
+
+msgid "Decks"
+msgstr "തട്ടുകള്‍"
+
+msgid "Hit Soft 17"
+msgstr "ഹിറ്റ് സോഫ്ര്റ് 17"
+
+msgid "Double Any Total"
+msgstr ""
+
+msgid "Double 9"
+msgstr "ഡബിള്‍ 9"
+
+msgid "Double Soft"
+msgstr "ഡബിള്‍ സോഫ്ര്റ്"
+
+msgid "Double After Hit"
+msgstr "ഹിറ്റിന് ശേഷമുള്ള ഡബിള്‍"
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr "വീണ്ടും ഭാഗിക്കുക"
+
+msgid "Resplit Aces"
+msgstr "ഏസുകള്‍ വീണ്ടും ഭാഗിക്കുക"
+
+msgid "Surrender"
+msgstr "കീഴടങ്ങുക"
+
+msgid "Dealer Speed"
+msgstr "കൈയുടെ വേഗത"
+
+msgid "Click to double your wager"
+msgstr "നിങ്ങളുടെ വേജര്‍ ഇരട്ടിക്കുന്നതിനായി ക്ലിക്ക് ചെയ്യുക"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "നിങ്ങളുടെ വേജര്‍ %.2f ആയി കൂട്ടുന്നതിനായി രണ്ട് തവണ ക്ലിക്ക് ചെയ്യുക"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "നിങ്ങളുടെ വേജര്‍ %.2f ആയി കുറയ്ക്കുന്നതിനായി രണ്ട് തവണ ക്ലിക്ക് ചെയ്യുക"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+
+msgid "Click to deal another card"
+msgstr "മറ്റൊരു കാര്‍ഡ് ഇടുന്നതിനായി ക്ലിക്ക് ചെയ്യുക"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "നിങ്ങള്‍ക്കുള്ള ചീട്ട് എടുത്ത് തീര്‍ക്കുന്നതിനായി ക്ലിക്ക് ചെയ്യുക"
+
+msgid "Click to deal a new hand"
+msgstr "ഒരു പുതിയ കൈയ്ക്കായി ക്ലിക്ക് ചെയ്യുക"
+
+msgid "Blackjack can't load the requested file"
+msgstr "നിങ്ങള്‍ ആവശ്യപ്പെട്ട ഫയല്‍ ബ്ലാക്ക്ജാക്കിന് ലഭ്യമാക്കാനാവില്ല"
+
+msgid "Please check your Blackjack installation"
+msgstr "ദയവായി നിങ്ങളുടെ ബ്ലാക്ക്ജാക്ക് ഇന്‍സ്റ്റലേഷന്‍ പരിശോധിക്കുക"
+
+msgid "The best option is to stand"
+msgstr "ചീട്ട് എടുക്കുന്നത് നിര്‍ത്തുന്നതാണ് ഏറ്റവും ഉത്തമം"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"നിങ്ങള്‍ക്കുള്ള കാര്‍ഡുകള്‍ എടുത്ത് മതിയാക്കുക എന്നതാണ് സ്റ്റാന്‍ഡ് എന്നത് കൊണ്ട് ഉദ്ദേശിക്കുന്നത്. ഇതിനായി "
+"ഡീലറിന്റെ ചീട്ടില്‍ ക്ലിക്ക് ചെയ്യുക അല്ലെങ്കില്‍ കണ്ട്റോള്‍ മെനുവില്‍ നിന്നും ഉപാധി തിരഞ്ഞെടുക്കുക."
+
+msgid "The best option is to hit"
+msgstr "മറ്റൊരു ചീട്ടെടുക്കുക"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"ഹിറ്റ് എന്ന് ഉദ്ദേശിക്കുന്നത് മറ്റൊരു ചീട്ട് എടുക്കുക എന്നതാണ്. ഇതിനായി നിങ്ങളുടെ ചീട്ടുകളില്‍ ഒരു "
+"തവണ ക്ലിക്ക് ചെയ്യുക അല്ലെങ്കില്‍, കണ്ട്റോള്‍ മെനുവില്‍ നിന്നും ഉപാധി തിരഞ്ഞെടുക്കുക."
+
+msgid "The best option is to double down"
+msgstr "ഡബിള്‍ ഡൌണ്‍ ചെയ്യുന്നതാണ് ഉത്തമം"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"ഡബിള്‍ ഡൌണ്‍ എന്ന് വച്ചാല്‍ ഇനിഷ്യല്‍ വേജര്‍ ഇരട്ടിക്കുക അല്ലെങ്കില്‍ ഒരു ചീട്ട് കൂടി ലഭ്യമാക്കുക "
+"എന്നാണ്.  ഇതിനായി ജാലകത്തിന്റെ അടിഭാഗത്തുള്ള ചിപ്പുകളില്‍ ഒരു തവണ ക്ലിക്ക് ചെയ്യുക അല്ലെങ്കില്‍, "
+"കണ്ട്റോള്‍ മെനുവിലുള്ള ഉപാധി തിരഞ്ഞെടുക്കുക."
+
+msgid "The best option is to split"
+msgstr "സ്പ്ളിറ്റ് ചെയ്യുന്നതാണ് ഉത്തമം"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"നിങ്ങളുടെ ചീട്ടുകള്‍ രണ്ടായി വേര്‍തിരിക്കുക എന്നതാണ് സ്പ്ളിറ്റ് എന്നതിനര്‍ത്ഥം.  ഇതിനായി നിങ്ങളുടെ "
+"ഒരു ചീട്ട് ഒരു വശത്തേക്ക് വലിച്ചിടുക അല്ലെങ്കില്‍ കണ്ട്റോള്‍ മെനുവില്‍ നിന്നും ഉപാധി തിരഞ്ഞെടുക്കുക."
+
+msgid "The best option is to surrender"
+msgstr "കീഴടങ്ങുന്നതാണ് ഏറ്റവും ഉത്തമം"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"കീഴടങ്ങുന്നതിനായി നിങ്ങളുടെ വേജര്‍ പകുതി നല്‍കി കൈ അപൂര്‍ണ്ണമാക്കുക.  ഇതിനായി കണ്ട്റോള്‍ മെനുവില്‍ "
+"നിന്നും ഉപാധി തിരഞ്ഞെടുക്കുക."
+
+msgid "Blackjack"
+msgstr "ബ്ലാക്ക്ജാക്ക്"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"കാസിനോ ചീട്ട് കളിപോലെ ഒന്നാണ് ബ്ലാക്ക്ജാക്ക്.\n"
+"\n"
+"ഗ്നോം കളികളുടെ ഒരു ഭാഗമാണ് ബ്ലാക്ക്ജാക്ക്."
+
+msgid "GNOME Games web site"
+msgstr "ഗ്നോ കളികളുടെ വെബ് സൈറ്റ്"
+
+msgid "translator-credits"
+msgstr ""
+"എഫ്.എസ്.എഫ് - ഇന്ത്യ <gnu@gnu.org.in>\n"
+"അനി പീറ്റര്‍ <apeter@redhat.com>\n"
+"അഭിഷേക് ജേക്കബ് <abhishekjacob123@gmail.com>"
+
+msgid "Computing basic strategy..."
+msgstr ""
+
+msgid "Bust"
+msgstr "ബസ്റ്റ്"
+
+msgid "Blackjack!"
+msgstr "ബ്ലാക്ക്ജാക്ക്!"
+
+msgid "Soft"
+msgstr "സോഫ്ര്റ്"
+
+msgid "Win"
+msgstr "ജയം"
+
+msgid "Push"
+msgstr "തള്ളുക"
+
+msgid "Lose"
+msgstr "നഷ്ടം"
+
+msgid "Player expected values"
+msgstr "കളിക്കാര്‍ പ്രതീക്ഷിക്കുന്ന മൂല്ല്യം"
+
+msgid "Stand"
+msgstr "ചീട്ട് ഇനി എടുക്കേണ്ട"
+
+msgid "Hit"
+msgstr "മറ്റൊരു കാര്‍ഡ് എടുക്കുക"
+
+msgid "Double"
+msgstr "ഡബിള്"
+
+msgid "Split"
+msgstr "വേ‌ര്തിരിക്കുക"
+
+msgid "Dealer hand probabilities"
+msgstr ""

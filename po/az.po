@@ -1,0 +1,513 @@
+# translation of gnome-games.HEAD.az.po to Azerbaijani Turkish
+# Copyright (C) 2003 Mətin Əmirov
+# This file is distributed under the same license as the gnome-games package.
+# Mətin Əmirov <metin@karegen.com>, 2003, 2004.
+# Elxan İsmayılov <elxan.i@gmail.com>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2004-02-22 19:48+0200\n"
+"Last-Translator: Elxan İsmayılov <elxan.i@gmail.com>\n"
+"Language-Team: Azerbaijani Turkish <translation-team-"
+"az@lists.sourceforge.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "Kart dəstəsi rəsmləri yüklənə bilmədi."
+
+msgid "Error"
+msgstr ""
+
+#, fuzzy
+msgid "View help for this game"
+msgstr "Bu oyun üçün qurğuları dəyişdirin"
+
+msgid "End the current game"
+msgstr "Hazırkı oyunu bitir"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "Sonrakı gediş üçün məsləhət al"
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Yeni oyun başlat"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Yeni oyun başlat"
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "Oyuna fasilə ver"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "Qaytarılmış gedişi yenidən et"
+
+msgid "Restart the game"
+msgstr "Oyuna yenidən başla"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "Oyuna yenidən başla"
+
+#, fuzzy
+msgid "View the scores"
+msgstr "Kartları payla"
+
+msgid "Undo the last move"
+msgstr "Axırıncı gedişi qeri al"
+
+#, fuzzy
+msgid "About this game"
+msgstr "Bu oyuna başdan başla"
+
+msgid "Close this window"
+msgstr ""
+
+#, fuzzy
+msgid "Configure the game"
+msgstr "Oyunu həll et"
+
+#, fuzzy
+msgid "Quit this game"
+msgstr "Bu oyuna başdan başla"
+
+msgid "_Contents"
+msgstr ""
+
+msgid "_Fullscreen"
+msgstr "_Ekranı Doldur"
+
+#, fuzzy
+msgid "_Hint"
+msgstr "Məsləhət"
+
+#, fuzzy
+msgid "_New"
+msgstr "Yeni"
+
+#, fuzzy
+msgid "_New Game"
+msgstr "Yeni Oyun"
+
+#, fuzzy
+msgid "_Redo Move"
+msgstr "_Daşı"
+
+msgid "_Reset"
+msgstr "_Sıfırla"
+
+#, fuzzy
+msgid "_Restart"
+msgstr "Yenidən başla"
+
+#, fuzzy
+msgid "_Undo Move"
+msgstr "_Daşı"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Yeni şəbə_kə oyunu"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Yeni Oyun"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "_Oyunçular"
+
+#, fuzzy
+msgid "_Pause"
+msgstr "Fasilə ver"
+
+#, fuzzy
+msgid "Res_ume"
+msgstr "_Sıfırla"
+
+#, fuzzy
+msgid "_Scores"
+msgstr "Xallla"
+
+msgid "_End Game"
+msgstr "Oyunu Q_urtar"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, fuzzy, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack"
+
+msgid "_Game"
+msgstr "_Oyun"
+
+msgid "_View"
+msgstr "_Görünüş"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Oyuna yenidən başla"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr ""
+
+#, fuzzy
+msgid "_Control"
+msgstr "İdarələr"
+
+#, fuzzy
+msgid "D_eal"
+msgstr "Ön qurğulu"
+
+#, fuzzy
+msgid "Deal a new hand"
+msgstr "Bir əl daha payla"
+
+#, fuzzy
+msgid "_Hit"
+msgstr "Vuruş"
+
+#, fuzzy
+msgid "Add a card to the hand"
+msgstr "Kartı dəstəyə daşıyın"
+
+#, fuzzy
+msgid "_Stand"
+msgstr "Dayan"
+
+#, fuzzy
+msgid "Stop adding cards to the hand"
+msgstr "Əlinizə kart əlavə edilişini bitirmək üçün tıqlayın"
+
+#, fuzzy
+msgid "S_urrender"
+msgstr "Əhatə edici"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+#, fuzzy
+msgid "_Double down"
+msgstr "Cüt 9"
+
+#, fuzzy
+msgid "Double your wager for a single hit"
+msgstr "Wager'inizi yerləşdirin ya da yeni əl alın"
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "Bir əl daha payla"
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+msgid "_Help"
+msgstr "_Yardım"
+
+msgid "_Toolbar"
+msgstr "_Vasitə Çubuğu"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Vasitə çubuğunu göstər"
+
+msgid "Cards left:"
+msgstr "Qalan kart:"
+
+msgid "Wager:"
+msgstr "Ortaya qoyulan pul:"
+
+msgid "Balance:"
+msgstr "Balans:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Wager'inizi yerləşdirin ya da yeni əl alın"
+
+#, fuzzy
+msgid "Blackjack rule set to use"
+msgstr "Blackjack indi bağlanacaqdır."
+
+msgid "Card Style"
+msgstr "Kart Tərzi"
+
+msgid "Would you like insurance?"
+msgstr "Sığorta olmak istəyirsiniz?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Yeni əl oynamaq üçün wager'inizi tə'yin edin ya da ağ xarici xətdə tıqlayın."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Yeni əl oynamaq üçün wager'inizi tə'yin edin ya da kartlara tıqlayın."
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack Qurğuları"
+
+msgid "Game"
+msgstr "Oyun"
+
+#, fuzzy
+msgid "_Display hand probabilities"
+msgstr "Əldəki ehtimalları göstər"
+
+#, fuzzy
+msgid "_Quick deals (no delay between each card)"
+msgstr "Sür'ətli payla (kartlar arasında fasilə olmasın)"
+
+msgid "_Never take insurance"
+msgstr ""
+
+#, fuzzy
+msgid "_Reset Balance"
+msgstr "Balans:"
+
+msgid "Rules"
+msgstr "Qaydalar"
+
+msgid "Name"
+msgstr "Ad"
+
+msgid "Decks"
+msgstr "Dəstələr"
+
+msgid "Hit Soft 17"
+msgstr "Yumuşaq Vuruş 17"
+
+msgid "Double Any Total"
+msgstr "Cüt Hər Hansı Bir Cəm"
+
+msgid "Double 9"
+msgstr "Cüt 9"
+
+msgid "Double Soft"
+msgstr "Cüt Yumuşaq"
+
+msgid "Double After Hit"
+msgstr "Cüt Son Vuruş"
+
+msgid "Double After Split"
+msgstr "Cüt Son Ayırma"
+
+msgid "Resplit"
+msgstr "Yenidın ayır"
+
+msgid "Resplit Aces"
+msgstr "Tuzları yenidən ayır"
+
+msgid "Surrender"
+msgstr "Əhatə edici"
+
+msgid "Dealer Speed"
+msgstr "Paylayanın Sü'rəti"
+
+msgid "Click to double your wager"
+msgstr "Wager'inizi ikiləşdirmək üçün tıqlayın"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Wager'inizi 2f% artırmaq üçün cüt tıqlayın"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Wager'inizi 2f% azaltmaq üçün cüt tıqlayın"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Başqa kart almaq üçün tıqlayın; cütü ayırmaq üçün kartı dartın"
+
+msgid "Click to deal another card"
+msgstr "Başqa kart almaq üçün tıqlayın"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Əlinizə kart əlavə edilişini bitirmək üçün tıqlayın"
+
+msgid "Click to deal a new hand"
+msgstr "Yeni əl oynamaq üçün tıqlayın"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack istənilən faylı yükləyə bilmədi"
+
+msgid "Please check your Blackjack installation"
+msgstr "Xahiş edirik, Blackjack qurulumunuzu yoxlayın"
+
+msgid "The best option is to stand"
+msgstr "Ən yaxşı gediş dayanmaq olacaq"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr "Ən yaxşı gediş vurmaq olacaq"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr "Ən yaxşı gediş ikili düşürmək olacaq"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr "Ən yaxşı gediş ayırmaq olacaq"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr "Ən yaxşı gediş əhatəyə almaq olacaq"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Kazino tərzi blackjack kart oyunu."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Heç bir oyun vericisi tə'yin edilməyib"
+
+msgid "translator-credits"
+msgstr ""
+"Mətin Əmirov <metin@karegen.com>\n"
+"\n"
+"Tərcümə işləri üzrə yazışma siyahısı ünvanımız:\n"
+"<translation-team-az@lists.sourceforge.net>"
+
+msgid "Computing basic strategy..."
+msgstr "Əsas strategiya hesablanır..."
+
+msgid "Bust"
+msgstr "Bust"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Yumuşaq"
+
+msgid "Win"
+msgstr "Qalib gəl"
+
+msgid "Push"
+msgstr "İtələ"
+
+msgid "Lose"
+msgstr "İtki"
+
+msgid "Player expected values"
+msgstr "İstifadəçi tərəfindən gözlənilən qiymətlər"
+
+msgid "Stand"
+msgstr "Dayan"
+
+msgid "Hit"
+msgstr "Vuruş"
+
+msgid "Double"
+msgstr "Cüt"
+
+msgid "Split"
+msgstr "Ayır"
+
+msgid "Dealer hand probabilities"
+msgstr "Əldəki ehtimalları göstər"

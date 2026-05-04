@@ -1,0 +1,526 @@
+# translation of gnome-games.HEAD.ro.po to Română
+# gnome-games
+# Copyright (C) 2004, 2005, 2006 Free Software Foundation, Inc.
+# Iulian Cutui <itph@k.ro>
+# Marius Andreiana <mandreiana@yahoo.com>, 2001.
+# Mugurel Tudor <mugurelu@gnome.ro>, 2004-2005, 2006.
+# Adi Roiban https://launchpad.net/~adiroiban, 2008, 2009
+# Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD.ro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-12-02 23:36+0200\n"
+"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Language-Team: Romanian GNOME Team <gnomero-list@lists.sourceforge.net>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Virtaal 0.4.0\n"
+"X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Fișierul de ajutor „%s.%s” nu a fost găsit"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Nu s-a putut afișa ajutorul pentru „%s”"
+
+msgid "Could not show link"
+msgstr "Legătura nu poate fi afișată"
+
+msgid "Error"
+msgstr "Eroare"
+
+msgid "View help for this game"
+msgstr "Afișează ajutorul pentru acest joc"
+
+msgid "End the current game"
+msgstr "Termină jocul curent"
+
+msgid "Toggle fullscreen mode"
+msgstr "Comută modul pe tot ecranul"
+
+msgid "Get a hint for your next move"
+msgstr "Primește o sugestie pentru următoarea mutare"
+
+msgid "Leave fullscreen mode"
+msgstr "Ieși din modul pe tot ecranul"
+
+msgid "Start a new multiplayer network game"
+msgstr "Pornire joc nou în rețea cu mai mulți adversari"
+
+msgid "End the current network game and return to network server"
+msgstr "Termină jocul curent de rețea și întoarce-te la serverul de rețea"
+
+msgid "Start a new game"
+msgstr "Pornește un joc nou"
+
+msgid "Pause the game"
+msgstr "Întrerupe temporar jocul"
+
+msgid "Show a list of players in the network game"
+msgstr "Arată o listă a jucătorilor din jocul de rețea"
+
+msgid "Redo the undone move"
+msgstr "Refă mutarea anulată"
+
+msgid "Restart the game"
+msgstr "Repornește jocul"
+
+msgid "Resume the paused game"
+msgstr "Continuă jocul întrerupt"
+
+msgid "View the scores"
+msgstr "Arată scorurile"
+
+msgid "Undo the last move"
+msgstr "Anulează ultima mutare"
+
+msgid "About this game"
+msgstr "Despre acest joc"
+
+msgid "Close this window"
+msgstr "Închide această fereastră"
+
+msgid "Configure the game"
+msgstr "Configurează jocul"
+
+msgid "Quit this game"
+msgstr "Termină acest joc"
+
+msgid "_Contents"
+msgstr "_Conținut"
+
+msgid "_Fullscreen"
+msgstr "_Pe tot ecranul"
+
+msgid "_Hint"
+msgstr "Su_gestie"
+
+msgid "_New"
+msgstr "_Nou"
+
+msgid "_New Game"
+msgstr "Joc _nou"
+
+msgid "_Redo Move"
+msgstr "_Refă mutarea"
+
+msgid "_Reset"
+msgstr "_Re-începe"
+
+msgid "_Restart"
+msgstr "_Reîncepe"
+
+msgid "_Undo Move"
+msgstr "_Anulează mutarea"
+
+msgid "_Deal"
+msgstr "Îm_parte"
+
+msgid "_Leave Fullscreen"
+msgstr "Ieșire din mod pe tot ecranu_l"
+
+msgid "Network _Game"
+msgstr "_Joc în rețea"
+
+msgid "L_eave Game"
+msgstr "I_eșire joc"
+
+msgid "Player _List"
+msgstr "_Listă jucători"
+
+msgid "_Pause"
+msgstr "_Pauză"
+
+msgid "Res_ume"
+msgstr "Rel_uare"
+
+msgid "_Scores"
+msgstr "_Scoruri"
+
+msgid "_End Game"
+msgstr "_Termină jocul"
+
+msgid "_About"
+msgstr "_Despre"
+
+msgid "_Cancel"
+msgstr "A_nulare"
+
+msgid "_Close"
+msgstr "În_chide"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s este o aplicație gratuită; o puteți redistribui și/sau modifica "
+"respectând termenii licenței GNU General Public License publicată de către "
+"Free Software Foundation fie versiunea %d a licenței fie (la alegere) orice "
+"versiune ulterioară."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Aplicața %s este distribuită în speranța că va fi utilă dar FĂRĂ A OFERI "
+"NICI O GARANȚIE, nici măcar garanția care ar surveni din COMERCIALIZARE sau "
+"prin IMPLEMENTAREA APLICAȚIEI ÎNTR-UN PROIECT ANUME ÎN PARTICULAR."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"În mod normal trebuie să primiți o copie a licenței GNU General Public "
+"License odată cu aplicația %s; dacă acest lucru nu s-a întâmplat informați "
+"în scris la Free Software Foundation Inc., la adresa 51 Franklin Street, "
+"Fifth Floor, Boston, MA 02110-1301 USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"În mod normal trebuie să primiți o copie a licenței GNU General Public "
+"License odată cu aplicația. Dacă acest lucru nu s-a întâmplat vizitați "
+"<http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Joc"
+
+msgid "_View"
+msgstr "_Vizualizare"
+
+msgid "Restart the current game"
+msgstr "Repornește jocul curent"
+
+msgid "Show a hint"
+msgstr "Afișează un indiciu"
+
+msgid "_Settings"
+msgstr "_Setări"
+
+msgid "_Control"
+msgstr "_Control"
+
+msgid "D_eal"
+msgstr "Îm_parte"
+
+msgid "Deal a new hand"
+msgstr "Împarte o nouă mână"
+
+msgid "_Hit"
+msgstr "Încă o _carte"
+
+msgid "Add a card to the hand"
+msgstr "Adaugă o carte la mână"
+
+msgid "_Stand"
+msgstr "_Stai"
+
+msgid "Stop adding cards to the hand"
+msgstr "Oprește adăugarea de cărți la mână"
+
+msgid "S_urrender"
+msgstr "A_bandon"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Renunță la această mână pentru jumătate din miză"
+
+msgid "_Double down"
+msgstr "_Dublează"
+
+msgid "Double your wager for a single hit"
+msgstr "Dublează miza pentru o singură carte"
+
+msgid "S_plit the hand"
+msgstr "Î_mparte mâna"
+
+msgid "Split cards in two new hands"
+msgstr "Împarte cărțile în două noi mâini"
+
+msgid "_Help"
+msgstr "_Ajutor"
+
+msgid "_Toolbar"
+msgstr "Bară de unel_te"
+
+msgid "Show toolbar"
+msgstr "Arată bara de unelte"
+
+msgid "Cards left:"
+msgstr "Cărți rămase:"
+
+msgid "Wager:"
+msgstr "Miză:"
+
+msgid "Balance:"
+msgstr "Balans:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Așezați miza sau cereți o mână"
+
+msgid "Blackjack rule set to use"
+msgstr "Setul de reguli blackjack folosit"
+
+msgid "Card Style"
+msgstr "Stilul de cărți"
+
+msgid "Would you like insurance?"
+msgstr "Doriți asigurare?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Asigurarea este o miză suplimentară de 50% din miza originală pentru ca "
+"dealer-ul să aibă un 21 natural (blackjack) care îi este oferit atunci când "
+"cartea sa cu fața în sus este un as. Dacă dealer-ul are un 21 natural atunci "
+"jucătorul este plătit dublu."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Setați miza și dați un clic pe zona albă pentru a cere o nouă mână."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Setați miza sau executați un clic pe cărți pentru a cere o nouă mână."
+
+msgid "Blackjack Preferences"
+msgstr "Preferințe Blackjack"
+
+msgid "Game"
+msgstr "Joc"
+
+msgid "_Display hand probabilities"
+msgstr "Afișează _probabilitățile mâinilor"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "Împărțiri _rapide (fără întârzieri între fiecare carte)"
+
+msgid "_Never take insurance"
+msgstr "_Nu lua niciodată asigurare"
+
+msgid "_Reset Balance"
+msgstr "_Resetează balanța"
+
+msgid "Rules"
+msgstr "Reguli"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Decks"
+msgstr "Pachete de cărți"
+
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Dublează orice total"
+
+msgid "Double 9"
+msgstr "Dublu 9"
+
+msgid "Double Soft"
+msgstr "Dublu Soft"
+
+msgid "Double After Hit"
+msgstr "Dublu după încă o carte"
+
+msgid "Double After Split"
+msgstr "Dublează după despărțire"
+
+msgid "Resplit"
+msgstr "Reîmparte"
+
+msgid "Resplit Aces"
+msgstr "Desparte așii"
+
+msgid "Surrender"
+msgstr "Abandon"
+
+msgid "Dealer Speed"
+msgstr "Viteză dealer"
+
+msgid "Click to double your wager"
+msgstr "Clic pentru a dubla miza"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Clic dublu pentru a mări miza cu %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Clic dublu pentru a micșora miza cu %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Clic pentru a mai cere o carte, trage cartea pentru a despărți perechea"
+
+msgid "Click to deal another card"
+msgstr "Clic pentru a cere altă carte"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Clic pentru a termina adăugarea de cărți la mână"
+
+msgid "Click to deal a new hand"
+msgstr "Clic pentru a cere o mână nouă"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack nu poate încărca fișierul cerut"
+
+msgid "Please check your Blackjack installation"
+msgstr "Verificați instalarea Blackjack"
+
+msgid "The best option is to stand"
+msgstr "Cea mai bună opțiune este să stați"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Să stați înseamnă să nu mai adăugați cărți la mâna dumneavoastră. Faceți "
+"acest lucru printr-un clic pe cărțile dealer-ului sau selectând această "
+"opțiune din meniul Control."
+
+msgid "The best option is to hit"
+msgstr "Cea mai bună opțiune este să mai cereți o carte"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Să mai cereți o carte înseamnă să mai adăugați o carte la mâna "
+"dumneavoastră. Faceți acest lucru printr-un clic pe cărțile dumneavoastră "
+"sau selectând această opțiune din meniul Control."
+
+msgid "The best option is to double down"
+msgstr "Cea mai bună opțiune este dublarea"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"A dubla înseamnă dublarea mizei inițiale și primirea doar a unei cărți "
+"adiționale. Faceți acest lucru printr-un clic pe jetoanele din partea de jos "
+"a ferestrei sau selectând această opțiune din meniul Control."
+
+msgid "The best option is to split"
+msgstr "Cea mai bună opțiune este despărțirea"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"A despărți înseamnă dividerea mâinii curente în două mâini separate. Faceți "
+"acest lucru trăgând una dintre cărți și plasând-o alături sau selectând "
+"această opțiune din meniul Control."
+
+msgid "The best option is to surrender"
+msgstr "Cea mai bună opțiune este abandonul"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Să abandonați presupune să cedați jumate din miza dumneavoastră și să nu "
+"completați mâna. Faceți acest lucru selectând opțiunea din meniul Control."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Blackjack este un joc de cărți în stil cazino.\n"
+"\n"
+"Blackjack face parte din Jocuri GNOME."
+
+msgid "GNOME Games web site"
+msgstr "Pagina web Jocuri GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"Mugurel Tudor <mugurelu@gnome.ro>\n"
+"Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Adi Roiban https://launchpad.net/~adiroiban\n"
+"  Andrei Coman https://launchpad.net/~comandrei\n"
+"  Beczuk David https://launchpad.net/~beczukdavid\n"
+"  Bogdan BOTEZ https://launchpad.net/~bmbogdan\n"
+"  Doru Horișco https://launchpad.net/~doruhushhush\n"
+"  Eduard Nicodei https://launchpad.net/~omega2youall\n"
+"  Ionuț Jula https://launchpad.net/~ionutjula\n"
+"  Lucian Adrian Grijincu https://launchpad.net/~lucian.grijincu\n"
+"  Manuel R. Ciosici https://launchpad.net/~manuelciosici\n"
+"  Marius https://launchpad.net/~yo9gvn\n"
+"  Mihai R https://launchpad.net/~mihairadau\n"
+"  Mugurel Tudor https://launchpad.net/~mugurelu\n"
+"  Mugurel Tudor https://launchpad.net/~mugurelu-gnome\n"
+"  leandrud https://launchpad.net/~leandrud"
+
+msgid "Computing basic strategy..."
+msgstr "Se calculează strategia de bază..."
+
+msgid "Bust"
+msgstr "Falit"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Moale"
+
+msgid "Win"
+msgstr "Victorie"
+
+msgid "Push"
+msgstr "Împinge"
+
+msgid "Lose"
+msgstr "Înfrângere"
+
+msgid "Player expected values"
+msgstr "Valori așteptate de jucător"
+
+msgid "Stand"
+msgstr "Așteaptă"
+
+msgid "Hit"
+msgstr "Încă o carte"
+
+msgid "Double"
+msgstr "Dublează"
+
+msgid "Split"
+msgstr "Desparte"
+
+msgid "Dealer hand probabilities"
+msgstr "Probabilitățile pentru mâna dealer-ului"

@@ -1,0 +1,497 @@
+# translation of gnome-games.HEAD.ne.po to Nepali
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
+#
+# Nabin Gautam <nabin@mpp.org.np>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD.ne\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-02-01 12:10+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "मद्दत फाइल \"%s.%s\" फेला परेन"
+
+#, fuzzy, c-format
+msgid "Could not show help for “%s”"
+msgstr " \"%s\" का लागि मद्दत देखाउन सकेन"
+
+msgid "Could not show link"
+msgstr "लिङ्कलाई देखाउन सकेन"
+
+msgid "Error"
+msgstr "त्रुटि"
+
+msgid "View help for this game"
+msgstr "यस खेलका लागि मद्दत हेर्नुहोस्"
+
+msgid "End the current game"
+msgstr "हालको खेल अन्त्य गर्नुहोस्"
+
+msgid "Toggle fullscreen mode"
+msgstr "पूरा पर्दा मोड टगल गर्नुहोस्"
+
+msgid "Get a hint for your next move"
+msgstr "पछिल्लो चालका लागि सङ्केत दिनुहोस्"
+
+msgid "Leave fullscreen mode"
+msgstr "पूरा पर्दा मोड छोड्नुहोस्"
+
+msgid "Start a new multiplayer network game"
+msgstr "नयाँ गुणक सञ्जाल खेल सुरु गर्नुहोस्"
+
+msgid "End the current network game and return to network server"
+msgstr "हालको सञ्जाल खेल अन्त्य गर्नुहोस् र सञ्जाल सर्भरमा फर्काउनुहोस्"
+
+msgid "Start a new game"
+msgstr "नयाँ खेल सुरु गर्नुहोस्"
+
+msgid "Pause the game"
+msgstr "खेललाई पज गर्नुहोस्"
+
+msgid "Show a list of players in the network game"
+msgstr "सञ्जाल खेलमा खेलाडीको सूची देखाउनुहोस्"
+
+msgid "Redo the undone move"
+msgstr "पुर्वावस्थामा फर्काउने चाललाई रिडू गर्नुहोस्"
+
+msgid "Restart the game"
+msgstr "खेल पुन सुरु गर्नुहोस्"
+
+msgid "Resume the paused game"
+msgstr "पज गरिएको खेललाई पुन: निरन्तरता दिनुहोस्"
+
+msgid "View the scores"
+msgstr "प्राप्ताङ्क हेर्नुहोस्"
+
+msgid "Undo the last move"
+msgstr "अन्तिम चाललाई पूर्व स्थितिमा फर्काउनुहोस्"
+
+msgid "About this game"
+msgstr "यस खेलका बारेमा"
+
+msgid "Close this window"
+msgstr "यस सञ्झ्याललाई बन्द गर्नुहोस्"
+
+msgid "Configure the game"
+msgstr "खेल कन्फिगर गर्नुहोस्"
+
+msgid "Quit this game"
+msgstr "यस खेललाई अन्त्य गर्नुहोस्"
+
+msgid "_Contents"
+msgstr "सामाग्री"
+
+msgid "_Fullscreen"
+msgstr "पूरा पर्दा"
+
+msgid "_Hint"
+msgstr "सङ्केत"
+
+msgid "_New"
+msgstr "नयाँ"
+
+msgid "_New Game"
+msgstr "नयाँ खेल"
+
+msgid "_Redo Move"
+msgstr "चाललाई रिडू गर्नुहोस्"
+
+msgid "_Reset"
+msgstr "रिसेट गर्नुहोस्"
+
+msgid "_Restart"
+msgstr "फेरि सुरु गर्नुहोस्"
+
+msgid "_Undo Move"
+msgstr "चाललाई पुर्वस्थितिमा फर्काउनुहोस्"
+
+msgid "_Deal"
+msgstr "बाँड्नुहोस्"
+
+msgid "_Leave Fullscreen"
+msgstr "पूरा पर्दा छोड्नुहोस्"
+
+msgid "Network _Game"
+msgstr "सञ्जाल खेल"
+
+msgid "L_eave Game"
+msgstr "खेल छोड्नुहोस्"
+
+msgid "Player _List"
+msgstr "खेलाडी सूची"
+
+msgid "_Pause"
+msgstr "पज गर्नुहोस्"
+
+msgid "Res_ume"
+msgstr "पुन: निरन्तरता दिनुहोस्"
+
+msgid "_Scores"
+msgstr "प्राप्ताङ्क"
+
+msgid "_End Game"
+msgstr "खेल अन्त्य गर्नुहोस्"
+
+msgid "_About"
+msgstr "बारेमा"
+
+msgid "_Cancel"
+msgstr "रद्द गर्नुहोस्"
+
+msgid "_Close"
+msgstr "बन्द गर्नुहोस्"
+
+msgid "_OK"
+msgstr "ठीक छ"
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s नि:शुल्क सफ्टवेयर हो; तपाईँले यसलाई नि:शुल्क सफ्टवेयर प्रतिष्ठानद्वारा प्रकाशित; या "
+"इजाजतपत्रको संस्करण २, वा (तपाईँको इच्छाअनुसारको) कुनै पनि पछिल्लो संस्करणको सामान्य "
+"सार्वजनिक इजाजत पत्रको शर्तअनुसार पुन: वितरण गर्न र/वा परिमार्जन गर्न सक्नुहुन्छ ।"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s लाई कुनै पनि प्रतिभूति बिना; निश्चित उद्देश्यका लागि बजारिकरण र योग्यता कार्यान्वयन "
+"नगरिकन, उपयोगि हुने आशाले वितरण गरिएको छ ।  विस्तृत विवरणका लागि GNU सामान्य "
+"सार्वजनिक इजाजतपत्र हेर्नुहोस् ।"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"तपाईँले %s को साथमा जीएनयूको साधारण सार्वजनिक इजाजतपत्रको प्रतिलिपि प्राप्त गरेको "
+"हुनुपर्छ; यदि नभएमा, नि: शुल्क सफ्टवेयर प्रतिष्ठान, Inc., 51 Franklin Street, Fifth "
+"Floor, Boston, MA  02110-1301  USA मा पत्र लेख्नुहोस्"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"तपाईँले %s को साथमा जीएनयूको साधारण सार्वजनिक इजाजतपत्रको प्रतिलिपि प्राप्त गरेको "
+"हुनुपर्छ; यदि नभएमा, नि: शुल्क सफ्टवेयर प्रतिष्ठान, Inc., 51 Franklin Street, Fifth "
+"Floor, Boston, MA  02110-1301  USA मा पत्र लेख्नुहोस्"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "ब्ल्याकज्याक - %s"
+
+msgid "_Game"
+msgstr "खेल"
+
+msgid "_View"
+msgstr "दृश्य"
+
+msgid "Restart the current game"
+msgstr "हालको खेललाई पुन: सुरु गर्नुहोस्"
+
+msgid "Show a hint"
+msgstr "सङ्केत देखाउनुहोस्"
+
+msgid "_Settings"
+msgstr "सेटिङ"
+
+msgid "_Control"
+msgstr "नियन्त्रण"
+
+msgid "D_eal"
+msgstr "बाँड्नुहोस्"
+
+msgid "Deal a new hand"
+msgstr "फेरि बाँड्नुहोस्"
+
+msgid "_Hit"
+msgstr "हिट गर्नुहोस्"
+
+msgid "Add a card to the hand"
+msgstr "हातमा एउटा तास थप्नुहोस्"
+
+msgid "_Stand"
+msgstr "रोक्नुहोस्"
+
+msgid "Stop adding cards to the hand"
+msgstr "हातमा तास थप्न रोक्नुहोस्"
+
+msgid "S_urrender"
+msgstr "परित्याग गर्नुहोस्"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "तपाईँको आधा बाजीका लागि यस पटक जरिवाना तिर्नुहोस्"
+
+msgid "_Double down"
+msgstr "दुइपटक तल झार्नुहोस्"
+
+msgid "Double your wager for a single hit"
+msgstr "एकल हिटका लागि तपाईँको बाजी डबल गर्नुहोस्"
+
+msgid "S_plit the hand"
+msgstr "हातलाई छुट्याउनुहोस्"
+
+msgid "Split cards in two new hands"
+msgstr "तासलाई दुइ नयाँ हातमा छुट्याउनुहोस्"
+
+msgid "_Help"
+msgstr "मद्दत"
+
+msgid "_Toolbar"
+msgstr "उपकरणपट्टी"
+
+msgid "Show toolbar"
+msgstr "उपकरणपट्टी देखाउनुहोस्"
+
+msgid "Cards left:"
+msgstr "बाँकी तास:"
+
+msgid "Wager:"
+msgstr "बाजी:"
+
+msgid "Balance:"
+msgstr "बराबर:"
+
+msgid "Place your wager or deal a hand"
+msgstr "तपाईँको बाजी देखाउनुहोस् वा फेरि बाँड्नुहोस्"
+
+msgid "Blackjack rule set to use"
+msgstr "प्रयोग गरिने ब्ल्याकज्याक नियम सेट"
+
+msgid "Card Style"
+msgstr "तास शैली"
+
+msgid "Would you like insurance?"
+msgstr "तपाईँ बीमा गर्न चाहनुहुन्छ ?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"बीमा डिलरसँग पहिलाका २१ (एका ब्ल्याकज्याक) हुँदा तास डिलरको मोहडा तास एक्का भएको "
+"बेलामा प्रस्ताव गरेको मौलिक बाजीको 50%% आंशिक बाजी हो । यदि डिलरसँग पहिलाका २१ तास "
+"छन् भने त्यसपछि खेलाडीले डबल भुक्तानी गर्छ ।"
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "तपाईँको बाजी सेट गरेर फेरि बाँड्नका लागि सेतो बाहिरी धर्कोमा क्लिक गर्नुहोस् ।"
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "तपाईँको बाँजी सेट गर्नुहोस् वा फेरि बाँड्नका लागि तासमा क्लिक गर्नुहोस् ।"
+
+msgid "Blackjack Preferences"
+msgstr "ब्ल्याकज्याक प्राथमिकता"
+
+msgid "Game"
+msgstr "खेल"
+
+msgid "_Display hand probabilities"
+msgstr "हातका सम्भाब्यता प्रदर्शन गर्नुहोस्"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "छिटो बाँड्नुहोस् (प्रत्येक तास बीचमा विलम्ब नगर्नुहोस्)"
+
+msgid "_Never take insurance"
+msgstr "कहिल्यै पनि बिमा नगर्नुहोस्"
+
+msgid "_Reset Balance"
+msgstr "सन्तुलन फेरि सेट गर्नुहोस्"
+
+msgid "Rules"
+msgstr "नियम"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Decks"
+msgstr "तासको थाक"
+
+msgid "Hit Soft 17"
+msgstr "सफ्ट १७ लाई हिट गर्नुहोस्"
+
+msgid "Double Any Total"
+msgstr "कुनै जोडलाई डबल गर्नुहोस्"
+
+msgid "Double 9"
+msgstr "९ लाई डबल गर्नुहोस्"
+
+msgid "Double Soft"
+msgstr "सफ्टलाई डबल गर्नुहोस्"
+
+msgid "Double After Hit"
+msgstr "हिट पछाडि डबल गर्नुहोस्"
+
+msgid "Double After Split"
+msgstr "विभाजन पछाडि डबल गर्नुहोस्"
+
+msgid "Resplit"
+msgstr "फेरि विभाजन गर्नुहोस्"
+
+msgid "Resplit Aces"
+msgstr "एक्काहरूलाई फेरि विभाजन गर्नुहोस्"
+
+msgid "Surrender"
+msgstr "परित्याग"
+
+msgid "Dealer Speed"
+msgstr "डिलरको गति"
+
+msgid "Click to double your wager"
+msgstr "तपाईँको बाजीलाई डबल गर्न क्लिक गर्नुहोस्"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "तपाईँको बाजीलाई %.2f ले बढाउनका लागि डबल क्लिक गर्नुहोस्"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "तपाईँको बाजीलाई %.2f ले घटाउनका लागि डबल क्लिक गर्नुहोस्"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "अर्को तास बाँड्नका लागि क्लिक गर्नुहोस्; जोडालाई विभाजन गर्न तास तान्नुहोस्"
+
+msgid "Click to deal another card"
+msgstr "अर्को तास लिनका लागि क्लिक गर्नुहोस्"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "तपाईँको हातमा तास थप्नबाट बचाउनका लागि क्लिक गर्नुहोस्"
+
+msgid "Click to deal a new hand"
+msgstr "फेरि बाँड्नका लागि क्लिक गर्नुहोस्"
+
+msgid "Blackjack can't load the requested file"
+msgstr "ब्ल्याकज्याकले अनुरोध गरिएको फाइल लोड गर्न सक्दैन"
+
+msgid "Please check your Blackjack installation"
+msgstr "कृपया तपाईँको ब्ल्याकज्याकको स्थापना जाँच गर्नुहोस्"
+
+msgid "The best option is to stand"
+msgstr "सबैभन्दा राम्रो उपाय रोक्नु हो"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"रोक्नु भनेको तपाईँको हातमा तास थप्ने काम बन्द गर्नु हो ।  डिलरको तासमा क्लिक गरेर वा "
+"नियन्त्रण मेनुबाट विकल्प चयन गरेर रोक्नुहोस् ।"
+
+msgid "The best option is to hit"
+msgstr "सबैभन्दा राम्रो उपाय हिट गर्नु हो"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"हिट गर्नु भनेको तपाईँको हातमा अरू तास थप्नु हो ।  तपाईँको तासमा एकपटक क्लिक गरेर वा "
+"नियन्त्रण मेनुबाट विकल्प चयन गरेर हिट गर्नुहोस् ।"
+
+msgid "The best option is to double down"
+msgstr "सबैभन्दा राम्रो उपाय दुई पटक तल झार्नु हो"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"दुइपटक तल झार्नुको अर्थ सुरुको बाजीलाई डबल गर्नु हो र उस्तै अर्को तास प्राप्त गर्नु हो ।  "
+"सञ्झ्यालको तलको चिप्समा एकपटक क्लिक गरेर वा नियन्त्रण मेनुबाट विकल्प चयन गरेर दुइपटक तल "
+"झार्नुहोस् ।"
+
+msgid "The best option is to split"
+msgstr "सबैबन्दा राम्रो विकल्प विभाजन गर्नु हो"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"विभाजन गर्नुको अर्थ तपाईँको हालको हातलाई दुई हातमा विभाजन गर्नु हो ।  तपाईँको एउटा "
+"तास तानेर र छेउमा छोडेर वा नियन्त्रण मेनुबाट विकल्प चयन गरेर विभाजन गर्नुहोस् ।"
+
+msgid "The best option is to surrender"
+msgstr "सबैभन्दा राम्रो उपाय परित्याग गर्नु हो"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"परित्याग गर्नुको अर्थ तपाईँको आधा बाजी त्याग्नु र हात समाप्त नगर्नु हो ।  नियन्त्रण मेनुबाट "
+"विकल्प चयन गरेर परित्याग गर्नुहोस् ।"
+
+msgid "Blackjack"
+msgstr "ब्ल्याकज्याक"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"ब्ल्याकज्याक क्यासिनो शैलिको खेल हो ।\n"
+"\n"
+"ब्ल्याकज्याक जिनोम खेलको भाग हो ।"
+
+msgid "GNOME Games web site"
+msgstr "जिनोम खेल वेब साइट"
+
+msgid "translator-credits"
+msgstr "अनुवादक श्रेय"
+
+msgid "Computing basic strategy..."
+msgstr "आधारभूत रणनीति कम्प्युटिङ गर्नुहोस्..."
+
+msgid "Bust"
+msgstr "बस्ट"
+
+msgid "Blackjack!"
+msgstr "ब्ल्याकज्याक !"
+
+msgid "Soft"
+msgstr "नरम"
+
+msgid "Win"
+msgstr "विजयी"
+
+msgid "Push"
+msgstr "धकेल्नुहोस्"
+
+msgid "Lose"
+msgstr "पराजय"
+
+msgid "Player expected values"
+msgstr "खेलाडीले अपेक्षा गरेका मान"
+
+msgid "Stand"
+msgstr "रोक्नुहोस्"
+
+msgid "Hit"
+msgstr "हिट गर्नुहोस्"
+
+msgid "Double"
+msgstr "डबल गर्नुहोस्"
+
+msgid "Split"
+msgstr "विभाजन गर्नुहोस्"
+
+msgid "Dealer hand probabilities"
+msgstr "डिलरको हातका सम्भाव्यता"

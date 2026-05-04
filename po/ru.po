@@ -1,0 +1,513 @@
+# Translation of gnome-games to Russian
+# Copyright (C) 1999-2002,2003, 2004, 2005 Free Software Foundation, Inc.
+#
+# Valek Filippov <frob@df.ru> 2000-2002
+# Nickolay V. Shmyrev <nshmyrev@yandex.ru>
+# Sergey Panov <sipan@mit.edu>, 1999.
+# Dmitry G. Mastrukov <dmitry@taurussoft.org>, 2002-2003.
+# Vyacheslav Dikonov <linuxbox@degunino.net>, 2002.
+# Michael Yakhontov <mvy@asplinux.ru>, 2003.
+# Leonid Kanter <leon@asplinux.ru>, 2004, 2005.
+# Dmitry Dzhus <dima@sphinx.net.ru>, 2008.
+# Andrew Grigorev <andrew@ei-grad.ru>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-10-08 03:32+0600\n"
+"Last-Translator: Andrew Grigorev <andrew@ei-grad.ru>\n"
+"Language-Team: Russian <gnome-cyr@lists.gnome.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Файл справки «%s.%s» не найден"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Не удалось показать справку по «%s»"
+
+msgid "Could not show link"
+msgstr "Не удалось показать ссылку"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "View help for this game"
+msgstr "Показать справку по игре"
+
+msgid "End the current game"
+msgstr "Закончить текущую игру"
+
+msgid "Toggle fullscreen mode"
+msgstr "Переключиться в полноэкранный режим"
+
+msgid "Get a hint for your next move"
+msgstr "Получить подсказку на следующий ход"
+
+msgid "Leave fullscreen mode"
+msgstr "Выйти из полноэкранного режима"
+
+msgid "Start a new multiplayer network game"
+msgstr "Начать новую сетевую игру с несколькими участниками"
+
+msgid "End the current network game and return to network server"
+msgstr "Закончить сетевую игру и вернуться к игровому серверу"
+
+msgid "Start a new game"
+msgstr "Начать новую игру"
+
+msgid "Pause the game"
+msgstr "Приостановить игру"
+
+msgid "Show a list of players in the network game"
+msgstr "Показывать список игроков в сетевой игре"
+
+msgid "Redo the undone move"
+msgstr "Вернуть отменённый ход"
+
+msgid "Restart the game"
+msgstr "Начать игру заново"
+
+msgid "Resume the paused game"
+msgstr "Продолжить остановленную игру"
+
+msgid "View the scores"
+msgstr "Просмотреть результаты"
+
+msgid "Undo the last move"
+msgstr "Отменить последний ход"
+
+msgid "About this game"
+msgstr "Об игре"
+
+msgid "Close this window"
+msgstr "Закрыть это окно"
+
+msgid "Configure the game"
+msgstr "Настроить игру"
+
+msgid "Quit this game"
+msgstr "Выйти из игры"
+
+msgid "_Contents"
+msgstr "_Содержание"
+
+msgid "_Fullscreen"
+msgstr "На _весь экран"
+
+msgid "_Hint"
+msgstr "_Подсказка"
+
+msgid "_New"
+msgstr "_Новая игра"
+
+msgid "_New Game"
+msgstr "_Новая игра"
+
+msgid "_Redo Move"
+msgstr "_Возвратить"
+
+msgid "_Reset"
+msgstr "_Сброс"
+
+msgid "_Restart"
+msgstr "_Начать заново"
+
+msgid "_Undo Move"
+msgstr "_Отменить"
+
+msgid "_Deal"
+msgstr "С_дать"
+
+msgid "_Leave Fullscreen"
+msgstr "Выйти из _полноэкранного режима"
+
+msgid "Network _Game"
+msgstr "Новая _сетевая игра"
+
+msgid "L_eave Game"
+msgstr "Вый_ти из игры"
+
+msgid "Player _List"
+msgstr "_Список игроков"
+
+msgid "_Pause"
+msgstr "_Пауза"
+
+msgid "Res_ume"
+msgstr "_Продолжить"
+
+msgid "_Scores"
+msgstr "_Результаты"
+
+msgid "_End Game"
+msgstr "_Закончить игру"
+
+msgid "_About"
+msgstr "_О программе"
+
+msgid "_Cancel"
+msgstr "О_тменить"
+
+msgid "_Close"
+msgstr "_Закрыть"
+
+msgid "_OK"
+msgstr "_ОК"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s ― свободное программное обеспечение. Вы можете распространять или "
+"изменять его при условиях соответствия GNU General Public License "
+"опубликованной Free Software Foundation; либо версии %d лицензии, либо (на "
+"ваше усмотрение) любой более поздней версии."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s распространяется в надежде на то, что приложение будет полезно, но БЕЗ "
+"ВСЯКИХ ГАРАНТИЙ; не гарантируется даже ПРИГОДНОСТЬ или СООТВЕТСТВИЕ КАКИМ-"
+"ЛИБО ТРЕБОВАНИЯМ. Для получения дополнительной информации ознакомьтесь с GNU "
+"General Public License."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Вы должны получить копию GNU General Public License вместе с %s. Если этого "
+"не произошло, напишите to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA."
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Вы должны получить копию GNU General Public License вместе с этой "
+"программой. Если этого не произошло, смотрите <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Двадцать одно - %s"
+
+msgid "_Game"
+msgstr "_Игра"
+
+msgid "_View"
+msgstr "_Вид"
+
+msgid "Restart the current game"
+msgstr "Начать игру заново"
+
+msgid "Show a hint"
+msgstr "Подсказка"
+
+msgid "_Settings"
+msgstr "_Правка"
+
+msgid "_Control"
+msgstr "_Управление"
+
+msgid "D_eal"
+msgstr "С_дать"
+
+msgid "Deal a new hand"
+msgstr "Сдать карты"
+
+msgid "_Hit"
+msgstr "_Поставить"
+
+msgid "Add a card to the hand"
+msgstr "Сдать ещё одну карту"
+
+msgid "_Stand"
+msgstr "_Воздержаться"
+
+msgid "Stop adding cards to the hand"
+msgstr "Остановить сдачу карт на руки"
+
+msgid "S_urrender"
+msgstr "_Сдаться"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Оштрафовать руку на половину ставки"
+
+msgid "_Double down"
+msgstr "_Удвоить"
+
+msgid "Double your wager for a single hit"
+msgstr "Удвоить ставку на одну сдачу"
+
+msgid "S_plit the hand"
+msgstr "_Разделить сдачу"
+
+msgid "Split cards in two new hands"
+msgstr "Разделить карты на две руки"
+
+msgid "_Help"
+msgstr "_Справка"
+
+msgid "_Toolbar"
+msgstr "Панель _инструментов"
+
+msgid "Show toolbar"
+msgstr "Показывать панель инструментов"
+
+msgid "Cards left:"
+msgstr "Осталось карт:"
+
+msgid "Wager:"
+msgstr "Ставка:"
+
+msgid "Balance:"
+msgstr "Баланс:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Делайте ставку или сдавайте карты"
+
+msgid "Blackjack rule set to use"
+msgstr "Используемые правила «Двадцать одно»"
+
+msgid "Card Style"
+msgstr "Стиль карт"
+
+msgid "Would you like insurance?"
+msgstr "Вы хотите подстраховаться?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Страховка - это побочное пари в 50% от основной ставки в том, что раздающий "
+"имеет ровно 21, то есть Блэкджек, которое предлагается, когда открытая карта "
+"раздающего - туз. Если раздающий в самом деле имеет 21, тогда игрок "
+"удваивает выигрыш."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Сделайте ставку и щелкните по белой внешней линии для сдачи карты."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Сделайте ставку или щелкните по карте для сдачи новой карты."
+
+msgid "Blackjack Preferences"
+msgstr "Параметры игры «Двадцать одно»"
+
+msgid "Game"
+msgstr "Игра"
+
+msgid "_Display hand probabilities"
+msgstr "_Показывать вероятные карты"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Быстрая сдача (нет задержек между сдачей карт)"
+
+msgid "_Never take insurance"
+msgstr "Не _страховаться"
+
+msgid "_Reset Balance"
+msgstr "Сбросить _баланс"
+
+msgid "Rules"
+msgstr "Правила"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Decks"
+msgstr "Рубашки"
+
+msgid "Hit Soft 17"
+msgstr "Ставить мягко 17"
+
+msgid "Double Any Total"
+msgstr "Удваивать любое значение"
+
+msgid "Double 9"
+msgstr "Удваивать 9"
+
+msgid "Double Soft"
+msgstr "Мягкое удвоение"
+
+msgid "Double After Hit"
+msgstr "Удвоение после ставки"
+
+msgid "Double After Split"
+msgstr "Удвоить после разделения"
+
+msgid "Resplit"
+msgstr "Разделить"
+
+msgid "Resplit Aces"
+msgstr "Разделить тузы"
+
+msgid "Surrender"
+msgstr "Сдаться"
+
+msgid "Dealer Speed"
+msgstr "Скорость крупье"
+
+msgid "Click to double your wager"
+msgstr "Щелкните для удвоения ставки"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Дважды щелкните для поднятия вашей ставки на %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Дважды щелкните для уменьшения вашей ставки на %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Щелкните мышкой для сдачи другой карты; перенесите карту для разделения пар"
+
+msgid "Click to deal another card"
+msgstr "Щелкните для сдачи другой карты"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Щелкните для окончания получения карт"
+
+msgid "Click to deal a new hand"
+msgstr "Щелкните для новой сдачи"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Игра «Двадцать одно» не смогла загрузить нужные файлы"
+
+msgid "Please check your Blackjack installation"
+msgstr "Пожалуйста, проверьте корректность установки игры «Двадцать одно»"
+
+msgid "The best option is to stand"
+msgstr "Лучше воздержаться"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Это означает прекращение добавления карт на вашу руку. Вы можете это "
+"сделать, нажав на карты раздающего или выбрав пункт из меню."
+
+msgid "The best option is to hit"
+msgstr "Лучше взять ещё одну карту"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Так вы добавите ещё одну карту на руку. Вы можете это сделать, нажав на ваши "
+"карты или выбрав пункт из меню."
+
+msgid "The best option is to double down"
+msgstr "Лучшим будет удвоить"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Удвоение означает удвоение ставки и получение ещё одной карты Вы можете "
+"сделать это, кликнув на фишки внизу или выбрав пункт из меню."
+
+msgid "The best option is to split"
+msgstr "Лучшим вариантом будет разделение"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"«Разделить» означает поделить вашу текущую руку на две. Вы можете сделать "
+"это захватив одну из ваших рук и перенеся ее за игровое поле или выбрав "
+"пункт из меню."
+
+msgid "The best option is to surrender"
+msgstr "Лучше будет сдаться"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Сдача вернет вам половину вашей ставки и прекращение заполнения руки. "
+"Выберите соответствующий пункты в меню."
+
+msgid "Blackjack"
+msgstr "Двадцать одно"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Игра «Двадцать Одно» позволяет играть в карты как в в реальном казино.\n"
+"\n"
+"«Двадцать Одно» является частью пакета GNOME Games."
+
+msgid "GNOME Games web site"
+msgstr "Веб-сайт GNOME Games"
+
+msgid "translator-credits"
+msgstr ""
+"Валек Филиппов\n"
+"Дмитрий Мастрюков\n"
+"Вячеслав Диконов\n"
+"Михаил Яхонтов\n"
+"Леонид Кантер\n"
+"Андрей Григорьев"
+
+msgid "Computing basic strategy..."
+msgstr "Обсчитываем простейшую стратегию..."
+
+msgid "Bust"
+msgstr "Банкрот"
+
+msgid "Blackjack!"
+msgstr "Двадцать одно!"
+
+msgid "Soft"
+msgstr "Мягко"
+
+msgid "Win"
+msgstr "Победа"
+
+msgid "Push"
+msgstr "Ставить"
+
+msgid "Lose"
+msgstr "Проигрыш"
+
+msgid "Player expected values"
+msgstr "Ожидаемые значения для игрока"
+
+msgid "Stand"
+msgstr "Стоять"
+
+msgid "Hit"
+msgstr "Ставить"
+
+msgid "Double"
+msgstr "Удваивать"
+
+msgid "Split"
+msgstr "Разделить"
+
+msgid "Dealer hand probabilities"
+msgstr "Вероятности карт раздающего"

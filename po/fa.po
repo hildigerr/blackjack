@@ -1,0 +1,486 @@
+# Persian translation of gnome-games.
+# Copyright (C) 2003, 2005, 2006 Sharif Farsiweb, Inc.
+# Roozbeh Pournader <roozbeh@farsiweb.info>, 2003, 2005.
+# Behdad Pournader <behdad.p@gmail.com>, 2005.
+# Elnaz Sarbar <elnaz@farsiweb.info>, 2005, 2006.
+# Meelad Zakaria <meelad@farsiweb.info>, 2005.
+# Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2006-02-18 20:34+0330\n"
+"Last-Translator: Farzaneh Sarafraz <farzaneh@farsiweb.info>\n"
+"Language-Team: Persian\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "بارگذاری  تصاویر ممکن نشد"
+
+msgid "Error"
+msgstr ""
+
+msgid "View help for this game"
+msgstr "نمایش راهنمای این بازی"
+
+msgid "End the current game"
+msgstr "تمام کردن بازی فعلی"
+
+#, fuzzy
+msgid "Toggle fullscreen mode"
+msgstr "ترک حالت تمام صفحه"
+
+msgid "Get a hint for your next move"
+msgstr "گرفتن راهنمایی برای حرکت بعدی‌تان"
+
+msgid "Leave fullscreen mode"
+msgstr "ترک حالت تمام صفحه"
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "شروع بازی جدید"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "شروع بازی جدید"
+
+msgid "Pause the game"
+msgstr "متوقف کردن بازی"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "دوباره‌ی حرکت برگردان "
+
+msgid "Restart the game"
+msgstr "شروع مجدد بازی"
+
+msgid "Resume the paused game"
+msgstr "از سر گرفتن بازی"
+
+msgid "View the scores"
+msgstr "نمایش امتیازها"
+
+msgid "Undo the last move"
+msgstr "برگرداندن آخرین حرکت "
+
+msgid "About this game"
+msgstr "درباره‌ی این بازی"
+
+msgid "Close this window"
+msgstr ""
+
+msgid "Configure the game"
+msgstr "پیکربندی بازی"
+
+msgid "Quit this game"
+msgstr "ترک این بازی"
+
+msgid "_Contents"
+msgstr "م_حتویات"
+
+msgid "_Fullscreen"
+msgstr "تمام _صفحه"
+
+msgid "_Hint"
+msgstr "_راهنمایی"
+
+msgid "_New"
+msgstr "_جدید"
+
+msgid "_New Game"
+msgstr "بازی _جدید"
+
+msgid "_Redo Move"
+msgstr "ا_نجام مجدد حرکت"
+
+msgid "_Reset"
+msgstr "_راه‌اندازی مجدد"
+
+msgid "_Restart"
+msgstr "_شروع مجدد"
+
+msgid "_Undo Move"
+msgstr "_برگردان حرکت"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "تر_ک حالت تمام‌صفحه"
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "بازی  شبکه‌ای جدید"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "بازی _جدید"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "بازیکن‌ها"
+
+msgid "_Pause"
+msgstr "_مکث"
+
+msgid "Res_ume"
+msgstr "_از سر گیری"
+
+msgid "_Scores"
+msgstr "امتیا_زها"
+
+msgid "_End Game"
+msgstr "_تمام کردن بازی"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "بلک‌جک  ـ %s"
+
+msgid "_Game"
+msgstr "_بازی"
+
+msgid "_View"
+msgstr "_نما"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "شروع مجدد بازی"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr "_تنظیمات"
+
+msgid "_Control"
+msgstr "_کنترل"
+
+msgid "D_eal"
+msgstr "_کارت گرفتن"
+
+msgid "Deal a new hand"
+msgstr "'گرفتن یک دست جدید"
+
+msgid "_Hit"
+msgstr "_یک کارت"
+
+msgid "Add a card to the hand"
+msgstr "اضافه کردن یک کارت به دست"
+
+msgid "_Stand"
+msgstr "_ایستادن"
+
+msgid "Stop adding cards to the hand"
+msgstr "توقف اضافه کردن کارت‌ها به دست"
+
+msgid "S_urrender"
+msgstr "ت_سلیم"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr ""
+
+msgid "Double your wager for a single hit"
+msgstr "دو برابر کردن شرط برای یک کارت دیگر"
+
+msgid "S_plit the hand"
+msgstr "ت_قسیم کردن دست"
+
+msgid "Split cards in two new hands"
+msgstr "تقسیم کارت‌ها به دو دست جدید"
+
+msgid "_Help"
+msgstr "_راهنما"
+
+msgid "_Toolbar"
+msgstr "ن_وار ابزار"
+
+msgid "Show toolbar"
+msgstr "نمایش نوار ابزار"
+
+msgid "Cards left:"
+msgstr "کارت‌های باقی‌مانده:"
+
+msgid "Wager:"
+msgstr "شرط:"
+
+msgid "Balance:"
+msgstr "موجودی:"
+
+msgid "Place your wager or deal a hand"
+msgstr "شرط‌تان را قرار دهید یا یک دست بگیرید"
+
+msgid "Blackjack rule set to use"
+msgstr "قانون بلک‌جک مورد استفاده"
+
+msgid "Card Style"
+msgstr "سبک کارت"
+
+msgid "Would you like insurance?"
+msgstr "دوست دارید بیمه شوید؟"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
+
+msgid "Blackjack Preferences"
+msgstr "ترجیحات بازی بلک‌جک"
+
+msgid "Game"
+msgstr "بازی"
+
+msgid "_Display hand probabilities"
+msgstr "_نمایش احتمالات دست"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_کارت گرفتن سریع (تأخیری بین کارت‌ها نباشد)"
+
+msgid "_Never take insurance"
+msgstr ""
+
+msgid "_Reset Balance"
+msgstr "_برگرداندن موجودی به وضع اول"
+
+msgid "Rules"
+msgstr "قوانین"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Decks"
+msgstr "دست‌های ورق"
+
+msgid "Hit Soft 17"
+msgstr "گرفتن ۱۷ ضعیف"
+
+msgid "Double Any Total"
+msgstr "دوبرابر کردن هر مجموعی"
+
+msgid "Double 9"
+msgstr ""
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr "دو برابر بعد از گرفتن کارت"
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr ""
+
+msgid "Resplit Aces"
+msgstr ""
+
+msgid "Surrender"
+msgstr "تسلیم"
+
+msgid "Dealer Speed"
+msgstr "سرعت توزیع کننده"
+
+msgid "Click to double your wager"
+msgstr "کلیک برای دو برابر کردن شرط"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "دوبار کلیک برای افزایش شرط به %I.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "دوبار کلیک برای کاهش شرط به %I.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
+
+msgid "Click to deal another card"
+msgstr "کلیک برای گرفتن یک کارت دیگر"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "برای پایان دادن به اضافه کردن کارت به دستتان کلیک کنید"
+
+msgid "Click to deal a new hand"
+msgstr "برای پخش یک  دست جدید کلیک کنید"
+
+msgid "Blackjack can't load the requested file"
+msgstr "بلک‌جک نمی‌تواند پرونده‌ی درخواست شده را بارگیری کند"
+
+msgid "Please check your Blackjack installation"
+msgstr "لطفاً نصب بلک‌جکتان را بررسی کنید "
+
+msgid "The best option is to stand"
+msgstr "بهترین گزینه ایستادن است"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"ایستادن به معنای توقف اضافه کردن کارت‌ها به دست‌تان است. برای این کار رو "
+"کارت‌های توزیع‌کننده کلیک کنید با گزینه را از منوی کنترل انتخاب کنید."
+
+msgid "The best option is to hit"
+msgstr ""
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr ""
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr ""
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr "بهترین گزینه تسلیم است"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش را "
+"از منوی کنترل انتخاب کنید."
+
+msgid "Blackjack"
+msgstr "بلک‌جک"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "بلک‌جک یک بازی ورق کازینویی بلک‌جک ارائه می‌کند."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "کارگزار بازی‌های گنوم"
+
+msgid "translator-credits"
+msgstr ""
+"روزبه پورنادر <roozbeh@farsiweb.info>\n"
+"بهداد پورنادر <behdad.p@gmail.com>\n"
+"الناز سربر <elnaz@farsiweb.info>\n"
+"میلاد زکریا <meelad@farsiweb.info>"
+
+msgid "Computing basic strategy..."
+msgstr "محاسبه‌ی استراتژی اولیه..."
+
+msgid "Bust"
+msgstr ""
+
+msgid "Blackjack!"
+msgstr "بلک‌جک!"
+
+msgid "Soft"
+msgstr "ضعیف"
+
+msgid "Win"
+msgstr "برد"
+
+msgid "Push"
+msgstr ""
+
+msgid "Lose"
+msgstr "باخت"
+
+msgid "Player expected values"
+msgstr "مقادیر مورد انتظار بازیکن"
+
+msgid "Stand"
+msgstr "ایستادن"
+
+msgid "Hit"
+msgstr "گرفتن"
+
+msgid "Double"
+msgstr "دو برابر"
+
+msgid "Split"
+msgstr ""
+
+msgid "Dealer hand probabilities"
+msgstr "احتمالات دست توزیع کننده"

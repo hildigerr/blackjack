@@ -1,0 +1,501 @@
+# translation of gnome-games.HEAD.he.po to Hebrew
+# translation of gnome-games.gnome-2-0.he.po to Hebrew
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
+# Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD.he\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-02-14 18:47+0200\n"
+"Last-Translator: Mark Krapivner <mark125@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+"X-Poedit-Language: Hebrew\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "קובץ עזרה \"%s.%s\" לא נימצא."
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "לא ניתן להציג עזרה עבור “%s”"
+
+msgid "Could not show link"
+msgstr "לא יכול להציג קישור"
+
+msgid "Error"
+msgstr "שגיאה"
+
+msgid "View help for this game"
+msgstr "הצג עזרה עבור משחק זה"
+
+msgid "End the current game"
+msgstr "סיים את המשחק הנוכחי"
+
+msgid "Toggle fullscreen mode"
+msgstr "הכנס למצב מסך מלא"
+
+msgid "Get a hint for your next move"
+msgstr "קבל רמז למהלך הבא שלך"
+
+msgid "Leave fullscreen mode"
+msgstr "צא ממצב מסך מלא"
+
+msgid "Start a new multiplayer network game"
+msgstr "התחל משחק רשת מרובה משתתפים חדש"
+
+msgid "End the current network game and return to network server"
+msgstr "סיים את משחק הרשת הנוכחי וחזור לשרת הרשת"
+
+msgid "Start a new game"
+msgstr "התחל משחק חדש"
+
+msgid "Pause the game"
+msgstr "השהה את המשחק"
+
+msgid "Show a list of players in the network game"
+msgstr "הצג את רשימת השחקנים במשחק הרשת"
+
+msgid "Redo the undone move"
+msgstr "בצע שוב את המהלך המבוטל"
+
+msgid "Restart the game"
+msgstr "התחל מחדש את המשחק"
+
+msgid "Resume the paused game"
+msgstr "המשך משחק מושהה"
+
+msgid "View the scores"
+msgstr "הצג את התוצאות"
+
+msgid "Undo the last move"
+msgstr "בטל את המהלך האחרון"
+
+msgid "About this game"
+msgstr "אודות משחק זה"
+
+msgid "Close this window"
+msgstr "סגור את החלון"
+
+msgid "Configure the game"
+msgstr "עצב את המשחק"
+
+msgid "Quit this game"
+msgstr "צא ממשחק זה"
+
+msgid "_Contents"
+msgstr "_תכנים"
+
+msgid "_Fullscreen"
+msgstr "מסך מ_לא"
+
+msgid "_Hint"
+msgstr "_רמז"
+
+msgid "_New"
+msgstr "_חדש"
+
+msgid "_New Game"
+msgstr "_משחק חדש"
+
+msgid "_Redo Move"
+msgstr "_חזור על המהלך"
+
+msgid "_Reset"
+msgstr "_איפוס"
+
+msgid "_Restart"
+msgstr "ה_תחל מחדש"
+
+msgid "_Undo Move"
+msgstr "_בטל מהלך"
+
+msgid "_Deal"
+msgstr "_חלק"
+
+msgid "_Leave Fullscreen"
+msgstr "_צא ממסך מלא"
+
+msgid "Network _Game"
+msgstr "_משחק רשת"
+
+msgid "L_eave Game"
+msgstr "_צא מהמשחק"
+
+msgid "Player _List"
+msgstr "_רשימת שחקנים"
+
+msgid "_Pause"
+msgstr "ה_שהה"
+
+msgid "Res_ume"
+msgstr "המש_ך"
+
+msgid "_Scores"
+msgstr "_תוצאות"
+
+msgid "_End Game"
+msgstr "_סיים משחק"
+
+msgid "_About"
+msgstr "_אודות"
+
+msgid "_Cancel"
+msgstr "_בטל"
+
+msgid "_Close"
+msgstr "_סגור"
+
+msgid "_OK"
+msgstr "_אישור"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "בלק ג'ק - %s"
+
+msgid "_Game"
+msgstr "_משחק"
+
+msgid "_View"
+msgstr "_עריכה"
+
+msgid "Restart the current game"
+msgstr "הפעל מחדש את המשחק הנוכחי"
+
+msgid "Show a hint"
+msgstr "הצג רמז"
+
+msgid "_Settings"
+msgstr "_אפשרויות"
+
+msgid "_Control"
+msgstr "_בקרים"
+
+msgid "D_eal"
+msgstr "_חלק"
+
+msgid "Deal a new hand"
+msgstr "חלק יד חדשה"
+
+msgid "_Hit"
+msgstr "_הכה"
+
+msgid "Add a card to the hand"
+msgstr "הוסף קלף ליד"
+
+msgid "_Stand"
+msgstr "_עמוד"
+
+#, fuzzy
+msgid "Stop adding cards to the hand"
+msgstr "לחץ כדי לסיים הוספת קלפים לידך"
+
+msgid "S_urrender"
+msgstr "_נכנע"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr ""
+
+#, fuzzy
+msgid "Double your wager for a single hit"
+msgstr "שים את ההימור שלך או חלק יד"
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "חלק יד נוספת"
+
+msgid "Split cards in two new hands"
+msgstr "פצל את הקלפים לשתי ידיים חדשות"
+
+msgid "_Help"
+msgstr "_עזרה"
+
+msgid "_Toolbar"
+msgstr "_סרגל כלים"
+
+msgid "Show toolbar"
+msgstr "הצג סרגל כלים"
+
+msgid "Cards left:"
+msgstr "קלפים שנותרו:"
+
+msgid "Wager:"
+msgstr "הימור:"
+
+msgid "Balance:"
+msgstr "איזון:"
+
+msgid "Place your wager or deal a hand"
+msgstr "שים את ההימור שלך או חלק יד"
+
+msgid "Blackjack rule set to use"
+msgstr "Blackjack rule set to use"
+
+msgid "Card Style"
+msgstr "סגנון קלף"
+
+msgid "Would you like insurance?"
+msgstr "האם אתה רוצה ביטוח?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "קבע את ההימור שלך ולחץ על המסגרת הלבנה כדי לחלק יד חדשה."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "קבע את ההימור שלך ולחץ על הקלפים כדי לחלק יד חדשה."
+
+msgid "Blackjack Preferences"
+msgstr "העדפות בלק ג'ק"
+
+msgid "Game"
+msgstr "משחק"
+
+msgid "_Display hand probabilities"
+msgstr "הצג הסתברות _יד"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "חלוקות _מהירות (ללא השהייה בין כל קלף)"
+
+msgid "_Never take insurance"
+msgstr "ל_עולם אל תעשה ביטוח"
+
+msgid "_Reset Balance"
+msgstr ""
+
+msgid "Rules"
+msgstr "חוקים"
+
+msgid "Name"
+msgstr "שם"
+
+msgid "Decks"
+msgstr "חפיסות"
+
+msgid "Hit Soft 17"
+msgstr "הכה ב 17 רך"
+
+msgid "Double Any Total"
+msgstr "הכפל כל תוצאה"
+
+msgid "Double 9"
+msgstr "הכפל 9"
+
+msgid "Double Soft"
+msgstr "הכפל רך"
+
+msgid "Double After Hit"
+msgstr "הכפל לאחר מכה"
+
+msgid "Double After Split"
+msgstr "הכפל לאחר פיצול"
+
+msgid "Resplit"
+msgstr "פצל מחדש"
+
+msgid "Resplit Aces"
+msgstr "פצל מחדש אסים"
+
+msgid "Surrender"
+msgstr "נכנע"
+
+msgid "Dealer Speed"
+msgstr "מהירות מחלק"
+
+msgid "Click to double your wager"
+msgstr "לחץ כדי להכפיל את הימורך"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "לחיצה כפולה כדי להגדיל את הימורך ב %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "לחיצה כפולה כדי להקטין את הימורך ב %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "לחץ כדי לחלק קלף חדש; גרור קלף כדי לפצל זוג"
+
+msgid "Click to deal another card"
+msgstr "לחץ כדי לחלק יד נוספת"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "לחץ כדי לסיים הוספת קלפים לידך"
+
+msgid "Click to deal a new hand"
+msgstr "לחץ כדי לחלק יד חדשה"
+
+msgid "Blackjack can't load the requested file"
+msgstr "בלק ג'ק לא יכול לטעון את הקובץ המבוקש"
+
+msgid "Please check your Blackjack installation"
+msgstr "אנא בדוק את התקנת הבלק ג'ק שלך"
+
+msgid "The best option is to stand"
+msgstr "האפשרות הטובה ביותר היא להשאר"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr "האפשרות הטובה ביותר היא להכות"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr "האפשרות הטובה ביותר היא להכפיל מטה"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr "האפשרות הטובה ביותר היא לפצל"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr "האפשרות הטובה ביותר היא להכנע"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr "בלק ג'ק"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"בלק ג'ק הוא משחק קלפים בסגנון הקזינו.\n"
+"‏בלק ג'ק הוא חלק מחבילת משחקי GNOME."
+
+msgid "GNOME Games web site"
+msgstr "אתר משחקי GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"גיל אשר <dolfin@rpg.org.il>\n"
+"יאיר הרשקוביץ <yairhr@gmail.com>\n"
+"‏Hezy Amiel https://launchpad.net/~hezy\n"
+"‏Revan https://launchpad.net/~mark125\n"
+"‏Yaniv Abir https://launchpad.net/~yanivabir\n"
+"‏dod_basim https://launchpad.net/~yoav-prat\n"
+"\n"
+"פרוייקט תרגום GNOME לעברית:\n"
+"‏http://gnome-il.berlios.de"
+
+msgid "Computing basic strategy..."
+msgstr "מחשב אסטרטגיה בסיסית..."
+
+msgid "Bust"
+msgstr "כישלון"
+
+msgid "Blackjack!"
+msgstr "בלק ג'ק!"
+
+msgid "Soft"
+msgstr "רך"
+
+msgid "Win"
+msgstr "ניצח"
+
+msgid "Push"
+msgstr "שוויון"
+
+msgid "Lose"
+msgstr "הפסיד"
+
+msgid "Player expected values"
+msgstr ""
+
+msgid "Stand"
+msgstr "עמוד"
+
+msgid "Hit"
+msgstr "הכה"
+
+msgid "Double"
+msgstr "הכפל"
+
+msgid "Split"
+msgstr "פצל"
+
+#, fuzzy
+msgid "Dealer hand probabilities"
+msgstr "הצג הסתברות יד"

@@ -1,0 +1,511 @@
+# translation of lv.po to Latvian
+# gnome-games for Latvian.
+# Copyright (C) 2002, 2006, 2007 Free Software Foundation, Inc.
+#
+# Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
+# Raivis Dejus <orvils@gmail.com>, 2006, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: lv\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2007-04-01 19:08+0300\n"
+"Last-Translator: Raivis Dejus <orvils@gmail.com>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Poedit-Language: Latvian\n"
+"X-Poedit-Country: LATVIA\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "Nevaru ielādēt attēlus"
+
+msgid "Error"
+msgstr "Kļūda"
+
+msgid "View help for this game"
+msgstr "Apskatīt šīs spēles palīdzību"
+
+msgid "End the current game"
+msgstr "Pārtraukt šībrīža spēli"
+
+#, fuzzy
+msgid "Toggle fullscreen mode"
+msgstr "Pamest pilnekrānu"
+
+msgid "Get a hint for your next move"
+msgstr "Palūgt padomu par jūsu nākamo gājienu"
+
+msgid "Leave fullscreen mode"
+msgstr "Pamest pilnekrānu"
+
+msgid "Start a new multiplayer network game"
+msgstr "Sākt jaunu tīkla"
+
+msgid "End the current network game and return to network server"
+msgstr "Beigt pašreizējo tīkla spēli un atgriezties pie servera"
+
+msgid "Start a new game"
+msgstr "Sākt jaunu spēli"
+
+msgid "Pause the game"
+msgstr "Iepauzēt spēli"
+
+msgid "Show a list of players in the network game"
+msgstr "Rādīt spēlētāju skaitu tīkla spēlē"
+
+msgid "Redo the undone move"
+msgstr "Restaurēt atsaukto darbību"
+
+msgid "Restart the game"
+msgstr "Pārstartēt spēli"
+
+msgid "Resume the paused game"
+msgstr "Turpināt iepauzēto spēli"
+
+msgid "View the scores"
+msgstr "Apskatīt rezultātus"
+
+msgid "Undo the last move"
+msgstr "Atsaukt pēdējo gājienu"
+
+msgid "About this game"
+msgstr "Par šo spēli"
+
+msgid "Close this window"
+msgstr ""
+
+msgid "Configure the game"
+msgstr "Konfigurēt spēli"
+
+msgid "Quit this game"
+msgstr "Iziet no spēles"
+
+msgid "_Contents"
+msgstr "_Saturs"
+
+msgid "_Fullscreen"
+msgstr "Pilnekrāna"
+
+msgid "_Hint"
+msgstr "_Padoms"
+
+msgid "_New"
+msgstr "Jau_ns"
+
+msgid "_New Game"
+msgstr "Jau_na Spēle"
+
+msgid "_Redo Move"
+msgstr "_Restaurēt darbību"
+
+msgid "_Reset"
+msgstr "Pā_rstartēt"
+
+msgid "_Restart"
+msgstr "Pā_rstartēt"
+
+msgid "_Undo Move"
+msgstr "Atsa_ukt darbību"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "Iziet no pi_lnekrāna režīma"
+
+msgid "Network _Game"
+msgstr "Tīkla _spēle"
+
+msgid "L_eave Game"
+msgstr "Pames_t spēle"
+
+msgid "Player _List"
+msgstr "Spē_lētāji"
+
+msgid "_Pause"
+msgstr "_Pauze"
+
+msgid "Res_ume"
+msgstr "T_urpināt"
+
+msgid "_Scores"
+msgstr "Re_zultāti"
+
+msgid "_End Game"
+msgstr "B_eigt spēli"
+
+#, fuzzy
+msgid "_About"
+msgstr "Par"
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s ir brīvās programmatūras produkts; jūs varat izpaltīt un/vai modificēt to "
+"saskanā ar GNU Vispārējās Publiskās Licences 2. vai kādas vēlākas versijas "
+"noteikumiem."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s tiek izplatīts ar cerību, ka tas būs nodserīgs. Tas tiek izplatīts BEZ "
+"jebkādas garantijas vai iekļautas ražotāja atbildības par šo produktu. "
+"Sīkāku informāciju meklējiet GNU Vispārējās Publiskās Licences tekstā."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"GNU Vispārējās Publiskās Licence ir pieejama kopā ar %s instalāciju. Ja tā "
+"jums nav pieejama, jūs to varat iegūt no Free Software Foundation, Inc., 59 "
+"Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"GNU Vispārējās Publiskās Licence ir pieejama kopā ar %s instalāciju. Ja tā "
+"jums nav pieejama, jūs to varat iegūt no Free Software Foundation, Inc., 59 "
+"Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Acīte - %s"
+
+msgid "_Game"
+msgstr "_Spēle"
+
+msgid "_View"
+msgstr "Skatīt"
+
+msgid "Restart the current game"
+msgstr "Pārstartēt pašreizējo spēli"
+
+msgid "Show a hint"
+msgstr "Parādīt padomu"
+
+msgid "_Settings"
+msgstr "_Uzstādījumi"
+
+msgid "_Control"
+msgstr "Vadība"
+
+msgid "D_eal"
+msgstr "_Dalīt"
+
+msgid "Deal a new hand"
+msgstr "Izdalīt jaunu spēli"
+
+msgid "_Hit"
+msgstr "S_ist"
+
+msgid "Add a card to the hand"
+msgstr "Izdalīt kārti no kavas"
+
+msgid "_Stand"
+msgstr "Att_urēties"
+
+msgid "Stop adding cards to the hand"
+msgstr " Pārstāt dot kārtis uz rokas"
+
+msgid "S_urrender"
+msgstr "Padotie_s"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Izlaist šo gājienu par pusi jūsu likmes"
+
+msgid "_Double down"
+msgstr "_Dubultot lejup"
+
+msgid "Double your wager for a single hit"
+msgstr "Dubultot jūsu likmi vienam gājienam"
+
+msgid "S_plit the hand"
+msgstr "Sadalīt rokā esošās kārtis"
+
+msgid "Split cards in two new hands"
+msgstr "Sadalīt kārtis divās kavās"
+
+msgid "_Help"
+msgstr "_Palīdzība"
+
+msgid "_Toolbar"
+msgstr "Parādī_t rīkjoslu"
+
+msgid "Show toolbar"
+msgstr "Parādīt rīkjoslu"
+
+msgid "Cards left:"
+msgstr "Atlikušās kārtis:"
+
+msgid "Wager:"
+msgstr "Derības:"
+
+msgid "Balance:"
+msgstr "Balanss:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Likt likmi vai dalīt jaunas kārtis \"uz rokas\""
+
+msgid "Blackjack rule set to use"
+msgstr "Acītes noteikumu kopums, ko lietot"
+
+msgid "Card Style"
+msgstr "Kāršu stils"
+
+msgid "Would you like insurance?"
+msgstr "Vai jūs vēlaties izmantot apdrošināšanu?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Apdrošināšana ir 50%% no sākotnējās likmes uz to, ka dalītājam ir dabisks 21 "
+"(aka acīte), kas tiek piedāvāta, kad dalītāja kārts ar attēlu uz augšu ir "
+"dūzis. Ja dalītājam ir dabisks 21, tad spēlētājam tiek maksāts dubultā."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Uzstādiet savu likmi un uzklikšķiniet uz baltā rāmīša, lai izdalītu jaunas "
+"kārtis uz rokas."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+"Nosakiet savu likmi un noklikšķiniet uz kārtīm, lai izdalītu jaunu partiju."
+
+msgid "Blackjack Preferences"
+msgstr "Acītes iestatījumi"
+
+msgid "Game"
+msgstr "Spēle"
+
+msgid "_Display hand probabilities"
+msgstr "_Parādīt izvēļu iespējamības"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "Ā_trā dalīšana(nav aiztures starp katru kārti)"
+
+msgid "_Never take insurance"
+msgstr "_Nekad neņemt apdrošināšanu"
+
+msgid "_Reset Balance"
+msgstr "Pā_rstartēt balansu"
+
+msgid "Rules"
+msgstr "Noteikumi"
+
+msgid "Name"
+msgstr "Vārds"
+
+msgid "Decks"
+msgstr "Kavas"
+
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Dubultot jebkuru summu"
+
+msgid "Double 9"
+msgstr "Dubulti 9"
+
+msgid "Double Soft"
+msgstr "Double Soft"
+
+msgid "Double After Hit"
+msgstr "Dubultot pēc vēl"
+
+msgid "Double After Split"
+msgstr "Dubultot pēc sadalīšanas"
+
+msgid "Resplit"
+msgstr "Pārdalīt"
+
+msgid "Resplit Aces"
+msgstr "Pārdalīt dūžus"
+
+msgid "Surrender"
+msgstr "Padoties"
+
+msgid "Dealer Speed"
+msgstr "Dalītāja ātrums"
+
+msgid "Click to double your wager"
+msgstr "Nospiediet lai dubultotu jūsu likmi"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Uzklikšķiniet dubultklikšķi, lai palielinātu likmi par %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Uzklikšķiniet dubultklikšķi, lai samazinātu likmi par %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Uzklikšķināt, lai izdalītu vēl vienu kārti; vilkt kārti, lai sadalītu pāri"
+
+msgid "Click to deal another card"
+msgstr "Klikšķini, lai zdalītu vēl vienu kārti"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Uzklikšķināt, lai beigtu pievienot kārtis tām, kas jau rokā"
+
+msgid "Click to deal a new hand"
+msgstr "Uzklikšķiniet, lai izdalītu jaunas kārtis \"uz rokas\""
+
+msgid "Blackjack can't load the requested file"
+msgstr "Acīte (Blackjack) nevar ielādēt nepieciešamo failu"
+
+msgid "Please check your Blackjack installation"
+msgstr "Lūdzu pārbaudiet savu Acītes (Blackjack) instalāciju"
+
+msgid "The best option is to stand"
+msgstr "Labākā iespēja ir atturēties"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Stāt nozīmē pārstāt pievienot kārtis pie tām, kas jau rokā. To var izdarīt "
+"uzklikšķinot uz dalītāja kārtīm vai izvēloties šo iespēju no Vadības "
+"izvēlnes."
+
+msgid "The best option is to hit"
+msgstr "Labākā izvēle  ir ņemt vēl"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Ņemt vēl nozīmē pievienot vēlvienu kārti tām, kas jau rokā. To var izdarīt "
+"vienreiz uzklikšķinot uz savām kārtīm vai izvēloties šo iespēju no Vadības "
+"izvēlnes."
+
+msgid "The best option is to double down"
+msgstr "Labākā izvēle ir dubultot nost"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Dubultot nost nozīmē dubultot sākotnējo likmi un saņemt tieši vēl vienu "
+"kārti. To var izdarīt vienreiz uzklikšķinot uz ripiņām loga apakšā vai "
+"izvēloties šo iespēju no Vadības izvēlnes."
+
+msgid "The best option is to split"
+msgstr "Labākā izvēle ir dalīt"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Dalīt nozīmē sadalīt pašreiz rokā esošās kārtis divās atsevišķās rokās. To "
+"var izdarīt aizvelkot vienu no savām kārtīm un nometot nost sānis vai "
+"izvēloties šo iespēju no Vadības izvēlnes."
+
+msgid "The best option is to surrender"
+msgstr "Labākā iespēja ir padoties"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Padoties nozīmē atdot pusi likmes un nepabeigt rokā esošās kārtis. To var "
+"izdarīt izvēloties šo opciju no Vadības izvēlnes."
+
+msgid "Blackjack"
+msgstr "Acīte (Blackjack)"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Acīte ir kazino tipa kāršu spēle."
+
+msgid "GNOME Games web site"
+msgstr ""
+
+msgid "translator-credits"
+msgstr ""
+"Raivis Dejus <orvils@gmail.com>\n"
+"Sandra Zabarovska <sandra.zabarovska@gmail.com>"
+
+msgid "Computing basic strategy..."
+msgstr "Skaitļo pamatstratēģiju..."
+
+msgid "Bust"
+msgstr "Bust"
+
+msgid "Blackjack!"
+msgstr "Acīte!"
+
+msgid "Soft"
+msgstr "Soft"
+
+msgid "Win"
+msgstr "Uzvara"
+
+msgid "Push"
+msgstr "Grūdiens"
+
+msgid "Lose"
+msgstr "Zaudējāt"
+
+msgid "Player expected values"
+msgstr "Gaidāmās spēlētāja vērtības"
+
+msgid "Stand"
+msgstr "Atturēties"
+
+msgid "Hit"
+msgstr "Sist"
+
+msgid "Double"
+msgstr "Dubults"
+
+msgid "Split"
+msgstr "Sadalīt"
+
+msgid "Dealer hand probabilities"
+msgstr "Dalītāja rokā esošo kāršu iespējamības"

@@ -1,0 +1,507 @@
+# Vietnamese translation for Gnome Games.
+# Copyright © 2009 GNOME I18N Project for Vietnamese.
+# T.M.Thanh <tmthanh@yahoo.com>, 2002.
+# Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2007.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games TRUNK\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-02-10 00:52+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.8\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Không tìm thấy tập tin trợ giúp « %s.%s »"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Không thể hiển thị trợ giúp về « %s »"
+
+msgid "Could not show link"
+msgstr "Không thể hiển thị liên kết"
+
+msgid "Error"
+msgstr "Lỗi"
+
+msgid "View help for this game"
+msgstr "Hiển thị trợ giúp cho trò này"
+
+msgid "End the current game"
+msgstr "Kết thúc lượt chơi hiện có"
+
+msgid "Toggle fullscreen mode"
+msgstr "Bật/tắt chế độ toàn màn hình"
+
+msgid "Get a hint for your next move"
+msgstr "Nhận gợi ý cho bước đi tiếp theo"
+
+msgid "Leave fullscreen mode"
+msgstr "Ra chế độ toàn màn hình"
+
+msgid "Start a new multiplayer network game"
+msgstr "Bắt đầu lượt chơi mạng đa người chơi mới"
+
+msgid "End the current network game and return to network server"
+msgstr "Kết thúc lượt chơi mạng hiện thời và trở về máy phục vụ mạng"
+
+msgid "Start a new game"
+msgstr "Bắt đầu lượt chơi mới"
+
+msgid "Pause the game"
+msgstr "Tạm dừng chơi"
+
+msgid "Show a list of players in the network game"
+msgstr "Hiện danh sách các người chơi trong lượt chơi mạng"
+
+msgid "Redo the undone move"
+msgstr "Làm lại bước đi vừa xong"
+
+msgid "Restart the game"
+msgstr "Chạy lại trò chơi"
+
+msgid "Resume the paused game"
+msgstr "Tiếp tục trò chơi bị tạm dừng"
+
+msgid "View the scores"
+msgstr "Xem điểm số"
+
+msgid "Undo the last move"
+msgstr "Hoàn tác bước mới làm"
+
+msgid "About this game"
+msgstr "Giới thiệu trò chơi này"
+
+msgid "Close this window"
+msgstr "Đóng cửa sổ này"
+
+msgid "Configure the game"
+msgstr "Cấu hình trò chơi"
+
+msgid "Quit this game"
+msgstr "Thoát khỏi trò chơi này"
+
+msgid "_Contents"
+msgstr "_Nội dung"
+
+msgid "_Fullscreen"
+msgstr "T_oàn màn hình"
+
+msgid "_Hint"
+msgstr "_Gợi ý"
+
+msgid "_New"
+msgstr "_Mới"
+
+msgid "_New Game"
+msgstr "Lượt chơi _mới"
+
+msgid "_Redo Move"
+msgstr "_Chuyển lại"
+
+msgid "_Reset"
+msgstr "_Lập lại"
+
+msgid "_Restart"
+msgstr "Chạy _lại"
+
+msgid "_Undo Move"
+msgstr "_Hủy bước"
+
+msgid "_Deal"
+msgstr "_Nhận bài"
+
+msgid "_Leave Fullscreen"
+msgstr "_Ra khỏi toàn màn hình"
+
+msgid "Network _Game"
+msgstr "Lượt chơi mạn_g"
+
+msgid "L_eave Game"
+msgstr "R_a lượt chơi"
+
+msgid "Player _List"
+msgstr "Danh _sách người chơi"
+
+msgid "_Pause"
+msgstr "Tạm _dừng"
+
+msgid "Res_ume"
+msgstr "_Tiếp tục"
+
+msgid "_Scores"
+msgstr "Đ_iểm"
+
+msgid "_End Game"
+msgstr "_Kết thúc lượt chơi"
+
+msgid "_About"
+msgstr "_Giới thiệu"
+
+msgid "_Cancel"
+msgstr "_Thôi"
+
+msgid "_Close"
+msgstr "Đón_g"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s là phần mềm tự do; bạn có quyền phát hành lại nó và/hoặc sửa đổi nó với "
+"điều kiện của Giấy Phép Công Cộng GNU như được xuất bản bởi Tổ Chức Phần Mềm "
+"Tự Do; hoặc phiên bản %d của Giấy Phép này, hoặc (tùy chọn) bất kỳ phiên bản "
+"sau nào."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s được phát hành vì mong muốn nó có ích, nhưng KHÔNG CÓ BẢO HÀNH GÌ CẢ, "
+"THẬM CHÍ KHÔNG CÓ BẢO ĐẢM ĐƯỢC NGỤ Ý KHẢ NĂNG BÁN HAY KHẢ NĂNG LÀM ĐƯỢC VIỆC "
+"DỨT KHOÁT. Xem Giấy Phép Công Cộng GNU để biết thêm chi tiết."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với %s; nếu không, "
+"hãy viết thư cho Tổ Chức Phần Mềm Tự Do,\n"
+"Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor,\n"
+"Boston, MA  02110-1301, USA (Mỹ)."
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với %s; nếu không, "
+"hãy viết thư cho Tổ Chức Phần Mềm Tự Do,\n"
+"Free Software Foundation, Inc.,\n"
+"51 Franklin Street, Fifth Floor,\n"
+"Boston, MA  02110-1301, USA (Mỹ)."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Quân đen: %s"
+
+msgid "_Game"
+msgstr "_Trò chơi"
+
+msgid "_View"
+msgstr "_Xem"
+
+msgid "Restart the current game"
+msgstr "Khởi chạy lại lượt chơi hiện thời"
+
+msgid "Show a hint"
+msgstr "Gọi ý"
+
+msgid "_Settings"
+msgstr "Thiết _lập"
+
+msgid "_Control"
+msgstr "Điều _khiển"
+
+msgid "D_eal"
+msgstr "_Nhận bài"
+
+msgid "Deal a new hand"
+msgstr "Nhận một ván bài khác"
+
+msgid "_Hit"
+msgstr "Đá_nh"
+
+msgid "Add a card to the hand"
+msgstr "Thêm một lá bài vào sắp"
+
+msgid "_Stand"
+msgstr "_Giữ"
+
+msgid "Stop adding cards to the hand"
+msgstr "Ngừng thêm lá bài vào sắp"
+
+msgid "S_urrender"
+msgstr "_Bỏ không?"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Bỏ ván này và mất nửa cuộc"
+
+msgid "_Double down"
+msgstr "Đôi _xuống"
+
+msgid "Double your wager for a single hit"
+msgstr "Đánh cuộc đôi cho một lá bài mới riêng lẻ"
+
+msgid "S_plit the hand"
+msgstr "_Chia ván ra"
+
+msgid "Split cards in two new hands"
+msgstr "Chia lá bài ra hai sắp mới"
+
+msgid "_Help"
+msgstr "Trợ _giúp"
+
+msgid "_Toolbar"
+msgstr "_Thanh công cụ"
+
+msgid "Show toolbar"
+msgstr "Hiển thị thanh công cụ"
+
+msgid "Cards left:"
+msgstr "Lá bài còn lại:"
+
+msgid "Wager:"
+msgstr "Đánh cuộc:"
+
+msgid "Balance:"
+msgstr "Cán cân:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Đánh cuộc hay nhận ván"
+
+msgid "Blackjack rule set to use"
+msgstr "Bộ luật chơi Quân đen cần dùng"
+
+msgid "Card Style"
+msgstr "Kiểu lá bài"
+
+msgid "Would you like insurance?"
+msgstr "Bạn có muốn bảo hiểm không?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Khi bảo hiểm thì đánh cuộc khác là 50%% của cuộc gốc đánh người nhân có điểm "
+"21 tự nhiên (cũng được biết là quân đen) mà được đưa ra khi lá bài mặt lên "
+"của người nhận là át. Khi bảo hiểm, nếu người nhân gặp điểm 21 tự nhiên thì "
+"phải trả tiền đôi cho người đánh cuộc đó."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Đánh cuộc rồi nhắp vào khung màu trắng để nhận ván mới."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Đánh cuộc rồi nhắp vào lá bài để nhận ván mới."
+
+msgid "Blackjack Preferences"
+msgstr "Tùy thích Quân đen"
+
+msgid "Game"
+msgstr "Trò chơi"
+
+msgid "_Display hand probabilities"
+msgstr "_Hiển thị xác suất của ván"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "Nhận _nhanh (không đợi giữa nhận mỗi lá)"
+
+msgid "_Never take insurance"
+msgstr "_Đừng bao giờ lấy sự bảo hiểm"
+
+msgid "_Reset Balance"
+msgstr "Lập _lái cán cân"
+
+msgid "Rules"
+msgstr "Luật chơi"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Decks"
+msgstr "Cỗ"
+
+msgid "Hit Soft 17"
+msgstr "Đánh mềm 17"
+
+msgid "Double Any Total"
+msgstr "Đôi bất cứ điểm nào"
+
+msgid "Double 9"
+msgstr "Đôi 9"
+
+msgid "Double Soft"
+msgstr "Đôi mềm"
+
+msgid "Double After Hit"
+msgstr "Đôi sau khi đánh"
+
+msgid "Double After Split"
+msgstr "Đôi sau khi chia ra"
+
+msgid "Resplit"
+msgstr "Chia ra lại"
+
+msgid "Resplit Aces"
+msgstr "Chia hai át lại"
+
+msgid "Surrender"
+msgstr "Bỏ"
+
+msgid "Dealer Speed"
+msgstr "Tốc độ nhận bài"
+
+msgid "Click to double your wager"
+msgstr "Nhắp để đôi cuộc"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Nhắp đôi để tăng cuộc %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Nhắp đôi để giảm cuộc %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Nhắp để nhận lá khác; kéo lá để chia cặp ra"
+
+msgid "Click to deal another card"
+msgstr "Nhắp để nhận lá khác"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Nhắp để thêm xong bài vào sắp bạn"
+
+msgid "Click to deal a new hand"
+msgstr "Nhắp để nhận ván mới"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Quân đen không tải được tập tin được yêu cầu"
+
+msgid "Please check your Blackjack installation"
+msgstr "Hãy kiểm tra bản cài đặt Quân đen"
+
+msgid "The best option is to stand"
+msgstr "Tùy chọn tốt nhất là giữ"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Giữ có nghĩa là thôi thêm lá bài vào sắp bạn. Hãy làm như thế bằng cách nhắp "
+"vào lá bài của người nhận hoặc bằng cách chọn tùy chọn ấy trong trình đơn "
+"Điều khiển."
+
+msgid "The best option is to hit"
+msgstr "Tùy chọn tốt nhất là đánh"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Đánh có nghĩa là thêm lá khác vào sắp bạn. Hãy làm như thế bằng cách nhắp "
+"một vào lá bài của bạn hoặc bằng cách chọn tùy chọn ấy trong trình đơn Điều "
+"khiển."
+
+msgid "The best option is to double down"
+msgstr "Tùy chọn tốt nhất là đôi xuống"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Đôi xuống có nghĩa là đôi cuộc gốc và nhận một lá bài chính xác. Hãy làm như "
+"thế bằng cách nhắp một vào các thẻ tại đáy cửa sổ, hoặc bằng cách chọn tùy "
+"chọn ấy trong trình đơn Điều khiển."
+
+msgid "The best option is to split"
+msgstr "Tùy chọn tốt nhất là"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Chia ra có nghĩa là chia sắp bạn hiện thời ra hai sắp riêng. Hãy làm như thế "
+"bằng cách kéo một lá bài của bạn và thả nó vào bên, hoặc bằng cách chọn tùy "
+"chọn ấy trong trình đơn Điều khiển."
+
+msgid "The best option is to surrender"
+msgstr "Tùy chọn tốt nhất là bỏ"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Bỏ có nghĩa là bỏ nửa cuộc và không xong ván ấy. Hãy làm như thế bằng cách "
+"chọn tùy chọn ấy trong trình đơn Điều khiển."
+
+msgid "Blackjack"
+msgstr "Quân đen"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Quân đen cho bạn đánh bài Quân đen kiểu sòng bạc.\n"
+"\n"
+"Quân đen thuộc về Trờ chơi GNOME."
+
+msgid "GNOME Games web site"
+msgstr "Nơi Mạng Trò chơi GNOME"
+
+msgid "translator-credits"
+msgstr "Nhóm Việt hóa GNOME (http://gnomevi.sourceforge.net)"
+
+msgid "Computing basic strategy..."
+msgstr "Đang tính chiến lược cơ bản..."
+
+msgid "Bust"
+msgstr "Hết"
+
+msgid "Blackjack!"
+msgstr "Quân đen!"
+
+msgid "Soft"
+msgstr "Mềm"
+
+msgid "Win"
+msgstr "Thắng"
+
+msgid "Push"
+msgstr "Đẩy"
+
+msgid "Lose"
+msgstr "Thua"
+
+msgid "Player expected values"
+msgstr "Giá trị người chơi đã ngờ"
+
+msgid "Stand"
+msgstr "Giữ"
+
+msgid "Hit"
+msgstr "Đánh"
+
+msgid "Double"
+msgstr "Đôi"
+
+msgid "Split"
+msgstr "Chia ra"
+
+msgid "Dealer hand probabilities"
+msgstr "Xác suất cho sắp người nhận"

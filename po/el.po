@@ -1,0 +1,534 @@
+# Greek translation of gnome-games.HEAD.el.po
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# spyros:
+# The translation for gtali (dice game: Yahtzee) incomplete, since
+# I did not know some terms (kanenas expert sto mparmpouti paides? ;-)
+# spyros did 600 messages
+# simos:
+# kostas: 28Oct2003, update for Gnome 2.6
+# kostas: 12Nov2003, fixes
+# kostas: 26Jan2004, update
+# just updates, 20 messages.
+# simos: 642 messages, 12Feb2001.
+# kostas: 828 messages, 06Nov2002, completed translation.
+# kostas: 879 messages, 07Jan2003, updated translation.
+# kostas: 906 messages,29May2003, update for Gnome 2.4.
+# kostas: 1013 messages,04Sep2003, update for Gnome 2.4.
+# kostas: 25Dec2003, xmas fixes,1020 messages.
+# kostas:13Feb2004,1058 messages.
+# S.D. 21Mar2008, 45 messages.
+# Spiros Papadimitriou <spapadim+@cs.cmu.edu>, 2000.
+# Simos Xenitellis <simos74@gmx.net>, 2000, 2001, 2002.
+# Kostas Papadimas <pkst@gnome.org>, 2002,2003, 2004, 2005, 2006, 2008.
+# Athanasios Lefteris <alefteris@gmail.com>, 2006.
+# Yannis Evangelou <zephyrous1979@yahoo.com>, 2007.
+# Simos Xenitellis <simos@gnome.org>, 2007.
+# S.D. <stavros_daliakopoulos@yahoo.gr, 2008.
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2008, 2009.
+# Marios Zindilis <m.zindilis@dmajor.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD.el\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-16 22:04+0200\n"
+"Last-Translator: Kostas Papadimas <pkst@gnome.org>\n"
+"Language-Team: Greek <team@gnome.gr>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 0.2\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Το αρχείο βοήθειας \"%s.%s\" δε βρέθηκε"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Αδυναμία προβολής βοήθειας για “%s”"
+
+msgid "Could not show link"
+msgstr "Αδυναμία προβολής συνδέσμου"
+
+msgid "Error"
+msgstr "Σφάλμα"
+
+msgid "View help for this game"
+msgstr "Προβολή βοήθειας για αυτό το παιχνίδι"
+
+msgid "End the current game"
+msgstr "Τερματισμός του τρέχοντος παιχνιδιού"
+
+msgid "Toggle fullscreen mode"
+msgstr "Εναλλαγή λειτουργίας πλήρους οθόνης"
+
+msgid "Get a hint for your next move"
+msgstr "Υπόδειξη για την επόμενη κίνησή σας"
+
+msgid "Leave fullscreen mode"
+msgstr "Έξοδος από λειτουργία πλήρους οθόνης"
+
+msgid "Start a new multiplayer network game"
+msgstr "Εκκίνηση νέου δικτυακού παιχνιδιού με πολλούς παίχτες"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+"Τερματισμός του τρέχοντος δικτυακού παιχνιδιού και επιστροφή στον δικτυακό "
+"εξυπηρετητή"
+
+msgid "Start a new game"
+msgstr "Εκκίνηση νέου παιχνιδιού"
+
+msgid "Pause the game"
+msgstr "Προσωρινή παύση παιχνιδιού"
+
+msgid "Show a list of players in the network game"
+msgstr "Εμφάνιση μιας λίστας παιχτών στο δικτυακό παιχνίδι"
+
+msgid "Redo the undone move"
+msgstr "Ακύρωση αναίρεσης της τελευταίας κίνησης"
+
+msgid "Restart the game"
+msgstr "Επανεκκίνηση του παιχνιδιού"
+
+msgid "Resume the paused game"
+msgstr "Συνέχιση του τρέχοντος επιπέδου"
+
+msgid "View the scores"
+msgstr "Προβολή της βαθμολογίας"
+
+msgid "Undo the last move"
+msgstr "Αναίρεση της τελευταίας κίνησης"
+
+msgid "About this game"
+msgstr "Σχετικά με αυτό το παιχνίδι"
+
+msgid "Close this window"
+msgstr "Κλείσιμο του παραθύρου"
+
+msgid "Configure the game"
+msgstr "Ρύθμιση παιχνιδιού"
+
+msgid "Quit this game"
+msgstr "Έξοδος από αυτό το παιχνίδι"
+
+msgid "_Contents"
+msgstr "_Περιεχόμενα"
+
+msgid "_Fullscreen"
+msgstr "_Πλήρης οθόνη"
+
+msgid "_Hint"
+msgstr "_Υπόδειξη"
+
+msgid "_New"
+msgstr "_Νέο"
+
+msgid "_New Game"
+msgstr "_Νέο Παιxνίδι"
+
+msgid "_Redo Move"
+msgstr "Επανάληψη κίνησης"
+
+msgid "_Reset"
+msgstr "Επαναφορά"
+
+msgid "_Restart"
+msgstr "_Επανεκκίνηση"
+
+msgid "_Undo Move"
+msgstr "_Αναίρεση κίνησης"
+
+msgid "_Deal"
+msgstr "Μοί_ρασμα"
+
+msgid "_Leave Fullscreen"
+msgstr "_Έξοδος από πλήρη οθόνη"
+
+msgid "Network _Game"
+msgstr "Δικτυακό _παιχνίδι"
+
+msgid "L_eave Game"
+msgstr "Εγ_κατάλειψη παιγνιδιού"
+
+msgid "Player _List"
+msgstr "_Λίστα παιχτών"
+
+msgid "_Pause"
+msgstr "Π_αύση"
+
+msgid "Res_ume"
+msgstr "Συνέχιση"
+
+msgid "_Scores"
+msgstr "_Βαθμολογίες"
+
+msgid "_End Game"
+msgstr "_Τέλος παιχνιδιού"
+
+msgid "_About"
+msgstr "_Περί"
+
+msgid "_Cancel"
+msgstr "_Ακύρωση"
+
+msgid "_Close"
+msgstr "_Κλείσιμο"
+
+msgid "_OK"
+msgstr "_Εντάξει"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"Το %s είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή ή/και τροποποίησή "
+"του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GPL), όπως αυτή "
+"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού (FSF) — είτε της έκδοσης "
+"%d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Το %s διανέμεται με την ελπίδα ότι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ ΚΑΜΙΑ "
+"ΕΓΓΥΗΣΗ. Χωρίς ούτε την έμμεση εγγύηση ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣΓΙΑ "
+"ΕΝΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Για περισσότερες λεπτομέρειες, δείτε τη γενική "
+"δημόσια άδεια χρήσης GNU."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Δημόσιας Άδειας GNU μαζί "
+"με το %s· Εάν όχι, γράψτε στο Free Software Foundation, Inc., 51 Franklin "
+"Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης "
+"GNU (GPL) μαζί με το πρόγραμμα· Εάν όχι, επισκεφθείτε το <http://www.gnu.org/"
+"licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Μπλάκτζακ - %s"
+
+msgid "_Game"
+msgstr "_Παιχνίδι"
+
+msgid "_View"
+msgstr "Πρ_οβολή"
+
+msgid "Restart the current game"
+msgstr "Επανεκκίνηση του τρέχοντος παιχνιδιού"
+
+msgid "Show a hint"
+msgstr "Εμφάνιση μιας συμβουλής"
+
+msgid "_Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "_Control"
+msgstr "Έ_λεγχος"
+
+msgid "D_eal"
+msgstr "Μοί_ρασμα"
+
+msgid "Deal a new hand"
+msgstr "Μοίρασμα νέου χεριού"
+
+msgid "_Hit"
+msgstr "_Τράβα"
+
+msgid "Add a card to the hand"
+msgstr "Προσθέστε ένα φύλλο στο χέρι"
+
+msgid "_Stand"
+msgstr "_Αναμονή"
+
+msgid "Stop adding cards to the hand"
+msgstr "Μην προσθέτετε άλλα φύλλα στο χέρι"
+
+msgid "S_urrender"
+msgstr "Πά_σο"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Παρατήστε αυτό το χέρι για το μισό στοίχημά σας"
+
+msgid "_Double down"
+msgstr "_Διπλασιασμός"
+
+msgid "Double your wager for a single hit"
+msgstr "Διπλασιάστε το στοίχημά σας με ένα μόνο τράβηγμα"
+
+msgid "S_plit the hand"
+msgstr "Χω_ρισμός του χεριού"
+
+msgid "Split cards in two new hands"
+msgstr "Χωρίστε τα χαρτιά σε δύο διαφορετικά φύλλα"
+
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+msgid "_Toolbar"
+msgstr "_Γραμμή εργαλείων"
+
+msgid "Show toolbar"
+msgstr "Εμφάνιση εργαλειοθήκης"
+
+msgid "Cards left:"
+msgstr "Χαρτιά που απομένουν:"
+
+msgid "Wager:"
+msgstr "Ποντάρισμα:"
+
+msgid "Balance:"
+msgstr "Υπόλοιπο:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Στοιχηματήστε ή μοιράστε ένα χέρι"
+
+msgid "Blackjack rule set to use"
+msgstr "Κανόνες Μπλάκτζακ"
+
+msgid "Card Style"
+msgstr "Στυλ χαρτιού"
+
+msgid "Would you like insurance?"
+msgstr "Θέλετε ασφάλεια;"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Η ασφάλεια είναι ένα πρόσθετο ποντάρισμα 50%% επί του αρχικού στοιχήματος, "
+"για την περίπτωση που ο ντίλερ έχει φυσικό 21 (δηλαδή μπλάκτζακ), και "
+"χρησιμοποιείται όταν το πρώτο χαρτί του ντίλερ είναι άσσος. Αν ο ντίλερ έχει "
+"φυσικό 21, τότε ο παίκτης πληρώνεται διπλά."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Στοιχηματήστε και κάντε κλικ στο λευκό περίγραμμα για νέο χέρι."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Στοιχηματίστε και κάντε κλικ στα χαρτιά για νέο χέρι."
+
+msgid "Blackjack Preferences"
+msgstr "Προτιμήσεις Μπλάκτζακ"
+
+msgid "Game"
+msgstr "Παιχνίδι"
+
+msgid "_Display hand probabilities"
+msgstr "_Εμφάνιση πιθανοτήτων χεριού"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Γρήγορο μοίρασμα (χωρίς καθυστέρηση μεταξύ των χαρτιών)"
+
+msgid "_Never take insurance"
+msgstr "Να μην γίνεται ποτέ λήψη ασφάλειας"
+
+msgid "_Reset Balance"
+msgstr "Επαναφορά υπολοίπου"
+
+msgid "Rules"
+msgstr "Κανόνες"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "Decks"
+msgstr "Πλάτες"
+
+msgid "Hit Soft 17"
+msgstr "Τράβα μαλακό 17"
+
+msgid "Double Any Total"
+msgstr "Διπλασιασμός κάθε συνόλου"
+
+msgid "Double 9"
+msgstr "Διπλό 9"
+
+msgid "Double Soft"
+msgstr "Διπλό Μαλακό"
+
+msgid "Double After Hit"
+msgstr "Διπλασιασμός μετά από τράβηγμα χαρτιού"
+
+msgid "Double After Split"
+msgstr "Διπλασιασμός μετά από χωρισμό χαρτιών"
+
+msgid "Resplit"
+msgstr "Νέος χωρισμός"
+
+msgid "Resplit Aces"
+msgstr "Νέος χωρισμός των άσσων"
+
+msgid "Surrender"
+msgstr "Παραδόσου"
+
+msgid "Dealer Speed"
+msgstr "Ταχύτητα ντίλερ"
+
+msgid "Click to double your wager"
+msgstr "Κάντε κλικ για να διπλασιάσετε το στοίχημα σας"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Κάντε διπλό κλικ για να ανεβάσετε το στοίχημά σας κατά %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Κάντε διπλό κλικ για να μειώσετε το στοίχημά σας κατά %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Κάντε κλικ για να μοιράσετε άλλο χαρτί. Σύρετε το χαρτί για να χωρίσετε το "
+"ζευγάρι"
+
+msgid "Click to deal another card"
+msgstr "Κάντε κλικ για να μοιράσετε άλλο χαρτί"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Κάντε κλικ για να μην προστεθούν άλλα χαρτιά στο χέρι σας"
+
+msgid "Click to deal a new hand"
+msgstr "Κάντε κλικ για το μοίρασμα νέου χεριού"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Το Μπλάκτζακ δεν μπορεί να φορτώσει το ζητούμενο αρχείο."
+
+msgid "Please check your Blackjack installation"
+msgstr "Παρακαλώ ελέγξτε την εγκατάσταση του Μπλάκτζακ"
+
+msgid "The best option is to stand"
+msgstr "Η καλύτερη επιλογή είναι να μείνετε"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Η παραμονή σημαίνει ότι σταματάτε να προσθέτετε χαρτιά στο χέρι σας. "
+"Μπορείτε να το κάνετε αυτό, κάνοντας κλικ στα χαρτιά του ντίλερ ή "
+"επιλέγοντας την αντίστοιχη επιλογή από το μενού."
+
+msgid "The best option is to hit"
+msgstr "Η καλύτερη επιλογή είναι να τραβήξετε"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Τράβηγμα σημαίνει να πάρετε ένα ακόμη φύλλο στο χέρι σας. Μπορείτε να το "
+"κάνετε με ένα κλικ στα χαρτιά σας ή με την αντίστοιχη επιλογή από το μενού "
+"Ελέγχου."
+
+msgid "The best option is to double down"
+msgstr "Η καλύτερη επιλογή είναι να υποδιπλασιάσετε"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Ο διπλασιασμός σημαίνει να διπλασιάσετε το αρχικό στοίχημα και να πάρετε "
+"μόνο ένα φύλλο ακόμη. Μπορείτε να το κάνετε με ένα κλικ στις μάρκες στο κάτω "
+"μέρος του παραθύρου ή με την αντίστοιχη επιλογή από το μενού Ελέγχου."
+
+msgid "The best option is to split"
+msgstr "Η καλύτερη επιλογή είναι να χωρίσετε"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Διαχωρισμός σημαίνει να μοιράσετε τα χαρτιά σας σε δυο διαφορετικά φύλλα. "
+"Αυτό μπορείτε να το κάνετε είτε σύροντας ένα από τα χαρτιά σας και αφήνοντάς "
+"το στο πλάι είτε μέσω της αντίστοιχης επιλογής από το μενού Ελέγχου."
+
+msgid "The best option is to surrender"
+msgstr "Η καλύτερη επιλογή είναι να παραδοθείτε"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Το Παραδώσου σημαίνει ότι χάνετε το μισό του στοιχήματός σας και δεν "
+"ολοκληρώνετε το χέρι. Αυτό μπορείτε να το κάνετε από την αντίστοιχη επιλογή "
+"στο μενού Ελέγχου."
+
+msgid "Blackjack"
+msgstr "Μπλάκτζακ"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Το Blackjack είναι ένα παιχνίδι με τράπουλα σε στυλ καζίνο.\n"
+"\n"
+"Το Blackjack είναι μέρος των παιχνιδιών του GNOME."
+
+msgid "GNOME Games web site"
+msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"Spiros Papadimitriou <spapadim+@cs.cmu.edu>\n"
+"Συμεών (Σίμος) Ξενιτέλλης <simos@hellug.gr>\n"
+"Κώστας Παπαδήμας <pkst@gmx.net>\n"
+"Τζένη Πετούμενου <epetoumenou@gmail.com>"
+
+msgid "Computing basic strategy..."
+msgstr "Σχεδίαση βασικής στρατηγικής..."
+
+msgid "Bust"
+msgstr "Κάηκε"
+
+msgid "Blackjack!"
+msgstr "Μπλάκτζακ!"
+
+msgid "Soft"
+msgstr "Μαλακό"
+
+msgid "Win"
+msgstr "Νίκη"
+
+msgid "Push"
+msgstr "Ισοπαλία"
+
+msgid "Lose"
+msgstr "Ήττα"
+
+msgid "Player expected values"
+msgstr "Αναμενόμενες τιμές παίκτη"
+
+msgid "Stand"
+msgstr "Παραμονή"
+
+msgid "Hit"
+msgstr "Τράβηγμα"
+
+msgid "Double"
+msgstr "Διπλά"
+
+msgid "Split"
+msgstr "Χωρισμός"
+
+msgid "Dealer hand probabilities"
+msgstr "Πιθανότητες χεριού του ντίλερ"

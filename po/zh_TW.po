@@ -1,0 +1,498 @@
+# Chinese (Taiwan) translation of gnome-games.
+# Copyright (C) 1999-2006 Free Software Foundation, Inc.
+# (http://vegas.wcn.com.tw/21.shtml for blackjack terms)
+# Fernando <bv1al@journalist.com.tw>, 1999.
+# Abel Cheung <abel@oaka.org>, 2001-2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games 2.27.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-07-17 06:18+0800\n"
+"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
+"Language-Team: Chinese (Taiwan) <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 1.2.1\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "找不到「%s.%s」求助檔案"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "無法顯示“%s”的求助文件"
+
+msgid "Could not show link"
+msgstr "無法顯示連結"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "View help for this game"
+msgstr "顯示有關本遊戲的說明文件"
+
+msgid "End the current game"
+msgstr "終止目前這局遊戲"
+
+msgid "Toggle fullscreen mode"
+msgstr "切換全螢幕模式"
+
+msgid "Get a hint for your next move"
+msgstr "給下一步的提示"
+
+msgid "Leave fullscreen mode"
+msgstr "離開全螢幕模式"
+
+msgid "Start a new multiplayer network game"
+msgstr "開始一個新的多人網路遊戲"
+
+msgid "End the current network game and return to network server"
+msgstr "終止目前的網路遊戲，回到伺服器"
+
+msgid "Start a new game"
+msgstr "開始另一局"
+
+msgid "Pause the game"
+msgstr "暫停遊戲"
+
+msgid "Show a list of players in the network game"
+msgstr "顯示網路遊戲中的玩家名單"
+
+msgid "Redo the undone move"
+msgstr "重新進行剛才還原的一步"
+
+msgid "Restart the game"
+msgstr "再玩這一局"
+
+msgid "Resume the paused game"
+msgstr "繼續遊戲"
+
+msgid "View the scores"
+msgstr "顯示得分"
+
+msgid "Undo the last move"
+msgstr "還原上一步"
+
+msgid "About this game"
+msgstr "關於本遊戲"
+
+msgid "Close this window"
+msgstr "關閉這個視窗"
+
+msgid "Configure the game"
+msgstr "遊戲設定"
+
+msgid "Quit this game"
+msgstr "退出本遊戲"
+
+msgid "_Contents"
+msgstr "內容(_C)"
+
+msgid "_Fullscreen"
+msgstr "全螢幕(_F)"
+
+msgid "_Hint"
+msgstr "提示(_H)"
+
+msgid "_New"
+msgstr "開新局(_N)"
+
+msgid "_New Game"
+msgstr "開新局(_N)"
+
+msgid "_Redo Move"
+msgstr "取消回手(_R)"
+
+msgid "_Reset"
+msgstr "重設(_R)"
+
+msgid "_Restart"
+msgstr "再玩(_R)"
+
+msgid "_Undo Move"
+msgstr "回手(_U)"
+
+msgid "_Deal"
+msgstr "發牌(_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "取消全螢幕(_L)"
+
+msgid "Network _Game"
+msgstr "網路遊戲(_G)"
+
+msgid "L_eave Game"
+msgstr "離開遊戲(_E)"
+
+msgid "Player _List"
+msgstr "玩家名單(_L)"
+
+msgid "_Pause"
+msgstr "暫停(_P)"
+
+msgid "Res_ume"
+msgstr "繼續(_U)"
+
+msgid "_Scores"
+msgstr "分數(_S)"
+
+msgid "_End Game"
+msgstr "結束遊戲(_E)"
+
+msgid "_About"
+msgstr "關於(_A)"
+
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+msgid "_Close"
+msgstr "關閉(_C)"
+
+msgid "_OK"
+msgstr "確定(_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s 為自由軟體；您可依據自由軟體基金會所發表的 GNU 通用公共授權條款規定，就本"
+"程式再為散佈與／或修改；無論您依據的是本授權的第二版或（您自行選擇的）第 %d "
+"版。"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s 係基於使用目的而加以散佈，然而不負任何擔保責任；亦無對適售性\n"
+"或特定目的適用性所為的默示性擔保。詳情請參照 GNU 通用公共授權。"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"您應已收到附隨於 %s 的 GNU 通用公共授權的副本；如無，請寫信至\n"
+"自由軟體基金會：\n"
+"51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"您應已收到附隨於 %s 的 GNU 通用公共授權的副本；如無，請寫信至\n"
+"自由軟體基金會：\n"
+"51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "21 點 - %s"
+
+msgid "_Game"
+msgstr "遊戲(_G)"
+
+msgid "_View"
+msgstr "檢視(_V)"
+
+msgid "Restart the current game"
+msgstr "重新再玩這局"
+
+msgid "Show a hint"
+msgstr "顯示提示"
+
+msgid "_Settings"
+msgstr "設定值(_S)"
+
+msgid "_Control"
+msgstr "控制(_C)"
+
+msgid "D_eal"
+msgstr "發牌(_E)"
+
+msgid "Deal a new hand"
+msgstr "發一手新的牌"
+
+msgid "_Hit"
+msgstr "再發一張(_H)"
+
+msgid "Add a card to the hand"
+msgstr "在這手牌中再加一張"
+
+msgid "_Stand"
+msgstr "停止發牌(_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "不再加任何牌到這手牌中"
+
+msgid "S_urrender"
+msgstr "投降(_U)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "以半數注碼的代價放棄這一局"
+
+msgid "_Double down"
+msgstr "加倍下注(_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "加倍押注，並派最後一張牌給您"
+
+msgid "S_plit the hand"
+msgstr "分成兩局(_P)"
+
+msgid "Split cards in two new hands"
+msgstr "兩張牌分別另開一局"
+
+msgid "_Help"
+msgstr "求助(_H)"
+
+msgid "_Toolbar"
+msgstr "工具列(_T)"
+
+msgid "Show toolbar"
+msgstr "顯示工具列"
+
+msgid "Cards left:"
+msgstr "剩餘紙牌："
+
+msgid "Wager:"
+msgstr "押注："
+
+msgid "Balance:"
+msgstr "戶口："
+
+msgid "Place your wager or deal a hand"
+msgstr "指定押注或者派一手牌"
+
+msgid "Blackjack rule set to use"
+msgstr "選擇 21 點規則"
+
+msgid "Card Style"
+msgstr "紙牌款式"
+
+msgid "Would you like insurance?"
+msgstr "買不買保險？"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"當莊家亮出了一張 A 時，賭客可以用原來賭注的 50%，另外再賭莊家是否 21 點。如果"
+"莊家真的是 21 點，賭客可以賺保險的雙倍，不過會損失原來賭注，即是不賺不蝕；如"
+"果不是 21 點，則保險金會輸掉，賭注則會繼續。"
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "請您指定押注，然後點選白色框線來派一手牌。"
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "您可以指定押注，或者點選紙牌來派另一手牌。"
+
+msgid "Blackjack Preferences"
+msgstr "21 點偏好設定"
+
+msgid "Game"
+msgstr "遊戲"
+
+msgid "_Display hand probabilities"
+msgstr "顯示牌底的所有可能性(_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "快速派牌 [派每張牌時都不會停頓] (_Q)"
+
+msgid "_Never take insurance"
+msgstr "不接受保險(_N)"
+
+msgid "_Reset Balance"
+msgstr "重設儲蓄數目(_R)"
+
+msgid "Rules"
+msgstr "規則"
+
+msgid "Name"
+msgstr "名稱"
+
+msgid "Decks"
+msgstr "多少副牌"
+
+msgid "Hit Soft 17"
+msgstr "Soft 17 會再要牌"
+
+msgid "Double Any Total"
+msgstr "任何時候可加倍"
+
+msgid "Double 9"
+msgstr "總數=9 可加倍"
+
+msgid "Double Soft"
+msgstr "Soft 時可加倍"
+
+msgid "Double After Hit"
+msgstr "要牌後可加倍押注"
+
+msgid "Double After Split"
+msgstr "分牌後可加倍押注"
+
+msgid "Resplit"
+msgstr "可再分牌"
+
+msgid "Resplit Aces"
+msgstr "可再分開 A"
+
+msgid "Surrender"
+msgstr "投降"
+
+msgid "Dealer Speed"
+msgstr "莊家派牌速度"
+
+msgid "Click to double your wager"
+msgstr "按下這裡來加倍押注"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "在這裡連按兩下來將押注增加 %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "在這裡連按兩下來將押注減少 %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "按下這裡來派另一張牌；拖曳紙牌則可以分開押注"
+
+msgid "Click to deal another card"
+msgstr "按下這裡來派另一張牌"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "按下這裡來停牌"
+
+msgid "Click to deal a new hand"
+msgstr "按下這裡來派另一手牌"
+
+msgid "Blackjack can't load the requested file"
+msgstr "「21 點」無法載入所要求的檔案"
+
+msgid "Please check your Blackjack installation"
+msgstr "請檢查是否已正確安裝 21 點"
+
+msgid "The best option is to stand"
+msgstr "最好選擇停牌"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr "停牌表示不再要任何牌。您可以按一下莊家的牌或者在「控制」選單中選擇。"
+
+msgid "The best option is to hit"
+msgstr "最好選擇要牌"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"要牌表示再加一張牌到您的手牌中。您可以按一下自己的牌或者在「控制」選單中選"
+"擇。"
+
+msgid "The best option is to double down"
+msgstr "最好選擇加倍押注"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"加倍押注表示本來的押注會加倍，而且莊家一定會派剛好一張牌給您。您可以按一下底"
+"部的籌碼或者在「控制」選單中選擇。"
+
+msgid "The best option is to split"
+msgstr "最好選擇分牌"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"分牌表示會將您的兩張牌分成兩局處理。您可以將其中一張牌拖到旁邊或者在「控制」"
+"選單中選擇。"
+
+msgid "The best option is to surrender"
+msgstr "最好選擇投降"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr "投降表示無條件放棄一半的押注而不是全部。您可以在「控制」選單中選擇。"
+
+msgid "Blackjack"
+msgstr "21 點"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"21 點(Blackjack)是賭場常見的紙牌遊戲。\n"
+"\n"
+"21 點(Blackjack)是 GNOME 遊戲的一部分。"
+
+msgid "GNOME Games web site"
+msgstr "GNOME Games 網站"
+
+msgid "translator-credits"
+msgstr ""
+"如對翻譯有任何意見，請送一封電子郵件給\n"
+"以下地址，GNOME 翻譯團隊會盡快回覆您：\n"
+"zh-l10n@lists.linux.org.tw\n"
+"\n"
+"Abel Cheung <abel@oaka.org>, 2001-07\n"
+"Fernando <bv1al@journalist.com.tw>, 1999"
+
+msgid "Computing basic strategy..."
+msgstr "正在計算基本策略..."
+
+msgid "Bust"
+msgstr "爆牌"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Soft"
+
+msgid "Win"
+msgstr "勝利"
+
+msgid "Push"
+msgstr "平手"
+
+msgid "Lose"
+msgstr "失敗"
+
+msgid "Player expected values"
+msgstr "玩家行動結果預計值"
+
+msgid "Stand"
+msgstr "停牌"
+
+msgid "Hit"
+msgstr "要牌"
+
+msgid "Double"
+msgstr "加倍"
+
+msgid "Split"
+msgstr "分開"
+
+msgid "Dealer hand probabilities"
+msgstr "莊家牌底的所有可能性"

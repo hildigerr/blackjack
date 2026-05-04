@@ -1,0 +1,493 @@
+# gnome-games translation
+# Dillion Chen, 2000
+#   Updated by Wang Li <charles@linux.net.cn>, 2002
+# Funda Wang <fundawang@linux.net.cn>, 2003-2005
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-03-03 18:42+0800\n"
+"Last-Translator: Deng Xiyue <manphiz@gmail.com>\n"
+"Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "无法找到帮助文件“ %s.%s ”"
+
+#, fuzzy, c-format
+msgid "Could not show help for “%s”"
+msgstr "无法为“ %s ”显示帮助"
+
+msgid "Could not show link"
+msgstr "无法显示链接"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "View help for this game"
+msgstr "查看此游戏的帮助"
+
+msgid "End the current game"
+msgstr "结束当前游戏"
+
+msgid "Toggle fullscreen mode"
+msgstr "全屏模式切换"
+
+msgid "Get a hint for your next move"
+msgstr "获取您的下一步的提示"
+
+msgid "Leave fullscreen mode"
+msgstr "离开全屏模式"
+
+msgid "Start a new multiplayer network game"
+msgstr "开始多人网络游戏"
+
+msgid "End the current network game and return to network server"
+msgstr "结束当前网络游戏并回到服务器"
+
+msgid "Start a new game"
+msgstr "开始新游戏"
+
+msgid "Pause the game"
+msgstr "暂停游戏"
+
+msgid "Show a list of players in the network game"
+msgstr "显示网络游戏中的玩家列表"
+
+msgid "Redo the undone move"
+msgstr "重做撤消的一着"
+
+msgid "Restart the game"
+msgstr "重新开始游戏"
+
+msgid "Resume the paused game"
+msgstr "恢复暂停的游戏"
+
+msgid "View the scores"
+msgstr "查看得分"
+
+msgid "Undo the last move"
+msgstr "撤消最后一着"
+
+msgid "About this game"
+msgstr "关于此游戏"
+
+msgid "Close this window"
+msgstr "关闭此窗口"
+
+msgid "Configure the game"
+msgstr "配置游戏"
+
+msgid "Quit this game"
+msgstr "退出此游戏"
+
+msgid "_Contents"
+msgstr "目录(_C)"
+
+msgid "_Fullscreen"
+msgstr "全屏(_F)"
+
+msgid "_Hint"
+msgstr "提示(_H)"
+
+msgid "_New"
+msgstr "新建(_N)"
+
+msgid "_New Game"
+msgstr "新游戏(_N)"
+
+msgid "_Redo Move"
+msgstr "重做移动(_R)"
+
+msgid "_Reset"
+msgstr "重置(_R)"
+
+msgid "_Restart"
+msgstr "重新开始(_R)"
+
+msgid "_Undo Move"
+msgstr "撤消移动(_U)"
+
+msgid "_Deal"
+msgstr "发牌(_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "离开全屏(_L)"
+
+msgid "Network _Game"
+msgstr "网络游戏(_G)"
+
+msgid "L_eave Game"
+msgstr "离开游戏(_E)"
+
+msgid "Player _List"
+msgstr "玩家列表(_L)"
+
+msgid "_Pause"
+msgstr "暂停(_P)"
+
+msgid "Res_ume"
+msgstr "继续(_U)"
+
+msgid "_Scores"
+msgstr "得分(_S)"
+
+msgid "_End Game"
+msgstr "结束游戏(_E)"
+
+msgid "_About"
+msgstr "关于(_A)"
+
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+msgid "_Close"
+msgstr "关闭(_C)"
+
+msgid "_OK"
+msgstr "确认(_O)"
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或修改"
+"它；GPL 协议应该采用第二版或以后的任何版本。"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用它所"
+"造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细节。"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给自由"
+"软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
+"02110-1301  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给自由"
+"软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
+"02110-1301  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "二十一点 - %s"
+
+msgid "_Game"
+msgstr "游戏(_G)"
+
+msgid "_View"
+msgstr "查看(_V)"
+
+msgid "Restart the current game"
+msgstr "重新开始当前游戏"
+
+msgid "Show a hint"
+msgstr "显示提示"
+
+msgid "_Settings"
+msgstr "设置(_S)"
+
+msgid "_Control"
+msgstr "控制(_C)"
+
+msgid "D_eal"
+msgstr "发牌(_E)"
+
+msgid "Deal a new hand"
+msgstr "发另一手牌"
+
+msgid "_Hit"
+msgstr "叫牌(_H)"
+
+msgid "Add a card to the hand"
+msgstr "向手里抓牌"
+
+msgid "_Stand"
+msgstr "停牌(_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "停止向手里抓牌"
+
+msgid "S_urrender"
+msgstr "投降(_U)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "放弃这手牌，您将失去一半赌注"
+
+msgid "_Double down"
+msgstr "赌注加倍(_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "一手牌加倍下注"
+
+msgid "S_plit the hand"
+msgstr "拆牌(_P)"
+
+msgid "Split cards in two new hands"
+msgstr "将一手牌拆为两手牌"
+
+msgid "_Help"
+msgstr "帮助(_H)"
+
+msgid "_Toolbar"
+msgstr "工具栏(_T)"
+
+msgid "Show toolbar"
+msgstr "显示工具栏"
+
+msgid "Cards left:"
+msgstr "剩下的牌："
+
+msgid "Wager:"
+msgstr "赌注："
+
+msgid "Balance:"
+msgstr "余额："
+
+msgid "Place your wager or deal a hand"
+msgstr "下注或者叫一手牌"
+
+msgid "Blackjack rule set to use"
+msgstr "要使用的二十一点规则集"
+
+msgid "Card Style"
+msgstr "纸牌样式"
+
+msgid "Would you like insurance?"
+msgstr "您想要投保吗？"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"保险将另外花去您原始赌注的 50%%。当发牌者亮出 A 时，发牌者认为自己有可能抓到"
+"恰好二十一点时，您将有机会投保。因为如果此时发牌者抓到的确实是二十一点的话，"
+"玩家将赔掉双倍赌注。"
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "设定您的赌注，单击白色边框可叫另一张牌。"
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "设定您的赌注，或者单击牌面可叫另一张牌。"
+
+msgid "Blackjack Preferences"
+msgstr "二十一点首选项"
+
+msgid "Game"
+msgstr "游戏"
+
+msgid "_Display hand probabilities"
+msgstr "显示每手概率(_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "快速发牌(每张牌之间不延迟)(_Q)"
+
+msgid "_Never take insurance"
+msgstr "决不投保(_N)"
+
+msgid "_Reset Balance"
+msgstr "重置余额(_R)"
+
+msgid "Rules"
+msgstr "规则"
+
+msgid "Name"
+msgstr "姓名"
+
+msgid "Decks"
+msgstr "牌垛"
+
+msgid "Hit Soft 17"
+msgstr "软17叫牌"
+
+#, fuzzy
+msgid "Double Any Total"
+msgstr "Double Any Total"
+
+msgid "Double 9"
+msgstr "对九"
+
+msgid "Double Soft"
+msgstr "对A"
+
+msgid "Double After Hit"
+msgstr "叫牌后赌注加倍"
+
+msgid "Double After Split"
+msgstr "拆牌后赌注加倍"
+
+msgid "Resplit"
+msgstr "重新拆分"
+
+msgid "Resplit Aces"
+msgstr "重新拆分 A"
+
+msgid "Surrender"
+msgstr "投降"
+
+msgid "Dealer Speed"
+msgstr "发牌速度"
+
+msgid "Click to double your wager"
+msgstr "单击可加倍下注"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "双击可加注 %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "双击可减注 %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "单击可叫另一张牌；拖曳牌可以拆为两手"
+
+msgid "Click to deal another card"
+msgstr "单击可叫另一张牌"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "单击可完成叫牌"
+
+msgid "Click to deal a new hand"
+msgstr "单击可发新一手牌"
+
+msgid "Blackjack can't load the requested file"
+msgstr "二十一点无法装入请求的文件"
+
+msgid "Please check your Blackjack installation"
+msgstr "请检查您的二十一点安装"
+
+msgid "The best option is to stand"
+msgstr "最好的选择是停牌"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"停牌就是停止向手中发牌。要停牌可点击庄家的牌或是选中控制菜单中的此选项。"
+
+msgid "The best option is to hit"
+msgstr "最好的选择是叫牌"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"叫牌就是发一张牌到您手上。要叫牌可点击您的牌或是选中控制菜单中的此选项。"
+
+msgid "The best option is to double down"
+msgstr "最好的选择是加注"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"赌注加倍就是将初始赌注加倍，并再要一张牌。要加倍赌注请点击一次窗口底部的筹码"
+"或是选中控制菜单中的此选项。"
+
+msgid "The best option is to split"
+msgstr "最好的选项是拆牌"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"拆牌就是把您当前的牌分成两手。要拆牌请把您手中的一张牌拖到一边或是选中控制菜"
+"单中的此选项。"
+
+msgid "The best option is to surrender"
+msgstr "最好的选择是投降"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr "投降就是放弃您一半的赌注同时放弃这局牌。要投降可选中控制菜单中的选项。"
+
+msgid "Blackjack"
+msgstr "二十一点"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"二十一点是一种卡西诺式的纸牌游戏。\n"
+"\n"
+"二十一点是 GNOME 游戏的一部分。"
+
+msgid "GNOME Games web site"
+msgstr "http://live.gnome.org/GnomeGames/"
+
+msgid "translator-credits"
+msgstr ""
+"GNOME 简体中文翻译组\n"
+"Yang Zhang <zyangmath@gmail.com>, 2007\n"
+"Ping Z <zpsigma@gmail.com>, 2007"
+
+msgid "Computing basic strategy..."
+msgstr "正在计算基本策略..."
+
+msgid "Bust"
+msgstr "爆分"
+
+msgid "Blackjack!"
+msgstr "二十一点！"
+
+msgid "Soft"
+msgstr "软"
+
+msgid "Win"
+msgstr "赢钱"
+
+msgid "Push"
+msgstr "平局"
+
+msgid "Lose"
+msgstr "输钱"
+
+msgid "Player expected values"
+msgstr "玩家期待的值"
+
+msgid "Stand"
+msgstr "停牌"
+
+msgid "Hit"
+msgstr "叫牌"
+
+msgid "Double"
+msgstr "加倍"
+
+msgid "Split"
+msgstr "分牌"
+
+msgid "Dealer hand probabilities"
+msgstr "发牌手概率"

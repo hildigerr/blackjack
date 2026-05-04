@@ -1,0 +1,472 @@
+# Breton translation for gnome-games
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the gnome-games package.
+# Ronan Le Deroff <EMAIL@ADDRESS>, 2007.
+# Denis <denisarnuad@yahoo.fr>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-05 22:02+0100\n"
+"Last-Translator: Denis\n"
+"Language-Team: Breton <br@li.org>\n"
+"Language: br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+msgid "Could not show link"
+msgstr ""
+
+msgid "Error"
+msgstr "Fazi"
+
+msgid "View help for this game"
+msgstr ""
+
+msgid "End the current game"
+msgstr "Paouez ar c'hoari a-vremañ"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr ""
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+msgid "Start a new multiplayer network game"
+msgstr ""
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Loc'hañ ur c'hoari nevez"
+
+msgid "Pause the game"
+msgstr "Ehan ar c'hoari"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr ""
+
+msgid "Restart the game"
+msgstr "Adloc'hañ ar c'hoari"
+
+msgid "Resume the paused game"
+msgstr ""
+
+msgid "View the scores"
+msgstr "Diskouez an eriñvoù"
+
+msgid "Undo the last move"
+msgstr "Dizober ar gwezhiadur diwezhañ"
+
+msgid "About this game"
+msgstr "Diwar-benn ar c'hoari-mañ"
+
+msgid "Close this window"
+msgstr "Serriñ ar prenestr-mañ"
+
+msgid "Configure the game"
+msgstr "Kefluniañ ar c'hoari"
+
+msgid "Quit this game"
+msgstr ""
+
+msgid "_Contents"
+msgstr "Endal_c'hadoù"
+
+msgid "_Fullscreen"
+msgstr "_Skramm a-bezh"
+
+msgid "_Hint"
+msgstr ""
+
+msgid "_New"
+msgstr "_Nevez"
+
+msgid "_New Game"
+msgstr "C'Hoari _Nevez"
+
+msgid "_Redo Move"
+msgstr "_Adlakaat en e-sav an dilec'h"
+
+msgid "_Reset"
+msgstr "Adde_raouekaat"
+
+msgid "_Restart"
+msgstr "_Adloc'hañ"
+
+msgid "_Undo Move"
+msgstr "_Nullañ an dilec'h"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "_Chom e skramm leun"
+
+msgid "Network _Game"
+msgstr ""
+
+msgid "L_eave Game"
+msgstr ""
+
+msgid "Player _List"
+msgstr ""
+
+msgid "_Pause"
+msgstr "_Ehan"
+
+msgid "Res_ume"
+msgstr "_Kenderc'hel"
+
+msgid "_Scores"
+msgstr "_Eriñvoù"
+
+msgid "_End Game"
+msgstr "_Paouez ar c'hoari"
+
+msgid "_About"
+msgstr "_A-zivout"
+
+msgid "_Cancel"
+msgstr "_Nullañ"
+
+msgid "_Close"
+msgstr "_Serriñ"
+
+msgid "_OK"
+msgstr "_Mat eo"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_C'hoari"
+
+msgid "_View"
+msgstr "_Gwelout"
+
+msgid "Restart the current game"
+msgstr ""
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr "_Arventennoù"
+
+msgid "_Control"
+msgstr "_Reoliñ"
+
+msgid "D_eal"
+msgstr ""
+
+msgid "Deal a new hand"
+msgstr ""
+
+#, fuzzy
+msgid "_Hit"
+msgstr "Tiz_het"
+
+msgid "Add a card to the hand"
+msgstr ""
+
+msgid "_Stand"
+msgstr ""
+
+msgid "Stop adding cards to the hand"
+msgstr ""
+
+msgid "S_urrender"
+msgstr ""
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr ""
+
+msgid "Double your wager for a single hit"
+msgstr ""
+
+msgid "S_plit the hand"
+msgstr ""
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+msgid "_Help"
+msgstr "_Skoazell"
+
+msgid "_Toolbar"
+msgstr "_Barrenn ostilhoù"
+
+msgid "Show toolbar"
+msgstr ""
+
+msgid "Cards left:"
+msgstr ""
+
+msgid "Wager:"
+msgstr ""
+
+msgid "Balance:"
+msgstr "Mentelad :"
+
+msgid "Place your wager or deal a hand"
+msgstr ""
+
+msgid "Blackjack rule set to use"
+msgstr ""
+
+msgid "Card Style"
+msgstr ""
+
+msgid "Would you like insurance?"
+msgstr ""
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+
+msgid "Blackjack Preferences"
+msgstr "Dibarzhioù Blackjack"
+
+msgid "Game"
+msgstr "C'Hoari"
+
+msgid "_Display hand probabilities"
+msgstr ""
+
+msgid "_Quick deals (no delay between each card)"
+msgstr ""
+
+msgid "_Never take insurance"
+msgstr ""
+
+msgid "_Reset Balance"
+msgstr ""
+
+msgid "Rules"
+msgstr "Reolennoù"
+
+msgid "Name"
+msgstr "Anv"
+
+msgid "Decks"
+msgstr ""
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr ""
+
+msgid "Double 9"
+msgstr ""
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr ""
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr ""
+
+msgid "Resplit Aces"
+msgstr ""
+
+msgid "Surrender"
+msgstr ""
+
+msgid "Dealer Speed"
+msgstr ""
+
+msgid "Click to double your wager"
+msgstr ""
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr ""
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr ""
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+
+msgid "Click to deal another card"
+msgstr ""
+
+msgid "Click to finish adding cards to your hand"
+msgstr ""
+
+msgid "Click to deal a new hand"
+msgstr ""
+
+msgid "Blackjack can't load the requested file"
+msgstr ""
+
+msgid "Please check your Blackjack installation"
+msgstr ""
+
+msgid "The best option is to stand"
+msgstr ""
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr ""
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr ""
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr ""
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr ""
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+
+msgid "GNOME Games web site"
+msgstr ""
+
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Denis https://launchpad.net/~bibar\n"
+"  Ronan Le Déroff https://launchpad.net/~rldmv"
+
+msgid "Computing basic strategy..."
+msgstr ""
+
+msgid "Bust"
+msgstr ""
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr ""
+
+msgid "Win"
+msgstr ""
+
+msgid "Push"
+msgstr "Bountañ"
+
+msgid "Lose"
+msgstr ""
+
+msgid "Player expected values"
+msgstr ""
+
+msgid "Stand"
+msgstr ""
+
+#, fuzzy
+msgid "Hit"
+msgstr "Tizhet"
+
+msgid "Double"
+msgstr ""
+
+msgid "Split"
+msgstr ""
+
+msgid "Dealer hand probabilities"
+msgstr ""

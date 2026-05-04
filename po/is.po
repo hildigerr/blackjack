@@ -1,0 +1,516 @@
+# Icelandic translation of gnome-games.
+# Copyright (C) 2004 THE gnome-games'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-games package.
+# aki <aki@akademia.is>, 2004.
+# , fuzzy
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games 2.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2004-05-27 22:28-0000\n"
+"Last-Translator: Samuel Jon Gunnarsson <sammi@techattack.nu>\n"
+"Language-Team: Icelandic <gnome@techattack.nu>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr ""
+"Tókst ekki að hlaða inn mynd:\n"
+"%s"
+
+msgid "Error"
+msgstr ""
+
+#, fuzzy
+msgid "View help for this game"
+msgstr "Skoða hjálp fyrir þetta spil"
+
+#, fuzzy
+msgid "End the current game"
+msgstr "Skoða hjálp fyrir þetta spil"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "Fá vísbendingu fyrir næsta leik"
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Byrja nýjan leik"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Byrja nýjan leik"
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "Gera hlé á leik"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "Endurtaka leikinn sem var afturkallaður"
+
+msgid "Restart the game"
+msgstr "Byrja upp á nýtt"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "Byrja upp á nýtt"
+
+#, fuzzy
+msgid "View the scores"
+msgstr "Gefa"
+
+msgid "Undo the last move"
+msgstr "Afturkalla síðasta leik"
+
+#, fuzzy
+msgid "About this game"
+msgstr "Byrja þennan leik aftur"
+
+msgid "Close this window"
+msgstr ""
+
+#, fuzzy
+msgid "Configure the game"
+msgstr "Leysa spilið"
+
+#, fuzzy
+msgid "Quit this game"
+msgstr "Byrja þennan leik aftur"
+
+msgid "_Contents"
+msgstr ""
+
+#, fuzzy
+msgid "_Fullscreen"
+msgstr "Fylla skjáinn"
+
+#, fuzzy
+msgid "_Hint"
+msgstr "Vísbending"
+
+#, fuzzy
+msgid "_New"
+msgstr "Nýr"
+
+#, fuzzy
+msgid "_New Game"
+msgstr "Nýr leikur"
+
+#, fuzzy
+msgid "_Redo Move"
+msgstr "_Leikur"
+
+msgid "_Reset"
+msgstr "_Núllstilla"
+
+#, fuzzy
+msgid "_Restart"
+msgstr "Byrja aftur"
+
+#, fuzzy
+msgid "_Undo Move"
+msgstr "_Leikur"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Nýr _netleikur"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Nýr leikur"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "_Leikmenn"
+
+#, fuzzy
+msgid "_Pause"
+msgstr "Hlé"
+
+#, fuzzy
+msgid "Res_ume"
+msgstr "_Núllstilla"
+
+#, fuzzy
+msgid "_Scores"
+msgstr "Stig"
+
+#, fuzzy
+msgid "_End Game"
+msgstr "_Leikur"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, fuzzy, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack"
+
+msgid "_Game"
+msgstr "_Leikur"
+
+msgid "_View"
+msgstr ""
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Byrja upp á nýtt"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr ""
+
+#, fuzzy
+msgid "_Control"
+msgstr "Stjórntæki"
+
+#, fuzzy
+msgid "D_eal"
+msgstr "Sjálfgefið"
+
+#, fuzzy
+msgid "Deal a new hand"
+msgstr "Gefa nýja hönd"
+
+#, fuzzy
+msgid "_Hit"
+msgstr "Sjá"
+
+#, fuzzy
+msgid "Add a card to the hand"
+msgstr "Færa spil á höfuðreit"
+
+#, fuzzy
+msgid "_Stand"
+msgstr "Pakka"
+
+#, fuzzy
+msgid "Stop adding cards to the hand"
+msgstr "Smelltu til að hætta að bæta við"
+
+#, fuzzy
+msgid "S_urrender"
+msgstr "Gefast upp"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+#, fuzzy
+msgid "_Double down"
+msgstr "Tvöföld nía"
+
+#, fuzzy
+msgid "Double your wager for a single hit"
+msgstr "Veðjaðu eða gefðu"
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "Gefa nýja hönd"
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+msgid "_Help"
+msgstr ""
+
+msgid "_Toolbar"
+msgstr "_Tækjastika"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Sýna tækjastiku"
+
+msgid "Cards left:"
+msgstr "Spil eftir:"
+
+msgid "Wager:"
+msgstr "Veðmál:"
+
+msgid "Balance:"
+msgstr "Staða:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Veðjaðu eða gefðu"
+
+#, fuzzy
+msgid "Blackjack rule set to use"
+msgstr "Blackjack stillingar"
+
+#, fuzzy
+msgid "Card Style"
+msgstr "Spil eftir:"
+
+msgid "Would you like insurance?"
+msgstr "Viltu kaupa tryggingu?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Leggðu í borð og smelltu á hvítu útlínuna til að fá nýja hönd."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Veðjaðu eða smelltu á spilin til að gefa nýja hönd"
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack stillingar"
+
+msgid "Game"
+msgstr "Leikur"
+
+#, fuzzy
+msgid "_Display hand probabilities"
+msgstr "Sýna líkur á hönd"
+
+#, fuzzy
+msgid "_Quick deals (no delay between each card)"
+msgstr "Fljót gjöf (ekkert hlé milli spila)"
+
+msgid "_Never take insurance"
+msgstr ""
+
+#, fuzzy
+msgid "_Reset Balance"
+msgstr "Staða:"
+
+msgid "Rules"
+msgstr "Reglur"
+
+msgid "Name"
+msgstr "Nafn"
+
+msgid "Decks"
+msgstr "Stokkar"
+
+#, fuzzy
+msgid "Hit Soft 17"
+msgstr "Slá mjúkt 17"
+
+msgid "Double Any Total"
+msgstr "Tvöfalda hvaða upphæð sem er"
+
+msgid "Double 9"
+msgstr "Tvöföld nía"
+
+#, fuzzy
+msgid "Double Soft"
+msgstr "Tvöfalt mjúkt"
+
+msgid "Double After Hit"
+msgstr "Tvöfalda eftir slátt"
+
+msgid "Double After Split"
+msgstr "Tvöfalda eftir skiptingu"
+
+msgid "Resplit"
+msgstr "Endurskipta"
+
+msgid "Resplit Aces"
+msgstr "Endurskipta ásum"
+
+msgid "Surrender"
+msgstr "Gefast upp"
+
+msgid "Dealer Speed"
+msgstr "Hraði gjafar"
+
+msgid "Click to double your wager"
+msgstr "Smelltu til að tvöfalda upphæðina"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Tvísmelltu til að hækka borðið um %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Tvísmelltu til að minnka borðið um %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Smelltu til að gefa spil; dragðu spil til að kljúfa par"
+
+msgid "Click to deal another card"
+msgstr "Smelltu til að gefa spil"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Smelltu til að hætta að bæta við"
+
+msgid "Click to deal a new hand"
+msgstr "Smelltu fyrir nýja hönd"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack getur ekki hlaðið þessari skrá inn"
+
+msgid "Please check your Blackjack installation"
+msgstr "Athugaðu uppsetninguna á Blackjack"
+
+msgid "The best option is to stand"
+msgstr "Best væri að halda"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr "Best væri að slá"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr "Best væri að tvöfalda"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr "Best væri að skipta"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr "Best væri að gefa leikinn"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Blackjack er spilavítisleikur með spilum."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Enginn leikjaþjónn tilgreindur"
+
+msgid "translator-credits"
+msgstr "þýðing"
+
+msgid "Computing basic strategy..."
+msgstr "Reikna út spilaaðferð..."
+
+msgid "Bust"
+msgstr "Sprungið"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+#, fuzzy
+msgid "Soft"
+msgstr "Mjúkt"
+
+msgid "Win"
+msgstr "Vinnur"
+
+msgid "Push"
+msgstr "Jafntefli"
+
+msgid "Lose"
+msgstr "Tapar"
+
+msgid "Player expected values"
+msgstr "Væntanlegar tölur leikmanns"
+
+msgid "Stand"
+msgstr "Pakka"
+
+msgid "Hit"
+msgstr "Sjá"
+
+msgid "Double"
+msgstr "Tvöfalda"
+
+msgid "Split"
+msgstr "Skipta"
+
+msgid "Dealer hand probabilities"
+msgstr "Líkur á hönd gjafara"

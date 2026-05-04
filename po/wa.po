@@ -1,0 +1,507 @@
+#
+# Translation into the walloon language.
+#
+# Si vos voloz donner on côp di spale pol ratournaedje di Gnome (ou des
+# ôtes libes programes) sicrijhoz mu a l' adresse emile
+# <srtxg@chanae.alphanet.ch>; nos avans co bråmint di l' ovraedje a fé.
+#
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999-2000
+# Lorint Hendschel <LorintHendschel@skynet.be> 2002
+# Pablo Saratxaga <pablo@walon.org>, 2003.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games 1.3.90\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2003-08-03 15:17+0200\n"
+"Last-Translator: Lorint Hendschel <LorintHendschel@skynet.be>\n"
+"Language-Team: Walon <linux-wa@chanae.alphanet.ch>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "Dji n' trove nén li fitchî %s"
+
+msgid "Error"
+msgstr ""
+
+#, fuzzy
+msgid "View help for this game"
+msgstr "Candjî les tchuzes po ci djeu chal"
+
+#, fuzzy
+msgid "End the current game"
+msgstr "Renonder l' livea do moumint"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "Dimander ene racsegne pol côp ki vént"
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Enonder on novea djeu"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Enonder on novea djeu"
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "Djoker l' djeu"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "Rifé li dierin movmint disfé"
+
+msgid "Restart the game"
+msgstr "Renonder l' djeu"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "Renonder l' djeu"
+
+#, fuzzy
+msgid "View the scores"
+msgstr "Diner les cåtes"
+
+msgid "Undo the last move"
+msgstr "Disfé li dierin movmint"
+
+#, fuzzy
+msgid "About this game"
+msgstr "Rataker ç' djeu ci"
+
+msgid "Close this window"
+msgstr ""
+
+msgid "Configure the game"
+msgstr ""
+
+#, fuzzy
+msgid "Quit this game"
+msgstr "Rataker ç' djeu ci"
+
+msgid "_Contents"
+msgstr ""
+
+#, fuzzy
+msgid "_Fullscreen"
+msgstr "Forrimpli li purnea"
+
+#, fuzzy
+msgid "_Hint"
+msgstr "Racsegne"
+
+#, fuzzy
+msgid "_New"
+msgstr "Novea"
+
+#, fuzzy
+msgid "_New Game"
+msgstr "Novea Djeu"
+
+#, fuzzy
+msgid "_Redo Move"
+msgstr "_Bodjî"
+
+#, fuzzy
+msgid "_Reset"
+msgstr "_Rîles"
+
+#, fuzzy
+msgid "_Restart"
+msgstr "Renonder"
+
+#, fuzzy
+msgid "_Undo Move"
+msgstr "_Bodjî"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Novea djeu _rantoele"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Novea Djeu"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "Djoweus"
+
+#, fuzzy
+msgid "_Pause"
+msgstr "Djoker"
+
+msgid "Res_ume"
+msgstr ""
+
+#, fuzzy
+msgid "_Scores"
+msgstr "Ponts"
+
+#, fuzzy
+msgid "_End Game"
+msgstr "_Djeu"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr ""
+
+msgid "_Game"
+msgstr "_Djeu"
+
+msgid "_View"
+msgstr ""
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Renonder l' djeu"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr ""
+
+msgid "_Control"
+msgstr ""
+
+msgid "D_eal"
+msgstr ""
+
+#, fuzzy
+msgid "Deal a new hand"
+msgstr "Diner ene novele cåte"
+
+#, fuzzy
+msgid "_Hit"
+msgstr "Racsegne"
+
+#, fuzzy
+msgid "Add a card to the hand"
+msgstr "Diner ene cåte dins l' djeu"
+
+#, fuzzy
+msgid "_Stand"
+msgstr "_Son"
+
+msgid "Stop adding cards to the hand"
+msgstr ""
+
+msgid "S_urrender"
+msgstr ""
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr ""
+
+msgid "Double your wager for a single hit"
+msgstr ""
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "Diner ene novele cåte"
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+#, fuzzy
+msgid "_Help"
+msgstr "Aidance"
+
+msgid "_Toolbar"
+msgstr "Bår ås _usteyes"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Mostrer li bår ås usteyes"
+
+msgid "Cards left:"
+msgstr "Cåtes ki dmorèt:"
+
+msgid "Wager:"
+msgstr ""
+
+msgid "Balance:"
+msgstr ""
+
+msgid "Place your wager or deal a hand"
+msgstr ""
+
+msgid "Blackjack rule set to use"
+msgstr ""
+
+msgid "Card Style"
+msgstr "Sôre des cåtes"
+
+msgid "Would you like insurance?"
+msgstr ""
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+
+msgid "Blackjack Preferences"
+msgstr ""
+
+#, fuzzy
+msgid "Game"
+msgstr "_Djeu"
+
+msgid "_Display hand probabilities"
+msgstr ""
+
+msgid "_Quick deals (no delay between each card)"
+msgstr ""
+
+msgid "_Never take insurance"
+msgstr ""
+
+msgid "_Reset Balance"
+msgstr ""
+
+msgid "Rules"
+msgstr "Rîles"
+
+msgid "Name"
+msgstr "No"
+
+msgid "Decks"
+msgstr ""
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr ""
+
+msgid "Double 9"
+msgstr ""
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr ""
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr ""
+
+msgid "Resplit Aces"
+msgstr ""
+
+msgid "Surrender"
+msgstr ""
+
+msgid "Dealer Speed"
+msgstr ""
+
+msgid "Click to double your wager"
+msgstr ""
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr ""
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr ""
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+
+msgid "Click to deal another card"
+msgstr "Clitchîz po dner ene novele cåte"
+
+msgid "Click to finish adding cards to your hand"
+msgstr ""
+
+msgid "Click to deal a new hand"
+msgstr ""
+
+msgid "Blackjack can't load the requested file"
+msgstr ""
+
+msgid "Please check your Blackjack installation"
+msgstr ""
+
+msgid "The best option is to stand"
+msgstr ""
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr ""
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr ""
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr ""
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr ""
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr ""
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Nou sierveu d' djeus di defini"
+
+msgid "translator-credits"
+msgstr ""
+"Pablo Saratxaga <pablo@mandrakesoft.com>\n"
+"Lorint Hendschel <LorintHendschel@skynet.be>"
+
+msgid "Computing basic strategy..."
+msgstr ""
+
+msgid "Bust"
+msgstr ""
+
+msgid "Blackjack!"
+msgstr ""
+
+msgid "Soft"
+msgstr ""
+
+msgid "Win"
+msgstr ""
+
+msgid "Push"
+msgstr ""
+
+msgid "Lose"
+msgstr ""
+
+msgid "Player expected values"
+msgstr ""
+
+msgid "Stand"
+msgstr ""
+
+msgid "Hit"
+msgstr ""
+
+msgid "Double"
+msgstr ""
+
+msgid "Split"
+msgstr ""
+
+msgid "Dealer hand probabilities"
+msgstr ""

@@ -1,0 +1,500 @@
+# gnome-games Korean translation
+# This file is distributed under the same license as the gnome-games package.
+#
+# GwanSun Back <backiss@kornet.net>, 2001
+# Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2006, 2007, 2008, 2009.
+#
+#
+# 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-20 08:00+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "“%s.%s” 도움말 파일이 없습니다"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "“%s”의 도움말을 표시할 수 없습니다"
+
+msgid "Could not show link"
+msgstr "링크를 표시할 수 없습니다"
+
+msgid "Error"
+msgstr "오류"
+
+msgid "View help for this game"
+msgstr "이 게임의 도움말을 봅니다"
+
+msgid "End the current game"
+msgstr "현재 게임을 끝냅니다"
+
+msgid "Toggle fullscreen mode"
+msgstr "f전체 화면 모드를 토글합니다"
+
+msgid "Get a hint for your next move"
+msgstr "다음 움직임에 대한 힌트를 얻습니다"
+
+msgid "Leave fullscreen mode"
+msgstr "전체 화면 모드를 나갑니다"
+
+msgid "Start a new multiplayer network game"
+msgstr "새 멀티플레이어 네트워크 게임을 시작합니다"
+
+msgid "End the current network game and return to network server"
+msgstr "현재 네트워크 게임을 끝내고 네트워크 서버로 돌아갑니다"
+
+msgid "Start a new game"
+msgstr "새 게임을 시작합니다"
+
+msgid "Pause the game"
+msgstr "게임을 일시 중지합니다"
+
+msgid "Show a list of players in the network game"
+msgstr "네트워크 게임의 플레이어 목록을 표시합니다"
+
+msgid "Redo the undone move"
+msgstr "마지막 움직임을 되돌립니다"
+
+msgid "Restart the game"
+msgstr "게임을 다시 시작합니다"
+
+msgid "Resume the paused game"
+msgstr "일시 중지한 게임을 다시 시작합니다"
+
+msgid "View the scores"
+msgstr "점수를 봅니다"
+
+msgid "Undo the last move"
+msgstr "마지막 움직임을 취소합니다"
+
+msgid "About this game"
+msgstr "이 게임 정보"
+
+msgid "Close this window"
+msgstr "이 창을 닫습니다"
+
+msgid "Configure the game"
+msgstr "게임을 설정합니다"
+
+msgid "Quit this game"
+msgstr "이 게임을 끝냅니다"
+
+msgid "_Contents"
+msgstr "차례(_C)"
+
+msgid "_Fullscreen"
+msgstr "전체 화면(_F)"
+
+msgid "_Hint"
+msgstr "힌트(_H)"
+
+msgid "_New"
+msgstr "새 게임(_N)"
+
+msgid "_New Game"
+msgstr "새 게임(_N)"
+
+msgid "_Redo Move"
+msgstr "다시 이동(_R)"
+
+msgid "_Reset"
+msgstr "리셋(_R)"
+
+msgid "_Restart"
+msgstr "게임 다시(_R)"
+
+msgid "_Undo Move"
+msgstr "이동 취소(_U)"
+
+msgid "_Deal"
+msgstr "패 돌리기(_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "전체 화면 나가기(_L)"
+
+msgid "Network _Game"
+msgstr "네트워크 게임(_G)"
+
+msgid "L_eave Game"
+msgstr "게임 떠나기(_E)"
+
+msgid "Player _List"
+msgstr "플레이어 목록(_L)"
+
+msgid "_Pause"
+msgstr "일시 중지(_P)"
+
+msgid "Res_ume"
+msgstr "다시 시작(_U)"
+
+msgid "_Scores"
+msgstr "점수(_S)"
+
+msgid "_End Game"
+msgstr "게임 끝내기(_E)"
+
+msgid "_About"
+msgstr "정보(_A)"
+
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+msgid "_Close"
+msgstr "닫기(_C)"
+
+msgid "_OK"
+msgstr "확인(_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "블랙잭 - %s"
+
+msgid "_Game"
+msgstr "게임(_G)"
+
+msgid "_View"
+msgstr "보기(_V)"
+
+msgid "Restart the current game"
+msgstr "현재 게임을 다시 시작합니다"
+
+msgid "Show a hint"
+msgstr "힌트를 봅니다"
+
+msgid "_Settings"
+msgstr "설정(_S)"
+
+msgid "_Control"
+msgstr "컨트롤(_C)"
+
+msgid "D_eal"
+msgstr "패 돌리기(_E)"
+
+msgid "Deal a new hand"
+msgstr "새로 패 돌리기"
+
+msgid "_Hit"
+msgstr "히트(_H)"
+
+msgid "Add a card to the hand"
+msgstr "패에 카드를 더합니다"
+
+msgid "_Stand"
+msgstr "스탠드(_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "카드 추가를 중지합니다"
+
+msgid "S_urrender"
+msgstr "서렌더(_U)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "패에 대해 건 돈의 절반을 벌금으로 냅니다"
+
+msgid "_Double down"
+msgstr "더블 다운(_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "한 번에 두 배로 겁니다"
+
+msgid "S_plit the hand"
+msgstr "패 나누기(_P)"
+
+msgid "Split cards in two new hands"
+msgstr "카드 패를 둘로 나눕니다"
+
+msgid "_Help"
+msgstr "도움말(_H)"
+
+msgid "_Toolbar"
+msgstr "도구 모음(_T)"
+
+msgid "Show toolbar"
+msgstr "도구 모음 보기"
+
+msgid "Cards left:"
+msgstr "남은 카드:"
+
+msgid "Wager:"
+msgstr "걸기:"
+
+msgid "Balance:"
+msgstr "잔액:"
+
+msgid "Place your wager or deal a hand"
+msgstr "돈을 걸고 카드를 받으십시오"
+
+msgid "Blackjack rule set to use"
+msgstr "사용할 블랙잭 규칙"
+
+msgid "Card Style"
+msgstr "카드 모양새"
+
+msgid "Would you like insurance?"
+msgstr "보험을 드시겠습니까?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"보험은 처음 거는 돈의 50%를 겁니다. 딜러가 네츄럴 21이고 (블랙잭) 딜러가 보여"
+"주는 카드가 에이스인 경우 보험을 들 수 있습니다. 딜러가 네츄럴 21이면 플레이"
+"어가 두 배를 받습니다."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "돈을 걸고, 새로 카드를 받으려면 흰색 윤곽선을 누르십시오."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "돈을 걸거나, 새로 카드를 받으려면 카드뭉치를 누르십시오."
+
+msgid "Blackjack Preferences"
+msgstr "블랙잭 기본 설정"
+
+msgid "Game"
+msgstr "게임"
+
+msgid "_Display hand probabilities"
+msgstr "패 확률 표시(_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "빨리 돌리기(_Q) (카드 돌릴 때 지연 시간 없음)"
+
+msgid "_Never take insurance"
+msgstr "보험 들지 않음(_N)"
+
+msgid "_Reset Balance"
+msgstr "잔고 리셋(_R)"
+
+msgid "Rules"
+msgstr "규칙"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Decks"
+msgstr "카드뭉치"
+
+msgid "Hit Soft 17"
+msgstr "히트 소프트 17"
+
+msgid "Double Any Total"
+msgstr "모든 더블의 총합"
+
+msgid "Double 9"
+msgstr "더블 9"
+
+msgid "Double Soft"
+msgstr "더블 소프트"
+
+msgid "Double After Hit"
+msgstr "히트 다음에 더블"
+
+msgid "Double After Split"
+msgstr "스플릿 다음에 더블"
+
+msgid "Resplit"
+msgstr "다시 스플릿"
+
+msgid "Resplit Aces"
+msgstr "에이스 다시 스플릿"
+
+msgid "Surrender"
+msgstr "서렌더"
+
+msgid "Dealer Speed"
+msgstr "딜러 속도"
+
+msgid "Click to double your wager"
+msgstr "거는 액수를 두 배로 하려면 누르십시오"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "거는 액수를 %.2f배로 하려면 두 번 누르십시오"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "거는 액수를 %.2f분의 일로 줄이려면 두 번 누르십시오"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"다른 카드를 돌리려면 누르십시오; 페어를 둘로 나누려면 카드를 드래그하십시오"
+
+msgid "Click to deal another card"
+msgstr "다른 카드를 돌리려면 누르십시오"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "카드를 그만 받으려면 누르십시오"
+
+msgid "Click to deal a new hand"
+msgstr "새로 카드를 받으려면 누르십시오"
+
+msgid "Blackjack can't load the requested file"
+msgstr "블랙잭이 필요한 파일을 읽어들이지 못했습니다"
+
+msgid "Please check your Blackjack installation"
+msgstr "블랙잭 설치가 올바른지 확인하십시오"
+
+msgid "The best option is to stand"
+msgstr "가장 좋은 선택은 스탠드입니다"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"스탠드는 패에 카드를 추가를 중단한다는 뜻입니다.  딜러의 카드를 누르거나 조"
+"작 메뉴에서 해당 옵션을 선택하면 됩니다."
+
+msgid "The best option is to hit"
+msgstr "가장 좋은 선택은 히트입니다"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"히트는 패에 카드를 한 장 더한다는 뜻입니다.  자기 카드를 한 번 누르거나 조작 "
+"메뉴에서 해당 옵션을 선택하면 됩니다."
+
+msgid "The best option is to double down"
+msgstr "가장 좋은 선택은 더블 다운입니다"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"더블 다운은 거는 돈을 두 배로 하고 카드를 한 장 더 받습니다.  창 아래쪽에 있"
+"는 칩에 한 번 누르거나 조작 메뉴에서 해당 옵션을 선택하면 됩니다."
+
+msgid "The best option is to split"
+msgstr "가장 좋은 선택은 스플릿입니다"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"스플릿은 현재 패를 두 개의 패로 나눈다는 뜻입니다.  자기 카드를 끌어서 옆에 "
+"놓거나 조작 메뉴에서 해당 옵션을 선택하면 됩니다."
+
+msgid "The best option is to surrender"
+msgstr "가장 좋은 선택은 서렌더입니다"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"서렌더는 현재 거는 돈의 절반을 포기하고 패를 끝마치지 않는 것입니다.  조작 메"
+"뉴에서 해당 옵션을 선택하면 됩니다."
+
+msgid "Blackjack"
+msgstr "블랙잭"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"블랙잭은 카지노 스타일의 카드 게임입니다.\n"
+"\n"
+"블랙잭은 그놈 게임의 일부입니다."
+
+msgid "GNOME Games web site"
+msgstr "그놈 게임 웹사이트"
+
+msgid "translator-credits"
+msgstr "류창우 <cwryu@debian.org>"
+
+msgid "Computing basic strategy..."
+msgstr "기본 전략 계산중..."
+
+msgid "Bust"
+msgstr "버스트"
+
+msgid "Blackjack!"
+msgstr "블랙잭!"
+
+msgid "Soft"
+msgstr "소프트"
+
+msgid "Win"
+msgstr "승리"
+
+msgid "Push"
+msgstr "푸시"
+
+msgid "Lose"
+msgstr "패배"
+
+msgid "Player expected values"
+msgstr "플레이어 추정값"
+
+msgid "Stand"
+msgstr "스탠드"
+
+msgid "Hit"
+msgstr "히트"
+
+msgid "Double"
+msgstr "더블"
+
+msgid "Split"
+msgstr "스플릿"
+
+msgid "Dealer hand probabilities"
+msgstr "딜러측 확률"

@@ -1,0 +1,519 @@
+# Indonesian translation for gnome-sudoku
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the gnome-sudoku package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-sudoku\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2007-04-21 08:34+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <id@li.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=(0);\n"
+"X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "Tidak bisa membaca gambar"
+
+msgid "Error"
+msgstr ""
+
+msgid "View help for this game"
+msgstr "Tampilkan bantuan untuk gim ini"
+
+#, fuzzy
+msgid "End the current game"
+msgstr "Cetak permainan yang sedang berjalan"
+
+#, fuzzy
+msgid "Toggle fullscreen mode"
+msgstr "Tinggalkan mode layar penuh"
+
+msgid "Get a hint for your next move"
+msgstr "Petunjuk untuk langkah berikutnya"
+
+msgid "Leave fullscreen mode"
+msgstr "Tinggalkan mode layar penuh"
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Mulai gim baru"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Mulai gim baru"
+
+msgid "Pause the game"
+msgstr "Istirahat sebentar"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "Jadikan lagi langkah terakhir"
+
+msgid "Restart the game"
+msgstr "Ulangi gim"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "Melanjutkan permainan yang sebelumnya telah disimpan."
+
+#, fuzzy
+msgid "View the scores"
+msgstr "Nilai Tertinggi"
+
+#, fuzzy
+msgid "Undo the last move"
+msgstr "Batalkan langkah terakhir"
+
+msgid "About this game"
+msgstr "Tentang permainan ini"
+
+msgid "Close this window"
+msgstr ""
+
+msgid "Configure the game"
+msgstr "Konfigurasikan permainan"
+
+msgid "Quit this game"
+msgstr "Keluar game ini"
+
+msgid "_Contents"
+msgstr "_Isi"
+
+#, fuzzy
+msgid "_Fullscreen"
+msgstr "Layar Penuh"
+
+msgid "_Hint"
+msgstr "Petunjuk"
+
+#, fuzzy
+msgid "_New"
+msgstr "_Tampil"
+
+#, fuzzy
+msgid "_New Game"
+msgstr "Permainan Baru"
+
+#, fuzzy
+msgid "_Redo Move"
+msgstr "_Ulangi"
+
+msgid "_Reset"
+msgstr "_Ulangi"
+
+msgid "_Restart"
+msgstr "_Restart"
+
+#, fuzzy
+msgid "_Undo Move"
+msgstr "_Batal"
+
+msgid "_Deal"
+msgstr ""
+
+#, fuzzy
+msgid "_Leave Fullscreen"
+msgstr "Layar Penuh"
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Permainan Baru"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Permainan Baru"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "Pemain"
+
+msgid "_Pause"
+msgstr "_Istirahat"
+
+msgid "Res_ume"
+msgstr "Lanj_utkan"
+
+#, fuzzy
+msgid "_Scores"
+msgstr "Nilai"
+
+#, fuzzy
+msgid "_End Game"
+msgstr "_Permainan"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Permainan"
+
+msgid "_View"
+msgstr "_Tampil"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Cetak permainan yang sedang berjalan"
+
+msgid "Show a hint"
+msgstr "Tampilkan petunjuk"
+
+msgid "_Settings"
+msgstr "_Seting"
+
+msgid "_Control"
+msgstr "_Kendali"
+
+#, fuzzy
+msgid "D_eal"
+msgstr "_Detil"
+
+msgid "Deal a new hand"
+msgstr "Bagikan tangan baru"
+
+#, fuzzy
+msgid "_Hit"
+msgstr "Petunjuk"
+
+msgid "Add a card to the hand"
+msgstr "Tambahkan kartu ke tangan"
+
+#, fuzzy
+msgid "_Stand"
+msgstr "Dimulai"
+
+msgid "Stop adding cards to the hand"
+msgstr "Hentikan tambah kartu ke tangan"
+
+msgid "S_urrender"
+msgstr "M_enyerah"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Kalahkan tangan ini untuk setengah dari taruhan anda"
+
+msgid "_Double down"
+msgstr "_Double down"
+
+msgid "Double your wager for a single hit"
+msgstr "Gandakan taruhan anda untuk hit tunggal"
+
+msgid "S_plit the hand"
+msgstr "Bagi tan_gan"
+
+msgid "Split cards in two new hands"
+msgstr "Bagi kartu menjadi dua tangan baru"
+
+msgid "_Help"
+msgstr "Bantuan"
+
+#, fuzzy
+msgid "_Toolbar"
+msgstr "Tampilkan _Toolbar"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Tampilkan _Toolbar"
+
+msgid "Cards left:"
+msgstr "Sisa kartu:"
+
+msgid "Wager:"
+msgstr "Taruhan:"
+
+msgid "Balance:"
+msgstr "Saldo:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Tempatka "
+
+msgid "Blackjack rule set to use"
+msgstr "Pengaturan Blackjack yang digunakan"
+
+msgid "Card Style"
+msgstr "Gaya Kartu"
+
+msgid "Would you like insurance?"
+msgstr "Ingin asuransi?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Asuransi adalah sisi taruhan 50%% dari taruhan sebenarnya yang dimiliki "
+"pembagi natural 21 (atau blackjack) yang ditawarkan ketika pembagi membuka "
+"kartu sebagai as. Jika pembagi memiliki natural 21 maka pemain dibayar ganda."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Tentukan taruhan anda dan klik pada garis putih untuk membagikan tangan baru."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Tentukan taruhan anda atau klik kartu untuk membagikan tangan baru."
+
+msgid "Blackjack Preferences"
+msgstr "Pengaturan Blackjack"
+
+#, fuzzy
+msgid "Game"
+msgstr "_Permainan"
+
+msgid "_Display hand probabilities"
+msgstr "_Tampilkan kemungkinan tangan"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Bagi cepat (tanpa jeda waktu tiap-tiap kartu)"
+
+msgid "_Never take insurance"
+msgstr "Ja_ngan pernah asuransi"
+
+#, fuzzy
+msgid "_Reset Balance"
+msgstr "Lanjutkan permainan lama"
+
+msgid "Rules"
+msgstr "Peraturan"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Decks"
+msgstr "Kartu"
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr "Gandakan Setiap Total"
+
+msgid "Double 9"
+msgstr "Double 9"
+
+msgid "Double Soft"
+msgstr "Soft ganda"
+
+msgid "Double After Hit"
+msgstr "Double Setelah Hit"
+
+msgid "Double After Split"
+msgstr "Ganda Setelah Bagi"
+
+msgid "Resplit"
+msgstr "Bagi ulang"
+
+msgid "Resplit Aces"
+msgstr "Bagi ulang As"
+
+msgid "Surrender"
+msgstr "Menyerah"
+
+msgid "Dealer Speed"
+msgstr "Kecepatan Pembagian"
+
+msgid "Click to double your wager"
+msgstr "Klik untuk menggandakan taruhan anda"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Klik ganda untuk meningkatkan taruhan anda %.2F"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Klik ganda untuk menurunkan taruhan anda %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Klik untuk membagi kartu lain, seret kartu untuk membagi pasangan"
+
+msgid "Click to deal another card"
+msgstr "Klik untuk membagi kartu lain"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Klik untuk menyelesaikan penambahan kartu ke tangan anda"
+
+msgid "Click to deal a new hand"
+msgstr "Klik untuk membagi tangan baru"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack tidak dapat membaca berkas yang diminta"
+
+msgid "Please check your Blackjack installation"
+msgstr "Coba periksa pemasangan Blackjack anda"
+
+msgid "The best option is to stand"
+msgstr "Pilihan terbaik adalah stand"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Stand maksudnya menghentikan tambahan kartu ke tangan anda.  Lakukan dengan "
+"meng-klik pada kartu pembagi atau dengan memilih pilihan dari menu Kendali."
+
+msgid "The best option is to hit"
+msgstr "Pilihan terbaik adalah hit"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Hit maksudnya menambahkan kartu lain ke tangan anda.  Lakukan dengan meng-"
+"klik sekali pada kartu anda atau dengan memilih pilihan dari menu Kendali."
+
+msgid "The best option is to double down"
+msgstr "Pilihan terbaik adalah double down"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Double down maksudnya menggandakan taruhan awal dan menerima tepat satu "
+"kartu lagi.  Lakukan ini dengan meng-klik sekali pada chip pada bagian bawah "
+"jendela atau denga memiliki pilihan dari menu Kendali."
+
+msgid "The best option is to split"
+msgstr "Pilihan terbaik adalah bagi"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Bagi maksudnya membagi tangan anda sekarang menjadi dua tangan terpisah.  "
+"Lakukan dengan menyeret satu dari kartu anda dan meletakkannya ke sisi atau "
+"dengan memilih pilihan dari menu Kendali."
+
+msgid "The best option is to surrender"
+msgstr "Pilihan terbaik adalah menyerah"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Menyerah berarti menyerahkan setengah taruhan anda dan tidak menyelesaikan "
+"tangan.  Lakukan ini dengan memilih pilihan dari menu Kendali."
+
+#, fuzzy
+msgid "Blackjack"
+msgstr "Latar hitam"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "Blackjack menyediakan permainan kartu gaya kasino."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Server permainan GNOME"
+
+msgid "translator-credits"
+msgstr ""
+"Mohammad DAMT <mdamt@bisnisweb.com>\n"
+"Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
+"http://id.gnome.org/"
+
+msgid "Computing basic strategy..."
+msgstr "Menhitung strategi dasar..."
+
+msgid "Bust"
+msgstr ""
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Lembut"
+
+msgid "Win"
+msgstr "Menang"
+
+#, fuzzy
+msgid "Push"
+msgstr "Istirahat"
+
+msgid "Lose"
+msgstr "Kalah"
+
+msgid "Player expected values"
+msgstr "Nilai yang diharapkan pemain"
+
+#, fuzzy
+msgid "Stand"
+msgstr "Dimulai"
+
+#, fuzzy
+msgid "Hit"
+msgstr "Petunjuk"
+
+msgid "Double"
+msgstr "Double"
+
+msgid "Split"
+msgstr "Pisah"
+
+msgid "Dealer hand probabilities"
+msgstr "Tampilkan peluang pembagi"

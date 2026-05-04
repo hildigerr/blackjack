@@ -1,0 +1,499 @@
+# translation of eu.po to Basque
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: eu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-08-27 10:16+0200\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Ez da aurkitu \"%s.%s\" laguntza-fitxategia"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Ezin izan da honen laguntza erakutsi: \"%s\""
+
+msgid "Could not show link"
+msgstr "Ezin izan da esteka erakutsi"
+
+msgid "Error"
+msgstr "Errorea"
+
+msgid "View help for this game"
+msgstr "Ikusi joko honen laguntza"
+
+msgid "End the current game"
+msgstr "Uneko jokoa amaitzen du"
+
+msgid "Toggle fullscreen mode"
+msgstr "Txandakatu pantaila osoaren modua"
+
+msgid "Get a hint for your next move"
+msgstr "Hurrengo mugimendua iradokitzen du"
+
+msgid "Leave fullscreen mode"
+msgstr "Kendu pantaila osoko modua"
+
+msgid "Start a new multiplayer network game"
+msgstr "Hasi jokalari askorentzako joko berri bat sarean"
+
+msgid "End the current network game and return to network server"
+msgstr "Amaitu uneko sareko jokoa eta itzuli sareko zerbitzarira"
+
+msgid "Start a new game"
+msgstr "Beste joko bat hasten du"
+
+msgid "Pause the game"
+msgstr "Jokoa pausarazten du"
+
+msgid "Show a list of players in the network game"
+msgstr "Sareko jokoko jokalarien zerrenda erakusten du"
+
+msgid "Redo the undone move"
+msgstr "Desegindako mugimendua berregiten du"
+
+msgid "Restart the game"
+msgstr "Jokoa berrabiarazten du"
+
+msgid "Resume the paused game"
+msgstr "Pausarazitako jokoari berrekiten dio"
+
+msgid "View the scores"
+msgstr "Puntuazioak erakusten ditu"
+
+msgid "Undo the last move"
+msgstr "Azken mugimendua desegiten du"
+
+msgid "About this game"
+msgstr "Joko honi buruz"
+
+msgid "Close this window"
+msgstr "Leiho hau ixten du"
+
+msgid "Configure the game"
+msgstr "Jokoa konfiguratzen du"
+
+msgid "Quit this game"
+msgstr "Jokotik irteten da"
+
+msgid "_Contents"
+msgstr "_Edukia"
+
+msgid "_Fullscreen"
+msgstr "_Pantaila osoa"
+
+msgid "_Hint"
+msgstr "_Iradokizuna"
+
+msgid "_New"
+msgstr "_Berria"
+
+msgid "_New Game"
+msgstr "_Joko berria"
+
+msgid "_Redo Move"
+msgstr "B_erregin mugimendua"
+
+msgid "_Reset"
+msgstr "_Berrezarri"
+
+msgid "_Restart"
+msgstr "_Hasi berriro"
+
+msgid "_Undo Move"
+msgstr "_Desegin mugimendua"
+
+msgid "_Deal"
+msgstr "_Banatu"
+
+msgid "_Leave Fullscreen"
+msgstr "_Kendu pantaila osoa"
+
+msgid "Network _Game"
+msgstr "Sareko _jokoa"
+
+msgid "L_eave Game"
+msgstr "_Bertan behera utzi jokoa"
+
+msgid "Player _List"
+msgstr "_Jokalari-zerrenda"
+
+msgid "_Pause"
+msgstr "_Pausarazi"
+
+msgid "Res_ume"
+msgstr "_Berrekin"
+
+msgid "_Scores"
+msgstr "_Puntuazioak"
+
+msgid "_End Game"
+msgstr "_Amaitu jokoa"
+
+msgid "_About"
+msgstr "Honi _buruz"
+
+msgid "_Cancel"
+msgstr "_Utzi"
+
+msgid "_Close"
+msgstr "It_xi"
+
+msgid "_OK"
+msgstr "Ado_s"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s software librea da; birbanatu eta/edo alda dezakezu Free Software "
+"Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren %d. "
+"bertsioan, edo (nahiago baduzu) bertsio berriago batean, jasotako baldintzak "
+"betez gero."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Baliagarria izateko asmoz banatzen da %s, baina INOLAKO BERMERIK GABE; era "
+"berean, ez da bermatzen beraren EGOKITASUNA MERKATURATZEKO edo HELBURU "
+"PARTIKULARRETARAKO ERABILTZEKO.  Argibide gehiago nahi izanez gero, ikus GNU "
+"Lizentzia Publiko Orokorra."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen %s(r)ekin batera; "
+"halakorik jaso ez baduzu, idatzi hona: Free Software Foundation, Inc., 51 "
+"Franklin street, Fifth floor, Boston, MA 02110-1301 USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen %s(r)ekin batera; "
+"halakorik jaso ez baduzu, ikusi <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "J_okoa"
+
+msgid "_View"
+msgstr "_Ikuspegia"
+
+msgid "Restart the current game"
+msgstr "Uneko jokoa berrabiarazten du"
+
+msgid "Show a hint"
+msgstr "Egin iradokizuna"
+
+msgid "_Settings"
+msgstr "E_zarpenak"
+
+msgid "_Control"
+msgstr "_Kontrola"
+
+msgid "D_eal"
+msgstr "_Banatu"
+
+msgid "Deal a new hand"
+msgstr "Banatu beste eskualdi bat"
+
+msgid "_Hit"
+msgstr "_Eskatu"
+
+msgid "Add a card to the hand"
+msgstr "Gehitu karta bat eskuari"
+
+msgid "_Stand"
+msgstr "_Planto egin"
+
+msgid "Stop adding cards to the hand"
+msgstr "Ez gehitu karta gehiago eskuari"
+
+msgid "S_urrender"
+msgstr "_Amore eman"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Uko egin esku honi, jokoan jarri duzunaren erdiaren truke"
+
+msgid "_Double down"
+msgstr "_Bikoiztu"
+
+msgid "Double your wager for a single hit"
+msgstr "Apustua bikoizten du, baina soilik beste karta bat gehiago jasota"
+
+msgid "S_plit the hand"
+msgstr "_Zatitu eskua"
+
+msgid "Split cards in two new hands"
+msgstr "Kartak bi eskutan zatitzen ditu"
+
+msgid "_Help"
+msgstr "La_guntza"
+
+msgid "_Toolbar"
+msgstr "_Tresna-barra"
+
+msgid "Show toolbar"
+msgstr "Erakutsi tresna-barra"
+
+msgid "Cards left:"
+msgstr "Geratzen diren kartak:"
+
+msgid "Wager:"
+msgstr "Apustua:"
+
+msgid "Balance:"
+msgstr "Saldoa:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Egin apustua edo banatu eskualdi bat"
+
+msgid "Blackjack rule set to use"
+msgstr "Erabiliko diren blackjack arauak"
+
+msgid "Card Style"
+msgstr "Karta-estiloa"
+
+msgid "Would you like insurance?"
+msgstr "Asegurua nahi duzu?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Asegurua da, hasierako apustuaz gain, banatzaileak 21 naturala (blackjack "
+"bezala ere ezagutua) ateratzearen aldeko apustua egitea; hain zuzen ere, "
+"hasierako apustuaren % 50 jartzen da jokoan. Banatzaileak 21 naturala baldin "
+"badu, jokalariak jokoan jarritako kopuruaren bikoitza jasoko du."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Egin apustu, eta egin klik eskema zurian beste eskualdi bat banatzeko."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Egin apustu, edo egin klik kartetan beste eskualdi bat banatzeko."
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack-eko hobespenak"
+
+msgid "Game"
+msgstr "Jokoa"
+
+msgid "_Display hand probabilities"
+msgstr "_Bistaratu eskualdiko probabilitateak"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Banaketa bizkorrak (karta batetik besterako atzerapenik gabe)"
+
+msgid "_Never take insurance"
+msgstr "_Ez inoiz hartu asegururik"
+
+msgid "_Reset Balance"
+msgstr "_Berrezarri saldoa"
+
+msgid "Rules"
+msgstr "Arauak"
+
+msgid "Name"
+msgstr "Izena"
+
+msgid "Decks"
+msgstr "Karta-sortak"
+
+msgid "Hit Soft 17"
+msgstr "Banatu 17 biguna"
+
+msgid "Double Any Total"
+msgstr "Bikoiztu totalak"
+
+msgid "Double 9"
+msgstr "Bikoiztu 9"
+
+msgid "Double Soft"
+msgstr "Bikoiztu biguna"
+
+msgid "Double After Hit"
+msgstr "Bikoiztu eskatu ondoren"
+
+msgid "Double After Split"
+msgstr "Bikoiztu zatitu ondoren"
+
+msgid "Resplit"
+msgstr "Zatitu berriro"
+
+msgid "Resplit Aces"
+msgstr "Zatitu batekoak berriro"
+
+msgid "Surrender"
+msgstr "Amore eman"
+
+msgid "Dealer Speed"
+msgstr "Banatzailearen abiadura"
+
+msgid "Click to double your wager"
+msgstr "Egin klik apustua bikoizteko"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Egin klik bikoitza zure apustua %.2f handitzeko"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Egin klik bikoitza zure apustua %.2f txikitzeko"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Egin klik beste karta bat banatzeko; arrastatu karta, parea zatitzeko"
+
+msgid "Click to deal another card"
+msgstr "Egin klik beste karta bat banatzeko"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Egin klik zure eskuari kartak gehitzeari uzteko"
+
+msgid "Click to deal a new hand"
+msgstr "Egin klik beste eskualdi bat banatzeko"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack-ek ezin du eskatutako fitxategia kargatu"
+
+msgid "Please check your Blackjack installation"
+msgstr "Begiratu Blackjack-en instalazioa"
+
+msgid "The best option is to stand"
+msgstr "Aukera onena planto egitea da"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Planto egiten baduzu, ez zaio karta gehiago gehituko zure eskuari. "
+"Horretarako, egin klik banatzailearen kartetan, edo hautatu kontrol-menuko "
+"aukera."
+
+msgid "The best option is to hit"
+msgstr "Aukera onena karta eskatzea da"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Karta eskatzen baduzu, beste karta bat gehituko zure eskuari. Horretarako, "
+"egin klik zure kartetan, edo hautatu kontrol-menuko aukera."
+
+msgid "The best option is to double down"
+msgstr "Aukera onena bikoiztea da"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Bikoizten baduzu, hasierako apustua bikoizten duzu, eta beste karta bat "
+"bakarra jasoko duzu. Horretarako, egin klik leihoaren behealdeko fitxen "
+"gainean, edo hautatu kontrol-menuko aukera."
+
+msgid "The best option is to split"
+msgstr "Aukera onena zatitzea da"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Zatitzen baduzu, uneko eskua bitan banatuko duzu. Horretarako, arrastatu "
+"kartetako bat eta askatu ertzetik kanpora, edo hautatu kontrol-menuko aukera."
+
+msgid "The best option is to surrender"
+msgstr "Aukera onena amore ematea da"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Amore ematen baduzu, zure apustuaren erdiari uko egiten diozu eta ez duzu "
+"eskualdia osatzen. Horretarako, hautatu kontrol-menuko aukera."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Kasino-estiloko karta-jokoa da blackjack.\n"
+"\n"
+"GNOME Games-ekoa da blackjack."
+
+msgid "GNOME Games web site"
+msgstr "GNOME Games webgunea"
+
+msgid "translator-credits"
+msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
+
+msgid "Computing basic strategy..."
+msgstr "Oinarrizko estrategia kalkulatzen..."
+
+msgid "Bust"
+msgstr "Pasatzea"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Biguna"
+
+msgid "Win"
+msgstr "Irabazi"
+
+msgid "Push"
+msgstr "Berdinketa"
+
+msgid "Lose"
+msgstr "Galdu"
+
+msgid "Player expected values"
+msgstr "Jokalariak aurreikusitako balioak"
+
+msgid "Stand"
+msgstr "Planto egin"
+
+msgid "Hit"
+msgstr "Eskatu"
+
+msgid "Double"
+msgstr "Bikoiztu"
+
+msgid "Split"
+msgstr "Zatitu"
+
+msgid "Dealer hand probabilities"
+msgstr "Banatzailearen eskuaren probabilitateak"

@@ -1,0 +1,498 @@
+# translation of gnome-games.HEAD.po to Thai
+# Thai translation of gnome-games.
+# Copyright (C) 2004-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-games package.
+#
+# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2009.
+# Supranee Thirawatthanasuk <supranee@opentle.org>, 2005, 2006, 2007.
+# Kitt Tientanopajai <kitty@kitty.in.th>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-11-04 18:05+0700\n"
+"Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "ไม่พบแฟ้มคู่มือวิธีใช้ “%s.%s”"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "ไม่สามารถแสดงคู่มือวิธีใช้สำหรับ “%s”"
+
+msgid "Could not show link"
+msgstr "ไม่สามารถแสดงลิงก์"
+
+msgid "Error"
+msgstr "เกิดข้อผิดพลาด"
+
+msgid "View help for this game"
+msgstr "ดูวิธีเล่นเกมนี้"
+
+msgid "End the current game"
+msgstr "จบเกมที่กำลังเล่น"
+
+msgid "Toggle fullscreen mode"
+msgstr "สลับโหมดแสดงเต็มจอ"
+
+msgid "Get a hint for your next move"
+msgstr "ขอคำใบ้สำหรับตานี้"
+
+msgid "Leave fullscreen mode"
+msgstr "ออกจากโหมดแสดงเต็มจอ"
+
+msgid "Start a new multiplayer network game"
+msgstr "เริ่มเกมบนเครือข่ายแบบมีผู้เล่นหลายคนใหม่"
+
+msgid "End the current network game and return to network server"
+msgstr "จบเกมบนเครือข่ายปัจจุบัน และย้อนกลับไปที่เซิร์ฟเวอร์ของเครือข่าย"
+
+msgid "Start a new game"
+msgstr "เปิดเกมใหม่"
+
+msgid "Pause the game"
+msgstr "พักเกมชั่วคราว"
+
+msgid "Show a list of players in the network game"
+msgstr "แสดงรายชื่อผู้เล่นที่อยู่ในเกมบนเครือข่าย"
+
+msgid "Redo the undone move"
+msgstr "เล่นซ้ำตาที่ย้อนกลับไป"
+
+msgid "Restart the game"
+msgstr "ตั้งต้นเกมใหม่"
+
+msgid "Resume the paused game"
+msgstr "เล่นเกมที่พักไว้ต่อ"
+
+msgid "View the scores"
+msgstr "ดูคะแนน"
+
+msgid "Undo the last move"
+msgstr "ย้อนกลับไปตาที่แล้ว"
+
+msgid "About this game"
+msgstr "เกี่ยวกับเกมนี้"
+
+msgid "Close this window"
+msgstr "ปิดหน้าต่างนี้"
+
+msgid "Configure the game"
+msgstr "ตั้งค่าเกม"
+
+msgid "Quit this game"
+msgstr "ออกจากเกมนี้"
+
+msgid "_Contents"
+msgstr "เ_นื้อหา"
+
+msgid "_Fullscreen"
+msgstr "เ_ต็มจอ"
+
+msgid "_Hint"
+msgstr "บอกใ_บ้"
+
+msgid "_New"
+msgstr "ใ_หม่"
+
+msgid "_New Game"
+msgstr "เกมใ_หม่"
+
+msgid "_Redo Move"
+msgstr "เ_ล่นตาซ้ำ"
+
+msgid "_Reset"
+msgstr "_ล้าง"
+
+msgid "_Restart"
+msgstr "_ตั้งต้นใหม่"
+
+msgid "_Undo Move"
+msgstr "_ย้อนตากลับ"
+
+msgid "_Deal"
+msgstr "จั่วไ_พ่"
+
+msgid "_Leave Fullscreen"
+msgstr "เ_ลิกแสดงเต็มจอ"
+
+msgid "Network _Game"
+msgstr "เ_กมบนเครือข่าย"
+
+msgid "L_eave Game"
+msgstr "ออ_กจากเกม"
+
+msgid "Player _List"
+msgstr "ราย_ชื่อผู้เล่น"
+
+msgid "_Pause"
+msgstr "_พัก"
+
+msgid "Res_ume"
+msgstr "เล่น_ต่อ"
+
+msgid "_Scores"
+msgstr "_คะแนน"
+
+msgid "_End Game"
+msgstr "_จบเกม"
+
+msgid "_About"
+msgstr "เ_กี่ยวกับ"
+
+msgid "_Cancel"
+msgstr "_ยกเลิก"
+
+msgid "_Close"
+msgstr "ปิ_ด"
+
+msgid "_OK"
+msgstr "_ตกลง"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s เป็นซอฟต์แวร์เสรี คุณสามารถแจกจ่ายต่อ และ/หรือ แก้ไขโปรแกรมได้ ภายใต้เงื่อนไขของ GNU "
+"General Public License ที่เผยแพร่โดยมูลนิธิซอฟต์แวร์เสรี ไม่ว่าจะเป็นสัญญาอนุญาตรุ่นที่ %d "
+"หรือรุ่นถัดมา (ตามแต่คุณจะเลือก)"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s เผยแพร่ด้วยความหวังว่าโปรแกรมจะมีประโยชน์ แต่ *ไม่มีการรับประกันใดๆ* ไม่มีแม้การรับประกัน "
+"*อรรถประโยชน์เชิงพาณิชย์* หรือ *ความเหมาะสมสำหรับวัตถุประสงค์เฉพาะกิจใดๆ* กรุณาอ่าน GNU "
+"General Public License เพื่อดูรายละเอียดเพิ่มเติม"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"คุณควรจะได้รับสำเนาของ GNU General Public License มาพร้อมกับ %s ถ้าคุณไม่ได้รับ "
+"กรุณาติดต่อไปที่ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, "
+"Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"คุณควรจะได้รับสำเนาของ GNU General Public License มาพร้อมกับโปรแกรมนี้ ถ้าคุณไม่ได้รับ "
+"กรุณาดูได้ที่ <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "แบล็กแจ็ค - %s"
+
+msgid "_Game"
+msgstr "เ_กม"
+
+msgid "_View"
+msgstr "มุ_มมอง"
+
+msgid "Restart the current game"
+msgstr "ตั้งต้นเกมที่เล่นอยู่ใหม่"
+
+msgid "Show a hint"
+msgstr "ขอคำใบ้"
+
+msgid "_Settings"
+msgstr "_ตั้งค่า"
+
+msgid "_Control"
+msgstr "การ_ควบคุม"
+
+msgid "D_eal"
+msgstr "แจกไ_พ่"
+
+msgid "Deal a new hand"
+msgstr "แจกไพ่มือใหม่"
+
+msgid "_Hit"
+msgstr "_จั่วไพ่"
+
+msgid "Add a card to the hand"
+msgstr "เพิ่มไพ่ในมือ"
+
+msgid "_Stand"
+msgstr "_พอ"
+
+msgid "Stop adding cards to the hand"
+msgstr "หยุดการเพิ่มไพ่ในมือ"
+
+msgid "S_urrender"
+msgstr "_ยอมแพ้"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "ปรับมือนี้จำนวนครึ่งหนึ่งของชิปเดิมพัน"
+
+msgid "_Double down"
+msgstr "ลง_สองเท่า"
+
+msgid "Double your wager for a single hit"
+msgstr "เพิ่มชิปเดิมพันของคุณสำหรับการจั่วไพ่อีกเพียงใบเดียว"
+
+msgid "S_plit the hand"
+msgstr "แย_กมือ"
+
+msgid "Split cards in two new hands"
+msgstr "แยกไพ่ออกเป็นมือใหม่สองมือ"
+
+msgid "_Help"
+msgstr "_วิธีใช้"
+
+msgid "_Toolbar"
+msgstr "แถบเ_ครื่องมือ"
+
+msgid "Show toolbar"
+msgstr "แสดงแถบเครื่องมือ"
+
+msgid "Cards left:"
+msgstr "ไพ่ที่เหลือ:"
+
+msgid "Wager:"
+msgstr "ชิปเดิมพัน:"
+
+msgid "Balance:"
+msgstr "ยอดเงินสุทธิ:"
+
+msgid "Place your wager or deal a hand"
+msgstr "วางชิปเดิมพันของคุณหรือแจกไพ่หนึ่งมือ"
+
+msgid "Blackjack rule set to use"
+msgstr "ชุดกฎของแบล็กแจ็คที่จะใช้"
+
+msgid "Card Style"
+msgstr "สำรับไพ่"
+
+msgid "Would you like insurance?"
+msgstr "คุณต้องการประกันหรือไม่?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"การประกัน คือเงินเดิมพันต่างหาก 50% ของเงินเดิมพันที่วางไว้ ว่าผู้แจกไพ่จะได้แต้ม 21 ธรรมชาติ "
+"(หรือแบล็กแจ็ค) โดยจะให้วางได้เมื่อผู้แจกไพ่ได้ไพ่เปิดเป็นเอซ ถ้าผู้แจกไพ่ได้แต้ม 21 ธรรมชาติจริง "
+"ผู้เล่นจะได้เงินคืนสองเท่า"
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "ตั้งชิปเดิมพันจากนั้นคลิกที่โครงกรอบเส้นสีขาวเพื่อที่จะแจกไพ่มือใหม่"
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "ตั้งชิปเดิมพันของคุณหรือคลิกที่ไพ่เพื่อแจกไพ่มือใหม่"
+
+msgid "Blackjack Preferences"
+msgstr "ปรับแต่งแบล็กแจ็ค"
+
+msgid "Game"
+msgstr "เกม"
+
+msgid "_Display hand probabilities"
+msgstr "แ_สดงความน่าจะเป็นของไพ่ในมือ"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "แ_จกไพ่แบบไว (ไม่ต้องมีการหน่วงเวลาระหว่างไพ่แต่ละใบ)"
+
+msgid "_Never take insurance"
+msgstr "ไ_ม่ต้องประกัน"
+
+msgid "_Reset Balance"
+msgstr "_ล้างค่าเงินสุทธิ"
+
+msgid "Rules"
+msgstr "กฎ"
+
+msgid "Name"
+msgstr "ชื่อ"
+
+msgid "Decks"
+msgstr "สำรับ"
+
+msgid "Hit Soft 17"
+msgstr "จั่วเมื่อได้ Soft 17"
+
+msgid "Double Any Total"
+msgstr "ลงสองเท่าได้ทุกแต้ม"
+
+msgid "Double 9"
+msgstr "ลงสองเท่าได้ที่แต้ม 9"
+
+msgid "Double Soft"
+msgstr "ลงสองเท่าได้ที่แต้ม Soft"
+
+msgid "Double After Hit"
+msgstr "ลงสองเท่าได้หลังจั่ว"
+
+msgid "Double After Split"
+msgstr "ลงสองเท่าได้หลังแยกไพ่"
+
+msgid "Resplit"
+msgstr "แยกไพ่ได้อีก"
+
+msgid "Resplit Aces"
+msgstr "แยกไพ่เอซได้อีก"
+
+msgid "Surrender"
+msgstr "ยอมแพ้"
+
+msgid "Dealer Speed"
+msgstr "ความเร็วการแจกไพ่"
+
+msgid "Click to double your wager"
+msgstr "คลิกเพื่อเพิ่มชิปเดิมพันเท่าตัว"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "คลิกสองครั้งเพื่อเพิ่มชิปเดิมพันของคุณอีก %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "คลิกสองครั้งเพื่อลดชิปเดิมพันของคุณลง %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "คลิกเพื่อจั่วไพ่เพิ่ม; ลากไพ่ออกเพื่อแยกคู่"
+
+msgid "Click to deal another card"
+msgstr "คลิกเพื่อจั่วไพ่เพิ่ม"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "คลิกเพื่อเสร็จสิ้นการเพิ่มไพ่ในมือคุณ"
+
+msgid "Click to deal a new hand"
+msgstr "คลิกเพื่อแจกไพ่มือใหม่"
+
+msgid "Blackjack can't load the requested file"
+msgstr "แบล็กแจ็คโหลดแฟ้มที่ต้องการไม่สำเร็จ"
+
+msgid "Please check your Blackjack installation"
+msgstr "กรุณาตรวจสอบการติดตั้งแบล็กแจ็คของคุณ"
+
+msgid "The best option is to stand"
+msgstr "ทางเลือกที่ดีที่สุดคือพอ"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"พอหมายความว่าหยุดเพิ่มไพ่ในมือคุณ ทำได้โดยการคลิกที่ไพ่ของผู้แจกไพ่ หรือเลือกตัวเลือกจากเมนูควบคุม"
+
+msgid "The best option is to hit"
+msgstr "ทางเลือกที่ดีที่สุดคือจั่วไพ่"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"จั่วไพ่หมายความว่าเพิ่มไพ่อีกใบเข้าในมือคุณ ทำได้โดยการคลิกหนึ่งครั้งที่ไพ่ของคุณ "
+"หรือเลือกตัวเลือกจากเมนูควบคุม"
+
+msgid "The best option is to double down"
+msgstr "ทางเลือกที่ดีที่สุดคือลงสองเท่า"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"ลงสองเท่าหมายความว่าเพิ่มชิปเดิมพันจากเดิมเป็นเท่าตัว และรับไพ่เพิ่มได้อีกเพียงหนึ่งใบ "
+"ทำได้โดยการคลิกหนึ่งครั้งที่ชิปที่ด้านล่างของหน้าต่าง หรือเลือกตัวเลือกจากเมนูควบคุม "
+
+msgid "The best option is to split"
+msgstr "ทางเลือกที่ดีที่สุดคือแยกไพ่"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"แยกไพ่หมายความว่าแบ่งมือไพ่ปัจจุบันของคุณออกเป็นสองมือ "
+"ทำได้โดยการลากไพ่ใบหนึ่งของคุณไปวางลงที่ด้านข้าง หรือการเลือกตัวเลือกจากเมนูควบคุม"
+
+msgid "The best option is to surrender"
+msgstr "ทางเลือกที่ดีที่สุดคือยอมแพ้"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"ยอมแพ้หมายความว่ายอมจ่ายชิปเดิมพันครึ่งหนึ่งและสิ้นสุดไพ่มือนั้นแบบไม่สมบูรณ์ "
+"ทำได้โดยการเลือกตัวเลือกจากเมนูควบคุม"
+
+msgid "Blackjack"
+msgstr "แบล็กแจ็ค"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"แบล็กแจ็ค คือเกมไพ่แบบกาสิโน\n"
+"\n"
+"Blackjack เป็นส่วนหนึ่งของ GNOME Games"
+
+msgid "GNOME Games web site"
+msgstr "เว็บไซต์ GNOME Games"
+
+msgid "translator-credits"
+msgstr ""
+"เทพพิทักษ์ การุญบุญญานันท์ <thep@linux.thai.net>\n"
+"สุปราณี ธีระวัฒนสุข <supranee@opentle.org>\n"
+"กิตติ์ เธียรธโนปจัย <kitty@kitty.in.th>"
+
+msgid "Computing basic strategy..."
+msgstr "กำลังคำนวณกลยุทธ์พื้นฐาน..."
+
+msgid "Bust"
+msgstr "ตาย"
+
+msgid "Blackjack!"
+msgstr "แบล็กแจ็ค!"
+
+msgid "Soft"
+msgstr "Soft"
+
+msgid "Win"
+msgstr "ชนะ"
+
+msgid "Push"
+msgstr "เสมอ"
+
+msgid "Lose"
+msgstr "แพ้"
+
+msgid "Player expected values"
+msgstr "ค่าคาดหมายของผู้เล่น"
+
+msgid "Stand"
+msgstr "พอ"
+
+msgid "Hit"
+msgstr "จั่วไพ่"
+
+msgid "Double"
+msgstr "สองเท่า"
+
+msgid "Split"
+msgstr "แยก"
+
+msgid "Dealer hand probabilities"
+msgstr "ความน่าจะเป็นของมือผู้แจกไพ่"

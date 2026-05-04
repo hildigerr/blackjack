@@ -1,0 +1,567 @@
+# Dutch Translation for Gnome Games
+#
+# This file is distributed under the same license as the gnome-games package.
+#
+# Hein-Jan Leliveld <h.j.leliveld@student.tn.tudelft.nl>
+# Almer S. Tigelaar <almer1@dds.nl>, 2000.
+# Taco Witte <T.C.Witte@phys.uu.nl>, 2002.
+# Erik Kruijswijk <e.kruijswijk@ictro.drp.minjus.nl>, 2002.
+# Tino Meinen <tino.meinen@gmail.com>, 2002–2009.
+# Wouter Bolsterlee <wbolster@gnome.org>, 2008.
+#
+#
+# Kaartspellen:
+# dealer	    bank
+# foundation	basis     beter woord?
+# hand		    slag/beurt/hand?
+# pile		    stapel
+# slot		    vak/stapel
+# stock		    voorraad/kaarten
+# tableau	    tafel
+#
+# diamonds	    ruiten
+# clubs		    klaver
+# hearts	    harten
+# spades	    schoppen
+# king		    heer
+# queen		    vrouw
+# jack		    boer
+# ace		    aas
+#
+#
+# Square	    vak
+# block		    blok
+# Tile		    Tegel/spelvak
+#
+# Mahjong:
+# map		    stapelwijze
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-03-06 21:22+0900\n"
+"Last-Translator: Tino Meinen <tino.meinen@gmail.com>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Hulpbestand ‘%s.%s’ niet gevonden"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Kon de hulp voor “%s” niet tonen"
+
+msgid "Could not show link"
+msgstr "Kon de hyperlink niet tonen"
+
+msgid "Error"
+msgstr "Fout"
+
+msgid "View help for this game"
+msgstr "De hulp voor dit spel weergeven"
+
+msgid "End the current game"
+msgstr "De huidige schaakpartij beëindigen"
+
+msgid "Toggle fullscreen mode"
+msgstr "Schermvullend aan/uit"
+
+msgid "Get a hint for your next move"
+msgstr "Vraag een hint voor uw volgende zet"
+
+msgid "Leave fullscreen mode"
+msgstr "Schermvullend verlaten"
+
+# online spel/netwerkspel
+msgid "Start a new multiplayer network game"
+msgstr "Een nieuw spel via het netwerk beginnen met meerdere spelers"
+
+msgid "End the current network game and return to network server"
+msgstr "Het huidige netwerkspel beëindigen en terugkeren naar de netwerkserver"
+
+msgid "Start a new game"
+msgstr "Een nieuw spel beginnen"
+
+msgid "Pause the game"
+msgstr "Het spel pauzeren"
+
+# on-line spel/netwerkspel
+msgid "Show a list of players in the network game"
+msgstr "Een lijst met spelers in het netwerkspel tonen"
+
+# hoe je het ook vertaald, het blijft altijd een beetje dubbelzinnig.
+# maar zo, op z'n simpelst is het voor iedereen toch wel duidelijk
+msgid "Redo the undone move"
+msgstr "De laatste zet herhalen"
+
+msgid "Restart the game"
+msgstr "Het spel opnieuw spelen"
+
+msgid "Resume the paused game"
+msgstr "Het gepauzeerde spel hervatten"
+
+# topscores bekijken
+msgid "View the scores"
+msgstr "Topscores tonen"
+
+msgid "Undo the last move"
+msgstr "De laatste zet ongedaan maken"
+
+msgid "About this game"
+msgstr "Over dit spel"
+
+msgid "Close this window"
+msgstr "Dit venster sluiten"
+
+msgid "Configure the game"
+msgstr "Het spel configureren"
+
+msgid "Quit this game"
+msgstr "Dit spel afsluiten"
+
+msgid "_Contents"
+msgstr "In_houd"
+
+msgid "_Fullscreen"
+msgstr "_Schermvullend"
+
+msgid "_Hint"
+msgstr "_Hint"
+
+msgid "_New"
+msgstr "_Nieuw"
+
+msgid "_New Game"
+msgstr "_Nieuw spel"
+
+msgid "_Redo Move"
+msgstr "_Opnieuw doen"
+
+msgid "_Reset"
+msgstr "_Resetten"
+
+msgid "_Restart"
+msgstr "_Herstarten"
+
+# herstellen/ongedaan maken
+msgid "_Undo Move"
+msgstr "_Ongedaan maken"
+
+msgid "_Deal"
+msgstr "D_elen"
+
+msgid "_Leave Fullscreen"
+msgstr "_Schermvullend verlaten"
+
+msgid "Network _Game"
+msgstr "Netwerk-_spel"
+
+msgid "L_eave Game"
+msgstr "Sp_el verlaten"
+
+msgid "Player _List"
+msgstr "S_pelerslijst"
+
+msgid "_Pause"
+msgstr "_Pauzeren"
+
+msgid "Res_ume"
+msgstr "_Hervatten"
+
+msgid "_Scores"
+msgstr "_Scores"
+
+msgid "_End Game"
+msgstr "Spel _beëindigen"
+
+msgid "_About"
+msgstr "I_nfo"
+
+msgid "_Cancel"
+msgstr "_Annuleren"
+
+# leegmaken/wissen
+msgid "_Close"
+msgstr "Sl_uiten"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s is vrije software; herdistributie en/of het aanbrengen van wijzigingen is "
+"toegestaan onder de voorwaarden vermeld in de GNU General Public License die "
+"gepubliceerd is door de Free Software Foundation; ofwel versie %d van de "
+"licentie of, (zo u wilt) elke latere versie."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s wordt gedistribueerd met de hoop dat het bruikbaar zal zijn, maar zonder "
+"enige garantie; zelfs niet een geïmpliceerde garantie van verkoopbaarheid of "
+"geschiktheid voor een bepaald doel. Zie de GNU General Public License voor "
+"meer informatie."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"U moet gelijk met %s een kopie van de GNU General Public License hebben "
+"ontvangen; zo niet, schrijf dan naar de Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"U moet gelijk met %s een kopie van de GNU General Public License hebben "
+"ontvangen; zo niet, schrijf dan naar de Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Spel"
+
+msgid "_View"
+msgstr "Beel_d"
+
+msgid "Restart the current game"
+msgstr "Het huidige spel opnieuw doen"
+
+# vraag/geef een hint
+msgid "Show a hint"
+msgstr "Geef een hint"
+
+# hoofdmenu bevat: _Spel _Instellingen en _Hulp
+msgid "_Settings"
+msgstr "I_nstellingen"
+
+# wat voor context?
+msgid "_Control"
+msgstr "_Controle"
+
+msgid "D_eal"
+msgstr "D_elen"
+
+msgid "Deal a new hand"
+msgstr "Geef nog een keer"
+
+msgid "_Hit"
+msgstr "_Nemen"
+
+msgid "Add a card to the hand"
+msgstr "Pak een nieuwe kaart"
+
+# Overslaan/Pas
+msgid "_Stand"
+msgstr "_Pas"
+
+msgid "Stop adding cards to the hand"
+msgstr "Geen kaarten meer pakken"
+
+# opgeven/overgeven/passen
+msgid "S_urrender"
+msgstr "_Overgeven"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Verspeel deze kaarten voor de helf van uw inzet"
+
+msgid "_Double down"
+msgstr "_Dubbelen"
+
+msgid "Double your wager for a single hit"
+msgstr "Verdubbel uw inzet voor een enkele hit"
+
+msgid "S_plit the hand"
+msgstr "Kaarten s_plitsen"
+
+# hands hier handen?
+msgid "Split cards in two new hands"
+msgstr "Kaarten verdelen over twee handen"
+
+msgid "_Help"
+msgstr "_Hulp"
+
+msgid "_Toolbar"
+msgstr "_Werkbalk"
+
+msgid "Show toolbar"
+msgstr "Werkbalk tonen"
+
+msgid "Cards left:"
+msgstr "Kaarten over:"
+
+msgid "Wager:"
+msgstr "Inzet:"
+
+msgid "Balance:"
+msgstr "Balans:"
+
+# hand/kaart
+msgid "Place your wager or deal a hand"
+msgstr "Doe een inzet of deel kaarten"
+
+msgid "Blackjack rule set to use"
+msgstr "Te gebruiken Blackjackregels"
+
+msgid "Card Style"
+msgstr "Kaartstijl"
+
+msgid "Would you like insurance?"
+msgstr "Wilt u verzekering?"
+
+#  Heeft de bank geen blackjack, dan verliest de speler zijn verzekeringsinzet.<
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Verzekering is een extra inzet van de helft van de oorsponkelijke inzet dat "
+"de bank een natuurlijke 21 heeft (oftwel een blackjack). Deze wordt geboden "
+"wanneer de getoonde kaart van de bank een aas is. Als de bank een "
+"natuurlijke 21 heeft, betaalt de bank dubbel uit."
+
+# Deal a hand: kaarten delen of geven?
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Doe een inzet en klik op de witte rand om opnieuw te delen."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Doe een inzet of klik op de kaarten om opnieuw te delen"
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack voorkeuren"
+
+msgid "Game"
+msgstr "Spel"
+
+msgid "_Display hand probabilities"
+msgstr "Hand-kansen _tonen"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Snel delen (geen pauze tussen elke afzonderlijke kaart)"
+
+msgid "_Never take insurance"
+msgstr "_Nooit verzekeren"
+
+msgid "_Reset Balance"
+msgstr "Balans _herstellen"
+
+msgid "Rules"
+msgstr "Regels"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Decks"
+msgstr "Kaartspellen"
+
+# vertalen of niet?
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Elk totaal dubbelen"
+
+msgid "Double 9"
+msgstr "Dubbel 9"
+
+# Moet dit vertaald worden?
+msgid "Double Soft"
+msgstr "Dubbel zacht"
+
+msgid "Double After Hit"
+msgstr "Dubbelen na nemen"
+
+msgid "Double After Split"
+msgstr "Dubbelen na splitsen"
+
+# is dit goed?
+msgid "Resplit"
+msgstr "Hersplitsen"
+
+# Is dit goed?
+msgid "Resplit Aces"
+msgstr "Azen hersplitsen"
+
+msgid "Surrender"
+msgstr "Overgeven"
+
+msgid "Dealer Speed"
+msgstr "Snelheid van geven"
+
+msgid "Click to double your wager"
+msgstr "Klikken om uw inzet te verdubbelen"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Dubbelklikken om uw inzet met %.2f te vermeerderen"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Dubbelklikken om uw inzet met %.2f te verminderen"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Klikken om nog een kaart te delen, kaart slepen om paar te splitsen"
+
+msgid "Click to deal another card"
+msgstr "Klikken om nog een kaart te delen"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Klikken om geen kaarten meer aan uw hand toe te voegen."
+
+msgid "Click to deal a new hand"
+msgstr "Klikken om opnieuw te delen"
+
+# ook mooi: het betreffende bestand
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack kan het gevraagde bestand niet laden"
+
+msgid "Please check your Blackjack installation"
+msgstr "Controleer uw installatie van Blackjack"
+
+# om te passen/passen
+msgid "The best option is to stand"
+msgstr "De beste optie is passen"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Een pas, betekent dat u geen kaarten meer aan uw hand toevoegt.  Dit doet u "
+"door op de kaarten van de bank te klikken of door de optie uit het menu te "
+"kiezen."
+
+msgid "The best option is to hit"
+msgstr "De beste optie is te nemen"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Door te nemen voegt u een extra kaart aan uw hand toe.  Dit doet u door een "
+"keer op uw kaarten te klikke of door de optie uit het menu te kiezen."
+
+msgid "The best option is to double down"
+msgstr "De beste optie is een dubbelen"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Bij dubbelen wordt de oorspronkelijke inzet verdubbeld en ontvangt u precies "
+"één kaart.  Dit doet u door één keer te klikken op de fiches onderaan het "
+"venster, of door de optie uit het menu te kiezen."
+
+msgid "The best option is to split"
+msgstr "De beste optie is splitsen"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Bij splitsen deelt u uw hand in tweeën.  Dit doet u door een van uw kaarten "
+"te verplaatsen naar de zijkant of door de optie uit het menu te kiezen."
+
+msgid "The best option is to surrender"
+msgstr "De beste optie is opgeven"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Bij opgeven verliest u de helft van uw inzet en speelt u niet meer verder.  "
+"Dit doet u door de optie uit het menu te kiezen."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Blackjack is een kaartspel in casino-stijl.\n"
+"\n"
+"Blackjack is onderdeel van Gnome Games."
+
+msgid "GNOME Games web site"
+msgstr "Gnome games website"
+
+msgid "translator-credits"
+msgstr ""
+"Tino Meinen\n"
+"Hein-Jan Leliveld\n"
+"Almer S. Tigelaar\n"
+"Taco Witte\n"
+"Erik Kruijswijk\n"
+"\n"
+"Kijk voor meer informatie op http://nl.gnome.org/"
+
+# bepalen/bepaling
+# dit wordt getoond tijdens het splashcreen
+msgid "Computing basic strategy..."
+msgstr "Bepaling van de basisstrategie…"
+
+# Je bent over de 21 en je verliest je inzet.
+msgid "Bust"
+msgstr "Kapot"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Zacht"
+
+msgid "Win"
+msgstr "Winnen"
+
+# inzet wordt niet ingenomen of uitbetaald (bank en speler hebben beiden blackjack)
+# wordt over het algemeen niet vertaald
+msgid "Push"
+msgstr "Push"
+
+msgid "Lose"
+msgstr "Verliezen"
+
+msgid "Player expected values"
+msgstr "Speler verwachte waarden"
+
+msgid "Stand"
+msgstr "Pas"
+
+msgid "Hit"
+msgstr "Nemen"
+
+msgid "Double"
+msgstr "Verdubbelen"
+
+msgid "Split"
+msgstr "Splitsen"
+
+msgid "Dealer hand probabilities"
+msgstr "Kansen van de bank"

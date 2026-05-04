@@ -1,0 +1,505 @@
+# gnome-games Finnish Translation
+# Suomennos: http://www.gnome.fi/
+# Copyright (C) 2002-2009 Free Software Foundation, Inc.
+# Sami Pesonen <sampeson@iki.fi>, 2002-2005.
+# Ilkka Tuohela <hile@iki.fi>, 2005-2009.
+# Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-15 11:50+0300\n"
+"Last-Translator: Ilkka Tuohela <hile@iki.fi>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Ohjetiedostoa \"%s.%s\" ei löytynyt"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Ohjetta aiheesta \"%s\" ei voitu näyttää"
+
+msgid "Could not show link"
+msgstr "Linkkiä ei voi näyttää"
+
+msgid "Error"
+msgstr "Virhe"
+
+msgid "View help for this game"
+msgstr "Näytä tämän pelin ohjeet"
+
+msgid "End the current game"
+msgstr "Lopeta nykyinen peli"
+
+msgid "Toggle fullscreen mode"
+msgstr "Vaihda kokoruututilaa"
+
+msgid "Get a hint for your next move"
+msgstr "Anna vinkki seuraavasta siirrosta"
+
+msgid "Leave fullscreen mode"
+msgstr "Lopeta kokoruututila"
+
+msgid "Start a new multiplayer network game"
+msgstr "Aloita uusi peli monen pelaajan verkkopeli"
+
+msgid "End the current network game and return to network server"
+msgstr "Lopeta nykyinen verkkopeli ja palaa verkkopalvelimelle"
+
+msgid "Start a new game"
+msgstr "Aloita uusi peli"
+
+msgid "Pause the game"
+msgstr "Keskeytä peli"
+
+msgid "Show a list of players in the network game"
+msgstr "Näytä lista verkkopelin pelaajista"
+
+msgid "Redo the undone move"
+msgstr "Tee peruttu siirto uudestaan"
+
+msgid "Restart the game"
+msgstr "Aloita peli uudestaan"
+
+msgid "Resume the paused game"
+msgstr "Jatka keskeytettyä peliä"
+
+msgid "View the scores"
+msgstr "Näytä tulokset"
+
+msgid "Undo the last move"
+msgstr "Peru edellinen siirto"
+
+msgid "About this game"
+msgstr "Tietoja tästä pelistä"
+
+msgid "Close this window"
+msgstr "Sulje tämä ikkuna"
+
+msgid "Configure the game"
+msgstr "Määrittele pelin asetukset"
+
+msgid "Quit this game"
+msgstr "Lopeta tämä peli"
+
+msgid "_Contents"
+msgstr "_Sisältö"
+
+msgid "_Fullscreen"
+msgstr "_Kokoruututila"
+
+msgid "_Hint"
+msgstr "_Vinkki"
+
+msgid "_New"
+msgstr "_Uusi"
+
+msgid "_New Game"
+msgstr "_Uusi peli"
+
+msgid "_Redo Move"
+msgstr "_Tee siirto uudestaan"
+
+msgid "_Reset"
+msgstr "_Alusta"
+
+msgid "_Restart"
+msgstr "_Aloita alusta"
+
+msgid "_Undo Move"
+msgstr "_Peru siirto"
+
+msgid "_Deal"
+msgstr "J_ako"
+
+msgid "_Leave Fullscreen"
+msgstr "P_oistu kokoruututilasta"
+
+msgid "Network _Game"
+msgstr "_Verkkopeli"
+
+msgid "L_eave Game"
+msgstr "_Lopeta peli"
+
+msgid "Player _List"
+msgstr "_Pelaajalista"
+
+msgid "_Pause"
+msgstr "_Keskeytä"
+
+msgid "Res_ume"
+msgstr "_Jatka"
+
+msgid "_Scores"
+msgstr "_Pisteet"
+
+msgid "_End Game"
+msgstr "_Lopeta peli"
+
+msgid "_About"
+msgstr "_Tietoja"
+
+msgid "_Cancel"
+msgstr "_Peru"
+
+msgid "_Close"
+msgstr "_Sulje"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s on vapaa ohjelma; sitä on sallittu levittää edelleen ja muuttaa GNU "
+"yleisen lisenssin (GPL lisenssin) ehtojen mukaan  sellaisina kuin Free "
+"Software Foundation on ne julkaissut; joko lisenssin version %d, tai "
+"(valinnan mukaan) minkä tahansa myöhemmän version mukaisesti."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Ohjelmaa %s levitetään siinä toivossa, että se olisi hyödyllinen, mutta "
+"ilman mitään takuuta; ilman edes hiljaista takuuta kaupallisesti "
+"hyväksyttävästä laadusta tai soveltuvuudesta tiettyyn tarkoitukseen. Katso "
+"GPL lisenssistä lisää yksityiskohtia."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Ohjelman %s mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei ole, "
+"kirjoita osoitteeseen Free Software Foundation Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Tämän ohjelma mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei ole, "
+"katso lisätietoja sivulta <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Peli"
+
+msgid "_View"
+msgstr "_Näytä"
+
+msgid "Restart the current game"
+msgstr "Aloita valittu peli uudestaan"
+
+msgid "Show a hint"
+msgstr "Näytä vinkki"
+
+msgid "_Settings"
+msgstr "_Asetukset"
+
+msgid "_Control"
+msgstr "_Ohjaus"
+
+msgid "D_eal"
+msgstr "J_ako"
+
+msgid "Deal a new hand"
+msgstr "Jaa uudet kortit"
+
+msgid "_Hit"
+msgstr "_Uusi kortti"
+
+msgid "Add a card to the hand"
+msgstr "Lisää kortti käteen"
+
+msgid "_Stand"
+msgstr "_Pysy"
+
+msgid "Stop adding cards to the hand"
+msgstr "Lopeta uusien korttien jako"
+
+msgid "S_urrender"
+msgstr "L_uovuta"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Panttaa tämä käsi puolella panoksesta"
+
+msgid "_Double down"
+msgstr "_Panoksen tuplaaminen"
+
+msgid "Double your wager for a single hit"
+msgstr "Tuplaa panoksesi yhden kortin jaolle"
+
+msgid "S_plit the hand"
+msgstr "Jaa _käsi"
+
+msgid "Split cards in two new hands"
+msgstr "Jaa kortit kahdeksi eri kädeksi"
+
+msgid "_Help"
+msgstr "O_hje"
+
+msgid "_Toolbar"
+msgstr "_Työkalupalkki"
+
+msgid "Show toolbar"
+msgstr "Näytä työkalupalkki"
+
+msgid "Cards left:"
+msgstr "Kortteja jäljellä:"
+
+msgid "Wager:"
+msgstr "Panos:"
+
+msgid "Balance:"
+msgstr "Pelitili:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Aseta panos tai jaa uudet kortit"
+
+msgid "Blackjack rule set to use"
+msgstr "Käytettävät Blackjack säännöt"
+
+msgid "Card Style"
+msgstr "Korttien tyyli"
+
+msgid "Would you like insurance?"
+msgstr "Haluaisitko vakuutuksen?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Vakuutus on 50% sivupanos alkuperäisestä panoksesta, kun jakajalla on "
+"luonnollinen 21 (tunnetaan myös blackjackinä), jota tarjotaan kun jakajan "
+"ensimmäinen kortti on ässä. Jos jakaja saa luonnollisen 21:n, maksetaan "
+"pelaajalle tuplasti."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Aseta panos ja napsauta ulkoviivaa saadaksesi uudet kortit."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Aseta panos tai napsauta kortteja saadaksesi uudet kortit."
+
+msgid "Blackjack Preferences"
+msgstr "Blackjackin asetukset"
+
+msgid "Game"
+msgstr "Peli"
+
+msgid "_Display hand probabilities"
+msgstr "Näytä käden todennäköisyys"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Pikajaot (ei viivettä korttien välissä)"
+
+msgid "_Never take insurance"
+msgstr "_Älä vakuuta koskaan"
+
+msgid "_Reset Balance"
+msgstr "Alusta _pelitili"
+
+msgid "Rules"
+msgstr "Säännöt"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Decks"
+msgstr "Pakat"
+
+msgid "Hit Soft 17"
+msgstr "Uusi kortti jos alle 17"
+
+msgid "Double Any Total"
+msgstr "Tuplaa kaikki"
+
+msgid "Double 9"
+msgstr "Tupla 9"
+
+msgid "Double Soft"
+msgstr "Tuplaa alle"
+
+msgid "Double After Hit"
+msgstr "Tuplaa uuden kortin jälkeen"
+
+msgid "Double After Split"
+msgstr "Tuplaa jaon jälkeen"
+
+msgid "Resplit"
+msgstr "Jaa uudestaan"
+
+msgid "Resplit Aces"
+msgstr "Jaa ässät uudestaan"
+
+msgid "Surrender"
+msgstr "Luovuta"
+
+msgid "Dealer Speed"
+msgstr "Jakajan nopeus"
+
+msgid "Click to double your wager"
+msgstr "Napsauta tuplataksesi panoksen"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Kaksoisnapsauta nostaaksesi panosta %.2f:lla"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Kaksoisnapsauta laskeaksesi panosta %.2f:lla"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Napsauta saadaksesi uuden kortin; vedä korttia jakaaksesi parin"
+
+msgid "Click to deal another card"
+msgstr "Napsauta saadaksesi uuden kortin"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Napsauta lopettaaksesi uusien korttien jaon"
+
+msgid "Click to deal a new hand"
+msgstr "Napsauta saadaksesi uudet kortit"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjack ei voi ladata pyydettyä tiedostoa"
+
+msgid "Please check your Blackjack installation"
+msgstr "Tarkista Blackjack asennuksesi"
+
+msgid "The best option is to stand"
+msgstr "Paras vaihtoehto on olla ottamatta lisää kortteja"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Jääminen tarkoittaa lisäkorttien ottamisen lopettamista käteen. Tee se "
+"napsauttamalla jakajan kortteja tai valitsemalla Ohjaus-valikosta."
+
+msgid "The best option is to hit"
+msgstr "Paras vaihtoehto on ottaa uusi kortti"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Uusi kortti tarkoittaa uuden kortin lisäämistä käteesi. Tee se "
+"napsauttamalla korttejasi kerran tai valitsemalla Ohjaus-valikosta."
+
+msgid "The best option is to double down"
+msgstr "Paras vaihtoehto on tuplata"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Panoksen tuplaus tarkoittaa panoksen kaksinkertaistamista ja yhden kortin "
+"saamista sen jälkeen. Tee se napsauttamalla kerran pelimerkkejä ikkunan "
+"alalaidassa tai valitsemalla Ohjaus-valikossa."
+
+msgid "The best option is to split"
+msgstr "Paras vaihtoehto on parin jakaminen"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Korttien jako tarkoittaa korttien jakoa kahdeksi erilliseksi kädeksi. Tee se "
+"vetämällä yksi kortti sivummalle tai valitsemalla Ohjaus-valikosta."
+
+msgid "The best option is to surrender"
+msgstr "Paras vaihtoehto on luovuttaa"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Luovuttaminen tarkoittaa puolikkaan panoksen luovuttamista ja olemassa "
+"olevan käden menettämistä. Tee se valitsemalla Ohjaus-valikosta."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Blackjack on kasinotyylinen korttipeli.\n"
+"\n"
+"Blackjack on osa Gnomen pelejä."
+
+msgid "GNOME Games web site"
+msgstr "Gnome-pelien www-sivut"
+
+msgid "translator-credits"
+msgstr ""
+"Timo Jyrinki, 2008\n"
+"Ilkka Tuohela, 2006-2009\n"
+"Sami Pesonen, 2002-2005\n"
+"\n"
+"http://www.gnome.fi/"
+
+msgid "Computing basic strategy..."
+msgstr "Miettii perusstrategiaa..."
+
+msgid "Bust"
+msgstr "Yli"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Pehmeä"
+
+msgid "Win"
+msgstr "Voitto"
+
+msgid "Push"
+msgstr "Palautus"
+
+msgid "Lose"
+msgstr "Häviö"
+
+msgid "Player expected values"
+msgstr "Pelaajan odottamat arvot"
+
+msgid "Stand"
+msgstr "Pysy"
+
+msgid "Hit"
+msgstr "Uusi kortti"
+
+msgid "Double"
+msgstr "Tuplaa"
+
+msgid "Split"
+msgstr "Jaa kortit"
+
+msgid "Dealer hand probabilities"
+msgstr "Jakajan korttien todennäköisyydet"

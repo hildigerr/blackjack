@@ -1,0 +1,528 @@
+# Hungarian translation of gnome-games.
+# Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-games package.
+#
+# sakk szakkifejezés-ügyi kisokos: http://mek.oszk.hu/00000/00056/html/141.htm
+#
+# Szabolcs Ban <shooby at gnome dot hu>, 1999, 2000, 2001.
+# Gergely Nagy <greg at gnome dot hu>, 2001.
+# Emese Kovacs <emese at gnome dot hu>, 2002.
+# Andras Timar <timar at gnome dot hu>, 2002, 2003.
+# Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
+# Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-08 01:49+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <gnome at fsf dot hu>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "A(z) „%s.%s” súgófájl nem található"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "Nem jeleníthető meg a(z) „%s” súgója"
+
+msgid "Could not show link"
+msgstr "Nem lehet megjeleníteni a hivatkozást"
+
+msgid "Error"
+msgstr "Hiba"
+
+# aisleriot/menu.c:125
+msgid "View help for this game"
+msgstr "Súgó megjelenítése ehhez a játékhoz"
+
+msgid "End the current game"
+msgstr "A jelenlegi játék befejezése"
+
+msgid "Toggle fullscreen mode"
+msgstr "Teljes képernyős üzemmód"
+
+msgid "Get a hint for your next move"
+msgstr "Javaslat a következő lépéshez"
+
+msgid "Leave fullscreen mode"
+msgstr "Teljes képernyős mód elhagyása"
+
+msgid "Start a new multiplayer network game"
+msgstr "Új többjátékosos hálózati játék indítása"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+"A jelenlegi hálózati játék befejezése és visszatérés a hálózati kiszolgálóhoz"
+
+msgid "Start a new game"
+msgstr "Új játék indítása"
+
+msgid "Pause the game"
+msgstr "A játék szüneteltetése"
+
+msgid "Show a list of players in the network game"
+msgstr "A játékosok listájának megjelenítése a hálózati játékban"
+
+msgid "Redo the undone move"
+msgstr "A visszavont lépés ismételt végrehajtása"
+
+msgid "Restart the game"
+msgstr "A játék újraindítása"
+
+msgid "Resume the paused game"
+msgstr "A szüneteltetett játék folytatása"
+
+msgid "View the scores"
+msgstr "A pontok megtekintése"
+
+msgid "Undo the last move"
+msgstr "Az utolsó lépés visszavonása"
+
+msgid "About this game"
+msgstr "A játék névjegye"
+
+msgid "Close this window"
+msgstr "A jelenlegi ablak bezárása"
+
+msgid "Configure the game"
+msgstr "A játék beállítása"
+
+msgid "Quit this game"
+msgstr "Kilépés a játékból"
+
+msgid "_Contents"
+msgstr "_Tartalom"
+
+msgid "_Fullscreen"
+msgstr "_Teljes képernyő"
+
+msgid "_Hint"
+msgstr "_Javaslat"
+
+msgid "_New"
+msgstr "Ú_j"
+
+msgid "_New Game"
+msgstr "Ú_j játék"
+
+msgid "_Redo Move"
+msgstr "Mo_zgatás megismétlése"
+
+# aisleriot/dialog.c:112
+msgid "_Reset"
+msgstr "_Visszaállítás"
+
+msgid "_Restart"
+msgstr "Ú_jraindítás"
+
+msgid "_Undo Move"
+msgstr "Mozgatás _visszavonása"
+
+msgid "_Deal"
+msgstr "_Osztás"
+
+msgid "_Leave Fullscreen"
+msgstr "T_eljes képernyő elhagyása"
+
+msgid "Network _Game"
+msgstr "_Hálózati játék"
+
+msgid "L_eave Game"
+msgstr "Játék _elhagyása"
+
+msgid "Player _List"
+msgstr "_Játékoslista"
+
+msgid "_Pause"
+msgstr "_Szünet"
+
+# aisleriot/dialog.c:112
+msgid "Res_ume"
+msgstr "_Folytatás"
+
+msgid "_Scores"
+msgstr "_Pontszámok"
+
+msgid "_End Game"
+msgstr "Játék be_fejezése"
+
+msgid "_About"
+msgstr "_Névjegy"
+
+msgid "_Cancel"
+msgstr "_Mégse"
+
+msgid "_Close"
+msgstr "_Bezárás"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"A(z) %s szabad szoftver, terjesztheti és/vagy módosíthatja a Free Software "
+"Foundation által kiadott GNU General Public License %d. (vagy bármely "
+"későbbi) változatában foglaltak alapján."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"A(z) %s programot abban a reményben terjesztjük, hogy hasznos lesz, de nem "
+"vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a program "
+"alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. További "
+"részletekért tanulmányozza a GNU GPL licencet."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"A(z) %s programhoz a GNU General Public License egy példánya is jár, ha nem "
+"kapta meg, írjon a Free Software Foundation Inc.-nek. Levélcímük: 51 "
+"Franklin St, Fifth Floor, Boston, MA 02110-1301, USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"A(z) %s programhoz a GNU General Public License egy példánya is jár, ha nem "
+"kapta meg, a <http://www.gnu.org/licenses/> oldalon elolvashatja."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack – %s"
+
+msgid "_Game"
+msgstr "_Játék"
+
+msgid "_View"
+msgstr "_Nézet"
+
+msgid "Restart the current game"
+msgstr "Jelenlegi játék újraindítása"
+
+msgid "Show a hint"
+msgstr "Tipp megjelenítése"
+
+msgid "_Settings"
+msgstr "_Beállítások"
+
+msgid "_Control"
+msgstr "_Vezérlés"
+
+msgid "D_eal"
+msgstr "_Osztás"
+
+msgid "Deal a new hand"
+msgstr "Új leosztás"
+
+msgid "_Hit"
+msgstr "Ü_tés"
+
+msgid "Add a card to the hand"
+msgstr "Kártya hozzáadása a leosztáshoz"
+
+msgid "_Stand"
+msgstr "Megállá_s"
+
+msgid "Stop adding cards to the hand"
+msgstr "Kártyák hozzáadásának leállítása"
+
+msgid "S_urrender"
+msgstr "Be_dobás"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Ezen osztás elvesztése a tét feléért"
+
+msgid "_Double down"
+msgstr "_Duplázás"
+
+msgid "Double your wager for a single hit"
+msgstr "A tét megduplázása egyetlen lapért"
+
+msgid "S_plit the hand"
+msgstr "Le_osztás szétválasztása"
+
+msgid "Split cards in two new hands"
+msgstr "Kártyák szétválasztása két leosztásba"
+
+msgid "_Help"
+msgstr "_Súgó"
+
+msgid "_Toolbar"
+msgstr "Eszköz_tár"
+
+msgid "Show toolbar"
+msgstr "Eszköztár megjelenítése"
+
+msgid "Cards left:"
+msgstr "Hátralévő lapok:"
+
+msgid "Wager:"
+msgstr "Tét:"
+
+msgid "Balance:"
+msgstr "Mérleg:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Helyezze el a tétet vagy osszon"
+
+msgid "Blackjack rule set to use"
+msgstr "A Blackjack használandó szabálykészlete"
+
+msgid "Card Style"
+msgstr "Kártyastílus"
+
+msgid "Would you like insurance?"
+msgstr "Szeretne biztosítást?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"A biztosítás az eredeti tét 50 százalékáért egy póttét, olyankor, amikor az "
+"osztó felfordított lapja egy ász. Arról szól a fogadás, hogy az osztónak "
+"természetes 21-e (blackjackje) van, és ha tényleg, akkor a játékos dupla "
+"összeget kap."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Tegye meg tétjét, és kattintson a fehér körvonalra egy új leosztás kéréséhez."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+"Tegye meg a tétet, vagy kattintson a kártyákra egy új leosztás kéréséhez."
+
+msgid "Blackjack Preferences"
+msgstr "A Blackjack beállításai"
+
+msgid "Game"
+msgstr "Játék"
+
+msgid "_Display hand probabilities"
+msgstr "Leosztás _valószínűségeinek megjelenítése"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Gyors osztás (nincs késleltetés az egyes kártyák között)"
+
+msgid "_Never take insurance"
+msgstr "_Ne legyen biztosítás"
+
+msgid "_Reset Balance"
+msgstr "Mérleg _visszaállítása"
+
+# aisleriot/dialog.c:112
+msgid "Rules"
+msgstr "Szabályok"
+
+msgid "Name"
+msgstr "Név"
+
+msgid "Decks"
+msgstr "Pakli"
+
+msgid "Hit Soft 17"
+msgstr "Puha 17 elérése"
+
+msgid "Double Any Total"
+msgstr "Bármilyen összeg megduplázása"
+
+# aisleriot/dialog.c:112
+msgid "Double 9"
+msgstr "Dupla 9"
+
+# aisleriot/dialog.c:112
+msgid "Double Soft"
+msgstr "Dupla puha"
+
+msgid "Double After Hit"
+msgstr "Duplázás ütés után"
+
+msgid "Double After Split"
+msgstr "Duplázás szétválasztás után"
+
+msgid "Resplit"
+msgstr "Újra szétválasztás"
+
+msgid "Resplit Aces"
+msgstr "Ászok szétválasztása"
+
+msgid "Surrender"
+msgstr "Bedobás"
+
+msgid "Dealer Speed"
+msgstr "Osztás sebessége"
+
+msgid "Click to double your wager"
+msgstr "Kattintson a tét megduplázásához"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Kattintson a tét növeléséhez %.2f értékkel"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Kattintson kétszer a tét csökkentéséhez %.2f értékkel"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Kattintson egy másik kártya osztásához, kártya húzásához, vagy pár "
+"szétválasztásához"
+
+msgid "Click to deal another card"
+msgstr "Kattintson egy másik lap osztásához"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Kattintson a lapfelvétel leállításához"
+
+msgid "Click to deal a new hand"
+msgstr "Kattintson az új leosztás kéréséhez"
+
+msgid "Blackjack can't load the requested file"
+msgstr "A Blackjack nem tudja betölteni a kért fájlt"
+
+msgid "Please check your Blackjack installation"
+msgstr "Ellenőrizze a Blackjack telepítést"
+
+msgid "The best option is to stand"
+msgstr "A legjobb, ha megáll"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"A megállás azt jelenti, hogy nem vesz fel több kártyát a leosztáshoz. Ezt "
+"vagy az osztó lapjaira kattintva teheti meg, vagy a Vezérlés menü megfelelő "
+"pontjának kiválasztásával."
+
+msgid "The best option is to hit"
+msgstr "A legjobb, ha üt"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Az ütés azt jelenti, hogy felvesz egy másik kártyát a leosztáshoz. Ezt a "
+"saját kártyáira kattintva teheti meg, vagy a Vezérlés menü megfelelő "
+"pontjának kiválasztásával."
+
+msgid "The best option is to double down"
+msgstr "A legjobb lehetőség a duplázás"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"A duplázás azt jelenti, hogy megduplázza az eredeti tétet, és felvesz "
+"pontosan egy kártyát. Ezt az ablak alján található zsetonokra kattintva "
+"teheti meg, vagy a Vezérlés menü megfelelő pontjának kiválasztásával."
+
+msgid "The best option is to split"
+msgstr "A legjobb lehetőség a szétválasztás"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"A szétválasztás azt jelenti, hogy az aktuális leosztást két külön leosztásra "
+"szedi szét. Ezt úgy teheti meg, ha kihúz egyet a kártyái közül, és leejti "
+"oldalra, vagy a Vezérlés menü megfelelő pontjának kiválasztásával."
+
+msgid "The best option is to surrender"
+msgstr "A legjobb, amit tehet, a bedobás"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"A bedobás azt jelenti, hogy feladja a tét felét és nem egészíti ki a "
+"leosztást. Ezt a Vezérlés menü megfelelő pontjának kiválasztásával teheti "
+"meg."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"A Blackjack egy kaszinó-stílusú kártyajáték.\n"
+"\n"
+"A Blackjack a GNOME játékok része."
+
+msgid "GNOME Games web site"
+msgstr "A GNOME játékok weboldala"
+
+msgid "translator-credits"
+msgstr ""
+"Bán Szabolcs <shooby@gnome.hu>\n"
+"Dvornik László <dvornik@gnome.hu>\n"
+"Kelemen Gábor <kelemeng@gnome.hu>\n"
+"Kovács Emese <emese@gnome.hu>\n"
+"Nagy Gergely <greg@gnome.hu>\n"
+"Tímár András <timar@gnome.hu>\n"
+"Varga Szabolcs <shirokuma@shirokuma.hu>"
+
+msgid "Computing basic strategy..."
+msgstr "Alapstratégia kiszámítása…"
+
+msgid "Bust"
+msgstr "Csőd"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr "Puha"
+
+msgid "Win"
+msgstr "Győzelem"
+
+msgid "Push"
+msgstr "Döntetlen"
+
+msgid "Lose"
+msgstr "Vereség"
+
+msgid "Player expected values"
+msgstr "A játékos várható értékei"
+
+msgid "Stand"
+msgstr "Megállás"
+
+msgid "Hit"
+msgstr "Ütés"
+
+# aisleriot/dialog.c:112
+msgid "Double"
+msgstr "Duplázás"
+
+msgid "Split"
+msgstr "Szétválasztás"
+
+msgid "Dealer hand probabilities"
+msgstr "Osztó lehetőségei"

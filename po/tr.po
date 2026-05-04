@@ -1,0 +1,505 @@
+# Turkish translation of gnome-games.
+# Copyright (C) 2000-2002, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
+# Onur Kucuk, <okucuk@yahoo.com>, 2000.
+# Ömer Fadıl USTA <omer_fad@hotmail.com>,2002.
+# Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
+# foundation: sıralama
+# Tableau: orta sıra
+# reserve: yedek
+# waste: kullanılamayan
+# stock : eldeki kartlar
+# Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-08-29 20:34+0300\n"
+"Last-Translator: Baris Cicek <baris@teamforce.name.tr>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=1; plural=0;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Yardım dosyası “%s.%s” bulunamadı"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "“%s” için yardım gösterilemedi"
+
+msgid "Could not show link"
+msgstr "Bağlantı gösterilemedi"
+
+msgid "Error"
+msgstr "Hata"
+
+msgid "View help for this game"
+msgstr "Bu oyun için yardım göster"
+
+msgid "End the current game"
+msgstr "Mevcut oyunu bitir"
+
+msgid "Toggle fullscreen mode"
+msgstr "Tam ekran kipine geç"
+
+msgid "Get a hint for your next move"
+msgstr "Bir sonra ki hamle için ipucu al"
+
+msgid "Leave fullscreen mode"
+msgstr "Tam ekran kipini terket"
+
+msgid "Start a new multiplayer network game"
+msgstr "Yeni bir çoklu oyunculu ağ oyunu başlat"
+
+msgid "End the current network game and return to network server"
+msgstr "Şimdiki oyunu sonlandır ve ağ sunucusuna dön"
+
+msgid "Start a new game"
+msgstr "Yeni bir oyun başlat"
+
+msgid "Pause the game"
+msgstr "Oyunu duraklat"
+
+msgid "Show a list of players in the network game"
+msgstr "Ağ oyunu içindeki oyuncuların bir listesini göster"
+
+msgid "Redo the undone move"
+msgstr "Geri alınmış hareketi yeniden oyna"
+
+msgid "Restart the game"
+msgstr "Oyunu yeniden başlat"
+
+msgid "Resume the paused game"
+msgstr "Duraklatılmış oyunu devam ettir"
+
+msgid "View the scores"
+msgstr "Puanları görüntüle"
+
+msgid "Undo the last move"
+msgstr "Son hareketi geri al"
+
+msgid "About this game"
+msgstr "Bu oyun hakkında"
+
+msgid "Close this window"
+msgstr "Bu pencereyi kapat"
+
+msgid "Configure the game"
+msgstr "Oyunu yapılandır"
+
+msgid "Quit this game"
+msgstr "Bu oyundan çık"
+
+msgid "_Contents"
+msgstr "İ_çindekiler"
+
+msgid "_Fullscreen"
+msgstr "_Tan Ekran"
+
+msgid "_Hint"
+msgstr "_İpucu"
+
+msgid "_New"
+msgstr "_Yeni"
+
+msgid "_New Game"
+msgstr "Yeni _Oyun"
+
+msgid "_Redo Move"
+msgstr "_Yeniden Oyna"
+
+msgid "_Reset"
+msgstr "_Sıfırla"
+
+msgid "_Restart"
+msgstr "_Tekrar Başla"
+
+msgid "_Undo Move"
+msgstr "G_eriye Oyna"
+
+msgid "_Deal"
+msgstr "_Dağıt"
+
+msgid "_Leave Fullscreen"
+msgstr "_Tam Ekranı Terket"
+
+msgid "Network _Game"
+msgstr "Ağ O_yunu"
+
+msgid "L_eave Game"
+msgstr "Oyundan _ayrıl"
+
+msgid "Player _List"
+msgstr "Oyuncu _Listesi"
+
+msgid "_Pause"
+msgstr "_Duraklat"
+
+msgid "Res_ume"
+msgstr "_Devam et"
+
+msgid "_Scores"
+msgstr "_Puanlar"
+
+msgid "_End Game"
+msgstr "_Oyunu Bitir"
+
+msgid "_About"
+msgstr "H_akkında"
+
+msgid "_Cancel"
+msgstr "İptal _et"
+
+msgid "_Close"
+msgstr "_Kapat"
+
+msgid "_OK"
+msgstr "_Tamam"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s özgür bir yazılımdır; yeniden dağıtabilir ve/veya Özgür Yazılım Vakfı "
+"tarafından yayınlanan GNU Genel Kamu Lisansının sürüm %d veya (sizin "
+"seçiminiz) daha sonraki sürümlerinin şartları içerisinde değiştirebilirsiniz."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s faydalı olması umuduyla fakat HERHANGİ BİR GARANTİ OLMADAN; hatta "
+"ORTALAMA kalite garantisi veya BELLİ BİR AMACA UYGUNLUK ima etmeden "
+"dağıtılmaktadır. Detaylar için GNU Genel Kamu Lisansı'na bakınız."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"%s ile birlikte GNU Genel Kamu Lisansı'nın bir kopyasını almış olmalısınız; "
+"eğer almadıysanız Özgür Yazılım Vakfı, 51 Franklin Sokağı, Beşinci Kat, "
+"Boston, MA 02110-1301  USA adresine yazın"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Bu programla birlikte GNU Genel Kamu Lisansının bir kopyasını almış "
+"olmalısınız. Almadıysanız, <http://www.gnu.org/licenses/> adresine bakın."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "YirmiBir - %s"
+
+msgid "_Game"
+msgstr "_Oyun"
+
+msgid "_View"
+msgstr "_Görünüm"
+
+msgid "Restart the current game"
+msgstr "Oyunu yeniden başlat"
+
+msgid "Show a hint"
+msgstr "Bir ipucu göster"
+
+msgid "_Settings"
+msgstr "_Ayarlar"
+
+msgid "_Control"
+msgstr "_Kontrol"
+
+msgid "D_eal"
+msgstr "_Dağıt"
+
+msgid "Deal a new hand"
+msgstr "Yeni bir el dağıt"
+
+msgid "_Hit"
+msgstr "_Hit"
+
+msgid "Add a card to the hand"
+msgstr "Ele yeni bir kart al"
+
+msgid "_Stand"
+msgstr "_Bekle"
+
+msgid "Stop adding cards to the hand"
+msgstr "Ele kart almayı durdur"
+
+msgid "S_urrender"
+msgstr "_Teslim"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "Bahisinizin yarısı için bu eli kopyala"
+
+msgid "_Double down"
+msgstr "_Çift altı"
+
+msgid "Double your wager for a single hit"
+msgstr "Tek bir sefer için bahsinizi ikiye çıkartın"
+
+msgid "S_plit the hand"
+msgstr "_Eli böl"
+
+msgid "Split cards in two new hands"
+msgstr "_Kartları iki yeni ele böl"
+
+msgid "_Help"
+msgstr "_Yardım"
+
+msgid "_Toolbar"
+msgstr "_Araç çubuğu"
+
+msgid "Show toolbar"
+msgstr "Araç çubuğunu göster"
+
+msgid "Cards left:"
+msgstr "Kalan kartlar:"
+
+msgid "Wager:"
+msgstr "Bahis:"
+
+msgid "Balance:"
+msgstr "Denge:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Bahsinizi koyun yada bir dağıtın"
+
+msgid "Blackjack rule set to use"
+msgstr "Kullanılacak blackjack kuralı"
+
+msgid "Card Style"
+msgstr "Kart Stili"
+
+msgid "Would you like insurance?"
+msgstr "Sigorta ister misiniz?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"Sigorta dağıtıcının açık kartı as olduğunda teklif edilen doğal 21 (ya da "
+"blackjack) oaln asıl bahisin %50'sini oluşturan ek bahistir. Eğer dağıtıcı "
+"doğal 21'e sahipse oyuncu iki kere öder."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Bahsinizi koyun ve yeni bir el çekmek için beyaz sınırlara tıklayın."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Bahsinizi belirtin veya yeni bir el için kartların üzerine tıklayın."
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack Tercihleri"
+
+msgid "Game"
+msgstr "Oyun"
+
+msgid "_Display hand probabilities"
+msgstr "_Eldeki olasılıkları göster"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "Hızlı _dağıt (kartlar arasında bekleme yok)"
+
+msgid "_Never take insurance"
+msgstr "_Asla sigorta alma"
+
+msgid "_Reset Balance"
+msgstr "_Hesabı Sıfırla"
+
+msgid "Rules"
+msgstr "Kurallar"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "Decks"
+msgstr "Desteler"
+
+msgid "Hit Soft 17"
+msgstr "Hit Soft 17"
+
+msgid "Double Any Total"
+msgstr "Toplamın İki katı"
+
+msgid "Double 9"
+msgstr "Çift 9"
+
+msgid "Double Soft"
+msgstr "Çift Soft"
+
+msgid "Double After Hit"
+msgstr "Hit'den Sonra Çiftle"
+
+msgid "Double After Split"
+msgstr "Ayrılmadan Sonra Çiftle"
+
+msgid "Resplit"
+msgstr "Tekrar ayır"
+
+msgid "Resplit Aces"
+msgstr "Asları tekrar ayır"
+
+msgid "Surrender"
+msgstr "Teslim"
+
+msgid "Dealer Speed"
+msgstr "Dağıtıcı Hızı"
+
+msgid "Click to double your wager"
+msgstr "Bahsinizi iki katına çıkarmak için tıklayın"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Bahsinizi %.2f kadar arttırmak için iki kere tıklayın"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Bahsinizi %.2f kadar azaltmak için iki kere tıklayın"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"Başka bir kart çekmek için tıklayın; kartı ayrılmıs ikililerin üzerine "
+"sürükleyin"
+
+msgid "Click to deal another card"
+msgstr "Başka bir kart çek"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Elinize kart alma işini bitirmek için tıklayın"
+
+msgid "Click to deal a new hand"
+msgstr "Yeni bir el dağıtmak için tıklayın"
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjak istenen dosyayı yükleyemiyor"
+
+msgid "Please check your Blackjack installation"
+msgstr "Lütfen Blackjack kurulumunuzu kontrol edin"
+
+msgid "The best option is to stand"
+msgstr "Beklemek en iyi seçim"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Bekleme demek elinize kart eklemeyi bırakmanız anlamına gelir.  Kontrol "
+"menüsündeki seçeneği seçerek ya da dağıtıcının kartlarına tıklayarak bunu "
+"yapabilirsiniz."
+
+msgid "The best option is to hit"
+msgstr "Hit için en iyi seçim"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Hit demek elinize bir başka kağıt almanız demektir.   Kontrol menüsündeki "
+"seçeneği seçerek ya da kendi kartlarına tıklayarak bunu yapabilirsiniz."
+
+msgid "The best option is to double down"
+msgstr "Çift aşağılamak için en iyi seçim"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Çift aşağı demek başlangıç bahsini iki katına çıkarmak ve sadece bir fazla "
+"kart almak demektir.  Kontrol menüsündeki seçeneği seçerek ya da pencerenin "
+"altındaki çiplere tıklayarak yapabilirsiniz."
+
+msgid "The best option is to split"
+msgstr "Split için en iyi seçim"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Bölmek demek mevcut elinizi iki ayrı ele bölmek demektir. Kontrol "
+"menüsündeki seçeneği seçerek ya da kartlarınızdan birini taşıyıp kenara "
+"bırakarak yapabilirsiniz."
+
+msgid "The best option is to surrender"
+msgstr "Teslim etmek en iyi seçim"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Teslim demek bahsin yarısından vazgeçip eli tamamlamamak demektir.  Kontrol "
+"menüsü seçeneğini seçerek yapabilirsiniz."
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"BlackJack gazino tarzı bir kart oyunudur.\n"
+"\n"
+"BlackJack GNOME Oyunları'nın bir parçasıdır."
+
+msgid "GNOME Games web site"
+msgstr "GNOME Oyunları web sitesi"
+
+msgid "translator-credits"
+msgstr "Barış Çiçek <baris@teamforce.name.tr>"
+
+msgid "Computing basic strategy..."
+msgstr "Ana strateji hesaplanıyor..."
+
+msgid "Bust"
+msgstr "Bust"
+
+msgid "Blackjack!"
+msgstr "Yirmibir!"
+
+msgid "Soft"
+msgstr "Soft"
+
+msgid "Win"
+msgstr "Kazan"
+
+msgid "Push"
+msgstr "İttir"
+
+msgid "Lose"
+msgstr "Kaybet"
+
+msgid "Player expected values"
+msgstr "Oyuncuden beklenen değerler"
+
+msgid "Stand"
+msgstr "Bekle"
+
+msgid "Hit"
+msgstr "Hit"
+
+msgid "Double"
+msgstr "Double"
+
+msgid "Split"
+msgstr "Split"
+
+msgid "Dealer hand probabilities"
+msgstr "Dagıtıçı eli olasılıkları"

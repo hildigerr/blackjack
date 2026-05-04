@@ -5,5 +5,18 @@ SRCS=$(addprefix src/,${SRCFILES})
 CFLAGS=`pkgconf --cflags --libs gtk+-2.0 glib-2.0 libxml-2.0 librsvg-2.0` -DENABLE_CARD_THEME_FORMAT_SVG -DHAVE_RSVG
 LIBS=`pkgconf --libs gtk+-2.0 glib-2.0 libxml-2.0 librsvg-2.0` -L/usr/lib64 -lstdc++ -lm -lz -lrsvg-2
 
+POS := $(wildcard po/*.po)
+MOS := $(POS:.po=.mo)
+
 blackjack: ${SRCS}
 	gcc -g -Wno-narrowing -Wno-deprecated-declarations ${SRCS} ${CFLAGS} ${LIBS} -o $@
+
+po: $(POS)
+
+mo: $(MOS)
+
+po/%.po: po/blackjack.pot
+	msgmerge --update --no-location $@ $<
+
+po/%.mo: po/%.po
+	msgfmt $< -o $@

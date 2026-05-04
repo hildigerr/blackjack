@@ -1,0 +1,584 @@
+# translation of gnome-games to Kinyarwanda.
+# Copyright (C) 2005 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-games package.
+# Steve Murphy <murf@e-tools.com>, 2005
+# Steve performed initial rough translation from compendium built from translations provided by the following translators:
+# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
+# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
+# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
+# Carole Karema <karemacarole@hotmail.com>, 2005.
+# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
+# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
+# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games 2.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2005-03-28 19:35-0700\n"
+"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
+"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"Language: rw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "OYA Ibirimo Ishusho"
+
+msgid "Error"
+msgstr ""
+
+#, fuzzy
+msgid "View help for this game"
+msgstr "Ifashayobora kugirango iyi"
+
+#, fuzzy
+msgid "End the current game"
+msgstr "KIGEZWEHO"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Get a hint for your next move"
+msgstr "a kugirango Komeza>> Kwimura"
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Gutangira a Gishya"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new game"
+msgstr "Gutangira a Gishya"
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "i"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+#, fuzzy
+msgid "Redo the undone move"
+msgstr "Iheruka Kwimura"
+
+#, fuzzy
+msgid "Restart the game"
+msgstr "KIGEZWEHO"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "KIGEZWEHO"
+
+#, fuzzy
+msgid "View the scores"
+msgstr "i"
+
+#, fuzzy
+msgid "Undo the last move"
+msgstr "Iheruka Kwimura"
+
+#, fuzzy
+msgid "About this game"
+msgstr "iyi"
+
+msgid "Close this window"
+msgstr ""
+
+#, fuzzy
+msgid "Configure the game"
+msgstr "i"
+
+#, fuzzy
+msgid "Quit this game"
+msgstr "iyi"
+
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\dbgui\validate.src:TP_VALIDATION_INPUTHELP.FL_CONTENT.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\dbgui\validate.src:TP_VALIDATION_ERROR.FL_CONTENT.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\navipi\navipi.src:RID_SCDLG_NAVIGATOR.TBX_CMD.IID_ZOOMOUT.text
+# #-#-#-#-#  sc.pot (Gnome 2.12)  #-#-#-#-#
+# sc/source\ui\navipi\navipi.src:SCSTR_CONTENT_ROOT.text
+#, fuzzy
+msgid "_Contents"
+msgstr "Ibigize"
+
+msgid "_Fullscreen"
+msgstr ""
+
+msgid "_Hint"
+msgstr ""
+
+# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_NEW.text
+#, fuzzy
+msgid "_New"
+msgstr "Gishya"
+
+msgid "_New Game"
+msgstr ""
+
+msgid "_Redo Move"
+msgstr ""
+
+# offmgr/source\offapp\dialog\optgdlg.src:OFA_TP_MISC.PB_HELPAGENT_RESET.text
+#, fuzzy
+msgid "_Reset"
+msgstr "Kugarura"
+
+# #-#-#-#-#  setup2.pot (Gnome 2.12)  #-#-#-#-#
+# setup2/source\ui\app.src:STR_RESTART_BTN_YES.text
+# #-#-#-#-#  setup2.pot (Gnome 2.12)  #-#-#-#-#
+# setup2/source\ui\pages\phavefun.src:RESID_PAGE_PAGEHAVEFUN.STR_RESTART_BTN_YES.text
+# #-#-#-#-#  setup2.pot (Gnome 2.12)  #-#-#-#-#
+# setup2/source\ui\pages\vefun.src:RESID_PAGE_PAGEHAVEFUN.STR_RESTART_BTN_YES.text
+#, fuzzy
+msgid "_Restart"
+msgstr "Ongera utangire"
+
+msgid "_Undo Move"
+msgstr ""
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Ubwoko"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "Gutangira"
+
+msgid "Player _List"
+msgstr ""
+
+# 4630
+#, fuzzy
+msgid "_Pause"
+msgstr "akaruhuko"
+
+# offmgr/source\offapp\dialog\optgdlg.src:OFA_TP_MISC.PB_HELPAGENT_RESET.text
+#, fuzzy
+msgid "Res_ume"
+msgstr "Kugarura"
+
+msgid "_Scores"
+msgstr ""
+
+#, fuzzy
+msgid "_End Game"
+msgstr "Impera"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr ""
+
+msgid "_Game"
+msgstr ""
+
+# #-#-#-#-#  basctl.pot (Gnome 2.12)  #-#-#-#-#
+# basctl/source\basicide\basidesh.src:RID_BASICMENU.MN_VIEW.text
+# #-#-#-#-#  basctl.pot (Gnome 2.12)  #-#-#-#-#
+# basctl/source\basicide\basidesh.src:RID_BASICPLUGINMENU.MN_PLVIEW.text
+#, fuzzy
+msgid "_View"
+msgstr "Kureba"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "KIGEZWEHO"
+
+msgid "Show a hint"
+msgstr ""
+
+#, fuzzy
+msgid "_Settings"
+msgstr "Amagenamiterere"
+
+#, fuzzy
+msgid "_Control"
+msgstr "Igenzura"
+
+msgid "D_eal"
+msgstr ""
+
+#, fuzzy
+msgid "Deal a new hand"
+msgstr "a Gishya"
+
+# 2815
+#, fuzzy
+msgid "_Hit"
+msgstr "kanda"
+
+#, fuzzy
+msgid "Add a card to the hand"
+msgstr "a Kuri"
+
+msgid "_Stand"
+msgstr ""
+
+#, fuzzy
+msgid "Stop adding cards to the hand"
+msgstr "Wongera Kuri"
+
+msgid "S_urrender"
+msgstr ""
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+#, fuzzy
+msgid "_Double down"
+msgstr "Hasi"
+
+#, fuzzy
+msgid "Double your wager for a single hit"
+msgstr "Cyangwa a"
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "i"
+
+#, fuzzy
+msgid "Split cards in two new hands"
+msgstr "Wongera Kuri"
+
+#, fuzzy
+msgid "_Help"
+msgstr "Ifashayobora"
+
+#, fuzzy
+msgid "_Toolbar"
+msgstr "Umwanyabikoresho"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Erekana UmwanyaBikoresho"
+
+#, fuzzy
+msgid "Cards left:"
+msgstr "Ibumoso:"
+
+msgid "Wager:"
+msgstr ""
+
+msgid "Balance:"
+msgstr ""
+
+#, fuzzy
+msgid "Place your wager or deal a hand"
+msgstr "Cyangwa a"
+
+#, fuzzy
+msgid "Blackjack rule set to use"
+msgstr "Gushyiraho Kuri Gukoresha"
+
+msgid "Card Style"
+msgstr ""
+
+#, fuzzy
+msgid "Would you like insurance?"
+msgstr "nka"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"ni a Bya 50 %% Bya Umwimerere Umumamyi a 21 ni Ryari: Hejuru ni Umumamyi a "
+"21 Hanyuma ni MAHARAKUBIRI"
+
+#, fuzzy
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "Na Kanda in Umweru Imbata Kuri a Gishya"
+
+#, fuzzy
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "Cyangwa Kanda ku Kuri a Gishya"
+
+msgid "Blackjack Preferences"
+msgstr ""
+
+msgid "Game"
+msgstr ""
+
+msgid "_Display hand probabilities"
+msgstr ""
+
+#, fuzzy
+msgid "_Quick deals (no delay between each card)"
+msgstr "Oya Gutinda hagati"
+
+msgid "_Never take insurance"
+msgstr ""
+
+msgid "_Reset Balance"
+msgstr ""
+
+msgid "Rules"
+msgstr ""
+
+msgid "Name"
+msgstr "Izina"
+
+msgid "Decks"
+msgstr ""
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr ""
+
+#, fuzzy
+msgid "Double 9"
+msgstr "9"
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr ""
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr ""
+
+msgid "Resplit Aces"
+msgstr ""
+
+msgid "Surrender"
+msgstr ""
+
+msgid "Dealer Speed"
+msgstr ""
+
+#, fuzzy
+msgid "Click to double your wager"
+msgstr "Kuri MAHARAKUBIRI"
+
+#, fuzzy, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Kanda Kuri ku"
+
+#, fuzzy, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Kanda Kuri ku"
+
+#, fuzzy
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Kuri Kurura Kuri Gutandukanya"
+
+#, fuzzy
+msgid "Click to deal another card"
+msgstr "Kuri"
+
+#, fuzzy
+msgid "Click to finish adding cards to your hand"
+msgstr "Kuri Kurangiza Wongera Kuri"
+
+#, fuzzy
+msgid "Click to deal a new hand"
+msgstr "Kuri a Gishya"
+
+#, fuzzy
+msgid "Blackjack can't load the requested file"
+msgstr "Ibirimo IDOSIYE"
+
+#, fuzzy
+msgid "Please check your Blackjack installation"
+msgstr "Kugenzura... iyinjizaporogaramu"
+
+#, fuzzy
+msgid "The best option is to stand"
+msgstr "Ihitamo ni Kuri"
+
+#, fuzzy
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Kuri Guhagarara Wongera Kuri iyi ku ku Cyangwa ku Ihitamo Bivuye Ibikubiyemo"
+
+#, fuzzy
+msgid "The best option is to hit"
+msgstr "Ihitamo ni Kuri kanda"
+
+#, fuzzy
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"kanda Kuri Kongeramo Kuri iyi ku Rimwe ku Cyangwa ku Ihitamo Bivuye "
+"Ibikubiyemo"
+
+#, fuzzy
+msgid "The best option is to double down"
+msgstr "Ihitamo ni Kuri MAHARAKUBIRI Hasi"
+
+#, fuzzy
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"MAHARAKUBIRI Hasi Kuri MAHARAKUBIRI Na Akira Birenzeho iyi ku Rimwe ku ku "
+"Hasi: Bya Idirishya Cyangwa ku Ihitamo Bivuye Ibikubiyemo"
+
+#, fuzzy
+msgid "The best option is to split"
+msgstr "Ihitamo ni Kuri Gutandukanya"
+
+#, fuzzy
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Gutandukanya Kuri Kugabanya KIGEZWEHO iyi ku Bya Na Bidakora Kuri Cyangwa ku "
+"Ihitamo Bivuye Ibikubiyemo"
+
+#, fuzzy
+msgid "The best option is to surrender"
+msgstr "Ihitamo ni Kuri"
+
+#, fuzzy
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr "Kuri Hejuru Na OYA Byuzuye iyi ku Ihitamo Bivuye Ibikubiyemo"
+
+msgid "Blackjack"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr "a IMISUSIRE"
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Seriveri"
+
+#, fuzzy
+msgid "translator-credits"
+msgstr "Umusemuzi"
+
+#, fuzzy
+msgid "Computing basic strategy..."
+msgstr "BASIC"
+
+msgid "Bust"
+msgstr ""
+
+msgid "Blackjack!"
+msgstr ""
+
+msgid "Soft"
+msgstr "Yoroshe"
+
+msgid "Win"
+msgstr ""
+
+msgid "Push"
+msgstr ""
+
+msgid "Lose"
+msgstr ""
+
+#, fuzzy
+msgid "Player expected values"
+msgstr "Ikitezwe: Uduciro"
+
+msgid "Stand"
+msgstr ""
+
+# 2815
+#, fuzzy
+msgid "Hit"
+msgstr "kanda"
+
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\chardlg.src:RID_SVXPAGE_CHAR_EFFECTS.LB_UNDERLINE.3.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\chardlg.src:RID_SVXPAGE_CHAR_EFFECTS.LB_STRIKEOUT.3.text
+# #-#-#-#-#  svx.pot (Gnome 2.12)  #-#-#-#-#
+# svx/source\dialog\paragrph.src:RID_SVXPAGE_STD_PARAGRAPH.LB_LINEDIST.3.text
+msgid "Double"
+msgstr "Bibiri"
+
+# sc/source\ui\src\globstr.src:RID_GLOBSTR.STR_UNDO_REMERGE.text
+msgid "Split"
+msgstr "Gutandukanya"
+
+msgid "Dealer hand probabilities"
+msgstr ""

@@ -1,0 +1,506 @@
+# Dzongkha translation of gnome-games
+# Copyright @ 2006 Free Software Foundation, Inc.
+# Mindu Dorji
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD.dz\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-09-17 14:12+0530\n"
+"Last-Translator: Dawa pemo <daws_403@hotmail.com>\n"
+"Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: BHUTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "གྲོགས་རམ་ཡིག་སྣོད་ \"%s.%s\" འཚོལ་མ་འཐོབ"
+
+#, fuzzy, c-format
+msgid "Could not show help for “%s”"
+msgstr "\"%s\"གྲོགས་རམ་སྟོན་མ་ཚུགས"
+
+msgid "Could not show link"
+msgstr "འབྲེལ་མཐུད་སྟོན་མ་ཚུགས"
+
+msgid "Error"
+msgstr "འཛོལ་བ་"
+
+msgid "View help for this game"
+msgstr "རྩེདམོ་་འདི་གི་དོན་ལུ་ གྲོགས་རམ་སྟོན།"
+
+msgid "End the current game"
+msgstr "ད་ལྟོའི་རྩེདམོ་དེ་མཇུག་བསྡུ།"
+
+msgid "Toggle fullscreen mode"
+msgstr "གསལ་གཞི་གང་བའི་ཐབས་ལམ་སོར་སྟོན"
+
+msgid "Get a hint for your next move"
+msgstr "ཁྱོད་ཀྱི་ཤུལ་མའི་སྤོ་སྐོར་གྱི་དོན་ལུ་ བརྡ་མཚོན་ཅིག་ལེན།"
+
+msgid "Leave fullscreen mode"
+msgstr "གསལ་གཞི་གང་བའི་ཐབས་ལམ་བཞག"
+
+msgid "Start a new multiplayer network game"
+msgstr "སྣ་མང་རྩེ་མའི་ཡོངས་འབྲེལ་རྩེདམོ་གསརཔ་ཅིག་ འགོ་བཙུགས་"
+
+msgid "End the current network game and return to network server"
+msgstr "ད་ལྟོའི་ཡོངས་འབྲེལ་རྩེདམོ་འདི་མཇུག་བསྡུ་སྟེ་ ཡོངས་འབྲེལ་སར་བར་ལུ་ སླར་ལོག་འབད་"
+
+msgid "Start a new game"
+msgstr "རྩེདམོ་གསརཔ་ཅིག་ འགོ་བཙུགས།"
+
+msgid "Pause the game"
+msgstr "རྩེདམོ་ཐེམ།"
+
+msgid "Show a list of players in the network game"
+msgstr "ཡོངས་འབྲེལ་རྩེདམོ་འདི་ནང་ རྩེད་མའི་ཐོ་ཡིག་ཅིག་སྟོན་"
+
+msgid "Redo the undone move"
+msgstr "སྤོ་བཤོལ་འབད་མི་ སྤོ་བཤུད་དེ་ ལོག་འབད།"
+
+msgid "Restart the game"
+msgstr "རྩེདམོ་ལོག་འགོ་བཙུགས།"
+
+msgid "Resume the paused game"
+msgstr "ཐེམ་སྟེ་ཡོད་པའི་རྩེདམོ་དེ་ བསྐྱར་ལོག་འབད།"
+
+msgid "View the scores"
+msgstr "སྐུགས་ཚུ་སྟོན།"
+
+msgid "Undo the last move"
+msgstr "མཐའ་མཇུག་གི་སྤོ་བཤུད་དེ་ འབད་བཤོལ་འབད།"
+
+msgid "About this game"
+msgstr "རྩེད་ཐེངས་འདི་གི་སྐོར་ལས།"
+
+msgid "Close this window"
+msgstr "ཝིན་ཌོ་འདི་ཁ་བསྡམས"
+
+msgid "Configure the game"
+msgstr "རྩེད་མོའི་དེ་རིམ་སྒྲིག་འབད།"
+
+msgid "Quit this game"
+msgstr "རྩེདམོ་འདི་སྤངས།"
+
+msgid "_Contents"
+msgstr "ནང་དོན་ཚུ།(_C)"
+
+msgid "_Fullscreen"
+msgstr "གསལ་གཞི་གངམ།(_F)"
+
+msgid "_Hint"
+msgstr "བརྡ་མཚོན།(_H)"
+
+msgid "_New"
+msgstr "གསརཔ།(_N)"
+
+msgid "_New Game"
+msgstr "རྩེདམོ་གསརཔ།(_N)"
+
+msgid "_Redo Move"
+msgstr "སྤོ་བཤུད་ལོག་འབད།(_R)"
+
+msgid "_Reset"
+msgstr "སླར་སྒྲིག(_R)"
+
+msgid "_Restart"
+msgstr "ལོག་འགོ་བཙུགས།(_R)"
+
+msgid "_Undo Move"
+msgstr "སྤོ་བཤུད་བཤོལ།(_U)"
+
+msgid "_Deal"
+msgstr "བཀྲམ་(_D)"
+
+msgid "_Leave Fullscreen"
+msgstr "གསལ་གཞི་གངམ་བཞག(_L)"
+
+msgid "Network _Game"
+msgstr "ཡོངས་འབྲེལ་རྩེདམོ་(_G)"
+
+msgid "L_eave Game"
+msgstr "རྩེདམོ་བཞག་(_e)"
+
+msgid "Player _List"
+msgstr "རྩེད་མིའི་ཐོ་ཡིག་(_L)"
+
+msgid "_Pause"
+msgstr "ཐེམ།(_P)"
+
+msgid "Res_ume"
+msgstr "བསྐྱར་ལོག(_u)"
+
+msgid "_Scores"
+msgstr "སྐུགས་གྲངས།(_S)"
+
+msgid "_End Game"
+msgstr "རྩེདམོ་མཇུག་བསྡུ།(_E)"
+
+msgid "_About"
+msgstr "སྐོར་ལས(_A)"
+
+msgid "_Cancel"
+msgstr "ཀེན་སེལ(_C)"
+
+msgid "_Close"
+msgstr "ཁ་བསྡམས(_C)"
+
+msgid "_OK"
+msgstr "བཏུབ(_O)"
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s འདི་རང་དབང་མཉེན་ཆས་ཅིག་ཨིན་  ཁྱོད་ཀྱིས་འདི་ ཡང་ཅིན་ ཆོག་ཐམ་འདི་གི་ ཐོན་རིམ་ ༢  ཡང་ན་ (ཁྱོད་"
+"རའི་གདམ་ཁ་ཐོག་) ཤུལ་ལས་ཀྱི་ཐོན་རིམ་ག་འབད་རུང་  རང་དབང་མཉེན་ཆས་གཞི་ཚོགས་འདི་གིས་ དཔེ་བསྐྲུན་"
+"འབད་དོ་བཟུམ་སྦེ་ ཇི་ཨེན་ཡུ་ཡོངས་ཁྱབ་མི་མང་ཆོག་ཐམ་འདི་གི་ ཐ་སྙད་འོག་ལུ་ ལོག་བགོ་བཀྲམ་དང་/ཡང་ན་"
+"ལེགས་བཅོས་འབད་བཏུབ།"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s འདི་ ཕན་ཐོག་ཅན་ཅིག་གི་རེ་བ་ལུ་དམིགས་ཏེ་ ལོག་བགོ་བཀྲམ་འབད་ཡོདཔ་ཨིན་ དེ་འབདཝ་ད་ ཉེན་ལེན་ག་ནི་"
+"ཡང་མེད་པ་ ཡང་ན་ ཚོང་འབྲེལ་ཡང་ན་ དམིགས་བསལ་དགོས་དོན་ཅིག་གི་དོན་ལུ་ ཚུད་སྒྲིག་གི་ བརྡ་སྟོན་འབད་ཡོད་"
+"པའི་ཉེན་ལེན་མཙེད་པར། རྒྱས་བཤད་ཐེབས་ཀྱི་དོན་ལུ་ ཇི་ཨེན་ཡུ་ཡོངས་ཁྱབ་མི་མང་ཆོག་ཐམ་འདི་བལྟ།"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"ཁྱོད་ཀྱིས་ %s དང་གཅིག་ཁར་ ཇི་ཨེན་ཡུ་ཡོངས་ཁྱབ་མི་མང་ཆོག་ཐམ་འདི་གི་ འདྲ་བཤུས་ཅིག་ཐོབ་ཐོབ་འོང་ མ་ཐོབ་"
+"པ་ཅིན་ རང་དབང་མཉེན་ཆས་གཞི་ཚོགས་  Inc., 51 Franklin Street, Fifth Floor, Boston, "
+"MA  02110-1301  USA ལུ་འབྲི་"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"ཁྱོད་ཀྱིས་ %s དང་གཅིག་ཁར་ ཇི་ཨེན་ཡུ་ཡོངས་ཁྱབ་མི་མང་ཆོག་ཐམ་འདི་གི་ འདྲ་བཤུས་ཅིག་ཐོབ་ཐོབ་འོང་ མ་ཐོབ་"
+"པ་ཅིན་ རང་དབང་མཉེན་ཆས་གཞི་ཚོགས་  Inc., 51 Franklin Street, Fifth Floor, Boston, "
+"MA  02110-1301  USA ལུ་འབྲི་"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "བེལེཀ་ཇེཀ་-%s"
+
+msgid "_Game"
+msgstr "རྩེདམོ།(_G)"
+
+msgid "_View"
+msgstr "མཐོང་སྣང་།(_V)"
+
+msgid "Restart the current game"
+msgstr "ད་ལྟོའི་རྩེདམོ་དེ་ ལོག་འགོ་བཙུགས།"
+
+msgid "Show a hint"
+msgstr "བརྡ་མཚོན་ཅིག་སྟོན།"
+
+msgid "_Settings"
+msgstr "གཞི་སྒྲིག་ཚུ།(_S)"
+
+msgid "_Control"
+msgstr "ཚད་འཛིན།(_C)"
+
+msgid "D_eal"
+msgstr "བཀྲམ་སྤེལ།(_e)"
+
+msgid "Deal a new hand"
+msgstr "ལག་ཚན་གསརཔ་ཅིག་ བཀྲམ་སྤེལ་འབད།"
+
+msgid "_Hit"
+msgstr "ཧེང་བཀལ་བཀྲམ།(_H)"
+
+msgid "Add a card to the hand"
+msgstr "ལག་ཚན་ལུ་ ཏ་སེ་ཅིག་ཁ་སྐོང་རྐྱབས།"
+
+msgid "_Stand"
+msgstr "མཚམས་འཇོག་འབད།(_S)"
+
+msgid "Stop adding cards to the hand"
+msgstr "ལག་ཚན་ལུ་ ཏ་སེ་ཁ་སྐོང་བརྐྱབ་ནི་ མཚམས་འཇོག་འབད།"
+
+msgid "S_urrender"
+msgstr "རྒྱབ་བཤུད་རྐྱབས།(_u)"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "རྒྱན་ཕྱེད་ཀའི་དོན་ལུ་ ལག་ཚན་འདི་རྩིས་སྤྲོད།"
+
+msgid "_Double down"
+msgstr "ལོག་བལྟབ་ཡར་སེང་།(_D)"
+
+msgid "Double your wager for a single hit"
+msgstr "ཧེང་བཀལ་བཀྲམ་ཐེངས་གཅིག་གི་དོན་ལུ་ ཁྱོད་རའི་རྒྱན་ལོག་བལྟབ་འཕར།"
+
+msgid "S_plit the hand"
+msgstr "ལག་ཚན་ཁ་འཕྱལ།(_p)"
+
+msgid "Split cards in two new hands"
+msgstr "ལག་ཚན་གསརཔ་གཉིས་ནང་ ཏ་སེ་ཁ་འཕྱལ།"
+
+msgid "_Help"
+msgstr "གྲོགས་རམ།(_H)"
+
+msgid "_Toolbar"
+msgstr "ལག་ཆས་ཕྲ་རིང་།(_T)"
+
+msgid "Show toolbar"
+msgstr "ལག་ཆས་ཕྲ་རིང་སྟོན།"
+
+msgid "Cards left:"
+msgstr "ཏ་སེ་ལྷག་ལུས་:"
+
+msgid "Wager:"
+msgstr "རྒྱན་: "
+
+msgid "Balance:"
+msgstr "ལྷག་ལུས་:"
+
+msgid "Place your wager or deal a hand"
+msgstr "རྒྱན་བཙུགས་ ཡང་ན་ ལག་ཚན་ཅིག་བཀྲམ་སྤེལ་འབད།"
+
+msgid "Blackjack rule set to use"
+msgstr "བེལེཀ་ཇེཀ་ལམ་ལུགས་ ལག་ལེན་གྱི་དོན་ལུ་ གཞི་སྒྲིག་འབད་ཡི།"
+
+msgid "Card Style"
+msgstr "ཏ་སིའི་བཟོ་རྣམ།"
+
+msgid "Would you like insurance?"
+msgstr "ཁྱོད་ཀྱིས་ཉེན་བཅོལ་འབད་ནི་ཨིན་ན?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"ཉེན་བཅོལ་ཟེར་མི་དེ་ བཀྲམ་སྤེལ་འབད་བའི་ཏ་སེ་ ཁ་ལྷོག་སྟེ་ཡོད་མི་དེ་ ཨེ་ཀ་ཅིག་ཨིན་པའི་སྐབས་ བཀྲམ་སྤེལ་"
+"འབད་མི་ལུ་ རང་བཞིན་༢༡(ཨེ་ཀ་བེལེཀ་ཇེཀ)ཡོདཔ་ད་ རྒྱན་ངོ་མའི་བརྒྱ་ཆ་༥༠ ཟུར་རྒྱན་འབད་ བྱིན་མི་ལུ་གོ བཀྲམ་"
+"སྤེལ་འབད་མི་ལུ་ རང་བཞིན་༢༡ ཡོད་པ་ཅིན་ རྩེད་མི་དེ་ལུ་ ལོག་བལྟབ་བྱིནམ་ཨིན།"
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"ཁྱོད་རའི་རྒྱན་ གཞི་སྒྲིག་འབད་དེ་ ལག་ཚན་གསརཔ་ཅིག་ བཀྲམ་སྤེལ་འབད་ནིའི་དོན་ལུ་ མཐའ་ཐིག་དཀརཔོ་ལུ་ ཨེབ་"
+"གཏང་འབད །"
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+"ཁྱོད་རའི་རྒྱན་ གཞི་སྒྲིག་འབད་ ཡང་ན་ ལག་ཚན་གསརཔ་ཅིག་ བཀྲམ་སྤེལ་འབད་ནིའི་དོན་ལུ་ ཏ་སེ་ཚུ་ལུ་ཨེབ་གཏང་"
+"འབད།"
+
+msgid "Blackjack Preferences"
+msgstr "བེལེཀ་ཇེཀ་གི་དགའ་གདམ་ཚུ།"
+
+msgid "Game"
+msgstr "རྩེད་ཐེངས"
+
+msgid "_Display hand probabilities"
+msgstr "ལག་ཚན་གྱི་འབྱུང་ངེས་ བཀྲམ་སྟོན་འབད།(_D)"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "མགྱོགས་བཀྲམ། (ཏ་སེ་རེའི་བར་ན་ཡུན་འགྱངས་མེདཔ)(_Q)"
+
+msgid "_Never take insurance"
+msgstr "ནམ་ཡང་ཉེན་བཅོལ་མ་ལེན།(_N)"
+
+msgid "_Reset Balance"
+msgstr "ལྷག་ལུས་སླར་སྒྲིག་འབད།(_R)"
+
+msgid "Rules"
+msgstr "ལམ་ལུགས།"
+
+msgid "Name"
+msgstr "མིང་།"
+
+msgid "Decks"
+msgstr "སྦུང་ཚན།"
+
+msgid "Hit Soft 17"
+msgstr "སོཕཊི་ ༡༧ ཧེང་བཀལ་བཀྲམ།"
+
+msgid "Double Any Total"
+msgstr "བསྡོམས་ག་ཅི་ཨིན་རུང་ ལོག་བལྟབ་བཟོ།"
+
+msgid "Double 9"
+msgstr "༩ ལོག་བལྟབ་བཟོ།"
+
+msgid "Double Soft"
+msgstr "སོཕཊི་ལོག་བལྟབ་བཟོ།"
+
+msgid "Double After Hit"
+msgstr "ཧེང་བཀལ་བཀྲམ་པའི་ཤུལ་ལུ་ ལོག་བལྟབ་བཟོ།"
+
+msgid "Double After Split"
+msgstr "ཁ་འཕྱལ་བའི་ཤུལ་ལུ་  ལོག་བལྟབ་བཟོ།"
+
+msgid "Resplit"
+msgstr "ཡང་བསྐྱར་ཁ་འཕྱལ།"
+
+msgid "Resplit Aces"
+msgstr "ཨེ་ཀ་ཚུ་ ཡང་བསྐྱར་ཁ་འཕྱལ།"
+
+msgid "Surrender"
+msgstr "རྒྱབ་བཤུད་རྐྱབས།"
+
+msgid "Dealer Speed"
+msgstr "བཀྲམ་སྤེལ་འབད་མིའི་མགྱོགས་ཚད།"
+
+msgid "Click to double your wager"
+msgstr "ཁྱོད་རའི་རྒྱན་ ལོག་བལྟབ་སེང་ནིའི་དོན་ལུ་ ཨེབ་གཏང་འབད།"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "ཁྱོད་རའི་རྒྱན་%.2f ཡར་སེང་གི་དོན་ལུ་ ཨེབ་གཏང་ཐེངས་གཉིས་འབད།"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "ཁྱོད་རའི་རྒྱན་%.2f་ མར་ཕབ་ཀྱི་དོན་ལུ་ ཨེབ་གཏང་ཐེངས་གཉིས་འབད།"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+"ཏ་སེ་གཞན་མི་ཅིག་ བཀྲམ་ནིའི་དོན་ལུ་ ཨེབ་གཏང་འབད། ཏ་སེ་དེ་ ཁ་འཕྱལ་ཏེ་ཡོད་མི་ཟུང་ལུ་འཐེན་བཀལ།"
+
+msgid "Click to deal another card"
+msgstr "ཏ་སེ་གཞན་མི་ཅིག་ བཀྲམ་ནིའི་དོན་ལུ་ ཨེབ་གཏང་འབད།"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "ཁྱོད་རའི་ལག་ཚན་ལུ་ ཏ་སེ་ཁ་སྐོང་བཀལ་ནི་ མཇུག་བསྡུ་ནིའི་དོན་ལུ་ ཨེབ་གཏང་འབད།"
+
+msgid "Click to deal a new hand"
+msgstr "ལག་ཚན་གསརཔ་ཅིག་ བཀྲམ་ནིའི་དོན་ལུ་ ཨེབ་གཏང་འབད།"
+
+msgid "Blackjack can't load the requested file"
+msgstr "བེལེཀ་ཇེཀ་གིས་ ཞུ་བ་འབད་མི་ཡིག་སྣོད་དེ་ མངོན་གསལ་འབད་མི་ཚུགས་པས།"
+
+msgid "Please check your Blackjack installation"
+msgstr "ཁྱོད་རའི་བེལེཀ་ཇེཀ་གི་ གཞི་བཙུགས་དེ་ལུ་ ཞིབ་དཔྱད་འབད་གནང་།"
+
+msgid "The best option is to stand"
+msgstr "གདམ་ཁ་དྲག་ཤོས་དེ་ མཚམས་འཇོག་འབད་ནི་ཨིན།"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"མཚམས་འཇོག་འབད་ནི་ ཟེར་མི་དེ་ ཁྱོད་རའི་ལག་ཚན་ལུ་ ཏ་སེ་ཁ་སྐོང་བཀྲམ་ནིའི་ མཚམས་འཇོག་འབད་མི་ལུ་སླབ་"
+"ཨིན། དེ་ཡང་བཀྲམ་སྤེལ་འབད་མིའི་ཏ་སེ་གུ་ ཨེབ་གཏང་འབད་བའི་ཐོག་ལས་དང་ ཡང་ན་ ཚད་འཛིན་དཀར་ཆག་ནང་"
+"ལས་ གདམ་ཁ་སེལ་འཐུའི་ཐོག་ལས་འབད་དགོ"
+
+msgid "The best option is to hit"
+msgstr "གདམ་ཁ་དྲག་ཤོས་དེ་བཀྲམ་ནི་ཨིན།"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr "བཀྲམ་ནི་ཟེར་མི་དེ་ ཁྱོད་རའི་ལག་ཚན་གུ་ ཏ་སེ་གཞན་མི་ཅིག་ ཁ་སྐོང་བཀལ་མི་ལུ་སླབ་ཨིན།"
+
+msgid "The best option is to double down"
+msgstr "གདམ་ཁ་དྲག་ཤོས་དེ་ ལོག་བལྟབ་ཡར་སེང་འབད་ནི་ཨིན།"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"ལོག་བལྟབ་ཡར་སེང་ཟེར་མི་དེ་ ཐོག་མའི་རྒྱན་དེ་ ལོག་བལྟབ་ཡར་སེང་འབད་དེ་ ཏ་སེ་ཧེང་བཀལ་ཅིག་ ལེན་མི་ལུ་"
+"སླབ་ཨིན། དེ་ཡང་སྒོ་སྒྲིག་གི་གཤམ་ལུ་ ཅིབསི་ཚུ་ལུ་ ཐེངས་གཅིག་ཨེབ་གཏང་འབད་བའི་ཐོག་ལས་དང་ ཡང་ཅིན་ ཚད་"
+"འཛིན་དཀར་ཆག་ནང་ལས་ གདམ་ཁ་སེལ་འཐུ་འབད་བའི་ཐོག་ལས་འབད་དགོ"
+
+msgid "The best option is to split"
+msgstr "གདམ་ཁ་དྲག་ཤོས་དེ་ ཁ་འཕྱལ་ནི་ཨིན།"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"ཁ་འཕྱལ་ནི་ཟེར་མི་དེ་ ད་ལྟོ་ཁྱོད་རའི་ལག་པར་ཡོད་མི་ ཏ་སེ་ལག་ཚན་གཅིགཔོ་དེ་ ལག་ཚན་གཉིས་ལུ་བགོ་མི་ལུ་"
+"སླབ་ཨིན། དེ་ཡང་ཁྱོད་རའི་ཏ་སེ་གཅིག་འདྲུད་དེ་ ཟུར་ཁར་བཞག་ཐོག་ལས་དང་ ཡང་ན་ ཚད་འཛིན་དཀར་ཆག་ནང་"
+"ལས་ གདམ་ཁ་སེལ་འཐུ་འབད་བའི་ཐོག་ལས་འབད་དགོ"
+
+msgid "The best option is to surrender"
+msgstr "གདམ་ཁ་དྲག་ཤོས་དེ་ རྒྱབ་བཤུད་བརྐྱབ་ནི་ཨིན།"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"རྒྱབ་བཤུད་བརྐྱབ་ནི་ ཟེར་མི་དེ་ ཁྱོད་རའི་རྒྱན་ཕྱེད་ཀ་བློས་བཏང་སྟེ་ ལག་ཚན་མཇུག་མ་བསྡུཝ་ལས་ བཤོལ་བཞག་མི་"
+"ལུ་སླབ་ཨིན། དེ་ཡང་ཚད་འཛིན་དཀར་ཆག་ནང་ལས་ གདམ་ཁ་སེལ་འཐུ་འབད་བའི་ཐོག་ལས་འབད་དགོ"
+
+msgid "Blackjack"
+msgstr "བེལེཀ་ཇེཀ་ "
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"བེལེཀ་ཇེཀ་འདི་ འགྲན་བསྡུར་ཁང་གི་བཟོ་རྣམ་ཅན་གྱི་ ཤོག་བྱདང་ རྩེདམོ་ཅིག་ཨིན།\n"
+"\n"
+"བེལེཀ་ཇེཀ་་འདི་ ཇི་ནོམ་རྩེད་རིགས་ཀྱི་ ཡན་ལག་ཅིག་ཨིན། "
+
+msgid "GNOME Games web site"
+msgstr "ཇི་ནོམ་རྩེད་མོའི་ཝེབ་ས་ཁོངས"
+
+msgid "translator-credits"
+msgstr ""
+"ཨའི་ཌི་ཨར་སི་གི་མ་དངུལ་རྒྱབ་སྐྱོར་ཐོག་ལས་ བརྡ་དོན་འཕྲུལ་རིག་ལས་ཁུངས་ནང་ སྐད་བསྒྱུར་འབད་ཡི། ཁ་གསལ་གྱི་"
+"དོན་ལུ་ འབྲེལ་བ་འཐབ་ས་: <pema_geyleg@druknet.bt>/<pgeyleg@dit.gov.bt>"
+
+msgid "Computing basic strategy..."
+msgstr "རྩ་རིམ་ཐབས་བྱུས་ གློག་རིག་ནང་བཙུགས།..."
+
+msgid "Bust"
+msgstr "བཱསིཊི།"
+
+msgid "Blackjack!"
+msgstr "བེལེཀ་ཇེཀ"
+
+msgid "Soft"
+msgstr "སོཕཊི།"
+
+msgid "Win"
+msgstr "རྒྱལ་ཁ།"
+
+msgid "Push"
+msgstr "འཕུལ།"
+
+msgid "Lose"
+msgstr "ཕམ་ཁ།"
+
+msgid "Player expected values"
+msgstr "རྩེད་མིའི་རེ་འདོད་གནས་ཁུངས།"
+
+msgid "Stand"
+msgstr "མཚམས་འཇོག"
+
+msgid "Hit"
+msgstr "ཧེང་བཀལ་བཀྲམ་སྤེལ།"
+
+msgid "Double"
+msgstr "ལོག་བལྟབ།"
+
+msgid "Split"
+msgstr "ཁ་འཕྱལ།"
+
+msgid "Dealer hand probabilities"
+msgstr "བཀྲམ་སྤེལ་འབད་མིའི་ལག་ཚན་ངེས་འབྱུང་།"

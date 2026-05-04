@@ -1,0 +1,509 @@
+# translation of gnome-games.master.ta.po to Tamil
+# translation of gnome-games.HEAD.ta.po to
+# translation of ta.po to
+# Tamil Translation of Gnome Games
+# Zhakanini (c) 2004
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Zhakanini <tamilpc@ambalam.com>, 2004.
+# Jayaradha N <jaya@pune.redhat.com>, 2004.
+# Felix <ifelix@redhat.com>, 2006.
+# drtvasudevan <agnihot3@gmail.com>, 2006.
+# Dr.T.Vasudevan <agnihot3@gmail.com>, 2007, 2008, 2009.
+# I. Felix <ifelix@redhat.com>, 2008, 2009.
+# Dr.T.vasudevan <agnihot3@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.master.ta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-08-26 12:43+0530\n"
+"Last-Translator: I. Felix <ifelix@redhat.com>\n"
+"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
+"\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "உதவி கோப்பு“%s.%s” காணப்படவில்லை"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "\"%s\" க்கு உதவி காட்ட முடியவில்லை"
+
+msgid "Could not show link"
+msgstr "தொடுப்புகளை காட்ட முடியவில்லை"
+
+msgid "Error"
+msgstr "பிழை"
+
+msgid "View help for this game"
+msgstr "தற்போதைய விளையாட்டிற்கான உதவியை பார்"
+
+msgid "End the current game"
+msgstr "தற்போதைய விளையாட்டை முடி"
+
+msgid "Toggle fullscreen mode"
+msgstr "முழுதிரை பாங்கிற்கு மாறுக"
+
+msgid "Get a hint for your next move"
+msgstr "உங்களின் அடுத்த நகர்வுக்கு உதவி குறிப்பு கொடு"
+
+msgid "Leave fullscreen mode"
+msgstr "முழுத்திரை பாணியை விடவும்"
+
+msgid "Start a new multiplayer network game"
+msgstr "புதிய பலவீரர் வலை விளையாட்டை துவக்குக"
+
+msgid "End the current network game and return to network server"
+msgstr "இப்போதைய பிணைய ஆட்டத்தை முடிவு செய்து பிணைய வழங்கனுக்கு திரும்பவும்."
+
+msgid "Start a new game"
+msgstr "புதிய விளையாட்டை துவக்கு"
+
+msgid "Pause the game"
+msgstr "விளையாட்டை தாமதி"
+
+msgid "Show a list of players in the network game"
+msgstr "பிணைய ஆட்டத்தில் உள்ள வீரர்கள் பட்டியலைக் காட்டு"
+
+msgid "Redo the undone move"
+msgstr "ரத்து செய்த நகர்வை மீளச் செய்"
+
+msgid "Restart the game"
+msgstr "விளையாட்டை மீண்டும் துவக்கு"
+
+msgid "Resume the paused game"
+msgstr "தாமதித்த விளையாட்டை தொடர்"
+
+msgid "View the scores"
+msgstr "மதிப்பெண்களை பார்க்க"
+
+msgid "Undo the last move"
+msgstr "கடைசி செயலை செயல் நீக்கு"
+
+msgid "About this game"
+msgstr "இந்த விளையாட்டு பற்றி"
+
+msgid "Close this window"
+msgstr "இந்த சாளரத்தை மூடு"
+
+msgid "Configure the game"
+msgstr "ஆட்டத்தை அமை"
+
+msgid "Quit this game"
+msgstr "இந்த விளையாட்டை முடி"
+
+msgid "_Contents"
+msgstr "உ_ள்ளடக்கம்"
+
+msgid "_Fullscreen"
+msgstr "_முழுத்திரை"
+
+msgid "_Hint"
+msgstr "_உதவி குறிப்பு"
+
+msgid "_New"
+msgstr "_புதிய"
+
+msgid "_New Game"
+msgstr "_புதிய விளையாட்டு"
+
+msgid "_Redo Move"
+msgstr "_மீளச் செய்"
+
+msgid "_Reset"
+msgstr "_மீட்டமை"
+
+msgid "_Restart"
+msgstr "_மீண்டும் துவக்கு"
+
+msgid "_Undo Move"
+msgstr "_ரத்து செய்"
+
+msgid "_Deal"
+msgstr "_ச சீட்டுகளை பறிமாறு"
+
+msgid "_Leave Fullscreen"
+msgstr "முழுத்திரையை _விடவும்"
+
+msgid "Network _Game"
+msgstr "வலைப்பின்னல் விளையாட்டு"
+
+msgid "L_eave Game"
+msgstr "விளையாட்டை விட்டு வெளியேறுக (_e)"
+
+msgid "Player _List"
+msgstr "போட்டியாளர் பட்டியல்"
+
+msgid "_Pause"
+msgstr "_தாமதி"
+
+msgid "Res_ume"
+msgstr "தொ_டர்"
+
+msgid "_Scores"
+msgstr "_மதிப்பெண்கள்"
+
+msgid "_End Game"
+msgstr "_ஆட்டத்தை முடி"
+
+msgid "_About"
+msgstr "_பற்றி"
+
+msgid "_Cancel"
+msgstr "_ந நீக்கு"
+
+msgid "_Close"
+msgstr "_மூடு"
+
+msgid "_OK"
+msgstr "சரி (_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s இலவச மென் பொருளாகும். நீங்கள் இலவச மென் பொருள் அமைப்பினால் வெளியிடப்பட்ட ஜிஎன்யு பொது "
+"அனுமதிக்கான இந்த %d பதிப்பு அல்லது அடுத்த பதிப்புகள் விதிகளின் படி நீங்கள் (விருப்பப்படி) "
+"மாற்றலாம். அல்லது மீண்டும் பறிமாறலாம்"
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s உபயோகப்படும் என்ற எதிர்பார்ப்புடன் வெளியிடப்படுகிறது. ஆனால் விற்க தகுதி,குறிப்பிட்ட "
+"செயலுக்கான தகுதி உள்பட எந்த உத்திரவாதமும் அளிக்கப்படவில்லை. மேற் கொண்டு விவரங்களுக்கு "
+"ஜிஎன்யு பொது அனுமதிக்கான விதிகளை பார்க்கவும்"
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"%s நிரலுடன் ஜிஎன்யு பொது அனுமதிக்கான விதிகளின் பிரதி உங்களுக்கு கிடைத்திருக்க "
+"வேண்டும். இல்லையானால் கீழ் கண்ட முகவரிக்கு கடிதம் எழுதவும்.Free Software Foundation, "
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA "
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"இந்த நிரலுடன் ஜிஎன்யு பொது அனுமதிக்கான விதிகளின் பிரதி உங்களுக்கு கிடைத்திருக்க "
+"வேண்டும். இல்லையானால் கீழ் கண்ட வலைப்பக்கத்தை பார்க்கவும் <http://www.gnu.org/licenses/>. "
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "ப்ளாக் ஜாக் - %s"
+
+msgid "_Game"
+msgstr "_ஆட்டம்"
+
+msgid "_View"
+msgstr "பார்வை (_V)"
+
+msgid "Restart the current game"
+msgstr "இந்த விளையாட்டை மீண்டும் துவக்கு"
+
+msgid "Show a hint"
+msgstr "உதவிக் குறிப்பு காட்டு"
+
+msgid "_Settings"
+msgstr "_அமைப்புகள்"
+
+msgid "_Control"
+msgstr "(_C)கட்டுப்பாடு"
+
+msgid "D_eal"
+msgstr "சீட்டு பறிமாறு"
+
+msgid "Deal a new hand"
+msgstr "இன்னொரு கை போடு"
+
+msgid "_Hit"
+msgstr "அ_டி"
+
+msgid "Add a card to the hand"
+msgstr "கைக்கு ஒரு சீட்டை சேர்"
+
+msgid "_Stand"
+msgstr "_நில்"
+
+msgid "Stop adding cards to the hand"
+msgstr "கைக்கு சீட்டை சேர்ப்பதை நிறுத்து"
+
+msgid "S_urrender"
+msgstr "_சரணடை"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "உங்கள் பந்தயத்தில் பாதிக்கு இந்த கையை விட்டுவிடலாம்"
+
+msgid "_Double down"
+msgstr "_இதை இரட்டிப்பாக்கு"
+
+msgid "Double your wager for a single hit"
+msgstr "உங்கள் பந்தயத்தை இரட்டிப்பாக்கி ஒரு சீட்டு எடுங்கள்"
+
+msgid "S_plit the hand"
+msgstr "கையை _பிரி"
+
+msgid "Split cards in two new hands"
+msgstr "கையை _பிரித்து இன்னொரு புதிய கை போடலாம்"
+
+msgid "_Help"
+msgstr "உதவி (_H)"
+
+msgid "_Toolbar"
+msgstr "_கருவிபட்டி"
+
+msgid "Show toolbar"
+msgstr "கருவிப்பட்டியை காண்பி"
+
+msgid "Cards left:"
+msgstr "மீந்துள்ள சீட்டுகள்:"
+
+msgid "Wager:"
+msgstr "பந்தயம்:"
+
+msgid "Balance:"
+msgstr "மீதி:"
+
+msgid "Place your wager or deal a hand"
+msgstr "உன் பந்தயத்தை வை அல்லது கை போட்டிடு"
+
+msgid "Blackjack rule set to use"
+msgstr " ப்ளாக் ஜாக் விதிக்கள்"
+
+msgid "Card Style"
+msgstr "சீட்டு பாணி"
+
+msgid "Would you like insurance?"
+msgstr "நீங்கள் காப்பீடு விரும்புகிறீரா?"
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"காப்பீடு என்றால்:பறிமாறுபவரின் திறந்த சீட்டு ஏஸ் ஆக இருந்தால், பறிமாறுபவர் இயல்பான 21 "
+"( ப்ளாக் ஜாக் என்றும் பெயர்) பெற்று இருக்கிறார் என்று 50%% பந்தய தொகையை கூடுதல் பந்தயமாக "
+"வைக்கலாம். பறிமாறுபவருக்கு இயல்பான 21 கிடத்தால் ஆட்டக்காரருக்கு இரட்டிப்பு தொகை "
+"கிடைக்கும்."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "உன் பந்தயம் கட்டி மற்றும் புது போட்டியை ஆரம்பிக்க வெள்ளை வெளிக் கோட்டில் சொடுக்கவும்."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "உன் பந்தயம் கட்டு அல்லது புது போட்டியை ஆரம்பிக்க சீட்டில் சொடுக்கவும்."
+
+msgid "Blackjack Preferences"
+msgstr "ப்ளாக் ஜாக் _விருப்பங்கள்"
+
+msgid "Game"
+msgstr "விளையாட்டு"
+
+msgid "_Display hand probabilities"
+msgstr "நிகழக்கூடிய _வாய்ப்பை காட்டு"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "சீக்கிர போட்டி (சீட்டுக்கு இடையே நேரமாக்காதே)"
+
+msgid "_Never take insurance"
+msgstr "_காப்பீடு எடுத்துக் கொள்ளாதே"
+
+msgid "_Reset Balance"
+msgstr "மீதியை மீட்டமை"
+
+msgid "Rules"
+msgstr "விதிகள்"
+
+msgid "Name"
+msgstr "பெயர்"
+
+msgid "Decks"
+msgstr "தட்டுகள்"
+
+msgid "Hit Soft 17"
+msgstr "மென்மை 17ஐ அடி"
+
+msgid "Double Any Total"
+msgstr "எதாவது ஒரு மொத்தத்தை  இரட்டிப்பாக்கு"
+
+msgid "Double 9"
+msgstr "9 தை இரட்டிப்பாக்கு"
+
+msgid "Double Soft"
+msgstr "மென்மை இரட்டிப்பாக்கு"
+
+msgid "Double After Hit"
+msgstr "அடுத்த சீட்டு கேட்ட பின் இரட்டிப்பாக்கு"
+
+msgid "Double After Split"
+msgstr "பிரித்த பின் இரட்டிப்பாக்கு"
+
+msgid "Resplit"
+msgstr "மீண்டும் பிரி"
+
+msgid "Resplit Aces"
+msgstr "ஏஸ்களை மீண்டும் பிரி"
+
+msgid "Surrender"
+msgstr "சரணடை"
+
+msgid "Dealer Speed"
+msgstr "பறிமாறல் வேகம்"
+
+msgid "Click to double your wager"
+msgstr "உங்கள் பந்தயத்தை இரட்டிப்பாக்க சொடுக்கவும்"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "உங்கள் பந்தயத்தை %.2f கூட்ட இரு சொடுக்கவும்"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "உங்கள் பந்தயத்தை %.2f குறைக்க இரு சொடுக்கவும்"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "இன்னொரு சீட்டை எடுக்க சொடுக்கவும்; ஜோடியை பிரிக்க சீட்டுகளை இழுக்கவும்"
+
+msgid "Click to deal another card"
+msgstr "இன்னொரு சீட்டை எடுக்க சொடுக்கவும்"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "கைக்கு சீட்டை சேர்ப்பதை நிறுத்த சொடுக்கு"
+
+msgid "Click to deal a new hand"
+msgstr "புதிய போட்டியை துவக்க சொடுக்கவும்"
+
+msgid "Blackjack can't load the requested file"
+msgstr " ப்ளாக் ஜாக் வேண்டுகோளிட்ட கோப்புகளை ஏற்ற முடியவில்லை"
+
+msgid "Please check your Blackjack installation"
+msgstr "தயவு செய்து உங்கள்  ப்ளாக் ஜாக் நிறுவலை சோதிக்கவும்"
+
+msgid "The best option is to stand"
+msgstr "நிற்பதே சிறந்த தேர்வு"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"நிற்பது என்றால் கைக்கு மேலும் சீட்டுகளை சேர்காதிருப்பது.இதை செய்ய பறிமாறுவோன் சீட்டில் "
+"சொடுக்கு அல்லது மெனுவிலிருந்து தேர்ந்தெடு."
+
+msgid "The best option is to hit"
+msgstr "அடிப்பதே சிறந்த தேர்வு"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"அடிப்பது என்பது உங்கள் கைக்கு மேலும் ஒரு சீட்டு சேர்ப்பது.இதை செய்ய உங்கள் சீட்டில் சொடுக்கு "
+"அல்லது மெனுவிலிருந்து தேர்ந்தெடு."
+
+msgid "The best option is to double down"
+msgstr "இதை இரட்டிப்பாக்கு என்பதே சிறந்த தேர்வு"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+" இதை இரட்டிப்பாக்கு என்பது முதல் பந்தய தொகையை இரட்டிப்பாக்கி ஒரே ஒரு சீட்டு பெறுதல்.இதை "
+"செய்ய உங்கள் சாளரத்தின் அடியில் உள்ள காசு வில்லையில் சொடுக்கு அல்லது மெனுவிலிருந்து "
+"தேர்ந்தெடு."
+
+msgid "The best option is to split"
+msgstr "கையை பிரி என்பதே சிறந்த தேர்வு."
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"கையை பிரி என்பது உங்கள் கையை இரண்டு கைகளாக பிரிப்பதாகும்.இதை செய்ய உங்கள் கையிலிருந்து "
+"ஒரு சீட்டை பக்கத்தில் இழுத்து விடு அல்லது மெனுவிலிருந்து தேர்ந்தெடு."
+
+msgid "The best option is to surrender"
+msgstr "சேர்வதே சிறந்த தேர்வு"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"சரணடை  என்பது உங்கள் பந்தயத்தில் பாதியை கொடுத்து சீட்டு எடுக்காமல் இருப்பதாகும்.இதை செய்ய "
+"மெனுவிலிருந்து தேர்ந்தெடு."
+
+msgid "Blackjack"
+msgstr "ப்ளாக் ஜாக்"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"ப்ளாக் ஜாக் கஸினோ-பாணி சீட்டு விளையாட்டை தரும்.\n"
+"\n"
+"ப்ளாக் ஜாக் க்னோம் விளையாட்டுகளில் ஒரு பகுதி"
+
+msgid "GNOME Games web site"
+msgstr "க்னோம் விளையாட்டு வலையகம்"
+
+msgid "translator-credits"
+msgstr ""
+"Zhakanini <tamilpc@ambalam.com>, 2004 Jayaradha N <jaya@redhat.com>, 2004 "
+"Felix <ifelix@redhat.com>, 2006.drtvasudevan <agnihot3@gmail.com>, 2008"
+
+msgid "Computing basic strategy..."
+msgstr "அடிப்படை வியூகங்களை கணக்கிடுகிறது..."
+
+msgid "Bust"
+msgstr "பணால்!"
+
+msgid "Blackjack!"
+msgstr " ப்ளாக் ஜாக்!"
+
+msgid "Soft"
+msgstr "மென்மை"
+
+msgid "Win"
+msgstr "வெற்றி"
+
+msgid "Push"
+msgstr "தள்ளு"
+
+msgid "Lose"
+msgstr "தோல்வி"
+
+msgid "Player expected values"
+msgstr "போட்டியாளர் எதிர்பார்த்த மதிப்பு"
+
+msgid "Stand"
+msgstr "நில்"
+
+msgid "Hit"
+msgstr "அடி"
+
+msgid "Double"
+msgstr "இரட்டை"
+
+msgid "Split"
+msgstr "பிரி"
+
+msgid "Dealer hand probabilities"
+msgstr "போட்டியாளர் கை நிகழ்வுகள்"

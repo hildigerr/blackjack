@@ -1,0 +1,497 @@
+# GNOME mängude eesti keele tõlge.
+# Estonian translation of GNOME games.
+#
+# Copyright (C) 1999, 2002, 2005, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2007-2009 The GNOME Project.
+# This file is distributed under the same license as the gnome-games package.
+#
+# Lauris Kaplinski <lauris@ariman.ee>, 1999.
+# Tõivo Leedjärv <toivo@linux.ee>, 2002.
+# Ilmar Kerm <ikerm@hot.ee>, 2002.
+# Ivar Smolin <okul@linue.ee>, 2005-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2009-09-05 08:24+0300\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>\n"
+"Language-Team: Estonian <gnome-et@linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "Abiteabe faili „%s.%s” ei leitud"
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr "„%s” jaoks pole võimalik abiteavet näidata"
+
+msgid "Could not show link"
+msgstr "Viita pole võimalik näidata"
+
+msgid "Error"
+msgstr "Viga"
+
+msgid "View help for this game"
+msgstr "Abiteabe kuvamine selle mängu kohta"
+
+msgid "End the current game"
+msgstr "Käesoleva mängu lõpetamine"
+
+msgid "Toggle fullscreen mode"
+msgstr "Täisekraanivaate sisse- ja väljalülitamine"
+
+msgid "Get a hint for your next move"
+msgstr "Vihje järgmise käigu tegemiseks"
+
+msgid "Leave fullscreen mode"
+msgstr "Täisekraanvaatest lahkumine"
+
+msgid "Start a new multiplayer network game"
+msgstr "Uue, mitme mängijaga võrgumängu alustamine"
+
+msgid "End the current network game and return to network server"
+msgstr "Praeguse võrgumängu lõpetamine ja naasmine võrguserverisse"
+
+msgid "Start a new game"
+msgstr "Uue mängu alustamine"
+
+msgid "Pause the game"
+msgstr "Mängu peatamine"
+
+msgid "Show a list of players in the network game"
+msgstr "Võrgumängus osalevate mängijate nimekirja näitamine"
+
+msgid "Redo the undone move"
+msgstr "Unustatud käigu uuestitegemine"
+
+msgid "Restart the game"
+msgstr "Käesoleva mängu taasalustamine"
+
+msgid "Resume the paused game"
+msgstr "Peatatud mängu jätkamine"
+
+msgid "View the scores"
+msgstr "Tulemuste vaatamine"
+
+msgid "Undo the last move"
+msgstr "Viimase käigu unustamine"
+
+msgid "About this game"
+msgstr "Mängust lähemalt"
+
+msgid "Close this window"
+msgstr "Selle akna sulgemine"
+
+msgid "Configure the game"
+msgstr "Mängu seadistamine"
+
+msgid "Quit this game"
+msgstr "Mängu lõpetamine"
+
+msgid "_Contents"
+msgstr "_Sisukord"
+
+msgid "_Fullscreen"
+msgstr "_Täisekraan"
+
+msgid "_Hint"
+msgstr "_Vihje"
+
+msgid "_New"
+msgstr "_Uus"
+
+msgid "_New Game"
+msgstr "_Uus mäng"
+
+msgid "_Redo Move"
+msgstr "T_aasta käik"
+
+msgid "_Reset"
+msgstr "_Lähtesta"
+
+msgid "_Restart"
+msgstr "_Alusta uuesti"
+
+msgid "_Undo Move"
+msgstr "_Tühista käik"
+
+msgid "_Deal"
+msgstr "_Jaga"
+
+msgid "_Leave Fullscreen"
+msgstr "_Välju täisekraanvaatest"
+
+msgid "Network _Game"
+msgstr "Võr_gumäng"
+
+msgid "L_eave Game"
+msgstr "_Lahku mängust"
+
+msgid "Player _List"
+msgstr "Mängijate _nimekiri"
+
+msgid "_Pause"
+msgstr "_Peata"
+
+msgid "Res_ume"
+msgstr "_Jätka"
+
+msgid "_Scores"
+msgstr "_Tulemused"
+
+msgid "_End Game"
+msgstr "_Lõpeta mäng"
+
+msgid "_About"
+msgstr "_Programmist lähemalt"
+
+msgid "_Cancel"
+msgstr "_Tühista"
+
+msgid "_Close"
+msgstr "Sul_ge"
+
+msgid "_OK"
+msgstr "_Olgu"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s on vaba tarkvara. Te võite seda edasi levitada ja/või muuta vastavalt GNU "
+"Üldise Avaliku Litsentsi tingimustele, nagu need on Vaba Tarkvara Fondi "
+"poolt avaldatud; kas Litsentsi versioon number %d või (vastavalt Teie "
+"valikule) ükskõik milline hilisem versioon."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"Programmi %s levitatakse lootuses, et see on kasulik, kuid ILMA IGASUGUSE "
+"GARANTIITA; isegi KESKMISE/TAVALISE KVALITEEDIGARANTIITA või SOBIVUSELE "
+"TEATUD KINDLAKS EESMÄRGIKS. Üksikasjade suhtes vaata GNU Üldist Avalikku "
+"Litsentsi."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Te peaks olema saanud GNU Üldise Avaliku Litsentsi koopia koos programmiga "
+"%s; kui ei, siis võtke ühendust Free Software Foundation'iga, 51 Franklin "
+"Street, Fifth Floor, Boston, MA  02110-1301  USA"
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Te peaks olema saanud GNU Üldise Avaliku Litsentsi koopia koos programmiga "
+"%s; kui ei, siis vaata <http://www.gnu.org/licenses/>."
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "Blackjack - %s"
+
+msgid "_Game"
+msgstr "_Mäng"
+
+msgid "_View"
+msgstr "_Vaade"
+
+msgid "Restart the current game"
+msgstr "Käesoleva mängu taasalustamine"
+
+msgid "Show a hint"
+msgstr "Vihje näitamine"
+
+msgid "_Settings"
+msgstr "_Sätted"
+
+msgid "_Control"
+msgstr "_Juhtimine"
+
+msgid "D_eal"
+msgstr ""
+
+msgid "Deal a new hand"
+msgstr ""
+
+msgid "_Hit"
+msgstr "_Võta lisakaart"
+
+msgid "Add a card to the hand"
+msgstr "Lisakaardi juurdevõtmine"
+
+msgid "_Stand"
+msgstr "_Jää"
+
+msgid "Stop adding cards to the hand"
+msgstr "Kaarte enam juurde ei võeta"
+
+msgid "S_urrender"
+msgstr ""
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr ""
+
+msgid "Double your wager for a single hit"
+msgstr ""
+
+msgid "S_plit the hand"
+msgstr ""
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+msgid "_Help"
+msgstr "A_bi"
+
+msgid "_Toolbar"
+msgstr "Töö_riistariba"
+
+msgid "Show toolbar"
+msgstr "Tööriistariba näitamine"
+
+msgid "Cards left:"
+msgstr "Kaarte järel:"
+
+msgid "Wager:"
+msgstr "Panus:"
+
+msgid "Balance:"
+msgstr "Bilanss:"
+
+msgid "Place your wager or deal a hand"
+msgstr ""
+
+msgid "Blackjack rule set to use"
+msgstr "Blackjacki reeglistik, mida kasutada"
+
+msgid "Card Style"
+msgstr "Kaartide laad"
+
+msgid "Would you like insurance?"
+msgstr ""
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+
+msgid "Blackjack Preferences"
+msgstr "Blackjack eelistused"
+
+msgid "Game"
+msgstr "Mäng"
+
+msgid "_Display hand probabilities"
+msgstr ""
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_Kiired jagamised (ilma viivituseta iga kaardi järel)"
+
+msgid "_Never take insurance"
+msgstr "_Kindlustust ei võeta kunagi"
+
+msgid "_Reset Balance"
+msgstr ""
+
+msgid "Rules"
+msgstr "Reeglid"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Decks"
+msgstr "Kaardipakid"
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr ""
+
+msgid "Double 9"
+msgstr ""
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr ""
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr ""
+
+msgid "Resplit Aces"
+msgstr ""
+
+msgid "Surrender"
+msgstr ""
+
+msgid "Dealer Speed"
+msgstr ""
+
+msgid "Click to double your wager"
+msgstr ""
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr ""
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr ""
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+
+msgid "Click to deal another card"
+msgstr ""
+
+msgid "Click to finish adding cards to your hand"
+msgstr ""
+
+msgid "Click to deal a new hand"
+msgstr ""
+
+msgid "Blackjack can't load the requested file"
+msgstr "Blackjackil pole võimalik nõutud faili laadida"
+
+msgid "Please check your Blackjack installation"
+msgstr "Palun kontrolli oma Blackjack'i paigaldust"
+
+msgid "The best option is to stand"
+msgstr "Parim võimalus on jääda olemasoleva juurde"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Jäämine tähendab, et rohkem lisakaarte juurde ei võeta.  Seda saab teha mõne "
+"diileri kaardil klõpsamisega või tehes vastava valiku \"Juhtimise\" menüüst."
+
+msgid "The best option is to hit"
+msgstr "Parim võimalus on lisakaardi võtmine"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"See tõhendab, et võta omale veel üks kaart.  Seda saab teha mõne oma kaardi "
+"peal klõpsamisega või tehes vastava valiku \"Juhtimise\" menüüst."
+
+msgid "The best option is to double down"
+msgstr ""
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr ""
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr ""
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr "Blackjack"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"Blackjack on kasiinodes mängitav kaardimäng\n"
+"\n"
+"\"Blackjack\" kuulub GNOME mängude koosseisu."
+
+msgid "GNOME Games web site"
+msgstr "GNOME mängude veebisait"
+
+msgid "translator-credits"
+msgstr ""
+"Lauris Kaplinski <lauris@ariman.ee>, 1999.\n"
+"Tõivo Leedjärv <toivo@linux.ee>, 2002.\n"
+"Ilmar Kerm <ikerm@hot.ee>, 2002.\n"
+"Ivar Smolin <okul@linue.ee>, 2005-2009."
+
+msgid "Computing basic strategy..."
+msgstr "Põhistrateegia rehkendamine..."
+
+msgid "Bust"
+msgstr "Lõhki"
+
+msgid "Blackjack!"
+msgstr "Blackjack!"
+
+msgid "Soft"
+msgstr ""
+
+msgid "Win"
+msgstr ""
+
+msgid "Push"
+msgstr ""
+
+msgid "Lose"
+msgstr ""
+
+msgid "Player expected values"
+msgstr ""
+
+msgid "Stand"
+msgstr ""
+
+msgid "Hit"
+msgstr ""
+
+msgid "Double"
+msgstr ""
+
+msgid "Split"
+msgstr ""
+
+msgid "Dealer hand probabilities"
+msgstr ""

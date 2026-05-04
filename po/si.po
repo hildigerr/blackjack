@@ -1,0 +1,467 @@
+# translation of si.po to Sinhala
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <snavin@redhat.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: si\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2007-09-17 12:46+0530\n"
+"Last-Translator: Danishka Navin <snavin@redhat.com>\n"
+"Language-Team: Sinhala <en@li.org>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+msgid "Could not show link"
+msgstr ""
+
+msgid "Error"
+msgstr "දෝෂය"
+
+msgid "View help for this game"
+msgstr ""
+
+msgid "End the current game"
+msgstr "දැනට ඇති තරගය අවසන් කරන්න"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr ""
+
+msgid "Leave fullscreen mode"
+msgstr "පූර්‍ණතිරයෙන් ඉවත්වන්න"
+
+msgid "Start a new multiplayer network game"
+msgstr ""
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "නව තරගයක් ආරම්ඹකරන්න"
+
+msgid "Pause the game"
+msgstr "තරගය මදකට නවතන්න"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+msgid "Redo the undone move"
+msgstr "අහෝසි කළ ගෙනයාම නැවත කිරීම"
+
+msgid "Restart the game"
+msgstr "තරගය නැවත ආරම්ඹ කරන්න"
+
+msgid "Resume the paused game"
+msgstr "නැවතු තරගය යළි අරඹන්න"
+
+msgid "View the scores"
+msgstr "ලකුණු දර්ශනය"
+
+msgid "Undo the last move"
+msgstr "අවසාන ගෙනයාම අහෝසි කරන්න"
+
+msgid "About this game"
+msgstr "මෙම ක්‍රිඩාව සම්බන්ධව"
+
+msgid "Close this window"
+msgstr "මෙම කවුළුව මකන්න"
+
+msgid "Configure the game"
+msgstr "ක්‍රිඩාව මානකරණය"
+
+msgid "Quit this game"
+msgstr "මෙම ක්‍රිඩාවෙන් ඉවත්වන්න"
+
+msgid "_Contents"
+msgstr "අන්තර්ගත (_C)"
+
+msgid "_Fullscreen"
+msgstr "සම්පූර්ණ තිරය (_F)"
+
+msgid "_Hint"
+msgstr "ඉඟි (_H)"
+
+msgid "_New"
+msgstr "නව (_N)"
+
+msgid "_New Game"
+msgstr "නව තරගය (_N)"
+
+msgid "_Redo Move"
+msgstr "අහෝසි කළ ගෙනයාම නැවත කරන්න (_U)"
+
+msgid "_Reset"
+msgstr "ප්‍රකෘති තත්වයට සකසන්න (_R)"
+
+msgid "_Restart"
+msgstr "නැවත ආරම්භ කරන්න (_R)"
+
+msgid "_Undo Move"
+msgstr "ගෙනයාම අහෝසි කරන්න (_U)"
+
+msgid "_Deal"
+msgstr ""
+
+msgid "_Leave Fullscreen"
+msgstr "සම්පූර්ණ තිරයෙන් ඉවත් වන්න (_L)"
+
+msgid "Network _Game"
+msgstr "ජාල තරග (_G)"
+
+msgid "L_eave Game"
+msgstr "තරගයෙන් ඉවත්වන්න (_e)"
+
+msgid "Player _List"
+msgstr "තරගකරුවන් ලැයිස්තුව (_L)"
+
+msgid "_Pause"
+msgstr "විරාමය (_P)"
+
+msgid "Res_ume"
+msgstr "යළි අරඹන්න (_u)"
+
+msgid "_Scores"
+msgstr "ලකුණු (_S)"
+
+msgid "_End Game"
+msgstr "තරගය අවසන් කරන්න (_E)"
+
+msgid "_About"
+msgstr "සම්බන්ධව (_A)"
+
+msgid "_Cancel"
+msgstr "අහෝසි (_C)"
+
+msgid "_Close"
+msgstr "වසන්න (_C)"
+
+msgid "_OK"
+msgstr "හරි (_O)"
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr ""
+
+msgid "_Game"
+msgstr "තරගය (_G)"
+
+msgid "_View"
+msgstr "දසුන (_V)"
+
+msgid "Restart the current game"
+msgstr ""
+
+msgid "Show a hint"
+msgstr "ඉඟියක් පෙන්වන්න"
+
+msgid "_Settings"
+msgstr "සැකසුම් (_S)"
+
+msgid "_Control"
+msgstr "පාලකය (_C)"
+
+msgid "D_eal"
+msgstr ""
+
+msgid "Deal a new hand"
+msgstr ""
+
+msgid "_Hit"
+msgstr ""
+
+msgid "Add a card to the hand"
+msgstr ""
+
+msgid "_Stand"
+msgstr ""
+
+msgid "Stop adding cards to the hand"
+msgstr ""
+
+msgid "S_urrender"
+msgstr ""
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+msgid "_Double down"
+msgstr ""
+
+msgid "Double your wager for a single hit"
+msgstr ""
+
+msgid "S_plit the hand"
+msgstr ""
+
+msgid "Split cards in two new hands"
+msgstr ""
+
+msgid "_Help"
+msgstr "උදව් (_H)"
+
+msgid "_Toolbar"
+msgstr "මෙවලම්තීරුව (_T)"
+
+msgid "Show toolbar"
+msgstr "මෙවලම්තීරුව පෙන්වන්න"
+
+msgid "Cards left:"
+msgstr ""
+
+msgid "Wager:"
+msgstr ""
+
+msgid "Balance:"
+msgstr "ඉතිරිය:"
+
+msgid "Place your wager or deal a hand"
+msgstr ""
+
+msgid "Blackjack rule set to use"
+msgstr ""
+
+msgid "Card Style"
+msgstr "කාඩ් වර්‍ගය"
+
+msgid "Would you like insurance?"
+msgstr ""
+
+#, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+
+msgid "Blackjack Preferences"
+msgstr ""
+
+msgid "Game"
+msgstr "Game"
+
+msgid "_Display hand probabilities"
+msgstr ""
+
+msgid "_Quick deals (no delay between each card)"
+msgstr ""
+
+msgid "_Never take insurance"
+msgstr ""
+
+msgid "_Reset Balance"
+msgstr ""
+
+msgid "Rules"
+msgstr ""
+
+msgid "Name"
+msgstr "නම"
+
+msgid "Decks"
+msgstr ""
+
+msgid "Hit Soft 17"
+msgstr ""
+
+msgid "Double Any Total"
+msgstr ""
+
+msgid "Double 9"
+msgstr ""
+
+msgid "Double Soft"
+msgstr ""
+
+msgid "Double After Hit"
+msgstr ""
+
+msgid "Double After Split"
+msgstr ""
+
+msgid "Resplit"
+msgstr ""
+
+msgid "Resplit Aces"
+msgstr ""
+
+msgid "Surrender"
+msgstr ""
+
+msgid "Dealer Speed"
+msgstr ""
+
+msgid "Click to double your wager"
+msgstr ""
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr ""
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr ""
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr ""
+
+msgid "Click to deal another card"
+msgstr ""
+
+msgid "Click to finish adding cards to your hand"
+msgstr ""
+
+msgid "Click to deal a new hand"
+msgstr ""
+
+msgid "Blackjack can't load the requested file"
+msgstr ""
+
+msgid "Please check your Blackjack installation"
+msgstr ""
+
+msgid "The best option is to stand"
+msgstr ""
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to hit"
+msgstr ""
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to double down"
+msgstr ""
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to split"
+msgstr ""
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+
+msgid "The best option is to surrender"
+msgstr ""
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+
+msgid "Blackjack"
+msgstr ""
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+
+msgid "GNOME Games web site"
+msgstr "ග්නොම් ක්‍රිඩා වෙබ් අඩවිය"
+
+msgid "translator-credits"
+msgstr "Danishka "
+
+msgid "Computing basic strategy..."
+msgstr ""
+
+msgid "Bust"
+msgstr ""
+
+msgid "Blackjack!"
+msgstr ""
+
+msgid "Soft"
+msgstr ""
+
+msgid "Win"
+msgstr ""
+
+msgid "Push"
+msgstr "තල්ලු කිරීම"
+
+msgid "Lose"
+msgstr ""
+
+msgid "Player expected values"
+msgstr ""
+
+msgid "Stand"
+msgstr ""
+
+msgid "Hit"
+msgstr ""
+
+msgid "Double"
+msgstr ""
+
+msgid "Split"
+msgstr "ස්ප්ලිට්"
+
+msgid "Dealer hand probabilities"
+msgstr ""

@@ -1,0 +1,528 @@
+# Xhosa translation of gnome-games
+# Copyright (C) 2005 Canonical Ltd.
+# This file is distributed under the same license as the gnome-games package.
+# Translation by Canonical Ltd <translations@canonical.com> with thanks to
+# Translation World CC in South Africa, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2005-02-28 16:05+0200\n"
+"Last-Translator: Canonical Ltd <translations@canonical.com>\n"
+"Language-Team: Xhosa <xh-translate@ubuntu.com>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+
+#, c-format
+msgid "Help file “%s.%s” not found"
+msgstr ""
+
+#, c-format
+msgid "Could not show help for “%s”"
+msgstr ""
+
+#, fuzzy
+msgid "Could not show link"
+msgstr "Ayikwazi ukufaka umiselo lwethayili"
+
+msgid "Error"
+msgstr ""
+
+#, fuzzy
+msgid "View help for this game"
+msgstr "Ileyibhile-sichongi yomdlalo"
+
+#, fuzzy
+msgid "End the current game"
+msgstr "Phinda uqale inqanaba okulo"
+
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+msgid "Get a hint for your next move"
+msgstr "Fumana icebiso lentshukumo yakho elandelayo"
+
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#, fuzzy
+msgid "Start a new multiplayer network game"
+msgstr "Qala umdlalo omtsha"
+
+msgid "End the current network game and return to network server"
+msgstr ""
+
+msgid "Start a new game"
+msgstr "Qala umdlalo omtsha"
+
+#, fuzzy
+msgid "Pause the game"
+msgstr "Misa umdlalo"
+
+msgid "Show a list of players in the network game"
+msgstr ""
+
+#, fuzzy
+msgid "Redo the undone move"
+msgstr "Buyisela intshukumo yokugqibela oyenzileyo"
+
+#, fuzzy
+msgid "Restart the game"
+msgstr "Phinda uqale umdlalo"
+
+#, fuzzy
+msgid "Resume the paused game"
+msgstr "Phinda uqale inqanaba okulo"
+
+#, fuzzy
+msgid "View the scores"
+msgstr "Yaba amakhadi"
+
+msgid "Undo the last move"
+msgstr "Buyisela intshukumo yokugqibela oyenzileyo"
+
+#, fuzzy
+msgid "About this game"
+msgstr "Sombulula umdlalo"
+
+msgid "Close this window"
+msgstr ""
+
+#, fuzzy
+msgid "Configure the game"
+msgstr "Sombulula umdlalo"
+
+#, fuzzy
+msgid "Quit this game"
+msgstr "Sombulula umdlalo"
+
+msgid "_Contents"
+msgstr "_Okuqulathiweyo"
+
+msgid "_Fullscreen"
+msgstr "Iskrini _Esipheleleyo"
+
+msgid "_Hint"
+msgstr "_Icebiso"
+
+#, fuzzy
+msgid "_New"
+msgstr "Entsha"
+
+msgid "_New Game"
+msgstr "_Umdlalo Omtsha"
+
+msgid "_Redo Move"
+msgstr "_Yenza Intshukumo Kwakhona"
+
+msgid "_Reset"
+msgstr "_Phinda umisele"
+
+#, fuzzy
+msgid "_Restart"
+msgstr "Phinda uqale"
+
+msgid "_Undo Move"
+msgstr "_Buyisela Intshukumo Obuyenzile"
+
+msgid "_Deal"
+msgstr ""
+
+#, fuzzy
+msgid "_Leave Fullscreen"
+msgstr "Iskrini _Esipheleleyo"
+
+#, fuzzy
+msgid "Network _Game"
+msgstr "Umdlalo Omtsha Wothungelwano"
+
+#, fuzzy
+msgid "L_eave Game"
+msgstr "_Umdlalo Omtsha"
+
+#, fuzzy
+msgid "Player _List"
+msgstr "_Abadlali"
+
+#, fuzzy
+msgid "_Pause"
+msgstr "Phumla"
+
+#, fuzzy
+msgid "Res_ume"
+msgstr "_Phinda umisele"
+
+msgid "_Scores"
+msgstr "I_zikora"
+
+#, fuzzy
+msgid "_End Game"
+msgstr "_Umdlalo"
+
+msgid "_About"
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Close"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#, fuzzy, c-format
+msgid "Blackjack - %s"
+msgstr "U-Blackjack: %s"
+
+msgid "_Game"
+msgstr "_Umdlalo"
+
+msgid "_View"
+msgstr "_Buka"
+
+#, fuzzy
+msgid "Restart the current game"
+msgstr "Phinda uqale umdlalo"
+
+msgid "Show a hint"
+msgstr ""
+
+msgid "_Settings"
+msgstr ""
+
+msgid "_Control"
+msgstr "_Ulawulo"
+
+#, fuzzy
+msgid "D_eal"
+msgstr "_Uncedo"
+
+msgid "Deal a new hand"
+msgstr "Yaba isandla esitsha"
+
+#, fuzzy
+msgid "_Hit"
+msgstr "_Icebiso"
+
+#, fuzzy
+msgid "Add a card to the hand"
+msgstr "Shenxisa ikhadi liye kwiSiseko"
+
+#, fuzzy
+msgid "_Stand"
+msgstr "Yima"
+
+#, fuzzy
+msgid "Stop adding cards to the hand"
+msgstr "Cofa ukuze ugqibe ukongeza amanani esandleni sakho"
+
+#, fuzzy
+msgid "S_urrender"
+msgstr "Nikezela"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr ""
+
+#, fuzzy
+msgid "_Double down"
+msgstr "Phinda-phinda u-9"
+
+#, fuzzy
+msgid "Double your wager for a single hit"
+msgstr "Beka isibekelwano sakho okanye wabe isandla"
+
+#, fuzzy
+msgid "S_plit the hand"
+msgstr "Yaba esinye isandla"
+
+#, fuzzy
+msgid "Split cards in two new hands"
+msgstr "Cofa ukuze ugqibe ukongeza amanani esandleni sakho"
+
+msgid "_Help"
+msgstr "_Uncedo"
+
+msgid "_Toolbar"
+msgstr "I-_Toolbar"
+
+#, fuzzy
+msgid "Show toolbar"
+msgstr "Bonisa i-toolbar"
+
+msgid "Cards left:"
+msgstr "Amakhadi aseleyo:"
+
+msgid "Wager:"
+msgstr "Isibekelwano:"
+
+msgid "Balance:"
+msgstr "Ungqinelwano:"
+
+msgid "Place your wager or deal a hand"
+msgstr "Beka isibekelwano sakho okanye wabe isandla"
+
+msgid "Blackjack rule set to use"
+msgstr "Umiselo lomthetho womdlalo u-Blackjack emawusetyenziswe"
+
+msgid "Card Style"
+msgstr "Uhlobo Lwekhadi"
+
+msgid "Would you like insurance?"
+msgstr "Ingaba uyayifuna i-inshorensi?"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"I-inshorensi sisibekelwano esisecaleni sika-50%% wesibekelwano sokuqala athi "
+"umabi abe nama-21 adaliweyo (aka blackjack) athi anikezwe xa ikhadi elijonge "
+"phezulu lomabi liyi-ace. Ukuba umabi unama-21 adaliweyo umdlali uthi "
+"ahlawulwe ngokuphinda-phindeneyo."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr ""
+"Misela isibekelwano sakho uze ucofe kumphandle omhlophe ukwaba isandla "
+"esitsha."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr ""
+"Misela isibekelwano sakho okanye ucofe emakhadini ukwaba isandla esitsha."
+
+msgid "Blackjack Preferences"
+msgstr "Izinto Ezikhethekayo zika-Blackjack"
+
+msgid "Game"
+msgstr "Umdlalo"
+
+#, fuzzy
+msgid "_Display hand probabilities"
+msgstr "Bonisa amathemba okunokwenzeka esandla"
+
+#, fuzzy
+msgid "_Quick deals (no delay between each card)"
+msgstr "Ulwabo olukhawulezayo (akukho lulibaziseko phakathi kwekhadi nelinye)"
+
+msgid "_Never take insurance"
+msgstr ""
+
+#, fuzzy
+msgid "_Reset Balance"
+msgstr "Phinda umisele ungqinelwano"
+
+msgid "Rules"
+msgstr "Imithetho"
+
+msgid "Name"
+msgstr "Igama"
+
+msgid "Decks"
+msgstr "Imiqulu yamakhadi"
+
+msgid "Hit Soft 17"
+msgstr "Betha Thambileyo kayi-17"
+
+msgid "Double Any Total"
+msgstr "Phinda-phinda Nawaphi na Amanqaku Ewonke"
+
+msgid "Double 9"
+msgstr "Phinda-phinda u-9"
+
+msgid "Double Soft"
+msgstr "Phinda-phinda Thambileyo"
+
+msgid "Double After Hit"
+msgstr "Phinda-phinda Emva Kokubetha"
+
+msgid "Double After Split"
+msgstr "Phinda-phinda Emva Kokwahlula"
+
+msgid "Resplit"
+msgstr "Phinda wahlule"
+
+msgid "Resplit Aces"
+msgstr "Phinda Wahlule ii-Aces"
+
+msgid "Surrender"
+msgstr "Nikezela"
+
+msgid "Dealer Speed"
+msgstr "Isantya Somabi"
+
+msgid "Click to double your wager"
+msgstr "Cofa ukuze uphinda-phinde isibekelwano sakho"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "Cofa kabini ukuze wandise isibekelwano sakho ngo-%.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "Cofa kabini ukuze ucuthe isibekelwano sakho ngo-%.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "Cofa ukwaba elinye ikhadi; kruqa ikhadi ukwahlula isibini"
+
+msgid "Click to deal another card"
+msgstr "Cofa ukuze wabe elinye ikhadi"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "Cofa ukuze ugqibe ukongeza amanani esandleni sakho"
+
+msgid "Click to deal a new hand"
+msgstr "Cofa ukuze wabe isandla esitsha"
+
+msgid "Blackjack can't load the requested file"
+msgstr "U-Blackjack akakwazi ukuyifaka ifayili eceliweyo"
+
+msgid "Please check your Blackjack installation"
+msgstr "Nceda uhlole useko-zixhobo lwakho luka-Blackjack"
+
+msgid "The best option is to stand"
+msgstr "Eyona ndlela ingcono kukuma"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"Ukuma kuthetha ukuyeka ukongeza amakhadi esandleni sakho. Oku ukwenza "
+"ngokucofa emakhadini omabi okanye ngokukhetha into ekhethwayo kwimenyu "
+"yoLawulo."
+
+msgid "The best option is to hit"
+msgstr "Eyona ndlela ingcono kukubetha"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"Ukubetha kuthetha ukongeza elinye ikhadi esandleni sakho. Oku ukwenza "
+"ngokucofa kanye emakhadini akho okanye ngokukhetha into ekhethwayo kwimenyu "
+"yoLawulo."
+
+msgid "The best option is to double down"
+msgstr "Eyona ndlela ingcono kukuphinda-phinda ezantsi"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"Ukuphinda-phinda ezantsi kuthetha ukuphinda-phinda isibekelwano sokuqala uze "
+"ufumane ikhadi elinye ncam ngaphezulu. Oku ukwenza ngokucofa kanye kwii-"
+"chips emazantsi efestile okanye ngokukhetha into ekhethwayo kwimenyu "
+"yoLawulo."
+
+msgid "The best option is to split"
+msgstr "Eyona ndlela ingcono kukwahlula"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"Ukwahlula kuthetha ukwahlula isandla sakho osisebenzisayo sibe zizandla "
+"ezibini. Oku ukwenza ngokurhuqa elinye lamakhadi akho uze uliwise ecaleni "
+"okanye ngokukhetha into ekhethwayo kwimenyu yoLawulo."
+
+msgid "The best option is to surrender"
+msgstr "Eyona ndlela ingcono kukunikezela"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"Ukunikezela kuthetha ukunikezela ngesiqingatha sesibekelwano sakho "
+"ungasigqibi isandla. Kwenze oku ngokukhetha oku kwimenyu yoLawulo."
+
+msgid "Blackjack"
+msgstr "U-Blackjack"
+
+#, fuzzy
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"U-Blackjack unikeza ngomdlalo wemakhadi oluhlobo lwekhasino i-blackjack."
+
+#, fuzzy
+msgid "GNOME Games web site"
+msgstr "Iseva yomdlalo"
+
+msgid "translator-credits"
+msgstr "Canonical Ltd <translations@canonical.com>"
+
+msgid "Computing basic strategy..."
+msgstr "Indlela esisiseko yekhompyutha..."
+
+msgid "Bust"
+msgstr "Bust"
+
+msgid "Blackjack!"
+msgstr "U-Blackjack!"
+
+msgid "Soft"
+msgstr "Thambileyo"
+
+msgid "Win"
+msgstr "Phumelela"
+
+msgid "Push"
+msgstr "Tyhala"
+
+msgid "Lose"
+msgstr "Hluleka"
+
+msgid "Player expected values"
+msgstr "Amaxabiso alindelekileyo omdlali"
+
+msgid "Stand"
+msgstr "Yima"
+
+msgid "Hit"
+msgstr "Betha"
+
+msgid "Double"
+msgstr "Phinda-phinda"
+
+msgid "Split"
+msgstr "Yahlula"
+
+msgid "Dealer hand probabilities"
+msgstr "Amathuba okuphumelela esandla somabi"

@@ -1,0 +1,516 @@
+# translation of gnome-games.HEAD.po to Arabic
+# Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
+# Arafat Medini <lumina@silverpen.de>, 2003.
+# Abdulaziz Al-Arfaj <alarfaj0@yahoo.com>, 2004.
+# Djihed Afifi <djihed@gmail.com>, 2006.
+# Meno25 , 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2007, 2008.
+# Ahmad Farghal <ahmad.farghal@gmail.com>, 2007.
+# Anas Husseini <linux.anas@gmail.com>, 2007.
+# Abdelmonam Kouka <abdelmonam.kouka@ubuntume.com>, 2008.
+# Anas Afif Emad <anas.e87@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-03 01:27-0700\n"
+"PO-Revision-Date: 2008-09-16 14:39+0300\n"
+"Last-Translator: Anas Afif Emad <anas.e87@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#, fuzzy, c-format
+msgid "Help file “%s.%s” not found"
+msgstr "ملف المساعدة \"%s.%s\" غير موجود"
+
+#, fuzzy, c-format
+msgid "Could not show help for “%s”"
+msgstr "لم يمكن إظهار المساعدة لـ \"%s\""
+
+msgid "Could not show link"
+msgstr "لم يمكن إظهار الرابط"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "View help for this game"
+msgstr "اعرض المساعدة لهذه اللعبة"
+
+msgid "End the current game"
+msgstr "إنهاء اللعبة الحالية"
+
+msgid "Toggle fullscreen mode"
+msgstr "تبديل نمط الشاشة الكاملة"
+
+msgid "Get a hint for your next move"
+msgstr "تلقّي تلميحة لنقلتك التّالية"
+
+msgid "Leave fullscreen mode"
+msgstr "ترك نمط كامل الشاشة"
+
+msgid "Start a new multiplayer network game"
+msgstr "ابدأ لعبة جديدة متعددة اللاعبين عبر الشبكة"
+
+msgid "End the current network game and return to network server"
+msgstr "انه اللعبة الحالية عبر الشبكة و عد إلى الخادوم"
+
+msgid "Start a new game"
+msgstr "ابدء لعبةٍ جديدة"
+
+msgid "Pause the game"
+msgstr "أوقف اللعبة"
+
+msgid "Show a list of players in the network game"
+msgstr "اعرض قائمة باللاعبين في اللعبة عبر الشبكة"
+
+msgid "Redo the undone move"
+msgstr "كرر النقلة الأخيرة التي تم التراجع عنها"
+
+msgid "Restart the game"
+msgstr "ابدأ اللّعبة من جديد"
+
+msgid "Resume the paused game"
+msgstr "أكمل اللعبة الموقفة"
+
+msgid "View the scores"
+msgstr "اعرض النتائج"
+
+msgid "Undo the last move"
+msgstr "تراجع عن النقلة الأخيرة"
+
+msgid "About this game"
+msgstr "حول هذه اللعبة"
+
+msgid "Close this window"
+msgstr "أغلق هذه النافذة"
+
+msgid "Configure the game"
+msgstr "إعداد اللعبة"
+
+msgid "Quit this game"
+msgstr "خروج من اللعبة الحالية"
+
+msgid "_Contents"
+msgstr "_المحتويات"
+
+msgid "_Fullscreen"
+msgstr "_كامل الشاشة"
+
+msgid "_Hint"
+msgstr "_تلميح"
+
+msgid "_New"
+msgstr "_جديد"
+
+msgid "_New Game"
+msgstr "_لعبة جديدة"
+
+msgid "_Redo Move"
+msgstr "_كَرِّر النقلة"
+
+msgid "_Reset"
+msgstr "_تصفير"
+
+msgid "_Restart"
+msgstr "إ_عادة تشغيل"
+
+msgid "_Undo Move"
+msgstr "ت_را_جع عن النقلة"
+
+msgid "_Deal"
+msgstr "و_زّع"
+
+msgid "_Leave Fullscreen"
+msgstr "ال_خروج من نمط ملئ الشاشة"
+
+msgid "Network _Game"
+msgstr "ل_عبة شبكة"
+
+msgid "L_eave Game"
+msgstr "ات_رك اللعبة"
+
+msgid "Player _List"
+msgstr "قائمة ال_لاعبين"
+
+msgid "_Pause"
+msgstr "إ_يقاف مؤقت"
+
+msgid "Res_ume"
+msgstr "_رجوع"
+
+msgid "_Scores"
+msgstr "ال_نتائج"
+
+msgid "_End Game"
+msgstr "إ_نهاء اللعبة الحالية"
+
+msgid "_About"
+msgstr "حو_ل"
+
+msgid "_Cancel"
+msgstr "إل_غاء"
+
+msgid "_Close"
+msgstr "إغلا_ق"
+
+msgid "_OK"
+msgstr "_موافق"
+
+#, fuzzy, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s برنامج مجاني؛ يمكنك إعادة توزيعه و/أو تغييره تبعًا لشروط رخصة جنو العامة "
+"كما تنشرها مؤسسة البرمجيات الحرة؛ إما النسخة ٢ من الرخصة، أو أي إصدار أحدث "
+"منها إن شئت ذلك."
+
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"يوزّع %s على أمل أن يكون مفيدًا لمن يستخدمه دون أي ضمانات؛ ولا حتى أي ضمان "
+"يضمن صلاحية العرض في السوق أو توافقه مع أي استخدام محدد. راجع الرخصة العامة "
+"لجنو لمزيد من التفاصيل."
+
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"لابد من أن تكون قد استلمت نسخة من رخصة جنو العامة مع %s؛ في حال عدم استلامك "
+"لذلك، يمكنك مكاتبة Free Software Foundation, Inc., 51 Franklin Street, Fifth "
+"Floor, Boston, MA  02110-1301  USA"
+
+#, fuzzy
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"لابد من أن تكون قد استلمت نسخة من رخصة جنو العامة مع %s؛ في حال عدم استلامك "
+"لذلك، يمكنك مكاتبة Free Software Foundation, Inc., 51 Franklin Street, Fifth "
+"Floor, Boston, MA  02110-1301  USA"
+
+#, c-format
+msgid "Blackjack - %s"
+msgstr "بلاك جاك - %s"
+
+msgid "_Game"
+msgstr "_لعبة"
+
+msgid "_View"
+msgstr "_اعرض"
+
+msgid "Restart the current game"
+msgstr "أعد اللعبة الحالية"
+
+msgid "Show a hint"
+msgstr "اعرض تلميحة"
+
+msgid "_Settings"
+msgstr "إ_عدادات"
+
+msgid "_Control"
+msgstr "_التحكم"
+
+msgid "D_eal"
+msgstr "و_زع"
+
+msgid "Deal a new hand"
+msgstr "توزيع يد جديدة"
+
+msgid "_Hit"
+msgstr "ا_ضرب"
+
+msgid "Add a card to the hand"
+msgstr "أضِف ورقة لليد"
+
+msgid "_Stand"
+msgstr "_قف"
+
+msgid "Stop adding cards to the hand"
+msgstr "إنهاء إضافة أوراق ليدك"
+
+msgid "S_urrender"
+msgstr "ا_ستسلم"
+
+msgid "Forfeit this hand for half of your wager"
+msgstr "اخسر هذه الدورة مقابل نصف رهانك"
+
+msgid "_Double down"
+msgstr "الأسفل مرتين"
+
+msgid "Double your wager for a single hit"
+msgstr "ضاعف الربح من ضربة واحدة"
+
+msgid "S_plit the hand"
+msgstr "ا_قسم اليد"
+
+msgid "Split cards in two new hands"
+msgstr "اقسم الكروت على دورتين جديدتين"
+
+msgid "_Help"
+msgstr "_مساعدة"
+
+msgid "_Toolbar"
+msgstr "شريط الأ_دوات"
+
+msgid "Show toolbar"
+msgstr "اعرض عمود الأدوات"
+
+msgid "Cards left:"
+msgstr "الأوراق المتبقية:"
+
+msgid "Wager:"
+msgstr "الرهان:"
+
+msgid "Balance:"
+msgstr "الرصيد:"
+
+msgid "Place your wager or deal a hand"
+msgstr "ضع رهانك أو وزّع يد"
+
+msgid "Blackjack rule set to use"
+msgstr "مجموعة قوانين بلاكجاك المستعملة"
+
+msgid "Card Style"
+msgstr "أسلوب الأوراق"
+
+msgid "Would you like insurance?"
+msgstr "هل تريد تأمينا؟"
+
+#, fuzzy, no-c-format
+msgid ""
+"Insurance is a side wager of 50% of the original wager that the dealer has a "
+"natural 21 (aka blackjack) that is offered when the dealer's face up card is "
+"an ace. If the dealer has a natural 21 then the player is paid double."
+msgstr ""
+"ألتأمين هو رهان جانبي بنسبة 50%% من الرهان الأصلي و الذي يملك الموزع منه  21 "
+"(أي بلاك جاك) التي يتم إعطاءها عندما يكون الكارت الظاهر وجهه لدى الموزع هو "
+"الآس. لو كان لدى الموزع 21 فإن اللاعب يدفع له الضعف."
+
+msgid "Set your wager and click in the white outline to deal a new hand."
+msgstr "ضع رهانك و انقر على الحدّ الأبيض لتوزيع يد جديدة."
+
+msgid "Set your wager or click on the cards to deal a new hand."
+msgstr "ضع رهانك أو أنقر على الأوراق لتوزيع يد جديدة."
+
+msgid "Blackjack Preferences"
+msgstr "تفضيلات بلاكجاك"
+
+msgid "Game"
+msgstr "لعبة"
+
+msgid "_Display hand probabilities"
+msgstr "_إظهر إحتمالات يد الموزّع"
+
+msgid "_Quick deals (no delay between each card)"
+msgstr "_توزيع سريع (بدون تأخير بين ورقة و أخرى)"
+
+msgid "_Never take insurance"
+msgstr "_لا تأخذ تأمينا أبدا "
+
+msgid "_Reset Balance"
+msgstr "إ_عادة ضبط الميزان"
+
+msgid "Rules"
+msgstr "القواعد"
+
+msgid "Name"
+msgstr "اسم"
+
+msgid "Decks"
+msgstr "ظهور الأوراق"
+
+msgid "Hit Soft 17"
+msgstr "إصابة ناعمة 17"
+
+msgid "Double Any Total"
+msgstr "مضاعفة أيّ مجموع"
+
+msgid "Double 9"
+msgstr "ضعف 9"
+
+msgid "Double Soft"
+msgstr "ضعف ناعم"
+
+msgid "Double After Hit"
+msgstr "مضاعفة بعد الإصابة"
+
+msgid "Double After Split"
+msgstr "مضاعفة بعد القسمة"
+
+msgid "Resplit"
+msgstr "إعادة القسمة"
+
+msgid "Resplit Aces"
+msgstr "إعادة قسمة الأسّات"
+
+msgid "Surrender"
+msgstr "تنازل"
+
+msgid "Dealer Speed"
+msgstr "سرعة الموزع"
+
+msgid "Click to double your wager"
+msgstr "نقر لمضاعفة رهانك"
+
+#, c-format
+msgid "Double click to increase your wager by %.2f"
+msgstr "نقر ثنائي لرفع رهانك بـ %.2f"
+
+#, c-format
+msgid "Double click to decrease your wager by %.2f"
+msgstr "نقر قنائي لخفض رهانك بـ %.2f"
+
+msgid "Click to deal another card; drag card to split pair"
+msgstr "نقر لتوزيع ورقة أخرى، سحب الورقة بقسمة الزوج"
+
+msgid "Click to deal another card"
+msgstr "نقر لتوزيع ورقة أخرى"
+
+msgid "Click to finish adding cards to your hand"
+msgstr "نقر لإنهاء إضافة أوراق ليدك"
+
+msgid "Click to deal a new hand"
+msgstr "نقر لتوزيع يد جديدة"
+
+msgid "Blackjack can't load the requested file"
+msgstr "لم يتمكن بلاكجك من تحميل الملف المطلوب"
+
+msgid "Please check your Blackjack installation"
+msgstr "الرجاء التثبت من تثبيتك لبلاكجاك"
+
+msgid "The best option is to stand"
+msgstr "أفضل خيار الإنتصاب"
+
+msgid ""
+"To stand means to stop adding cards to your hand.  Do this by clicking on "
+"the dealer's cards or by selecting the option from the Control menu."
+msgstr ""
+"القيام معناه أن تتوقف عن زيادة الأوراق التي معك. قم بذلك بالنقر على الكروت "
+"التي لدى الموزع أو بإختيار هذه الخاصية من لوحة التحكم."
+
+msgid "The best option is to hit"
+msgstr "أفضل خيار الإصابة"
+
+msgid ""
+"To hit means to add another card to your hand.  Do this by clicking once on "
+"your cards or by selecting the option from the Control menu."
+msgstr ""
+"الدق معناه أن تضيف ورقة لما في يدك. قم بذلك عن طريق النقر مرة على كروتك أو "
+"بإختيار هذه الخاصية من قائمة التحكم."
+
+msgid "The best option is to double down"
+msgstr "أفضل خيار مضاعفة بالإسقاط"
+
+msgid ""
+"To double down means to double the initial wager and receive exactly one "
+"more card.  Do this by clicking once on the chips at the bottom of the "
+"window or by selecting the option from the Control menu."
+msgstr ""
+"النزول المزدوج معناه أن تضاعف رهانك الإبتدائي و تحصل بالضبط على ورقة واحدة. "
+"قم بذلك عن طريق النقر مرة على الفيشات أسفل النافذة. أو بإختيار هذه الخاصية "
+"من قائمة التحكم."
+
+msgid "The best option is to split"
+msgstr "أفضل خيار الآن هو أن تقسم"
+
+msgid ""
+"To split means to divide your current hand into two separate hands.  Do this "
+"by dragging one of your cards and dropping it off to the side or by "
+"selecting the option from the Control menu."
+msgstr ""
+"الشق يعني تقسيم مجموعتك الحالية إلى مجموعتين منفصلتين. افعل هذا بالنقر على "
+"إحدى الأوراق و وضعها على الجانب باختيار الخيار من قائمة الخيارات."
+
+msgid "The best option is to surrender"
+msgstr "أفضل خيار التنازل"
+
+msgid ""
+"To surrender means to give up half your wager and not complete the hand.  Do "
+"this by selecting the option from the Control menu."
+msgstr ""
+"الاستسلام يعني التخلي عن نصف الرهان وليس لكم كامل اليد. يمكنك فعل ذلك "
+"باختيار الخيار من قائمة الخيارات."
+
+msgid "Blackjack"
+msgstr "بلاك جاك"
+
+msgid ""
+"Blackjack is a casino-style card game.\n"
+"\n"
+"Blackjack is a part of GNOME Games."
+msgstr ""
+"بلاك جاك هي لعبة أوراق كازينو.\n"
+"\n"
+"بلاك جاك هي جزء من ألعاب جنوم."
+
+msgid "GNOME Games web site"
+msgstr "موقع ويب ألعاب جنوم"
+
+msgid "translator-credits"
+msgstr ""
+"عرفات المديني، تونس <silverwhale@silverpen.de>\n"
+"سيّد جعفر الموسوي، البحرين <mosawi@arabeyes.org>\n"
+"فريق عرب آيز للترجمة http://www.arabeyes.org :\n"
+"عصام بايزيدي\t<bayazidi@arabeyes.org>\n"
+"حسن عابدين\t<habdin@link.net>\n"
+"عبدالعزيز العرفجة\t<alarfaj0@yahoo.com>\n"
+"جهاد عفيفي\t<djihed@gmail.com>\n"
+"خالد حسني\t<khaledhosny@eglug.org>\n"
+"أحمد فرغل\t<ahmad.farghal@gmail.com>\n"
+"أنس الحسيني\t<linux.anas@gmail.com>\n"
+"عبد المنعم كوكة\t<abdelmonam.kouka@ubuntume.com>\n"
+"أنس عفيف عماد\t<anas.e87@gmail.com>"
+
+msgid "Computing basic strategy..."
+msgstr "يجري حساب الإستراتيجية الأساسية..."
+
+msgid "Bust"
+msgstr "إخفاق"
+
+msgid "Blackjack!"
+msgstr "بلاكجاك!"
+
+msgid "Soft"
+msgstr "ناعم"
+
+msgid "Win"
+msgstr "فوز"
+
+msgid "Push"
+msgstr "دفع"
+
+msgid "Lose"
+msgstr "خسارة"
+
+msgid "Player expected values"
+msgstr "ترقّب اللاعب القيم"
+
+msgid "Stand"
+msgstr "إنتصاب"
+
+msgid "Hit"
+msgstr "نجاح"
+
+msgid "Double"
+msgstr "ضعف"
+
+msgid "Split"
+msgstr "قسمة"
+
+msgid "Dealer hand probabilities"
+msgstr "إحتمالات يد الموزّع"
